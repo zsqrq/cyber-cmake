@@ -1,0 +1,1 @@
+/home/wz/Desktop/playground/cyber-cmake/build/x86/cyber/bin/CyberCmake

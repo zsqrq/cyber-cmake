@@ -1,0 +1,1 @@
+MACRO(cyber_add_library)

@@ -1,0 +1,19 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/wz/clion-2022.3.2/bin/ninja/linux/x64/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja -S /home/wz/Desktop/playground/cyber-cmake -B /home/wz/Desktop/playground/cyber-cmake/cmake-build-debug
+CMake Error at CMakeLists.txt:5 (find_package):
+  By not providing "FindCyberConfig.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "CyberConfig", but CMake did not find one.
+
+  Could not find a package configuration file provided by "CyberConfig" with
+  any of the following names:
+
+    CyberConfigConfig.cmake
+    cyberconfig-config.cmake
+
+  Add the installation prefix of "CyberConfig" to CMAKE_PREFIX_PATH or set
+  "CyberConfig_DIR" to a directory containing one of the above files.  If
+  "CyberConfig" provides a separate development package or SDK, be sure it
+  has been installed.
+
+
+-- Configuring incomplete, errors occurred!
