@@ -162,6 +162,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named mark_built_time
+
+# Build rule for target.
+mark_built_time: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mark_built_time
+.PHONY : mark_built_time
+
+# fast build rule for target.
+mark_built_time/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mark_built_time.dir/build.make CMakeFiles/mark_built_time.dir/build
+.PHONY : mark_built_time/fast
+
+#=============================================================================
 # Target rules for targets named CyberCmake
 
 # Build rule for target.
@@ -210,6 +223,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... mark_built_time"
 	@echo "... CyberCmake"
 	@echo "... main.o"
 	@echo "... main.i"

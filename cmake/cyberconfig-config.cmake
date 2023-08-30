@@ -20,35 +20,35 @@ if(COMPILE_PLATFOM STREQUAL "x86")
         endif ()
     endforeach()
 
-#    find_package(Git)
-#    if(GIT_FOUND)
-#        execute_process(
-#            COMMAND ${GIT_EXECUTABLE} rev-parse HEAD
-#            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-#            OUTPUT_VARIABLE CYBERCMAKE_GIT_COMMIT
-#            OUTPUT_STRIP_TRAILING_WHITESPACE
-#        )
-#    else()
-#        message(WARNING "Git Not Found, Can Not Record Compile Log")
-#    endif()
-#
-#    add_custom_target(mark_built_time ALL)
-#    set(COMLOG_OUTPUT_DIR "${CMAKE_SOURCE_DIR}/log")
-#    set(COMLOG_OUTPUT_FILE "compile_log.txt")
-#    set(INCLUDE_DIR_TO_REMOVE "${CMAKE_INSTALL_PREFIX}/include")
-#
-#    add_custom_command(TARGET mark_built_time PRE_BUILD
-#        COMMAND ${CMAKE_COMMAND} -E make_directory ${COMLOG_OUTPUT_DIR}
-#        COMMENT "Output Compiling Log Dir Already Exits"
-#        )
-#    add_custom_command(TARGET mark_built_time POST_BUILD
-#        COMMAND ${CMAKE_COMMAND} -E echo -e "\\033[36m Built Completed at: 'date', Git Commit Version is:${CYBERCMAKE_GIT_COMMIT} \\033[0m \n" >> ${COMLOG_OUTPUT_DIR}/${COMLOG_OUTPUT_FILE}
-#        COMMENT "Writting Compile Complete time to compile_log file"
-#        )
-#    add_custom_command(TARGET mark_built_time POST_BUILD
-#        COMMAND ${CMAKE_COMMAND} -E remove_directory ${INCLUDE_DIR_TO_REMOVE}
-#        COMMENT "Remove Unused include dir"
-#        )
-#    install(DIRECTORY ${COMLOG_OUTPUT_DIR} DESTINATION log)
+   find_package(Git)
+   if(GIT_FOUND)
+       execute_process(
+           COMMAND ${GIT_EXECUTABLE} rev-parse HEAD
+           WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+           OUTPUT_VARIABLE CYBERCMAKE_GIT_COMMIT
+           OUTPUT_STRIP_TRAILING_WHITESPACE
+       )
+   else()
+       message(WARNING "Git Not Found, Can Not Record Compile Log")
+   endif()
+
+   add_custom_target(mark_built_time ALL)
+   set(COMLOG_OUTPUT_DIR "${CMAKE_SOURCE_DIR}/log")
+   set(COMLOG_OUTPUT_FILE "compile_log.txt")
+   set(INCLUDE_DIR_TO_REMOVE "${CMAKE_INSTALL_PREFIX}/include")
+
+   add_custom_command(TARGET mark_built_time PRE_BUILD
+       COMMAND ${CMAKE_COMMAND} -E make_directory ${COMLOG_OUTPUT_DIR}
+       COMMENT "Output Compiling Log Dir Already Exits"
+       )
+   add_custom_command(TARGET mark_built_time POST_BUILD
+       COMMAND ${CMAKE_COMMAND} -E echo "Built Completed at: 'date', Git Commit Version is:${CYBERCMAKE_GIT_COMMIT}" >> ${COMLOG_OUTPUT_DIR}/${COMLOG_OUTPUT_FILE}
+       COMMENT "Writting Compile Complete time to compile_log file"
+       )
+   add_custom_command(TARGET mark_built_time POST_BUILD
+       COMMAND ${CMAKE_COMMAND} -E remove_directory ${INCLUDE_DIR_TO_REMOVE}
+       COMMENT "Remove Unused include dir"
+       )
+   install(DIRECTORY ${COMLOG_OUTPUT_DIR} DESTINATION log)
     return()
 endif()

@@ -209,8 +209,8 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 //Path to a program.
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/wz/Desktop/playground/cyber-cmake/platform/toolchain_x86_64.cmake
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/home/wz/Desktop/playground/cyber-cmake/scripts/../platform/toolchain_x86_64.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -232,6 +232,9 @@ Cyber-Cmake_SOURCE_DIR:STATIC=/home/wz/Desktop/playground/cyber-cmake
 
 //The directory containing a CMake configuration file for CyberConfig.
 CyberConfig_DIR:PATH=/home/wz/Desktop/playground/cyber-cmake/cmake
+
+//Git command line client
+GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 
 
 ########################
@@ -385,6 +388,10 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Git
+FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.34.1()]
+//ADVANCED property for variable: GIT_EXECUTABLE
+GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 
