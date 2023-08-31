@@ -1,0 +1,42 @@
+.TH "apollo::cyber::base::AtomicRWLock" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::base::AtomicRWLock
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAtomicRWLock\fP (bool write_first)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const int32_t \fBRW_LOCK_FREE\fP = 0"
+.br
+.ti -1c
+.RI "static const int32_t \fBWRITE_EXCLUSIVE\fP = \-1"
+.br
+.ti -1c
+.RI "static const uint32_t \fBMAX_RETRY_TIMES\fP = 5"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBReadLockGuard< AtomicRWLock >\fP"
+.br
+.ti -1c
+.RI "class \fBWriteLockGuard< AtomicRWLock >\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

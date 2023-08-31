@@ -1,0 +1,38 @@
+.TH "apollo::cyber::base::Slot< Args >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::base::Slot< Args >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBCallback\fP = std::function< void(Args\&.\&.\&.)>"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSlot\fP (const \fBSlot\fP &another)"
+.br
+.ti -1c
+.RI "\fBSlot\fP (const Callback &cb, bool connected=true)"
+.br
+.ti -1c
+.RI "void \fBoperator()\fP (Args\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "void \fBDisconnect\fP ()"
+.br
+.ti -1c
+.RI "bool \fBconnected\fP () const"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

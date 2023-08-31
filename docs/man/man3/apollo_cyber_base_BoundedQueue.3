@@ -1,0 +1,77 @@
+.TH "apollo::cyber::base::BoundedQueue< T >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::base::BoundedQueue< T >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBvalue_type\fP = T"
+.br
+.ti -1c
+.RI "using \fBsize_type\fP = uint64_t"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBoundedQueue\fP & \fBoperator=\fP (const \fBBoundedQueue\fP &other)=delete"
+.br
+.ti -1c
+.RI "\fBBoundedQueue\fP (const \fBBoundedQueue\fP &other)=delete"
+.br
+.ti -1c
+.RI "bool \fBInit\fP (uint64_t size)"
+.br
+.ti -1c
+.RI "bool \fBInit\fP (uint64_t size, \fBWaitStrategy\fP *strategy)"
+.br
+.ti -1c
+.RI "bool \fBEnqueue\fP (const T &element)"
+.br
+.ti -1c
+.RI "bool \fBEnqueue\fP (T &&element)"
+.br
+.ti -1c
+.RI "bool \fBWaitEnqueue\fP (const T &element)"
+.br
+.ti -1c
+.RI "bool \fBWaitEnqueue\fP (T &&element)"
+.br
+.ti -1c
+.RI "bool \fBDequeue\fP (T *element)"
+.br
+.ti -1c
+.RI "bool \fBWaitDequeue\fP (T *element)"
+.br
+.ti -1c
+.RI "uint64_t \fBSize\fP ()"
+.br
+.ti -1c
+.RI "bool \fBEmpty\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetWaitStrategy\fP (\fBWaitStrategy\fP *\fBWaitStrategy\fP)"
+.br
+.ti -1c
+.RI "void \fBBreakAllWait\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBHead\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBTail\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBCommit\fP ()"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

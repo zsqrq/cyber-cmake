@@ -45,6 +45,7 @@ function build() {
         -DCOMPILE_PLATFOM=$BUILD_PLATFORM
 
     cmake --build $build_path -- -j20 VERBOSE=1
+#    cmake --build $build_path --target doxygen
     cmake --build $build_path --target install
 }
 
