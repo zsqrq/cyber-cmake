@@ -1,7 +1,0 @@
-/home/wz/Desktop/playground/cyber-cmake/cmake-build-debug/CMakeFiles/CyberCmake.dir
-/home/wz/Desktop/playground/cyber-cmake/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/wz/Desktop/playground/cyber-cmake/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/wz/Desktop/playground/cyber-cmake/cmake-build-debug/CMakeFiles/list_install_components.dir
-/home/wz/Desktop/playground/cyber-cmake/cmake-build-debug/CMakeFiles/install.dir
-/home/wz/Desktop/playground/cyber-cmake/cmake-build-debug/CMakeFiles/install/local.dir
-/home/wz/Desktop/playground/cyber-cmake/cmake-build-debug/CMakeFiles/install/strip.dir

@@ -2,8 +2,8 @@
 *.d
 ./build
 ./cmake-build-debug
-./.vscode
-./.idea
+.vscode
+.idea
 # Compiled Object files
 *.slo
 *.lo
