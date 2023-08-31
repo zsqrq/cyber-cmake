@@ -1,0 +1,4 @@
+<map id="apollo::cyber::WriterBase" name="apollo::cyber::WriterBase">
+<area shape="rect" id="node1" title="Base class for a Writer. A Writer is an object to send messages through a &#39;Channel&#39;." alt="" coords="5,145,500,340"/>
+<area shape="rect" id="node2" title=" " alt="" coords="195,5,310,83"/>
+</map>

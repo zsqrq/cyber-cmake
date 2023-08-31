@@ -1,0 +1,45 @@
+.TH "apollo::cyber::record::PlayTask" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::record::PlayTask
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBMessagePtr\fP = std::shared_ptr< \fBmessage::RawMessage\fP >"
+.br
+.ti -1c
+.RI "using \fBWriterPtr\fP = std::shared_ptr< \fBWriter\fP< \fBmessage::RawMessage\fP > >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayTask\fP (const MessagePtr &msg, const WriterPtr &writer, uint64_t msg_real_time_ns, uint64_t msg_play_time_ns)"
+.br
+.ti -1c
+.RI "void \fBPlay\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBmsg_real_time_ns\fP () const"
+.br
+.ti -1c
+.RI "uint64_t \fBmsg_play_time_ns\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static uint64_t \fBplayed_msg_num\fP ()"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,64 @@
+.TH "apollo::cyber::event::EventBase" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::event::EventBase
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBapollo::cyber::event::SchedEvent\fP, and \fBapollo::cyber::event::TransportEvent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual std::string \fBSerializeToString\fP ()=0"
+.br
+.ti -1c
+.RI "void \fBset_eid\fP (int eid)"
+.br
+.ti -1c
+.RI "void \fBset_etype\fP (int etype)"
+.br
+.ti -1c
+.RI "void \fBset_stamp\fP (uint64_t stamp)"
+.br
+.ti -1c
+.RI "virtual void \fBset_cr_id\fP (uint64_t cr_id)"
+.br
+.ti -1c
+.RI "virtual void \fBset_cr_state\fP (int cr_state)"
+.br
+.ti -1c
+.RI "virtual void \fBset_proc_id\fP (int proc_id)"
+.br
+.ti -1c
+.RI "virtual void \fBset_fetch_res\fP (int fetch_res)"
+.br
+.ti -1c
+.RI "virtual void \fBset_msg_seq\fP (uint64_t msg_seq)"
+.br
+.ti -1c
+.RI "virtual void \fBset_channel_id\fP (uint64_t channel_id)"
+.br
+.ti -1c
+.RI "virtual void \fBset_adder\fP (const std::string &adder)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBetype_\fP"
+.br
+.ti -1c
+.RI "int \fBeid_\fP"
+.br
+.ti -1c
+.RI "uint64_t \fBstamp_\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

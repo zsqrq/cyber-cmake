@@ -1,0 +1,34 @@
+.TH "apollo::cyber::transport::ChannelChain" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::transport::ChannelChain
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename MessageT > bool \fBAddListener\fP (uint64_t self_id, uint64_t channel_id, const std::string &message_type, const MessageListener< MessageT > &listener)"
+.br
+.ti -1c
+.RI "template<typename MessageT > bool \fBAddListener\fP (uint64_t self_id, uint64_t oppo_id, uint64_t channel_id, const std::string &message_type, const MessageListener< MessageT > &listener)"
+.br
+.ti -1c
+.RI "template<typename MessageT > void \fBRemoveListener\fP (uint64_t self_id, uint64_t channel_id, const std::string &message_type)"
+.br
+.ti -1c
+.RI "template<typename MessageT > void \fBRemoveListener\fP (uint64_t self_id, uint64_t oppo_id, uint64_t channel_id, const std::string &message_type)"
+.br
+.ti -1c
+.RI "template<typename MessageT > void \fBRun\fP (uint64_t self_id, uint64_t channel_id, const std::string &message_type, const std::shared_ptr< MessageT > &message, const \fBMessageInfo\fP &message_info)"
+.br
+.ti -1c
+.RI "template<typename MessageT > void \fBRun\fP (uint64_t self_id, uint64_t oppo_id, uint64_t channel_id, const std::string &message_type, const std::shared_ptr< MessageT > &message, const \fBMessageInfo\fP &message_info)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

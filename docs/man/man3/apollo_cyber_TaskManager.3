@@ -1,0 +1,22 @@
+.TH "apollo::cyber::TaskManager" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::TaskManager
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBShutdown\fP ()"
+.br
+.ti -1c
+.RI "template<typename F , typename\&.\&.\&. Args> auto \fBEnqueue\fP (F &&func, Args &&\&.\&.\&. args) \-> std::future< typename std::result_of< F(Args\&.\&.\&.)>::type >"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

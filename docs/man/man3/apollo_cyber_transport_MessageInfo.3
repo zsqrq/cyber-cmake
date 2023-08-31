@@ -1,0 +1,77 @@
+.TH "apollo::cyber::transport::MessageInfo" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::transport::MessageInfo
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMessageInfo\fP (const \fBIdentity\fP &sender_id, uint64_t seq_num)"
+.br
+.ti -1c
+.RI "\fBMessageInfo\fP (const \fBIdentity\fP &sender_id, uint64_t seq_num, const \fBIdentity\fP &spare_id)"
+.br
+.ti -1c
+.RI "\fBMessageInfo\fP (const \fBMessageInfo\fP &another)"
+.br
+.ti -1c
+.RI "\fBMessageInfo\fP & \fBoperator=\fP (const \fBMessageInfo\fP &another)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBMessageInfo\fP &another) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBMessageInfo\fP &another) const"
+.br
+.ti -1c
+.RI "bool \fBSerializeTo\fP (std::string *dst) const"
+.br
+.ti -1c
+.RI "bool \fBSerializeTo\fP (char *dst, std::size_t len) const"
+.br
+.ti -1c
+.RI "bool \fBDeserializeFrom\fP (const std::string &src)"
+.br
+.ti -1c
+.RI "bool \fBDeserializeFrom\fP (const char *src, std::size_t len)"
+.br
+.ti -1c
+.RI "const \fBIdentity\fP & \fBsender_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_sender_id\fP (const \fBIdentity\fP &sender_id)"
+.br
+.ti -1c
+.RI "uint64_t \fBchannel_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_channel_id\fP (uint64_t channel_id)"
+.br
+.ti -1c
+.RI "uint64_t \fBseq_num\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_seq_num\fP (uint64_t seq_num)"
+.br
+.ti -1c
+.RI "const \fBIdentity\fP & \fBspare_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_spare_id\fP (const \fBIdentity\fP &spare_id)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const std::size_t \fBkSize\fP = 2 * ID_SIZE + sizeof(uint64_t)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

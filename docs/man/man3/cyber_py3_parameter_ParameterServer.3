@@ -1,0 +1,93 @@
+.TH "cyber_py3.parameter.ParameterServer" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cyber_py3.parameter.ParameterServer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, node)"
+.br
+.RI "constructor the \fBParameterServer\fP by the node object\&. "
+.ti -1c
+.RI "def \fB__del__\fP (self)"
+.br
+.ti -1c
+.RI "def \fBset_parameter\fP (self, param)"
+.br
+.ti -1c
+.RI "def \fBget_parameter\fP (self, param_name)"
+.br
+.ti -1c
+.RI "def \fBget_paramslist\fP (self)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBparam_srv\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Class for ParameterServer wrapper.
+
+.fi
+.PP
+ 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def cyber_py3\&.parameter\&.ParameterServer\&.__init__ ( self,  node)"
+
+.PP
+constructor the \fBParameterServer\fP by the node object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInode\fP the node to support the parameter server\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "def cyber_py3\&.parameter\&.ParameterServer\&.get_parameter ( self,  param_name)"
+
+.PP
+.nf
+get Parameter by param name param_name.
+
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.parameter\&.ParameterServer\&.get_paramslist ( self)"
+
+.PP
+.nf
+get all params of this parameterserver.
+
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.parameter\&.ParameterServer\&.set_parameter ( self,  param)"
+
+.PP
+.nf
+set parameter, param is Parameter.
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

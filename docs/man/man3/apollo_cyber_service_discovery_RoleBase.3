@@ -1,0 +1,49 @@
+.TH "apollo::cyber::service_discovery::RoleBase" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::service_discovery::RoleBase
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBapollo::cyber::service_discovery::RoleServer\fP, and \fBapollo::cyber::service_discovery::RoleWriter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRoleBase\fP (const proto::RoleAttributes &attr, uint64_t timestamp_ns=0)"
+.br
+.ti -1c
+.RI "virtual bool \fBMatch\fP (const proto::RoleAttributes &target_attr) const"
+.br
+.ti -1c
+.RI "bool \fBIsEarlierThan\fP (const \fBRoleBase\fP &other) const"
+.br
+.ti -1c
+.RI "const proto::RoleAttributes & \fBattributes\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_attributes\fP (const proto::RoleAttributes &attr)"
+.br
+.ti -1c
+.RI "uint64_t \fBtimestamp_ns\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_timestamp_ns\fP (uint64_t timestamp_ns)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "proto::RoleAttributes \fBattributes_\fP"
+.br
+.ti -1c
+.RI "uint64_t \fBtimestamp_ns_\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

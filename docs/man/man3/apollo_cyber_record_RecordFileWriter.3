@@ -1,0 +1,38 @@
+.TH "apollo::cyber::record::RecordFileWriter" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::record::RecordFileWriter
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBapollo::cyber::record::RecordFileBase\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBOpen\fP (const std::string &path) override"
+.br
+.ti -1c
+.RI "void \fBClose\fP () override"
+.br
+.ti -1c
+.RI "bool \fBWriteHeader\fP (const proto::Header &header)"
+.br
+.ti -1c
+.RI "bool \fBWriteChannel\fP (const proto::Channel &channel)"
+.br
+.ti -1c
+.RI "bool \fBWriteMessage\fP (const proto::SingleMessage &message)"
+.br
+.ti -1c
+.RI "uint64_t \fBGetMessageNumber\fP (const std::string &channel_name) const"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

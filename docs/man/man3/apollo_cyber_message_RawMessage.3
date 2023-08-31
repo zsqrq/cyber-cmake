@@ -1,0 +1,73 @@
+.TH "apollo::cyber::message::RawMessage" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::message::RawMessage
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBDescriptor\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRawMessage\fP (const std::string &data)"
+.br
+.ti -1c
+.RI "\fBRawMessage\fP (const std::string &data, uint64_t ts)"
+.br
+.ti -1c
+.RI "\fBRawMessage\fP (const \fBRawMessage\fP &raw_msg)"
+.br
+.ti -1c
+.RI "\fBRawMessage\fP & \fBoperator=\fP (const \fBRawMessage\fP &raw_msg)"
+.br
+.ti -1c
+.RI "bool \fBSerializeToArray\fP (void *data, int size) const"
+.br
+.ti -1c
+.RI "bool \fBSerializeToString\fP (std::string *str) const"
+.br
+.ti -1c
+.RI "bool \fBParseFromArray\fP (const void *data, int size)"
+.br
+.ti -1c
+.RI "bool \fBParseFromString\fP (const std::string &str)"
+.br
+.ti -1c
+.RI "int \fBByteSize\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const \fBDescriptor\fP * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static void \fBGetDescriptorString\fP (const std::string &type, std::string *desc_str)"
+.br
+.ti -1c
+.RI "static std::string \fBTypeName\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBmessage\fP"
+.br
+.ti -1c
+.RI "uint64_t \fBtimestamp\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,5 @@
+<map id="apollo::cyber::ReaderBase" name="apollo::cyber::ReaderBase">
+<area shape="rect" id="node1" title="Base Class for Reader Reader is identified by one apollo::cyber::proto::RoleAttribute,..." alt="" coords="198,5,566,244"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1Reader.html" title="Reader subscribes a channel, it has two main functions:" alt="" coords="5,292,759,560"/>
+<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1blocker_1_1IntraReader.html" title=" " alt="" coords="129,608,635,891"/>
+</map>

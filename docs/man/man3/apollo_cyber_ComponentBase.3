@@ -1,0 +1,74 @@
+.TH "apollo::cyber::ComponentBase" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::ComponentBase
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits std::enable_shared_from_this< ComponentBase >\&.
+.PP
+Inherited by \fBapollo::cyber::Component< M0 >\fP, \fBapollo::cyber::Component< Driver, Driver >\fP, \fBapollo::cyber::Component< M0, M1 >\fP, \fBapollo::cyber::Component< M0, M1, M2, M3 >\fP, \fBapollo::cyber::Component< M0, M1, M2, NullType >\fP, \fBapollo::cyber::Component< M0, M1, NullType, NullType >\fP, \fBapollo::cyber::Component< M0, NullType, NullType, NullType >\fP, \fBapollo::cyber::Component< NullType, NullType, NullType, NullType >\fP, and \fBapollo::cyber::TimerComponent\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "template<typename M > using \fBReader\fP = \fBcyber::Reader\fP< M >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBInitialize\fP (const ComponentConfig &config)"
+.br
+.ti -1c
+.RI "virtual bool \fBInitialize\fP (const TimerComponentConfig &config)"
+.br
+.ti -1c
+.RI "virtual void \fBShutdown\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > bool \fBGetProtoConfig\fP (T *config) const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBInit\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBConfigFilePath\fP () const"
+.br
+.ti -1c
+.RI "void \fBLoadConfigFiles\fP (const ComponentConfig &config)"
+.br
+.ti -1c
+.RI "void \fBLoadConfigFiles\fP (const TimerComponentConfig &config)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::atomic< bool > \fBis_shutdown_\fP = {false}"
+.br
+.ti -1c
+.RI "std::shared_ptr< \fBNode\fP > \fBnode_\fP = nullptr"
+.br
+.ti -1c
+.RI "std::string \fBconfig_file_path_\fP = ''"
+.br
+.ti -1c
+.RI "std::vector< std::shared_ptr< \fBReaderBase\fP > > \fBreaders_\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

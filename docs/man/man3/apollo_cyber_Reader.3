@@ -1,0 +1,357 @@
+.TH "apollo::cyber::Reader< MessageT >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::Reader< MessageT > \- \fBReader\fP subscribes a channel, it has two main functions:  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <reader\&.h>\fP
+.PP
+Inherits \fBapollo::cyber::ReaderBase\fP\&.
+.PP
+Inherited by \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBBlockerPtr\fP = std::unique_ptr< \fBblocker::Blocker\fP< MessageT > >"
+.br
+.ti -1c
+.RI "using \fBReceiverPtr\fP = std::shared_ptr< \fBtransport::Receiver\fP< MessageT > >"
+.br
+.ti -1c
+.RI "using \fBChangeConnection\fP = typename \fBservice_discovery::Manager::ChangeConnection\fP"
+.br
+.ti -1c
+.RI "using \fBIterator\fP = typename std::list< std::shared_ptr< MessageT > >::const_iterator"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReader\fP (const proto::RoleAttributes &role_attr, const CallbackFunc< MessageT > &reader_func=nullptr, uint32_t pending_queue_size=DEFAULT_PENDING_QUEUE_SIZE)"
+.br
+.ti -1c
+.RI "bool \fBInit\fP () override"
+.br
+.RI "Init \fBReader\fP\&. "
+.ti -1c
+.RI "void \fBShutdown\fP () override"
+.br
+.RI "Shutdown \fBReader\fP\&. "
+.ti -1c
+.RI "void \fBObserve\fP () override"
+.br
+.RI "Get All data that \fCBlocker\fP stores\&. "
+.ti -1c
+.RI "void \fBClearData\fP () override"
+.br
+.RI "Clear \fCBlocker\fP's data\&. "
+.ti -1c
+.RI "bool \fBHasReceived\fP () const override"
+.br
+.RI "Query whether we have received data since last clear\&. "
+.ti -1c
+.RI "bool \fBEmpty\fP () const override"
+.br
+.RI "Query whether the \fBReader\fP has data to be handled\&. "
+.ti -1c
+.RI "double \fBGetDelaySec\fP () const override"
+.br
+.RI "Get time interval of since last receive message\&. "
+.ti -1c
+.RI "uint32_t \fBPendingQueueSize\fP () const override"
+.br
+.RI "Get pending_queue_size configuration\&. "
+.ti -1c
+.RI "virtual void \fBEnqueue\fP (const std::shared_ptr< MessageT > &msg)"
+.br
+.RI "Push \fCmsg\fP to Blocker's \fCPublishQueue\fP "
+.ti -1c
+.RI "virtual void \fBSetHistoryDepth\fP (const uint32_t &depth)"
+.br
+.RI "Set Blocker's \fCPublishQueue\fP's capacity to \fCdepth\fP "
+.ti -1c
+.RI "virtual uint32_t \fBGetHistoryDepth\fP () const"
+.br
+.RI "Get Blocker's \fCPublishQueue\fP's capacity\&. "
+.ti -1c
+.RI "virtual std::shared_ptr< MessageT > \fBGetLatestObserved\fP () const"
+.br
+.RI "Get the latest message we \fCObserve\fP "
+.ti -1c
+.RI "virtual std::shared_ptr< MessageT > \fBGetOldestObserved\fP () const"
+.br
+.RI "Get the oldest message we \fCObserve\fP "
+.ti -1c
+.RI "virtual Iterator \fBBegin\fP () const"
+.br
+.RI "Get the begin iterator of \fCObserveQueue\fP, used to traverse\&. "
+.ti -1c
+.RI "virtual Iterator \fBEnd\fP () const"
+.br
+.RI "Get the end iterator of \fCObserveQueue\fP, used to traverse\&. "
+.ti -1c
+.RI "bool \fBHasWriter\fP () override"
+.br
+.RI "Is there is at least one writer publish the channel that we subscribes? "
+.ti -1c
+.RI "void \fBGetWriters\fP (std::vector< proto::RoleAttributes > *writers) override"
+.br
+.RI "Get all writers pushlish the channel we subscribes\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBlatest_recv_time_sec_\fP = \-1\&.0"
+.br
+.ti -1c
+.RI "double \fBsecond_to_lastest_recv_time_sec_\fP = \-1\&.0"
+.br
+.ti -1c
+.RI "uint32_t \fBpending_queue_size_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename MessageT>
+.br
+class apollo::cyber::Reader< MessageT >"
+\fBReader\fP subscribes a channel, it has two main functions: 
+
+
+.IP "1." 4
+You can pass a \fCCallbackFunc\fP to handle the message then it arrived
+.IP "2." 4
+You can Observe messages that Blocker cached\&. \fBReader\fP automatically push the message to Blocker's \fCPublishQueue\fP, and we can use \fCObserve\fP to fetch messages from \fCPublishQueue\fP to \fCObserveQueue\fP\&. But, if you have set CallbackFunc, you can ignore this\&. One \fBReader\fP uses one \fCChannelBuffer\fP, the message we are handling is stored in ChannelBuffer \fBReader\fP will Join the topology when init and Leave the topology when shutdown 
+.PP
+\fBWarning\fP
+.RS 4
+To save resource, \fCChannelBuffer\fP has limited length, it's passed through the \fCpending_queue_size\fP param\&. pending_queue_size is default set to 1, So, If you handle slower than writer sending, older messages that are not handled will be lost\&. You can increase \fCpending_queue_size\fP to resolve this problem\&. 
+.RE
+.PP
+
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename MessageT > \fBapollo::cyber::Reader\fP< MessageT >::\fBReader\fP (const proto::RoleAttributes & role_attr, const CallbackFunc< MessageT > & reader_func = \fCnullptr\fP, uint32_t pending_queue_size = \fCDEFAULT_PENDING_QUEUE_SIZE\fP)\fC [explicit]\fP"
+Constructor a \fBReader\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrole_attr\fP is a protobuf message RoleAttributes, which includes the channel name and other info\&. 
+.br
+\fIreader_func\fP is the callback function, when the message is received\&. 
+.br
+\fIpending_queue_size\fP is the max depth of message cache queue\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+the received messages is enqueue a queue,the queue's depth is pending_queue_size 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename MessageT > virtual Iterator \fBapollo::cyber::Reader\fP< MessageT >::Begin () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Get the begin iterator of \fCObserveQueue\fP, used to traverse\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Iterator begin iterator 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
+.SS "template<typename MessageT > bool \fBapollo::cyber::Reader\fP< MessageT >::Empty\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Query whether the \fBReader\fP has data to be handled\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if blocker is empty 
+.PP
+false if blocker has data 
+.RE
+.PP
+
+.PP
+Implements \fBapollo::cyber::ReaderBase\fP\&.
+.SS "template<typename MessageT > virtual Iterator \fBapollo::cyber::Reader\fP< MessageT >::End () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Get the end iterator of \fCObserveQueue\fP, used to traverse\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Iterator begin iterator 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
+.SS "template<typename MessageT > void \fBapollo::cyber::Reader\fP< MessageT >::Enqueue (const std::shared_ptr< MessageT > & msg)\fC [virtual]\fP"
+
+.PP
+Push \fCmsg\fP to Blocker's \fCPublishQueue\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP message ptr to be pushed 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
+.SS "template<typename MessageT > double \fBapollo::cyber::Reader\fP< MessageT >::GetDelaySec\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Get time interval of since last receive message\&. 
+.PP
+\fBReturns\fP
+.RS 4
+double seconds delay 
+.RE
+.PP
+
+.PP
+Implements \fBapollo::cyber::ReaderBase\fP\&.
+.SS "template<typename MessageT > uint32_t \fBapollo::cyber::Reader\fP< MessageT >::GetHistoryDepth\fC [virtual]\fP"
+
+.PP
+Get Blocker's \fCPublishQueue\fP's capacity\&. 
+.PP
+\fBReturns\fP
+.RS 4
+uint32_t depth of the history 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
+.SS "template<typename MessageT > std::shared_ptr< MessageT > \fBapollo::cyber::Reader\fP< MessageT >::GetLatestObserved\fC [virtual]\fP"
+
+.PP
+Get the latest message we \fCObserve\fP 
+.PP
+\fBReturns\fP
+.RS 4
+std::shared_ptr<MessageT> the latest message 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
+.SS "template<typename MessageT > std::shared_ptr< MessageT > \fBapollo::cyber::Reader\fP< MessageT >::GetOldestObserved\fC [virtual]\fP"
+
+.PP
+Get the oldest message we \fCObserve\fP 
+.PP
+\fBReturns\fP
+.RS 4
+std::shared_ptr<MessageT> the oldest message 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
+.SS "template<typename MessageT > void \fBapollo::cyber::Reader\fP< MessageT >::GetWriters (std::vector< proto::RoleAttributes > * writers)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Get all writers pushlish the channel we subscribes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwriters\fP result vector of RoleAttributes 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBapollo::cyber::ReaderBase\fP\&.
+.SS "template<typename MessageT > bool \fBapollo::cyber::Reader\fP< MessageT >::HasReceived\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Query whether we have received data since last clear\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the reader has received data 
+.PP
+false if the reader has not received data 
+.RE
+.PP
+
+.PP
+Implements \fBapollo::cyber::ReaderBase\fP\&.
+.SS "template<typename MessageT > bool \fBapollo::cyber::Reader\fP< MessageT >::HasWriter\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Is there is at least one writer publish the channel that we subscribes? 
+.PP
+\fBReturns\fP
+.RS 4
+true if the channel has writer 
+.PP
+false if the channel has no writer 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBapollo::cyber::ReaderBase\fP\&.
+.SS "template<typename MessageT > bool \fBapollo::cyber::Reader\fP< MessageT >::Init\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Init \fBReader\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if init successfully 
+.PP
+false if init failed 
+.RE
+.PP
+
+.PP
+Implements \fBapollo::cyber::ReaderBase\fP\&.
+.SS "template<typename MessageT > uint32_t \fBapollo::cyber::Reader\fP< MessageT >::PendingQueueSize\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Get pending_queue_size configuration\&. 
+.PP
+\fBReturns\fP
+.RS 4
+uint32_t the value of pending queue size 
+.RE
+.PP
+
+.PP
+Implements \fBapollo::cyber::ReaderBase\fP\&.
+.SS "template<typename MessageT > void \fBapollo::cyber::Reader\fP< MessageT >::SetHistoryDepth (const uint32_t & depth)\fC [virtual]\fP"
+
+.PP
+Set Blocker's \fCPublishQueue\fP's capacity to \fCdepth\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdepth\fP the value you want to set 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,180 @@
+.TH "apollo::cyber::record::RecordViewer" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::record::RecordViewer \- The record viewer\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <record_viewer\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBIterator\fP"
+.br
+.RI "The iterator\&. "
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBRecordReaderPtr\fP = std::shared_ptr< \fBRecordReader\fP >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRecordViewer\fP (const RecordReaderPtr &reader, uint64_t \fBbegin_time\fP=0, uint64_t \fBend_time\fP=std::numeric_limits< uint64_t >::max(), const std::set< std::string > &channels={})"
+.br
+.RI "The constructor with single reader\&. "
+.ti -1c
+.RI "\fBRecordViewer\fP (const std::vector< RecordReaderPtr > &readers, uint64_t \fBbegin_time\fP=0, uint64_t \fBend_time\fP=std::numeric_limits< uint64_t >::max(), const std::set< std::string > &channels=std::set< std::string >())"
+.br
+.RI "The constructor with multiple readers\&. "
+.ti -1c
+.RI "bool \fBIsValid\fP () const"
+.br
+.RI "Is this record reader is valid\&. "
+.ti -1c
+.RI "uint64_t \fBbegin_time\fP () const"
+.br
+.RI "Get begin time\&. "
+.ti -1c
+.RI "uint64_t \fBend_time\fP () const"
+.br
+.RI "Get end time\&. "
+.ti -1c
+.RI "std::set< std::string > \fBGetChannelList\fP () const"
+.br
+.RI "Get channel list\&. "
+.ti -1c
+.RI "\fBIterator\fP \fBbegin\fP ()"
+.br
+.RI "Get the begin iterator\&. "
+.ti -1c
+.RI "\fBIterator\fP \fBend\fP ()"
+.br
+.RI "Get the end iterator\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBIterator\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The record viewer\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "apollo::cyber::record::RecordViewer::RecordViewer (const RecordReaderPtr & reader, uint64_t begin_time = \fC0\fP, uint64_t end_time = \fCstd::numeric_limits<uint64_t>::max()\fP, const std::set< std::string > & channels = \fC{}\fP)"
+
+.PP
+The constructor with single reader\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreader\fP 
+.br
+\fIbegin_time\fP 
+.br
+\fIend_time\fP 
+.br
+\fIchannels\fP 
+.RE
+.PP
+
+.SS "apollo::cyber::record::RecordViewer::RecordViewer (const std::vector< RecordReaderPtr > & readers, uint64_t begin_time = \fC0\fP, uint64_t end_time = \fCstd::numeric_limits<uint64_t>::max()\fP, const std::set< std::string > & channels = \fCstd::set<std::string>()\fP)"
+
+.PP
+The constructor with multiple readers\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreaders\fP 
+.br
+\fIbegin_time\fP 
+.br
+\fIend_time\fP 
+.br
+\fIchannels\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBRecordViewer::Iterator\fP apollo::cyber::record::RecordViewer::begin ()"
+
+.PP
+Get the begin iterator\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The begin iterator\&. 
+.RE
+.PP
+
+.SS "uint64_t apollo::cyber::record::RecordViewer::begin_time () const\fC [inline]\fP"
+
+.PP
+Get begin time\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Begin time (nanoseconds)\&. 
+.RE
+.PP
+
+.SS "\fBRecordViewer::Iterator\fP apollo::cyber::record::RecordViewer::end ()"
+
+.PP
+Get the end iterator\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The end iterator\&. 
+.RE
+.PP
+
+.SS "uint64_t apollo::cyber::record::RecordViewer::end_time () const\fC [inline]\fP"
+
+.PP
+Get end time\&. 
+.PP
+\fBReturns\fP
+.RS 4
+end time (nanoseconds)\&. 
+.RE
+.PP
+
+.SS "std::set<std::string> apollo::cyber::record::RecordViewer::GetChannelList () const\fC [inline]\fP"
+
+.PP
+Get channel list\&. 
+.PP
+\fBReturns\fP
+.RS 4
+List container with all channel name string\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::record::RecordViewer::IsValid () const"
+
+.PP
+Is this record reader is valid\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True for valid, false for not\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

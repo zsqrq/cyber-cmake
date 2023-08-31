@@ -1,0 +1,44 @@
+.TH "apollo::cyber::record::RecordFileReader" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::record::RecordFileReader
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBapollo::cyber::record::RecordFileBase\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBOpen\fP (const std::string &path) override"
+.br
+.ti -1c
+.RI "void \fBClose\fP () override"
+.br
+.ti -1c
+.RI "bool \fBReset\fP ()"
+.br
+.ti -1c
+.RI "bool \fBReadSection\fP (\fBSection\fP *section)"
+.br
+.ti -1c
+.RI "bool \fBSkipSection\fP (int64_t size)"
+.br
+.ti -1c
+.RI "template<typename T > bool \fBReadSection\fP (int64_t size, T *message)"
+.br
+.ti -1c
+.RI "bool \fBReadIndex\fP ()"
+.br
+.ti -1c
+.RI "bool \fBEndOfFile\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

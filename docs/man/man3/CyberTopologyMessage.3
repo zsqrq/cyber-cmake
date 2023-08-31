@@ -1,0 +1,35 @@
+.TH "CyberTopologyMessage" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CyberTopologyMessage
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBRenderableMessage\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCyberTopologyMessage\fP (const std::string &channel)"
+.br
+.ti -1c
+.RI "int \fBRender\fP (const \fBScreen\fP *s, int key) override"
+.br
+.ti -1c
+.RI "\fBRenderableMessage\fP * \fBChild\fP (int index) const override"
+.br
+.ti -1c
+.RI "void \fBTopologyChanged\fP (const apollo::cyber::proto::ChangeMsg &change_msg)"
+.br
+.ti -1c
+.RI "void \fBAddReaderWriter\fP (const apollo::cyber::proto::RoleAttributes &role, bool isWriter)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

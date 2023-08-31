@@ -1,0 +1,30 @@
+.TH "apollo::cyber::logger::Logger" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::logger::Logger
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits google::base::Logger\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLogger\fP (google::base::Logger *wrapped)"
+.br
+.ti -1c
+.RI "void \fBWrite\fP (bool force_flush, time_t timestamp, const char *message, int message_len) override"
+.br
+.ti -1c
+.RI "void \fBFlush\fP () override"
+.br
+.ti -1c
+.RI "uint32_t \fBLogSize\fP () override"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

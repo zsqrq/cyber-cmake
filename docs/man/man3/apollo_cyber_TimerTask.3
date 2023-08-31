@@ -1,0 +1,47 @@
+.TH "apollo::cyber::TimerTask" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::TimerTask
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTimerTask\fP (uint64_t timer_id)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint64_t \fBtimer_id_\fP = 0"
+.br
+.ti -1c
+.RI "std::function< void()> \fBcallback\fP"
+.br
+.ti -1c
+.RI "uint64_t \fBinterval_ms\fP = 0"
+.br
+.ti -1c
+.RI "uint64_t \fBremainder_interval_ms\fP = 0"
+.br
+.ti -1c
+.RI "uint64_t \fBnext_fire_duration_ms\fP = 0"
+.br
+.ti -1c
+.RI "int64_t \fBaccumulated_error_ns\fP = 0"
+.br
+.ti -1c
+.RI "uint64_t \fBlast_execute_time_ns\fP = 0"
+.br
+.ti -1c
+.RI "std::mutex \fBmutex\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,142 @@
+.TH "apollo::cyber::ParameterClient" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::ParameterClient \- \fBParameter\fP \fBClient\fP is used to set/get/list parameter(s) by sending a request to \fBParameterServer\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <parameter_client\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBParam\fP = apollo::cyber::proto::Param"
+.br
+.ti -1c
+.RI "using \fBNodeName\fP = apollo::cyber::proto::NodeName"
+.br
+.ti -1c
+.RI "using \fBParamName\fP = apollo::cyber::proto::ParamName"
+.br
+.ti -1c
+.RI "using \fBBoolResult\fP = apollo::cyber::proto::BoolResult"
+.br
+.ti -1c
+.RI "using \fBParams\fP = apollo::cyber::proto::Params"
+.br
+.ti -1c
+.RI "using \fBGetParameterClient\fP = \fBClient\fP< ParamName, Param >"
+.br
+.ti -1c
+.RI "using \fBSetParameterClient\fP = \fBClient\fP< Param, BoolResult >"
+.br
+.ti -1c
+.RI "using \fBListParametersClient\fP = \fBClient\fP< NodeName, Params >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBParameterClient\fP (const std::shared_ptr< \fBNode\fP > &node, const std::string &service_node_name)"
+.br
+.RI "Construct a new \fBParameterClient\fP object\&. "
+.ti -1c
+.RI "bool \fBGetParameter\fP (const std::string &param_name, \fBParameter\fP *parameter)"
+.br
+.RI "Get the \fBParameter\fP object\&. "
+.ti -1c
+.RI "bool \fBSetParameter\fP (const \fBParameter\fP &parameter)"
+.br
+.RI "Set the \fBParameter\fP object\&. "
+.ti -1c
+.RI "bool \fBListParameters\fP (std::vector< \fBParameter\fP > *parameters)"
+.br
+.RI "Get all the \fBParameter\fP objects\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBParameter\fP \fBClient\fP is used to set/get/list parameter(s) by sending a request to \fBParameterServer\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "apollo::cyber::ParameterClient::ParameterClient (const std::shared_ptr< \fBNode\fP > & node, const std::string & service_node_name)"
+
+.PP
+Construct a new \fBParameterClient\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInode\fP shared_ptr of the node handler 
+.br
+\fIservice_node_name\fP node name which provide a param services 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool apollo::cyber::ParameterClient::GetParameter (const std::string & param_name, \fBParameter\fP * parameter)"
+
+.PP
+Get the \fBParameter\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparam_name\fP 
+.br
+\fIparameter\fP the pointer to store 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true 
+.PP
+false call service fail or timeout 
+.RE
+.PP
+
+.SS "bool apollo::cyber::ParameterClient::ListParameters (std::vector< \fBParameter\fP > * parameters)"
+
+.PP
+Get all the \fBParameter\fP objects\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparameters\fP pointer of vector to store all the parameters 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true 
+.PP
+false call service fail or timeout 
+.RE
+.PP
+
+.SS "bool apollo::cyber::ParameterClient::SetParameter (const \fBParameter\fP & parameter)"
+
+.PP
+Set the \fBParameter\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparameter\fP parameter to be set 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true set parameter succues 
+.PP
+false 1\&. call service timeout
+.IP "2." 4
+parameter not exists The corresponding log will be recorded at the same time 
+.PP
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

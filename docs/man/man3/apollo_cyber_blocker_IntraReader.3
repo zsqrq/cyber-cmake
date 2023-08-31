@@ -1,0 +1,225 @@
+.TH "apollo::cyber::blocker::IntraReader< MessageT >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::blocker::IntraReader< MessageT >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBapollo::cyber::Reader< MessageT >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBMessagePtr\fP = std::shared_ptr< MessageT >"
+.br
+.ti -1c
+.RI "using \fBCallback\fP = std::function< void(const std::shared_ptr< MessageT > &)>"
+.br
+.ti -1c
+.RI "using \fBIterator\fP = typename std::list< std::shared_ptr< MessageT > >::const_iterator"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIntraReader\fP (const proto::RoleAttributes &attr, const Callback &callback)"
+.br
+.ti -1c
+.RI "bool \fBInit\fP () override"
+.br
+.RI "Init the \fBReader\fP object\&. "
+.ti -1c
+.RI "void \fBShutdown\fP () override"
+.br
+.RI "Shutdown the \fBReader\fP object\&. "
+.ti -1c
+.RI "void \fBClearData\fP () override"
+.br
+.RI "Clear local data\&. "
+.ti -1c
+.RI "void \fBObserve\fP () override"
+.br
+.RI "Get stored data\&. "
+.ti -1c
+.RI "bool \fBEmpty\fP () const override"
+.br
+.RI "Query whether the \fBReader\fP has data to be handled\&. "
+.ti -1c
+.RI "bool \fBHasReceived\fP () const override"
+.br
+.RI "Query whether we have received data since last clear\&. "
+.ti -1c
+.RI "void \fBEnqueue\fP (const std::shared_ptr< MessageT > &msg) override"
+.br
+.RI "Push \fCmsg\fP to \fBBlocker\fP's \fCPublishQueue\fP "
+.ti -1c
+.RI "void \fBSetHistoryDepth\fP (const uint32_t &depth) override"
+.br
+.RI "Set \fBBlocker\fP's \fCPublishQueue\fP's capacity to \fCdepth\fP "
+.ti -1c
+.RI "uint32_t \fBGetHistoryDepth\fP () const override"
+.br
+.RI "Get \fBBlocker\fP's \fCPublishQueue\fP's capacity\&. "
+.ti -1c
+.RI "std::shared_ptr< MessageT > \fBGetLatestObserved\fP () const override"
+.br
+.RI "Get the latest message we \fCObserve\fP "
+.ti -1c
+.RI "std::shared_ptr< MessageT > \fBGetOldestObserved\fP () const override"
+.br
+.RI "Get the oldest message we \fCObserve\fP "
+.ti -1c
+.RI "Iterator \fBBegin\fP () const override"
+.br
+.RI "Get the begin iterator of \fCObserveQueue\fP, used to traverse\&. "
+.ti -1c
+.RI "Iterator \fBEnd\fP () const override"
+.br
+.RI "Get the end iterator of \fCObserveQueue\fP, used to traverse\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename MessageT > auto \fBapollo::cyber::blocker::IntraReader\fP< MessageT >::Begin\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Get the begin iterator of \fCObserveQueue\fP, used to traverse\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Iterator begin iterator 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBapollo::cyber::Reader< MessageT >\fP\&.
+.SS "template<typename MessageT > bool \fBapollo::cyber::blocker::IntraReader\fP< MessageT >::Empty () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Query whether the \fBReader\fP has data to be handled\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if data container is empty 
+.PP
+false if data container has data 
+.RE
+.PP
+
+.PP
+Implements \fBapollo::cyber::ReaderBase\fP\&.
+.SS "template<typename MessageT > auto \fBapollo::cyber::blocker::IntraReader\fP< MessageT >::End\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Get the end iterator of \fCObserveQueue\fP, used to traverse\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Iterator begin iterator 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBapollo::cyber::Reader< MessageT >\fP\&.
+.SS "template<typename MessageT > void \fBapollo::cyber::blocker::IntraReader\fP< MessageT >::Enqueue (const std::shared_ptr< MessageT > & msg)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Push \fCmsg\fP to \fBBlocker\fP's \fCPublishQueue\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP message ptr to be pushed 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBapollo::cyber::Reader< MessageT >\fP\&.
+.SS "template<typename MessageT > uint32_t \fBapollo::cyber::blocker::IntraReader\fP< MessageT >::GetHistoryDepth\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Get \fBBlocker\fP's \fCPublishQueue\fP's capacity\&. 
+.PP
+\fBReturns\fP
+.RS 4
+uint32_t depth of the history 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBapollo::cyber::Reader< MessageT >\fP\&.
+.SS "template<typename MessageT > std::shared_ptr< MessageT > \fBapollo::cyber::blocker::IntraReader\fP< MessageT >::GetLatestObserved\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Get the latest message we \fCObserve\fP 
+.PP
+\fBReturns\fP
+.RS 4
+std::shared_ptr<MessageT> the latest message 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBapollo::cyber::Reader< MessageT >\fP\&.
+.SS "template<typename MessageT > std::shared_ptr< MessageT > \fBapollo::cyber::blocker::IntraReader\fP< MessageT >::GetOldestObserved\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Get the oldest message we \fCObserve\fP 
+.PP
+\fBReturns\fP
+.RS 4
+std::shared_ptr<MessageT> the oldest message 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBapollo::cyber::Reader< MessageT >\fP\&.
+.SS "template<typename MessageT > bool \fBapollo::cyber::blocker::IntraReader\fP< MessageT >::HasReceived () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Query whether we have received data since last clear\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the reader has received data 
+.PP
+false if the reader has not received data 
+.RE
+.PP
+
+.PP
+Implements \fBapollo::cyber::ReaderBase\fP\&.
+.SS "template<typename MessageT > bool \fBapollo::cyber::blocker::IntraReader\fP< MessageT >::Init ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Init the \fBReader\fP object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if init successfully 
+.PP
+false if init failed 
+.RE
+.PP
+
+.PP
+Implements \fBapollo::cyber::ReaderBase\fP\&.
+.SS "template<typename MessageT > void \fBapollo::cyber::blocker::IntraReader\fP< MessageT >::SetHistoryDepth (const uint32_t & depth)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Set \fBBlocker\fP's \fCPublishQueue\fP's capacity to \fCdepth\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdepth\fP the value you want to set 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBapollo::cyber::Reader< MessageT >\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,39 @@
+.TH "apollo::cyber::croutine::RoutineFactory" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::croutine::RoutineFactory
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBVoidFunc\fP = std::function< void()>"
+.br
+.ti -1c
+.RI "using \fBCreateRoutineFunc\fP = std::function< VoidFunc()>"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "std::shared_ptr< \fBdata::DataVisitorBase\fP > \fBGetDataVisitor\fP () const"
+.br
+.ti -1c
+.RI "void \fBSetDataVisitor\fP (const std::shared_ptr< \fBdata::DataVisitorBase\fP > &dv)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "CreateRoutineFunc \fBcreate_routine\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,5 +1,6 @@
 {
   "ENABLE_BASE":true,
-  "ENABLE_DOCMENTATION":true,
+  "ENABLE_DOCMENTATION":false,
+  "ENABLE_PROTO_GENERATE":true,
   "ENABLE_DEFAULT":false
 }

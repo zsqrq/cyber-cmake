@@ -1,0 +1,145 @@
+.TH "cyber_py3.cyber_time.Time" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cyber_py3.cyber_time.Time
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, other)"
+.br
+.RI "Constructor, creates a \fBTime\fP\&. "
+.ti -1c
+.RI "def \fB__del__\fP (self)"
+.br
+.ti -1c
+.RI "def \fB__str__\fP (self)"
+.br
+.ti -1c
+.RI "def \fBiszero\fP (self)"
+.br
+.ti -1c
+.RI "def \fBto_sec\fP (self)"
+.br
+.ti -1c
+.RI "def \fBto_nsec\fP (self)"
+.br
+.ti -1c
+.RI "def \fBsleep_until\fP (self, cyber_time)"
+.br
+.ti -1c
+.RI "def \fB__sub__\fP (self, other)"
+.br
+.ti -1c
+.RI "def \fB__add__\fP (self, other)"
+.br
+.ti -1c
+.RI "def \fB__radd__\fP (self, other)"
+.br
+.ti -1c
+.RI "def \fB__lt__\fP (self, other)"
+.br
+.ti -1c
+.RI "def \fB__gt__\fP (self, other)"
+.br
+.ti -1c
+.RI "def \fB__le__\fP (self, other)"
+.br
+.ti -1c
+.RI "def \fB__ge__\fP (self, other)"
+.br
+.ti -1c
+.RI "def \fB__eq__\fP (self, other)"
+.br
+.ti -1c
+.RI "def \fB__ne__\fP (self, other)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBnow\fP ()"
+.br
+.ti -1c
+.RI "def \fBmono_time\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBtime\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Class for cyber time wrapper.
+
+.fi
+.PP
+ 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def cyber_py3\&.cyber_time\&.Time\&.__init__ ( self,  other)"
+
+.PP
+Constructor, creates a \fBTime\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP float means seconds unit\&. int means nanoseconds\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "def cyber_py3\&.cyber_time\&.Time\&.now ()\fC [static]\fP"
+
+.PP
+.nf
+return current time.
+
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.cyber_time\&.Time\&.sleep_until ( self,  cyber_time)"
+
+.PP
+.nf
+sleep until time.
+
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.cyber_time\&.Time\&.to_nsec ( self)"
+
+.PP
+.nf
+convert to nanosecond.
+
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.cyber_time\&.Time\&.to_sec ( self)"
+
+.PP
+.nf
+convert to second.
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,76 @@
+.TH "apollo::cyber::Component< M0, M1, M2, M3 >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::Component< M0, M1, M2, M3 > \- The \fBComponent\fP can process up to four channels of messages\&. The message type is specified when the component is created\&. The \fBComponent\fP is inherited from \fBComponentBase\fP\&. Your component can inherit from \fBComponent\fP, and implement Init() & Proc(\&.\&.\&.), They are picked up by the CyberRT\&. There are 4 specialization implementations\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <component\&.h>\fP
+.PP
+Inherits \fBapollo::cyber::ComponentBase\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBInitialize\fP (const ComponentConfig &config) override"
+.br
+.RI "init the component by protobuf object\&. "
+.ti -1c
+.RI "bool \fBProcess\fP (const std::shared_ptr< M0 > &msg0, const std::shared_ptr< M1 > &msg1, const std::shared_ptr< M2 > &msg2, const std::shared_ptr< M3 > &msg3)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename M0 = NullType, typename M1 = NullType, typename M2 = NullType, typename M3 = NullType>
+.br
+class apollo::cyber::Component< M0, M1, M2, M3 >"
+The \fBComponent\fP can process up to four channels of messages\&. The message type is specified when the component is created\&. The \fBComponent\fP is inherited from \fBComponentBase\fP\&. Your component can inherit from \fBComponent\fP, and implement Init() & Proc(\&.\&.\&.), They are picked up by the CyberRT\&. There are 4 specialization implementations\&. 
+
+
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIM0\fP the first message\&. 
+.br
+\fIM1\fP the second message\&. 
+.br
+\fIM2\fP the third message\&. 
+.br
+\fIM3\fP the fourth message\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+The Init & Proc functions need to be overloaded, but don't want to be called\&. They are called by the CyberRT Frame\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename M0 , typename M1 , typename M2 , typename M3 > bool \fBapollo::cyber::Component\fP< M0, M1, M2, M3 >::Initialize (const ComponentConfig & config)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+init the component by protobuf object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconfig\fP which is defined in 'cyber/proto/component_conf\&.proto'
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+returns true if successful, otherwise returns false 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBapollo::cyber::ComponentBase\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

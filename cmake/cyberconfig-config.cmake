@@ -1,6 +1,7 @@
 set(ENABLE_TEST OFF)
 include(GNUInstallDirs)
 include(${CMAKE_SOURCE_DIR}/cmake/cyber-tool.cmake)
+include(${CMAKE_SOURCE_DIR}/cmake/cyberproto-config.cmake)
 set(AUTHOR_KEY "ENABLE_DOCMENTATION")
 
 if(COMPILE_PLATFOM STREQUAL "x86")
@@ -13,22 +14,21 @@ if(COMPILE_PLATFOM STREQUAL "x86")
   string(REGEX REPLACE "," ";" CONFIG_CONTENT_LINES ${CONFIG_CONTENT})
 
   foreach(LINE ${CONFIG_CONTENT_LINES})
-    #    string(REGEX REPLACE "\\s*\"([^\"]+)\"\\s*:\\s(.+)\\s*$" "\\1;\\2" KEY_VALUE_PAIR ${LINE})
     string(REGEX REPLACE "\"([^\"]+)\"\\s*:\\s*([^\"]+)\\s*" "\\1;\\2" KEY_VALUE_PAIR ${LINE})
-
     list(GET KEY_VALUE_PAIR 1 VALUE)
     list(GET KEY_VALUE_PAIR 0 KEY)
 
     if (${VALUE} STREQUAL "true")
       add_definitions(-D${KEY})
       string(FIND "${KEY_VALUE_PAIR}" "ENABLE_DOCMENTATION" FOUND_INDEX)
-
+      string(FIND "${LINE}" "ENABLE_PROTO_GENERATE" FOUND_PROTO_INDEX)
       if(${FOUND_INDEX} GREATER_EQUAL 0)
         set(ENABLE_DOCMENTATION ${KEY} CACHE INTERNAL " ")
       endif()
-
+      if(${FOUND_PROTO_INDEX} GREATER_EQUAL 0)
+        set(ENABLE_PROTO_GENERATE ${KEY} CACHE INTERNAL " ")
+      endif()
     endif ()
-
   endforeach()
 
   find_package(Git)

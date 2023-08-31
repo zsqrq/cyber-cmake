@@ -1,0 +1,41 @@
+.TH "apollo::cyber::data::ChannelBuffer< T >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::data::ChannelBuffer< T >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBBufferType\fP = \fBCacheBuffer\fP< std::shared_ptr< T > >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChannelBuffer\fP (uint64_t channel_id, \fBBufferType\fP *buffer)"
+.br
+.ti -1c
+.RI "bool \fBFetch\fP (uint64_t *index, std::shared_ptr< T > &m)"
+.br
+.ti -1c
+.RI "bool \fBLatest\fP (std::shared_ptr< T > &m)"
+.br
+.ti -1c
+.RI "bool \fBFetchMulti\fP (uint64_t fetch_size, std::vector< std::shared_ptr< T >> *vec)"
+.br
+.ti -1c
+.RI "uint64_t \fBchannel_id\fP () const"
+.br
+.ti -1c
+.RI "std::shared_ptr< \fBBufferType\fP > \fBBuffer\fP () const"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

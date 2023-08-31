@@ -1,0 +1,55 @@
+.TH "apollo::cyber::ServiceBase" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::ServiceBase \- \fBBase\fP class for \fBService\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <service_base\&.h>\fP
+.PP
+Inherited by \fBapollo::cyber::Service< Request, Response >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBServiceBase\fP (const std::string &\fBservice_name\fP)"
+.br
+.RI "Construct a new \fBService\fP \fBBase\fP object\&. "
+.ti -1c
+.RI "virtual void \fBdestroy\fP ()=0"
+.br
+.ti -1c
+.RI "const std::string & \fBservice_name\fP () const"
+.br
+.RI "Get the service name\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBservice_name_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBBase\fP class for \fBService\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "apollo::cyber::ServiceBase::ServiceBase (const std::string & service_name)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Construct a new \fBService\fP \fBBase\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIservice_name\fP name of this \fBService\fP 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

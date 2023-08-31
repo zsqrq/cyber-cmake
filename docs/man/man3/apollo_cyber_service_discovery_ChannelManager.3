@@ -1,0 +1,322 @@
+.TH "apollo::cyber::service_discovery::ChannelManager" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::service_discovery::ChannelManager \- Topology \fBManager\fP of \fBService\fP related\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <channel_manager\&.h>\fP
+.PP
+Inherits \fBapollo::cyber::service_discovery::Manager\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBRoleAttrVec\fP = std::vector< proto::RoleAttributes >"
+.br
+.ti -1c
+.RI "using \fBWriterWarehouse\fP = \fBMultiValueWarehouse\fP"
+.br
+.ti -1c
+.RI "using \fBReaderWarehouse\fP = \fBMultiValueWarehouse\fP"
+.br
+.ti -1c
+.RI "using \fBExemptedMessageTypes\fP = std::unordered_set< std::string >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChannelManager\fP ()"
+.br
+.RI "Construct a new Channel \fBManager\fP object\&. "
+.ti -1c
+.RI "virtual \fB~ChannelManager\fP ()"
+.br
+.RI "Destroy the Channel \fBManager\fP object\&. "
+.ti -1c
+.RI "void \fBGetChannelNames\fP (std::vector< std::string > *channels)"
+.br
+.RI "Get all channel names in the topology\&. "
+.ti -1c
+.RI "void \fBGetProtoDesc\fP (const std::string &channel_name, std::string *proto_desc)"
+.br
+.RI "Get the Protocol Desc of \fCchannel_name\fP "
+.ti -1c
+.RI "void \fBGetMsgType\fP (const std::string &channel_name, std::string *msg_type)"
+.br
+.RI "Get the Msg Type of \fCchannel_name\fP "
+.ti -1c
+.RI "bool \fBHasWriter\fP (const std::string &channel_name)"
+.br
+.RI "Inquire if there is at least one \fBWriter\fP that publishes \fCchannel_name\fP "
+.ti -1c
+.RI "void \fBGetWriters\fP (RoleAttrVec *writers)"
+.br
+.RI "Get All Writers object\&. "
+.ti -1c
+.RI "void \fBGetWritersOfNode\fP (const std::string &node_name, RoleAttrVec *writers)"
+.br
+.RI "Get the Writers Of \fBNode\fP object\&. "
+.ti -1c
+.RI "void \fBGetWritersOfChannel\fP (const std::string &channel_name, RoleAttrVec *writers)"
+.br
+.RI "Get the Writers Of Channel object\&. "
+.ti -1c
+.RI "bool \fBHasReader\fP (const std::string &channel_name)"
+.br
+.RI "Inquire if there is at least one \fBReader\fP that publishes \fCchannel_name\fP "
+.ti -1c
+.RI "void \fBGetReaders\fP (RoleAttrVec *readers)"
+.br
+.RI "Get All Readers object\&. "
+.ti -1c
+.RI "void \fBGetReadersOfNode\fP (const std::string &node_name, RoleAttrVec *readers)"
+.br
+.RI "Get the Readers Of \fBNode\fP object\&. "
+.ti -1c
+.RI "void \fBGetReadersOfChannel\fP (const std::string &channel_name, RoleAttrVec *readers)"
+.br
+.RI "Get the Readers Of Channel object\&. "
+.ti -1c
+.RI "void \fBGetUpstreamOfNode\fP (const std::string &node_name, RoleAttrVec *upstream_nodes)"
+.br
+.RI "Get the Upstream Of \fBNode\fP object\&. If \fBNode\fP A has writer that publishes channel-1, and \fBNode\fP B has reader that subscribes channel-1 then A is B's Upstream node, and B is A's Downstream node\&. "
+.ti -1c
+.RI "void \fBGetDownstreamOfNode\fP (const std::string &node_name, RoleAttrVec *downstream_nodes)"
+.br
+.RI "Get the Downstream Of \fBNode\fP object\&. If \fBNode\fP A has writer that publishes channel-1, and \fBNode\fP B has reader that subscribes channel-1 then A is B's Upstream node, and B is A's Downstream node\&. "
+.ti -1c
+.RI "FlowDirection \fBGetFlowDirection\fP (const std::string &lhs_node_name, const std::string &rhs_node_name)"
+.br
+.RI "Get the Flow Direction from \fClhs_node_node\fP to \fCrhs_node_name\fP You can see FlowDirection's description for more information\&. "
+.ti -1c
+.RI "bool \fBIsMessageTypeMatching\fP (const std::string &lhs, const std::string &rhs)"
+.br
+.RI "Is \fClhs\fP and \fCrhs\fP have same MessageType\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBTopologyManager\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Topology \fBManager\fP of \fBService\fP related\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void apollo::cyber::service_discovery::ChannelManager::GetChannelNames (std::vector< std::string > * channels)"
+
+.PP
+Get all channel names in the topology\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannels\fP result vector 
+.RE
+.PP
+
+.SS "void apollo::cyber::service_discovery::ChannelManager::GetDownstreamOfNode (const std::string & node_name, RoleAttrVec * downstream_nodes)"
+
+.PP
+Get the Downstream Of \fBNode\fP object\&. If \fBNode\fP A has writer that publishes channel-1, and \fBNode\fP B has reader that subscribes channel-1 then A is B's Upstream node, and B is A's Downstream node\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInode_name\fP node's name we want to inquire 
+.br
+\fIdownstream_nodes\fP result RoleAttribute vector 
+.RE
+.PP
+
+.SS "FlowDirection apollo::cyber::service_discovery::ChannelManager::GetFlowDirection (const std::string & lhs_node_name, const std::string & rhs_node_name)"
+
+.PP
+Get the Flow Direction from \fClhs_node_node\fP to \fCrhs_node_name\fP You can see FlowDirection's description for more information\&. 
+.PP
+\fBReturns\fP
+.RS 4
+FlowDirection result direction 
+.RE
+.PP
+
+.SS "void apollo::cyber::service_discovery::ChannelManager::GetMsgType (const std::string & channel_name, std::string * msg_type)"
+
+.PP
+Get the Msg Type of \fCchannel_name\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP channel name we want to inquire 
+.br
+\fImsg_type\fP result string, empty if inquire failed 
+.RE
+.PP
+
+.SS "void apollo::cyber::service_discovery::ChannelManager::GetProtoDesc (const std::string & channel_name, std::string * proto_desc)"
+
+.PP
+Get the Protocol Desc of \fCchannel_name\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP channel name we want to inquire 
+.br
+\fIproto_desc\fP result string, empty if inquire failed 
+.RE
+.PP
+
+.SS "void apollo::cyber::service_discovery::ChannelManager::GetReaders (RoleAttrVec * readers)"
+
+.PP
+Get All Readers object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreaders\fP result RoleAttr vector 
+.RE
+.PP
+
+.SS "void apollo::cyber::service_discovery::ChannelManager::GetReadersOfChannel (const std::string & channel_name, RoleAttrVec * readers)"
+
+.PP
+Get the Readers Of Channel object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP channel's name we want to inquire 
+.br
+\fIreaders\fP result RoleAttribute vector 
+.RE
+.PP
+
+.SS "void apollo::cyber::service_discovery::ChannelManager::GetReadersOfNode (const std::string & node_name, RoleAttrVec * readers)"
+
+.PP
+Get the Readers Of \fBNode\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInode_name\fP node's name we want to inquire 
+.br
+\fIreaders\fP result RoleAttribute vector 
+.RE
+.PP
+
+.SS "void apollo::cyber::service_discovery::ChannelManager::GetUpstreamOfNode (const std::string & node_name, RoleAttrVec * upstream_nodes)"
+
+.PP
+Get the Upstream Of \fBNode\fP object\&. If \fBNode\fP A has writer that publishes channel-1, and \fBNode\fP B has reader that subscribes channel-1 then A is B's Upstream node, and B is A's Downstream node\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInode_name\fP node's name we want to inquire 
+.br
+\fIupstream_nodes\fP result RoleAttribute vector 
+.RE
+.PP
+
+.SS "void apollo::cyber::service_discovery::ChannelManager::GetWriters (RoleAttrVec * writers)"
+
+.PP
+Get All Writers object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwriters\fP result RoleAttr vector 
+.RE
+.PP
+
+.SS "void apollo::cyber::service_discovery::ChannelManager::GetWritersOfChannel (const std::string & channel_name, RoleAttrVec * writers)"
+
+.PP
+Get the Writers Of Channel object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP channel's name we want to inquire 
+.br
+\fIwriters\fP result RoleAttribute vector 
+.RE
+.PP
+
+.SS "void apollo::cyber::service_discovery::ChannelManager::GetWritersOfNode (const std::string & node_name, RoleAttrVec * writers)"
+
+.PP
+Get the Writers Of \fBNode\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInode_name\fP node's name we want to inquire 
+.br
+\fIwriters\fP result RoleAttribute vector 
+.RE
+.PP
+
+.SS "bool apollo::cyber::service_discovery::ChannelManager::HasReader (const std::string & channel_name)"
+
+.PP
+Inquire if there is at least one \fBReader\fP that publishes \fCchannel_name\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP channel name we want to inquire 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if there is at least one \fBReader\fP 
+.PP
+false if there are no \fBReader\fP 
+.RE
+.PP
+
+.SS "bool apollo::cyber::service_discovery::ChannelManager::HasWriter (const std::string & channel_name)"
+
+.PP
+Inquire if there is at least one \fBWriter\fP that publishes \fCchannel_name\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP channel name we want to inquire 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if there is at least one \fBWriter\fP 
+.PP
+false if there are no Writers 
+.RE
+.PP
+
+.SS "bool apollo::cyber::service_discovery::ChannelManager::IsMessageTypeMatching (const std::string & lhs, const std::string & rhs)"
+
+.PP
+Is \fClhs\fP and \fCrhs\fP have same MessageType\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlhs\fP the left message type to compare 
+.br
+\fIrhs\fP the right message type to compare 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if type matches 
+.PP
+false if type does not matches 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

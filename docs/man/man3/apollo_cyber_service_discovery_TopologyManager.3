@@ -1,0 +1,83 @@
+.TH "apollo::cyber::service_discovery::TopologyManager" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::service_discovery::TopologyManager \- elements in Cyber -- \fBNode\fP, Channel, \fBService\fP, \fBWriter\fP, \fBReader\fP, \fBClient\fP and Server's relationship is presented by Topology\&. You can Imagine that a directed graph -- \fBNode\fP is the container of Server/Client/Writer/Reader, and they are the vertice of the graph and Channel is the \fBEdge\fP from \fBWriter\fP flow to the \fBReader\fP, \fBService\fP is the \fBEdge\fP from Server to \fBClient\fP\&. Thus we call \fBWriter\fP and Server \fCUpstream\fP, \fBReader\fP and \fBClient\fP \fCDownstream\fP To generate this graph, we use \fBTopologyManager\fP, it has three sub managers -- \fBNodeManager\fP: You can find Nodes in this topology \fBChannelManager\fP: You can find Channels in this topology, and their Writers and Readers \fBServiceManager\fP: You can find Services in this topology, and their Servers and Clients \fBTopologyManager\fP use fast-rtps' Participant to communicate\&. It can broadcast Join or Leave messages of those elements\&. Also, you can register you own \fCChangeFunc\fP to monitor topology change  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <topology_manager\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBChangeSignal\fP = \fBbase::Signal\fP< const ChangeMsg & >"
+.br
+.ti -1c
+.RI "using \fBChangeFunc\fP = std::function< void(const ChangeMsg &)>"
+.br
+.ti -1c
+.RI "using \fBChangeConnection\fP = \fBbase::Connection\fP< const ChangeMsg & >"
+.br
+.ti -1c
+.RI "using \fBPartNameContainer\fP = std::map< eprosima::fastrtps::rtps::GUID_t, std::string >"
+.br
+.ti -1c
+.RI "using \fBPartInfo\fP = eprosima::fastrtps::ParticipantDiscoveryInfo"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBShutdown\fP ()"
+.br
+.RI "Shutdown the \fBTopologyManager\fP\&. "
+.ti -1c
+.RI "\fBChangeConnection\fP \fBAddChangeListener\fP (const ChangeFunc &func)"
+.br
+.RI "To observe the topology change, you can register a \fCChangeFunc\fP "
+.ti -1c
+.RI "void \fBRemoveChangeListener\fP (const \fBChangeConnection\fP &conn)"
+.br
+.RI "Remove the observe function connect to \fCchange_signal_\fP by \fCconn\fP "
+.ti -1c
+.RI "NodeManagerPtr & \fBnode_manager\fP ()"
+.br
+.RI "Get shared_ptr for \fBNodeManager\fP\&. "
+.ti -1c
+.RI "ChannelManagerPtr & \fBchannel_manager\fP ()"
+.br
+.RI "Get shared_ptr for \fBChannelManager\fP\&. "
+.ti -1c
+.RI "ServiceManagerPtr & \fBservice_manager\fP ()"
+.br
+.RI "Get shared_ptr for \fBServiceManager\fP\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+elements in Cyber -- \fBNode\fP, Channel, \fBService\fP, \fBWriter\fP, \fBReader\fP, \fBClient\fP and Server's relationship is presented by Topology\&. You can Imagine that a directed graph -- \fBNode\fP is the container of Server/Client/Writer/Reader, and they are the vertice of the graph and Channel is the \fBEdge\fP from \fBWriter\fP flow to the \fBReader\fP, \fBService\fP is the \fBEdge\fP from Server to \fBClient\fP\&. Thus we call \fBWriter\fP and Server \fCUpstream\fP, \fBReader\fP and \fBClient\fP \fCDownstream\fP To generate this graph, we use \fBTopologyManager\fP, it has three sub managers -- \fBNodeManager\fP: You can find Nodes in this topology \fBChannelManager\fP: You can find Channels in this topology, and their Writers and Readers \fBServiceManager\fP: You can find Services in this topology, and their Servers and Clients \fBTopologyManager\fP use fast-rtps' Participant to communicate\&. It can broadcast Join or Leave messages of those elements\&. Also, you can register you own \fCChangeFunc\fP to monitor topology change 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBTopologyManager::ChangeConnection\fP apollo::cyber::service_discovery::TopologyManager::AddChangeListener (const ChangeFunc & func)"
+
+.PP
+To observe the topology change, you can register a \fCChangeFunc\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP is the observe function 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ChangeConnection is the connection that connected to \fCchange_signal_\fP\&. Used to Remove your observe function 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

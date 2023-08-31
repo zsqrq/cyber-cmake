@@ -1,0 +1,34 @@
+.TH "apollo::cyber::service_discovery::SubscriberListener" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::service_discovery::SubscriberListener
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits eprosima::fastrtps::SubscriberListener\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBNewMsgCallback\fP = std::function< void(const std::string &)>"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSubscriberListener\fP (const NewMsgCallback &callback)"
+.br
+.ti -1c
+.RI "void \fBonNewDataMessage\fP (eprosima::fastrtps::Subscriber *sub)"
+.br
+.ti -1c
+.RI "void \fBonSubscriptionMatched\fP (eprosima::fastrtps::Subscriber *sub, eprosima::fastrtps::MatchingInfo &info)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

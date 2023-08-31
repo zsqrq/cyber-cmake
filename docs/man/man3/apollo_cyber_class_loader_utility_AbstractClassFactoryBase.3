@@ -1,0 +1,64 @@
+.TH "apollo::cyber::class_loader::utility::AbstractClassFactoryBase" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::class_loader::utility::AbstractClassFactoryBase
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBapollo::cyber::class_loader::utility::AbstractClassFactory< Base >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAbstractClassFactoryBase\fP (const std::string &class_name, const std::string &base_class_name)"
+.br
+.ti -1c
+.RI "void \fBSetRelativeLibraryPath\fP (const std::string &library_path)"
+.br
+.ti -1c
+.RI "void \fBAddOwnedClassLoader\fP (\fBClassLoader\fP *loader)"
+.br
+.ti -1c
+.RI "void \fBRemoveOwnedClassLoader\fP (const \fBClassLoader\fP *loader)"
+.br
+.ti -1c
+.RI "bool \fBIsOwnedBy\fP (const \fBClassLoader\fP *loader)"
+.br
+.ti -1c
+.RI "bool \fBIsOwnedByAnybody\fP ()"
+.br
+.ti -1c
+.RI "std::vector< \fBClassLoader\fP * > \fBGetRelativeClassLoaders\fP ()"
+.br
+.ti -1c
+.RI "const std::string \fBGetRelativeLibraryPath\fP () const"
+.br
+.ti -1c
+.RI "const std::string \fBGetBaseClassName\fP () const"
+.br
+.ti -1c
+.RI "const std::string \fBGetClassName\fP () const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBClassLoader\fP * > \fBrelative_class_loaders_\fP"
+.br
+.ti -1c
+.RI "std::string \fBrelative_library_path_\fP"
+.br
+.ti -1c
+.RI "std::string \fBbase_class_name_\fP"
+.br
+.ti -1c
+.RI "std::string \fBclass_name_\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

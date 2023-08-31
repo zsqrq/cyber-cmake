@@ -1,0 +1,291 @@
+.TH "apollo::cyber::record::RecordWriter" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::record::RecordWriter \- The record writer\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <record_writer\&.h>\fP
+.PP
+Inherits \fBapollo::cyber::record::RecordBase\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBMessageNumberMap\fP = std::unordered_map< std::string, uint64_t >"
+.br
+.ti -1c
+.RI "using \fBMessageTypeMap\fP = std::unordered_map< std::string, std::string >"
+.br
+.ti -1c
+.RI "using \fBMessageProtoDescMap\fP = std::unordered_map< std::string, std::string >"
+.br
+.ti -1c
+.RI "using \fBFileWriterPtr\fP = std::unique_ptr< \fBRecordFileWriter\fP >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRecordWriter\fP ()"
+.br
+.RI "The default constructor\&. "
+.ti -1c
+.RI "\fBRecordWriter\fP (const proto::Header &header)"
+.br
+.RI "The constructor with record header as parameter\&. "
+.ti -1c
+.RI "virtual \fB~RecordWriter\fP ()"
+.br
+.RI "Virtual Destructor\&. "
+.ti -1c
+.RI "bool \fBOpen\fP (const std::string &file)"
+.br
+.RI "Open a record to write\&. "
+.ti -1c
+.RI "void \fBClose\fP ()"
+.br
+.RI "Clean the record\&. "
+.ti -1c
+.RI "bool \fBWriteChannel\fP (const std::string &channel_name, const std::string &message_type, const std::string &proto_desc)"
+.br
+.RI "Write a channel to record\&. "
+.ti -1c
+.RI "template<typename MessageT > bool \fBWriteMessage\fP (const std::string &channel_name, const MessageT &message, const uint64_t time_nanosec, const std::string &proto_desc='')"
+.br
+.RI "Write a message to record\&. "
+.ti -1c
+.RI "bool \fBSetSizeOfFileSegmentation\fP (uint64_t size_kilobytes)"
+.br
+.RI "Set max size (KB) to segment record file\&. "
+.ti -1c
+.RI "bool \fBSetIntervalOfFileSegmentation\fP (uint64_t time_sec)"
+.br
+.RI "Set max interval (Second) to segment record file\&. "
+.ti -1c
+.RI "uint64_t \fBGetMessageNumber\fP (const std::string &channel_name) const override"
+.br
+.RI "Get message number by channel name\&. "
+.ti -1c
+.RI "const std::string & \fBGetMessageType\fP (const std::string &channel_name) const override"
+.br
+.RI "Get message type by channel name\&. "
+.ti -1c
+.RI "const std::string & \fBGetProtoDesc\fP (const std::string &channel_name) const override"
+.br
+.RI "Get proto descriptor string by channel name\&. "
+.ti -1c
+.RI "std::set< std::string > \fBGetChannelList\fP () const override"
+.br
+.RI "Get channel list\&. "
+.ti -1c
+.RI "bool \fBIsNewChannel\fP (const std::string &channel_name) const"
+.br
+.RI "Is a new channel recording or not\&. "
+.ti -1c
+.RI "template<> bool \fBWriteMessage\fP (const std::string &channel_name, const std::string &message, const uint64_t time_nanosec, const std::string &proto_desc)"
+.br
+.ti -1c
+.RI "template<> bool \fBWriteMessage\fP (const std::string &channel_name, const std::shared_ptr< \fBmessage::RawMessage\fP > &message, const uint64_t time_nanosec, const std::string &proto_desc)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The record writer\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "apollo::cyber::record::RecordWriter::RecordWriter (const proto::Header & header)\fC [explicit]\fP"
+
+.PP
+The constructor with record header as parameter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIheader\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "std::set< std::string > apollo::cyber::record::RecordWriter::GetChannelList () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Get channel list\&. 
+.PP
+\fBReturns\fP
+.RS 4
+List container with all channel name string\&. 
+.RE
+.PP
+
+.PP
+Implements \fBapollo::cyber::record::RecordBase\fP\&.
+.SS "uint64_t apollo::cyber::record::RecordWriter::GetMessageNumber (const std::string & channel_name) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Get message number by channel name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBMessage\fP number\&. 
+.RE
+.PP
+
+.PP
+Implements \fBapollo::cyber::record::RecordBase\fP\&.
+.SS "const std::string & apollo::cyber::record::RecordWriter::GetMessageType (const std::string & channel_name) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Get message type by channel name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBMessage\fP type\&. 
+.RE
+.PP
+
+.PP
+Implements \fBapollo::cyber::record::RecordBase\fP\&.
+.SS "const std::string & apollo::cyber::record::RecordWriter::GetProtoDesc (const std::string & channel_name) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Get proto descriptor string by channel name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Proto descriptor string by channel name\&. 
+.RE
+.PP
+
+.PP
+Implements \fBapollo::cyber::record::RecordBase\fP\&.
+.SS "bool apollo::cyber::record::RecordWriter::IsNewChannel (const std::string & channel_name) const"
+
+.PP
+Is a new channel recording or not\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True for yes, false for no\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::record::RecordWriter::Open (const std::string & file)"
+
+.PP
+Open a record to write\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True for success, false for fail\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::record::RecordWriter::SetIntervalOfFileSegmentation (uint64_t time_sec)"
+
+.PP
+Set max interval (Second) to segment record file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItime_sec\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True for success, false for fail\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::record::RecordWriter::SetSizeOfFileSegmentation (uint64_t size_kilobytes)"
+
+.PP
+Set max size (KB) to segment record file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize_kilobytes\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True for success, false for fail\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::record::RecordWriter::WriteChannel (const std::string & channel_name, const std::string & message_type, const std::string & proto_desc)"
+
+.PP
+Write a channel to record\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP 
+.br
+\fImessage_type\fP 
+.br
+\fIproto_desc\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True for success, false for fail\&. 
+.RE
+.PP
+
+.SS "template<typename MessageT > bool apollo::cyber::record::RecordWriter::WriteMessage (const std::string & channel_name, const MessageT & message, const uint64_t time_nanosec, const std::string & proto_desc = \fC''\fP)"
+
+.PP
+Write a message to record\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIMessageT\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP 
+.br
+\fImessage\fP 
+.br
+\fItime_nanosec\fP 
+.br
+\fIproto_desc\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True for success, false for fail\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

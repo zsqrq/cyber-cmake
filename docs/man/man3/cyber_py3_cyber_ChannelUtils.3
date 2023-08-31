@@ -1,0 +1,104 @@
+.TH "cyber_py3.cyber.ChannelUtils" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cyber_py3.cyber.ChannelUtils
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBget_debugstring_rawmsgdata\fP (msg_type, rawmsgdata)"
+.br
+.RI "Parse rawmsg from rawmsg data by message type\&. "
+.ti -1c
+.RI "def \fBget_msgtype\fP (channel_name, sleep_s=2)"
+.br
+.RI "Parse rawmsg from channel name\&. "
+.ti -1c
+.RI "def \fBget_channels\fP (sleep_s=2)"
+.br
+.RI "Get all active channel names\&. "
+.ti -1c
+.RI "def \fBget_channels_info\fP (sleep_s=2)"
+.br
+.RI "Get the active channel info\&. "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "def cyber_py3\&.cyber\&.ChannelUtils\&.get_channels ( sleep_s = \fC2\fP)\fC [static]\fP"
+
+.PP
+Get all active channel names\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsleep_s\fP wait time for topo discovery\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+all active channel names\&. 
+.RE
+.PP
+
+.SS "def cyber_py3\&.cyber\&.ChannelUtils\&.get_channels_info ( sleep_s = \fC2\fP)\fC [static]\fP"
+
+.PP
+Get the active channel info\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsleep_s\fP wait time for topo discovery\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+all active channels info\&. {'channel1':[], 'channel2':[]} \&. 
+.RE
+.PP
+
+.SS "def cyber_py3\&.cyber\&.ChannelUtils\&.get_debugstring_rawmsgdata ( msg_type,  rawmsgdata)\fC [static]\fP"
+
+.PP
+Parse rawmsg from rawmsg data by message type\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg_type\fP message type\&. 
+.br
+\fIrawmsgdata\fP rawmsg data\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a human readable form of this message\&. For debugging and other purposes\&. 
+.RE
+.PP
+
+.SS "def cyber_py3\&.cyber\&.ChannelUtils\&.get_msgtype ( channel_name,  sleep_s = \fC2\fP)\fC [static]\fP"
+
+.PP
+Parse rawmsg from channel name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP channel name\&. 
+.br
+\fIsleep_s\fP wait time for topo discovery\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+return the messsage type of this channel\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

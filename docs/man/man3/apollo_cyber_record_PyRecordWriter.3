@@ -1,0 +1,43 @@
+.TH "apollo::cyber::record::PyRecordWriter" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::record::PyRecordWriter
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBOpen\fP (const std::string &path)"
+.br
+.ti -1c
+.RI "void \fBClose\fP ()"
+.br
+.ti -1c
+.RI "bool \fBWriteChannel\fP (const std::string &channel_str, const std::string &type, const std::string &proto_desc)"
+.br
+.ti -1c
+.RI "bool \fBWriteMessage\fP (const std::string &channel_name, const std::string &rawmessage, uint64_t time, const std::string &proto_desc='')"
+.br
+.ti -1c
+.RI "bool \fBSetSizeOfFileSegmentation\fP (uint64_t size_kilobytes)"
+.br
+.ti -1c
+.RI "bool \fBSetIntervalOfFileSegmentation\fP (uint64_t time_sec)"
+.br
+.ti -1c
+.RI "uint64_t \fBGetMessageNumber\fP (const std::string &channel_name) const"
+.br
+.ti -1c
+.RI "const std::string & \fBGetMessageType\fP (const std::string &channel_name) const"
+.br
+.ti -1c
+.RI "const std::string & \fBGetProtoDesc\fP (const std::string &channel_name) const"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

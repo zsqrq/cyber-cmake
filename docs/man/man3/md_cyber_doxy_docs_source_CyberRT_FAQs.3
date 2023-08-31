@@ -1,0 +1,129 @@
+.TH "md_cyber_doxy_docs_source_CyberRT_FAQs" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md_cyber_doxy_docs_source_CyberRT_FAQs \- F\&.A\&.Q\&. 
+
+.SH "What is Apollo Cyber RT?"
+.PP
+Apollo's Cyber RT is an open source runtime framework designed specifically for autonomous driving scenarios\&. Based on a centralized computing model, it is highly optimized for performance, latency, and data throughput
+.PP
+.PP
+.SH "Why did we decide to work on a new runtime framework?"
+.PP
+.IP "\(bu" 2
+During years of development of autonomous driving technologies, we have learned a lot from our previous experience with Apollo\&. In autonomous driving scenarious, we need an effective centralized computing model, with demands for high performance, including high concurrency, low latency and high throughput。
+.IP "\(bu" 2
+The industry is evolving, so does Apollo\&. Going forward, Apollo has already moved from development to productization, with volume deployments in the real world, we see the demands for the highest robustness and high performance\&. That’s why we spent years of building Apollo Cyber RT, which addresses that requirements of autonomous driving solutions\&.
+.PP
+.PP
+.PP
+.SH "What are the advantages of the new runtime framework?"
+.PP
+.IP "\(bu" 2
+Accelerate development
+.IP "  \(bu" 4
+Well defined task interface with data fusion
+.IP "  \(bu" 4
+Array of development tools
+.IP "  \(bu" 4
+Large set of sensor drivers
+.PP
+
+.IP "\(bu" 2
+Simplify deployment
+.IP "  \(bu" 4
+Efficient and adaptive message communication
+.IP "  \(bu" 4
+Configurable user level scheduler with resource awareness
+.IP "  \(bu" 4
+Portable with fewer dependencies
+.PP
+
+.IP "\(bu" 2
+Empower your own autonomous vehicles
+.IP "  \(bu" 4
+The default open source runtime framework
+.IP "  \(bu" 4
+Building blocks specifically designed for autonomous driving
+.IP "  \(bu" 4
+Plug and play your own AD system
+.PP
+
+.PP
+.PP
+.PP
+.SH "Can we still use the data that we have collected?"
+.PP
+.IP "\(bu" 2
+If the data you have collected is compatible with the previous versions of Apollo, you could use our recommended conversion tools to make the data compliant with our new runtime framework
+.IP "\(bu" 2
+If you created a customized data format, then the previously generated data will not be supported by the new runtime framework
+.PP
+.PP
+.PP
+.SH "Will you continue to support ROS?"
+.PP
+We will continue to support previous Apollo releases (3\&.0 and before) based on ROS\&. We do appreciate you continue growing with us and highly encourage you to move to Apollo 3\&.5\&. While we know that some of our developers would prefer to work on ROS, we do hope you will understand why Apollo as a team cannot continue to support ROS in our future releases as we strive to work towards developing a more holistic platform that meets automotive standards\&.
+.PP
+.PP
+.SH "Will Apollo Cyber RT affect regular code development?"
+.PP
+If you have not modified anything at runtime framework layer and have only worked on Apollo's module code base, you will not be affected by the introduction of our new runtime framework as most of time you would only need to re-interface the access of the input and output data\&. Additional documents are under \fCcyber\fP with more details\&.
+.PP
+.PP
+.SH "Recommended setup for Apollo Cyber RT"
+.PP
+.IP "\(bu" 2
+Currently the runtime framework only supports running on Trusty (Ubuntu 14\&.04)
+.IP "\(bu" 2
+The runtime framework also uses apollo's docker environment
+.IP "\(bu" 2
+It is recommended to run source setup\&.bash when opening a new terminal
+.IP "\(bu" 2
+Fork and clone the Apollo repo with the new framework code which can be found at \fCapollo/cyber\fP
+.PP
+.SH "How to enable SHM to decrease the latency?"
+.PP
+To decrease number of threads, the readable notification mechanism of shared memory was changed in CyberRT\&. The default mechanism is UDP multicast, and system call(sendto) will cause some latency\&.
+.PP
+So, to decrease the latency, you can change the mechanism, The steps are listed as following:
+.IP "1." 4
+update the CyberRT to the latest version;
+.IP "2." 4
+uncomment the transport_conf in https://github.com/ApolloAuto/apollo/blob/master/cyber/conf/cyber.pb.conf;
+.IP "3." 4
+change \fBnotifier_type\fP of \fBshm_conf\fP from 'multicast' to 'condition';
+.IP "4." 4
+build CyberRT with opt like \fCbazel build -c opt --copt=-fpic //cyber/\&.\&.\&.\fP;
+.IP "5." 4
+run talker and listener;
+.PP
+.PP
+Note:You can select the corresponding transmission method according to the relationship between nodes\&.For example, the default configuration is \fBINTRA\fP in the process, \fBSHM\fP between the host process, and \fBRTPS\fP across the host\&. Of course you can change all three to RTPS\&. Or change \fCsame_proc\fP and \fCdiff_proc\fP to \fBSHM\fP;
+.SH "How to use the no serialization message?"
+.PP
+The message types supported by Cyber RT include both serializable structured data like protobuf and raw sequence of bytes\&. You can refer the sample code:
+.IP "\(bu" 2
+\fBapollo::cyber::message::RawMessage\fP
+.IP "\(bu" 2
+talker: https://github.com/gruminions/apollo/blob/record/cyber/examples/talker.cc
+.IP "\(bu" 2
+listener: https://github.com/gruminions/apollo/blob/record/cyber/examples/listener.cc
+.PP
+.SH "How to configure multiple hosts communication?"
+.PP
+Make sure the two hosts(or more) are under the same network segment of the local area network, Like \fC192\&.168\&.10\&.6\fP and \fC192\&.168\&.10\&.7\fP\&.
+.PP
+You just need to modify \fCCYBER_IP\fP of \fC/apollo/cyber/setup\&.bash\fP
+.PP
+.PP
+.nf
+export CYBER_IP=127\&.0\&.0\&.1
+.fi
+.PP
+.PP
+Suppose you have two hosts A and B，the ip of A is \fC192\&.168\&.10\&.6\fP, and the ip of B is \fC192\&.168\&.10\&.7\fP\&. Then set \fCCYBER_IP\fP to \fC192\&.168\&.10\&.6\fP on host A, and set \fCCYBER_IP\fP to \fC192\&.168\&.10\&.7\fP on host B\&. Now host A can communicate with host B\&.
+.PP
+.PP
+ More FAQs to follow\&.\&.\&. 

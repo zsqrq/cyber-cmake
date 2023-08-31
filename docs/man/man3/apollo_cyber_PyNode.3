@@ -1,0 +1,40 @@
+.TH "apollo::cyber::PyNode" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::PyNode
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPyNode\fP (const std::string &node_name)"
+.br
+.ti -1c
+.RI "void \fBshutdown\fP ()"
+.br
+.ti -1c
+.RI "\fBPyWriter\fP * \fBcreate_writer\fP (const std::string &channel, const std::string &type, uint32_t qos_depth=1)"
+.br
+.ti -1c
+.RI "void \fBregister_message\fP (const std::string &desc)"
+.br
+.ti -1c
+.RI "\fBPyReader\fP * \fBcreate_reader\fP (const std::string &channel, const std::string &type)"
+.br
+.ti -1c
+.RI "\fBPyService\fP * \fBcreate_service\fP (const std::string &service, const std::string &type)"
+.br
+.ti -1c
+.RI "\fBPyClient\fP * \fBcreate_client\fP (const std::string &service, const std::string &type)"
+.br
+.ti -1c
+.RI "std::shared_ptr< \fBNode\fP > \fBget_node\fP ()"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,40 @@
+.TH "apollo::cyber::record::PyRecordReader" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::record::PyRecordReader
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPyRecordReader\fP (const std::string &file)"
+.br
+.ti -1c
+.RI "\fBBagMessage\fP \fBReadMessage\fP (uint64_t begin_time=0, uint64_t end_time=std::numeric_limits< uint64_t >::max())"
+.br
+.ti -1c
+.RI "uint64_t \fBGetMessageNumber\fP (const std::string &channel_name)"
+.br
+.ti -1c
+.RI "std::string \fBGetMessageType\fP (const std::string &channel_name)"
+.br
+.ti -1c
+.RI "std::string \fBGetProtoDesc\fP (const std::string &channel_name)"
+.br
+.ti -1c
+.RI "std::string \fBGetHeaderString\fP ()"
+.br
+.ti -1c
+.RI "void \fBReset\fP ()"
+.br
+.ti -1c
+.RI "std::set< std::string > \fBGetChannelList\fP () const"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

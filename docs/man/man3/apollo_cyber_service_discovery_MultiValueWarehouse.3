@@ -1,0 +1,79 @@
+.TH "apollo::cyber::service_discovery::MultiValueWarehouse" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::service_discovery::MultiValueWarehouse
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBapollo::cyber::service_discovery::WarehouseBase\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBRoleMap\fP = std::unordered_multimap< uint64_t, RolePtr >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBAdd\fP (uint64_t key, const RolePtr &role, bool ignore_if_exist=true) override"
+.br
+.ti -1c
+.RI "void \fBClear\fP () override"
+.br
+.ti -1c
+.RI "std::size_t \fBSize\fP () override"
+.br
+.ti -1c
+.RI "void \fBRemove\fP (uint64_t key) override"
+.br
+.ti -1c
+.RI "void \fBRemove\fP (uint64_t key, const RolePtr &role) override"
+.br
+.ti -1c
+.RI "void \fBRemove\fP (const proto::RoleAttributes &target_attr) override"
+.br
+.ti -1c
+.RI "bool \fBSearch\fP (uint64_t key) override"
+.br
+.ti -1c
+.RI "bool \fBSearch\fP (uint64_t key, RolePtr *first_matched_role) override"
+.br
+.ti -1c
+.RI "bool \fBSearch\fP (uint64_t key, proto::RoleAttributes *first_matched_role_attr) override"
+.br
+.ti -1c
+.RI "bool \fBSearch\fP (uint64_t key, std::vector< RolePtr > *matched_roles) override"
+.br
+.ti -1c
+.RI "bool \fBSearch\fP (uint64_t key, std::vector< proto::RoleAttributes > *matched_roles_attr) override"
+.br
+.ti -1c
+.RI "bool \fBSearch\fP (const proto::RoleAttributes &target_attr) override"
+.br
+.ti -1c
+.RI "bool \fBSearch\fP (const proto::RoleAttributes &target_attr, RolePtr *first_matched) override"
+.br
+.ti -1c
+.RI "bool \fBSearch\fP (const proto::RoleAttributes &target_attr, proto::RoleAttributes *first_matched_role_attr) override"
+.br
+.ti -1c
+.RI "bool \fBSearch\fP (const proto::RoleAttributes &target_attr, std::vector< RolePtr > *matched_roles) override"
+.br
+.ti -1c
+.RI "bool \fBSearch\fP (const proto::RoleAttributes &target_attr, std::vector< proto::RoleAttributes > *matched_roles_attr) override"
+.br
+.ti -1c
+.RI "void \fBGetAllRoles\fP (std::vector< RolePtr > *roles) override"
+.br
+.ti -1c
+.RI "void \fBGetAllRoles\fP (std::vector< proto::RoleAttributes > *roles_attr) override"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

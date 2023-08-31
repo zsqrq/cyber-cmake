@@ -1,0 +1,232 @@
+.TH "cyber_py3.cyber.Node" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cyber_py3.cyber.Node
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, name)"
+.br
+.ti -1c
+.RI "def \fB__del__\fP (self)"
+.br
+.ti -1c
+.RI "def \fBregister_message\fP (self, file_desc)"
+.br
+.RI "register proto message by proto descriptor file\&. "
+.ti -1c
+.RI "def \fBcreate_writer\fP (self, name, data_type, qos_depth=1)"
+.br
+.RI "create a channel writer for send message to another channel\&. "
+.ti -1c
+.RI "def \fBreader_callback\fP (self, name)"
+.br
+.ti -1c
+.RI "def \fBcreate_reader\fP (self, name, data_type, callback, args=None)"
+.br
+.RI "create a channel reader for receive message from another channel\&. "
+.ti -1c
+.RI "def \fBcreate_rawdata_reader\fP (self, name, callback, args=None)"
+.br
+.ti -1c
+.RI "def \fBcreate_client\fP (self, name, request_data_type, response_data_type)"
+.br
+.RI "create client for the c/s\&. "
+.ti -1c
+.RI "def \fBservice_callback\fP (self, name)"
+.br
+.ti -1c
+.RI "def \fBcreate_service\fP (self, name, req_data_type, res_data_type, callback, args=None)"
+.br
+.RI "create client for the c/s\&. "
+.ti -1c
+.RI "def \fBspin\fP (self)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBnode\fP"
+.br
+.ti -1c
+.RI "\fBlist_writer\fP"
+.br
+.ti -1c
+.RI "\fBlist_reader\fP"
+.br
+.ti -1c
+.RI "\fBsubs\fP"
+.br
+.ti -1c
+.RI "\fBpubs\fP"
+.br
+.ti -1c
+.RI "\fBlist_client\fP"
+.br
+.ti -1c
+.RI "\fBlist_service\fP"
+.br
+.ti -1c
+.RI "\fBmutex\fP"
+.br
+.ti -1c
+.RI "\fBcallbacks\fP"
+.br
+.ti -1c
+.RI "\fBservices\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Class for cyber Node wrapper.
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "def cyber_py3\&.cyber\&.Node\&.create_client ( self,  name,  request_data_type,  response_data_type)"
+
+.PP
+create client for the c/s\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP the service name\&. 
+.br
+\fIrequest_data_type\fP the request message type\&. 
+.br
+\fIresponse_data_type\fP the response message type\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the client object\&. 
+.RE
+.PP
+
+.SS "def cyber_py3\&.cyber\&.Node\&.create_rawdata_reader ( self,  name,  callback,  args = \fCNone\fP)"
+
+.PP
+.nf
+Create RawData reader:listener RawMessage
+
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.cyber\&.Node\&.create_reader ( self,  name,  data_type,  callback,  args = \fCNone\fP)"
+
+.PP
+create a channel reader for receive message from another channel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP the channel name to read\&. 
+.br
+\fIdata_type\fP message class for serialization 
+.br
+\fIcallback\fP function to call (fn(data)) when data is received\&. If args is set, the function must accept the args as a second argument, i\&.e\&. fn(data, args) 
+.br
+\fIargs\fP additional arguments to pass to the callback
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+return the writer object\&.
+.RE
+.PP
+.PP
+.nf
+create a channel reader for receive message from another channel.
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.cyber\&.Node\&.create_service ( self,  name,  req_data_type,  res_data_type,  callback,  args = \fCNone\fP)"
+
+.PP
+create client for the c/s\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP the service name\&. 
+.br
+\fIreq_data_type\fP the request message type\&. 
+.br
+\fIres_data_type\fP the response message type\&. 
+.br
+\fIcallback\fP function to call (fn(data)) when data is received\&. If args is set, the function must accept the args as a second argument, i\&.e\&. fn(data, args) 
+.br
+\fIargs\fP additional arguments to pass to the callback\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+return the service object\&. 
+.RE
+.PP
+
+.SS "def cyber_py3\&.cyber\&.Node\&.create_writer ( self,  name,  data_type,  qos_depth = \fC1\fP)"
+
+.PP
+create a channel writer for send message to another channel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP is the channel name\&. 
+.br
+\fIdata_type\fP is message class for serialization 
+.br
+\fIqos_depth\fP is a queue size, which defines the size of the cache\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+return the writer object\&.
+.RE
+.PP
+.PP
+.nf
+create a channel writer for send message to another channel.
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.cyber\&.Node\&.register_message ( self,  file_desc)"
+
+.PP
+register proto message by proto descriptor file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile_desc\fP object about datatype\&.DESCRIPTOR\&.file \&.
+.RE
+.PP
+.PP
+.nf
+register proto message desc file.
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.cyber\&.Node\&.spin ( self)"
+
+.PP
+.nf
+spin for every 0.002s.
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

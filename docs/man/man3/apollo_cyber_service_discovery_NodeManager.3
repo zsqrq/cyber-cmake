@@ -1,0 +1,89 @@
+.TH "apollo::cyber::service_discovery::NodeManager" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::service_discovery::NodeManager \- Topology \fBManager\fP of \fBNode\fP related\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <node_manager\&.h>\fP
+.PP
+Inherits \fBapollo::cyber::service_discovery::Manager\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBRoleAttrVec\fP = std::vector< RoleAttributes >"
+.br
+.ti -1c
+.RI "using \fBNodeWarehouse\fP = \fBSingleValueWarehouse\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNodeManager\fP ()"
+.br
+.RI "Construct a new \fBNode\fP \fBManager\fP object\&. "
+.ti -1c
+.RI "virtual \fB~NodeManager\fP ()"
+.br
+.RI "Destroy the \fBNode\fP \fBManager\fP object\&. "
+.ti -1c
+.RI "bool \fBHasNode\fP (const std::string &node_name)"
+.br
+.RI "Checkout whether we have \fCnode_name\fP in topology\&. "
+.ti -1c
+.RI "void \fBGetNodes\fP (RoleAttrVec *nodes)"
+.br
+.RI "Get the Nodes object\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBTopologyManager\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Topology \fBManager\fP of \fBNode\fP related\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void apollo::cyber::service_discovery::NodeManager::GetNodes (RoleAttrVec * nodes)"
+
+.PP
+Get the Nodes object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInodes\fP result RoleAttr vector 
+.RE
+.PP
+
+.SS "bool apollo::cyber::service_discovery::NodeManager::HasNode (const std::string & node_name)"
+
+.PP
+Checkout whether we have \fCnode_name\fP in topology\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInode_name\fP \fBNode\fP's name we want to inquire 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if this node found 
+.PP
+false if this node not exits 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,4 @@
+<map id="apollo::cyber::Clock::Now" name="apollo::cyber::Clock::Now">
+<area shape="rect" id="node1" title="PRECISION &gt;= 1000000 means the precision is at least 1us." alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1Time.html#ab5172323c08151c59632aab53fac9f5e" title="get the current time." alt="" coords="240,5,424,32"/>
+</map>

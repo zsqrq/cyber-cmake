@@ -1,0 +1,56 @@
+.TH "apollo::cyber::message::ProtobufFactory" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::message::ProtobufFactory
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBRegisterMessage\fP (const std::string &proto_desc_str)"
+.br
+.ti -1c
+.RI "bool \fBRegisterPythonMessage\fP (const std::string &proto_str)"
+.br
+.ti -1c
+.RI "bool \fBRegisterMessage\fP (const google::protobuf::Message &message)"
+.br
+.ti -1c
+.RI "bool \fBRegisterMessage\fP (const Descriptor &desc)"
+.br
+.ti -1c
+.RI "bool \fBRegisterMessage\fP (const FileDescriptorProto &file_desc_proto)"
+.br
+.ti -1c
+.RI "void \fBGetDescriptorString\fP (const std::string &type, std::string *desc_str)"
+.br
+.ti -1c
+.RI "google::protobuf::Message * \fBGenerateMessageByType\fP (const std::string &type) const"
+.br
+.ti -1c
+.RI "const Descriptor * \fBFindMessageTypeByName\fP (const std::string &type) const"
+.br
+.ti -1c
+.RI "const google::protobuf::ServiceDescriptor * \fBFindServiceByName\fP (const std::string &name) const"
+.br
+.ti -1c
+.RI "void \fBGetPythonDesc\fP (const std::string &type, std::string *desc_str)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBGetDescriptorString\fP (const google::protobuf::Message &message, std::string *desc_str)"
+.br
+.ti -1c
+.RI "static void \fBGetDescriptorString\fP (const Descriptor *desc, std::string *desc_str)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,214 @@
+.TH "cyber_py3.record.RecordWriter" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cyber_py3.record.RecordWriter
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, file_segmentation_size_kb=0, file_segmentation_interval_sec=0)"
+.br
+.RI "the constructor function\&. "
+.ti -1c
+.RI "def \fB__del__\fP (self)"
+.br
+.ti -1c
+.RI "def \fBopen\fP (self, path)"
+.br
+.RI "Open record file for write\&. "
+.ti -1c
+.RI "def \fBclose\fP (self)"
+.br
+.RI "Close record file\&. "
+.ti -1c
+.RI "def \fBwrite_channel\fP (self, channel_name, type_name, proto_desc)"
+.br
+.RI "Writer channel by channelname, typename, protodesc\&. "
+.ti -1c
+.RI "def \fBwrite_message\fP (self, channel_name, data, time, raw=True)"
+.br
+.RI "Writer msg: channelname, data, writer time\&. "
+.ti -1c
+.RI "def \fBset_size_fileseg\fP (self, size_kilobytes)"
+.br
+.ti -1c
+.RI "def \fBset_intervaltime_fileseg\fP (self, time_sec)"
+.br
+.ti -1c
+.RI "def \fBget_messagenumber\fP (self, channel_name)"
+.br
+.ti -1c
+.RI "def \fBget_messagetype\fP (self, channel_name)"
+.br
+.ti -1c
+.RI "def \fBget_protodesc\fP (self, channel_name)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBrecord_writer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Class for cyber RecordWriter wrapper.
+
+.fi
+.PP
+ 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def cyber_py3\&.record\&.RecordWriter\&.__init__ ( self,  file_segmentation_size_kb = \fC0\fP,  file_segmentation_interval_sec = \fC0\fP)"
+
+.PP
+the constructor function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile_segmentation_size_kb\fP size to segment the file, 0 is no segmentation\&. 
+.br
+\fIfile_segmentation_interval_sec\fP size to segment the file, 0 is no segmentation\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "def cyber_py3\&.record\&.RecordWriter\&.close ( self)"
+
+.PP
+Close record file\&. 
+.PP
+.nf
+Close record file.
+
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.record\&.RecordWriter\&.get_messagenumber ( self,  channel_name)"
+
+.PP
+.nf
+Return message count.
+
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.record\&.RecordWriter\&.get_messagetype ( self,  channel_name)"
+
+.PP
+.nf
+Return message type.
+
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.record\&.RecordWriter\&.get_protodesc ( self,  channel_name)"
+
+.PP
+.nf
+Return message protodesc.
+
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.record\&.RecordWriter\&.open ( self,  path)"
+
+.PP
+Open record file for write\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP the file path\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Success is True, other False\&. 
+.RE
+.PP
+
+.SS "def cyber_py3\&.record\&.RecordWriter\&.set_intervaltime_fileseg ( self,  time_sec)"
+
+.PP
+.nf
+Return file interval time.
+
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.record\&.RecordWriter\&.set_size_fileseg ( self,  size_kilobytes)"
+
+.PP
+.nf
+Return filesegment size.
+
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.record\&.RecordWriter\&.write_channel ( self,  channel_name,  type_name,  proto_desc)"
+
+.PP
+Writer channel by channelname, typename, protodesc\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP the channel name to write 
+.br
+\fItype_name\fP a string of message type name\&. 
+.br
+\fIproto_desc\fP the message descriptor\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Success is True, other False\&.
+.RE
+.PP
+.PP
+.nf
+Writer channel by channelname,typename,protodesc
+.fi
+.PP
+ 
+.SS "def cyber_py3\&.record\&.RecordWriter\&.write_message ( self,  channel_name,  data,  time,  raw = \fCTrue\fP)"
+
+.PP
+Writer msg: channelname, data, writer time\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP channel name to write\&. 
+.br
+\fIdata\fP when raw is True, data processed as a rawdata, other it needs to SerializeToString 
+.br
+\fItime\fP message time\&. 
+.br
+\fIraw\fP the flag implies data whether or not a rawdata\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Success is True, other False\&.
+.RE
+.PP
+.PP
+.nf
+Writer msg:channelname,rawmsg,writer time
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

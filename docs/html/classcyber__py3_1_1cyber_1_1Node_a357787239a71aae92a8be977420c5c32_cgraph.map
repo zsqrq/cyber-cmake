@@ -1,0 +1,5 @@
+<map id="cyber_py3.cyber.Node.create_writer" name="cyber_py3.cyber.Node.create_writer">
+<area shape="rect" id="node1" title="create a channel writer for send message to another channel." alt="" coords="5,7,261,34"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1PyNode.html#adb37cff1b766781878d43d4caf7fe183" title=" " alt="" coords="644,7,932,34"/>
+<area shape="rect" id="node3" href="$classcyber__py3_1_1cyber_1_1Node.html#ab4db4e470b123e95b2c0ebe494f21471" title="register proto message by proto descriptor file." alt="" coords="309,45,596,71"/>
+</map>

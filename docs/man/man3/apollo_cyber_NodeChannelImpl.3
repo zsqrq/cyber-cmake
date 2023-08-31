@@ -1,0 +1,74 @@
+.TH "apollo::cyber::NodeChannelImpl" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::NodeChannelImpl \- The implementation for \fBNode\fP to create Objects connected by Channels\&. e\&.g\&. Channel \fBReader\fP and \fBWriter\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <node_channel_impl\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBNodeManagerPtr\fP = std::shared_ptr< \fBservice_discovery::NodeManager\fP >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNodeChannelImpl\fP (const std::string &node_name)"
+.br
+.RI "Construct a new \fBNode\fP Channel Impl object\&. "
+.ti -1c
+.RI "virtual \fB~NodeChannelImpl\fP ()"
+.br
+.RI "Destroy the \fBNode\fP Channel Impl object\&. "
+.ti -1c
+.RI "const std::string & \fBNodeName\fP () const"
+.br
+.RI "get name of this node "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBNode\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The implementation for \fBNode\fP to create Objects connected by Channels\&. e\&.g\&. Channel \fBReader\fP and \fBWriter\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "apollo::cyber::NodeChannelImpl::NodeChannelImpl (const std::string & node_name)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Construct a new \fBNode\fP Channel Impl object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInode_name\fP node name 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "const std::string& apollo::cyber::NodeChannelImpl::NodeName () const\fC [inline]\fP"
+
+.PP
+get name of this node 
+.PP
+\fBReturns\fP
+.RS 4
+const std::string& actual node name 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

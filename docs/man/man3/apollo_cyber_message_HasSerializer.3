@@ -1,0 +1,30 @@
+.TH "apollo::cyber::message::HasSerializer< T >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::message::HasSerializer< T >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr bool \fBvalue\fP"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename T > constexpr bool \fBapollo::cyber::message::HasSerializer\fP< T >::value\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+      HasSerializeToString<T>::value && HasParseFromString<T>::value &&
+      HasSerializeToArray<T>::value && HasParseFromArray<T>::value
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

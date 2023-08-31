@@ -1,0 +1,56 @@
+.TH "apollo::cyber::transport::ReadableInfo" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::transport::ReadableInfo
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReadableInfo\fP (uint64_t host_id, uint32_t block_index, uint64_t channel_id)"
+.br
+.ti -1c
+.RI "\fBReadableInfo\fP & \fBoperator=\fP (const \fBReadableInfo\fP &other)"
+.br
+.ti -1c
+.RI "bool \fBDeserializeFrom\fP (const std::string &src)"
+.br
+.ti -1c
+.RI "bool \fBDeserializeFrom\fP (const char *src, std::size_t len)"
+.br
+.ti -1c
+.RI "bool \fBSerializeTo\fP (std::string *dst) const"
+.br
+.ti -1c
+.RI "uint64_t \fBhost_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_host_id\fP (uint64_t host_id)"
+.br
+.ti -1c
+.RI "uint32_t \fBblock_index\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_block_index\fP (uint32_t block_index)"
+.br
+.ti -1c
+.RI "uint64_t \fBchannel_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_channel_id\fP (uint64_t channel_id)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const size_t \fBkSize\fP = sizeof(uint64_t) * 2 + sizeof(uint32_t)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

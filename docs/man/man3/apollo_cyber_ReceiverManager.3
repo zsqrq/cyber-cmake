@@ -1,0 +1,57 @@
+.TH "apollo::cyber::ReceiverManager< MessageT >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::ReceiverManager< MessageT > \- One Channel is related to one Receiver\&. \fBReceiverManager\fP is in charge of attaching one Receiver to its responding Channel\&. We pass a DataDispatche's callback func to this Receiver so when a message is received, it will be push to the \fCChannelBuffer\fP, and \fCDataVisitor\fP will \fCFetch\fP data and pass to \fC\fBReader\fP\fP's callback func\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <reader_base\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "auto \fBGetReceiver\fP (const proto::RoleAttributes &role_attr) \-> typename std::shared_ptr< \fBtransport::Receiver\fP< MessageT >>"
+.br
+.RI "Get the Receiver object\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename MessageT>
+.br
+class apollo::cyber::ReceiverManager< MessageT >"
+One Channel is related to one Receiver\&. \fBReceiverManager\fP is in charge of attaching one Receiver to its responding Channel\&. We pass a DataDispatche's callback func to this Receiver so when a message is received, it will be push to the \fCChannelBuffer\fP, and \fCDataVisitor\fP will \fCFetch\fP data and pass to \fC\fBReader\fP\fP's callback func\&. 
+
+
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIMessageT\fP \fBMessage\fP Type\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename MessageT > auto \fBapollo::cyber::ReceiverManager\fP< MessageT >::GetReceiver (const proto::RoleAttributes & role_attr) \-> typename std::shared_ptr<\fBtransport::Receiver\fP<MessageT>>"
+
+.PP
+Get the Receiver object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrole_attr\fP the attribute that the Receiver has 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::shared_ptr<transport::Receiver<MessageT>> result Receiver 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

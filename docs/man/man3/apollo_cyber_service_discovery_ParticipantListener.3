@@ -1,0 +1,31 @@
+.TH "apollo::cyber::service_discovery::ParticipantListener" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::service_discovery::ParticipantListener
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits eprosima::fastrtps::ParticipantListener\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBChangeFunc\fP = std::function< void(const eprosima::fastrtps::ParticipantDiscoveryInfo &info)>"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBParticipantListener\fP (const ChangeFunc &callback)"
+.br
+.ti -1c
+.RI "virtual void \fBonParticipantDiscovery\fP (eprosima::fastrtps::Participant *p, eprosima::fastrtps::ParticipantDiscoveryInfo info)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

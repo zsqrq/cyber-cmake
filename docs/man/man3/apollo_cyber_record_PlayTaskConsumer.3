@@ -1,0 +1,53 @@
+.TH "apollo::cyber::record::PlayTaskConsumer" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::record::PlayTaskConsumer
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBThreadPtr\fP = std::unique_ptr< std::thread >"
+.br
+.ti -1c
+.RI "using \fBTaskBufferPtr\fP = std::shared_ptr< \fBPlayTaskBuffer\fP >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayTaskConsumer\fP (const TaskBufferPtr &task_buffer, double play_rate=1\&.0)"
+.br
+.ti -1c
+.RI "void \fBStart\fP (uint64_t begin_time_ns)"
+.br
+.ti -1c
+.RI "void \fBStop\fP ()"
+.br
+.ti -1c
+.RI "void \fBPause\fP ()"
+.br
+.ti -1c
+.RI "void \fBPlayOnce\fP ()"
+.br
+.ti -1c
+.RI "void \fBContinue\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBbase_msg_play_time_ns\fP () const"
+.br
+.ti -1c
+.RI "uint64_t \fBbase_msg_real_time_ns\fP () const"
+.br
+.ti -1c
+.RI "uint64_t \fBlast_played_msg_real_time_ns\fP () const"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

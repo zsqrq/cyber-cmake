@@ -1,0 +1,56 @@
+.TH "apollo::cyber::class_loader::SharedLibrary" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::class_loader::SharedLibrary
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBFlags\fP { \fBSHLIB_GLOBAL\fP = 1, \fBSHLIB_LOCAL\fP = 2 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSharedLibrary\fP (const std::string &path)"
+.br
+.ti -1c
+.RI "\fBSharedLibrary\fP (const std::string &path, int flags)"
+.br
+.ti -1c
+.RI "void \fBLoad\fP (const std::string &path)"
+.br
+.ti -1c
+.RI "void \fBLoad\fP (const std::string &path, int flags)"
+.br
+.ti -1c
+.RI "void \fBUnload\fP ()"
+.br
+.ti -1c
+.RI "bool \fBIsLoaded\fP ()"
+.br
+.ti -1c
+.RI "bool \fBHasSymbol\fP (const std::string &name)"
+.br
+.ti -1c
+.RI "void * \fBGetSymbol\fP (const std::string &name)"
+.br
+.ti -1c
+.RI "const std::string & \fBGetPath\fP () const"
+.br
+.ti -1c
+.RI "\fBSharedLibrary\fP (const \fBSharedLibrary\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBSharedLibrary\fP & \fBoperator=\fP (const \fBSharedLibrary\fP &)=delete"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

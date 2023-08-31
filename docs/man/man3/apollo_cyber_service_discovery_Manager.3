@@ -1,0 +1,260 @@
+.TH "apollo::cyber::service_discovery::Manager" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::service_discovery::Manager \- \fBBase\fP class for management of Topology elements\&. \fBManager\fP can Join/Leave the Topology, and Listen the topology change\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <manager\&.h>\fP
+.PP
+Inherited by \fBapollo::cyber::service_discovery::ChannelManager\fP, \fBapollo::cyber::service_discovery::NodeManager\fP, and \fBapollo::cyber::service_discovery::ServiceManager\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBChangeSignal\fP = \fBbase::Signal\fP< const ChangeMsg & >"
+.br
+.ti -1c
+.RI "using \fBChangeFunc\fP = std::function< void(const ChangeMsg &)>"
+.br
+.ti -1c
+.RI "using \fBChangeConnection\fP = \fBbase::Connection\fP< const ChangeMsg & >"
+.br
+.ti -1c
+.RI "using \fBRtpsParticipant\fP = eprosima::fastrtps::Participant"
+.br
+.ti -1c
+.RI "using \fBRtpsPublisherAttr\fP = eprosima::fastrtps::PublisherAttributes"
+.br
+.ti -1c
+.RI "using \fBRtpsSubscriberAttr\fP = eprosima::fastrtps::SubscriberAttributes"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBManager\fP ()"
+.br
+.RI "Construct a new \fBManager\fP object\&. "
+.ti -1c
+.RI "virtual \fB~Manager\fP ()"
+.br
+.RI "Destroy the \fBManager\fP object\&. "
+.ti -1c
+.RI "bool \fBStartDiscovery\fP (RtpsParticipant *participant)"
+.br
+.RI "Startup topology discovery\&. "
+.ti -1c
+.RI "void \fBStopDiscovery\fP ()"
+.br
+.RI "Stop topology discovery\&. "
+.ti -1c
+.RI "virtual void \fBShutdown\fP ()"
+.br
+.RI "Shutdown module\&. "
+.ti -1c
+.RI "bool \fBJoin\fP (const RoleAttributes &attr, RoleType role, bool need_publish=true)"
+.br
+.RI "Join the topology\&. "
+.ti -1c
+.RI "bool \fBLeave\fP (const RoleAttributes &attr, RoleType role)"
+.br
+.RI "Leave the topology\&. "
+.ti -1c
+.RI "\fBChangeConnection\fP \fBAddChangeListener\fP (const ChangeFunc &func)"
+.br
+.RI "Add topology change listener, when topology changed, func will be called\&. "
+.ti -1c
+.RI "void \fBRemoveChangeListener\fP (const \fBChangeConnection\fP &conn)"
+.br
+.RI "Remove our listener for topology change\&. "
+.ti -1c
+.RI "virtual void \fBOnTopoModuleLeave\fP (const std::string &host_name, int process_id)=0"
+.br
+.RI "Called when a process' topology manager instance leave\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBCreatePublisher\fP (RtpsParticipant *participant)"
+.br
+.ti -1c
+.RI "bool \fBCreateSubscriber\fP (RtpsParticipant *participant)"
+.br
+.ti -1c
+.RI "virtual bool \fBCheck\fP (const RoleAttributes &attr)=0"
+.br
+.ti -1c
+.RI "virtual void \fBDispose\fP (const ChangeMsg &msg)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBNeedPublish\fP (const ChangeMsg &msg) const"
+.br
+.ti -1c
+.RI "void \fBConvert\fP (const RoleAttributes &attr, RoleType role, OperateType opt, ChangeMsg *msg)"
+.br
+.ti -1c
+.RI "void \fBNotify\fP (const ChangeMsg &msg)"
+.br
+.ti -1c
+.RI "bool \fBPublish\fP (const ChangeMsg &msg)"
+.br
+.ti -1c
+.RI "void \fBOnRemoteChange\fP (const std::string &msg_str)"
+.br
+.ti -1c
+.RI "bool \fBIsFromSameProcess\fP (const ChangeMsg &msg)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::atomic< bool > \fBis_shutdown_\fP"
+.br
+.ti -1c
+.RI "std::atomic< bool > \fBis_discovery_started_\fP"
+.br
+.ti -1c
+.RI "int \fBallowed_role_\fP"
+.br
+.ti -1c
+.RI "ChangeType \fBchange_type_\fP"
+.br
+.ti -1c
+.RI "std::string \fBhost_name_\fP"
+.br
+.ti -1c
+.RI "int \fBprocess_id_\fP"
+.br
+.ti -1c
+.RI "std::string \fBchannel_name_\fP"
+.br
+.ti -1c
+.RI "eprosima::fastrtps::Publisher * \fBpublisher_\fP"
+.br
+.ti -1c
+.RI "std::mutex \fBlock_\fP"
+.br
+.ti -1c
+.RI "eprosima::fastrtps::Subscriber * \fBsubscriber_\fP"
+.br
+.ti -1c
+.RI "\fBSubscriberListener\fP * \fBlistener_\fP"
+.br
+.ti -1c
+.RI "\fBChangeSignal\fP \fBsignal_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBBase\fP class for management of Topology elements\&. \fBManager\fP can Join/Leave the Topology, and Listen the topology change\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBManager::ChangeConnection\fP apollo::cyber::service_discovery::Manager::AddChangeListener (const ChangeFunc & func)"
+
+.PP
+Add topology change listener, when topology changed, func will be called\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP the callback function 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ChangeConnection Store it to use when you want to stop listening\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::service_discovery::Manager::Join (const RoleAttributes & attr, RoleType role, bool need_publish = \fCtrue\fP)"
+
+.PP
+Join the topology\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIattr\fP is the attributes that will be sent to other \fBManager\fP(include ourselves) 
+.br
+\fIrole\fP is one of RoleType enum 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if Join topology successfully 
+.PP
+false if Join topology failed 
+.RE
+.PP
+
+.SS "bool apollo::cyber::service_discovery::Manager::Leave (const RoleAttributes & attr, RoleType role)"
+
+.PP
+Leave the topology\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIattr\fP is the attributes that will be sent to other \fBManager\fP(include ourselves) 
+.br
+\fIrole\fP if one of RoleType enum\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if Leave topology successfully 
+.PP
+false if Leave topology failed 
+.RE
+.PP
+
+.SS "virtual void apollo::cyber::service_discovery::Manager::OnTopoModuleLeave (const std::string & host_name, int process_id)\fC [pure virtual]\fP"
+
+.PP
+Called when a process' topology manager instance leave\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhost_name\fP is the process's host's name 
+.br
+\fIprocess_id\fP is the process' id 
+.RE
+.PP
+
+.SS "void apollo::cyber::service_discovery::Manager::RemoveChangeListener (const \fBChangeConnection\fP & conn)"
+
+.PP
+Remove our listener for topology change\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconn\fP is the return value of \fCAddChangeListener\fP 
+.RE
+.PP
+
+.SS "bool apollo::cyber::service_discovery::Manager::StartDiscovery (RtpsParticipant * participant)"
+
+.PP
+Startup topology discovery\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparticipant\fP is used to create rtps Publisher and Subscriber 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if start successfully 
+.PP
+false if start fail 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

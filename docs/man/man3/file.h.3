@@ -1,0 +1,435 @@
+.TH "cyber/common/file.h" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cyber/common/file.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <dirent\&.h>\fP
+.br
+\fC#include <fcntl\&.h>\fP
+.br
+\fC#include <sys/stat\&.h>\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <cstdio>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include 'google/protobuf/io/zero_copy_stream_impl\&.h'\fP
+.br
+\fC#include 'google/protobuf/text_format\&.h'\fP
+.br
+\fC#include 'cyber/common/log\&.h'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBapollo::common::util\fP"
+.br
+.RI "\fBapollo::common::util\fP "
+.ti -1c
+.RI " \fBapollo\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBFileType\fP { \fBTYPE_FILE\fP, \fBTYPE_DIR\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBapollo::cyber::common::SetProtoToASCIIFile\fP (const google::protobuf::Message &message, int file_descriptor)"
+.br
+.ti -1c
+.RI "bool \fBapollo::cyber::common::SetProtoToASCIIFile\fP (const google::protobuf::Message &message, const std::string &file_name)"
+.br
+.RI "Sets the content of the file specified by the file_name to be the ascii representation of the input protobuf\&. "
+.ti -1c
+.RI "bool \fBapollo::cyber::common::GetProtoFromASCIIFile\fP (const std::string &file_name, google::protobuf::Message *message)"
+.br
+.RI "Parses the content of the file specified by the file_name as ascii representation of protobufs, and merges the parsed content to the proto\&. "
+.ti -1c
+.RI "bool \fBapollo::cyber::common::SetProtoToBinaryFile\fP (const google::protobuf::Message &message, const std::string &file_name)"
+.br
+.RI "Sets the content of the file specified by the file_name to be the binary representation of the input protobuf\&. "
+.ti -1c
+.RI "bool \fBapollo::cyber::common::GetProtoFromBinaryFile\fP (const std::string &file_name, google::protobuf::Message *message)"
+.br
+.RI "Parses the content of the file specified by the file_name as binary representation of protobufs, and merges the parsed content to the proto\&. "
+.ti -1c
+.RI "bool \fBapollo::cyber::common::GetProtoFromFile\fP (const std::string &file_name, google::protobuf::Message *message)"
+.br
+.RI "Parses the content of the file specified by the file_name as a representation of protobufs, and merges the parsed content to the proto\&. "
+.ti -1c
+.RI "bool \fBapollo::cyber::common::GetProtoFromJsonFile\fP (const std::string &file_name, google::protobuf::Message *message)"
+.br
+.RI "Parses the content of the json file specified by the file_name as ascii representation of protobufs, and merges the parsed content to the proto\&. "
+.ti -1c
+.RI "bool \fBapollo::cyber::common::GetContent\fP (const std::string &file_name, std::string *content)"
+.br
+.RI "Get file content as string\&. "
+.ti -1c
+.RI "std::string \fBapollo::cyber::common::GetAbsolutePath\fP (const std::string &prefix, const std::string &relative_path)"
+.br
+.RI "Get absolute path by concatenating prefix and relative_path\&. "
+.ti -1c
+.RI "bool \fBapollo::cyber::common::PathExists\fP (const std::string &path)"
+.br
+.RI "Check if the path exists\&. "
+.ti -1c
+.RI "bool \fBapollo::cyber::common::DirectoryExists\fP (const std::string &directory_path)"
+.br
+.RI "Check if the directory specified by directory_path exists and is indeed a directory\&. "
+.ti -1c
+.RI "std::vector< std::string > \fBapollo::cyber::common::Glob\fP (const std::string &pattern)"
+.br
+.RI "Expand path pattern to matched paths\&. "
+.ti -1c
+.RI "bool \fBapollo::cyber::common::CopyFile\fP (const std::string &from, const std::string &to)"
+.br
+.RI "Copy a file\&. "
+.ti -1c
+.RI "bool \fBapollo::cyber::common::CopyDir\fP (const std::string &from, const std::string &to)"
+.br
+.RI "Copy a directory\&. "
+.ti -1c
+.RI "bool \fBapollo::cyber::common::Copy\fP (const std::string &from, const std::string &to)"
+.br
+.RI "Copy a file or directory\&. "
+.ti -1c
+.RI "bool \fBapollo::cyber::common::EnsureDirectory\fP (const std::string &directory_path)"
+.br
+.RI "Check if a specified directory specified by directory_path exists\&. If not, recursively create the directory (and its parents)\&. "
+.ti -1c
+.RI "bool \fBapollo::cyber::common::RemoveAllFiles\fP (const std::string &directory_path)"
+.br
+.RI "Remove all the files under a specified directory\&. Note that sub-directories are NOT affected\&. "
+.ti -1c
+.RI "std::vector< std::string > \fBapollo::cyber::common::ListSubPaths\fP (const std::string &directory_path, const unsigned char d_type=DT_DIR)"
+.br
+.RI "List sub-paths\&. "
+.ti -1c
+.RI "std::string \fBapollo::cyber::common::GetFileName\fP (const std::string &path, const bool remove_extension)"
+.br
+.ti -1c
+.RI "std::string \fBapollo::cyber::common::GetCurrentPath\fP ()"
+.br
+.ti -1c
+.RI "bool \fBapollo::cyber::common::DeleteFile\fP (const std::string &filename)"
+.br
+.ti -1c
+.RI "bool \fBapollo::cyber::common::GetType\fP (const std::string &filename, FileType *type)"
+.br
+.ti -1c
+.RI "bool \fBapollo::cyber::common::CreateDir\fP (const std::string &dir)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "bool apollo::cyber::common::Copy (const std::string & from, const std::string & to)"
+
+.PP
+Copy a file or directory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfrom\fP The path to copy from\&. 
+.br
+\fIto\fP The path to copy to\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the action is successful\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::common::CopyDir (const std::string & from, const std::string & to)"
+
+.PP
+Copy a directory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfrom\fP The path to copy from\&. 
+.br
+\fIto\fP The path to copy to\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the action is successful\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::common::CopyFile (const std::string & from, const std::string & to)"
+
+.PP
+Copy a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfrom\fP The file path to copy from\&. 
+.br
+\fIto\fP The file path to copy to\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the action is successful\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::common::DirectoryExists (const std::string & directory_path)"
+
+.PP
+Check if the directory specified by directory_path exists and is indeed a directory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdirectory_path\fP Directory path\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the directory specified by directory_path exists and is indeed a directory\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::common::EnsureDirectory (const std::string & directory_path)"
+
+.PP
+Check if a specified directory specified by directory_path exists\&. If not, recursively create the directory (and its parents)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdirectory_path\fP Directory path\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the directory does exist or its creation is successful\&. 
+.RE
+.PP
+
+.SS "std::string apollo::cyber::common::GetAbsolutePath (const std::string & prefix, const std::string & relative_path)"
+
+.PP
+Get absolute path by concatenating prefix and relative_path\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The absolute path\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::common::GetContent (const std::string & file_name, std::string * content)"
+
+.PP
+Get file content as string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile_name\fP The name of the file to read content\&. 
+.br
+\fIcontent\fP The file content\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the action is successful\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::common::GetProtoFromASCIIFile (const std::string & file_name, google::protobuf::Message * message)"
+
+.PP
+Parses the content of the file specified by the file_name as ascii representation of protobufs, and merges the parsed content to the proto\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile_name\fP The name of the file to parse whose content\&. 
+.br
+\fImessage\fP The proto to carry the parsed content in the specified file\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the action is successful\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::common::GetProtoFromBinaryFile (const std::string & file_name, google::protobuf::Message * message)"
+
+.PP
+Parses the content of the file specified by the file_name as binary representation of protobufs, and merges the parsed content to the proto\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile_name\fP The name of the file to parse whose content\&. 
+.br
+\fImessage\fP The proto to carry the parsed content in the specified file\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the action is successful\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::common::GetProtoFromFile (const std::string & file_name, google::protobuf::Message * message)"
+
+.PP
+Parses the content of the file specified by the file_name as a representation of protobufs, and merges the parsed content to the proto\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile_name\fP The name of the file to parse whose content\&. 
+.br
+\fImessage\fP The proto to carry the parsed content in the specified file\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the action is successful\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::common::GetProtoFromJsonFile (const std::string & file_name, google::protobuf::Message * message)"
+
+.PP
+Parses the content of the json file specified by the file_name as ascii representation of protobufs, and merges the parsed content to the proto\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile_name\fP The name of the file to parse whose content\&. 
+.br
+\fImessage\fP The proto to carry the parsed content in the specified file\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the action is successful\&. 
+.RE
+.PP
+
+.SS "std::vector< std::string > apollo::cyber::common::Glob (const std::string & pattern)"
+
+.PP
+Expand path pattern to matched paths\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpattern\fP Path pattern, which may contain wildcards [?*]\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Matched path list\&. 
+.RE
+.PP
+
+.SS "std::vector< std::string > apollo::cyber::common::ListSubPaths (const std::string & directory_path, const unsigned char d_type = \fCDT_DIR\fP)"
+
+.PP
+List sub-paths\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdirectory_path\fP Directory path\&. 
+.br
+\fId_type\fP Sub-path type, DT_DIR for directory, or DT_REG for file\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A vector of sub-paths, without the directory_path prefix\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::common::PathExists (const std::string & path)"
+
+.PP
+Check if the path exists\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP a file name, such as /a/b/c\&.txt 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the path exists\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::common::RemoveAllFiles (const std::string & directory_path)"
+
+.PP
+Remove all the files under a specified directory\&. Note that sub-directories are NOT affected\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdirectory_path\fP Directory path\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the action is successful\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::common::SetProtoToASCIIFile (const google::protobuf::Message & message, const std::string & file_name)"
+
+.PP
+Sets the content of the file specified by the file_name to be the ascii representation of the input protobuf\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP The proto to output to the specified file\&. 
+.br
+\fIfile_name\fP The name of the target file to set the content\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the action is successful\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::common::SetProtoToBinaryFile (const google::protobuf::Message & message, const std::string & file_name)"
+
+.PP
+Sets the content of the file specified by the file_name to be the binary representation of the input protobuf\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP The proto to output to the specified file\&. 
+.br
+\fIfile_name\fP The name of the target file to set the content\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the action is successful\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

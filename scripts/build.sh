@@ -29,7 +29,7 @@ function help() {
 function build() {
     echo -e "\033[36m ....... Start Compileing Project $PROJECT_NAME .......\033[0m \n"
     build_path=$PROJECT_FOLDER/build/$BUILD_PLATFORM
-    install_path=$build_path/cyber
+    install_path=$build_path/production
     echo -e "\033[36m ....... Install Path is  $install_path .......\033[0m \n"
     if [ ! -e $build_path ]; then
         mkdir -p $build_path
@@ -44,8 +44,7 @@ function build() {
         -DCMAKE_INSTALL_PREFIX=$install_path \
         -DCOMPILE_PLATFOM=$BUILD_PLATFORM
 
-    cmake --build $build_path -- -j20 VERBOSE=1
-#    cmake --build $build_path --target doxygen
+    cmake --build $build_path -- -j8 VERBOSE=1
     cmake --build $build_path --target install
 }
 

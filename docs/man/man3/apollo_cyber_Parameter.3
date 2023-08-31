@@ -1,0 +1,458 @@
+.TH "apollo::cyber::Parameter" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::Parameter \- A \fC\fBParameter\fP\fP holds an apollo::cyber::proto::Param, It's more human-readable, you can use basic-value type and Protobuf values to construct a paramter\&. \fBParameter\fP is identified by their \fCname\fP, and you can get \fBParameter\fP content by call \fBvalue()\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <parameter\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBParameter\fP ()"
+.br
+.RI "Empty constructor\&. "
+.ti -1c
+.RI "\fBParameter\fP (const \fBParameter\fP &parameter)"
+.br
+.RI "copy constructor "
+.ti -1c
+.RI "\fBParameter\fP (const std::string &name)"
+.br
+.RI "construct with paramter's name "
+.ti -1c
+.RI "\fBParameter\fP (const std::string &name, const bool bool_value)"
+.br
+.RI "construct with paramter's name and bool value type "
+.ti -1c
+.RI "\fBParameter\fP (const std::string &name, const int int_value)"
+.br
+.RI "construct with paramter's name and int value type "
+.ti -1c
+.RI "\fBParameter\fP (const std::string &name, const int64_t int_value)"
+.br
+.RI "construct with paramter's name and int value type "
+.ti -1c
+.RI "\fBParameter\fP (const std::string &name, const float float_value)"
+.br
+.RI "construct with paramter's name and float value type "
+.ti -1c
+.RI "\fBParameter\fP (const std::string &name, const double double_value)"
+.br
+.RI "construct with paramter's name and double value type "
+.ti -1c
+.RI "\fBParameter\fP (const std::string &name, const std::string &string_value)"
+.br
+.RI "construct with paramter's name and string value type "
+.ti -1c
+.RI "\fBParameter\fP (const std::string &name, const char *string_value)"
+.br
+.RI "construct with paramter's name and char* value type "
+.ti -1c
+.RI "\fBParameter\fP (const std::string &name, const std::string &msg_str, const std::string &full_name, const std::string &proto_desc)"
+.br
+.RI "use a protobuf type value to construct the parameter "
+.ti -1c
+.RI "\fBParameter\fP (const std::string &name, const google::protobuf::Message &msg)"
+.br
+.RI "use a google::protobuf::Message type value to construct the parameter "
+.ti -1c
+.RI "void \fBFromProtoParam\fP (const Param &param)"
+.br
+.RI "Parse a cyber::proto::Param object to cyber::parameter::Parameter object\&. "
+.ti -1c
+.RI "Param \fBToProtoParam\fP () const"
+.br
+.RI "Parse a cyber::parameter::Parameter object to cyber::proto::Param object\&. "
+.ti -1c
+.RI "ParamType \fBType\fP () const"
+.br
+.RI "Get the cyber:parameter::ParamType of this object\&. "
+.ti -1c
+.RI "std::string \fBTypeName\fP () const"
+.br
+.RI "Get Paramter's type name, i\&.e\&. INT,DOUBLE,STRING or protobuf message's fullname\&. "
+.ti -1c
+.RI "std::string \fBDescriptor\fP () const"
+.br
+.RI "Get Paramter's descriptor, only work on protobuf types\&. "
+.ti -1c
+.RI "const std::string \fBName\fP () const"
+.br
+.RI "Get the \fBParameter\fP name\&. "
+.ti -1c
+.RI "bool \fBAsBool\fP () const"
+.br
+.RI "Get Paramter as a bool value\&. "
+.ti -1c
+.RI "int64_t \fBAsInt64\fP () const"
+.br
+.RI "Get Paramter as an int64_t value\&. "
+.ti -1c
+.RI "double \fBAsDouble\fP () const"
+.br
+.RI "et Paramter as a double value "
+.ti -1c
+.RI "const std::string \fBAsString\fP () const"
+.br
+.RI "Get Paramter as a string value\&. "
+.ti -1c
+.RI "std::string \fBDebugString\fP () const"
+.br
+.RI "show debug string "
+.ti -1c
+.RI "template<typename ValueType > std::enable_if< std::is_base_of< google::protobuf::Message, ValueType >::value, ValueType >::type \fBvalue\fP () const"
+.br
+.ti -1c
+.RI "template<typename ValueType > std::enable_if< std::is_integral< ValueType >::value &&!std::is_same< ValueType, bool >::value, ValueType >::type \fBvalue\fP () const"
+.br
+.ti -1c
+.RI "template<typename ValueType > std::enable_if< std::is_floating_point< ValueType >::value, ValueType >::type \fBvalue\fP () const"
+.br
+.ti -1c
+.RI "template<typename ValueType > std::enable_if< std::is_convertible< ValueType, std::string >::value, const std::string & >::type \fBvalue\fP () const"
+.br
+.ti -1c
+.RI "template<typename ValueType > std::enable_if< std::is_same< ValueType, bool >::value, bool >::type \fBvalue\fP () const"
+.br
+.RI "Translate paramter value to bool type\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A \fC\fBParameter\fP\fP holds an apollo::cyber::proto::Param, It's more human-readable, you can use basic-value type and Protobuf values to construct a paramter\&. \fBParameter\fP is identified by their \fCname\fP, and you can get \fBParameter\fP content by call \fBvalue()\fP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "apollo::cyber::Parameter::Parameter (const std::string & name)\fC [explicit]\fP"
+
+.PP
+construct with paramter's name 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBParameter\fP name 
+.RE
+.PP
+
+.SS "apollo::cyber::Parameter::Parameter (const std::string & name, const bool bool_value)"
+
+.PP
+construct with paramter's name and bool value type 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBParameter\fP name 
+.br
+\fIbool_value\fP bool value 
+.RE
+.PP
+
+.SS "apollo::cyber::Parameter::Parameter (const std::string & name, const int int_value)"
+
+.PP
+construct with paramter's name and int value type 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBParameter\fP name 
+.br
+\fIint_value\fP int value 
+.RE
+.PP
+
+.SS "apollo::cyber::Parameter::Parameter (const std::string & name, const int64_t int_value)"
+
+.PP
+construct with paramter's name and int value type 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBParameter\fP name 
+.br
+\fIint_value\fP int value 
+.RE
+.PP
+
+.SS "apollo::cyber::Parameter::Parameter (const std::string & name, const float float_value)"
+
+.PP
+construct with paramter's name and float value type 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBParameter\fP name 
+.br
+\fIfloat_value\fP float value 
+.RE
+.PP
+
+.SS "apollo::cyber::Parameter::Parameter (const std::string & name, const double double_value)"
+
+.PP
+construct with paramter's name and double value type 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBParameter\fP name 
+.br
+\fIdouble_value\fP double value 
+.RE
+.PP
+
+.SS "apollo::cyber::Parameter::Parameter (const std::string & name, const std::string & string_value)"
+
+.PP
+construct with paramter's name and string value type 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBParameter\fP name 
+.br
+\fIstring_value\fP string value 
+.RE
+.PP
+
+.SS "apollo::cyber::Parameter::Parameter (const std::string & name, const char * string_value)"
+
+.PP
+construct with paramter's name and char* value type 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBParameter\fP name 
+.br
+\fIstring_value\fP char* value 
+.RE
+.PP
+
+.SS "apollo::cyber::Parameter::Parameter (const std::string & name, const std::string & msg_str, const std::string & full_name, const std::string & proto_desc)"
+
+.PP
+use a protobuf type value to construct the parameter 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBParameter\fP name 
+.br
+\fImsg_str\fP protobuf contents 
+.br
+\fIfull_name\fP the proto full name 
+.br
+\fIproto_desc\fP the proto's description 
+.RE
+.PP
+
+.SS "apollo::cyber::Parameter::Parameter (const std::string & name, const google::protobuf::Message & msg)"
+
+.PP
+use a google::protobuf::Message type value to construct the parameter 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP \fBParameter\fP name 
+.br
+\fImsg\fP protobuf message 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool apollo::cyber::Parameter::AsBool () const\fC [inline]\fP"
+
+.PP
+Get Paramter as a bool value\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true result 
+.PP
+false result 
+.RE
+.PP
+
+.SS "double apollo::cyber::Parameter::AsDouble () const\fC [inline]\fP"
+
+.PP
+et Paramter as a double value 
+.PP
+\fBReturns\fP
+.RS 4
+double type result 
+.RE
+.PP
+
+.SS "int64_t apollo::cyber::Parameter::AsInt64 () const\fC [inline]\fP"
+
+.PP
+Get Paramter as an int64_t value\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int64_t int64 type result 
+.RE
+.PP
+
+.SS "const std::string apollo::cyber::Parameter::AsString () const\fC [inline]\fP"
+
+.PP
+Get Paramter as a string value\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const std::string \fBParameter\fP's string expression 
+.RE
+.PP
+
+.SS "std::string apollo::cyber::Parameter::DebugString () const"
+
+.PP
+show debug string 
+.PP
+\fBReturns\fP
+.RS 4
+std::string \fBParameter\fP's debug string 
+.RE
+.PP
+
+.SS "std::string apollo::cyber::Parameter::Descriptor () const\fC [inline]\fP"
+
+.PP
+Get Paramter's descriptor, only work on protobuf types\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::string the \fBParameter\fP's type name 
+.RE
+.PP
+
+.SS "void apollo::cyber::Parameter::FromProtoParam (const Param & param)"
+
+.PP
+Parse a cyber::proto::Param object to cyber::parameter::Parameter object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparam\fP The cyber::proto::Param object parse from A pointer to the target \fBParameter\fP object 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if parse ok, otherwise False 
+.RE
+.PP
+
+.SS "const std::string apollo::cyber::Parameter::Name () const\fC [inline]\fP"
+
+.PP
+Get the \fBParameter\fP name\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const std::string the \fBParameter\fP's name 
+.RE
+.PP
+
+.SS "Param apollo::cyber::Parameter::ToProtoParam () const"
+
+.PP
+Parse a cyber::parameter::Parameter object to cyber::proto::Param object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The target cyber::proto::Param object 
+.RE
+.PP
+
+.SS "ParamType apollo::cyber::Parameter::Type () const\fC [inline]\fP"
+
+.PP
+Get the cyber:parameter::ParamType of this object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+result cyber:parameter::ParameterType 
+.RE
+.PP
+
+.SS "std::string apollo::cyber::Parameter::TypeName () const\fC [inline]\fP"
+
+.PP
+Get Paramter's type name, i\&.e\&. INT,DOUBLE,STRING or protobuf message's fullname\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::string the \fBParameter\fP's type name 
+.RE
+.PP
+
+.SS "template<typename ValueType > std::enable_if< std::is_same< ValueType, bool >::value, bool >::type apollo::cyber::Parameter::value"
+
+.PP
+.nf
+ @brief Translate paramter value as a protobuf::Message
+
+ @tparam ValueType type of the value
+ @return std::enable_if<
+
+.fi
+.PP
+ std::is_base_of<google::protobuf::Message, ValueType>::value, ValueType>::type protobuf::Message type result 
+.SS "template<typename ValueType > std::enable_if<std::is_integral<ValueType>::value && !std::is_same<ValueType, bool>::value, ValueType>::type apollo::cyber::Parameter::value () const"
+
+.PP
+.nf
+ @brief Translate paramter value to int type
+
+ @tparam ValueType type of the value
+ @return std::enable_if<std::is_integral<ValueType>::value &&
+
+.fi
+.PP
+ !std::is_same<ValueType, bool>::value, ValueType>::type int type result 
+.SS "template<typename ValueType > std::enable_if<std::is_floating_point<ValueType>::value, ValueType>::type apollo::cyber::Parameter::value () const"
+
+.PP
+.nf
+ @brief Translate paramter value to bool type
+
+ @tparam ValueType type of the value
+ @return std::enable_if<std::is_floating_point<ValueType>::value,
+
+.fi
+.PP
+ ValueType>::type floating type result 
+.SS "template<typename ValueType > std::enable_if<std::is_convertible<ValueType, std::string>::value, const std::string&>::type apollo::cyber::Parameter::value () const"
+
+.PP
+.nf
+ @brief Translate paramter value to string type
+
+ @tparam ValueType type of the value
+ @return std::enable_if<std::is_convertible<ValueType, std::string>::value,
+
+.fi
+.PP
+ const std::string&>::type string type result 
+.SS "template<typename ValueType > std::enable_if<std::is_same<ValueType, bool>::value, bool>::type apollo::cyber::Parameter::value () const"
+
+.PP
+Translate paramter value to bool type\&. 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIValueType\fP type of the value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::enable_if<std::is_same<ValueType, bool>::value, bool>::type bool type result 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

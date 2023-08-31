@@ -1,0 +1,89 @@
+.TH "apollo::cyber::common::GlobalData" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::common::GlobalData
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBProcessId\fP () const"
+.br
+.ti -1c
+.RI "void \fBSetProcessGroup\fP (const std::string &process_group)"
+.br
+.ti -1c
+.RI "const std::string & \fBProcessGroup\fP () const"
+.br
+.ti -1c
+.RI "void \fBSetComponentNums\fP (const int component_nums)"
+.br
+.ti -1c
+.RI "int \fBComponentNums\fP () const"
+.br
+.ti -1c
+.RI "void \fBSetSchedName\fP (const std::string &sched_name)"
+.br
+.ti -1c
+.RI "const std::string & \fBSchedName\fP () const"
+.br
+.ti -1c
+.RI "const std::string & \fBHostIp\fP () const"
+.br
+.ti -1c
+.RI "const std::string & \fBHostName\fP () const"
+.br
+.ti -1c
+.RI "const CyberConfig & \fBConfig\fP () const"
+.br
+.ti -1c
+.RI "void \fBEnableSimulationMode\fP ()"
+.br
+.ti -1c
+.RI "void \fBDisableSimulationMode\fP ()"
+.br
+.ti -1c
+.RI "bool \fBIsRealityMode\fP () const"
+.br
+.ti -1c
+.RI "bool \fBIsMockTimeMode\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static uint64_t \fBGenerateHashId\fP (const std::string &name)"
+.br
+.ti -1c
+.RI "static uint64_t \fBRegisterNode\fP (const std::string &node_name)"
+.br
+.ti -1c
+.RI "static std::string \fBGetNodeById\fP (uint64_t id)"
+.br
+.ti -1c
+.RI "static uint64_t \fBRegisterChannel\fP (const std::string &channel)"
+.br
+.ti -1c
+.RI "static std::string \fBGetChannelById\fP (uint64_t id)"
+.br
+.ti -1c
+.RI "static uint64_t \fBRegisterService\fP (const std::string &service)"
+.br
+.ti -1c
+.RI "static std::string \fBGetServiceById\fP (uint64_t id)"
+.br
+.ti -1c
+.RI "static uint64_t \fBRegisterTaskName\fP (const std::string &task_name)"
+.br
+.ti -1c
+.RI "static std::string \fBGetTaskNameById\fP (uint64_t id)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

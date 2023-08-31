@@ -1,0 +1,108 @@
+.TH "cyber_launch.ProcessWrapper" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cyber_launch.ProcessWrapper
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, binary_path, dag_num, dag_list, process_name, process_type, sched_name, exception_handler='')"
+.br
+.ti -1c
+.RI "def \fBwait\fP (self)"
+.br
+.ti -1c
+.RI "def \fBstart\fP (self)"
+.br
+.ti -1c
+.RI "def \fBis_alive\fP (self)"
+.br
+.ti -1c
+.RI "def \fBget_exit_state\fP (self)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBtime_of_death\fP"
+.br
+.ti -1c
+.RI "\fBstarted\fP"
+.br
+.ti -1c
+.RI "\fBbinary_path\fP"
+.br
+.ti -1c
+.RI "\fBdag_num\fP"
+.br
+.ti -1c
+.RI "\fBdag_list\fP"
+.br
+.ti -1c
+.RI "\fBname\fP"
+.br
+.ti -1c
+.RI "\fBsched_name\fP"
+.br
+.ti -1c
+.RI "\fBprocess_type\fP"
+.br
+.ti -1c
+.RI "\fBpopen\fP"
+.br
+.ti -1c
+.RI "\fBexit_code\fP"
+.br
+.ti -1c
+.RI "\fBargs\fP"
+.br
+.ti -1c
+.RI "\fBpid\fP"
+.br
+.ti -1c
+.RI "\fBexception_handler\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "def cyber_launch\&.ProcessWrapper\&.get_exit_state ( self)"
+
+.PP
+.nf
+@return: description of exit state
+@rtype: str
+
+.fi
+.PP
+ 
+.SS "def cyber_launch\&.ProcessWrapper\&.is_alive ( self)"
+
+.PP
+.nf
+Check the process if is still running
+@return: True if process is still running
+@rtype: bool
+
+.fi
+.PP
+ 
+.SS "def cyber_launch\&.ProcessWrapper\&.start ( self)"
+
+.PP
+.nf
+Start a manager in process name
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

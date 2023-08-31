@@ -1,0 +1,156 @@
+.TH "apollo::cyber::record::RecordBase" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::record::RecordBase \- \fBBase\fP class for record reader and writer\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <record_base\&.h>\fP
+.PP
+Inherited by \fBapollo::cyber::record::RecordReader\fP, and \fBapollo::cyber::record::RecordWriter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~RecordBase\fP ()=default"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "virtual uint64_t \fBGetMessageNumber\fP (const std::string &channel_name) const =0"
+.br
+.RI "Get message number by channel name\&. "
+.ti -1c
+.RI "virtual const std::string & \fBGetMessageType\fP (const std::string &channel_name) const =0"
+.br
+.RI "Get message type by channel name\&. "
+.ti -1c
+.RI "virtual const std::string & \fBGetProtoDesc\fP (const std::string &channel_name) const =0"
+.br
+.RI "Get proto descriptor string by channel name\&. "
+.ti -1c
+.RI "virtual std::set< std::string > \fBGetChannelList\fP () const =0"
+.br
+.RI "Get channel list\&. "
+.ti -1c
+.RI "const proto::Header & \fBGetHeader\fP () const"
+.br
+.RI "Get record header\&. "
+.ti -1c
+.RI "const std::string \fBGetFile\fP () const"
+.br
+.RI "Get record file path\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBfile_\fP"
+.br
+.ti -1c
+.RI "proto::Header \fBheader_\fP"
+.br
+.ti -1c
+.RI "bool \fBis_opened_\fP = false"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBBase\fP class for record reader and writer\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual std::set<std::string> apollo::cyber::record::RecordBase::GetChannelList () const\fC [pure virtual]\fP"
+
+.PP
+Get channel list\&. 
+.PP
+\fBReturns\fP
+.RS 4
+List container with all channel name string\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBapollo::cyber::record::RecordWriter\fP, and \fBapollo::cyber::record::RecordReader\fP\&.
+.SS "const std::string apollo::cyber::record::RecordBase::GetFile () const\fC [inline]\fP"
+
+.PP
+Get record file path\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Record file path\&. 
+.RE
+.PP
+
+.SS "const proto::Header& apollo::cyber::record::RecordBase::GetHeader () const\fC [inline]\fP"
+
+.PP
+Get record header\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Record header\&. 
+.RE
+.PP
+
+.SS "virtual uint64_t apollo::cyber::record::RecordBase::GetMessageNumber (const std::string & channel_name) const\fC [pure virtual]\fP"
+
+.PP
+Get message number by channel name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBMessage\fP number\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBapollo::cyber::record::RecordWriter\fP, and \fBapollo::cyber::record::RecordReader\fP\&.
+.SS "virtual const std::string& apollo::cyber::record::RecordBase::GetMessageType (const std::string & channel_name) const\fC [pure virtual]\fP"
+
+.PP
+Get message type by channel name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBMessage\fP type\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBapollo::cyber::record::RecordWriter\fP, and \fBapollo::cyber::record::RecordReader\fP\&.
+.SS "virtual const std::string& apollo::cyber::record::RecordBase::GetProtoDesc (const std::string & channel_name) const\fC [pure virtual]\fP"
+
+.PP
+Get proto descriptor string by channel name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannel_name\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Proto descriptor string by channel name\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBapollo::cyber::record::RecordWriter\fP, and \fBapollo::cyber::record::RecordReader\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

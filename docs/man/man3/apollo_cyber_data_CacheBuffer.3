@@ -1,0 +1,74 @@
+.TH "apollo::cyber::data::CacheBuffer< T >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::data::CacheBuffer< T >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBvalue_type\fP = T"
+.br
+.ti -1c
+.RI "using \fBsize_type\fP = std::size_t"
+.br
+.ti -1c
+.RI "using \fBFusionCallback\fP = std::function< void(const T &)>"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCacheBuffer\fP (uint64_t size)"
+.br
+.ti -1c
+.RI "\fBCacheBuffer\fP (const \fBCacheBuffer\fP &rhs)"
+.br
+.ti -1c
+.RI "T & \fBoperator[]\fP (const uint64_t &pos)"
+.br
+.ti -1c
+.RI "const T & \fBat\fP (const uint64_t &pos) const"
+.br
+.ti -1c
+.RI "uint64_t \fBHead\fP () const"
+.br
+.ti -1c
+.RI "uint64_t \fBTail\fP () const"
+.br
+.ti -1c
+.RI "uint64_t \fBSize\fP () const"
+.br
+.ti -1c
+.RI "const T & \fBFront\fP () const"
+.br
+.ti -1c
+.RI "const T & \fBBack\fP () const"
+.br
+.ti -1c
+.RI "bool \fBEmpty\fP () const"
+.br
+.ti -1c
+.RI "bool \fBFull\fP () const"
+.br
+.ti -1c
+.RI "uint64_t \fBCapacity\fP () const"
+.br
+.ti -1c
+.RI "void \fBSetFusionCallback\fP (const FusionCallback &callback)"
+.br
+.ti -1c
+.RI "void \fBFill\fP (const T &value)"
+.br
+.ti -1c
+.RI "std::mutex & \fBMutex\fP ()"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,5 @@
+<map id="apollo::cyber::service_discovery::ChannelManager::GetDownstreamOfNode" name="apollo::cyber::service_discovery::ChannelManager::GetDownstreamOfNode">
+<area shape="rect" id="node1" title="Get the Downstream Of Node object. If Node A has writer that publishes channel&#45;1, and Node B has read..." alt="" coords="5,31,516,57"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager.html#ad20c8af51bdacf9f1a6ecf7ce7bb371d" title="Get the Readers Of Channel object." alt="" coords="564,5,1064,32"/>
+<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager.html#a928e0afa8478cb244f3dd5d872694f38" title="Get the Writers Of Node object." alt="" coords="577,56,1051,83"/>
+</map>

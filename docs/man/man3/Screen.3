@@ -1,0 +1,79 @@
+.TH "Screen" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Screen
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBColorPair\fP { \fBINVALID\fP = 0, \fBGREEN_BLACK\fP = 1, \fBYELLOW_BLACK\fP, \fBRED_BLACK\fP, \fBWHITE_BLACK\fP, \fBBLACK_WHITE\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInit\fP (void)"
+.br
+.ti -1c
+.RI "void \fBRun\fP (void)"
+.br
+.ti -1c
+.RI "void \fBResize\fP ()"
+.br
+.ti -1c
+.RI "void \fBStop\fP (void)"
+.br
+.ti -1c
+.RI "int \fBWidth\fP (void) const"
+.br
+.ti -1c
+.RI "int \fBHeight\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBAddStr\fP (int x, int y, ColorPair color, const char *str) const"
+.br
+.ti -1c
+.RI "ColorPair \fBColor\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBSetCurrentColor\fP (ColorPair color) const"
+.br
+.ti -1c
+.RI "void \fBAddStr\fP (int x, int y, const char *str) const"
+.br
+.ti -1c
+.RI "void \fBAddStr\fP (const char *str) const"
+.br
+.ti -1c
+.RI "void \fBMoveOffsetXY\fP (int offsetX, int offsetY) const"
+.br
+.ti -1c
+.RI "void \fBClearCurrentColor\fP (void) const"
+.br
+.ti -1c
+.RI "void \fBSetCurrentRenderMessage\fP (\fBRenderableMessage\fP *const render_obj)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBScreen\fP * \fBInstance\fP (void)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const char \fBInteractiveCmdStr\fP []"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

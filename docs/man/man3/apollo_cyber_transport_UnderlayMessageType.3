@@ -1,0 +1,59 @@
+.TH "apollo::cyber::transport::UnderlayMessageType" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::transport::UnderlayMessageType \- This class represents the TopicDataType of the type \fBUnderlayMessage\fP defined by the user in the IDL file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <underlay_message_type\&.h>\fP
+.PP
+Inherits eprosima::fastrtps::TopicDataType\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBtype\fP = \fBUnderlayMessage\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBserialize\fP (void *data, SerializedPayload_t *payload)"
+.br
+.ti -1c
+.RI "bool \fBdeserialize\fP (SerializedPayload_t *payload, void *data)"
+.br
+.ti -1c
+.RI "std::function< uint32_t()> \fBgetSerializedSizeProvider\fP (void *data)"
+.br
+.ti -1c
+.RI "bool \fBgetKey\fP (void *data, InstanceHandle_t *ihandle)"
+.br
+.ti -1c
+.RI "void * \fBcreateData\fP ()"
+.br
+.ti -1c
+.RI "void \fBdeleteData\fP (void *data)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "MD5 \fBm_md5\fP"
+.br
+.ti -1c
+.RI "unsigned char * \fBm_keyBuffer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents the TopicDataType of the type \fBUnderlayMessage\fP defined by the user in the IDL file\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

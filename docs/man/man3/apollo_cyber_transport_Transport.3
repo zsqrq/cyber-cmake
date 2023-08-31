@@ -1,0 +1,28 @@
+.TH "apollo::cyber::transport::Transport" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::transport::Transport
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBShutdown\fP ()"
+.br
+.ti -1c
+.RI "template<typename M > auto \fBCreateTransmitter\fP (const RoleAttributes &attr, const OptionalMode &mode=OptionalMode::HYBRID) \-> typename std::shared_ptr< \fBTransmitter\fP< M >>"
+.br
+.ti -1c
+.RI "template<typename M > auto \fBCreateReceiver\fP (const RoleAttributes &attr, const typename \fBReceiver\fP< M >::MessageListener &msg_listener, const OptionalMode &mode=OptionalMode::HYBRID) \-> typename std::shared_ptr< \fBReceiver\fP< M >>"
+.br
+.ti -1c
+.RI "ParticipantPtr \fBparticipant\fP () const"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

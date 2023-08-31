@@ -1,0 +1,38 @@
+.TH "apollo::cyber::io::Poller" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::io::Poller
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBRequestPtr\fP = std::shared_ptr< \fBPollRequest\fP >"
+.br
+.ti -1c
+.RI "using \fBRequestMap\fP = std::unordered_map< int, RequestPtr >"
+.br
+.ti -1c
+.RI "using \fBCtrlParamMap\fP = std::unordered_map< int, \fBPollCtrlParam\fP >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBShutdown\fP ()"
+.br
+.ti -1c
+.RI "bool \fBRegister\fP (const \fBPollRequest\fP &req)"
+.br
+.ti -1c
+.RI "bool \fBUnregister\fP (const \fBPollRequest\fP &req)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,57 @@
+.TH "apollo::cyber::transport::HybridReceiver< M >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::transport::HybridReceiver< M >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBapollo::cyber::transport::Receiver< M >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBHistoryPtr\fP = std::shared_ptr< \fBHistory\fP< M > >"
+.br
+.ti -1c
+.RI "using \fBReceiverPtr\fP = std::shared_ptr< \fBReceiver\fP< M > >"
+.br
+.ti -1c
+.RI "using \fBReceiverContainer\fP = std::unordered_map< OptionalMode, ReceiverPtr, std::hash< int > >"
+.br
+.ti -1c
+.RI "using \fBTransmitterContainer\fP = std::unordered_map< OptionalMode, std::unordered_map< uint64_t, RoleAttributes >, std::hash< int > >"
+.br
+.ti -1c
+.RI "using \fBCommunicationModePtr\fP = std::shared_ptr< proto::CommunicationMode >"
+.br
+.ti -1c
+.RI "using \fBMappingTable\fP = std::unordered_map< Relation, OptionalMode, std::hash< int > >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHybridReceiver\fP (const RoleAttributes &attr, const typename \fBReceiver\fP< M >::MessageListener &msg_listener, const ParticipantPtr &participant)"
+.br
+.ti -1c
+.RI "void \fBEnable\fP () override"
+.br
+.ti -1c
+.RI "void \fBDisable\fP () override"
+.br
+.ti -1c
+.RI "void \fBEnable\fP (const RoleAttributes &opposite_attr) override"
+.br
+.ti -1c
+.RI "void \fBDisable\fP (const RoleAttributes &opposite_attr) override"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

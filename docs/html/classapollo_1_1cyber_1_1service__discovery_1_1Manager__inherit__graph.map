@@ -1,0 +1,6 @@
+<map id="apollo::cyber::service_discovery::Manager" name="apollo::cyber::service_discovery::Manager">
+<area shape="rect" id="node1" title="Base class for management of Topology elements. Manager can Join/Leave the Topology,..." alt="" coords="449,5,1082,523"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager.html" title="Topology Manager of Service related." alt="" coords="5,571,576,795"/>
+<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1service__discovery_1_1NodeManager.html" title="Topology Manager of Node related." alt="" coords="599,622,931,743"/>
+<area shape="rect" id="node4" href="$classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager.html" title="Topology Manager of Service related." alt="" coords="955,615,1450,751"/>
+</map>

@@ -1,0 +1,80 @@
+.TH "apollo::cyber::transport::Segment" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::transport::Segment
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBapollo::cyber::transport::PosixSegment\fP, and \fBapollo::cyber::transport::XsiSegment\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSegment\fP (uint64_t channel_id)"
+.br
+.ti -1c
+.RI "bool \fBAcquireBlockToWrite\fP (std::size_t msg_size, \fBWritableBlock\fP *writable_block)"
+.br
+.ti -1c
+.RI "void \fBReleaseWrittenBlock\fP (const \fBWritableBlock\fP &writable_block)"
+.br
+.ti -1c
+.RI "bool \fBAcquireBlockToRead\fP (\fBReadableBlock\fP *readable_block)"
+.br
+.ti -1c
+.RI "void \fBReleaseReadBlock\fP (const \fBReadableBlock\fP &readable_block)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBDestroy\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBReset\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBRemove\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBOpenOnly\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBOpenOrCreate\fP ()=0"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBinit_\fP"
+.br
+.ti -1c
+.RI "\fBShmConf\fP \fBconf_\fP"
+.br
+.ti -1c
+.RI "uint64_t \fBchannel_id_\fP"
+.br
+.ti -1c
+.RI "\fBState\fP * \fBstate_\fP"
+.br
+.ti -1c
+.RI "\fBBlock\fP * \fBblocks_\fP"
+.br
+.ti -1c
+.RI "void * \fBmanaged_shm_\fP"
+.br
+.ti -1c
+.RI "std::mutex \fBblock_buf_lock_\fP"
+.br
+.ti -1c
+.RI "std::unordered_map< uint32_t, uint8_t * > \fBblock_buf_addrs_\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

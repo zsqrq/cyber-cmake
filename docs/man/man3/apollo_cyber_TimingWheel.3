@@ -1,0 +1,40 @@
+.TH "apollo::cyber::TimingWheel" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::TimingWheel
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBStart\fP ()"
+.br
+.ti -1c
+.RI "void \fBShutdown\fP ()"
+.br
+.ti -1c
+.RI "void \fBTick\fP ()"
+.br
+.ti -1c
+.RI "void \fBAddTask\fP (const std::shared_ptr< \fBTimerTask\fP > &task)"
+.br
+.ti -1c
+.RI "void \fBAddTask\fP (const std::shared_ptr< \fBTimerTask\fP > &task, const uint64_t current_work_wheel_index)"
+.br
+.ti -1c
+.RI "void \fBCascade\fP (const uint64_t assistant_wheel_index)"
+.br
+.ti -1c
+.RI "void \fBTickFunc\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBTickCount\fP () const"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,101 @@
+.TH "apollo::cyber::scheduler::Scheduler" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::scheduler::Scheduler
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBapollo::cyber::scheduler::SchedulerChoreography\fP, and \fBapollo::cyber::scheduler::SchedulerClassic\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBCreateTask\fP (const \fBRoutineFactory\fP &factory, const std::string &name)"
+.br
+.ti -1c
+.RI "bool \fBCreateTask\fP (std::function< void()> &&func, const std::string &name, std::shared_ptr< \fBDataVisitorBase\fP > visitor=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBNotifyTask\fP (uint64_t crid)"
+.br
+.ti -1c
+.RI "void \fBShutdown\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBTaskPoolSize\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBRemoveTask\fP (const std::string &name)=0"
+.br
+.ti -1c
+.RI "void \fBProcessLevelResourceControl\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetInnerThreadAttr\fP (const std::string &name, std::thread *thr)"
+.br
+.ti -1c
+.RI "virtual bool \fBDispatchTask\fP (const std::shared_ptr< \fBCRoutine\fP > &)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBNotifyProcessor\fP (uint64_t crid)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBRemoveCRoutine\fP (uint64_t crid)=0"
+.br
+.ti -1c
+.RI "void \fBCheckSchedStatus\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetInnerThreadConfs\fP (const std::unordered_map< std::string, InnerThread > &confs)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBScheduler\fP * \fBInstance\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBAtomicRWLock\fP \fBid_cr_lock_\fP"
+.br
+.ti -1c
+.RI "\fBAtomicHashMap\fP< uint64_t, \fBMutexWrapper\fP * > \fBid_map_mutex_\fP"
+.br
+.ti -1c
+.RI "std::mutex \fBcr_wl_mtx_\fP"
+.br
+.ti -1c
+.RI "std::unordered_map< uint64_t, std::shared_ptr< \fBCRoutine\fP > > \fBid_cr_\fP"
+.br
+.ti -1c
+.RI "std::vector< std::shared_ptr< \fBProcessorContext\fP > > \fBpctxs_\fP"
+.br
+.ti -1c
+.RI "std::vector< std::shared_ptr< \fBProcessor\fP > > \fBprocessors_\fP"
+.br
+.ti -1c
+.RI "std::unordered_map< std::string, InnerThread > \fBinner_thr_confs_\fP"
+.br
+.ti -1c
+.RI "std::string \fBprocess_level_cpuset_\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBproc_num_\fP = 0"
+.br
+.ti -1c
+.RI "uint32_t \fBtask_pool_size_\fP = 0"
+.br
+.ti -1c
+.RI "std::atomic< bool > \fBstop_\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,6 @@
+<map id="apollo::cyber::record::RecordWriter::WriteMessage" name="apollo::cyber::record::RecordWriter::WriteMessage">
+<area shape="rect" id="node1" title="Write a message to record." alt="" coords="5,31,355,57"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1record_1_1RecordWriter.html#aed720c5559e52f19cfc7d165c97769fb" title="Get message type by channel name." alt="" coords="403,5,769,32"/>
+<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1record_1_1RecordWriter.html#aff50d522ad22bcfb6ecc8affe837f048" title="Write a channel to record." alt="" coords="414,56,758,83"/>
+<area shape="rect" id="node4" href="$classapollo_1_1cyber_1_1record_1_1RecordWriter.html#ac4e925dc5f55f4681e26190dc128b0f1" title="Is a new channel recording or not." alt="" coords="817,56,1167,83"/>
+</map>

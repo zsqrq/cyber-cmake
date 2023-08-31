@@ -1,5 +1,29 @@
 var searchData=
 [
-  ['readlockguard_9',['ReadLockGuard',['../classapollo_1_1cyber_1_1base_1_1ReadLockGuard.html',1,'apollo::cyber::base']]],
-  ['reentrantrwlock_10',['ReentrantRWLock',['../classapollo_1_1cyber_1_1base_1_1ReentrantRWLock.html',1,'apollo::cyber::base']]]
+  ['data_115',['Data',['../classapollo_1_1cyber_1_1message_1_1Data.html',1,'apollo::cyber::message']]],
+  ['data_116',['data',['../classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#a517e74952fb380f43beacd30ef44e275',1,'apollo::cyber::transport::UnderlayMessage::data()'],['../classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#a2b419c5280201c9854aa60da41bc1901',1,'apollo::cyber::transport::UnderlayMessage::data() const'],['../classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#a355ef9c70ec844cb25bb279e48c2875a',1,'apollo::cyber::transport::UnderlayMessage::data(std::string &amp;&amp;_data)'],['../classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#abbce4191928c7d434e323926ae3c465d',1,'apollo::cyber::transport::UnderlayMessage::data(const std::string &amp;_data)']]],
+  ['datadispatcher_117',['DataDispatcher',['../classapollo_1_1cyber_1_1data_1_1DataDispatcher.html',1,'apollo::cyber::data']]],
+  ['datafusion_118',['DataFusion',['../classapollo_1_1cyber_1_1data_1_1fusion_1_1DataFusion.html',1,'apollo::cyber::data::fusion']]],
+  ['datafusion_3c_20m0_2c_20m1_20_3e_119',['DataFusion&lt; M0, M1 &gt;',['../classapollo_1_1cyber_1_1data_1_1fusion_1_1DataFusion.html',1,'apollo::cyber::data::fusion']]],
+  ['datafusion_3c_20m0_2c_20m1_2c_20m2_20_3e_120',['DataFusion&lt; M0, M1, M2 &gt;',['../classapollo_1_1cyber_1_1data_1_1fusion_1_1DataFusion.html',1,'apollo::cyber::data::fusion']]],
+  ['datafusion_3c_20m0_2c_20m1_2c_20m2_2c_20nulltype_20_3e_121',['DataFusion&lt; M0, M1, M2, NullType &gt;',['../classapollo_1_1cyber_1_1data_1_1fusion_1_1DataFusion_3_01M0_00_01M1_00_01M2_00_01NullType_01_4.html',1,'apollo::cyber::data::fusion']]],
+  ['datafusion_3c_20m0_2c_20m1_2c_20nulltype_2c_20nulltype_20_3e_122',['DataFusion&lt; M0, M1, NullType, NullType &gt;',['../classapollo_1_1cyber_1_1data_1_1fusion_1_1DataFusion_3_01M0_00_01M1_00_01NullType_00_01NullType_01_4.html',1,'apollo::cyber::data::fusion']]],
+  ['datafusion_3c_20m0_2c_20nulltype_2c_20nulltype_2c_20nulltype_20_3e_123',['DataFusion&lt; M0, NullType, NullType, NullType &gt;',['../classapollo_1_1cyber_1_1data_1_1fusion_1_1DataFusion.html',1,'apollo::cyber::data::fusion']]],
+  ['datanotifier_124',['DataNotifier',['../classapollo_1_1cyber_1_1data_1_1DataNotifier.html',1,'apollo::cyber::data']]],
+  ['datatype_125',['datatype',['../classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#a21db34a4a93cf6dc381feb3c0750a3ab',1,'apollo::cyber::transport::UnderlayMessage::datatype(const std::string &amp;_datatype)'],['../classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#a27ef025c4029fa9acc3297c4da7af09d',1,'apollo::cyber::transport::UnderlayMessage::datatype(std::string &amp;&amp;_datatype)'],['../classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#a4b47f9b91c32e36aaa1860078690f95e',1,'apollo::cyber::transport::UnderlayMessage::datatype() const'],['../classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#a9ebfd35dddc71d383ff3e262a3b5a751',1,'apollo::cyber::transport::UnderlayMessage::datatype()']]],
+  ['datavisitor_126',['DataVisitor',['../classapollo_1_1cyber_1_1data_1_1DataVisitor.html',1,'apollo::cyber::data']]],
+  ['datavisitor_3c_20m0_2c_20m1_2c_20m2_2c_20nulltype_20_3e_127',['DataVisitor&lt; M0, M1, M2, NullType &gt;',['../classapollo_1_1cyber_1_1data_1_1DataVisitor_3_01M0_00_01M1_00_01M2_00_01NullType_01_4.html',1,'apollo::cyber::data']]],
+  ['datavisitor_3c_20m0_2c_20m1_2c_20nulltype_2c_20nulltype_20_3e_128',['DataVisitor&lt; M0, M1, NullType, NullType &gt;',['../classapollo_1_1cyber_1_1data_1_1DataVisitor_3_01M0_00_01M1_00_01NullType_00_01NullType_01_4.html',1,'apollo::cyber::data']]],
+  ['datavisitor_3c_20m0_2c_20nulltype_2c_20nulltype_2c_20nulltype_20_3e_129',['DataVisitor&lt; M0, NullType, NullType, NullType &gt;',['../classapollo_1_1cyber_1_1data_1_1DataVisitor_3_01M0_00_01NullType_00_01NullType_00_01NullType_01_4.html',1,'apollo::cyber::data']]],
+  ['datavisitorbase_130',['DataVisitorBase',['../classapollo_1_1cyber_1_1data_1_1DataVisitorBase.html',1,'apollo::cyber::data']]],
+  ['debug_5fstring_131',['debug_string',['../classcyber__py3_1_1parameter_1_1Parameter.html#aedf068103375afd615089d98c204cfa0',1,'cyber_py3::parameter::Parameter']]],
+  ['debugstring_132',['DebugString',['../classapollo_1_1cyber_1_1Parameter.html#ab7fa9ae3487fe310b15cbf797dd35fbd',1,'apollo::cyber::Parameter']]],
+  ['descriptor_133',['Descriptor',['../classapollo_1_1cyber_1_1message_1_1PyMessageWrap_1_1Descriptor.html',1,'apollo::cyber::message::PyMessageWrap::Descriptor'],['../classapollo_1_1cyber_1_1message_1_1RawMessage_1_1Descriptor.html',1,'apollo::cyber::message::RawMessage::Descriptor'],['../classapollo_1_1cyber_1_1Parameter.html#ac71170136c812201032e674f6f7d90fd',1,'apollo::cyber::Parameter::Descriptor()']]],
+  ['descriptor_134',['descriptor',['../classcyber__py3_1_1parameter_1_1Parameter.html#ada4b240f6beb9623b5b1d8862381e123',1,'cyber_py3::parameter::Parameter']]],
+  ['deserialize_135',['deserialize',['../classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#a59127ee0d22c65a9454c60989c9ba258',1,'apollo::cyber::transport::UnderlayMessage']]],
+  ['destroy_136',['destroy',['../classapollo_1_1cyber_1_1Service.html#aeaaef735425d56ab7879e1597587c081',1,'apollo::cyber::Service']]],
+  ['destroy_137',['Destroy',['../classapollo_1_1cyber_1_1Client.html#a7315a6cd9c733e844f0bd8e01006f491',1,'apollo::cyber::Client::Destroy()'],['../classapollo_1_1cyber_1_1ClientBase.html#a144df36f1d8e9ec5923e3ad77a4ee634',1,'apollo::cyber::ClientBase::Destroy()']]],
+  ['dispatcher_138',['Dispatcher',['../classapollo_1_1cyber_1_1transport_1_1Dispatcher.html',1,'apollo::cyber::transport']]],
+  ['dispatchertest_139',['DispatcherTest',['../classapollo_1_1cyber_1_1transport_1_1DispatcherTest.html',1,'apollo::cyber::transport']]],
+  ['duration_140',['Duration',['../classapollo_1_1cyber_1_1Duration.html',1,'apollo::cyber::Duration'],['../classcyber__py3_1_1cyber__time_1_1Duration.html',1,'cyber_py3.cyber_time.Duration']]]
 ];

@@ -1,0 +1,138 @@
+.TH "apollo::cyber::record::RecordViewer::Iterator" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::record::RecordViewer::Iterator \- The iterator\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <record_viewer\&.h>\fP
+.PP
+Inherits std::iterator< std::input_iterator_tag, RecordMessage, int, RecordMessage *, RecordMessage & >\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIterator\fP (\fBRecordViewer\fP *viewer, bool \fBend\fP=false)"
+.br
+.RI "The constructor of iterator with viewer\&. "
+.ti -1c
+.RI "\fBIterator\fP ()"
+.br
+.RI "The default constructor of iterator\&. "
+.ti -1c
+.RI "virtual \fB~Iterator\fP ()"
+.br
+.RI "The default destructor of iterator\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (\fBIterator\fP const &other) const"
+.br
+.RI "Overloading operator ==\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBIterator\fP &rhs) const"
+.br
+.RI "Overloading operator !=\&. "
+.ti -1c
+.RI "\fBIterator\fP & \fBoperator++\fP ()"
+.br
+.RI "Overloading operator ++\&. "
+.ti -1c
+.RI "pointer \fBoperator\->\fP ()"
+.br
+.RI "Overloading operator ->\&. "
+.ti -1c
+.RI "reference \fBoperator*\fP ()"
+.br
+.RI "Overloading operator *\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The iterator\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "apollo::cyber::record::RecordViewer::Iterator::Iterator (\fBRecordViewer\fP * viewer, bool end = \fCfalse\fP)\fC [explicit]\fP"
+
+.PP
+The constructor of iterator with viewer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIviewer\fP 
+.br
+\fIend\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool apollo::cyber::record::RecordViewer::Iterator::operator!= (const \fBIterator\fP & rhs) const"
+
+.PP
+Overloading operator !=\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The result\&. 
+.RE
+.PP
+
+.SS "RecordViewer::Iterator::reference apollo::cyber::record::RecordViewer::Iterator::operator* ()"
+
+.PP
+Overloading operator *\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The reference\&. 
+.RE
+.PP
+
+.SS "\fBRecordViewer::Iterator\fP & apollo::cyber::record::RecordViewer::Iterator::operator++ ()"
+
+.PP
+Overloading operator ++\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The result\&. 
+.RE
+.PP
+
+.SS "RecordViewer::Iterator::pointer apollo::cyber::record::RecordViewer::Iterator::operator\-> ()"
+
+.PP
+Overloading operator ->\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The pointer\&. 
+.RE
+.PP
+
+.SS "bool apollo::cyber::record::RecordViewer::Iterator::operator== (\fBIterator\fP const & other) const"
+
+.PP
+Overloading operator ==\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The result\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

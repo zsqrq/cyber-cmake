@@ -1,0 +1,240 @@
+.TH "apollo::cyber::ReaderBase" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::ReaderBase \- \fBBase\fP Class for \fBReader\fP \fBReader\fP is identified by one apollo::cyber::proto::RoleAttribute, it contains the channel_name, channel_id that we subscribe, and host_name, process_id and node that we are located, and qos that describes our transportation quality\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <reader_base\&.h>\fP
+.PP
+Inherited by \fBapollo::cyber::Reader< MessageT >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReaderBase\fP (const proto::RoleAttributes &role_attr)"
+.br
+.ti -1c
+.RI "virtual bool \fBInit\fP ()=0"
+.br
+.RI "Init the \fBReader\fP object\&. "
+.ti -1c
+.RI "virtual void \fBShutdown\fP ()=0"
+.br
+.RI "Shutdown the \fBReader\fP object\&. "
+.ti -1c
+.RI "virtual void \fBClearData\fP ()=0"
+.br
+.RI "Clear local data\&. "
+.ti -1c
+.RI "virtual void \fBObserve\fP ()=0"
+.br
+.RI "Get stored data\&. "
+.ti -1c
+.RI "virtual bool \fBEmpty\fP () const =0"
+.br
+.RI "Query whether the \fBReader\fP has data to be handled\&. "
+.ti -1c
+.RI "virtual bool \fBHasReceived\fP () const =0"
+.br
+.RI "Query whether we have received data since last clear\&. "
+.ti -1c
+.RI "virtual double \fBGetDelaySec\fP () const =0"
+.br
+.RI "Get time interval of since last receive message\&. "
+.ti -1c
+.RI "virtual uint32_t \fBPendingQueueSize\fP () const =0"
+.br
+.RI "Get the value of pending queue size\&. "
+.ti -1c
+.RI "virtual bool \fBHasWriter\fP ()"
+.br
+.RI "Query is there any writer that publish the subscribed channel\&. "
+.ti -1c
+.RI "virtual void \fBGetWriters\fP (std::vector< proto::RoleAttributes > *writers)"
+.br
+.RI "Get all writers pushlish the channel we subscribes\&. "
+.ti -1c
+.RI "const std::string & \fBGetChannelName\fP () const"
+.br
+.RI "Get \fBReader\fP's Channel name\&. "
+.ti -1c
+.RI "uint64_t \fBChannelId\fP () const"
+.br
+.RI "Get \fBReader\fP's Channel id\&. "
+.ti -1c
+.RI "const proto::QosProfile & \fBQosProfile\fP () const"
+.br
+.RI "Get qos profile\&. You can see qos description\&. "
+.ti -1c
+.RI "bool \fBIsInit\fP () const"
+.br
+.RI "Query whether the \fBReader\fP is initialized\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "proto::RoleAttributes \fBrole_attr_\fP"
+.br
+.ti -1c
+.RI "std::atomic< bool > \fBinit_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBBase\fP Class for \fBReader\fP \fBReader\fP is identified by one apollo::cyber::proto::RoleAttribute, it contains the channel_name, channel_id that we subscribe, and host_name, process_id and node that we are located, and qos that describes our transportation quality\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "uint64_t apollo::cyber::ReaderBase::ChannelId () const\fC [inline]\fP"
+
+.PP
+Get \fBReader\fP's Channel id\&. 
+.PP
+\fBReturns\fP
+.RS 4
+uint64_t channel id 
+.RE
+.PP
+
+.SS "virtual bool apollo::cyber::ReaderBase::Empty () const\fC [pure virtual]\fP"
+
+.PP
+Query whether the \fBReader\fP has data to be handled\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if data container is empty 
+.PP
+false if data container has data 
+.RE
+.PP
+
+.PP
+Implemented in \fBapollo::cyber::Reader< MessageT >\fP, and \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
+.SS "const std::string& apollo::cyber::ReaderBase::GetChannelName () const\fC [inline]\fP"
+
+.PP
+Get \fBReader\fP's Channel name\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const std::string& channel name 
+.RE
+.PP
+
+.SS "virtual double apollo::cyber::ReaderBase::GetDelaySec () const\fC [pure virtual]\fP"
+
+.PP
+Get time interval of since last receive message\&. 
+.PP
+\fBReturns\fP
+.RS 4
+double seconds delay 
+.RE
+.PP
+
+.PP
+Implemented in \fBapollo::cyber::Reader< MessageT >\fP\&.
+.SS "virtual void apollo::cyber::ReaderBase::GetWriters (std::vector< proto::RoleAttributes > * writers)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Get all writers pushlish the channel we subscribes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwriters\fP result RoleAttributes vector 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBapollo::cyber::Reader< MessageT >\fP\&.
+.SS "virtual bool apollo::cyber::ReaderBase::HasReceived () const\fC [pure virtual]\fP"
+
+.PP
+Query whether we have received data since last clear\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the reader has received data 
+.PP
+false if the reader has not received data 
+.RE
+.PP
+
+.PP
+Implemented in \fBapollo::cyber::Reader< MessageT >\fP, and \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
+.SS "virtual bool apollo::cyber::ReaderBase::HasWriter ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Query is there any writer that publish the subscribed channel\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if there is at least one \fBWriter\fP publish the channel 
+.PP
+false if there is no \fBWriter\fP publish the channel 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBapollo::cyber::Reader< MessageT >\fP\&.
+.SS "virtual bool apollo::cyber::ReaderBase::Init ()\fC [pure virtual]\fP"
+
+.PP
+Init the \fBReader\fP object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if init successfully 
+.PP
+false if init failed 
+.RE
+.PP
+
+.PP
+Implemented in \fBapollo::cyber::Reader< MessageT >\fP, and \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
+.SS "bool apollo::cyber::ReaderBase::IsInit () const\fC [inline]\fP"
+
+.PP
+Query whether the \fBReader\fP is initialized\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the \fBReader\fP has been inited 
+.PP
+false if the \fBReader\fP has not been inited 
+.RE
+.PP
+
+.SS "virtual uint32_t apollo::cyber::ReaderBase::PendingQueueSize () const\fC [pure virtual]\fP"
+
+.PP
+Get the value of pending queue size\&. 
+.PP
+\fBReturns\fP
+.RS 4
+uint32_t result value 
+.RE
+.PP
+
+.PP
+Implemented in \fBapollo::cyber::Reader< MessageT >\fP\&.
+.SS "const proto::QosProfile& apollo::cyber::ReaderBase::QosProfile () const\fC [inline]\fP"
+
+.PP
+Get qos profile\&. You can see qos description\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const proto::QosProfile& result qos 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.
