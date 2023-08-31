@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/CyberCmake.dir/main.cpp.o -o CyberCmake 

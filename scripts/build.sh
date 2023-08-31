@@ -38,11 +38,11 @@ function build() {
     fi
 
     cmake -S $PROJECT_FOLDER \
-          -B $build_path \
-          -DCMAKE_TOOLCHAIN_FILE=$toolchain_cmake \
-          -DCMAKE_BUILD_TYPE=Debug \
-          -DCMAKE_INSTALL_PREFIX=$install_path \
-          -DCOMPILE_PLATFOM=$BUILD_PLATFORM
+        -B $build_path \
+        -DCMAKE_TOOLCHAIN_FILE=$toolchain_cmake \
+        -DCMAKE_BUILD_TYPE=Debug \
+        -DCMAKE_INSTALL_PREFIX=$install_path \
+        -DCOMPILE_PLATFOM=$BUILD_PLATFORM
 
     cmake --build $build_path -- -j20 VERBOSE=1
     cmake --build $build_path --target install
@@ -50,8 +50,8 @@ function build() {
 
 function main() {
     if [[ "$1" == "-h" || "$1" == "--help" ]]; then
-      help
-      exit 0
+        help
+        exit 0
     fi
     if [ $BUILD_PLATFORM == 'x86' ]; then
         echo -e "\033[36m Building System On X86_64 Platform \033[0m \n"

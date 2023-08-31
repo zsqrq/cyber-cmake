@@ -49,6 +49,6 @@ if(COMPILE_PLATFOM STREQUAL "x86")
       COMMAND ${CMAKE_COMMAND} -E remove_directory ${INCLUDE_DIR_TO_REMOVE}
       COMMENT "Remove Unused include dir"
       )
-  install(DIRECTORY ${COMLOG_OUTPUT_DIR} DESTINATION log)
+  install(DIRECTORY ${COMLOG_OUTPUT_DIR}/ DESTINATION log)
   return()
 endif()

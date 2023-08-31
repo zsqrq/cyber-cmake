@@ -1,2 +1,0 @@
-/home/wz/Desktop/playground/cyber-cmake/build/x86/cyber/log/log/compile_log.txt
-/home/wz/Desktop/playground/cyber-cmake/build/x86/cyber/bin/CyberCmake
