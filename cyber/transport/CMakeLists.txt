@@ -16,6 +16,14 @@ cyber_add_library(
     SOURCES ${CYBER_TRANSPORT_SRCS}
     COMPONENT_NAME cyber_cmake_transport
     PRIVATE_LIBS cyber-base
-    PUBLIC_LIBS cyber-cmake-proto cyber-cmake-common cyber-cmake-scheduler
-                fastrtps fastcdr atomic
+    PUBLIC_LIBS cyber-cmake-proto cyber-cmake-common cyber-cmake-scheduler ${UUID_LIBRARIES}
+                fastrtps fastcdr atomic uuid
+    TARGET_PRIVATE_INCLUDE_DIRS ${fastrtps_INCLUDE_DIR}
 )
+
+target_link_directories(${PROJECT_NAME}
+    PRIVATE ${DEPENCENCY_LIB_DIRS}
+    PRIVATE ${CMAKE_INSTALL_PREFIX}/lib
+    PRIVATE ${FAST_RTPS_LIB_DIR}
+    PRIVATE ${CMAKE_SOURCE_DIR}/third_party/lib
+    )

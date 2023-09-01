@@ -16,5 +16,5 @@ cyber_add_library(
     SOURCES ${CYBER_CROUTINE_SRCS} ${CYBER_CROUTINE_FILE}
     COMPONENT_NAME cyber_cmake_croutine
     PRIVATE_LIBS cyber-base
-    PUBLIC_LIBS cyber-cmake-proto cyber-cmake-common
+    PUBLIC_LIBS cyber-cmake-proto cyber-cmake-common atomic
 )

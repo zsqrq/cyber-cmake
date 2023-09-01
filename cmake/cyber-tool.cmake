@@ -52,18 +52,81 @@ macro(any_add_library)
     cyber_add_library(${ARGN})
 endmacro()
 
-macro(GET_SUBDIRS RESULT CURDIR)
-    file(GLOB children PRIVATE ${CURDIR} ${CURDIR}/*)
+macro(cyber_add_excutable)
+    set(switches USE_C_LANGUAGE NO_EXPORT NO_PACKAGE_SETUP NO_FIND_PACKAGE_SUPPORT STATIC)
+    set(arguments TARGET NAMESPACE PROJECT_PREFIX)
+    set(multiarguments SOURCES COMPONENT_NAME PUBLIC_LIBS PRIVATE_LIBS BUILD_INTERFACE
+        INSTALL_INTERFACE ADDTIONAL_EXPORT_TARGETS TARGET_PUBLIC_INCLUDE_DIRS TARGET_PRIVATE_INCLUDE_DIRS
+        PUBLIC_LIBS_LINUX PRIVATE_LIBS_LINUX TARGET_LINK_DIRS)
+    cmake_parse_arguments(
+        CYBER
+        "${switches}"
+        "${arguments}"
+        "${multiarguments}"
+        ${ARGN}
+    )
+
+    add_executable(${CYBER_TARGET} ${CYBER_SOURCES})
+
+    if (CYBER_TARGET_PUBLIC_INCLUDE_DIRS)
+        target_include_directories(${CYBER_TARGET} PUBLIC ${CYBER_TARGET_PUBLIC_INCLUDE_DIRS})
+    endif ()
+
+    if (CYBER_TARGET_PRIVATE_INCLUDE_DIRS)
+        target_include_directories(${CYBER_TARGET} PRIVATE ${CYBER_TARGET_PRIVATE_INCLUDE_DIRS})
+    endif ()
+
+    target_include_directories(${CYBER_TARGET}
+        PRIVATE ${CMAKE_INSTALL_PREFIX}/include
+        )
+    target_link_directories(${CYBER_TARGET}
+        PRIVATE ${CMAKE_INSTALL_PREFIX}/lib
+        PRIVATE ${CYBER_TARGET_LINK_DIRS}
+        )
+    if (CYBER_PUBLIC_LIBS)
+        target_link_libraries(${CYBER_TARGET}
+            PUBLIC ${CYBER_PUBLIC_LIBS}
+            )
+    endif ()
+
+    if (CYBER_PRIVATE_LIBS)
+        target_link_libraries(${CYBER_TARGET}
+            PRIVATE ${CYBER_PRIVATE_LIBS}
+            )
+    endif ()
+    target_precompile_headers(${CYBER_TARGET}
+        PUBLIC ${CYBER_PRECORE_HEADERS}
+        )
+    install(TARGETS ${CYBER_TARGET}
+        RUNTIME
+        DESTINATION bin
+        COMPONENT ${CYBER_COMPONENT_NAME})
+endmacro()
+
+
+macro(get_subdirs result currdir)
+    file(GLOB children RELATIVE ${currdir} ${currdir}/*)
     set(dirlist "")
     foreach(child children)
-        if (IS_DIRECTORY ${CURDIR}/${child})
+        if (IS_DIRECTORY ${currdir}/${child})
             if (NOT ${child} STREQUAL "build")
-                LIST(APPEND dirlist ${child})
+                list(APPEND dirlist ${child})
             endif ()
         endif ()
     endforeach()
-    set(RESULT ${dirlist})
+    set(${result} ${dirlist})
 endmacro()
+
+function(get_sub_dirs root_dir output_var)
+    file(GLOB subdirs RELATIVE ${root_dir} "${root_dir}/*")
+    set(dir_list "")
+    foreach(subdir ${subdirs})
+        if(IS_DIRECTORY "${root_dir}/${subdir}")
+            list(APPEND dir_list "${subdir}")
+        endif()
+    endforeach()
+    set(${output_var} ${dir_list} PARENT_SCOPE)
+endfunction()
 
 macro(cyber_add_header_lib)
     set(switches USE_C_LANGUAGE NO_EXPORT NO_PACKAGE_SETUP NO_FIND_PACKAGE_SUPPORT)

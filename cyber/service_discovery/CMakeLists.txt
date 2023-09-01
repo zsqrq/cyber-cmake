@@ -12,4 +12,5 @@ cyber_add_library(
     COMPONENT_NAME cyber_cmake_service_discovery
     PRIVATE_LIBS cyber-base
     PUBLIC_LIBS cyber-cmake-proto cyber-cmake-common cyber-cmake-scheduler
+    cyber-cmake-message fastrtps fastcdr
 )

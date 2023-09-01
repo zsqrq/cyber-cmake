@@ -3,6 +3,8 @@ include(GNUInstallDirs)
 include(${CMAKE_SOURCE_DIR}/cmake/cyber-tool.cmake)
 include(${CMAKE_SOURCE_DIR}/cmake/cyberproto-config.cmake)
 set(AUTHOR_KEY "ENABLE_DOCMENTATION")
+set(FAST_RTPS_INC_DIR ${CMAKE_SOURCE_DIR}/third_party/fast-rtps-1.5.0-1/include CACHE INTERNAL "")
+set(FAST_RTPS_LIB_DIR ${CMAKE_SOURCE_DIR}/third_party/fast-rtps-1.5.0-1/lib CACHE INTERNAL "")
 
 if(COMPILE_PLATFOM STREQUAL "x86")
   set(CONFIG_FILE_NAME "cyber_config.json")

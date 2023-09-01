@@ -7,8 +7,7 @@ file(GLOB PROTO_SRCS "${CMAKE_BINARY_DIR}/cyber/proto/*.cc"
 cyber_add_library(
     TARGET ${PROJECT_NAME}
     SOURCES ${PROTO_SRCS}
-    PRIVATE_LIBS cyber-base
-    PUBLIC_LIBS protobuf
+    PUBLIC_LIBS protobuf ${DEPENCENCY_LIBS} glog gflags
 )
 
 

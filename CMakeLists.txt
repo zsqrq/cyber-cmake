@@ -1,37 +1,58 @@
 cmake_minimum_required(VERSION 3.16)
-project(Cyber-Cmake)
+project(Cyber-Cmake VERSION 8.0
+    DESCRIPTION "Pure Cmake Project For Apollo Cyber Rt")
 set(CMAKE_CXX_STANDARD 17)
+enable_language(ASM)
+
+include(CMakePackageConfigHelpers)
+include(GNUInstallDirs)
+add_subdirectory(third_party)
 
 list(APPEND CMAKE_FIND_ROOT_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 find_package(CyberConfig REQUIRED)
+get_sub_dirs(${CMAKE_SOURCE_DIR}/third_party/lib/cmake GOOGLE_FAMILY_SUB_DIR)
+foreach(sub_dir ${GOOGLE_FAMILY_SUB_DIR})
+    list(APPEND CMAKE_MODULE_PATH ${sub_dir})
+endforeach()
+get_sub_dirs(${CMAKE_SOURCE_DIR}/third_party/fast-rtps-1.5.0-1/lib RTPS_DIR)
+foreach(sub_dir ${RTPS_DIR})
+    list(APPEND CMAKE_MODULE_PATH ${sub_dir}/cmake)
+endforeach()
 find_package(Threads REQUIRED)
 find_package(PkgConfig REQUIRED)
 find_package(Poco REQUIRED COMPONENTS Foundation)
 find_package(glog REQUIRED)
 find_package(Protobuf REQUIRED)
-pkg_check_modules(Python REQUIRED python3)
+
+find_package(fastrtps REQUIRED)
+find_package(fastcdr REQUIRED)
+#message(FATAL_ERROR "fastrtps libs : ${FAST_RTPS_INC_DIR},${FAST_RTPS_LIB_DIR}")
 pkg_check_modules(Uuid REQUIRED uuid)
-pkg_check_modules(Gflags REQUIRED gflags)
+#pkg_check_modules(Gflags REQUIRED gflags)
 pkg_check_modules(NlohmannJson REQUIRED nlohmann_json)
 
-message(WARNING "fastrtps include dir is ：： ${fastrtps_INCLUDE_DIR}")
+if(NOT DEFINED glog_LIBRARIES)
+    set(glog_LIBRARIES "glog")
+endif()
+
+if(NOT DEFINED Uuid_LIBRARIES)
+    set(Uuid_LIBRARIES "uuid")
+endif()
 
 set(CYBER_DEPENCENCY_INCLUDE_DIRS
-    ${fastcdr_INCLUDE_DIR}
-    ${fastrtps_INCLUDE_DIR}
     ${Protobuf_INCLUDE_DIRS}
+    ${FAST_RTPS_INC_DIR}
     ${Python_INCLUDE_DIRS}
     ${Uuid_INCLUDE_DIRS}
     ${glog_INCLUDE_DIRS}
     ${Gflags_INCLUDE_DIRS}
     ${NlohmannJson_INCLUDE_DIRS}
     )
-
+set(TARGET_NAME "CyberRt")
 set(DEPENCENCY_LIB_DIRS
-    ${fastcdr_LIB_DIR}
-    ${fastrtps_LIB_DIR}
     ${Protobuf_LIBRARIES_DIRS}
+    ${FAST_RTPS_LIB_DIR}
     ${Python_LIBRARIES_DIRS}
     ${Uuid_LIBRARIES_DIRS}
     ${glog_LIBRARY_DIRS}
@@ -41,8 +62,10 @@ set(DEPENCENCY_LIB_DIRS
 set(DEPENCENCY_LIBS
     ${glog_LIBRARIES}
     ${Gflags_LIBRARIES}
+    ${Protobuf_LIBRARIES}
     )
-
+message(WARNING "glog library is : ${glog_LIBRARIES}")
+set(CYBER_SUB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cyber CACHE INTERNAL "")
 if(NOT CMAKE_BUILD_TYPE)
     set(DEF Debug)
     set(DEFAULT_COMPILE -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -fPIE -pie -fstack-protector-all -Wtrampolines)
@@ -63,21 +86,69 @@ include_directories(
     ${CYBER_PROTOC_OUTPUT_DIRS}
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CYBER_DEPENCENCY_INCLUDE_DIRS}
-    ${CMAKE_CURRENT_SOURCE_DIR}/cyber)
-link_directories(${DEPENCENCY_LIB_DIRS})
+    ${CMAKE_CURRENT_SOURCE_DIR}/cyber
+    ${CMAKE_SOURCE_DIR}/third_party/include
+    ${FAST_RTPS_INC_DIR})
+link_directories(
+    ${DEPENCENCY_LIB_DIRS}
+    ${CMAKE_INSTALL_PREFIX}/lib
+    ${CMAKE_SOURCE_DIR}/third_party/lib
+)
 
-add_executable(CyberCmake main.cpp)
-install(TARGETS CyberCmake
-    RUNTIME
-    DESTINATION bin)
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cyber
     DESTINATION include
     FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
-GET_SUBDIRS(CYBER_SUB_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/cyber)
-foreach(sub_dir ${CYBER_SUB_DIRS})
-    file(GLOB CMAKELIST_FILE "${CMAKE_CURRENT_SOURCE_DIR}/cyber/${sub_dir}/CMakeLists.txt")
-    if (CMAKELIST_FILE)
-        add_subdirectory(cyber/${sub_dir})
+
+get_sub_dirs(${CYBER_SUB_DIR} SUB_DIRS)
+foreach(sub_dir ${SUB_DIRS})
+    if (NOT "${sub_dir}" STREQUAL "mainboard")
+        file(GLOB CMAKELIST_FILE "${CMAKE_CURRENT_SOURCE_DIR}/cyber/${sub_dir}/CMakeLists.txt")
+        if (CMAKELIST_FILE)
+            add_subdirectory(cyber/${sub_dir})
+        endif ()
     endif ()
 endforeach()
 
+# Make Package#
+include(CMakePackageConfigHelpers)
+configure_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/cmake/${TARGET_NAME}.pc.in"
+    "${CMAKE_INSTALL_PREFIX}/lib/cmake/${TARGET_NAME}.pc" @ONLY)
+
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/cmake/${TARGET_NAME}-config.cmake.in"
+    "${CMAKE_INSTALL_PREFIX}/lib/cmake/${TARGET_NAME}-config.cmake"
+    INSTALL_DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake"
+    NO_CHECK_REQUIRED_COMPONENTS_MACRO
+    PATH_VARS CMAKE_INSTALL_INCLUDEDIR CMAKE_INSTALL_LIBDIR TARGET_NAME
+)
+
+write_basic_package_version_file(${CMAKE_INSTALL_PREFIX}/lib/cmake/${TARGET_NAME}-config-version.cmake
+    VERSION ${PROJECT_VERSION}
+    COMPATIBILITY AnyNewerVersion
+)
+
+file(GLOB CYBER_OUTER_SRCS "${CMAKE_SOURCE_DIR}/cyber/*.cc")
+cyber_add_library(
+    TARGET cyber-cmake-binary
+    SOURCES ${CMAKE_SOURCE_DIR}/cyber/binary.cc
+)
+cyber_add_library(
+    TARGET cyber-cmake-state
+    SOURCES ${CMAKE_SOURCE_DIR}/cyber/state.cc
+    PUBLIC_LIBS cyber-cmake-common
+)
+cyber_add_library(
+    TARGET cyber-cmake-init
+    SOURCES ${CMAKE_SOURCE_DIR}/cyber/init.cc
+    PUBLIC_LIBS cyber-cmake-binary cyber-cmake-state cyber-cmake-proto cyber-cmake-common
+        cyber-cmake-sysmo cyber-cmake-task cyber-cmake-time cyber-cmake-timer cyber-cmake-transport
+        cyber-cmake-service-discovery ${DEPENCENCY_LIBS}
+)
+cyber_add_library(
+    TARGET cyber-cmake-core
+    SOURCES ${CMAKE_SOURCE_DIR}/cyber/cyber.cc
+    PUBLIC_LIBS cyber-cmake-proto cyber-cmake-common cyber-cmake-init cyber-cmake-component
+        cyber-cmake-node cyber-cmake-task cyber-cmake-time cyber-cmake-timer ${DEPENCENCY_LIBS}
+)
+add_subdirectory(cyber/mainboard)

@@ -11,5 +11,6 @@ cyber_add_library(
     SOURCES ${CYBER_LOGGER_SRCS}
     COMPONENT_NAME cyber_cmake_logger
     PRIVATE_LIBS cyber-base
-    PUBLIC_LIBS cyber-cmake-proto cyber-cmake-common cyber-cmake-scheduler
+    PUBLIC_LIBS ${DEPENCENCY_LIBS} cyber-cmake-proto cyber-cmake-common cyber-cmake-scheduler
+     glog gflags
 )

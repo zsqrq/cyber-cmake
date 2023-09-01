@@ -9,6 +9,6 @@ cyber_add_library(
     TARGET ${PROJECT_NAME}
     SOURCES ${CYBER_COMPONENT_SRCS}
     COMPONENT_NAME cyber_cmake_component
-    PRIVATE_LIBS cyber-base
-    PUBLIC_LIBS cyber-cmake-proto cyber-cmake-common cyber-cmake-scheduler
+    PRIVATE_LIBS cyber-base cyber-cmake-proto cyber-cmake-common cyber-cmake-scheduler
+      cyber-cmake-transport cyber-cmake-blocker
 )
