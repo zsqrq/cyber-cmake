@@ -25,6 +25,28 @@ function help() {
       3) bash scripts/build.sh aarch64 release \n
     "
 }
+function install_fast_rtps() {
+    echo -e "\033[36m ############### Build Fast-DDS. ################ \033[0m \n"
+    local INSTALL_PATH="$script_path/../third_party/"
+    if [[ "${ARCH}" == "x86_64" ]]; then
+        PKG_NAME="fast-rtps-1.5.0-1.prebuilt.x86_64.tar.gz"
+    else # aarch64
+        PKG_NAME="fast-rtps-1.5.0-1.prebuilt.aarch64.tar.gz"
+    fi
+    DOWNLOAD_LINK="https://apollo-system.cdn.bcebos.com/archive/6.0/${PKG_NAME}"
+    if [ -e $INSTALL_PATH/fast-rtps-1.5.0-1 ]
+    then
+      echo ""
+    else
+      wget -t 10 $DOWNLOAD_LINK -P $INSTALL_PATH
+      pushd $INSTALL_PATH
+      tar -zxf ${PKG_NAME}
+ #    cp -r fast-rtps-1.5.0-1/* ../install
+      rm -rf fast-rtps-1.5.0-1.prebuilt.x86_64.tar.gz
+      popd
+    fi
+
+}
 
 function build() {
     echo -e "\033[36m ....... Start Compileing Project $PROJECT_NAME .......\033[0m \n"
@@ -56,11 +78,13 @@ function main() {
     fi
     if [ $BUILD_PLATFORM == 'x86' ]; then
         echo -e "\033[36m Building System On X86_64 Platform \033[0m \n"
+        ARCH='x86_64'
         toolchain_cmake=$script_path/../platform/toolchain_x86_64.cmake
         if [ -e $toolchain_cmake ]; then
             echo -e "\033[36m Building tool chain configuration cmake file found \033[0m \n"
         fi
     fi
+    install_fast_rtps
     build
 }
 main "$@"

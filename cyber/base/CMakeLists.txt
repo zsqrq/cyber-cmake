@@ -7,7 +7,6 @@ cyber_add_header_lib(
     TARGET cyber-base
     SOURCES ${CYBER_BASE_HDRS})
 
-install(FILES ${CYBER_BASE_HDRS} DESTINATION include/base)
 install(TARGETS cyber-base
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib

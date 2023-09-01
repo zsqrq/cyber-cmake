@@ -12,4 +12,4 @@ cyber_add_library(
     PRIVATE_LIBS cyber-base
     PUBLIC_LIBS cyber-cmake-proto
 )
-install(FILES ${CYBER_COMMON_HDRS} DESTINATION include/common)
+

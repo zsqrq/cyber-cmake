@@ -28,13 +28,13 @@ macro(cyber_add_library)
     target_include_directories(${CYBER_TARGET}
         PRIVATE ${CMAKE_INSTALL_PREFIX}/include
         )
-    if (${CYBER_PUBLIC_LIBS})
+    if (CYBER_PUBLIC_LIBS)
         target_link_libraries(${CYBER_TARGET}
             PUBLIC ${CYBER_PUBLIC_LIBS}
             )
     endif ()
 
-    if (${CYBER_PRIVATE_LIBS})
+    if (CYBER_PRIVATE_LIBS)
         target_link_libraries(${CYBER_TARGET}
             PRIVATE ${CYBER_PRIVATE_LIBS}
             )
