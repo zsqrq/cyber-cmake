@@ -42,11 +42,10 @@ macro(cyber_add_library)
     target_precompile_headers(${CYBER_TARGET}
         PUBLIC ${CYBER_PRECORE_HEADERS}
         )
-    install(${CYBER_TARGET}
+    install(TARGETS ${CYBER_TARGET}
         LIBRARY
         DESTINATION lib
-        COMPONENT ${CYBER_COMPONENT_NAME}
-        )
+        COMPONENT ${CYBER_COMPONENT_NAME})
 endmacro()
 
 macro(any_add_library)

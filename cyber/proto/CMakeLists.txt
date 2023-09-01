@@ -1,9 +1,15 @@
 cmake_minimum_required(VERSION 3.16)
 project(cyber-cmake-proto)
 
-file(GLOB PROTO_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*.cc")
+file(GLOB PROTO_SRCS "${CMAKE_BINARY_DIR}/cyber/proto/*.cc"
+    "${CMAKE_BINARY_DIR}/cyber/modules/**/*.cc")
 
-#add_library(${PROJECT_NAME} ${PROTO_SRCS})
-#target_link_libraries(${PROJECT_NAME} protobuf)
+cyber_add_library(
+    TARGET ${PROJECT_NAME}
+    SOURCES ${PROTO_SRCS}
+    PRIVATE_LIBS cyber-base
+    PUBLIC_LIBS protobuf
+)
+
 
 

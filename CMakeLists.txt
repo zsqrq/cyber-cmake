@@ -2,41 +2,30 @@ cmake_minimum_required(VERSION 3.16)
 
 project(Cyber-Cmake)
 
-find_package(CyberConfig REQUIRED)
-find_package(Threads REQUIRED)
-find_package(PkgConfig REQUIRED)
-find_package(fastrtps REQUIRED)
-find_package(fastcdr REQUIRED)
-find_package(Poco REQUIRED COMPONENTS Foundation)
-find_package(glog REQUIRED)
-find_package(Protobuf REQUIRED)
-
-pkg_check_modules(Python REQUIRED python3)
-pkg_check_modules(Uuid REQUIRED uuid)
-pkg_check_modules(Gflags REQUIRED gflags)
-pkg_check_modules(NlohmannJson REQUIRED nlohmann_json)
-
 set(CMAKE_CXX_STANDARD 17)
-set(CYBER_DOCS_TARGET_SRC ${CMAKE_SOURCE_DIR}/cyber CACHE INTERNAL "For Document Generation")
-set(CYBER_PROTOC_IMPORT_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/cyber/proto)
-set(CYBER_PROTOC_OUTPUT_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/cyber/proto)
-
 
 if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Debug)
+    set(DEF Debug)
     set(DEFAULT_COMPILE -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -fPIE -pie -fstack-protector-all -Wtrampolines)
 else()
     set(DEFAULT_COMPILE -std=c++17 -O3 -Wall -c -fmessage-length=0 -fPIC -fPIE -pie -fstack-protector-all -Wtrampolines)
 endif()
+#add_link_options(-Wl,--disable-new-dtags)
+#set(CMAKE_INSTALL_RPATH "$ORIGIN/..lib")
 
 if(DEFINED ENABLE_DOCMENTATION)
     generate_doc_file()
 endif()
+list(APPEND CMAKE_FIND_ROOT_PATH ${CMAKE_SOURCE_DIR}/cmake)
+find_package(CyberConfig REQUIRED)
 
-file(GLOB PROTO_FILES "${CMAKE_CURRENT_SOURCE_DIR}/cyber/proto/*.proto")
-PROTOBUF_GENERATE_CPP(${CYBER_PROTOC_IMPORT_DIRS} ${PROTO_FILES})
-
-include_directories(${CYBER_PROTOC_OUTPUT_DIRS} ${CMAKE_CURRENT_SOURCE_DIR}/cyber)
+include_directories(
+    ${CMAKE_INSTALL_PREFIX}
+    ${CMAKE_BINARY_DIR}
+    ${CMAKE_CURRENT_BINARY_DIR}
+    ${CYBER_PROTOC_OUTPUT_DIRS}
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/cyber)
 
 add_executable(CyberCmake main.cpp)
 install(TARGETS CyberCmake
@@ -44,3 +33,4 @@ install(TARGETS CyberCmake
     DESTINATION bin)
 add_subdirectory(cyber/base)
 add_subdirectory(cyber/proto)
+add_subdirectory(cyber/common)

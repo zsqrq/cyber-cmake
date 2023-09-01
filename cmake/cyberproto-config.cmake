@@ -1,3 +1,15 @@
+find_package(Threads REQUIRED)
+find_package(PkgConfig REQUIRED)
+find_package(fastrtps REQUIRED)
+find_package(fastcdr REQUIRED)
+find_package(Poco REQUIRED COMPONENTS Foundation)
+find_package(glog REQUIRED)
+find_package(Protobuf REQUIRED)
+pkg_check_modules(Python REQUIRED python3)
+pkg_check_modules(Uuid REQUIRED uuid)
+pkg_check_modules(Gflags REQUIRED gflags)
+pkg_check_modules(NlohmannJson REQUIRED nlohmann_json)
+
 function(PROTOBUF_GENERATE_CPP SRC_DIR IMPORT_DIRS PROTO_FILES)
   set(PROTO_FILES ${PROTO_FILES})
   FOREACH(FIL ${PROTO_FILES})
@@ -8,17 +20,17 @@ function(PROTOBUF_GENERATE_CPP SRC_DIR IMPORT_DIRS PROTO_FILES)
     EXECUTE_PROCESS(
         COMMAND
         protoc
-        -I${IMPORT_DIRS}
-        --cpp_out=${SRC_DIR}
+        -I "${IMPORT_DIRS}" "${CMAKE_CURRENT_SOURCE_DIR}"
+        --cpp_out="${SRC_DIR}"
         ${FIL}
         RESULT_VARIABLE PROTOC_RESULT
         OUTPUT_VARIABLE PROTOC_OUTPUT
         ERROR_VARIABLE PROTOC_ERROR
     )
     if(NOT ${PROTOC_RESULT} EQUAL "0")
-      message(WARNING "protoc exit code: ${PROTOC_RESULT}")
-      message(WARNING "protoc output: ${PROTOC_OUTPUT}")
-      message(WARNING "protoc error: ${PROTOC_ERROR}")
+      message(STATUS "protoc exit code: ${PROTOC_RESULT}")
+      message(STATUS "protoc output: ${PROTOC_OUTPUT}")
+      message(STATUS "protoc error: ${PROTOC_ERROR}")
     endif()
   ENDFOREACH()
 endfunction()
