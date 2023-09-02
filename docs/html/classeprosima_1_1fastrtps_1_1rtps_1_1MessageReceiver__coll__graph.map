@@ -1,5 +1,0 @@
-<map id="eprosima::fastrtps::rtps::MessageReceiver" name="eprosima::fastrtps::rtps::MessageReceiver">
-<area shape="rect" id="node1" title=" " alt="" coords="5,277,735,677"/>
-<area shape="rect" id="node2" href="$structeprosima_1_1fastrtps_1_1rtps_1_1CDRMessage__t.html" title="Structure CDRMessage_t, contains a serialized message." alt="" coords="9,5,363,215"/>
-<area shape="rect" id="node3" href="$classeprosima_1_1fastrtps_1_1ParameterList__t.html" title=" " alt="" coords="388,42,723,178"/>
-</map>

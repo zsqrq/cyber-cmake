@@ -1,9 +1,0 @@
-<map id="RTPS" name="RTPS">
-<area shape="rect" id="node1" href="$group__READER__MODULE.html" title=" " alt="" coords="432,5,552,31"/>
-<area shape="rect" id="node2" href="$group__FASTRTPS__GENERAL__API.html" title="eProsima Fast RTPS API grouped in modules." alt="" coords="5,104,252,129"/>
-<area shape="rect" id="node7" title="RTPS API This is an implementation of the RTPS communication standard defined by the OMG." alt="" coords="300,104,355,129"/>
-<area shape="rect" id="node3" href="$group__WRITER__MODULE.html" title=" " alt="" coords="435,55,549,80"/>
-<area shape="rect" id="node4" href="$group__NETWORK__MODULE.html" title=" " alt="" coords="427,104,557,129"/>
-<area shape="rect" id="node5" href="$group__COMMON__MODULE.html" title=" " alt="" coords="423,153,561,179"/>
-<area shape="rect" id="node6" href="$group__RTPS__ATTRIBUTES__MODULE.html" title="Attributes class used to define the public entities that the user should use to control this library." alt="" coords="403,203,581,228"/>
-</map>

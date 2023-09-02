@@ -1,9 +1,0 @@
-<map id="eprosima::fastrtps::rtps::Endpoint" name="eprosima::fastrtps::rtps::Endpoint">
-<area shape="rect" id="node1" title=" " alt="" coords="1314,5,1855,185"/>
-<area shape="rect" id="node2" href="$classeprosima_1_1fastrtps_1_1rtps_1_1RTPSReader.html" title=" " alt="" coords="702,263,1585,633"/>
-<area shape="rect" id="node5" href="$classeprosima_1_1fastrtps_1_1rtps_1_1RTPSWriter.html" title=" " alt="" coords="1609,233,2445,663"/>
-<area shape="rect" id="node3" href="$classeprosima_1_1fastrtps_1_1rtps_1_1StatefulReader.html" title=" " alt="" coords="5,740,788,979"/>
-<area shape="rect" id="node4" href="$classeprosima_1_1fastrtps_1_1rtps_1_1StatelessReader.html" title=" " alt="" coords="812,711,1595,1008"/>
-<area shape="rect" id="node6" href="$classeprosima_1_1fastrtps_1_1rtps_1_1StatefulWriter.html" title=" " alt="" coords="1736,747,2201,971"/>
-<area shape="rect" id="node7" href="$classeprosima_1_1fastrtps_1_1rtps_1_1StatelessWriter.html" title=" " alt="" coords="2226,725,3141,993"/>
-</map>

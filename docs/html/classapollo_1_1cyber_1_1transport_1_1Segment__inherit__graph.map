@@ -1,5 +1,0 @@
-<map id="apollo::cyber::transport::Segment" name="apollo::cyber::transport::Segment">
-<area shape="rect" id="node1" title=" " alt="" coords="13,5,563,332"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1transport_1_1PosixSegment.html" title=" " alt="" coords="5,380,280,487"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1transport_1_1XsiSegment.html" title=" " alt="" coords="304,380,563,487"/>
-</map>

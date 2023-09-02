@@ -1,8 +1,0 @@
-<map id="apollo::cyber::base::WaitStrategy" name="apollo::cyber::base::WaitStrategy">
-<area shape="rect" id="node1" title=" " alt="" coords="713,5,951,127"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy.html" title=" " alt="" coords="5,189,280,311"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1base_1_1BusySpinWaitStrategy.html" title=" " alt="" coords="304,204,603,296"/>
-<area shape="rect" id="node4" href="$classapollo_1_1cyber_1_1base_1_1SleepWaitStrategy.html" title=" " alt="" coords="627,189,1037,311"/>
-<area shape="rect" id="node5" href="$classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy.html" title=" " alt="" coords="1061,175,1390,325"/>
-<area shape="rect" id="node6" href="$classapollo_1_1cyber_1_1base_1_1YieldWaitStrategy.html" title=" " alt="" coords="1415,204,1684,296"/>
-</map>

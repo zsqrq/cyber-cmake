@@ -1,4 +1,0 @@
-<map id="apollo::cyber::Writer::GetReaders" name="apollo::cyber::Writer::GetReaders">
-<area shape="rect" id="node1" title="Get all Readers that subscriber our writing channel." alt="" coords="5,5,244,32"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1WriterBase.html#a17ccbb59d4f3435bb8a52a3d5ec47f96" title="Is Writer initialized?" alt="" coords="292,5,519,32"/>
-</map>

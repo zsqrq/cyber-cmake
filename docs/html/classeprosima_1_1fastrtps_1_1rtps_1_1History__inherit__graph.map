@@ -1,7 +1,0 @@
-<map id="eprosima::fastrtps::rtps::History" name="eprosima::fastrtps::rtps::History">
-<area shape="rect" id="node1" title=" " alt="" coords="424,5,1195,435"/>
-<area shape="rect" id="node2" href="$classeprosima_1_1fastrtps_1_1rtps_1_1ReaderHistory.html" title=" " alt="" coords="85,483,765,721"/>
-<area shape="rect" id="node4" href="$classeprosima_1_1fastrtps_1_1rtps_1_1WriterHistory.html" title=" " alt="" coords="833,490,1556,714"/>
-<area shape="rect" id="node3" href="$classeprosima_1_1fastrtps_1_1SubscriberHistory.html" title=" " alt="" coords="5,769,803,1023"/>
-<area shape="rect" id="node5" href="$classeprosima_1_1fastrtps_1_1PublisherHistory.html" title=" " alt="" coords="827,806,1608,986"/>
-</map>

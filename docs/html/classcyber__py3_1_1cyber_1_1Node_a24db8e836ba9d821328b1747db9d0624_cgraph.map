@@ -1,7 +1,0 @@
-<map id="cyber_py3.cyber.Node.create_rawdata_reader" name="cyber_py3.cyber.Node.create_rawdata_reader">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,327,57"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1PyNode.html#a51040dbfb514b3758576677cdab32a01" title=" " alt="" coords="375,5,637,32"/>
-<area shape="rect" id="node3" href="$classcyber__py3_1_1cyber_1_1Node.html#a97f6893f0e1e76dd0ecfdd08e8e84ba8" title="create a channel reader for receive message from another channel." alt="" coords="375,56,637,83"/>
-<area shape="rect" id="node4" href="$classapollo_1_1cyber_1_1TimerBucket.html#ae2fca89d7e4b1182b462874f54aceb6b" title=" " alt="" coords="700,31,945,57"/>
-<area shape="rect" id="node5" href="$classcyber__py3_1_1cyber_1_1Node.html#a86bd759fd47a08f6931fe9ac832ecf44" title=" " alt="" coords="685,81,960,108"/>
-</map>

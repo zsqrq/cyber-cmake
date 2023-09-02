@@ -1,4 +1,0 @@
-<map id="apollo::cyber::Writer::HasReader" name="apollo::cyber::Writer::HasReader">
-<area shape="rect" id="node1" title="Is there any Reader that subscribes our Channel? You can publish message when this return true." alt="" coords="5,5,239,32"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1WriterBase.html#a17ccbb59d4f3435bb8a52a3d5ec47f96" title="Is Writer initialized?" alt="" coords="287,5,513,32"/>
-</map>

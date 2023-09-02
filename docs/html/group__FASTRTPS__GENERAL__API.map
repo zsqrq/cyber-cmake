@@ -1,7 +1,0 @@
-<map id="eProsima Fast RTPS API Reference" name="eProsima Fast RTPS API Reference">
-<area shape="rect" id="node1" href="$group__UTILITIES__MODULE.html" title=" " alt="" coords="350,5,473,31"/>
-<area shape="rect" id="node2" title="eProsima Fast RTPS API grouped in modules." alt="" coords="5,80,252,105"/>
-<area shape="rect" id="node3" href="$group__RTPS__MODULE.html" title="RTPS API This is an implementation of the RTPS communication standard defined by the OMG." alt="" coords="384,55,439,80"/>
-<area shape="rect" id="node4" href="$group__FASTRTPS__MODULE.html" title="Publisher Subscriber Public API This Module contains the Publisher Subscriber Layer created to facili..." alt="" coords="300,104,523,129"/>
-<area shape="rect" id="node5" href="$group__MANAGEMENT__MODULE.html" title=" " alt="" coords="331,153,491,179"/>
-</map>

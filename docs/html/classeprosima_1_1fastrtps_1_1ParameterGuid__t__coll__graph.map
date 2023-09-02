@@ -1,7 +1,0 @@
-<map id="eprosima::fastrtps::ParameterGuid_t" name="eprosima::fastrtps::ParameterGuid_t">
-<area shape="rect" id="node1" title=" " alt="" coords="5,520,552,656"/>
-<area shape="rect" id="node2" href="$classeprosima_1_1fastrtps_1_1Parameter__t.html" title=" " alt="" coords="41,299,473,435"/>
-<area shape="rect" id="node3" href="$structeprosima_1_1fastrtps_1_1rtps_1_1GUID__t.html" title="Structure GUID_t, entity identifier, unique in DDS&#45;RTPS Domain." alt="" coords="497,277,916,457"/>
-<area shape="rect" id="node4" href="$structeprosima_1_1fastrtps_1_1rtps_1_1EntityId__t.html" title="Structure EntityId_t, entity id part of GUID_t." alt="" coords="356,5,676,215"/>
-<area shape="rect" id="node5" href="$structeprosima_1_1fastrtps_1_1rtps_1_1GuidPrefix__t.html" title="Structure GuidPrefix_t, Guid Prefix of GUID_t." alt="" coords="701,5,1094,215"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="eprosima::fastrtps::rtps::Header_t" name="eprosima::fastrtps::rtps::Header_t">
-<area shape="rect" id="node1" title="Structure Header_t, RTPS Message Header Structure." alt="" coords="217,277,458,369"/>
-<area shape="rect" id="node2" href="$structeprosima_1_1fastrtps_1_1rtps_1_1ProtocolVersion__t.html" title="Structure ProtocolVersion_t, contains the protocol version." alt="" coords="5,57,301,163"/>
-<area shape="rect" id="node3" href="$structeprosima_1_1fastrtps_1_1rtps_1_1GuidPrefix__t.html" title="Structure GuidPrefix_t, Guid Prefix of GUID_t." alt="" coords="326,5,719,215"/>
-</map>

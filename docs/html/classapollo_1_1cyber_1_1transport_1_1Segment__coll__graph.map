@@ -1,6 +1,0 @@
-<map id="apollo::cyber::transport::Segment" name="apollo::cyber::transport::Segment">
-<area shape="rect" id="node1" title=" " alt="" coords="253,277,803,560"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1transport_1_1Block.html" title=" " alt="" coords="5,20,355,200"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1transport_1_1State.html" title=" " alt="" coords="379,5,677,215"/>
-<area shape="rect" id="node4" href="$classapollo_1_1cyber_1_1transport_1_1ShmConf.html" title=" " alt="" coords="701,20,1027,200"/>
-</map>

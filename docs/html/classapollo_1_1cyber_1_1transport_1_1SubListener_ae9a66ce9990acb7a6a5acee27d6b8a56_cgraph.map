@@ -1,7 +1,0 @@
-<map id="apollo::cyber::transport::SubListener::onNewDataMessage" name="apollo::cyber::transport::SubListener::onNewDataMessage">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,404,108"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#abbce4191928c7d434e323926ae3c465d" title="This function copies the value in member data." alt="" coords="458,5,793,32"/>
-<area shape="rect" id="node3" href="$classeprosima_1_1fastrtps_1_1Subscriber.html#a19f58be1579f88fc9cb9d07241096a29" title=" " alt="" coords="470,56,781,83"/>
-<area shape="rect" id="node4" href="$classeprosima_1_1fastrtps_1_1TopicAttributes.html#aa5279e8492a4c79cefd6ea978250630b" title=" " alt="" coords="452,107,799,133"/>
-<area shape="rect" id="node5" href="$classeprosima_1_1fastrtps_1_1Subscriber.html#a4c9dd624edb2c3db14bc718bd1323abf" title=" " alt="" coords="468,157,783,184"/>
-</map>

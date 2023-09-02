@@ -1,7 +1,0 @@
-<map id="cyber_py3.cyber_time.Time.__init__" name="cyber_py3.cyber_time.Time.__init__">
-<area shape="rect" id="node1" title="Constructor, creates a Time." alt="" coords="5,55,260,82"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1proto_1_1SingleMessage.html#afb4d28a1bfe0e9cdae3d224875d93502" title=" " alt="" coords="636,55,928,82"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1PyTime.html#a7f0baea53eb3557de6466718322dff1d" title=" " alt="" coords="338,30,558,57"/>
-<area shape="rect" id="node4" href="$classcyber__py3_1_1cyber__time_1_1Duration.html#a24c2ecd8aed035227247707d83c80ab7" title=" " alt="" coords="308,81,588,107"/>
-<area shape="rect" id="node5" href="$classcyber__py3_1_1cyber__time_1_1Time.html#a594a5f5afc5acc04ea8965c6cb562a3b" title=" " alt="" coords="320,131,576,158"/>
-</map>

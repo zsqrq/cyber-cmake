@@ -1,5 +1,0 @@
-<map id="apollo::cyber::Service&lt; Request, Response &gt;" name="apollo::cyber::Service&lt; Request, Response &gt;">
-<area shape="rect" id="node1" title="Service handles Request from the Client, and send a Response to it." alt="" coords="5,316,784,467"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1ServiceBase.html" title="Base class for Service." alt="" coords="227,145,563,267"/>
-<area shape="rect" id="node3" title=" " alt="" coords="365,5,424,83"/>
-</map>

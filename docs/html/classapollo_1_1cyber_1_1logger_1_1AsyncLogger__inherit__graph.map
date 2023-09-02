@@ -1,4 +1,0 @@
-<map id="apollo::cyber::logger::AsyncLogger" name="apollo::cyber::logger::AsyncLogger">
-<area shape="rect" id="node1" title="Wrapper for a glog Logger which asynchronously writes log messages. This class starts a new thread re..." alt="" coords="9,175,670,355"/>
-<area shape="rect" id="node2" href="$classgoogle_1_1base_1_1Logger.html" title=" " alt="" coords="5,5,673,127"/>
-</map>

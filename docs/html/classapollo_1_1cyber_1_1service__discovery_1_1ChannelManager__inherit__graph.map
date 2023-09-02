@@ -1,4 +1,0 @@
-<map id="apollo::cyber::service_discovery::ChannelManager" name="apollo::cyber::service_discovery::ChannelManager">
-<area shape="rect" id="node1" title="Topology Manager of Service related." alt="" coords="37,571,607,795"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1service__discovery_1_1Manager.html" title="Base class for management of Topology elements. Manager can Join/Leave the Topology,..." alt="" coords="5,5,639,523"/>
-</map>

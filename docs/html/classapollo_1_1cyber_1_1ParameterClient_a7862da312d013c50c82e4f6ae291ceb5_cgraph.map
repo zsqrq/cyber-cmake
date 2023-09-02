@@ -1,4 +1,0 @@
-<map id="apollo::cyber::ParameterClient::SetParameter" name="apollo::cyber::ParameterClient::SetParameter">
-<area shape="rect" id="node1" title="Set the Parameter object." alt="" coords="5,5,323,32"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1Parameter.html#ad645d2620b54874a5b16445995ef6ac2" title="Parse a cyber::parameter::Parameter object to cyber::proto::Param object." alt="" coords="371,5,651,32"/>
-</map>

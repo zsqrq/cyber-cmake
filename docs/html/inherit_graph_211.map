@@ -1,8 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classapollo_1_1cyber_1_1base_1_1WaitStrategy.html" title=" " alt="" coords="5,107,244,133"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy.html" title=" " alt="" coords="318,5,593,32"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1base_1_1BusySpinWaitStrategy.html" title=" " alt="" coords="306,56,605,83"/>
-<area shape="rect" id="node4" href="$classapollo_1_1cyber_1_1base_1_1SleepWaitStrategy.html" title=" " alt="" coords="318,107,593,133"/>
-<area shape="rect" id="node5" href="$classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy.html" title=" " alt="" coords="292,157,619,184"/>
-<area shape="rect" id="node6" href="$classapollo_1_1cyber_1_1base_1_1YieldWaitStrategy.html" title=" " alt="" coords="321,208,590,235"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="apollo::cyber::record::RecordReader" name="apollo::cyber::record::RecordReader">
-<area shape="rect" id="node1" title="The record reader." alt="" coords="5,736,897,931"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1record_1_1RecordBase.html" title="Base class for record reader and writer." alt="" coords="151,521,752,687"/>
-<area shape="rect" id="node3" title=" " alt="" coords="317,257,375,334"/>
-<area shape="rect" id="node4" href="$classapollo_1_1cyber_1_1proto_1_1Header.html" title=" " alt="" coords="399,132,986,459"/>
-<area shape="rect" id="node5" title=" " alt="" coords="558,5,827,83"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="apollo::cyber::transport::ShmDispatcher" name="apollo::cyber::transport::ShmDispatcher">
-<area shape="rect" id="node1" title=" " alt="" coords="5,492,917,613"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1transport_1_1Dispatcher.html" title=" " alt="" coords="5,263,917,443"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1base_1_1AtomicRWLock.html" title=" " alt="" coords="100,42,399,163"/>
-<area shape="rect" id="node4" href="$classapollo_1_1cyber_1_1base_1_1AtomicHashMap.html" title=" " alt="" coords="423,5,927,200"/>
-</map>

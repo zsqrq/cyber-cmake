@@ -1,6 +1,0 @@
-<map id="eprosima::fastrtps::rtps::TransportInterface" name="eprosima::fastrtps::rtps::TransportInterface">
-<area shape="rect" id="node1" title=" " alt="" coords="553,5,1063,229"/>
-<area shape="rect" id="node2" href="$classeprosima_1_1fastrtps_1_1rtps_1_1UDPv4Transport.html" title=" " alt="" coords="43,277,858,765"/>
-<area shape="rect" id="node4" href="$classeprosima_1_1fastrtps_1_1rtps_1_1UDPv6Transport.html" title=" " alt="" coords="882,409,1451,633"/>
-<area shape="rect" id="node3" href="$classeprosima_1_1fastrtps_1_1rtps_1_1test__UDPv4Transport.html" title=" " alt="" coords="5,813,896,920"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="HelloWorldPubSubType::getKey" name="HelloWorldPubSubType::getKey">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,231,83"/>
-<area shape="rect" id="node2" href="$classHelloWorld.html#a94783c5c4974f95312586e9165df5a51" title="This function returns the maximum serialized size of the Key of an object depending on the buffer ali..." alt="" coords="302,5,590,32"/>
-<area shape="rect" id="node3" href="$classeprosima_1_1fastcdr_1_1Cdr.html#a5eb8dce4596e00ee0c4566fc4cc092d6" title="This function returns the length of the serialized data inside the stream." alt="" coords="279,56,613,83"/>
-<area shape="rect" id="node4" href="$classHelloWorld.html#a2446201c62a641bc9104ab7c7715d930" title="This function serializes the key members of an object using CDR serialization." alt="" coords="355,107,537,133"/>
-</map>

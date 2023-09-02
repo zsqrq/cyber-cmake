@@ -1,7 +1,0 @@
-<map id="Management Module" name="Management Module">
-<area shape="rect" id="node1" href="$group__LIVELINESS__MODULE.html" title=" " alt="" coords="529,5,667,31"/>
-<area shape="rect" id="node2" href="$group__FASTRTPS__GENERAL__API.html" title="eProsima Fast RTPS API grouped in modules." alt="" coords="5,55,252,80"/>
-<area shape="rect" id="node5" title=" " alt="" coords="300,55,460,80"/>
-<area shape="rect" id="node3" href="$group__DISCOVERY__MODULE.html" title=" " alt="" coords="529,55,667,80"/>
-<area shape="rect" id="node4" href="$group__BUILTIN__MODULE.html" title=" " alt="" coords="508,104,688,129"/>
-</map>

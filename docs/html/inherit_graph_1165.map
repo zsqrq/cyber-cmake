@@ -1,8 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,120,108"/>
-<area shape="rect" id="node2" href="$classeprosima_1_1fastcdr_1_1exception_1_1Exception.html" title="This abstract class is used to create exceptions." alt="" coords="168,56,448,83"/>
-<area shape="rect" id="node5" href="$classeprosima_1_1fastrtps_1_1rtps_1_1Exception.html" title="This abstract class is used to create exceptions." alt="" coords="185,107,431,133"/>
-<area shape="rect" id="node3" href="$classeprosima_1_1fastcdr_1_1exception_1_1BadParamException.html" title="This class is thrown as an exception when a invalid parameter was being serialized." alt="" coords="525,5,872,32"/>
-<area shape="rect" id="node4" href="$classeprosima_1_1fastcdr_1_1exception_1_1NotEnoughMemoryException.html" title="This class is thrown as an exception when the buffer&#39;s internal memory reachs its size limit." alt="" coords="496,56,901,83"/>
-<area shape="rect" id="node6" href="$classeprosima_1_1fastrtps_1_1rtps_1_1security_1_1SecurityException.html" title="This class is thrown as an exception when there is an error in security module." alt="" coords="519,107,878,133"/>
-</map>

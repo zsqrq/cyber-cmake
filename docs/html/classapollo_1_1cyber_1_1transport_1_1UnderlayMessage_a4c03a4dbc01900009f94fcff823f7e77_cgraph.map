@@ -1,5 +1,0 @@
-<map id="apollo::cyber::transport::UnderlayMessage::getCdrSerializedSize" name="apollo::cyber::transport::UnderlayMessage::getCdrSerializedSize">
-<area shape="rect" id="node1" title="This function returns the serialized size of a data depending on the buffer alignment." alt="" coords="5,31,445,57"/>
-<area shape="rect" id="node2" href="$classeprosima_1_1fastcdr_1_1Cdr.html#a13af0f46117d10e3bba943870ecb3efd" title=" " alt="" coords="541,5,781,32"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#a2b419c5280201c9854aa60da41bc1901" title="This function returns a constant reference to member data." alt="" coords="493,56,828,83"/>
-</map>

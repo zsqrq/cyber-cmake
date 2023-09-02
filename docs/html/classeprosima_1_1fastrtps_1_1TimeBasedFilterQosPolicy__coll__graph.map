@@ -1,6 +1,0 @@
-<map id="eprosima::fastrtps::TimeBasedFilterQosPolicy" name="eprosima::fastrtps::TimeBasedFilterQosPolicy">
-<area shape="rect" id="node1" title=" " alt="" coords="381,204,779,311"/>
-<area shape="rect" id="node2" href="$classeprosima_1_1fastrtps_1_1Parameter__t.html" title=" " alt="" coords="5,5,437,141"/>
-<area shape="rect" id="node3" href="$classeprosima_1_1fastrtps_1_1QosPolicy.html" title=" " alt="" coords="462,5,698,141"/>
-<area shape="rect" id="node4" href="$structeprosima_1_1fastrtps_1_1rtps_1_1Time__t.html" title=" " alt="" coords="722,20,974,127"/>
-</map>

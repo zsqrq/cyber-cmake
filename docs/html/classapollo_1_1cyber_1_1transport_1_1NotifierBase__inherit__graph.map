@@ -1,5 +1,0 @@
-<map id="apollo::cyber::transport::NotifierBase" name="apollo::cyber::transport::NotifierBase">
-<area shape="rect" id="node1" title=" " alt="" coords="217,5,629,127"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1transport_1_1ConditionNotifier.html" title=" " alt="" coords="5,175,411,311"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1transport_1_1MulticastNotifier.html" title=" " alt="" coords="435,175,840,311"/>
-</map>

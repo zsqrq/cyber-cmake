@@ -1,5 +1,0 @@
-<map id="apollo::cyber::service_discovery::ChannelManager::GetUpstreamOfNode" name="apollo::cyber::service_discovery::ChannelManager::GetUpstreamOfNode">
-<area shape="rect" id="node1" title="Get the Upstream Of Node object. If Node A has writer that publishes channel&#45;1, and Node B has reader..." alt="" coords="5,31,497,57"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager.html#a24c51f2ba8f6cf15fb7c3f44baf496d1" title="Get the Readers Of Node object." alt="" coords="552,5,1033,32"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager.html#a35bfdd2076a4789c23e9add4c868b5e7" title="Get the Writers Of Channel object." alt="" coords="545,56,1040,83"/>
-</map>
