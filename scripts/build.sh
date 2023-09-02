@@ -112,7 +112,7 @@ function install_gfamily() {
 function build() {
     echo -e "\033[36m ....... Start Compileing Project $PROJECT_NAME .......\033[0m \n"
     build_path=$PROJECT_FOLDER/build/$BUILD_PLATFORM
-    install_path=$build_path/production
+    install_path=$build_path/../../production
     bash ${script_path}/proto_gen.sh "${build_path}"
     echo -e "\033[36m ....... Install Path is  $install_path .......\033[0m \n"
     if [ ! -e $build_path ]; then
@@ -148,5 +148,6 @@ function main() {
 #    install_fast_rtps
 #    install_gfamily
     build
+    sudo rm -rf $PROJECT_FOLDER/build
 }
 main "$@"

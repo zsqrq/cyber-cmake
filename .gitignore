@@ -2,6 +2,7 @@
 *.d
 build*
 cmake-build-debug
+production
 .vscode
 .idea
 # Compiled Object files

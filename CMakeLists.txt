@@ -13,11 +13,11 @@ list(APPEND CMAKE_FIND_ROOT_PATH ${CMAKE_SOURCE_DIR}/cmake)
 find_package(CyberConfig REQUIRED)
 get_sub_dirs(${CMAKE_SOURCE_DIR}/third_party/lib/cmake GOOGLE_FAMILY_SUB_DIR)
 foreach(sub_dir ${GOOGLE_FAMILY_SUB_DIR})
-    list(APPEND CMAKE_MODULE_PATH "GOOGLE_FAMILY_LIB_DIR/${sub_dir}")
+    list(APPEND CMAKE_FIND_ROOT_PATH "GOOGLE_FAMILY_LIB_DIR/${sub_dir}")
 endforeach()
 get_sub_dirs(${CMAKE_SOURCE_DIR}/third_party/fast-rtps-1.5.0-1/lib RTPS_DIR)
 foreach(sub_dir ${RTPS_DIR})
-    list(APPEND CMAKE_MODULE_PATH "${FAST_RTPS_LIB_DIR}/${sub_dir}/cmake")
+    list(APPEND CMAKE_FIND_ROOT_PATH "${FAST_RTPS_LIB_DIR}/${sub_dir}/cmake")
 endforeach()
 
 find_package(Threads REQUIRED)
@@ -28,6 +28,7 @@ find_package(Protobuf REQUIRED)
 find_package(fastrtps REQUIRED)
 find_package(fastcdr REQUIRED)
 
+pkg_check_modules(Python REQUIRED python3)
 pkg_check_modules(Uuid REQUIRED uuid)
 pkg_check_modules(Gflags REQUIRED gflags)
 pkg_check_modules(NlohmannJson REQUIRED nlohmann_json)
@@ -89,7 +90,7 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/cyber
     ${CMAKE_SOURCE_DIR}/third_party/include
     ${FAST_RTPS_INC_DIR})
-    
+
 link_directories(
     ${DEPENCENCY_LIB_DIRS}
     ${FAST_RTPS_LIB_DIR}
@@ -103,11 +104,9 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cyber
 
 get_sub_dirs(${CYBER_SUB_DIR} SUB_DIRS)
 foreach(sub_dir ${SUB_DIRS})
-    if (NOT "${sub_dir}" STREQUAL "mainboard")
-        file(GLOB CMAKELIST_FILE "${CMAKE_CURRENT_SOURCE_DIR}/cyber/${sub_dir}/CMakeLists.txt")
-        if (CMAKELIST_FILE)
-            add_subdirectory(cyber/${sub_dir})
-        endif ()
+    file(GLOB CMAKELIST_FILE "${CMAKE_CURRENT_SOURCE_DIR}/cyber/${sub_dir}/CMakeLists.txt")
+    if (CMAKELIST_FILE)
+        add_subdirectory(cyber/${sub_dir})
     endif ()
 endforeach()
 
@@ -145,11 +144,11 @@ cyber_add_library(
     TARGET cyber-cmake-init
     SOURCES ${CMAKE_SOURCE_DIR}/cyber/init.cc
     PUBLIC_LIBS cyber-cmake-state cyber-cmake-service-discovery cyber-cmake-sysmo cyber-cmake-task
+        cyber-cmake-parameter
 )
 cyber_add_library(
     TARGET cyber-cmake-core
     SOURCES ${CMAKE_SOURCE_DIR}/cyber/cyber.cc
     PUBLIC_LIBS cyber-cmake-init cyber-cmake-component cyber-cmake-node cyber-cmake-transport
-        cyber-cmake-classloader cyber-cmake-message cyber-cmake-logger
+        cyber-cmake-classloader cyber-cmake-message cyber-cmake-logger cyber-cmake-record
 )
-add_subdirectory(cyber/mainboard)
