@@ -1,0 +1,404 @@
+.TH "eprosima::fastrtps::rtps::EDP" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::EDP
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <EDP\&.h>\fP
+.PP
+Inherited by \fBeprosima::fastrtps::rtps::EDPSimple\fP, and \fBeprosima::fastrtps::rtps::EDPStatic\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEDP\fP (\fBPDPSimple\fP *p, RTPSParticipantImpl *part)"
+.br
+.ti -1c
+.RI "virtual bool \fBinitEDP\fP (\fBBuiltinAttributes\fP &attributes)=0"
+.br
+.ti -1c
+.RI "virtual void \fBassignRemoteEndpoints\fP (\fBParticipantProxyData\fP *pdata)=0"
+.br
+.ti -1c
+.RI "virtual void \fBremoveRemoteEndpoints\fP (\fBParticipantProxyData\fP *pdata)"
+.br
+.ti -1c
+.RI "virtual bool \fBremoveLocalReader\fP (\fBRTPSReader\fP *R)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBremoveLocalWriter\fP (\fBRTPSWriter\fP *W)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessLocalReaderProxyData\fP (\fBReaderProxyData\fP *rdata)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBprocessLocalWriterProxyData\fP (\fBWriterProxyData\fP *wdata)=0"
+.br
+.ti -1c
+.RI "bool \fBnewLocalReaderProxyData\fP (\fBRTPSReader\fP *R, \fBTopicAttributes\fP &att, \fBReaderQos\fP &qos)"
+.br
+.ti -1c
+.RI "bool \fBnewLocalWriterProxyData\fP (\fBRTPSWriter\fP *W, \fBTopicAttributes\fP &att, \fBWriterQos\fP &qos)"
+.br
+.ti -1c
+.RI "bool \fBupdatedLocalReader\fP (\fBRTPSReader\fP *R, \fBReaderQos\fP &qos)"
+.br
+.ti -1c
+.RI "bool \fBupdatedLocalWriter\fP (\fBRTPSWriter\fP *W, \fBWriterQos\fP &qos)"
+.br
+.ti -1c
+.RI "bool \fBvalidMatching\fP (\fBWriterProxyData\fP *wdata, \fBReaderProxyData\fP *rdata)"
+.br
+.ti -1c
+.RI "bool \fBvalidMatching\fP (\fBReaderProxyData\fP *rdata, \fBWriterProxyData\fP *wdata)"
+.br
+.ti -1c
+.RI "bool \fBremoveWriterProxy\fP (const \fBGUID_t\fP &writer)"
+.br
+.ti -1c
+.RI "bool \fBremoveReaderProxy\fP (const \fBGUID_t\fP &reader)"
+.br
+.ti -1c
+.RI "bool \fBunpairWriterProxy\fP (\fBParticipantProxyData\fP *pdata, \fBWriterProxyData\fP *wdata)"
+.br
+.ti -1c
+.RI "bool \fBunpairReaderProxy\fP (\fBParticipantProxyData\fP *pdata, \fBReaderProxyData\fP *rdata)"
+.br
+.ti -1c
+.RI "bool \fBpairingReaderProxy\fP (\fBParticipantProxyData\fP *pdata, \fBReaderProxyData\fP *rdata)"
+.br
+.ti -1c
+.RI "bool \fBpairingWriterProxy\fP (\fBParticipantProxyData\fP *pdata, \fBWriterProxyData\fP *wdata)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPDPSimple\fP * \fBmp_PDP\fP"
+.br
+.RI "Pointer to the \fBPDPSimple\fP object that contains the endpoint discovery protocol\&. "
+.ti -1c
+.RI "RTPSParticipantImpl * \fBmp_RTPSParticipant\fP"
+.br
+.RI "Pointer to the \fBRTPSParticipant\fP\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBEDP\fP, base class for \fBEndpoint\fP Discovery Protocols\&. It contains generic methods used by the two \fBEDP\fP implemented (\fBEDPSimple\fP and \fBEDPStatic\fP), as well as abstract methods definitions required by the specific implementations\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::EDP::EDP (\fBPDPSimple\fP * p, RTPSParticipantImpl * part)"
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Pointer to the \fBPDPSimple\fP 
+.br
+\fIpart\fP Pointer to the RTPSParticipantImpl 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void eprosima::fastrtps::rtps::EDP::assignRemoteEndpoints (\fBParticipantProxyData\fP * pdata)\fC [pure virtual]\fP"
+Abstract method that assigns remote endpoints when a new RTPSParticipantProxyData is discovered\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdata\fP Discovered \fBParticipantProxyData\fP 
+.RE
+.PP
+
+.PP
+Implemented in \fBeprosima::fastrtps::rtps::EDPStatic\fP, and \fBeprosima::fastrtps::rtps::EDPSimple\fP\&.
+.SS "virtual bool eprosima::fastrtps::rtps::EDP::initEDP (\fBBuiltinAttributes\fP & attributes)\fC [pure virtual]\fP"
+Abstract method to initialize the \fBEDP\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIattributes\fP DiscoveryAttributes structure\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBeprosima::fastrtps::rtps::EDPStatic\fP, and \fBeprosima::fastrtps::rtps::EDPSimple\fP\&.
+.SS "bool eprosima::fastrtps::rtps::EDP::newLocalReaderProxyData (\fBRTPSReader\fP * R, \fBTopicAttributes\fP & att, \fBReaderQos\fP & qos)"
+Create a new ReaderPD for a local Reader\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIR\fP Pointer to the \fBRTPSReader\fP\&. 
+.br
+\fIatt\fP Attributes of the associated topic 
+.br
+\fIqos\fP QoS policies dictated by the subscriber 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::EDP::newLocalWriterProxyData (\fBRTPSWriter\fP * W, \fBTopicAttributes\fP & att, \fBWriterQos\fP & qos)"
+Create a new ReaderPD for a local Writer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIW\fP Pointer to the \fBRTPSWriter\fP\&. 
+.br
+\fIatt\fP Attributes of the associated topic 
+.br
+\fIqos\fP QoS policies dictated by the publisher 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::EDP::pairingReaderProxy (\fBParticipantProxyData\fP * pdata, \fBReaderProxyData\fP * rdata)"
+Try to pair/unpair \fBReaderProxyData\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdata\fP Pointer to the participant proxy data\&. 
+.br
+\fIrdata\fP Pointer to the \fBReaderProxyData\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::EDP::pairingWriterProxy (\fBParticipantProxyData\fP * pdata, \fBWriterProxyData\fP * wdata)"
+Try to pair/unpair \fBWriterProxyData\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdata\fP Pointer to the participant proxy data\&. 
+.br
+\fIwdata\fP Pointer to the \fBWriterProxyData\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True\&. 
+.RE
+.PP
+
+.SS "virtual bool eprosima::fastrtps::rtps::EDP::processLocalReaderProxyData (\fBReaderProxyData\fP * rdata)\fC [pure virtual]\fP"
+After a new local \fBReaderProxyData\fP has been created some processing is needed (depends on the implementation)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrdata\fP Pointer to the \fBReaderProxyData\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBeprosima::fastrtps::rtps::EDPStatic\fP, and \fBeprosima::fastrtps::rtps::EDPSimple\fP\&.
+.SS "virtual bool eprosima::fastrtps::rtps::EDP::processLocalWriterProxyData (\fBWriterProxyData\fP * wdata)\fC [pure virtual]\fP"
+After a new local \fBWriterProxyData\fP has been created some processing is needed (depends on the implementation)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwdata\fP Pointer to the Writer ProxyData object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBeprosima::fastrtps::rtps::EDPStatic\fP, and \fBeprosima::fastrtps::rtps::EDPSimple\fP\&.
+.SS "virtual bool eprosima::fastrtps::rtps::EDP::removeLocalReader (\fBRTPSReader\fP * R)\fC [pure virtual]\fP"
+Abstract method that removes a local Reader from the discovery method 
+.PP
+\fBParameters\fP
+.RS 4
+\fIR\fP Pointer to the Reader to remove\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly removed\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBeprosima::fastrtps::rtps::EDPStatic\fP, and \fBeprosima::fastrtps::rtps::EDPSimple\fP\&.
+.SS "virtual bool eprosima::fastrtps::rtps::EDP::removeLocalWriter (\fBRTPSWriter\fP * W)\fC [pure virtual]\fP"
+Abstract method that removes a local Writer from the discovery method 
+.PP
+\fBParameters\fP
+.RS 4
+\fIW\fP Pointer to the Writer to remove\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly removed\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBeprosima::fastrtps::rtps::EDPStatic\fP, and \fBeprosima::fastrtps::rtps::EDPSimple\fP\&.
+.SS "bool eprosima::fastrtps::rtps::EDP::removeReaderProxy (const \fBGUID_t\fP & reader)"
+Remove a ReaderProxyDataObject based on its \fBGUID_t\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreader\fP Reference to the reader GUID\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "virtual void eprosima::fastrtps::rtps::EDP::removeRemoteEndpoints (\fBParticipantProxyData\fP * pdata)\fC [inline]\fP, \fC [virtual]\fP"
+Remove remote endpoints from the endpoint discovery protocol 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdata\fP Pointer to the \fBParticipantProxyData\fP to remove 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBeprosima::fastrtps::rtps::EDPSimple\fP\&.
+.SS "bool eprosima::fastrtps::rtps::EDP::removeWriterProxy (const \fBGUID_t\fP & writer)"
+Remove a WriterProxyDataObject based on its \fBGUID_t\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwriter\fP Reference to the writer GUID\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::EDP::unpairReaderProxy (\fBParticipantProxyData\fP * pdata, \fBReaderProxyData\fP * rdata)"
+Unpair a \fBReaderProxyData\fP object from all local writers\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrdata\fP Pointer to the \fBReaderProxyData\fP object\&. 
+.br
+\fIpdata\fP Pointer to the participant proxy data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::EDP::unpairWriterProxy (\fBParticipantProxyData\fP * pdata, \fBWriterProxyData\fP * wdata)"
+Unpair a \fBWriterProxyData\fP object from all local readers\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdata\fP Pointer to the participant proxy data\&. 
+.br
+\fIwdata\fP Pointer to the \fBWriterProxyData\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::EDP::updatedLocalReader (\fBRTPSReader\fP * R, \fBReaderQos\fP & qos)"
+A previously created Reader has been updated 
+.PP
+\fBParameters\fP
+.RS 4
+\fIR\fP Pointer to the reader; 
+.br
+\fIqos\fP QoS policies dictated by the subscriber 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly updated 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::EDP::updatedLocalWriter (\fBRTPSWriter\fP * W, \fBWriterQos\fP & qos)"
+A previously created Writer has been updated 
+.PP
+\fBParameters\fP
+.RS 4
+\fIW\fP Pointer to the Writer 
+.br
+\fIqos\fP QoS policies dictated by the publisher 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly updated 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::EDP::validMatching (\fBReaderProxyData\fP * rdata, \fBWriterProxyData\fP * wdata)"
+Check the validity of a matching between a \fBRTPSReader\fP and a \fBWriterProxyData\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrdata\fP Pointer to the \fBReaderProxyData\fP object\&. 
+.br
+\fIwdata\fP Pointer to the \fBWriterProxyData\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the two can be matched\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::EDP::validMatching (\fBWriterProxyData\fP * wdata, \fBReaderProxyData\fP * rdata)"
+Check the validity of a matching between a \fBRTPSWriter\fP and a \fBReaderProxyData\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwdata\fP Pointer to the \fBWriterProxyData\fP object\&. 
+.br
+\fIrdata\fP Pointer to the \fBReaderProxyData\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the two can be matched\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

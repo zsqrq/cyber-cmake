@@ -1,0 +1,301 @@
+.TH "apollo::simulation::LogicalCondition" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::simulation::LogicalCondition
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkSubConditionFieldNumber\fP = 2, \fBkOperatorTypeFieldNumber\fP = 1 }"
+.br
+.ti -1c
+.RI "typedef LogicalCondition_OperatorType \fBOperatorType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBLogicalCondition\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBLogicalCondition\fP (const \fBLogicalCondition\fP &from)"
+.br
+.ti -1c
+.RI "\fBLogicalCondition\fP (\fBLogicalCondition\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBLogicalCondition\fP & \fBoperator=\fP (const \fBLogicalCondition\fP &from)"
+.br
+.ti -1c
+.RI "\fBLogicalCondition\fP & \fBoperator=\fP (\fBLogicalCondition\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBLogicalCondition\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBLogicalCondition\fP *other)"
+.br
+.ti -1c
+.RI "\fBLogicalCondition\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBLogicalCondition\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBLogicalCondition\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBsub_condition_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_sub_condition\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::simulation::Condition\fP * \fBmutable_sub_condition\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::simulation::Condition\fP > * \fBmutable_sub_condition\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::simulation::Condition\fP & \fBsub_condition\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::simulation::Condition\fP * \fBadd_sub_condition\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::simulation::Condition\fP > & \fBsub_condition\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhas_operator_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_operator_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::simulation::LogicalCondition_OperatorType \fBoperator_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_operator_type\fP (::apollo::simulation::LogicalCondition_OperatorType value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBLogicalCondition\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBLogicalCondition\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBOperatorType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBOperatorType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBOperatorType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBOperatorType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, OperatorType *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr OperatorType \fBUNKNOWN\fP"
+.br
+.ti -1c
+.RI "static constexpr OperatorType \fBNOT\fP"
+.br
+.ti -1c
+.RI "static constexpr OperatorType \fBAND\fP"
+.br
+.ti -1c
+.RI "static constexpr OperatorType \fBOR\fP"
+.br
+.ti -1c
+.RI "static constexpr OperatorType \fBIMPLY\fP"
+.br
+.ti -1c
+.RI "static constexpr OperatorType \fBXOR\fP"
+.br
+.ti -1c
+.RI "static constexpr OperatorType \fBOperatorType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr OperatorType \fBOperatorType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBOperatorType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLogicalCondition\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fsimulation_5fmsgs_2fgrading_5fcondition_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBLogicalCondition\fP &a, \fBLogicalCondition\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::simulation::LogicalCondition::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    LogicalCondition::MergeImpl
+}
+.fi
+.SS "constexpr LogicalCondition_OperatorType apollo::simulation::LogicalCondition::AND\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    LogicalCondition_OperatorType_AND
+.fi
+.SS "constexpr LogicalCondition_OperatorType apollo::simulation::LogicalCondition::IMPLY\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    LogicalCondition_OperatorType_IMPLY
+.fi
+.SS "constexpr int apollo::simulation::LogicalCondition::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    2
+.fi
+.SS "constexpr LogicalCondition_OperatorType apollo::simulation::LogicalCondition::NOT\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    LogicalCondition_OperatorType_NOT
+.fi
+.SS "constexpr int apollo::simulation::LogicalCondition::OperatorType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    LogicalCondition_OperatorType_OperatorType_ARRAYSIZE
+.fi
+.SS "constexpr LogicalCondition_OperatorType apollo::simulation::LogicalCondition::OperatorType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    LogicalCondition_OperatorType_OperatorType_MAX
+.fi
+.SS "constexpr LogicalCondition_OperatorType apollo::simulation::LogicalCondition::OperatorType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    LogicalCondition_OperatorType_OperatorType_MIN
+.fi
+.SS "constexpr LogicalCondition_OperatorType apollo::simulation::LogicalCondition::OR\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    LogicalCondition_OperatorType_OR
+.fi
+.SS "constexpr LogicalCondition_OperatorType apollo::simulation::LogicalCondition::UNKNOWN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    LogicalCondition_OperatorType_UNKNOWN
+.fi
+.SS "constexpr LogicalCondition_OperatorType apollo::simulation::LogicalCondition::XOR\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    LogicalCondition_OperatorType_XOR
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

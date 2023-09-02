@@ -1,0 +1,208 @@
+.TH "eprosima::fastrtps::rtps::EDPSimple" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::EDPSimple
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <EDPSimple\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::EDP\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEDPSimple\fP (\fBPDPSimple\fP *p, RTPSParticipantImpl *part)"
+.br
+.ti -1c
+.RI "bool \fBinitEDP\fP (\fBBuiltinAttributes\fP &attributes)"
+.br
+.ti -1c
+.RI "void \fBassignRemoteEndpoints\fP (\fBParticipantProxyData\fP *pdata)"
+.br
+.ti -1c
+.RI "void \fBremoveRemoteEndpoints\fP (\fBParticipantProxyData\fP *pdata)"
+.br
+.ti -1c
+.RI "bool \fBcreateSEDPEndpoints\fP ()"
+.br
+.ti -1c
+.RI "bool \fBprocessLocalReaderProxyData\fP (\fBReaderProxyData\fP *rdata)"
+.br
+.ti -1c
+.RI "bool \fBprocessLocalWriterProxyData\fP (\fBWriterProxyData\fP *wdata)"
+.br
+.ti -1c
+.RI "bool \fBremoveLocalReader\fP (\fBRTPSReader\fP *R)"
+.br
+.ti -1c
+.RI "bool \fBremoveLocalWriter\fP (\fBRTPSWriter\fP *W)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBBuiltinAttributes\fP \fBm_discovery\fP"
+.br
+.RI "Discovery attributes\&. "
+.ti -1c
+.RI "t_p_StatefulWriter \fBmp_PubWriter\fP"
+.br
+.RI "Pointer to the Publications Writer (only created if indicated in the DiscoveryAtributes)\&. "
+.ti -1c
+.RI "t_p_StatefulWriter \fBmp_SubWriter\fP"
+.br
+.RI "Pointer to the Subscriptions Writer (only created if indicated in the DiscoveryAtributes)\&. "
+.ti -1c
+.RI "t_p_StatefulReader \fBmp_PubReader\fP"
+.br
+.RI "Pointer to the Publications Reader (only created if indicated in the DiscoveryAtributes)\&. "
+.ti -1c
+.RI "t_p_StatefulReader \fBmp_SubReader\fP"
+.br
+.RI "Pointer to the Subscriptions Reader (only created if indicated in the DiscoveryAtributes)\&. "
+.ti -1c
+.RI "EDPSimplePUBListener * \fBmp_pubListen\fP"
+.br
+.RI "Pointer to the \fBReaderListener\fP associated with PubReader\&. "
+.ti -1c
+.RI "EDPSimpleSUBListener * \fBmp_subListen\fP"
+.br
+.RI "Pointer to the \fBReaderListener\fP associated with SubReader\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBEDPSimple\fP, implements the Simple \fBEndpoint\fP Discovery Protocol defined in the RTPS specification\&. Inherits from \fBEDP\fP class\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::EDPSimple::EDPSimple (\fBPDPSimple\fP * p, RTPSParticipantImpl * part)"
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Pointer to the \fBPDPSimple\fP 
+.br
+\fIpart\fP Pointer to the RTPSParticipantImpl 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void eprosima::fastrtps::rtps::EDPSimple::assignRemoteEndpoints (\fBParticipantProxyData\fP * pdata)\fC [virtual]\fP"
+This method assigns the remote builtin endpoints that the remote \fBRTPSParticipant\fP indicates is using to our local builtin endpoints\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdata\fP Pointer to the RTPSParticipantProxyData object\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::EDP\fP\&.
+.SS "bool eprosima::fastrtps::rtps::EDPSimple::createSEDPEndpoints ()"
+Create local SEDP Endpoints based on the DiscoveryAttributes\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::EDPSimple::initEDP (\fBBuiltinAttributes\fP & attributes)\fC [virtual]\fP"
+Initialization method\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIattributes\fP Reference to the DiscoveryAttributes\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::EDP\fP\&.
+.SS "bool eprosima::fastrtps::rtps::EDPSimple::processLocalReaderProxyData (\fBReaderProxyData\fP * rdata)\fC [virtual]\fP"
+This method generates the corresponding change in the subscription writer and send it to all known remote endpoints\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrdata\fP Pointer to the \fBReaderProxyData\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if correct\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::EDP\fP\&.
+.SS "bool eprosima::fastrtps::rtps::EDPSimple::processLocalWriterProxyData (\fBWriterProxyData\fP * wdata)\fC [virtual]\fP"
+This method generates the corresponding change in the publciations writer and send it to all known remote endpoints\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwdata\fP Pointer to the \fBWriterProxyData\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if correct\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::EDP\fP\&.
+.SS "bool eprosima::fastrtps::rtps::EDPSimple::removeLocalReader (\fBRTPSReader\fP * R)\fC [virtual]\fP"
+This methods generates the change disposing of the local Reader and calls the unpairing and removal methods of the base class\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIR\fP Pointer to the \fBRTPSReader\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::EDP\fP\&.
+.SS "bool eprosima::fastrtps::rtps::EDPSimple::removeLocalWriter (\fBRTPSWriter\fP * W)\fC [virtual]\fP"
+This methods generates the change disposing of the local Writer and calls the unpairing and removal methods of the base class\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIW\fP Pointer to the \fBRTPSWriter\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::EDP\fP\&.
+.SS "void eprosima::fastrtps::rtps::EDPSimple::removeRemoteEndpoints (\fBParticipantProxyData\fP * pdata)\fC [virtual]\fP"
+Remove remote endpoints from the endpoint discovery protocol 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdata\fP Pointer to the \fBParticipantProxyData\fP to remove 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBeprosima::fastrtps::rtps::EDP\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

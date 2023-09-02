@@ -1,7 +1,7 @@
 <map id="apollo::cyber::TimerComponent" name="apollo::cyber::TimerComponent">
-<area shape="rect" id="node1" title="TimerComponent is a timer component. Your component can inherit from Component, and implement Init() ..." alt="" coords="5,432,444,583"/>
-<area shape="rect" id="node4" href="$classTimerComponentSample.html" title=" " alt="" coords="17,638,201,730"/>
-<area shape="rect" id="node5" href="$classapollo_1_1cyber_1_1Component__Timer.html" title=" " alt="" coords="225,631,459,737"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1ComponentBase.html" title=" " alt="" coords="11,131,438,384"/>
-<area shape="rect" id="node3" title=" " alt="" coords="49,5,400,83"/>
+<area shape="rect" id="node1" title="TimerComponent is a timer component. Your component can inherit from Component, and implement Init() ..." alt="" coords="5,432,445,583"/>
+<area shape="rect" id="node4" href="$classTimerComponentSample.html" title=" " alt="" coords="18,638,201,730"/>
+<area shape="rect" id="node5" href="$classapollo_1_1cyber_1_1Component__Timer.html" title=" " alt="" coords="225,631,458,737"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1ComponentBase.html" title=" " alt="" coords="11,131,439,384"/>
+<area shape="rect" id="node3" title=" " alt="" coords="50,5,401,83"/>
 </map>

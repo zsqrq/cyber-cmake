@@ -1,0 +1,90 @@
+.TH "eprosima::fastrtps::rtps::WLivelinessPeriodicAssertion" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::WLivelinessPeriodicAssertion
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WLivelinessPeriodicAssertion\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::TimedEvent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWLivelinessPeriodicAssertion\fP (\fBWLP\fP *pwlp, \fBLivelinessQosPolicyKind\fP kind)"
+.br
+.ti -1c
+.RI "void \fBevent\fP (\fBEventCode\fP code, const char *msg=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBAutomaticLivelinessAssertion\fP ()"
+.br
+.RI "Assert the liveliness of AUTOMATIC kind Writers\&. "
+.ti -1c
+.RI "bool \fBManualByRTPSParticipantLivelinessAssertion\fP ()"
+.br
+.RI "Assert the liveliness of MANUAL_BY_PARTICIPANT kind writers\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBLivelinessQosPolicyKind\fP \fBm_livelinessKind\fP"
+.br
+.RI "Liveliness Kind that is being asserted by this object\&. "
+.ti -1c
+.RI "\fBWLP\fP * \fBmp_WLP\fP"
+.br
+.RI "Pointer to the \fBWLP\fP object\&. "
+.ti -1c
+.RI "\fBCDRMessage_t\fP \fBm_msg\fP"
+.br
+.RI "Message to store the data\&. "
+.ti -1c
+.RI "\fBInstanceHandle_t\fP \fBm_iHandle\fP"
+.br
+.RI "Instance Handle\&. "
+.ti -1c
+.RI "\fBGuidPrefix_t\fP \fBm_guidP\fP"
+.br
+.RI "\fBGuidPrefix_t\fP\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Class \fBWLivelinessPeriodicAssertion\fP, used to assert the liveliness of the writers in a \fBRTPSParticipant\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::WLivelinessPeriodicAssertion::WLivelinessPeriodicAssertion (\fBWLP\fP * pwlp, \fBLivelinessQosPolicyKind\fP kind)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpwlp\fP Pointer to the \fBWLP\fP object\&. 
+.br
+\fIkind\fP Kind of the periodic assertion timed event 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void eprosima::fastrtps::rtps::WLivelinessPeriodicAssertion::event (\fBEventCode\fP code, const char * msg = \fCnullptr\fP)\fC [virtual]\fP"
+Method invoked when the event occurs 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcode\fP Code representing the status of the event 
+.br
+\fImsg\fP Message associated to the event 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::TimedEvent\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

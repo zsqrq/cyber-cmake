@@ -1,0 +1,105 @@
+.TH "eprosima::fastrtps::rtps::EndpointAttributes" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::EndpointAttributes
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <EndpointAttributes\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int16_t \fBgetUserDefinedID\fP () const"
+.br
+.ti -1c
+.RI "int16_t \fBgetEntityID\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetUserDefinedID\fP (uint8_t id)"
+.br
+.ti -1c
+.RI "void \fBsetEntityID\fP (uint8_t id)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBEndpointKind_t\fP \fBendpointKind\fP"
+.br
+.RI "\fBEndpoint\fP kind, default value WRITER\&. "
+.ti -1c
+.RI "\fBTopicKind_t\fP \fBtopicKind\fP"
+.br
+.RI "Topic kind, default value NO_KEY\&. "
+.ti -1c
+.RI "\fBReliabilityKind_t\fP \fBreliabilityKind\fP"
+.br
+.RI "Reliability kind, default value BEST_EFFORT\&. "
+.ti -1c
+.RI "\fBDurabilityKind_t\fP \fBdurabilityKind\fP"
+.br
+.RI "Durability kind, default value VOLATILE\&. "
+.ti -1c
+.RI "\fBLocatorList_t\fP \fBunicastLocatorList\fP"
+.br
+.RI "Unicast locator list\&. "
+.ti -1c
+.RI "\fBLocatorList_t\fP \fBmulticastLocatorList\fP"
+.br
+.RI "Multicast locator list\&. "
+.ti -1c
+.RI "\fBLocatorList_t\fP \fBoutLocatorList\fP"
+.br
+.ti -1c
+.RI "\fBPropertyPolicy\fP \fBproperties\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure \fBEndpointAttributes\fP, describing the attributes associated with an RTPS \fBEndpoint\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "int16_t eprosima::fastrtps::rtps::EndpointAttributes::getEntityID () const\fC [inline]\fP"
+Get the entity defined ID 
+.PP
+\fBReturns\fP
+.RS 4
+Entity ID 
+.RE
+.PP
+
+.SS "int16_t eprosima::fastrtps::rtps::EndpointAttributes::getUserDefinedID () const\fC [inline]\fP"
+Get the user defined ID 
+.PP
+\fBReturns\fP
+.RS 4
+User defined ID 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::EndpointAttributes::setEntityID (uint8_t id)\fC [inline]\fP"
+Set the entity ID 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Entity ID to be set 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::EndpointAttributes::setUserDefinedID (uint8_t id)\fC [inline]\fP"
+Set the user defined ID 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP User defined ID to be set 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

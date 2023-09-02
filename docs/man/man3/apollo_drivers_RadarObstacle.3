@@ -1,0 +1,589 @@
+.TH "apollo::drivers::RadarObstacle" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::drivers::RadarObstacle
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkRelativePositionFieldNumber\fP = 2, \fBkRelativeVelocityFieldNumber\fP = 3, \fBkAbsolutePositionFieldNumber\fP = 10, \fBkAbsoluteVelocityFieldNumber\fP = 11, \fBkIdFieldNumber\fP = 1, \fBkMovingStatusFieldNumber\fP = 5, \fBkRcsFieldNumber\fP = 4, \fBkWidthFieldNumber\fP = 6, \fBkLengthFieldNumber\fP = 7, \fBkHeightFieldNumber\fP = 8, \fBkThetaFieldNumber\fP = 9, \fBkCountFieldNumber\fP = 12, \fBkMovingFramesCountFieldNumber\fP = 13, \fBkStatusFieldNumber\fP = 14 }"
+.br
+.ti -1c
+.RI "typedef RadarObstacle_Status \fBStatus\fP"
+.br
+.ti -1c
+.RI "typedef RadarObstacle_MovingStatus \fBMovingStatus\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBRadarObstacle\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBRadarObstacle\fP (const \fBRadarObstacle\fP &from)"
+.br
+.ti -1c
+.RI "\fBRadarObstacle\fP (\fBRadarObstacle\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBRadarObstacle\fP & \fBoperator=\fP (const \fBRadarObstacle\fP &from)"
+.br
+.ti -1c
+.RI "\fBRadarObstacle\fP & \fBoperator=\fP (\fBRadarObstacle\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBRadarObstacle\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBRadarObstacle\fP *other)"
+.br
+.ti -1c
+.RI "\fBRadarObstacle\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBRadarObstacle\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBRadarObstacle\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_relative_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_relative_position\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point2D\fP & \fBrelative_position\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point2D\fP * \fBrelease_relative_position\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBmutable_relative_position\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_relative_position\fP (::\fBapollo::common::Point2D\fP *relative_position)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_relative_position\fP (::\fBapollo::common::Point2D\fP *relative_position)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBunsafe_arena_release_relative_position\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_relative_velocity\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_relative_velocity\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point2D\fP & \fBrelative_velocity\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point2D\fP * \fBrelease_relative_velocity\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBmutable_relative_velocity\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_relative_velocity\fP (::\fBapollo::common::Point2D\fP *relative_velocity)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_relative_velocity\fP (::\fBapollo::common::Point2D\fP *relative_velocity)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBunsafe_arena_release_relative_velocity\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_absolute_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_absolute_position\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point2D\fP & \fBabsolute_position\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point2D\fP * \fBrelease_absolute_position\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBmutable_absolute_position\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_absolute_position\fP (::\fBapollo::common::Point2D\fP *absolute_position)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_absolute_position\fP (::\fBapollo::common::Point2D\fP *absolute_position)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBunsafe_arena_release_absolute_position\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_absolute_velocity\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_absolute_velocity\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point2D\fP & \fBabsolute_velocity\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point2D\fP * \fBrelease_absolute_velocity\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBmutable_absolute_velocity\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_absolute_velocity\fP (::\fBapollo::common::Point2D\fP *absolute_velocity)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_absolute_velocity\fP (::\fBapollo::common::Point2D\fP *absolute_velocity)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBunsafe_arena_release_absolute_velocity\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_id\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_id\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_moving_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_moving_status\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::RadarObstacle_MovingStatus \fBmoving_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_moving_status\fP (::apollo::drivers::RadarObstacle_MovingStatus value)"
+.br
+.ti -1c
+.RI "bool \fBhas_rcs\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_rcs\fP ()"
+.br
+.ti -1c
+.RI "double \fBrcs\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_rcs\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_width\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_width\fP ()"
+.br
+.ti -1c
+.RI "double \fBwidth\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_width\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_length\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_length\fP ()"
+.br
+.ti -1c
+.RI "double \fBlength\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_length\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_height\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_height\fP ()"
+.br
+.ti -1c
+.RI "double \fBheight\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_height\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_theta\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_theta\fP ()"
+.br
+.ti -1c
+.RI "double \fBtheta\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_theta\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_count\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_count\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBcount\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_count\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_moving_frames_count\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_moving_frames_count\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBmoving_frames_count\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_moving_frames_count\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_status\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::RadarObstacle_Status \fBstatus\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_status\fP (::apollo::drivers::RadarObstacle_Status value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBRadarObstacle\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBRadarObstacle\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBStatus_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBStatus_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBStatus_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBStatus_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Status *value)"
+.br
+.ti -1c
+.RI "static bool \fBMovingStatus_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBMovingStatus_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBMovingStatus_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBMovingStatus_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, MovingStatus *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr Status \fBNO_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Status \fBNEW_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Status \fBNEW_UPDATED_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Status \fBUPDATED_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Status \fBCOASTED_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Status \fBMERGED_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Status \fBINVALID_COASTED_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Status \fBNEW_COASTED_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Status \fBStatus_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Status \fBStatus_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBStatus_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr MovingStatus \fBSTATIONARY\fP"
+.br
+.ti -1c
+.RI "static constexpr MovingStatus \fBNEARING\fP"
+.br
+.ti -1c
+.RI "static constexpr MovingStatus \fBAWAYING\fP"
+.br
+.ti -1c
+.RI "static constexpr MovingStatus \fBNONE\fP"
+.br
+.ti -1c
+.RI "static constexpr MovingStatus \fBMovingStatus_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr MovingStatus \fBMovingStatus_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBMovingStatus_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRadarObstacle\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fsensor_5fmsgs_2fradar_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBRadarObstacle\fP &a, \fBRadarObstacle\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::drivers::RadarObstacle::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    RadarObstacle::MergeImpl
+}
+.fi
+.SS "constexpr RadarObstacle_MovingStatus apollo::drivers::RadarObstacle::AWAYING\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_MovingStatus_AWAYING
+.fi
+.SS "constexpr RadarObstacle_Status apollo::drivers::RadarObstacle::COASTED_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_Status_COASTED_TARGET
+.fi
+.SS "constexpr RadarObstacle_Status apollo::drivers::RadarObstacle::INVALID_COASTED_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_Status_INVALID_COASTED_TARGET
+.fi
+.SS "constexpr int apollo::drivers::RadarObstacle::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    0
+.fi
+.SS "constexpr RadarObstacle_Status apollo::drivers::RadarObstacle::MERGED_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_Status_MERGED_TARGET
+.fi
+.SS "constexpr int apollo::drivers::RadarObstacle::MovingStatus_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_MovingStatus_MovingStatus_ARRAYSIZE
+.fi
+.SS "constexpr RadarObstacle_MovingStatus apollo::drivers::RadarObstacle::MovingStatus_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_MovingStatus_MovingStatus_MAX
+.fi
+.SS "constexpr RadarObstacle_MovingStatus apollo::drivers::RadarObstacle::MovingStatus_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_MovingStatus_MovingStatus_MIN
+.fi
+.SS "constexpr RadarObstacle_MovingStatus apollo::drivers::RadarObstacle::NEARING\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_MovingStatus_NEARING
+.fi
+.SS "constexpr RadarObstacle_Status apollo::drivers::RadarObstacle::NEW_COASTED_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_Status_NEW_COASTED_TARGET
+.fi
+.SS "constexpr RadarObstacle_Status apollo::drivers::RadarObstacle::NEW_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_Status_NEW_TARGET
+.fi
+.SS "constexpr RadarObstacle_Status apollo::drivers::RadarObstacle::NEW_UPDATED_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_Status_NEW_UPDATED_TARGET
+.fi
+.SS "constexpr RadarObstacle_Status apollo::drivers::RadarObstacle::NO_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_Status_NO_TARGET
+.fi
+.SS "constexpr RadarObstacle_MovingStatus apollo::drivers::RadarObstacle::NONE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_MovingStatus_NONE
+.fi
+.SS "constexpr RadarObstacle_MovingStatus apollo::drivers::RadarObstacle::STATIONARY\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_MovingStatus_STATIONARY
+.fi
+.SS "constexpr int apollo::drivers::RadarObstacle::Status_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_Status_Status_ARRAYSIZE
+.fi
+.SS "constexpr RadarObstacle_Status apollo::drivers::RadarObstacle::Status_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_Status_Status_MAX
+.fi
+.SS "constexpr RadarObstacle_Status apollo::drivers::RadarObstacle::Status_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_Status_Status_MIN
+.fi
+.SS "constexpr RadarObstacle_Status apollo::drivers::RadarObstacle::UPDATED_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarObstacle_Status_UPDATED_TARGET
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

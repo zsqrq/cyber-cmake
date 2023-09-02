@@ -1,0 +1,589 @@
+.TH "apollo::planning_internal::OpenSpaceDebug" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::planning_internal::OpenSpaceDebug
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkWarmStartDualLambdaFieldNumber\fP = 4, \fBkWarmStartDualMiuFieldNumber\fP = 5, \fBkOptimizedDualLambdaFieldNumber\fP = 6, \fBkOptimizedDualMiuFieldNumber\fP = 7, \fBkXyBoundaryFieldNumber\fP = 8, \fBkObstaclesFieldNumber\fP = 9, \fBkTrajectoriesFieldNumber\fP = 1, \fBkWarmStartTrajectoryFieldNumber\fP = 2, \fBkSmoothedTrajectoryFieldNumber\fP = 3, \fBkRoiShiftPointFieldNumber\fP = 10, \fBkEndPointFieldNumber\fP = 11, \fBkPartitionedTrajectoriesFieldNumber\fP = 12, \fBkChosenTrajectoryFieldNumber\fP = 13, \fBkFallbackTrajectoryFieldNumber\fP = 15, \fBkTrajectoryStitchingPointFieldNumber\fP = 16, \fBkFutureCollisionPointFieldNumber\fP = 17, \fBkOriginPointFieldNumber\fP = 19, \fBkTimeLatencyFieldNumber\fP = 18, \fBkOriginHeadingRadFieldNumber\fP = 20, \fBkIsFallbackTrajectoryFieldNumber\fP = 14 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBOpenSpaceDebug\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBOpenSpaceDebug\fP (const \fBOpenSpaceDebug\fP &from)"
+.br
+.ti -1c
+.RI "\fBOpenSpaceDebug\fP (\fBOpenSpaceDebug\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBOpenSpaceDebug\fP & \fBoperator=\fP (const \fBOpenSpaceDebug\fP &from)"
+.br
+.ti -1c
+.RI "\fBOpenSpaceDebug\fP & \fBoperator=\fP (\fBOpenSpaceDebug\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBOpenSpaceDebug\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBOpenSpaceDebug\fP *other)"
+.br
+.ti -1c
+.RI "\fBOpenSpaceDebug\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBOpenSpaceDebug\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBOpenSpaceDebug\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBwarm_start_dual_lambda_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_warm_start_dual_lambda\fP ()"
+.br
+.ti -1c
+.RI "double \fBwarm_start_dual_lambda\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_warm_start_dual_lambda\fP (int index, double value)"
+.br
+.ti -1c
+.RI "void \fBadd_warm_start_dual_lambda\fP (double value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > & \fBwarm_start_dual_lambda\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< double > * \fBmutable_warm_start_dual_lambda\fP ()"
+.br
+.ti -1c
+.RI "int \fBwarm_start_dual_miu_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_warm_start_dual_miu\fP ()"
+.br
+.ti -1c
+.RI "double \fBwarm_start_dual_miu\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_warm_start_dual_miu\fP (int index, double value)"
+.br
+.ti -1c
+.RI "void \fBadd_warm_start_dual_miu\fP (double value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > & \fBwarm_start_dual_miu\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< double > * \fBmutable_warm_start_dual_miu\fP ()"
+.br
+.ti -1c
+.RI "int \fBoptimized_dual_lambda_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_optimized_dual_lambda\fP ()"
+.br
+.ti -1c
+.RI "double \fBoptimized_dual_lambda\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_optimized_dual_lambda\fP (int index, double value)"
+.br
+.ti -1c
+.RI "void \fBadd_optimized_dual_lambda\fP (double value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > & \fBoptimized_dual_lambda\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< double > * \fBmutable_optimized_dual_lambda\fP ()"
+.br
+.ti -1c
+.RI "int \fBoptimized_dual_miu_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_optimized_dual_miu\fP ()"
+.br
+.ti -1c
+.RI "double \fBoptimized_dual_miu\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_optimized_dual_miu\fP (int index, double value)"
+.br
+.ti -1c
+.RI "void \fBadd_optimized_dual_miu\fP (double value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > & \fBoptimized_dual_miu\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< double > * \fBmutable_optimized_dual_miu\fP ()"
+.br
+.ti -1c
+.RI "int \fBxy_boundary_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_xy_boundary\fP ()"
+.br
+.ti -1c
+.RI "double \fBxy_boundary\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_xy_boundary\fP (int index, double value)"
+.br
+.ti -1c
+.RI "void \fBadd_xy_boundary\fP (double value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > & \fBxy_boundary\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< double > * \fBmutable_xy_boundary\fP ()"
+.br
+.ti -1c
+.RI "int \fBobstacles_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_obstacles\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::ObstacleDebug\fP * \fBmutable_obstacles\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::planning_internal::ObstacleDebug\fP > * \fBmutable_obstacles\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning_internal::ObstacleDebug\fP & \fBobstacles\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::ObstacleDebug\fP * \fBadd_obstacles\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::planning_internal::ObstacleDebug\fP > & \fBobstacles\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhas_trajectories\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_trajectories\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning_internal::Trajectories\fP & \fBtrajectories\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::planning_internal::Trajectories\fP * \fBrelease_trajectories\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::Trajectories\fP * \fBmutable_trajectories\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_trajectories\fP (::\fBapollo::planning_internal::Trajectories\fP *trajectories)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_trajectories\fP (::\fBapollo::planning_internal::Trajectories\fP *trajectories)"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::Trajectories\fP * \fBunsafe_arena_release_trajectories\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_warm_start_trajectory\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_warm_start_trajectory\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::VehicleMotion\fP & \fBwarm_start_trajectory\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::VehicleMotion\fP * \fBrelease_warm_start_trajectory\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::VehicleMotion\fP * \fBmutable_warm_start_trajectory\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_warm_start_trajectory\fP (::\fBapollo::common::VehicleMotion\fP *warm_start_trajectory)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_warm_start_trajectory\fP (::\fBapollo::common::VehicleMotion\fP *warm_start_trajectory)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::VehicleMotion\fP * \fBunsafe_arena_release_warm_start_trajectory\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_smoothed_trajectory\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_smoothed_trajectory\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::VehicleMotion\fP & \fBsmoothed_trajectory\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::VehicleMotion\fP * \fBrelease_smoothed_trajectory\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::VehicleMotion\fP * \fBmutable_smoothed_trajectory\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_smoothed_trajectory\fP (::\fBapollo::common::VehicleMotion\fP *smoothed_trajectory)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_smoothed_trajectory\fP (::\fBapollo::common::VehicleMotion\fP *smoothed_trajectory)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::VehicleMotion\fP * \fBunsafe_arena_release_smoothed_trajectory\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_roi_shift_point\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_roi_shift_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::TrajectoryPoint\fP & \fBroi_shift_point\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::TrajectoryPoint\fP * \fBrelease_roi_shift_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBmutable_roi_shift_point\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_roi_shift_point\fP (::\fBapollo::common::TrajectoryPoint\fP *roi_shift_point)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_roi_shift_point\fP (::\fBapollo::common::TrajectoryPoint\fP *roi_shift_point)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBunsafe_arena_release_roi_shift_point\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_end_point\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_end_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::TrajectoryPoint\fP & \fBend_point\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::TrajectoryPoint\fP * \fBrelease_end_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBmutable_end_point\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_end_point\fP (::\fBapollo::common::TrajectoryPoint\fP *end_point)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_end_point\fP (::\fBapollo::common::TrajectoryPoint\fP *end_point)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBunsafe_arena_release_end_point\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_partitioned_trajectories\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_partitioned_trajectories\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning_internal::Trajectories\fP & \fBpartitioned_trajectories\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::planning_internal::Trajectories\fP * \fBrelease_partitioned_trajectories\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::Trajectories\fP * \fBmutable_partitioned_trajectories\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_partitioned_trajectories\fP (::\fBapollo::planning_internal::Trajectories\fP *partitioned_trajectories)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_partitioned_trajectories\fP (::\fBapollo::planning_internal::Trajectories\fP *partitioned_trajectories)"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::Trajectories\fP * \fBunsafe_arena_release_partitioned_trajectories\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_chosen_trajectory\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_chosen_trajectory\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning_internal::Trajectories\fP & \fBchosen_trajectory\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::planning_internal::Trajectories\fP * \fBrelease_chosen_trajectory\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::Trajectories\fP * \fBmutable_chosen_trajectory\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_chosen_trajectory\fP (::\fBapollo::planning_internal::Trajectories\fP *chosen_trajectory)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_chosen_trajectory\fP (::\fBapollo::planning_internal::Trajectories\fP *chosen_trajectory)"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::Trajectories\fP * \fBunsafe_arena_release_chosen_trajectory\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_fallback_trajectory\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fallback_trajectory\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning_internal::Trajectories\fP & \fBfallback_trajectory\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::planning_internal::Trajectories\fP * \fBrelease_fallback_trajectory\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::Trajectories\fP * \fBmutable_fallback_trajectory\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_fallback_trajectory\fP (::\fBapollo::planning_internal::Trajectories\fP *fallback_trajectory)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_fallback_trajectory\fP (::\fBapollo::planning_internal::Trajectories\fP *fallback_trajectory)"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::Trajectories\fP * \fBunsafe_arena_release_fallback_trajectory\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_trajectory_stitching_point\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_trajectory_stitching_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::TrajectoryPoint\fP & \fBtrajectory_stitching_point\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::TrajectoryPoint\fP * \fBrelease_trajectory_stitching_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBmutable_trajectory_stitching_point\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_trajectory_stitching_point\fP (::\fBapollo::common::TrajectoryPoint\fP *trajectory_stitching_point)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_trajectory_stitching_point\fP (::\fBapollo::common::TrajectoryPoint\fP *trajectory_stitching_point)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBunsafe_arena_release_trajectory_stitching_point\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_future_collision_point\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_future_collision_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::TrajectoryPoint\fP & \fBfuture_collision_point\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::TrajectoryPoint\fP * \fBrelease_future_collision_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBmutable_future_collision_point\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_future_collision_point\fP (::\fBapollo::common::TrajectoryPoint\fP *future_collision_point)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_future_collision_point\fP (::\fBapollo::common::TrajectoryPoint\fP *future_collision_point)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBunsafe_arena_release_future_collision_point\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_origin_point\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_origin_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::PointENU\fP & \fBorigin_point\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::PointENU\fP * \fBrelease_origin_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::PointENU\fP * \fBmutable_origin_point\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_origin_point\fP (::\fBapollo::common::PointENU\fP *origin_point)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_origin_point\fP (::\fBapollo::common::PointENU\fP *origin_point)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::PointENU\fP * \fBunsafe_arena_release_origin_point\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_time_latency\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_time_latency\fP ()"
+.br
+.ti -1c
+.RI "double \fBtime_latency\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_time_latency\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_origin_heading_rad\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_origin_heading_rad\fP ()"
+.br
+.ti -1c
+.RI "double \fBorigin_heading_rad\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_origin_heading_rad\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_fallback_trajectory\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_fallback_trajectory\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_fallback_trajectory\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_fallback_trajectory\fP (bool value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBOpenSpaceDebug\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBOpenSpaceDebug\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOpenSpaceDebug\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fplanning_5fmsgs_2fplanning_5finternal_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBOpenSpaceDebug\fP &a, \fBOpenSpaceDebug\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::planning_internal::OpenSpaceDebug::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    OpenSpaceDebug::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::planning_internal::OpenSpaceDebug::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    17
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

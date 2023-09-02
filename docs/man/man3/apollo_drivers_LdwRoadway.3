@@ -1,0 +1,307 @@
+.TH "apollo::drivers::LdwRoadway" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::drivers::LdwRoadway
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkLeftLaneFieldNumber\fP = 5, \fBkRightLaneFieldNumber\fP = 6, \fBkAdjLeftLaneFieldNumber\fP = 7, \fBkAdjRightLaneFieldNumber\fP = 8, \fBkWidth0FieldNumber\fP = 1, \fBkWidth1FieldNumber\fP = 2, \fBkWidth2FieldNumber\fP = 3, \fBkIsTrackingFieldNumber\fP = 4 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBLdwRoadway\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBLdwRoadway\fP (const \fBLdwRoadway\fP &from)"
+.br
+.ti -1c
+.RI "\fBLdwRoadway\fP (\fBLdwRoadway\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBLdwRoadway\fP & \fBoperator=\fP (const \fBLdwRoadway\fP &from)"
+.br
+.ti -1c
+.RI "\fBLdwRoadway\fP & \fBoperator=\fP (\fBLdwRoadway\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBLdwRoadway\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBLdwRoadway\fP *other)"
+.br
+.ti -1c
+.RI "\fBLdwRoadway\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBLdwRoadway\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBLdwRoadway\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_left_lane\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_left_lane\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::drivers::LdwLane\fP & \fBleft_lane\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::drivers::LdwLane\fP * \fBrelease_left_lane\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::drivers::LdwLane\fP * \fBmutable_left_lane\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_left_lane\fP (::\fBapollo::drivers::LdwLane\fP *left_lane)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_left_lane\fP (::\fBapollo::drivers::LdwLane\fP *left_lane)"
+.br
+.ti -1c
+.RI "::\fBapollo::drivers::LdwLane\fP * \fBunsafe_arena_release_left_lane\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_right_lane\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_right_lane\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::drivers::LdwLane\fP & \fBright_lane\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::drivers::LdwLane\fP * \fBrelease_right_lane\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::drivers::LdwLane\fP * \fBmutable_right_lane\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_right_lane\fP (::\fBapollo::drivers::LdwLane\fP *right_lane)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_right_lane\fP (::\fBapollo::drivers::LdwLane\fP *right_lane)"
+.br
+.ti -1c
+.RI "::\fBapollo::drivers::LdwLane\fP * \fBunsafe_arena_release_right_lane\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_adj_left_lane\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_adj_left_lane\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::drivers::LdwLane\fP & \fBadj_left_lane\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::drivers::LdwLane\fP * \fBrelease_adj_left_lane\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::drivers::LdwLane\fP * \fBmutable_adj_left_lane\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_adj_left_lane\fP (::\fBapollo::drivers::LdwLane\fP *adj_left_lane)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_adj_left_lane\fP (::\fBapollo::drivers::LdwLane\fP *adj_left_lane)"
+.br
+.ti -1c
+.RI "::\fBapollo::drivers::LdwLane\fP * \fBunsafe_arena_release_adj_left_lane\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_adj_right_lane\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_adj_right_lane\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::drivers::LdwLane\fP & \fBadj_right_lane\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::drivers::LdwLane\fP * \fBrelease_adj_right_lane\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::drivers::LdwLane\fP * \fBmutable_adj_right_lane\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_adj_right_lane\fP (::\fBapollo::drivers::LdwLane\fP *adj_right_lane)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_adj_right_lane\fP (::\fBapollo::drivers::LdwLane\fP *adj_right_lane)"
+.br
+.ti -1c
+.RI "::\fBapollo::drivers::LdwLane\fP * \fBunsafe_arena_release_adj_right_lane\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_width_0\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_width_0\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBwidth_0\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_width_0\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_width_1\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_width_1\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBwidth_1\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_width_1\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_width_2\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_width_2\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBwidth_2\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_width_2\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_tracking\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_tracking\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_tracking\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_tracking\fP (bool value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBLdwRoadway\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBLdwRoadway\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLdwRoadway\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fsensor_5fmsgs_2fsmartereye_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBLdwRoadway\fP &a, \fBLdwRoadway\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::drivers::LdwRoadway::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    LdwRoadway::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::drivers::LdwRoadway::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    2
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

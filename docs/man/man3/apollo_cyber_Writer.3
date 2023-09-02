@@ -1,4 +1,4 @@
-.TH "apollo::cyber::Writer< MessageT >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::Writer< MessageT >" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -24,7 +24,7 @@ Inherited by \fBapollo::cyber::blocker::IntraWriter< MessageT >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBWriter\fP (const proto::RoleAttributes &role_attr)"
+.RI "\fBWriter\fP (const \fBproto::RoleAttributes\fP &role_attr)"
 .br
 .RI "Construct a new \fBWriter\fP object\&. "
 .ti -1c
@@ -48,14 +48,14 @@ Inherited by \fBapollo::cyber::blocker::IntraWriter< MessageT >\fP\&.
 .br
 .RI "Is there any \fBReader\fP that subscribes our Channel? You can publish message when this return true\&. "
 .ti -1c
-.RI "void \fBGetReaders\fP (std::vector< proto::RoleAttributes > *readers) override"
+.RI "void \fBGetReaders\fP (std::vector< \fBproto::RoleAttributes\fP > *readers) override"
 .br
 .RI "Get all Readers that subscriber our writing channel\&. "
 .in -1c
 .SS "Additional Inherited Members"
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "template<typename MessageT > \fBapollo::cyber::Writer\fP< MessageT >::\fBWriter\fP (const proto::RoleAttributes & role_attr)\fC [explicit]\fP"
+.SS "template<typename MessageT > \fBapollo::cyber::Writer\fP< MessageT >::\fBWriter\fP (const \fBproto::RoleAttributes\fP & role_attr)\fC [explicit]\fP"
 
 .PP
 Construct a new \fBWriter\fP object\&. 
@@ -68,7 +68,7 @@ Construct a new \fBWriter\fP object\&.
 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<typename MessageT > void \fBapollo::cyber::Writer\fP< MessageT >::GetReaders (std::vector< proto::RoleAttributes > * readers)\fC [override]\fP, \fC [virtual]\fP"
+.SS "template<typename MessageT > void \fBapollo::cyber::Writer\fP< MessageT >::GetReaders (std::vector< \fBproto::RoleAttributes\fP > * readers)\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Get all Readers that subscriber our writing channel\&. 

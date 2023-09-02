@@ -1,0 +1,144 @@
+.TH "testing::UnitTest" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::UnitTest
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBRun\fP () GTEST_MUST_USE_RESULT_"
+.br
+.ti -1c
+.RI "const char * \fBoriginal_working_dir\fP () const"
+.br
+.ti -1c
+.RI "const \fBTestSuite\fP * \fBcurrent_test_suite\fP () const GTEST_LOCK_EXCLUDED_(mutex_)"
+.br
+.ti -1c
+.RI "const TestCase * \fBcurrent_test_case\fP () const GTEST_LOCK_EXCLUDED_(mutex_)"
+.br
+.ti -1c
+.RI "const \fBTestInfo\fP * \fBcurrent_test_info\fP () const GTEST_LOCK_EXCLUDED_(mutex_)"
+.br
+.ti -1c
+.RI "int \fBrandom_seed\fP () const"
+.br
+.ti -1c
+.RI "\fBinternal::ParameterizedTestSuiteRegistry\fP & \fBparameterized_test_registry\fP () GTEST_LOCK_EXCLUDED_(mutex_)"
+.br
+.ti -1c
+.RI "int \fBsuccessful_test_suite_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBfailed_test_suite_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBtotal_test_suite_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBtest_suite_to_run_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBsuccessful_test_case_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBfailed_test_case_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBtotal_test_case_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBtest_case_to_run_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBsuccessful_test_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBskipped_test_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBfailed_test_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBreportable_disabled_test_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBdisabled_test_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBreportable_test_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBtotal_test_count\fP () const"
+.br
+.ti -1c
+.RI "int \fBtest_to_run_count\fP () const"
+.br
+.ti -1c
+.RI "TimeInMillis \fBstart_timestamp\fP () const"
+.br
+.ti -1c
+.RI "TimeInMillis \fBelapsed_time\fP () const"
+.br
+.ti -1c
+.RI "bool \fBPassed\fP () const"
+.br
+.ti -1c
+.RI "bool \fBFailed\fP () const"
+.br
+.ti -1c
+.RI "const \fBTestSuite\fP * \fBGetTestSuite\fP (int i) const"
+.br
+.ti -1c
+.RI "const TestCase * \fBGetTestCase\fP (int i) const"
+.br
+.ti -1c
+.RI "const \fBTestResult\fP & \fBad_hoc_test_result\fP () const"
+.br
+.ti -1c
+.RI "\fBTestEventListeners\fP & \fBlisteners\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBUnitTest\fP * \fBGetInstance\fP ()"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBScopedTrace\fP"
+.br
+.ti -1c
+.RI "class \fBTest\fP"
+.br
+.ti -1c
+.RI "class \fBinternal::AssertHelper\fP"
+.br
+.ti -1c
+.RI "class \fBinternal::StreamingListenerTest\fP"
+.br
+.ti -1c
+.RI "class \fBinternal::UnitTestRecordPropertyTestHelper\fP"
+.br
+.ti -1c
+.RI "\fBEnvironment\fP * \fBAddGlobalTestEnvironment\fP (\fBEnvironment\fP *env)"
+.br
+.ti -1c
+.RI "internal::UnitTestImpl * \fBinternal::GetUnitTestImpl\fP ()"
+.br
+.ti -1c
+.RI "void \fBinternal::ReportFailureInUnknownLocation\fP (TestPartResult::Type result_type, const std::string &message)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

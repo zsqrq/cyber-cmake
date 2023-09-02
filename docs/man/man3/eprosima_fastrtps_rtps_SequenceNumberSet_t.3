@@ -1,0 +1,144 @@
+.TH "eprosima::fastrtps::rtps::SequenceNumberSet_t" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::SequenceNumberSet_t
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SequenceNumber\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSequenceNumberSet_t\fP & \fBoperator=\fP (const \fBSequenceNumberSet_t\fP &set2)"
+.br
+.ti -1c
+.RI "bool \fBadd\fP (const \fBSequenceNumber_t\fP &in)"
+.br
+.ti -1c
+.RI "\fBSequenceNumber_t\fP \fBget_maxSeqNum\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisSetEmpty\fP () const"
+.br
+.ti -1c
+.RI "std::vector< \fBSequenceNumber_t\fP >::const_iterator \fBget_begin\fP () const"
+.br
+.ti -1c
+.RI "std::vector< \fBSequenceNumber_t\fP >::const_iterator \fBget_end\fP () const"
+.br
+.ti -1c
+.RI "size_t \fBget_size\fP ()"
+.br
+.ti -1c
+.RI "std::vector< \fBSequenceNumber_t\fP > \fBget_set\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBprint\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSequenceNumber_t\fP \fBbase\fP"
+.br
+.RI "\fBBase\fP sequence number\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure \fBSequenceNumberSet_t\fP, contains a group of sequencenumbers\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool eprosima::fastrtps::rtps::SequenceNumberSet_t::add (const \fBSequenceNumber_t\fP & in)\fC [inline]\fP"
+Add a sequence number to the set 
+.PP
+\fBParameters\fP
+.RS 4
+\fIin\fP \fBSequenceNumberSet_t\fP to add 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True on success 
+.RE
+.PP
+
+.SS "std::vector<\fBSequenceNumber_t\fP>::const_iterator eprosima::fastrtps::rtps::SequenceNumberSet_t::get_begin () const\fC [inline]\fP"
+Get the begin of the set 
+.PP
+\fBReturns\fP
+.RS 4
+Vector iterator pointing to the begin of the set 
+.RE
+.PP
+
+.SS "std::vector<\fBSequenceNumber_t\fP>::const_iterator eprosima::fastrtps::rtps::SequenceNumberSet_t::get_end () const\fC [inline]\fP"
+Get the end of the set 
+.PP
+\fBReturns\fP
+.RS 4
+Vector iterator pointing to the end of the set 
+.RE
+.PP
+
+.SS "\fBSequenceNumber_t\fP eprosima::fastrtps::rtps::SequenceNumberSet_t::get_maxSeqNum () const\fC [inline]\fP"
+Get the maximum sequence number in the set 
+.PP
+\fBReturns\fP
+.RS 4
+maximum sequence number in the set 
+.RE
+.PP
+
+.SS "std::vector<\fBSequenceNumber_t\fP> eprosima::fastrtps::rtps::SequenceNumberSet_t::get_set ()\fC [inline]\fP"
+Get the set of SequenceNumbers 
+.PP
+\fBReturns\fP
+.RS 4
+Set of SequenceNumbers 
+.RE
+.PP
+
+.SS "size_t eprosima::fastrtps::rtps::SequenceNumberSet_t::get_size ()\fC [inline]\fP"
+Get the number of SequenceNumbers in the set 
+.PP
+\fBReturns\fP
+.RS 4
+Size of the set 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::SequenceNumberSet_t::isSetEmpty () const\fC [inline]\fP"
+Check if the set is empty 
+.PP
+\fBReturns\fP
+.RS 4
+True if the set is empty 
+.RE
+.PP
+
+.SS "\fBSequenceNumberSet_t\fP& eprosima::fastrtps::rtps::SequenceNumberSet_t::operator= (const \fBSequenceNumberSet_t\fP & set2)\fC [inline]\fP"
+Assignment operator 
+.PP
+\fBParameters\fP
+.RS 4
+\fIset2\fP \fBSequenceNumberSet_t\fP to copy the data from 
+.RE
+.PP
+
+.SS "std::string eprosima::fastrtps::rtps::SequenceNumberSet_t::print ()\fC [inline]\fP"
+Get a string representation of the set 
+.PP
+\fBReturns\fP
+.RS 4
+string representation of the set 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

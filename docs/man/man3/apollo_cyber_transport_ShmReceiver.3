@@ -1,4 +1,4 @@
-.TH "apollo::cyber::transport::ShmReceiver< M >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::transport::ShmReceiver< M >" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,7 +12,7 @@ Inherits \fBapollo::cyber::transport::Receiver< M >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBShmReceiver\fP (const RoleAttributes &attr, const typename \fBReceiver\fP< M >::MessageListener &msg_listener)"
+.RI "\fBShmReceiver\fP (const \fBRoleAttributes\fP &attr, const typename \fBReceiver\fP< M >::MessageListener &msg_listener)"
 .br
 .ti -1c
 .RI "void \fBEnable\fP () override"
@@ -21,10 +21,10 @@ Inherits \fBapollo::cyber::transport::Receiver< M >\fP\&.
 .RI "void \fBDisable\fP () override"
 .br
 .ti -1c
-.RI "void \fBEnable\fP (const RoleAttributes &opposite_attr) override"
+.RI "void \fBEnable\fP (const \fBRoleAttributes\fP &opposite_attr) override"
 .br
 .ti -1c
-.RI "void \fBDisable\fP (const RoleAttributes &opposite_attr) override"
+.RI "void \fBDisable\fP (const \fBRoleAttributes\fP &opposite_attr) override"
 .br
 .in -1c
 .SS "Additional Inherited Members"

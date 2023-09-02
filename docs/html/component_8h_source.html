@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -69,7 +71,7 @@ $(function() {
 <div class="title">component.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss<span class="comment">/******************************************************************************</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/******************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright 2018 The Apollo Authors. All Rights Reserved.</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
@@ -106,7 +108,7 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span>cyber {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1common_1_1GlobalData.html">apollo::cyber::common::GlobalData</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">using</span> apollo::cyber::proto::RoleAttributes;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> M0 = NullType, <span class="keyword">typename</span> M1 = NullType,</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          <span class="keyword">typename</span> M2 = NullType, <span class="keyword">typename</span> M3 = NullType&gt;</div>
@@ -115,7 +117,7 @@ $(function() {
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1Component.html">Component</a>() {}</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  ~<a class="code" href="classapollo_1_1cyber_1_1Component.html">Component</a>()<span class="keyword"> override </span>{}</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">   70</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Initialize</a>(<span class="keyword">const</span> ComponentConfig&amp; config) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">   70</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Initialize</a>(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">ComponentConfig</a>&amp; config) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">bool</span> Process(<span class="keyword">const</span> std::shared_ptr&lt;M0&gt;&amp; msg0, <span class="keyword">const</span> std::shared_ptr&lt;M1&gt;&amp; msg1,</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;               <span class="keyword">const</span> std::shared_ptr&lt;M2&gt;&amp; msg2,</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;               <span class="keyword">const</span> std::shared_ptr&lt;M3&gt;&amp; msg3);</div>
@@ -132,7 +134,7 @@ $(function() {
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1Component.html">Component</a>() {}</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  ~<a class="code" href="classapollo_1_1cyber_1_1Component.html">Component</a>()<span class="keyword"> override </span>{}</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Initialize</a>(<span class="keyword">const</span> ComponentConfig&amp; config) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Initialize</a>(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">ComponentConfig</a>&amp; config) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> M0&gt;</div>
@@ -140,7 +142,7 @@ $(function() {
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1Component.html">Component</a>() {}</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  ~<a class="code" href="classapollo_1_1cyber_1_1Component.html">Component</a>()<span class="keyword"> override </span>{}</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Initialize</a>(<span class="keyword">const</span> ComponentConfig&amp; config) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Initialize</a>(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">ComponentConfig</a>&amp; config) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">bool</span> Process(<span class="keyword">const</span> std::shared_ptr&lt;M0&gt;&amp; msg);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; <span class="keyword">private</span>:</div>
@@ -152,7 +154,7 @@ $(function() {
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1Component.html">Component</a>() {}</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  ~<a class="code" href="classapollo_1_1cyber_1_1Component.html">Component</a>()<span class="keyword"> override </span>{}</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Initialize</a>(<span class="keyword">const</span> ComponentConfig&amp; config) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Initialize</a>(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">ComponentConfig</a>&amp; config) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">bool</span> Process(<span class="keyword">const</span> std::shared_ptr&lt;M0&gt;&amp; msg0,</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;               <span class="keyword">const</span> std::shared_ptr&lt;M1&gt;&amp; msg1);</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
@@ -166,7 +168,7 @@ $(function() {
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1Component.html">Component</a>() {}</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  ~<a class="code" href="classapollo_1_1cyber_1_1Component.html">Component</a>()<span class="keyword"> override </span>{}</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Initialize</a>(<span class="keyword">const</span> ComponentConfig&amp; config) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Initialize</a>(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">ComponentConfig</a>&amp; config) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">bool</span> Process(<span class="keyword">const</span> std::shared_ptr&lt;M0&gt;&amp; msg0, <span class="keyword">const</span> std::shared_ptr&lt;M1&gt;&amp; msg1,</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;               <span class="keyword">const</span> std::shared_ptr&lt;M2&gt;&amp; msg2);</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
@@ -186,7 +188,7 @@ $(function() {
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
 <div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">  150</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Component&lt;NullType, NullType, NullType&gt;::Initialize</a>(</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">const</span> ComponentConfig&amp; config) {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">ComponentConfig</a>&amp; config) {</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  node_.reset(<span class="keyword">new</span> <a class="code" href="classapollo_1_1cyber_1_1Node.html">Node</a>(config.name()));</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  LoadConfigFiles(config);</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordflow">if</span> (!Init()) {</div>
@@ -198,7 +200,7 @@ $(function() {
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> M0&gt;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Component&lt;M0, NullType, NullType, NullType&gt;::Initialize</a>(</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">const</span> ComponentConfig&amp; config) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">ComponentConfig</a>&amp; config) {</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  node_.reset(<span class="keyword">new</span> <a class="code" href="classapollo_1_1cyber_1_1Node.html">Node</a>(config.name()));</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  LoadConfigFiles(config);</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
@@ -599,7 +601,9 @@ $(function() {
 <div class="ttc" id="aclassapollo_1_1cyber_1_1Node_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1Node.html">apollo::cyber::Node</a></div><div class="ttdoc">Node is the fundamental building block of Cyber RT. every module contains and communicates through th...</div><div class="ttdef"><b>Definition:</b> node.h:44</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1NullType_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1NullType.html">apollo::cyber::NullType</a></div><div class="ttdef"><b>Definition:</b> types.h:25</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1common_1_1GlobalData_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1common_1_1GlobalData.html">apollo::cyber::common::GlobalData</a></div><div class="ttdef"><b>Definition:</b> global_data.h:40</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1ComponentConfig_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">apollo::cyber::proto::ComponentConfig</a></div><div class="ttdef"><b>Definition:</b> component_conf.pb.h:282</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1RoleAttributes_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a></div><div class="ttdef"><b>Definition:</b> role_attributes.pb.h:258</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

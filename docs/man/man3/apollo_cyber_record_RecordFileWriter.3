@@ -1,4 +1,4 @@
-.TH "apollo::cyber::record::RecordFileWriter" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::record::RecordFileWriter" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -18,13 +18,13 @@ Inherits \fBapollo::cyber::record::RecordFileBase\fP\&.
 .RI "void \fBClose\fP () override"
 .br
 .ti -1c
-.RI "bool \fBWriteHeader\fP (const proto::Header &header)"
+.RI "bool \fBWriteHeader\fP (const \fBproto::Header\fP &header)"
 .br
 .ti -1c
-.RI "bool \fBWriteChannel\fP (const proto::Channel &channel)"
+.RI "bool \fBWriteChannel\fP (const \fBproto::Channel\fP &channel)"
 .br
 .ti -1c
-.RI "bool \fBWriteMessage\fP (const proto::SingleMessage &message)"
+.RI "bool \fBWriteMessage\fP (const \fBproto::SingleMessage\fP &message)"
 .br
 .ti -1c
 .RI "uint64_t \fBGetMessageNumber\fP (const std::string &channel_name) const"

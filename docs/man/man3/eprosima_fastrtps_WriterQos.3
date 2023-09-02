@@ -1,0 +1,124 @@
+.TH "eprosima::fastrtps::WriterQos" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::WriterQos
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WriterQos\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "RTPS_DllAPI void \fBsetQos\fP (const \fBWriterQos\fP &qos, bool first_time)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI bool \fBcheckQos\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI bool \fBcanQosBeUpdated\fP (\fBWriterQos\fP &qos)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDurabilityQosPolicy\fP \fBm_durability\fP"
+.br
+.RI "Durability Qos, implemented in the library\&. "
+.ti -1c
+.RI "\fBDurabilityServiceQosPolicy\fP \fBm_durabilityService\fP"
+.br
+.RI "Durability Service Qos, NOT implemented in the library\&. "
+.ti -1c
+.RI "\fBDeadlineQosPolicy\fP \fBm_deadline\fP"
+.br
+.RI "Deadline Qos, NOT implemented in the library\&. "
+.ti -1c
+.RI "\fBLatencyBudgetQosPolicy\fP \fBm_latencyBudget\fP"
+.br
+.RI "Latency Budget Qos, NOT implemented in the library\&. "
+.ti -1c
+.RI "\fBLivelinessQosPolicy\fP \fBm_liveliness\fP"
+.br
+.RI "Liveliness Qos, implemented in the library\&. "
+.ti -1c
+.RI "\fBReliabilityQosPolicy\fP \fBm_reliability\fP"
+.br
+.RI "Reliability Qos, implemented in the library\&. "
+.ti -1c
+.RI "\fBLifespanQosPolicy\fP \fBm_lifespan\fP"
+.br
+.RI "Lifespan Qos, NOT implemented in the library\&. "
+.ti -1c
+.RI "\fBUserDataQosPolicy\fP \fBm_userData\fP"
+.br
+.RI "UserData Qos, NOT implemented in the library\&. "
+.ti -1c
+.RI "\fBTimeBasedFilterQosPolicy\fP \fBm_timeBasedFilter\fP"
+.br
+.RI "Time Based Filter Qos, NOT implemented in the library\&. "
+.ti -1c
+.RI "\fBOwnershipQosPolicy\fP \fBm_ownership\fP"
+.br
+.RI "Ownership Qos, NOT implemented in the library\&. "
+.ti -1c
+.RI "\fBOwnershipStrengthQosPolicy\fP \fBm_ownershipStrength\fP"
+.br
+.RI "Owenership Strength Qos, NOT implemented in the library\&. "
+.ti -1c
+.RI "\fBDestinationOrderQosPolicy\fP \fBm_destinationOrder\fP"
+.br
+.RI "Destination Order Qos, NOT implemented in the library\&. "
+.ti -1c
+.RI "\fBPresentationQosPolicy\fP \fBm_presentation\fP"
+.br
+.RI "Presentation Qos, NOT implemented in the library\&. "
+.ti -1c
+.RI "\fBPartitionQosPolicy\fP \fBm_partition\fP"
+.br
+.RI "Partition Qos, implemented in the library\&. "
+.ti -1c
+.RI "\fBTopicDataQosPolicy\fP \fBm_topicData\fP"
+.br
+.RI "Topic Data Qos, NOT implemented in the library\&. "
+.ti -1c
+.RI "\fBGroupDataQosPolicy\fP \fBm_groupData\fP"
+.br
+.RI "Group Data Qos, NOT implemented in the library\&. "
+.ti -1c
+.RI "\fBPublishModeQosPolicy\fP \fBm_publishMode\fP"
+.br
+.RI "Publication Mode Qos, implemented in the library\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBWriterQos\fP, containing all the possible Qos that can be set for a determined \fBPublisher\fP\&. Although these values can be set and are transmitted during the Endpoint Discovery Protocol, not all of the behaviour associated with them has been implemented in the library\&. Please consult each of them to check for implementation details and default values\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "RTPS_DllAPI bool eprosima::fastrtps::WriterQos::checkQos ()"
+Check if the Qos values are compatible between each other\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "RTPS_DllAPI void eprosima::fastrtps::WriterQos::setQos (const \fBWriterQos\fP & qos, bool first_time)"
+Set Qos from another class 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqos\fP Reference from a \fBWriterQos\fP object\&. 
+.br
+\fIfirst_time\fP Boolean indicating whether is the first time (If not some parameters cannot be set)\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,4 +1,4 @@
-.TH "apollo::cyber::record::HeaderBuilder" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::record::HeaderBuilder" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,15 +13,15 @@ apollo::cyber::record::HeaderBuilder \- The builder of record header\&.
 
 .in +1c
 .ti -1c
-.RI "static proto::Header \fBGetHeaderWithSegmentParams\fP (const uint64_t segment_interval, const uint64_t segment_raw_size)"
+.RI "static \fBproto::Header\fP \fBGetHeaderWithSegmentParams\fP (const uint64_t segment_interval, const uint64_t segment_raw_size)"
 .br
 .RI "Build a record header with customized max interval time (ns) and max raw size (byte) for segment\&. "
 .ti -1c
-.RI "static proto::Header \fBGetHeaderWithChunkParams\fP (const uint64_t chunk_interval, const uint64_t chunk_raw_size)"
+.RI "static \fBproto::Header\fP \fBGetHeaderWithChunkParams\fP (const uint64_t chunk_interval, const uint64_t chunk_raw_size)"
 .br
 .RI "Build a record header with customized max interval time (ns) and max raw size (byte) for chunk\&. "
 .ti -1c
-.RI "static proto::Header \fBGetHeader\fP ()"
+.RI "static \fBproto::Header\fP \fBGetHeader\fP ()"
 .br
 .RI "Build a default record header\&. "
 .in -1c
@@ -30,7 +30,7 @@ apollo::cyber::record::HeaderBuilder \- The builder of record header\&.
 The builder of record header\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "proto::Header apollo::cyber::record::HeaderBuilder::GetHeader ()\fC [static]\fP"
+.SS "\fBproto::Header\fP apollo::cyber::record::HeaderBuilder::GetHeader ()\fC [static]\fP"
 
 .PP
 Build a default record header\&. 
@@ -41,7 +41,7 @@ A default record header\&.
 .RE
 .PP
 
-.SS "proto::Header apollo::cyber::record::HeaderBuilder::GetHeaderWithChunkParams (const uint64_t chunk_interval, const uint64_t chunk_raw_size)\fC [static]\fP"
+.SS "\fBproto::Header\fP apollo::cyber::record::HeaderBuilder::GetHeaderWithChunkParams (const uint64_t chunk_interval, const uint64_t chunk_raw_size)\fC [static]\fP"
 
 .PP
 Build a record header with customized max interval time (ns) and max raw size (byte) for chunk\&. 
@@ -59,7 +59,7 @@ A customized record header\&.
 .RE
 .PP
 
-.SS "proto::Header apollo::cyber::record::HeaderBuilder::GetHeaderWithSegmentParams (const uint64_t segment_interval, const uint64_t segment_raw_size)\fC [static]\fP"
+.SS "\fBproto::Header\fP apollo::cyber::record::HeaderBuilder::GetHeaderWithSegmentParams (const uint64_t segment_interval, const uint64_t segment_raw_size)\fC [static]\fP"
 
 .PP
 Build a record header with customized max interval time (ns) and max raw size (byte) for segment\&. 

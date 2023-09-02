@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -106,8 +108,8 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceapollo.html">apollo</a> {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span>cyber {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">using</span> apollo::cyber::proto::ComponentConfig;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">using</span> apollo::cyber::proto::TimerComponentConfig;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">apollo::cyber::proto::ComponentConfig</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1TimerComponentConfig.html">apollo::cyber::proto::TimerComponentConfig</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1ComponentBase.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classapollo_1_1cyber_1_1ComponentBase.html">ComponentBase</a> : <span class="keyword">public</span> std::enable_shared_from_this&lt;ComponentBase&gt; {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; <span class="keyword">public</span>:</div>
@@ -116,8 +118,8 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classapollo_1_1cyber_1_1ComponentBase.html">ComponentBase</a>() {}</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Initialize(<span class="keyword">const</span> ComponentConfig&amp; config) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Initialize(<span class="keyword">const</span> TimerComponentConfig&amp; config) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Initialize(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">ComponentConfig</a>&amp; config) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Initialize(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1TimerComponentConfig.html">TimerComponentConfig</a>&amp; config) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Shutdown() {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (is_shutdown_.exchange(<span class="keyword">true</span>)) {</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">return</span>;</div>
@@ -140,7 +142,7 @@ $(function() {
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Clear() { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">const</span> std::string&amp; ConfigFilePath()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> config_file_path_; }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">void</span> LoadConfigFiles(<span class="keyword">const</span> ComponentConfig&amp; config) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">void</span> LoadConfigFiles(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">ComponentConfig</a>&amp; config) {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (!config.config_file_path().empty()) {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">if</span> (config.config_file_path()[0] != <span class="charliteral">&#39;/&#39;</span>) {</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        config_file_path_ = common::GetAbsolutePath(common::WorkRoot(),</div>
@@ -160,7 +162,7 @@ $(function() {
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">void</span> LoadConfigFiles(<span class="keyword">const</span> TimerComponentConfig&amp; config) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">void</span> LoadConfigFiles(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1TimerComponentConfig.html">TimerComponentConfig</a>&amp; config) {</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (!config.config_file_path().empty()) {</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">if</span> (config.config_file_path()[0] != <span class="charliteral">&#39;/&#39;</span>) {</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        config_file_path_ = common::GetAbsolutePath(common::WorkRoot(),</div>
@@ -192,8 +194,10 @@ $(function() {
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CYBER_COMPONENT_COMPONENT_BASE_H_</span></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1ComponentBase_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1ComponentBase.html">apollo::cyber::ComponentBase</a></div><div class="ttdef"><b>Definition:</b> component_base.h:41</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1Reader_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1Reader.html">apollo::cyber::Reader</a></div><div class="ttdoc">Reader subscribes a channel, it has two main functions:</div><div class="ttdef"><b>Definition:</b> reader.h:68</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1ComponentConfig_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">apollo::cyber::proto::ComponentConfig</a></div><div class="ttdef"><b>Definition:</b> component_conf.pb.h:282</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1TimerComponentConfig_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1TimerComponentConfig.html">apollo::cyber::proto::TimerComponentConfig</a></div><div class="ttdef"><b>Definition:</b> component_conf.pb.h:505</div></div>
 <div class="ttc" id="afile_8h_html"><div class="ttname"><a href="file_8h.html">file.h</a></div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

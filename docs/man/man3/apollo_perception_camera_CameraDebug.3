@@ -1,0 +1,289 @@
+.TH "apollo::perception::camera::CameraDebug" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::perception::camera::CameraDebug
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkCameraLanelineFieldNumber\fP = 5, \fBkCameraObstacleFieldNumber\fP = 6, \fBkSourceTopicFieldNumber\fP = 2, \fBkHeaderFieldNumber\fP = 1, \fBkCameraCalibratorFieldNumber\fP = 4, \fBkErrorCodeFieldNumber\fP = 3 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBCameraDebug\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBCameraDebug\fP (const \fBCameraDebug\fP &from)"
+.br
+.ti -1c
+.RI "\fBCameraDebug\fP (\fBCameraDebug\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBCameraDebug\fP & \fBoperator=\fP (const \fBCameraDebug\fP &from)"
+.br
+.ti -1c
+.RI "\fBCameraDebug\fP & \fBoperator=\fP (\fBCameraDebug\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBCameraDebug\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBCameraDebug\fP *other)"
+.br
+.ti -1c
+.RI "\fBCameraDebug\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBCameraDebug\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBCameraDebug\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBcamera_laneline_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_camera_laneline\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::camera::CameraLaneLine\fP * \fBmutable_camera_laneline\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::perception::camera::CameraLaneLine\fP > * \fBmutable_camera_laneline\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::camera::CameraLaneLine\fP & \fBcamera_laneline\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::camera::CameraLaneLine\fP * \fBadd_camera_laneline\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::perception::camera::CameraLaneLine\fP > & \fBcamera_laneline\fP () const"
+.br
+.ti -1c
+.RI "int \fBcamera_obstacle_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_camera_obstacle\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::camera::CameraObstacle\fP * \fBmutable_camera_obstacle\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::perception::camera::CameraObstacle\fP > * \fBmutable_camera_obstacle\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::camera::CameraObstacle\fP & \fBcamera_obstacle\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::camera::CameraObstacle\fP * \fBadd_camera_obstacle\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::perception::camera::CameraObstacle\fP > & \fBcamera_obstacle\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhas_source_topic\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_source_topic\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBsource_topic\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_source_topic\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_source_topic\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_source_topic\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_source_topic\fP (std::string *source_topic)"
+.br
+.ti -1c
+.RI "bool \fBhas_header\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_header\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Header\fP & \fBheader\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Header\fP * \fBrelease_header\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBmutable_header\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBunsafe_arena_release_header\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_camera_calibrator\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_camera_calibrator\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::camera::CameraCalibrator\fP & \fBcamera_calibrator\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::perception::camera::CameraCalibrator\fP * \fBrelease_camera_calibrator\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::camera::CameraCalibrator\fP * \fBmutable_camera_calibrator\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_camera_calibrator\fP (::\fBapollo::perception::camera::CameraCalibrator\fP *camera_calibrator)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_camera_calibrator\fP (::\fBapollo::perception::camera::CameraCalibrator\fP *camera_calibrator)"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::camera::CameraCalibrator\fP * \fBunsafe_arena_release_camera_calibrator\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_error_code\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_error_code\fP ()"
+.br
+.ti -1c
+.RI "::apollo::perception::camera::CameraErrorCode \fBerror_code\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_error_code\fP (::apollo::perception::camera::CameraErrorCode value)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_source_topic\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBCameraDebug\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBCameraDebug\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCameraDebug\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fperception_5fmsgs_2fperception_5fcamera_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBCameraDebug\fP &a, \fBCameraDebug\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::perception::camera::CameraDebug::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    CameraDebug::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::perception::camera::CameraDebug::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    5
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

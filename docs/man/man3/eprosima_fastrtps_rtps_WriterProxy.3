@@ -1,0 +1,244 @@
+.TH "eprosima::fastrtps::rtps::WriterProxy" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::WriterProxy
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WriterProxy\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWriterProxy\fP (\fBRemoteWriterAttributes\fP &watt, \fBStatefulReader\fP *SR)"
+.br
+.ti -1c
+.RI "const \fBSequenceNumber_t\fP \fBavailable_changes_max\fP () const"
+.br
+.ti -1c
+.RI "void \fBmissing_changes_update\fP (const \fBSequenceNumber_t\fP &seqNum)"
+.br
+.ti -1c
+.RI "void \fBlost_changes_update\fP (const \fBSequenceNumber_t\fP &seqNum)"
+.br
+.ti -1c
+.RI "bool \fBreceived_change_set\fP (const \fBSequenceNumber_t\fP &seqNum)"
+.br
+.ti -1c
+.RI "bool \fBirrelevant_change_set\fP (const \fBSequenceNumber_t\fP &seqNum)"
+.br
+.ti -1c
+.RI "void \fBsetNotValid\fP (const \fBSequenceNumber_t\fP &seqNum)"
+.br
+.ti -1c
+.RI "bool \fBareThereMissing\fP ()"
+.br
+.ti -1c
+.RI "const std::vector< \fBChangeFromWriter_t\fP > \fBmissing_changes\fP ()"
+.br
+.ti -1c
+.RI "size_t \fBunknown_missing_changes_up_to\fP (const \fBSequenceNumber_t\fP &seqNum)"
+.br
+.ti -1c
+.RI "bool \fBisAlive\fP ()"
+.br
+.ti -1c
+.RI "void \fBassertLiveliness\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetNotAlive\fP ()"
+.br
+.ti -1c
+.RI "std::recursive_mutex * \fBgetMutex\fP ()"
+.br
+.ti -1c
+.RI "size_t \fBnumberOfChangeFromWriter\fP () const"
+.br
+.RI "Returns number of \fBChangeFromWriter_t\fP managed currently by the \fBWriterProxy\fP\&. "
+.ti -1c
+.RI "\fBSequenceNumber_t\fP \fBnextCacheChangeToBeNotified\fP ()"
+.br
+.RI "Returns next \fBCacheChange_t\fP to be notified\&. "
+.ti -1c
+.RI "bool \fBchange_was_received\fP (const \fBSequenceNumber_t\fP &seq_num)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBStatefulReader\fP * \fBmp_SFR\fP"
+.br
+.RI "Pointer to associated \fBStatefulReader\fP\&. "
+.ti -1c
+.RI "\fBRemoteWriterAttributes\fP \fBm_att\fP"
+.br
+.RI "Parameters of the \fBWriterProxy\fP\&. "
+.ti -1c
+.RI "uint32_t \fBm_acknackCount\fP"
+.br
+.RI "Acknack Count\&. "
+.ti -1c
+.RI "uint32_t \fBm_nackfragCount\fP"
+.br
+.RI "NACKFRAG Count\&. "
+.ti -1c
+.RI "uint32_t \fBm_lastHeartbeatCount\fP"
+.br
+.RI "LAst HEartbeatcount\&. "
+.ti -1c
+.RI "\fBHeartbeatResponseDelay\fP * \fBmp_heartbeatResponse\fP"
+.br
+.RI "Timed event to postpone the heartbeatResponse\&. "
+.ti -1c
+.RI "\fBWriterProxyLiveliness\fP * \fBmp_writerProxyLiveliness\fP"
+.br
+.RI "TO check the liveliness Status periodically\&. "
+.ti -1c
+.RI "\fBInitialAckNack\fP * \fBmp_initialAcknack\fP"
+.br
+.RI "Timed event to send initial acknack\&. "
+.ti -1c
+.RI "bool \fBm_heartbeatFinalFlag\fP"
+.br
+.RI "Indicates if the heartbeat has the final flag set\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBWriterProxy\fP that contains the state of each matched writer for a specific reader\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::WriterProxy::WriterProxy (\fBRemoteWriterAttributes\fP & watt, \fBStatefulReader\fP * SR)"
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwatt\fP \fBRemoteWriterAttributes\fP\&. 
+.br
+\fISR\fP Pointer to the \fBStatefulReader\fP\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void eprosima::fastrtps::rtps::WriterProxy::assertLiveliness ()"
+Set the writer as alive 
+.SS "const \fBSequenceNumber_t\fP eprosima::fastrtps::rtps::WriterProxy::available_changes_max () const"
+Get the maximum sequenceNumber received from this Writer\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the maximum sequence number\&. 
+.RE
+.PP
+
+.SS "std::recursive_mutex* eprosima::fastrtps::rtps::WriterProxy::getMutex ()\fC [inline]\fP"
+Get the mutex 
+.PP
+\fBReturns\fP
+.RS 4
+Associated mutex 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::WriterProxy::irrelevant_change_set (const \fBSequenceNumber_t\fP & seqNum)"
+Set a change as RECEIVED and NOT RELEVANT\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIseqNum\fP Sequence number of the change 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true on success 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::WriterProxy::isAlive ()\fC [inline]\fP"
+Check if the writer is alive 
+.PP
+\fBReturns\fP
+.RS 4
+true if the writer is alive 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::WriterProxy::lost_changes_update (const \fBSequenceNumber_t\fP & seqNum)"
+Update the lost changes up to the provided sequenceNumber\&. All changes with status UNKNOWN or MISSING with seqNum < input seqNum are marked LOST\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIseqNum\fP Pointer to the SequenceNumber\&. 
+.RE
+.PP
+
+.SS "const std::vector<\fBChangeFromWriter_t\fP> eprosima::fastrtps::rtps::WriterProxy::missing_changes ()"
+The method returns a vector containing all missing changes\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Vector of missing changes\&.\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::WriterProxy::missing_changes_update (const \fBSequenceNumber_t\fP & seqNum)"
+Update the missing changes up to the provided sequenceNumber\&. All changes with status UNKNOWN with seqNum <= input seqNum are marked MISSING\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIseqNum\fP Pointer to the SequenceNumber\&. 
+.RE
+.PP
+
+.SS "\fBSequenceNumber_t\fP eprosima::fastrtps::rtps::WriterProxy::nextCacheChangeToBeNotified ()"
+
+.PP
+Returns next \fBCacheChange_t\fP to be notified\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Next \fBCacheChange_t\fP to be nofified or invalid \fBSequenceNumber_t\fP if any \fBCacheChange_t\fP to be notified\&. 
+.RE
+.PP
+
+.SS "size_t eprosima::fastrtps::rtps::WriterProxy::numberOfChangeFromWriter () const"
+
+.PP
+Returns number of \fBChangeFromWriter_t\fP managed currently by the \fBWriterProxy\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Number of \fBChangeFromWriter_t\fP managed currently by the \fBWriterProxy\fP\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::WriterProxy::received_change_set (const \fBSequenceNumber_t\fP & seqNum)"
+The provided change is marked as RECEIVED\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIseqNum\fP Sequence number of the change 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::WriterProxy::setNotAlive ()\fC [inline]\fP"
+Set the writer as not alive 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

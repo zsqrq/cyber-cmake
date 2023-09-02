@@ -1,0 +1,92 @@
+.TH "eprosima::fastrtps::rtps::EntityId_t" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::EntityId_t \- Structure \fBEntityId_t\fP, entity id part of \fBGUID_t\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Guid\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEntityId_t\fP ()"
+.br
+.RI "Default constructor\&. Uknown entity\&. "
+.ti -1c
+.RI "\fBEntityId_t\fP (uint32_t id)"
+.br
+.ti -1c
+.RI "\fBEntityId_t\fP (const \fBEntityId_t\fP &id)"
+.br
+.RI "Copy constructor\&. "
+.ti -1c
+.RI "\fBEntityId_t\fP (\fBEntityId_t\fP &&id)"
+.br
+.RI "Move constructor\&. "
+.ti -1c
+.RI "\fBEntityId_t\fP & \fBoperator=\fP (const \fBEntityId_t\fP &id)"
+.br
+.ti -1c
+.RI "\fBEntityId_t\fP & \fBoperator=\fP (\fBEntityId_t\fP &&id)"
+.br
+.ti -1c
+.RI "\fBEntityId_t\fP & \fBoperator=\fP (uint32_t id)"
+.br
+.ti -1c
+.RI "void \fBreverse\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBEntityId_t\fP \fBunknown\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "octet \fBvalue\fP [size]"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const unsigned int \fBsize\fP = 4"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure \fBEntityId_t\fP, entity id part of \fBGUID_t\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::EntityId_t::EntityId_t (uint32_t id)\fC [inline]\fP"
+Main constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Entity id 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBEntityId_t\fP& eprosima::fastrtps::rtps::EntityId_t::operator= (uint32_t id)\fC [inline]\fP"
+Assignment operator\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Entity id to copy 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

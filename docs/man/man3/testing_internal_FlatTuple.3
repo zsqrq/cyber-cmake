@@ -1,0 +1,27 @@
+.TH "testing::internal::FlatTuple< T >" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::internal::FlatTuple< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBtesting::internal::FlatTupleBase< FlatTuple< T\&.\&.\&. >, MakeIndexSequence< sizeof\&.\&.\&.(T)>::type >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFlatTuple\fP (T\&.\&.\&. t)"
+.br
+.ti -1c
+.RI "template<size_t I> const \fBElemFromList\fP< I, Indices, T\&.\&.\&. >::type & \fBGet\fP () const"
+.br
+.ti -1c
+.RI "template<size_t I> \fBElemFromList\fP< I, Indices, T\&.\&.\&. >::type & \fBGet\fP ()"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

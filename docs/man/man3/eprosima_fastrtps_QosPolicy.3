@@ -1,0 +1,54 @@
+.TH "eprosima::fastrtps::QosPolicy" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::QosPolicy
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QosPolicies\&.h>\fP
+.PP
+Inherited by \fBeprosima::fastrtps::DeadlineQosPolicy\fP, \fBeprosima::fastrtps::DestinationOrderQosPolicy\fP, \fBeprosima::fastrtps::DurabilityQosPolicy\fP, \fBeprosima::fastrtps::DurabilityServiceQosPolicy\fP, \fBeprosima::fastrtps::GroupDataQosPolicy\fP, \fBeprosima::fastrtps::HistoryQosPolicy\fP, \fBeprosima::fastrtps::LatencyBudgetQosPolicy\fP, \fBeprosima::fastrtps::LifespanQosPolicy\fP, \fBeprosima::fastrtps::LivelinessQosPolicy\fP, \fBeprosima::fastrtps::OwnershipQosPolicy\fP, \fBeprosima::fastrtps::OwnershipStrengthQosPolicy\fP, \fBeprosima::fastrtps::PartitionQosPolicy\fP, \fBeprosima::fastrtps::PresentationQosPolicy\fP, \fBeprosima::fastrtps::PublishModeQosPolicy\fP, \fBeprosima::fastrtps::ReliabilityQosPolicy\fP, \fBeprosima::fastrtps::ResourceLimitsQosPolicy\fP, \fBeprosima::fastrtps::TimeBasedFilterQosPolicy\fP, \fBeprosima::fastrtps::TopicDataQosPolicy\fP, \fBeprosima::fastrtps::TransportPriorityQosPolicy\fP, and \fBeprosima::fastrtps::UserDataQosPolicy\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQosPolicy\fP (bool b_sendAlways)"
+.br
+.ti -1c
+.RI "virtual bool \fBsendAlways\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBhasChanged\fP"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_sendAlways\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBQosPolicy\fP, base for all QoS policies defined for Writers and Readers\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool eprosima::fastrtps::QosPolicy::sendAlways ()\fC [inline]\fP, \fC [virtual]\fP"
+Whether it should always be sent\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if it should always be sent\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

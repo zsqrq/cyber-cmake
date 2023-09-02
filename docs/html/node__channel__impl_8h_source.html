@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -161,7 +163,7 @@ $(function() {
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageT&gt;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">auto</span> CreateWriter(<span class="keyword">const</span> proto::RoleAttributes&amp; role_attr)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">auto</span> CreateWriter(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&amp; role_attr)</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      -&gt; std::shared_ptr&lt;Writer&lt;MessageT&gt;&gt;;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageT&gt;</div>
@@ -179,21 +181,21 @@ $(function() {
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      -&gt; std::shared_ptr&lt;Reader&lt;MessageT&gt;&gt;;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageT&gt;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keyword">auto</span> CreateReader(<span class="keyword">const</span> proto::RoleAttributes&amp; role_attr,</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keyword">auto</span> CreateReader(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&amp; role_attr,</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    <span class="keyword">const</span> CallbackFunc&lt;MessageT&gt;&amp; reader_func,</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    uint32_t pending_queue_size = DEFAULT_PENDING_QUEUE_SIZE)</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      -&gt; std::shared_ptr&lt;Reader&lt;MessageT&gt;&gt;;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageT&gt;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keyword">auto</span> CreateReader(<span class="keyword">const</span> proto::RoleAttributes&amp; role_attr)</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keyword">auto</span> CreateReader(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&amp; role_attr)</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      -&gt; std::shared_ptr&lt;Reader&lt;MessageT&gt;&gt;;</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageT&gt;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">void</span> FillInAttr(proto::RoleAttributes* attr);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">void</span> FillInAttr(<a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>* attr);</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordtype">bool</span> is_reality_mode_;</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  std::string node_name_;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  proto::RoleAttributes node_attr_;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> node_attr_;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  NodeManagerPtr node_manager_ = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;};</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
@@ -312,7 +314,8 @@ $(function() {
 <div class="ttc" id="aclassapollo_1_1cyber_1_1NodeChannelImpl_html_ac50ae040942a835396f296213b3f030a"><div class="ttname"><a href="classapollo_1_1cyber_1_1NodeChannelImpl.html#ac50ae040942a835396f296213b3f030a">apollo::cyber::NodeChannelImpl::NodeChannelImpl</a></div><div class="ttdeci">NodeChannelImpl(const std::string &amp;node_name)</div><div class="ttdoc">Construct a new Node Channel Impl object.</div><div class="ttdef"><b>Definition:</b> node_channel_impl.h:78</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1NodeChannelImpl_html_aeaed99822b9bc30590213d62179f387f"><div class="ttname"><a href="classapollo_1_1cyber_1_1NodeChannelImpl.html#aeaed99822b9bc30590213d62179f387f">apollo::cyber::NodeChannelImpl::~NodeChannelImpl</a></div><div class="ttdeci">virtual ~NodeChannelImpl()</div><div class="ttdoc">Destroy the Node Channel Impl object.</div><div class="ttdef"><b>Definition:</b> node_channel_impl.h:99</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1Node_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1Node.html">apollo::cyber::Node</a></div><div class="ttdoc">Node is the fundamental building block of Cyber RT. every module contains and communicates through th...</div><div class="ttdef"><b>Definition:</b> node.h:44</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1RoleAttributes_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a></div><div class="ttdef"><b>Definition:</b> role_attributes.pb.h:258</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 <div class="ttc" id="astructapollo_1_1cyber_1_1ReaderConfig_html"><div class="ttname"><a href="structapollo_1_1cyber_1_1ReaderConfig.html">apollo::cyber::ReaderConfig</a></div><div class="ttdef"><b>Definition:</b> node_channel_impl.h:37</div></div>
 <div class="ttc" id="astructapollo_1_1cyber_1_1ReaderConfig_html_aeba0186e348e190f4749430b9bbc9d96"><div class="ttname"><a href="structapollo_1_1cyber_1_1ReaderConfig.html#aeba0186e348e190f4749430b9bbc9d96">apollo::cyber::ReaderConfig::ReaderConfig</a></div><div class="ttdeci">ReaderConfig()</div><div class="ttdoc">&lt; configurations for a Reader</div><div class="ttdef"><b>Definition:</b> node_channel_impl.h:38</div></div>
 <div class="ttc" id="astructapollo_1_1cyber_1_1ReaderConfig_html_affa7656a5714023523d0f9202d0d0f2b"><div class="ttname"><a href="structapollo_1_1cyber_1_1ReaderConfig.html#affa7656a5714023523d0f9202d0d0f2b">apollo::cyber::ReaderConfig::pending_queue_size</a></div><div class="ttdeci">uint32_t pending_queue_size</div><div class="ttdoc">configuration for responding ChannelBuffer. Older messages will dropped if you have no time to handle</div><div class="ttdef"><b>Definition:</b> node_channel_impl.h:59</div></div>

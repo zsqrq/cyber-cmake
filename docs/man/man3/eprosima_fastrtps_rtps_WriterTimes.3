@@ -1,0 +1,37 @@
+.TH "eprosima::fastrtps::rtps::WriterTimes" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::WriterTimes
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WriterAttributes\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDuration_t\fP \fBinitialHeartbeatDelay\fP"
+.br
+.RI "Initial heartbeat delay\&. Default value ~45ms\&. "
+.ti -1c
+.RI "\fBDuration_t\fP \fBheartbeatPeriod\fP"
+.br
+.RI "Periodic HB period, default value 3s\&. "
+.ti -1c
+.RI "\fBDuration_t\fP \fBnackResponseDelay\fP"
+.br
+.RI "Delay to apply to the response of a ACKNACK message, default value ~45ms\&. "
+.ti -1c
+.RI "\fBDuration_t\fP \fBnackSupressionDuration\fP"
+.br
+.RI "This time allows the \fBRTPSWriter\fP to ignore nack messages too soon after the data as sent, default value 0s\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBWriterTimes\fP, defining the times associated with the Reliable Writers events\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

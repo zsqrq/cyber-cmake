@@ -1,4 +1,4 @@
-.TH "apollo::cyber::service_discovery::SingleValueWarehouse" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::service_discovery::SingleValueWarehouse" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -34,7 +34,7 @@ Inherits \fBapollo::cyber::service_discovery::WarehouseBase\fP\&.
 .RI "void \fBRemove\fP (uint64_t key, const RolePtr &role) override"
 .br
 .ti -1c
-.RI "void \fBRemove\fP (const proto::RoleAttributes &target_attr) override"
+.RI "void \fBRemove\fP (const \fBproto::RoleAttributes\fP &target_attr) override"
 .br
 .ti -1c
 .RI "bool \fBSearch\fP (uint64_t key) override"
@@ -43,34 +43,34 @@ Inherits \fBapollo::cyber::service_discovery::WarehouseBase\fP\&.
 .RI "bool \fBSearch\fP (uint64_t key, RolePtr *first_matched_role) override"
 .br
 .ti -1c
-.RI "bool \fBSearch\fP (uint64_t key, proto::RoleAttributes *first_matched_role_attr) override"
+.RI "bool \fBSearch\fP (uint64_t key, \fBproto::RoleAttributes\fP *first_matched_role_attr) override"
 .br
 .ti -1c
 .RI "bool \fBSearch\fP (uint64_t key, std::vector< RolePtr > *matched_roles) override"
 .br
 .ti -1c
-.RI "bool \fBSearch\fP (uint64_t key, std::vector< proto::RoleAttributes > *matched_roles_attr) override"
+.RI "bool \fBSearch\fP (uint64_t key, std::vector< \fBproto::RoleAttributes\fP > *matched_roles_attr) override"
 .br
 .ti -1c
-.RI "bool \fBSearch\fP (const proto::RoleAttributes &target_attr) override"
+.RI "bool \fBSearch\fP (const \fBproto::RoleAttributes\fP &target_attr) override"
 .br
 .ti -1c
-.RI "bool \fBSearch\fP (const proto::RoleAttributes &target_attr, RolePtr *first_matched) override"
+.RI "bool \fBSearch\fP (const \fBproto::RoleAttributes\fP &target_attr, RolePtr *first_matched) override"
 .br
 .ti -1c
-.RI "bool \fBSearch\fP (const proto::RoleAttributes &target_attr, proto::RoleAttributes *first_matched_role_attr) override"
+.RI "bool \fBSearch\fP (const \fBproto::RoleAttributes\fP &target_attr, \fBproto::RoleAttributes\fP *first_matched_role_attr) override"
 .br
 .ti -1c
-.RI "bool \fBSearch\fP (const proto::RoleAttributes &target_attr, std::vector< RolePtr > *matched_roles) override"
+.RI "bool \fBSearch\fP (const \fBproto::RoleAttributes\fP &target_attr, std::vector< RolePtr > *matched_roles) override"
 .br
 .ti -1c
-.RI "bool \fBSearch\fP (const proto::RoleAttributes &target_attr, std::vector< proto::RoleAttributes > *matched_roles_attr) override"
+.RI "bool \fBSearch\fP (const \fBproto::RoleAttributes\fP &target_attr, std::vector< \fBproto::RoleAttributes\fP > *matched_roles_attr) override"
 .br
 .ti -1c
 .RI "void \fBGetAllRoles\fP (std::vector< RolePtr > *roles) override"
 .br
 .ti -1c
-.RI "void \fBGetAllRoles\fP (std::vector< proto::RoleAttributes > *roles_attr) override"
+.RI "void \fBGetAllRoles\fP (std::vector< \fBproto::RoleAttributes\fP > *roles_attr) override"
 .br
 .in -1c
 

@@ -1,0 +1,535 @@
+.TH "apollo::control::ControlCommand" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::control::ControlCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkHeaderFieldNumber\fP = 1, \fBkDebugFieldNumber\fP = 22, \fBkSignalFieldNumber\fP = 23, \fBkLatencyStatsFieldNumber\fP = 24, \fBkPadMsgFieldNumber\fP = 25, \fBkEngageAdviceFieldNumber\fP = 26, \fBkThrottleFieldNumber\fP = 3, \fBkBrakeFieldNumber\fP = 4, \fBkSteeringRateFieldNumber\fP = 6, \fBkSteeringTargetFieldNumber\fP = 7, \fBkSpeedFieldNumber\fP = 9, \fBkAccelerationFieldNumber\fP = 10, \fBkLeftTurnFieldNumber\fP = 13, \fBkRightTurnFieldNumber\fP = 14, \fBkHighBeamFieldNumber\fP = 11, \fBkLowBeamFieldNumber\fP = 12, \fBkHornFieldNumber\fP = 15, \fBkParkingBrakeFieldNumber\fP = 8, \fBkResetModelFieldNumber\fP = 16, \fBkEngineOnOffFieldNumber\fP = 17, \fBkIsInSafeModeFieldNumber\fP = 27, \fBkDrivingModeFieldNumber\fP = 19, \fBkTrajectoryFractionFieldNumber\fP = 18, \fBkGearLocationFieldNumber\fP = 20, \fBkTurnsignalFieldNumber\fP = 21 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBControlCommand\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBControlCommand\fP (const \fBControlCommand\fP &from)"
+.br
+.ti -1c
+.RI "\fBControlCommand\fP (\fBControlCommand\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBControlCommand\fP & \fBoperator=\fP (const \fBControlCommand\fP &from)"
+.br
+.ti -1c
+.RI "\fBControlCommand\fP & \fBoperator=\fP (\fBControlCommand\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBControlCommand\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBControlCommand\fP *other)"
+.br
+.ti -1c
+.RI "\fBControlCommand\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBControlCommand\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBControlCommand\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_header\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_header\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Header\fP & \fBheader\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Header\fP * \fBrelease_header\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBmutable_header\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBunsafe_arena_release_header\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_debug\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_debug\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::control::Debug\fP & \fBdebug\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::control::Debug\fP * \fBrelease_debug\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::control::Debug\fP * \fBmutable_debug\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_debug\fP (::\fBapollo::control::Debug\fP *debug)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_debug\fP (::\fBapollo::control::Debug\fP *debug)"
+.br
+.ti -1c
+.RI "::\fBapollo::control::Debug\fP * \fBunsafe_arena_release_debug\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_signal\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_signal\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::VehicleSignal\fP & \fBsignal\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::VehicleSignal\fP * \fBrelease_signal\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::VehicleSignal\fP * \fBmutable_signal\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_signal\fP (::\fBapollo::common::VehicleSignal\fP *signal)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_signal\fP (::\fBapollo::common::VehicleSignal\fP *signal)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::VehicleSignal\fP * \fBunsafe_arena_release_signal\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_latency_stats\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_latency_stats\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::control::LatencyStats\fP & \fBlatency_stats\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::control::LatencyStats\fP * \fBrelease_latency_stats\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::control::LatencyStats\fP * \fBmutable_latency_stats\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_latency_stats\fP (::\fBapollo::control::LatencyStats\fP *latency_stats)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_latency_stats\fP (::\fBapollo::control::LatencyStats\fP *latency_stats)"
+.br
+.ti -1c
+.RI "::\fBapollo::control::LatencyStats\fP * \fBunsafe_arena_release_latency_stats\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_pad_msg\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_pad_msg\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::control::PadMessage\fP & \fBpad_msg\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::control::PadMessage\fP * \fBrelease_pad_msg\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::control::PadMessage\fP * \fBmutable_pad_msg\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_pad_msg\fP (::\fBapollo::control::PadMessage\fP *pad_msg)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_pad_msg\fP (::\fBapollo::control::PadMessage\fP *pad_msg)"
+.br
+.ti -1c
+.RI "::\fBapollo::control::PadMessage\fP * \fBunsafe_arena_release_pad_msg\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_engage_advice\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_engage_advice\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::EngageAdvice\fP & \fBengage_advice\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::EngageAdvice\fP * \fBrelease_engage_advice\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::EngageAdvice\fP * \fBmutable_engage_advice\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_engage_advice\fP (::\fBapollo::common::EngageAdvice\fP *engage_advice)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_engage_advice\fP (::\fBapollo::common::EngageAdvice\fP *engage_advice)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::EngageAdvice\fP * \fBunsafe_arena_release_engage_advice\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_throttle\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_throttle\fP ()"
+.br
+.ti -1c
+.RI "double \fBthrottle\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_throttle\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_brake\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brake\fP ()"
+.br
+.ti -1c
+.RI "double \fBbrake\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brake\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steering_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steering_rate\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteering_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steering_rate\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steering_target\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steering_target\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteering_target\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steering_target\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed\fP ()"
+.br
+.ti -1c
+.RI "double \fBspeed\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_speed\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration\fP (double value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_left_turn\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_left_turn\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBleft_turn\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_left_turn\fP (bool value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_right_turn\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_right_turn\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBright_turn\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_right_turn\fP (bool value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_high_beam\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_high_beam\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhigh_beam\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_high_beam\fP (bool value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_low_beam\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_low_beam\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBlow_beam\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_low_beam\fP (bool value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_horn\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_horn\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhorn\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_horn\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_parking_brake\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_parking_brake\fP ()"
+.br
+.ti -1c
+.RI "bool \fBparking_brake\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_parking_brake\fP (bool value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_reset_model\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_reset_model\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBreset_model\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_reset_model\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_engine_on_off\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_engine_on_off\fP ()"
+.br
+.ti -1c
+.RI "bool \fBengine_on_off\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_engine_on_off\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_in_safe_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_in_safe_mode\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_in_safe_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_in_safe_mode\fP (bool value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_driving_mode\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_driving_mode\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED ::apollo::canbus::Chassis_DrivingMode \fBdriving_mode\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_driving_mode\fP (::apollo::canbus::Chassis_DrivingMode value)"
+.br
+.ti -1c
+.RI "bool \fBhas_trajectory_fraction\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_trajectory_fraction\fP ()"
+.br
+.ti -1c
+.RI "double \fBtrajectory_fraction\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_trajectory_fraction\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_gear_location\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_gear_location\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Chassis_GearPosition \fBgear_location\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_gear_location\fP (::apollo::canbus::Chassis_GearPosition value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_turnsignal\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_turnsignal\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED ::apollo::control::TurnSignal \fBturnsignal\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_turnsignal\fP (::apollo::control::TurnSignal value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBControlCommand\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBControlCommand\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBControlCommand\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fcontrol_5fmsgs_2fcontrol_5fcmd_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBControlCommand\fP &a, \fBControlCommand\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::control::ControlCommand::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ControlCommand::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::control::ControlCommand::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    1
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

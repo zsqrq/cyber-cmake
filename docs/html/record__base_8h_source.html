@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -114,13 +116,13 @@ $(function() {
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#af0044467095e85135bdf7a636558487c">   76</a></span>&#160;  <span class="keyword">virtual</span> std::set&lt;std::string&gt; <a class="code" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#af0044467095e85135bdf7a636558487c">GetChannelList</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2d4b41f6e72ccd5b49aa928f2cbdabb7">   83</a></span>&#160;  <span class="keyword">const</span> proto::Header&amp; <a class="code" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2d4b41f6e72ccd5b49aa928f2cbdabb7">GetHeader</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> header_; }</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2d4b41f6e72ccd5b49aa928f2cbdabb7">   83</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a>&amp; <a class="code" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2d4b41f6e72ccd5b49aa928f2cbdabb7">GetHeader</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> header_; }</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2f3cda4d56cb535da7a81ec7d5956078">   90</a></span>&#160;  <span class="keyword">const</span> std::string <a class="code" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2f3cda4d56cb535da7a81ec7d5956078">GetFile</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> file_; }</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  std::string file_;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  proto::Header header_;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a> header_;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">bool</span> is_opened_ = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
@@ -129,6 +131,7 @@ $(function() {
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}  <span class="comment">// namespace apollo</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CYBER_RECORD_RECORD_BASE_H_</span></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1Header_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1Header.html">apollo::cyber::proto::Header</a></div><div class="ttdef"><b>Definition:</b> record.pb.h:1193</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordBase_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordBase.html">apollo::cyber::record::RecordBase</a></div><div class="ttdoc">Base class for record reader and writer.</div><div class="ttdef"><b>Definition:</b> record_base.h:35</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordBase_html_a0044d679cdfd10e56199f597446e912d"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a0044d679cdfd10e56199f597446e912d">apollo::cyber::record::RecordBase::GetProtoDesc</a></div><div class="ttdeci">virtual const std::string &amp; GetProtoDesc(const std::string &amp;channel_name) const =0</div><div class="ttdoc">Get proto descriptor string by channel name.</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordBase_html_a2d4b41f6e72ccd5b49aa928f2cbdabb7"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2d4b41f6e72ccd5b49aa928f2cbdabb7">apollo::cyber::record::RecordBase::GetHeader</a></div><div class="ttdeci">const proto::Header &amp; GetHeader() const</div><div class="ttdoc">Get record header.</div><div class="ttdef"><b>Definition:</b> record_base.h:83</div></div>
@@ -137,7 +140,7 @@ $(function() {
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordBase_html_a95c06bb77a60dfc827592777030f84de"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a95c06bb77a60dfc827592777030f84de">apollo::cyber::record::RecordBase::~RecordBase</a></div><div class="ttdeci">virtual ~RecordBase()=default</div><div class="ttdoc">Destructor.</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordBase_html_ad1883d8a1ce2f90046b18eb6fd9306e3"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#ad1883d8a1ce2f90046b18eb6fd9306e3">apollo::cyber::record::RecordBase::GetMessageType</a></div><div class="ttdeci">virtual const std::string &amp; GetMessageType(const std::string &amp;channel_name) const =0</div><div class="ttdoc">Get message type by channel name.</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordBase_html_af0044467095e85135bdf7a636558487c"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#af0044467095e85135bdf7a636558487c">apollo::cyber::record::RecordBase::GetChannelList</a></div><div class="ttdeci">virtual std::set&lt; std::string &gt; GetChannelList() const =0</div><div class="ttdoc">Get channel list.</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

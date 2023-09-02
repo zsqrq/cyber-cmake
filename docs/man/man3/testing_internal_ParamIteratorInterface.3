@@ -1,0 +1,31 @@
+.TH "testing::internal::ParamIteratorInterface< T >" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::internal::ParamIteratorInterface< T >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual const \fBParamGeneratorInterface\fP< T > * \fBBaseGenerator\fP () const =0"
+.br
+.ti -1c
+.RI "virtual void \fBAdvance\fP ()=0"
+.br
+.ti -1c
+.RI "virtual \fBParamIteratorInterface\fP * \fBClone\fP () const =0"
+.br
+.ti -1c
+.RI "virtual const T * \fBCurrent\fP () const =0"
+.br
+.ti -1c
+.RI "virtual bool \fBEquals\fP (const \fBParamIteratorInterface\fP &other) const =0"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

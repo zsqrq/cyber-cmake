@@ -1,0 +1,112 @@
+.TH "eprosima::fastrtps::rtps::GUID_t" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::GUID_t \- Structure \fBGUID_t\fP, entity identifier, unique in DDS-RTPS \fBDomain\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Guid\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGUID_t\fP ()"
+.br
+.ti -1c
+.RI "\fBGUID_t\fP (const \fBGUID_t\fP &g)"
+.br
+.ti -1c
+.RI "\fBGUID_t\fP (\fBGUID_t\fP &&g)"
+.br
+.ti -1c
+.RI "\fBGUID_t\fP & \fBoperator=\fP (const \fBGUID_t\fP &guid)"
+.br
+.ti -1c
+.RI "\fBGUID_t\fP & \fBoperator=\fP (\fBGUID_t\fP &&guid)"
+.br
+.ti -1c
+.RI "\fBGUID_t\fP (const \fBGuidPrefix_t\fP &guidP, uint32_t id)"
+.br
+.ti -1c
+.RI "\fBGUID_t\fP (const \fBGuidPrefix_t\fP &guidP, const \fBEntityId_t\fP &entId)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBGUID_t\fP \fBunknown\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGuidPrefix_t\fP \fBguidPrefix\fP"
+.br
+.RI "Guid prefix\&. "
+.ti -1c
+.RI "\fBEntityId_t\fP \fBentityId\fP"
+.br
+.RI "Entity id\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure \fBGUID_t\fP, entity identifier, unique in DDS-RTPS \fBDomain\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::GUID_t::GUID_t ()\fC [inline]\fP"
+DDefault constructor\&. Contructs an unknown GUID\&. 
+.SS "eprosima::fastrtps::rtps::GUID_t::GUID_t (const \fBGUID_t\fP & g)\fC [inline]\fP"
+Copy constructor\&. 
+.SS "eprosima::fastrtps::rtps::GUID_t::GUID_t (\fBGUID_t\fP && g)\fC [inline]\fP"
+Move constructor\&. 
+.SS "eprosima::fastrtps::rtps::GUID_t::GUID_t (const \fBGuidPrefix_t\fP & guidP, uint32_t id)\fC [inline]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIguidP\fP Guid prefix 
+.br
+\fIid\fP Entity id 
+.RE
+.PP
+
+.SS "eprosima::fastrtps::rtps::GUID_t::GUID_t (const \fBGuidPrefix_t\fP & guidP, const \fBEntityId_t\fP & entId)\fC [inline]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIguidP\fP Guid prefix 
+.br
+\fIentId\fP Entity id 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBGUID_t\fP& eprosima::fastrtps::rtps::GUID_t::operator= (const \fBGUID_t\fP & guid)\fC [inline]\fP"
+Assignment operator 
+.PP
+\fBParameters\fP
+.RS 4
+\fIguid\fP GUID to copy the data from\&. 
+.RE
+.PP
+
+.SS "\fBGUID_t\fP& eprosima::fastrtps::rtps::GUID_t::operator= (\fBGUID_t\fP && guid)\fC [inline]\fP"
+Assignment operator 
+.PP
+\fBParameters\fP
+.RS 4
+\fIguid\fP GUID to copy the data from\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,72 @@
+.TH "eprosima::fastrtps::rtps::SenderResource" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::SenderResource
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SenderResource\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBSend\fP (const octet *data, uint32_t dataLength, const \fBLocator_t\fP &destinationLocator)"
+.br
+.ti -1c
+.RI "bool \fBSupportsLocator\fP (const \fBLocator_t\fP &local)"
+.br
+.ti -1c
+.RI "bool \fBCanSendToRemoteLocator\fP (const \fBLocator_t\fP &remote)"
+.br
+.ti -1c
+.RI "\fBSenderResource\fP (\fBSenderResource\fP &&)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBNetworkFactory\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+RAII object that encapsulates the Send operation over one chanel in an unknown transport\&. A Sender resource is always univocally associated to a transport channel; the act of constructing a Sender Resource opens the channel and its destruction closes it\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::SenderResource::SenderResource (\fBSenderResource\fP &&)"
+Resources can only be transfered through move semantics\&. Copy, assignment, and construction outside of the factory are forbidden\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool eprosima::fastrtps::rtps::SenderResource::CanSendToRemoteLocator (const \fBLocator_t\fP & remote)"
+Reports whether this resource supports the given remote locator (i\&.e\&., this resource maps to a transport channel capable of sending to it)\&. 
+.SS "bool eprosima::fastrtps::rtps::SenderResource::Send (const octet * data, uint32_t dataLength, const \fBLocator_t\fP & destinationLocator)"
+Sends to a destination locator, through the channel managed by this resource\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Raw data slice to be sent\&. 
+.br
+\fIdataLength\fP Length of the data to be sent\&. Will be used as a boundary for the previous parameter\&. 
+.br
+\fIdestinationLocator\fP Locator describing the destination endpoint\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Success of the send operation\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::SenderResource::SupportsLocator (const \fBLocator_t\fP & local)"
+Reports whether this resource supports the given local locator (i\&.e\&., said locator maps to the transport channel managed by this resource)\&. 
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBNetworkFactory\fP\fC [friend]\fP"
+Only \fBNetworkFactory\fP is ever allowed to construct a \fBSenderResource\fP from scratch\&. In doing so, it guarantees the transport and channel are in a valid state for this resource to exist\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

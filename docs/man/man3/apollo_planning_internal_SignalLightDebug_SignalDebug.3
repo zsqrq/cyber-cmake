@@ -1,0 +1,235 @@
+.TH "apollo::planning_internal::SignalLightDebug_SignalDebug" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::planning_internal::SignalLightDebug_SignalDebug
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkLightIdFieldNumber\fP = 1, \fBkLightStopSFieldNumber\fP = 3, \fBkColorFieldNumber\fP = 2, \fBkIsStopWallCreatedFieldNumber\fP = 5, \fBkAdcStopDecelerationFieldNumber\fP = 4 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBSignalLightDebug_SignalDebug\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBSignalLightDebug_SignalDebug\fP (const \fBSignalLightDebug_SignalDebug\fP &from)"
+.br
+.ti -1c
+.RI "\fBSignalLightDebug_SignalDebug\fP (\fBSignalLightDebug_SignalDebug\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBSignalLightDebug_SignalDebug\fP & \fBoperator=\fP (const \fBSignalLightDebug_SignalDebug\fP &from)"
+.br
+.ti -1c
+.RI "\fBSignalLightDebug_SignalDebug\fP & \fBoperator=\fP (\fBSignalLightDebug_SignalDebug\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBSignalLightDebug_SignalDebug\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBSignalLightDebug_SignalDebug\fP *other)"
+.br
+.ti -1c
+.RI "\fBSignalLightDebug_SignalDebug\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBSignalLightDebug_SignalDebug\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBSignalLightDebug_SignalDebug\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_light_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_light_id\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBlight_id\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_light_id\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_light_id\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_light_id\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_light_id\fP (std::string *light_id)"
+.br
+.ti -1c
+.RI "bool \fBhas_light_stop_s\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_light_stop_s\fP ()"
+.br
+.ti -1c
+.RI "double \fBlight_stop_s\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_light_stop_s\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_color\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_color\fP ()"
+.br
+.ti -1c
+.RI "::apollo::perception::TrafficLight_Color \fBcolor\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_color\fP (::apollo::perception::TrafficLight_Color value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_stop_wall_created\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_stop_wall_created\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_stop_wall_created\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_stop_wall_created\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_adc_stop_deceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_adc_stop_deceleration\fP ()"
+.br
+.ti -1c
+.RI "double \fBadc_stop_deceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_adc_stop_deceleration\fP (double value)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_light_id\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSignalLightDebug_SignalDebug\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSignalLightDebug_SignalDebug\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSignalLightDebug_SignalDebug\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fplanning_5fmsgs_2fplanning_5finternal_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBSignalLightDebug_SignalDebug\fP &a, \fBSignalLightDebug_SignalDebug\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::planning_internal::SignalLightDebug_SignalDebug::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    SignalLightDebug_SignalDebug::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::planning_internal::SignalLightDebug_SignalDebug::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    8
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -328,20 +330,20 @@ $(function() {
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                 <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1transport_1_1MessageInfo.html">MessageInfo</a>&amp; message_info);</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageT&gt;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keywordtype">void</span> AddListener(<span class="keyword">const</span> RoleAttributes&amp; self_attr,</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keywordtype">void</span> AddListener(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; self_attr,</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                   <span class="keyword">const</span> MessageListener&lt;MessageT&gt;&amp; listener);</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageT&gt;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordtype">void</span> AddListener(<span class="keyword">const</span> RoleAttributes&amp; self_attr,</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                   <span class="keyword">const</span> RoleAttributes&amp; opposite_attr,</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordtype">void</span> AddListener(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; self_attr,</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                   <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; opposite_attr,</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                   <span class="keyword">const</span> MessageListener&lt;MessageT&gt;&amp; listener);</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageT&gt;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="keywordtype">void</span> RemoveListener(<span class="keyword">const</span> RoleAttributes&amp; self_attr);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="keywordtype">void</span> RemoveListener(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; self_attr);</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageT&gt;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="keywordtype">void</span> RemoveListener(<span class="keyword">const</span> RoleAttributes&amp; self_attr,</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                      <span class="keyword">const</span> RoleAttributes&amp; opposite_attr);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="keywordtype">void</span> RemoveListener(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; self_attr,</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                      <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; opposite_attr);</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  DECLARE_SINGLETON(<a class="code" href="classapollo_1_1cyber_1_1transport_1_1IntraDispatcher.html">IntraDispatcher</a>)</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
@@ -496,12 +498,13 @@ $(function() {
 <div class="ttc" id="aclassapollo_1_1cyber_1_1base_1_1AtomicRWLock_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1base_1_1AtomicRWLock.html">apollo::cyber::base::AtomicRWLock</a></div><div class="ttdef"><b>Definition:</b> atomic_rw_lock.h:36</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1base_1_1ReadLockGuard_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1base_1_1ReadLockGuard.html">apollo::cyber::base::ReadLockGuard</a></div><div class="ttdef"><b>Definition:</b> rw_lock_guard.h:35</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1base_1_1WriteLockGuard_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1base_1_1WriteLockGuard.html">apollo::cyber::base::WriteLockGuard</a></div><div class="ttdef"><b>Definition:</b> rw_lock_guard.h:48</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1RoleAttributes_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a></div><div class="ttdef"><b>Definition:</b> role_attributes.pb.h:258</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1ChannelChain_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1ChannelChain.html">apollo::cyber::transport::ChannelChain</a></div><div class="ttdef"><b>Definition:</b> intra_dispatcher.h:49</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1Dispatcher_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1Dispatcher.html">apollo::cyber::transport::Dispatcher</a></div><div class="ttdef"><b>Definition:</b> dispatcher.h:54</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1IntraDispatcher_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1IntraDispatcher.html">apollo::cyber::transport::IntraDispatcher</a></div><div class="ttdef"><b>Definition:</b> intra_dispatcher.h:251</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1ListenerHandler_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1ListenerHandler.html">apollo::cyber::transport::ListenerHandler</a></div><div class="ttdef"><b>Definition:</b> listener_handler.h:59</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1MessageInfo_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1MessageInfo.html">apollo::cyber::transport::MessageInfo</a></div><div class="ttdef"><b>Definition:</b> message_info.h:30</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

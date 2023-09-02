@@ -1,0 +1,219 @@
+.TH "eprosima::fastrtps::rtps::RTPSParticipant" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::RTPSParticipant \- Class \fBRTPSParticipant\fP, contains the public API for a \fBRTPSParticipant\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RTPSParticipant\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "const \fBGUID_t\fP & \fBgetGuid\fP () const"
+.br
+.RI "Get the \fBGUID_t\fP of the \fBRTPSParticipant\fP\&. "
+.ti -1c
+.RI "void \fBannounceRTPSParticipantState\fP ()"
+.br
+.RI "Force the announcement of the \fBRTPSParticipant\fP state\&. "
+.ti -1c
+.RI "void \fBstopRTPSParticipantAnnouncement\fP ()"
+.br
+.RI "Stop the \fBRTPSParticipant\fP announcement period\&. //TODO remove this method because is only for testing\&. "
+.ti -1c
+.RI "void \fBresetRTPSParticipantAnnouncement\fP ()"
+.br
+.RI "Reset the \fBRTPSParticipant\fP announcement period\&. //TODO remove this method because is only for testing\&. "
+.ti -1c
+.RI "bool \fBnewRemoteWriterDiscovered\fP (const \fBGUID_t\fP &pguid, int16_t userDefinedId)"
+.br
+.ti -1c
+.RI "bool \fBnewRemoteReaderDiscovered\fP (const \fBGUID_t\fP &pguid, int16_t userDefinedId)"
+.br
+.ti -1c
+.RI "uint32_t \fBgetRTPSParticipantID\fP () const"
+.br
+.ti -1c
+.RI "bool \fBregisterWriter\fP (\fBRTPSWriter\fP *Writer, \fBTopicAttributes\fP &topicAtt, \fBWriterQos\fP &wqos)"
+.br
+.ti -1c
+.RI "bool \fBregisterReader\fP (\fBRTPSReader\fP *Reader, \fBTopicAttributes\fP &topicAtt, \fBReaderQos\fP &rqos)"
+.br
+.ti -1c
+.RI "bool \fBupdateWriter\fP (\fBRTPSWriter\fP *Writer, \fBWriterQos\fP &wqos)"
+.br
+.ti -1c
+.RI "bool \fBupdateReader\fP (\fBRTPSReader\fP *Reader, \fBReaderQos\fP &rqos)"
+.br
+.ti -1c
+.RI "std::pair< \fBStatefulReader\fP *, \fBStatefulReader\fP * > \fBgetEDPReaders\fP ()"
+.br
+.ti -1c
+.RI "std::vector< std::string > \fBgetParticipantNames\fP ()"
+.br
+.ti -1c
+.RI "\fBRTPSParticipantAttributes\fP \fBgetRTPSParticipantAttributes\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgetMaxMessageSize\fP () const"
+.br
+.ti -1c
+.RI "uint32_t \fBgetMaxDataSize\fP () const"
+.br
+.ti -1c
+.RI "bool \fBget_remote_writer_info\fP (const \fBGUID_t\fP &writerGuid, \fBWriterProxyData\fP &returnedInfo)"
+.br
+.ti -1c
+.RI "bool \fBget_remote_reader_info\fP (const \fBGUID_t\fP &readerGuid, \fBReaderProxyData\fP &returnedInfo)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBRTPSParticipantImpl\fP"
+.br
+.ti -1c
+.RI "class \fBRTPSDomain\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBRTPSParticipant\fP, contains the public API for a \fBRTPSParticipant\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "std::pair<\fBStatefulReader\fP*,\fBStatefulReader\fP*> eprosima::fastrtps::rtps::RTPSParticipant::getEDPReaders ()"
+Get a pointer to the built-in to the RTPSReaders of the \fBEndpoint\fP Discovery Protocol\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::pair of pointers to \fBStatefulReader\fP\&. First is for Subscribers and Second is for Publishers\&. 
+.RE
+.PP
+
+.SS "\fBRTPSParticipantAttributes\fP eprosima::fastrtps::rtps::RTPSParticipant::getRTPSParticipantAttributes ()"
+Get a copy of the actual state of the RTPSParticipantParameters 
+.PP
+\fBReturns\fP
+.RS 4
+\fBRTPSParticipantAttributes\fP copy of the params\&. 
+.RE
+.PP
+
+.SS "uint32_t eprosima::fastrtps::rtps::RTPSParticipant::getRTPSParticipantID () const"
+Get the \fBParticipant\fP ID\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBParticipant\fP ID\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::RTPSParticipant::newRemoteReaderDiscovered (const \fBGUID_t\fP & pguid, int16_t userDefinedId)"
+Indicate the \fBParticipant\fP that you have discovered a new Remote Reader\&. This method can be used by the user to implements its own Static \fBEndpoint\fP Discovery Protocol 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpguid\fP \fBGUID_t\fP of the discovered Reader\&. 
+.br
+\fIuserDefinedId\fP ID of the discovered Reader\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly added\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::RTPSParticipant::newRemoteWriterDiscovered (const \fBGUID_t\fP & pguid, int16_t userDefinedId)"
+Indicate the \fBParticipant\fP that you have discovered a new Remote Writer\&. This method can be used by the user to implements its own Static \fBEndpoint\fP Discovery Protocol 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpguid\fP \fBGUID_t\fP of the discovered Writer\&. 
+.br
+\fIuserDefinedId\fP ID of the discovered Writer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly added\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::RTPSParticipant::registerReader (\fBRTPSReader\fP * Reader, \fBTopicAttributes\fP & topicAtt, \fBReaderQos\fP & rqos)"
+Register a \fBRTPSReader\fP in the builtin Protocols\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIReader\fP Pointer to the \fBRTPSReader\fP\&. 
+.br
+\fItopicAtt\fP Topic Attributes where you want to register it\&. 
+.br
+\fIrqos\fP \fBReaderQos\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly registered\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::RTPSParticipant::registerWriter (\fBRTPSWriter\fP * Writer, \fBTopicAttributes\fP & topicAtt, \fBWriterQos\fP & wqos)"
+Register a \fBRTPSWriter\fP in the builtin Protocols\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIWriter\fP Pointer to the \fBRTPSWriter\fP\&. 
+.br
+\fItopicAtt\fP Topic Attributes where you want to register it\&. 
+.br
+\fIwqos\fP \fBWriterQos\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly registered\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::RTPSParticipant::updateReader (\fBRTPSReader\fP * Reader, \fBReaderQos\fP & rqos)"
+Update reader QOS 
+.PP
+\fBParameters\fP
+.RS 4
+\fIReader\fP to update 
+.br
+\fIrqos\fP New reader QoS 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true on success 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::RTPSParticipant::updateWriter (\fBRTPSWriter\fP * Writer, \fBWriterQos\fP & wqos)"
+Update writer QOS 
+.PP
+\fBParameters\fP
+.RS 4
+\fIWriter\fP to update 
+.br
+\fIwqos\fP New writer QoS 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true on success 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

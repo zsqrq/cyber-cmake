@@ -1,0 +1,4051 @@
+.TH "eprosima::fastcdr::Cdr" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastcdr::Cdr \- This class offers an interface to serialize/deserialize some basic types using CDR protocol inside an \fBeprosima::fastcdr::FastBuffer\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Cdr\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBstate\fP"
+.br
+.RI "This class stores the current state of a CDR serialization\&. "
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCdrType\fP { \fBCORBA_CDR\fP, \fBDDS_CDR\fP }"
+.br
+.RI "This enumeration represents the two kinds of CDR serialization supported by eprosima::fastcdr::CDR\&. "
+.ti -1c
+.RI "enum \fBDDSCdrPlFlag\fP : uint8_t { \fBDDS_CDR_WITHOUT_PL\fP = 0x0, \fBDDS_CDR_WITH_PL\fP = 0x2 }"
+.br
+.RI "This enumeration represents the two posible values of the flag that points if the content is a parameter list (only in DDS CDR)\&. "
+.ti -1c
+.RI "enum \fBEndianness\fP : uint8_t { \fBBIG_ENDIANNESS\fP = 0x0, \fBLITTLE_ENDIANNESS\fP = 0x1 }"
+.br
+.RI "This enumeration represents endianness types\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCdr\fP (\fBFastBuffer\fP &cdrBuffer, const \fBEndianness\fP \fBendianness\fP=\fBDEFAULT_ENDIAN\fP, const \fBCdrType\fP cdrType=\fBCORBA_CDR\fP)"
+.br
+.RI "This constructor creates an \fBeprosima::fastcdr::Cdr\fP object that can serialize/deserialize the assigned buffer\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBread_encapsulation\fP ()"
+.br
+.RI "This function reads the encapsulation of the CDR stream\&. If the CDR stream contains an encapsulation, then this function will be calles before starting to deserialize\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize_encapsulation\fP ()"
+.br
+.ti -1c
+.RI "\fBDDSCdrPlFlag\fP \fBgetDDSCdrPlFlag\fP () const"
+.br
+.RI "This function returns the parameter list flag when the CDR type is eprosima::fastcdr::DDS_CDR\&. "
+.ti -1c
+.RI "void \fBsetDDSCdrPlFlag\fP (\fBDDSCdrPlFlag\fP plFlag)"
+.br
+.ti -1c
+.RI "uint16_t \fBgetDDSCdrOptions\fP () const"
+.br
+.RI "This function returns the option flags when the CDR type is eprosima::fastcdr::DDS_CDR\&. "
+.ti -1c
+.RI "void \fBsetDDSCdrOptions\fP (uint16_t options)"
+.br
+.ti -1c
+.RI "void \fBchangeEndianness\fP (\fBEndianness\fP \fBendianness\fP)"
+.br
+.ti -1c
+.RI "\fBEndianness\fP \fBendianness\fP ()"
+.br
+.RI "This function returns the current endianness used by the CDR type\&. "
+.ti -1c
+.RI "bool \fBjump\fP (size_t numBytes)"
+.br
+.RI "This function skips a number of bytes in the CDR stream buffer\&. "
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.RI "This function resets the current position in the buffer to the beginning\&. "
+.ti -1c
+.RI "char * \fBgetBufferPointer\fP ()"
+.br
+.RI "This function returns the pointer to the current used buffer\&. "
+.ti -1c
+.RI "char * \fBgetCurrentPosition\fP ()"
+.br
+.RI "This function returns the current position in the CDR stream\&. "
+.ti -1c
+.RI "size_t \fBgetSerializedDataLength\fP () const"
+.br
+.RI "This function returns the length of the serialized data inside the stream\&. "
+.ti -1c
+.RI "\fBstate\fP \fBgetState\fP ()"
+.br
+.RI "This function returns the current state of the CDR serialization process\&. "
+.ti -1c
+.RI "void \fBsetState\fP (\fBstate\fP &\fBstate\fP)"
+.br
+.RI "This function sets a previous state of the CDR serialization process;\&. "
+.ti -1c
+.RI "bool \fBmoveAlignmentForward\fP (size_t numBytes)"
+.br
+.ti -1c
+.RI "void \fBresetAlignment\fP ()"
+.br
+.RI "This function resets the alignment to the current position in the buffer\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const uint8_t octet_t)"
+.br
+.RI "This operator serializes an octet\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const char char_t)"
+.br
+.RI "This operator serializes a character\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const uint16_t ushort_t)"
+.br
+.RI "This operator serializes an unsigned short\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const int16_t short_t)"
+.br
+.RI "This operator serializes a short\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const uint32_t ulong_t)"
+.br
+.RI "This operator serializes an unsigned long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const int32_t long_t)"
+.br
+.RI "This operator serializes a long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const wchar_t wchar)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const uint64_t ulonglong_t)"
+.br
+.RI "This operator serializes an unsigned long long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const int64_t longlong_t)"
+.br
+.RI "This operator serializes a long long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const float float_t)"
+.br
+.RI "This operator serializes a float\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const double double_t)"
+.br
+.RI "This operator serializes a double\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const bool bool_t)"
+.br
+.RI "This operator serializes a boolean\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const char *string_t)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (char *string_t)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator<<\fP (const std::string &string_t)"
+.br
+.RI "This operator serializes a string\&. "
+.ti -1c
+.RI "template<class _T , size_t _Size> \fBCdr\fP & \fBoperator<<\fP (const std::array< _T, _Size > &array_t)"
+.br
+.RI "This operator template is used to serialize arrays\&. "
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBoperator<<\fP (const std::vector< _T > &vector_t)"
+.br
+.RI "This operator template is used to serialize sequences\&. "
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBoperator<<\fP (const _T &type_t)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (uint8_t &octet_t)"
+.br
+.RI "This operator deserializes an octet\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (char &char_t)"
+.br
+.RI "This operator deserializes a character\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (uint16_t &ushort_t)"
+.br
+.RI "This operator deserializes an unsigned short\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (int16_t &short_t)"
+.br
+.RI "This operator deserializes a short\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (uint32_t &ulong_t)"
+.br
+.RI "This operator deserializes an unsigned long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (int32_t &long_t)"
+.br
+.RI "This operator deserializes a long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (wchar_t &wchar)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (uint64_t &ulonglong_t)"
+.br
+.RI "This operator deserializes a unsigned long long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (int64_t &longlong_t)"
+.br
+.RI "This operator deserializes a long long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (float &float_t)"
+.br
+.RI "This operator deserializes a float\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (double &double_t)"
+.br
+.RI "This operator deserializes a double\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (bool &bool_t)"
+.br
+.RI "This operator deserializes a boolean\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (char *&string_t)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBoperator>>\fP (std::string &string_t)"
+.br
+.RI "This operator deserializes a string\&. "
+.ti -1c
+.RI "template<class _T , size_t _Size> \fBCdr\fP & \fBoperator>>\fP (std::array< _T, _Size > &array_t)"
+.br
+.RI "This operator template is used to deserialize arrays\&. "
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBoperator>>\fP (std::vector< _T > &vector_t)"
+.br
+.RI "This operator template is used to deserialize sequences\&. "
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBoperator>>\fP (_T &type_t)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const uint8_t octet_t)"
+.br
+.RI "This function serializes an octet\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const uint8_t octet_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes an octet with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const char char_t)"
+.br
+.RI "This function serializes a character\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const char char_t, \fBEndianness\fP)"
+.br
+.RI "This function serializes a character with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const uint16_t ushort_t)"
+.br
+.RI "This function serializes an unsigned short\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const uint16_t ushort_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes an unsigned short with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const int16_t short_t)"
+.br
+.RI "This function serializes a short\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const int16_t short_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes a short with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const uint32_t ulong_t)"
+.br
+.RI "This function serializes an unsigned long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const uint32_t ulong_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes an unsigned long with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const int32_t long_t)"
+.br
+.RI "This function serializes a long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const int32_t long_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes a long with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const wchar_t wchar)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const wchar_t wchar, \fBEndianness\fP \fBendianness\fP)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const uint64_t ulonglong_t)"
+.br
+.RI "This function serializes an unsigned long long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const uint64_t ulonglong_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes an unsigned long long with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const int64_t longlong_t)"
+.br
+.RI "This function serializes a long long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const int64_t longlong_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes a long long with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const float float_t)"
+.br
+.RI "This function serializes a float\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const float float_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes a float with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const double double_t)"
+.br
+.RI "This function serializes a double\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const double double_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes a double with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const bool bool_t)"
+.br
+.RI "This function serializes a boolean\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const bool bool_t, \fBEndianness\fP)"
+.br
+.RI "This function serializes a boolean with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const char *string_t)"
+.br
+.RI "This function serializes a string\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const char *string_t, size_t length)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const char *string_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes a string with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const char *string_t, size_t length, \fBEndianness\fP \fBendianness\fP)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (char *string_t)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (char *string_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const std::string &string_t)"
+.br
+.RI "This function serializes a std::string\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserialize\fP (const std::string &string_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes a std::string with a different endianness\&. "
+.ti -1c
+.RI "template<class _T , size_t _Size> \fBCdr\fP & \fBserialize\fP (const std::array< _T, _Size > &array_t)"
+.br
+.RI "This function template serializes an array\&. "
+.ti -1c
+.RI "template<class _T , size_t _Size> \fBCdr\fP & \fBserialize\fP (const std::array< _T, _Size > &array_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function template serializes an array with a different endianness\&. "
+.ti -1c
+.RI "template<class _T  = bool> \fBCdr\fP & \fBserialize\fP (const std::vector< bool > &vector_t)"
+.br
+.RI "This function template serializes a sequence of booleans\&. "
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBserialize\fP (const std::vector< _T > &vector_t)"
+.br
+.RI "This function template serializes a sequence\&. "
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBserialize\fP (const std::vector< _T > &vector_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function template serializes a sequence with a different endianness\&. "
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBserialize\fP (const _T &type_t)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const uint8_t *octet_t, size_t numElements)"
+.br
+.RI "This function serializes an array of octets\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const uint8_t *octet_t, size_t numElements, \fBEndianness\fP)"
+.br
+.RI "This function serializes an array of octets with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const char *char_t, size_t numElements)"
+.br
+.RI "This function serializes an array of characters\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const char *char_t, size_t numElements, \fBEndianness\fP)"
+.br
+.RI "This function serializes an array of characters with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const uint16_t *ushort_t, size_t numElements)"
+.br
+.RI "This function serializes an array of unsigned shorts\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const uint16_t *ushort_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes an array of unsigned shorts with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const int16_t *short_t, size_t numElements)"
+.br
+.RI "This function serializes an array of shorts\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const int16_t *short_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes an array of shorts with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const uint32_t *ulong_t, size_t numElements)"
+.br
+.RI "This function serializes an array of unsigned longs\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const uint32_t *ulong_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes an array of unsigned longs with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const int32_t *long_t, size_t numElements)"
+.br
+.RI "This function serializes an array of longs\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const int32_t *long_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes an array of longs with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const wchar_t *wchar, size_t numElements)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const wchar_t *wchar, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const uint64_t *ulonglong_t, size_t numElements)"
+.br
+.RI "This function serializes an array of unsigned long longs\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const uint64_t *ulonglong_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes an array of unsigned long longs with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const int64_t *longlong_t, size_t numElements)"
+.br
+.RI "This function serializes an array of long longs\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const int64_t *longlong_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes an array of long longs with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const float *float_t, size_t numElements)"
+.br
+.RI "This function serializes an array of floats\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const float *float_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes an array of floats with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const double *double_t, size_t numElements)"
+.br
+.RI "This function serializes an array of doubles\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const double *double_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function serializes an array of doubles with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const bool *bool_t, size_t numElements)"
+.br
+.RI "This function serializes an array of booleans\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const bool *bool_t, size_t numElements, \fBEndianness\fP)"
+.br
+.RI "This function serializes an array of booleans with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const std::string *string_t, size_t numElements)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBserializeArray\fP (const std::string *string_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBserializeArray\fP (const std::vector< _T > *vector_t, size_t numElements)"
+.br
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBserializeArray\fP (const _T *type_t, size_t numElements)"
+.br
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBserializeArray\fP (const _T *type_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBserializeSequence\fP (const _T *sequence_t, size_t numElements)"
+.br
+.RI "This function template serializes a raw sequence\&. "
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBserializeSequence\fP (const _T *sequence_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function template serializes a raw sequence with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (uint8_t &octet_t)"
+.br
+.RI "This function deserializes an octet\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (uint8_t &octet_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes an octet with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (char &char_t)"
+.br
+.RI "This function deserializes a character\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (char &char_t, \fBEndianness\fP)"
+.br
+.RI "This function deserializes a character with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (uint16_t &ushort_t)"
+.br
+.RI "This function deserializes an unsigned short\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (uint16_t &ushort_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes an unsigned short with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (int16_t &short_t)"
+.br
+.RI "This function deserializes a short\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (int16_t &short_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes a short with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (uint32_t &ulong_t)"
+.br
+.RI "This function deserializes an unsigned long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (uint32_t &ulong_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes an unsigned long with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (int32_t &long_t)"
+.br
+.RI "This function deserializes a long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (int32_t &long_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes a long with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (wchar_t &wchar)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (wchar_t &wchar, \fBEndianness\fP \fBendianness\fP)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (uint64_t &ulonglong_t)"
+.br
+.RI "This function deserializes an unsigned long long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (uint64_t &ulonglong_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes an unsigned long long with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (int64_t &longlong_t)"
+.br
+.RI "This function deserializes a long long\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (int64_t &longlong_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes a long long with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (float &float_t)"
+.br
+.RI "This function deserializes a float\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (float &float_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes a float with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (double &double_t)"
+.br
+.RI "This function deserializes a double\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (double &double_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes a double with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (bool &bool_t)"
+.br
+.RI "This function deserializes a boolean\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (bool &bool_t, \fBEndianness\fP)"
+.br
+.RI "This function deserializes a boolean with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (char *&string_t)"
+.br
+.RI "This function deserializes a string\&. This function allocates memory to store the string\&. The user pointer will be set to point this allocated memory\&. The user will have to free this allocated memory using free() "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (char *&string_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes a string with a different endianness\&. This function allocates memory to store the string\&. The user pointer will be set to point this allocated memory\&. The user will have to free this allocated memory using free() "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (std::string &string_t)"
+.br
+.RI "This function deserializes a std::string\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserialize\fP (std::string &string_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes a string with a different endianness\&. "
+.ti -1c
+.RI "template<class _T , size_t _Size> \fBCdr\fP & \fBdeserialize\fP (std::array< _T, _Size > &array_t)"
+.br
+.RI "This function template deserializes an array\&. "
+.ti -1c
+.RI "template<class _T , size_t _Size> \fBCdr\fP & \fBdeserialize\fP (std::array< _T, _Size > &array_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function template deserializes an array with a different endianness\&. "
+.ti -1c
+.RI "template<class _T  = bool> \fBCdr\fP & \fBdeserialize\fP (std::vector< bool > &vector_t)"
+.br
+.RI "This function template deserializes a sequence\&. "
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBdeserialize\fP (std::vector< _T > &vector_t)"
+.br
+.RI "This function template deserializes a sequence\&. "
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBdeserialize\fP (std::vector< _T > &vector_t, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function template deserializes a sequence with a different endianness\&. "
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBdeserialize\fP (_T &type_t)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (uint8_t *octet_t, size_t numElements)"
+.br
+.RI "This function deserializes an array of octets\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (uint8_t *octet_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes an array of octets with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (char *char_t, size_t numElements)"
+.br
+.RI "This function deserializes an array of characters\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (char *char_t, size_t numElements, \fBEndianness\fP)"
+.br
+.RI "This function deserializes an array of characters with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (uint16_t *ushort_t, size_t numElements)"
+.br
+.RI "This function deserializes an array of unsigned shorts\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (uint16_t *ushort_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes an array of unsigned shorts with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (int16_t *short_t, size_t numElements)"
+.br
+.RI "This function deserializes an array of shorts\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (int16_t *short_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes an array of shorts with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (uint32_t *ulong_t, size_t numElements)"
+.br
+.RI "This function deserializes an array of unsigned longs\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (uint32_t *ulong_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes an array of unsigned longs with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (int32_t *long_t, size_t numElements)"
+.br
+.RI "This function deserializes an array of longs\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (int32_t *long_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes an array of longs with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (wchar_t *wchar, size_t numElements)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (wchar_t *wchar, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (uint64_t *ulonglong_t, size_t numElements)"
+.br
+.RI "This function deserializes an array of unsigned long longs\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (uint64_t *ulonglong_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes an array of unsigned long longs with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (int64_t *longlong_t, size_t numElements)"
+.br
+.RI "This function deserializes an array of long longs\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (int64_t *longlong_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes an array of long longs with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (float *float_t, size_t numElements)"
+.br
+.RI "This function deserializes an array of floats\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (float *float_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes an array of floats with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (double *double_t, size_t numElements)"
+.br
+.RI "This function deserializes an array of doubles\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (double *double_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function deserializes an array of doubles with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (bool *bool_t, size_t numElements)"
+.br
+.RI "This function deserializes an array of booleans\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (bool *bool_t, size_t numElements, \fBEndianness\fP)"
+.br
+.RI "This function deserializes an array of booleans with a different endianness\&. "
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (std::string *string_t, size_t numElements)"
+.br
+.ti -1c
+.RI "\fBCdr\fP & \fBdeserializeArray\fP (std::string *string_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBdeserializeArray\fP (std::vector< _T > *vector_t, size_t numElements)"
+.br
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBdeserializeArray\fP (_T *type_t, size_t numElements)"
+.br
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBdeserializeArray\fP (_T *type_t, size_t numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.ti -1c
+.RI "template<class _T  = std::string> \fBCdr\fP & \fBdeserializeSequence\fP (std::string *&sequence_t, size_t &numElements)"
+.br
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBdeserializeSequence\fP (_T *&sequence_t, size_t &numElements)"
+.br
+.RI "This function template deserializes a raw sequence\&. This function allocates memory to store the sequence\&. The user pointer will be set to point this allocated memory\&. The user will have to free this allocated memory using free() "
+.ti -1c
+.RI "template<class _T > \fBCdr\fP & \fBdeserializeSequence\fP (_T *&sequence_t, size_t &numElements, \fBEndianness\fP \fBendianness\fP)"
+.br
+.RI "This function template deserializes a raw sequence with a different endianness\&. This function allocates memory to store the sequence\&. The user pointer will be set to point this allocated memory\&. The user will have to free this allocated memory using free() "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static size_t \fBalignment\fP (size_t current_alignment, size_t dataSize)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const \fBEndianness\fP \fBDEFAULT_ENDIAN\fP"
+.br
+.RI "Default endiness in the system\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class offers an interface to serialize/deserialize some basic types using CDR protocol inside an \fBeprosima::fastcdr::FastBuffer\fP\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBeprosima::fastcdr::Cdr::CdrType\fP"
+
+.PP
+This enumeration represents the two kinds of CDR serialization supported by eprosima::fastcdr::CDR\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICORBA_CDR \fP\fP
+Common CORBA CDR serialization\&. 
+.TP
+\fB\fIDDS_CDR \fP\fP
+DDS CDR serialization\&. 
+.SS "enum \fBeprosima::fastcdr::Cdr::DDSCdrPlFlag\fP : uint8_t"
+
+.PP
+This enumeration represents the two posible values of the flag that points if the content is a parameter list (only in DDS CDR)\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIDDS_CDR_WITHOUT_PL \fP\fP
+Specifies that the content is not a parameter list\&. 
+.TP
+\fB\fIDDS_CDR_WITH_PL \fP\fP
+Specifies that the content is a parameter list\&. 
+.SS "enum \fBeprosima::fastcdr::Cdr::Endianness\fP : uint8_t"
+
+.PP
+This enumeration represents endianness types\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIBIG_ENDIANNESS \fP\fP
+Big endianness\&. 
+.TP
+\fB\fILITTLE_ENDIANNESS \fP\fP
+Little endianness\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastcdr::Cdr::Cdr (\fBFastBuffer\fP & cdrBuffer, const \fBEndianness\fP endianness = \fC\fBDEFAULT_ENDIAN\fP\fP, const \fBCdrType\fP cdrType = \fC\fBCORBA_CDR\fP\fP)"
+
+.PP
+This constructor creates an \fBeprosima::fastcdr::Cdr\fP object that can serialize/deserialize the assigned buffer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcdrBuffer\fP A reference to the buffer that contains (or will contain) the CDR representation\&. 
+.br
+\fIendianness\fP The initial endianness that will be used\&. The default value is the endianness of the system\&. 
+.br
+\fIcdrType\fP Represents the type of CDR that will be used in serialization/deserialization\&. The default value is CORBA CDR\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static size_t eprosima::fastcdr::Cdr::alignment (size_t current_alignment, size_t dataSize)\fC [inline]\fP, \fC [static]\fP"
+TODO 
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (bool & bool_t)"
+
+.PP
+This function deserializes a boolean\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool_t\fP The variable that will store the boolean read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.br
+\fI\fBexception::BadParamException\fP\fP This exception is thrown when trying to deserialize an invalid value\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (bool & bool_t, \fBEndianness\fP)\fC [inline]\fP"
+
+.PP
+This function deserializes a boolean with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool_t\fP The variable that will store the boolean read from the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.br
+\fI\fBexception::BadParamException\fP\fP This exception is thrown when trying to deserialize an invalid value\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (char & char_t)"
+
+.PP
+This function deserializes a character\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar_t\fP The variable that will store the character read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (char & char_t, \fBEndianness\fP)\fC [inline]\fP"
+
+.PP
+This function deserializes a character with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar_t\fP The variable that will store the character read from the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (char *& string_t)"
+
+.PP
+This function deserializes a string\&. This function allocates memory to store the string\&. The user pointer will be set to point this allocated memory\&. The user will have to free this allocated memory using free() 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring_t\fP The pointer that will point to the string read from the buffer\&. The user will have to free the allocated memory using free() 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (char *& string_t, \fBEndianness\fP endianness)"
+
+.PP
+This function deserializes a string with a different endianness\&. This function allocates memory to store the string\&. The user pointer will be set to point this allocated memory\&. The user will have to free this allocated memory using free() 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring_t\fP The pointer that will point to the string read from the buffer\&. The user will have to free the allocated memory using free() 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (double & double_t)"
+
+.PP
+This function deserializes a double\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdouble_t\fP The variable that will store the double read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (double & double_t, \fBEndianness\fP endianness)"
+
+.PP
+This function deserializes a double with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdouble_t\fP The variable that will store the double read from the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (float & float_t)"
+
+.PP
+This function deserializes a float\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfloat_t\fP The variable that will store the float read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (float & float_t, \fBEndianness\fP endianness)"
+
+.PP
+This function deserializes a float with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfloat_t\fP The variable that will store the float read from the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (int16_t & short_t)"
+
+.PP
+This function deserializes a short\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshort_t\fP The variable that will store the short read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (int16_t & short_t, \fBEndianness\fP endianness)"
+
+.PP
+This function deserializes a short with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshort_t\fP The variable that will store the short read from the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (int32_t & long_t)"
+
+.PP
+This function deserializes a long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlong_t\fP The variable that will store the long read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (int32_t & long_t, \fBEndianness\fP endianness)"
+
+.PP
+This function deserializes a long with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlong_t\fP The variable that will store the long read from the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (int64_t & longlong_t)"
+
+.PP
+This function deserializes a long long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlonglong_t\fP The variable that will store the long long read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (int64_t & longlong_t, \fBEndianness\fP endianness)"
+
+.PP
+This function deserializes a long long with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlonglong_t\fP The variable that will store the long long read from the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T , size_t _Size> \fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (std::array< _T, _Size > & array_t)\fC [inline]\fP"
+
+.PP
+This function template deserializes an array\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarray_t\fP The variable that will store the array read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T , size_t _Size> \fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (std::array< _T, _Size > & array_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function template deserializes an array with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarray_t\fP The variable that will store the array read from the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (std::string & string_t)\fC [inline]\fP"
+
+.PP
+This function deserializes a std::string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring_t\fP The variable that will store the string read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (std::string & string_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function deserializes a string with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring_t\fP The variable that will store the string read from the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T > \fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (std::vector< _T > & vector_t)\fC [inline]\fP"
+
+.PP
+This function template deserializes a sequence\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvector_t\fP The variable that will store the sequence read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T > \fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (std::vector< _T > & vector_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function template deserializes a sequence with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvector_t\fP The variable that will store the sequence read from the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T  = bool> \fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (std::vector< bool > & vector_t)\fC [inline]\fP"
+
+.PP
+This function template deserializes a sequence\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvector_t\fP The variable that will store the sequence read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (uint16_t & ushort_t)\fC [inline]\fP"
+
+.PP
+This function deserializes an unsigned short\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIushort_t\fP The variable that will store the unsigned short read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (uint16_t & ushort_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function deserializes an unsigned short with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIushort_t\fP The variable that will store the unsigned short read from the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (uint32_t & ulong_t)\fC [inline]\fP"
+
+.PP
+This function deserializes an unsigned long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulong_t\fP The variable that will store the unsigned long read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (uint32_t & ulong_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function deserializes an unsigned long with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulong_t\fP The variable that will store the unsigned long read from the buffer\&.\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (uint64_t & ulonglong_t)\fC [inline]\fP"
+
+.PP
+This function deserializes an unsigned long long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulonglong_t\fP The variable that will store the unsigned long long read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (uint64_t & ulonglong_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function deserializes an unsigned long long with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulonglong_t\fP The variable that will store the unsigned long long read from the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (uint8_t & octet_t)\fC [inline]\fP"
+
+.PP
+This function deserializes an octet\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoctet_t\fP The variable that will store the octet read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserialize (uint8_t & octet_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function deserializes an octet with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoctet_t\fP The variable that will store the octet read from the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (bool * bool_t, size_t numElements)"
+
+.PP
+This function deserializes an array of booleans\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool_t\fP The variable that will store the array of booleans read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (bool * bool_t, size_t numElements, \fBEndianness\fP)\fC [inline]\fP"
+
+.PP
+This function deserializes an array of booleans with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool_t\fP The variable that will store the array of booleans read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (char * char_t, size_t numElements)"
+
+.PP
+This function deserializes an array of characters\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar_t\fP The variable that will store the array of characters read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (char * char_t, size_t numElements, \fBEndianness\fP)\fC [inline]\fP"
+
+.PP
+This function deserializes an array of characters with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar_t\fP The variable that will store the array of characters read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (double * double_t, size_t numElements)"
+
+.PP
+This function deserializes an array of doubles\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdouble_t\fP The variable that will store the array of doubles read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (double * double_t, size_t numElements, \fBEndianness\fP endianness)"
+
+.PP
+This function deserializes an array of doubles with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdouble_t\fP The variable that will store the array of doubles read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (float * float_t, size_t numElements)"
+
+.PP
+This function deserializes an array of floats\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfloat_t\fP The variable that will store the array of floats read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (float * float_t, size_t numElements, \fBEndianness\fP endianness)"
+
+.PP
+This function deserializes an array of floats with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfloat_t\fP The variable that will store the array of floats read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (int16_t * short_t, size_t numElements)"
+
+.PP
+This function deserializes an array of shorts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshort_t\fP The variable that will store the array of shorts read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (int16_t * short_t, size_t numElements, \fBEndianness\fP endianness)"
+
+.PP
+This function deserializes an array of shorts with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshort_t\fP The variable that will store the array of shorts read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (int32_t * long_t, size_t numElements)"
+
+.PP
+This function deserializes an array of longs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlong_t\fP The variable that will store the array of longs read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (int32_t * long_t, size_t numElements, \fBEndianness\fP endianness)"
+
+.PP
+This function deserializes an array of longs with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlong_t\fP The variable that will store the array of longs read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (int64_t * longlong_t, size_t numElements)"
+
+.PP
+This function deserializes an array of long longs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlonglong_t\fP The variable that will store the array of long longs read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (int64_t * longlong_t, size_t numElements, \fBEndianness\fP endianness)"
+
+.PP
+This function deserializes an array of long longs with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlonglong_t\fP The variable that will store the array of long longs read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (uint16_t * ushort_t, size_t numElements)\fC [inline]\fP"
+
+.PP
+This function deserializes an array of unsigned shorts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIushort_t\fP The variable that will store the array of unsigned shorts read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (uint16_t * ushort_t, size_t numElements, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function deserializes an array of unsigned shorts with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIushort_t\fP The variable that will store the array of unsigned shorts read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (uint32_t * ulong_t, size_t numElements)\fC [inline]\fP"
+
+.PP
+This function deserializes an array of unsigned longs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulong_t\fP The variable that will store the array of unsigned longs read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (uint32_t * ulong_t, size_t numElements, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function deserializes an array of unsigned longs with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulong_t\fP The variable that will store the array of unsigned longs read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (uint64_t * ulonglong_t, size_t numElements)\fC [inline]\fP"
+
+.PP
+This function deserializes an array of unsigned long longs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulonglong_t\fP The variable that will store the array of unsigned long longs read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (uint64_t * ulonglong_t, size_t numElements, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function deserializes an array of unsigned long longs with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulonglong_t\fP The variable that will store the array of unsigned long longs read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (uint8_t * octet_t, size_t numElements)\fC [inline]\fP"
+
+.PP
+This function deserializes an array of octets\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoctet_t\fP The variable that will store the array of octets read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::deserializeArray (uint8_t * octet_t, size_t numElements, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function deserializes an array of octets with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoctet_t\fP The variable that will store the array of octets read from the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T > \fBCdr\fP& eprosima::fastcdr::Cdr::deserializeSequence (_T *& sequence_t, size_t & numElements)\fC [inline]\fP"
+
+.PP
+This function template deserializes a raw sequence\&. This function allocates memory to store the sequence\&. The user pointer will be set to point this allocated memory\&. The user will have to free this allocated memory using free() 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsequence_t\fP The pointer that will store the sequence read from the buffer\&. 
+.br
+\fInumElements\fP This variable return the number of elements of the sequence\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T > \fBCdr\fP& eprosima::fastcdr::Cdr::deserializeSequence (_T *& sequence_t, size_t & numElements, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function template deserializes a raw sequence with a different endianness\&. This function allocates memory to store the sequence\&. The user pointer will be set to point this allocated memory\&. The user will have to free this allocated memory using free() 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsequence_t\fP The pointer that will store the sequence read from the buffer\&. 
+.br
+\fInumElements\fP This variable return the number of elements of the sequence\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBEndianness\fP eprosima::fastcdr::Cdr::endianness ()\fC [inline]\fP"
+
+.PP
+This function returns the current endianness used by the CDR type\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The endianness\&. 
+.RE
+.PP
+
+.SS "char* eprosima::fastcdr::Cdr::getCurrentPosition ()"
+
+.PP
+This function returns the current position in the CDR stream\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the current position in the buffer\&. 
+.RE
+.PP
+
+.SS "uint16_t eprosima::fastcdr::Cdr::getDDSCdrOptions () const"
+
+.PP
+This function returns the option flags when the CDR type is eprosima::fastcdr::DDS_CDR\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The option flags\&. 
+.RE
+.PP
+
+.SS "\fBDDSCdrPlFlag\fP eprosima::fastcdr::Cdr::getDDSCdrPlFlag () const"
+
+.PP
+This function returns the parameter list flag when the CDR type is eprosima::fastcdr::DDS_CDR\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The flag that specifies if the content is a parameter list\&. 
+.RE
+.PP
+
+.SS "size_t eprosima::fastcdr::Cdr::getSerializedDataLength () const\fC [inline]\fP"
+
+.PP
+This function returns the length of the serialized data inside the stream\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The length of the serialized data\&. 
+.RE
+.PP
+
+.SS "\fBstate\fP eprosima::fastcdr::Cdr::getState ()"
+
+.PP
+This function returns the current state of the CDR serialization process\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The current state of the CDR serialization process\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastcdr::Cdr::jump (size_t numBytes)"
+
+.PP
+This function skips a number of bytes in the CDR stream buffer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInumBytes\fP The number of bytes that will be jumped\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True is returned when it works successfully\&. Otherwise, false is returned\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const bool bool_t)\fC [inline]\fP"
+
+.PP
+This operator serializes a boolean\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool_t\fP The value of the boolean that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const char char_t)\fC [inline]\fP"
+
+.PP
+This operator serializes a character\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar_t\fP The value of the character that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const double double_t)\fC [inline]\fP"
+
+.PP
+This operator serializes a double\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdouble_t\fP The value of the double that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const float float_t)\fC [inline]\fP"
+
+.PP
+This operator serializes a float\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfloat_t\fP The value of the float that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const int16_t short_t)\fC [inline]\fP"
+
+.PP
+This operator serializes a short\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshort_t\fP The value of the short that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const int32_t long_t)\fC [inline]\fP"
+
+.PP
+This operator serializes a long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulong_t\fP The value of the long that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const int64_t longlong_t)\fC [inline]\fP"
+
+.PP
+This operator serializes a long long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlonglong_t\fP The value of the long long that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T , size_t _Size> \fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const std::array< _T, _Size > & array_t)\fC [inline]\fP"
+
+.PP
+This operator template is used to serialize arrays\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarray_t\fP The array that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const std::string & string_t)\fC [inline]\fP"
+
+.PP
+This operator serializes a string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring_t\fP The string that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T > \fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const std::vector< _T > & vector_t)\fC [inline]\fP"
+
+.PP
+This operator template is used to serialize sequences\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvector_t\fP The sequence that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const uint16_t ushort_t)\fC [inline]\fP"
+
+.PP
+This operator serializes an unsigned short\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIushort_t\fP The value of the unsigned short that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const uint32_t ulong_t)\fC [inline]\fP"
+
+.PP
+This operator serializes an unsigned long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulong_t\fP The value of the unsigned long that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const uint64_t ulonglong_t)\fC [inline]\fP"
+
+.PP
+This operator serializes an unsigned long long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulonglong_t\fP The value of the unsigned long long that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator<< (const uint8_t octet_t)\fC [inline]\fP"
+
+.PP
+This operator serializes an octet\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoctet_t\fP The value of the octet that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (bool & bool_t)\fC [inline]\fP"
+
+.PP
+This operator deserializes a boolean\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool_t\fP The variable that will store the boolean read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.br
+\fI\fBexception::BadParamException\fP\fP This exception is thrown when trying to deserialize an invalid value\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (char & char_t)\fC [inline]\fP"
+
+.PP
+This operator deserializes a character\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar_t\fP The variable that will store the character read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (double & double_t)\fC [inline]\fP"
+
+.PP
+This operator deserializes a double\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdouble_t\fP The variable that will store the double read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (float & float_t)\fC [inline]\fP"
+
+.PP
+This operator deserializes a float\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfloat_t\fP The variable that will store the float read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (int16_t & short_t)\fC [inline]\fP"
+
+.PP
+This operator deserializes a short\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshort_t\fP The variable that will store the short read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (int32_t & long_t)\fC [inline]\fP"
+
+.PP
+This operator deserializes a long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlong_t\fP The variable that will store the long read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (int64_t & longlong_t)\fC [inline]\fP"
+
+.PP
+This operator deserializes a long long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlonglong_t\fP The variable that will store the long long read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T , size_t _Size> \fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (std::array< _T, _Size > & array_t)\fC [inline]\fP"
+
+.PP
+This operator template is used to deserialize arrays\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarray_t\fP The variable that will store the array read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (std::string & string_t)\fC [inline]\fP"
+
+.PP
+This operator deserializes a string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring_t\fP The variable that will store the string read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T > \fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (std::vector< _T > & vector_t)\fC [inline]\fP"
+
+.PP
+This operator template is used to deserialize sequences\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvector_t\fP The variable that will store the sequence read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (uint16_t & ushort_t)\fC [inline]\fP"
+
+.PP
+This operator deserializes an unsigned short\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIushort_t\fP The variable that will store the unsigned short read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (uint32_t & ulong_t)\fC [inline]\fP"
+
+.PP
+This operator deserializes an unsigned long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulong_t\fP The variable that will store the unsigned long read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (uint64_t & ulonglong_t)\fC [inline]\fP"
+
+.PP
+This operator deserializes a unsigned long long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulonglong_t\fP The variable that will store the unsigned long long read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::operator>> (uint8_t & octet_t)\fC [inline]\fP"
+
+.PP
+This operator deserializes an octet\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoctet_t\fP The variable that will store the octet read from the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::read_encapsulation ()"
+
+.PP
+This function reads the encapsulation of the CDR stream\&. If the CDR stream contains an encapsulation, then this function will be calles before starting to deserialize\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to deserialize a position that exceeds the internal memory size\&. 
+.br
+\fI\fBexception::BadParamException\fP\fP This exception is thrown when trying to deserialize an invalid value\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const bool bool_t)"
+
+.PP
+This function serializes a boolean\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool_t\fP The value of the boolean that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const bool bool_t, \fBEndianness\fP)\fC [inline]\fP"
+
+.PP
+This function serializes a boolean with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool_t\fP The value of the boolean that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const char * string_t)"
+
+.PP
+This function serializes a string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring_t\fP The pointer to the string that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const char * string_t, \fBEndianness\fP endianness)"
+
+.PP
+This function serializes a string with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring_t\fP The pointer to the string that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const char char_t)"
+
+.PP
+This function serializes a character\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar_t\fP The value of the character that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const char char_t, \fBEndianness\fP)\fC [inline]\fP"
+
+.PP
+This function serializes a character with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar_t\fP The value of the character that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const double double_t)"
+
+.PP
+This function serializes a double\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdouble_t\fP The value of the double that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const double double_t, \fBEndianness\fP endianness)"
+
+.PP
+This function serializes a double with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdouble_t\fP The value of the double that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const float float_t)"
+
+.PP
+This function serializes a float\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfloat_t\fP The value of the float that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const float float_t, \fBEndianness\fP endianness)"
+
+.PP
+This function serializes a float with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfloat_t\fP The value of the float that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const int16_t short_t)"
+
+.PP
+This function serializes a short\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshort_t\fP The value of the short that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const int16_t short_t, \fBEndianness\fP endianness)"
+
+.PP
+This function serializes a short with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshort_t\fP The value of the short that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const int32_t long_t)"
+
+.PP
+This function serializes a long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlong_t\fP The value of the long that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const int32_t long_t, \fBEndianness\fP endianness)"
+
+.PP
+This function serializes a long with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlong_t\fP The value of the long that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const int64_t longlong_t)"
+
+.PP
+This function serializes a long long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlonglong_t\fP The value of the long long that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const int64_t longlong_t, \fBEndianness\fP endianness)"
+
+.PP
+This function serializes a long long with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlonglong_t\fP The value of the long long that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T , size_t _Size> \fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const std::array< _T, _Size > & array_t)\fC [inline]\fP"
+
+.PP
+This function template serializes an array\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarray_t\fP The array that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T , size_t _Size> \fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const std::array< _T, _Size > & array_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function template serializes an array with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarray_t\fP The array that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const std::string & string_t)\fC [inline]\fP"
+
+.PP
+This function serializes a std::string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring_t\fP The string that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const std::string & string_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function serializes a std::string with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring_t\fP The string that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T > \fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const std::vector< _T > & vector_t)\fC [inline]\fP"
+
+.PP
+This function template serializes a sequence\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvector_t\fP The sequence that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T > \fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const std::vector< _T > & vector_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function template serializes a sequence with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvector_t\fP The sequence that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T  = bool> \fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const std::vector< bool > & vector_t)\fC [inline]\fP"
+
+.PP
+This function template serializes a sequence of booleans\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvector_t\fP The sequence that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const uint16_t ushort_t)\fC [inline]\fP"
+
+.PP
+This function serializes an unsigned short\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIushort_t\fP The value of the unsigned short that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const uint16_t ushort_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function serializes an unsigned short with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIushort_t\fP The value of the unsigned short that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const uint32_t ulong_t)\fC [inline]\fP"
+
+.PP
+This function serializes an unsigned long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulong_t\fP The value of the unsigned long that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const uint32_t ulong_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function serializes an unsigned long with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulong_t\fP The value of the unsigned long that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const uint64_t ulonglong_t)\fC [inline]\fP"
+
+.PP
+This function serializes an unsigned long long\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulonglong_t\fP The value of the unsigned long long that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const uint64_t ulonglong_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function serializes an unsigned long long with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulonglong_t\fP The value of the unsigned long long that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const uint8_t octet_t)\fC [inline]\fP"
+
+.PP
+This function serializes an octet\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoctet_t\fP The value of the octet that will be serialized in the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serialize (const uint8_t octet_t, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function serializes an octet with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoctet_t\fP The value of the octet that will be serialized in the buffer\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const bool * bool_t, size_t numElements)"
+
+.PP
+This function serializes an array of booleans\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool_t\fP The array of booleans that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const bool * bool_t, size_t numElements, \fBEndianness\fP)\fC [inline]\fP"
+
+.PP
+This function serializes an array of booleans with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool_t\fP The array of booleans that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const char * char_t, size_t numElements)"
+
+.PP
+This function serializes an array of characters\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar_t\fP The array of characters that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const char * char_t, size_t numElements, \fBEndianness\fP)\fC [inline]\fP"
+
+.PP
+This function serializes an array of characters with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar_t\fP The array of characters that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const double * double_t, size_t numElements)"
+
+.PP
+This function serializes an array of doubles\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdouble_t\fP The array of doubles that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const double * double_t, size_t numElements, \fBEndianness\fP endianness)"
+
+.PP
+This function serializes an array of doubles with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdouble_t\fP The array of doubles that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const float * float_t, size_t numElements)"
+
+.PP
+This function serializes an array of floats\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfloat_t\fP The array of floats that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const float * float_t, size_t numElements, \fBEndianness\fP endianness)"
+
+.PP
+This function serializes an array of floats with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfloat_t\fP The array of floats that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const int16_t * short_t, size_t numElements)"
+
+.PP
+This function serializes an array of shorts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshort_t\fP The array of shorts that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const int16_t * short_t, size_t numElements, \fBEndianness\fP endianness)"
+
+.PP
+This function serializes an array of shorts with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshort_t\fP The array of shorts that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const int32_t * long_t, size_t numElements)"
+
+.PP
+This function serializes an array of longs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlong_t\fP The array of longs that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const int32_t * long_t, size_t numElements, \fBEndianness\fP endianness)"
+
+.PP
+This function serializes an array of longs with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlong_t\fP The array of longs that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const int64_t * longlong_t, size_t numElements)"
+
+.PP
+This function serializes an array of long longs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlonglong_t\fP The array of long longs that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const int64_t * longlong_t, size_t numElements, \fBEndianness\fP endianness)"
+
+.PP
+This function serializes an array of long longs with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlonglong_t\fP The array of long longs that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const uint16_t * ushort_t, size_t numElements)\fC [inline]\fP"
+
+.PP
+This function serializes an array of unsigned shorts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIushort_t\fP The array of unsigned shorts that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const uint16_t * ushort_t, size_t numElements, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function serializes an array of unsigned shorts with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIushort_t\fP The array of unsigned shorts that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const uint32_t * ulong_t, size_t numElements)\fC [inline]\fP"
+
+.PP
+This function serializes an array of unsigned longs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulong_t\fP The array of unsigned longs that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const uint32_t * ulong_t, size_t numElements, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function serializes an array of unsigned longs with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulong_t\fP The array of unsigned longs that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const uint64_t * ulonglong_t, size_t numElements)\fC [inline]\fP"
+
+.PP
+This function serializes an array of unsigned long longs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulonglong_t\fP The array of unsigned long longs that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const uint64_t * ulonglong_t, size_t numElements, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function serializes an array of unsigned long longs with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIulonglong_t\fP The array of unsigned long longs that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const uint8_t * octet_t, size_t numElements)\fC [inline]\fP"
+
+.PP
+This function serializes an array of octets\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoctet_t\fP The sequence of octets that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "\fBCdr\fP& eprosima::fastcdr::Cdr::serializeArray (const uint8_t * octet_t, size_t numElements, \fBEndianness\fP)\fC [inline]\fP"
+
+.PP
+This function serializes an array of octets with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoctet_t\fP The array of octets that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP Number of the elements in the array\&. 
+.br
+\fIendianness\fP Endianness that will be used in the serialization of this value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T > \fBCdr\fP& eprosima::fastcdr::Cdr::serializeSequence (const _T * sequence_t, size_t numElements)\fC [inline]\fP"
+
+.PP
+This function template serializes a raw sequence\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsequence_t\fP Pointer to the sequence that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP The number of elements contained in the sequence\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "template<class _T > \fBCdr\fP& eprosima::fastcdr::Cdr::serializeSequence (const _T * sequence_t, size_t numElements, \fBEndianness\fP endianness)\fC [inline]\fP"
+
+.PP
+This function template serializes a raw sequence with a different endianness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsequence_t\fP Pointer to the sequence that will be serialized in the buffer\&. 
+.br
+\fInumElements\fP The number of elements contained in the sequence\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBeprosima::fastcdr::Cdr\fP object\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI\fBexception::NotEnoughMemoryException\fP\fP This exception is thrown when trying to serialize a position that exceeds the internal memory size\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastcdr::Cdr::setState (\fBstate\fP & state)"
+
+.PP
+This function sets a previous state of the CDR serialization process;\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstate\fP Previous state that will be set\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

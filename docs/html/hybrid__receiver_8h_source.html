@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -114,7 +116,7 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">using</span> apollo::cyber::proto::OptionalMode;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">using</span> apollo::cyber::proto::QosDurabilityPolicy;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">using</span> apollo::cyber::proto::RoleAttributes;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> M&gt;</div>
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1transport_1_1HybridReceiver.html">   49</a></span>&#160;<span class="keyword">class </span><a class="code" href="classapollo_1_1cyber_1_1transport_1_1HybridReceiver.html">HybridReceiver</a> : <span class="keyword">public</span> <a class="code" href="classapollo_1_1cyber_1_1transport_1_1Receiver.html">Receiver</a>&lt;M&gt; {</div>
@@ -131,7 +133,7 @@ $(function() {
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">using</span> MappingTable =</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      std::unordered_map&lt;Relation, OptionalMode, std::hash&lt;int&gt;&gt;;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1transport_1_1HybridReceiver.html">HybridReceiver</a>(<span class="keyword">const</span> RoleAttributes&amp; attr,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1transport_1_1HybridReceiver.html">HybridReceiver</a>(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; attr,</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                 <span class="keyword">const</span> <span class="keyword">typename</span> Receiver&lt;M&gt;::MessageListener&amp; msg_listener,</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                 <span class="keyword">const</span> ParticipantPtr&amp; participant);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classapollo_1_1cyber_1_1transport_1_1HybridReceiver.html">HybridReceiver</a>();</div>
@@ -139,8 +141,8 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">void</span> Enable() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">void</span> Disable() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> Enable(<span class="keyword">const</span> RoleAttributes&amp; opposite_attr) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">void</span> Disable(<span class="keyword">const</span> RoleAttributes&amp; opposite_attr) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> Enable(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; opposite_attr) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">void</span> Disable(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; opposite_attr) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> InitMode();</div>
@@ -150,9 +152,9 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">void</span> ClearReceivers();</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">void</span> InitTransmitters();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">void</span> ClearTransmitters();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">void</span> ReceiveHistoryMsg(<span class="keyword">const</span> RoleAttributes&amp; opposite_attr);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> ThreadFunc(<span class="keyword">const</span> RoleAttributes&amp; opposite_attr);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  Relation GetRelation(<span class="keyword">const</span> RoleAttributes&amp; opposite_attr);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">void</span> ReceiveHistoryMsg(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; opposite_attr);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> ThreadFunc(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; opposite_attr);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  Relation GetRelation(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; opposite_attr);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  HistoryPtr history_;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  ReceiverContainer receivers_;</div>
@@ -167,7 +169,7 @@ $(function() {
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> M&gt;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<a class="code" href="classapollo_1_1cyber_1_1transport_1_1HybridReceiver.html">HybridReceiver&lt;M&gt;::HybridReceiver</a>(</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">const</span> RoleAttributes&amp; attr,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; attr,</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">const</span> <span class="keyword">typename</span> Receiver&lt;M&gt;::MessageListener&amp; msg_listener,</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">const</span> ParticipantPtr&amp; participant)</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    : <a class="code" href="classapollo_1_1cyber_1_1transport_1_1Receiver.html">Receiver</a>&lt;M&gt;(attr, msg_listener),</div>
@@ -256,7 +258,7 @@ $(function() {
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> M&gt;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keywordtype">void</span> HybridReceiver&lt;M&gt;::InitHistory() {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  HistoryAttributes history_attr(this-&gt;attr_.qos_profile().history(),</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <a class="code" href="classeprosima_1_1fastrtps_1_1rtps_1_1HistoryAttributes.html">HistoryAttributes</a> history_attr(this-&gt;attr_.qos_profile().history(),</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                                 this-&gt;attr_.qos_profile().depth());</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  history_ = std::make_shared&lt;History&lt;M&gt;&gt;(history_attr);</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordflow">if</span> (this-&gt;attr_.qos_profile().durability() ==</div>
@@ -380,9 +382,11 @@ $(function() {
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}  <span class="comment">// namespace apollo</span></div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CYBER_TRANSPORT_RECEIVER_HYBRID_RECEIVER_H_</span></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1RoleAttributes_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a></div><div class="ttdef"><b>Definition:</b> role_attributes.pb.h:258</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1HybridReceiver_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1HybridReceiver.html">apollo::cyber::transport::HybridReceiver</a></div><div class="ttdef"><b>Definition:</b> hybrid_receiver.h:49</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1Receiver_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1Receiver.html">apollo::cyber::transport::Receiver</a></div><div class="ttdef"><b>Definition:</b> receiver.h:32</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="aclasseprosima_1_1fastrtps_1_1rtps_1_1HistoryAttributes_html"><div class="ttname"><a href="classeprosima_1_1fastrtps_1_1rtps_1_1HistoryAttributes.html">eprosima::fastrtps::rtps::HistoryAttributes</a></div><div class="ttdef"><b>Definition:</b> HistoryAttributes.h:39</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

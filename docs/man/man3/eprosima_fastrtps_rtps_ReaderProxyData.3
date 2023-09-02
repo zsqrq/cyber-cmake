@@ -1,0 +1,235 @@
+.TH "eprosima::fastrtps::rtps::ReaderProxyData" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::ReaderProxyData
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ReaderProxyData\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "RTPS_DllAPI \fBReaderProxyData\fP (const \fBReaderProxyData\fP &readerInfo)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBReaderProxyData\fP & \fBoperator=\fP (const \fBReaderProxyData\fP &readerInfo)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBguid\fP (const \fBGUID_t\fP &guid)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBguid\fP (\fBGUID_t\fP &&guid)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBGUID_t\fP \fBguid\fP () const"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBGUID_t\fP & \fBguid\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBunicastLocatorList\fP (const \fBLocatorList_t\fP &unicastLocatorList)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBunicastLocatorList\fP (\fBLocatorList_t\fP &&unicastLocatorList)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBLocatorList_t\fP \fBunicastLocatorList\fP () const"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBLocatorList_t\fP & \fBunicastLocatorList\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBmulticastLocatorList\fP (const \fBLocatorList_t\fP &multicastLocatorList)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBmulticastLocatorList\fP (\fBLocatorList_t\fP &&multicastLocatorList)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBLocatorList_t\fP \fBmulticastLocatorList\fP () const"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBLocatorList_t\fP & \fBmulticastLocatorList\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBkey\fP (const \fBInstanceHandle_t\fP &key)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBkey\fP (\fBInstanceHandle_t\fP &&key)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBInstanceHandle_t\fP \fBkey\fP () const"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBInstanceHandle_t\fP & \fBkey\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBRTPSParticipantKey\fP (const \fBInstanceHandle_t\fP &RTPSParticipantKey)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBRTPSParticipantKey\fP (\fBInstanceHandle_t\fP &&RTPSParticipantKey)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBInstanceHandle_t\fP \fBRTPSParticipantKey\fP () const"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBInstanceHandle_t\fP & \fBRTPSParticipantKey\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBtypeName\fP (const std::string &typeName)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBtypeName\fP (std::string &&typeName)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI std::string \fBtypeName\fP () const"
+.br
+.ti -1c
+.RI "RTPS_DllAPI std::string & \fBtypeName\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBtopicName\fP (const std::string &topicName)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBtopicName\fP (std::string &&topicName)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI std::string \fBtopicName\fP () const"
+.br
+.ti -1c
+.RI "RTPS_DllAPI std::string & \fBtopicName\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBuserDefinedId\fP (uint16_t userDefinedId)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI uint16_t \fBuserDefinedId\fP () const"
+.br
+.ti -1c
+.RI "RTPS_DllAPI uint16_t & \fBuserDefinedId\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBisAlive\fP (bool isAlive)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI bool \fBisAlive\fP () const"
+.br
+.ti -1c
+.RI "RTPS_DllAPI bool & \fBisAlive\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBtopicKind\fP (\fBTopicKind_t\fP topicKind)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBTopicKind_t\fP \fBtopicKind\fP () const"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBTopicKind_t\fP & \fBtopicKind\fP ()"
+.br
+.ti -1c
+.RI "bool \fBtoParameterList\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI bool \fBreadFromCDRMessage\fP (\fBCDRMessage_t\fP *msg)"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdate\fP (\fBReaderProxyData\fP *rdata)"
+.br
+.ti -1c
+.RI "void \fBcopy\fP (\fBReaderProxyData\fP *rdata)"
+.br
+.ti -1c
+.RI "\fBRemoteReaderAttributes\fP & \fBtoRemoteReaderAttributes\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_expectsInlineQos\fP"
+.br
+.ti -1c
+.RI "\fBReaderQos\fP \fBm_qos\fP"
+.br
+.RI "Reader Qos 
+.br
+ "
+.ti -1c
+.RI "\fBParameterList_t\fP \fBm_parameterList\fP"
+.br
+.RI "Parameter list\&. "
+.ti -1c
+.RI "\fBRemoteReaderAttributes\fP \fBm_remoteAtt\fP"
+.br
+.RI "Remote Attributes associated with this proxy data\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBReaderProxyData\fP, used to represent all the information on a Reader (both local and remote) with the purpose of implementing the discovery\&.
+.IP "\(bu" 2
+
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void eprosima::fastrtps::rtps::ReaderProxyData::clear ()"
+Clear (put to default) the information\&. 
+.SS "void eprosima::fastrtps::rtps::ReaderProxyData::copy (\fBReaderProxyData\fP * rdata)"
+Copy ALL the information from another object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrdata\fP Pointer to the object from where the information must be copied\&. 
+.RE
+.PP
+
+.SS "RTPS_DllAPI bool eprosima::fastrtps::rtps::ReaderProxyData::readFromCDRMessage (\fBCDRMessage_t\fP * msg)"
+Read the information from a \fBCDRMessage_t\fP\&. The position of hte message must be in the beggining on the parameter list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP Pointer to the message\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true on success 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::ReaderProxyData::toParameterList ()"
+Convert the data to a parameter list to send this information as a RTPS message\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if correct\&. 
+.RE
+.PP
+
+.SS "\fBRemoteReaderAttributes\fP& eprosima::fastrtps::rtps::ReaderProxyData::toRemoteReaderAttributes ()"
+Convert the ProxyData information to \fBRemoteReaderAttributes\fP object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the \fBRemoteReaderAttributes\fP object\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::ReaderProxyData::update (\fBReaderProxyData\fP * rdata)"
+Update the information (only certain fields can be updated)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrdata\fP Poitner to the object from which we are going to update\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

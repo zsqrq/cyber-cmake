@@ -1,0 +1,619 @@
+.TH "apollo::control::SimpleLongitudinalDebug" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::control::SimpleLongitudinalDebug
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkCurrentMatchedPointFieldNumber\fP = 32, \fBkCurrentReferencePointFieldNumber\fP = 33, \fBkPreviewReferencePointFieldNumber\fP = 34, \fBkStationReferenceFieldNumber\fP = 1, \fBkStationErrorFieldNumber\fP = 2, \fBkStationErrorLimitedFieldNumber\fP = 3, \fBkPreviewStationErrorFieldNumber\fP = 4, \fBkSpeedReferenceFieldNumber\fP = 5, \fBkSpeedErrorFieldNumber\fP = 6, \fBkSpeedControllerInputLimitedFieldNumber\fP = 7, \fBkPreviewSpeedReferenceFieldNumber\fP = 8, \fBkPreviewSpeedErrorFieldNumber\fP = 9, \fBkPreviewAccelerationReferenceFieldNumber\fP = 10, \fBkAccelerationCmdCloseloopFieldNumber\fP = 11, \fBkAccelerationCmdFieldNumber\fP = 12, \fBkAccelerationLookupFieldNumber\fP = 13, \fBkSpeedLookupFieldNumber\fP = 14, \fBkCalibrationValueFieldNumber\fP = 15, \fBkThrottleCmdFieldNumber\fP = 16, \fBkBrakeCmdFieldNumber\fP = 17, \fBkSlopeOffsetCompensationFieldNumber\fP = 19, \fBkCurrentStationFieldNumber\fP = 20, \fBkIsFullStopFieldNumber\fP = 18, \fBkPidSaturationStatusFieldNumber\fP = 22, \fBkPathRemainFieldNumber\fP = 21, \fBkSpeedOffsetFieldNumber\fP = 24, \fBkCurrentSpeedFieldNumber\fP = 25, \fBkAccelerationReferenceFieldNumber\fP = 26, \fBkCurrentAccelerationFieldNumber\fP = 27, \fBkAccelerationErrorFieldNumber\fP = 28, \fBkJerkReferenceFieldNumber\fP = 29, \fBkCurrentJerkFieldNumber\fP = 30, \fBkJerkErrorFieldNumber\fP = 31, \fBkAccelerationLookupLimitFieldNumber\fP = 35, \fBkLeadlagSaturationStatusFieldNumber\fP = 23 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBSimpleLongitudinalDebug\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBSimpleLongitudinalDebug\fP (const \fBSimpleLongitudinalDebug\fP &from)"
+.br
+.ti -1c
+.RI "\fBSimpleLongitudinalDebug\fP (\fBSimpleLongitudinalDebug\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBSimpleLongitudinalDebug\fP & \fBoperator=\fP (const \fBSimpleLongitudinalDebug\fP &from)"
+.br
+.ti -1c
+.RI "\fBSimpleLongitudinalDebug\fP & \fBoperator=\fP (\fBSimpleLongitudinalDebug\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBSimpleLongitudinalDebug\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBSimpleLongitudinalDebug\fP *other)"
+.br
+.ti -1c
+.RI "\fBSimpleLongitudinalDebug\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBSimpleLongitudinalDebug\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBSimpleLongitudinalDebug\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_current_matched_point\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_current_matched_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::TrajectoryPoint\fP & \fBcurrent_matched_point\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::TrajectoryPoint\fP * \fBrelease_current_matched_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBmutable_current_matched_point\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_current_matched_point\fP (::\fBapollo::common::TrajectoryPoint\fP *current_matched_point)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_current_matched_point\fP (::\fBapollo::common::TrajectoryPoint\fP *current_matched_point)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBunsafe_arena_release_current_matched_point\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_current_reference_point\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_current_reference_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::TrajectoryPoint\fP & \fBcurrent_reference_point\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::TrajectoryPoint\fP * \fBrelease_current_reference_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBmutable_current_reference_point\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_current_reference_point\fP (::\fBapollo::common::TrajectoryPoint\fP *current_reference_point)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_current_reference_point\fP (::\fBapollo::common::TrajectoryPoint\fP *current_reference_point)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBunsafe_arena_release_current_reference_point\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_preview_reference_point\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_preview_reference_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::TrajectoryPoint\fP & \fBpreview_reference_point\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::TrajectoryPoint\fP * \fBrelease_preview_reference_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBmutable_preview_reference_point\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_preview_reference_point\fP (::\fBapollo::common::TrajectoryPoint\fP *preview_reference_point)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_preview_reference_point\fP (::\fBapollo::common::TrajectoryPoint\fP *preview_reference_point)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBunsafe_arena_release_preview_reference_point\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_station_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_station_reference\fP ()"
+.br
+.ti -1c
+.RI "double \fBstation_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_station_reference\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_station_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_station_error\fP ()"
+.br
+.ti -1c
+.RI "double \fBstation_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_station_error\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_station_error_limited\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_station_error_limited\fP ()"
+.br
+.ti -1c
+.RI "double \fBstation_error_limited\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_station_error_limited\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_preview_station_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_preview_station_error\fP ()"
+.br
+.ti -1c
+.RI "double \fBpreview_station_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_preview_station_error\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_reference\fP ()"
+.br
+.ti -1c
+.RI "double \fBspeed_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_speed_reference\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_error\fP ()"
+.br
+.ti -1c
+.RI "double \fBspeed_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_speed_error\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed_controller_input_limited\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_controller_input_limited\fP ()"
+.br
+.ti -1c
+.RI "double \fBspeed_controller_input_limited\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_speed_controller_input_limited\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_preview_speed_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_preview_speed_reference\fP ()"
+.br
+.ti -1c
+.RI "double \fBpreview_speed_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_preview_speed_reference\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_preview_speed_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_preview_speed_error\fP ()"
+.br
+.ti -1c
+.RI "double \fBpreview_speed_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_preview_speed_error\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_preview_acceleration_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_preview_acceleration_reference\fP ()"
+.br
+.ti -1c
+.RI "double \fBpreview_acceleration_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_preview_acceleration_reference\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration_cmd_closeloop\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration_cmd_closeloop\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration_cmd_closeloop\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration_cmd_closeloop\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration_cmd\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration_cmd\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration_lookup\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration_lookup\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration_lookup\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration_lookup\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed_lookup\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_lookup\fP ()"
+.br
+.ti -1c
+.RI "double \fBspeed_lookup\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_speed_lookup\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_calibration_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_calibration_value\fP ()"
+.br
+.ti -1c
+.RI "double \fBcalibration_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_calibration_value\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_throttle_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_throttle_cmd\fP ()"
+.br
+.ti -1c
+.RI "double \fBthrottle_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_throttle_cmd\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_brake_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brake_cmd\fP ()"
+.br
+.ti -1c
+.RI "double \fBbrake_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brake_cmd\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_slope_offset_compensation\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_slope_offset_compensation\fP ()"
+.br
+.ti -1c
+.RI "double \fBslope_offset_compensation\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_slope_offset_compensation\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_current_station\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_current_station\fP ()"
+.br
+.ti -1c
+.RI "double \fBcurrent_station\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_current_station\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_full_stop\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_full_stop\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_full_stop\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_full_stop\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_pid_saturation_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_pid_saturation_status\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBpid_saturation_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_pid_saturation_status\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_path_remain\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_path_remain\fP ()"
+.br
+.ti -1c
+.RI "double \fBpath_remain\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_path_remain\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed_offset\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_offset\fP ()"
+.br
+.ti -1c
+.RI "double \fBspeed_offset\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_speed_offset\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_current_speed\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_current_speed\fP ()"
+.br
+.ti -1c
+.RI "double \fBcurrent_speed\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_current_speed\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration_reference\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration_reference\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_current_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_current_acceleration\fP ()"
+.br
+.ti -1c
+.RI "double \fBcurrent_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_current_acceleration\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration_error\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration_error\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_jerk_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_jerk_reference\fP ()"
+.br
+.ti -1c
+.RI "double \fBjerk_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_jerk_reference\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_current_jerk\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_current_jerk\fP ()"
+.br
+.ti -1c
+.RI "double \fBcurrent_jerk\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_current_jerk\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_jerk_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_jerk_error\fP ()"
+.br
+.ti -1c
+.RI "double \fBjerk_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_jerk_error\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration_lookup_limit\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration_lookup_limit\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration_lookup_limit\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration_lookup_limit\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_leadlag_saturation_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_leadlag_saturation_status\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBleadlag_saturation_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_leadlag_saturation_status\fP (int32_t value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSimpleLongitudinalDebug\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSimpleLongitudinalDebug\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSimpleLongitudinalDebug\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fcontrol_5fmsgs_2fcontrol_5fcmd_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBSimpleLongitudinalDebug\fP &a, \fBSimpleLongitudinalDebug\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::control::SimpleLongitudinalDebug::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    SimpleLongitudinalDebug::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::control::SimpleLongitudinalDebug::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    2
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

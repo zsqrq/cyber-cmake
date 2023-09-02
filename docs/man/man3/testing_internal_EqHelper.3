@@ -1,0 +1,25 @@
+.TH "testing::internal::EqHelper" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::internal::EqHelper
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T1 , typename T2 , typename std::enable_if<!std::is_integral< T1 >::value||!std::is_pointer< T2 >::value >::type *  = nullptr> static AssertionResult \fBCompare\fP (const char *lhs_expression, const char *rhs_expression, const T1 &lhs, const T2 &rhs)"
+.br
+.ti -1c
+.RI "static AssertionResult \fBCompare\fP (const char *lhs_expression, const char *rhs_expression, BiggestInt lhs, BiggestInt rhs)"
+.br
+.ti -1c
+.RI "template<typename T > static AssertionResult \fBCompare\fP (const char *lhs_expression, const char *rhs_expression, std::nullptr_t, T *rhs)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,432 @@
+.TH "apollo::cyber::proto::RoleAttributes" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::proto::RoleAttributes
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkHostNameFieldNumber\fP = 1, \fBkHostIpFieldNumber\fP = 2, \fBkNodeNameFieldNumber\fP = 4, \fBkChannelNameFieldNumber\fP = 6, \fBkMessageTypeFieldNumber\fP = 8, \fBkProtoDescFieldNumber\fP = 9, \fBkServiceNameFieldNumber\fP = 13, \fBkQosProfileFieldNumber\fP = 11, \fBkSocketAddrFieldNumber\fP = 12, \fBkNodeIdFieldNumber\fP = 5, \fBkChannelIdFieldNumber\fP = 7, \fBkIdFieldNumber\fP = 10, \fBkServiceIdFieldNumber\fP = 14, \fBkProcessIdFieldNumber\fP = 3 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBRoleAttributes\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBRoleAttributes\fP (const \fBRoleAttributes\fP &from)"
+.br
+.ti -1c
+.RI "\fBRoleAttributes\fP (\fBRoleAttributes\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBRoleAttributes\fP & \fBoperator=\fP (const \fBRoleAttributes\fP &from)"
+.br
+.ti -1c
+.RI "\fBRoleAttributes\fP & \fBoperator=\fP (\fBRoleAttributes\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBRoleAttributes\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBRoleAttributes\fP *other)"
+.br
+.ti -1c
+.RI "\fBRoleAttributes\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBRoleAttributes\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBRoleAttributes\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_host_name\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_host_name\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBhost_name\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_host_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_host_name\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_host_name\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_host_name\fP (std::string *host_name)"
+.br
+.ti -1c
+.RI "bool \fBhas_host_ip\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_host_ip\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBhost_ip\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_host_ip\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_host_ip\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_host_ip\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_host_ip\fP (std::string *host_ip)"
+.br
+.ti -1c
+.RI "bool \fBhas_node_name\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_node_name\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBnode_name\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_node_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_node_name\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_node_name\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_node_name\fP (std::string *node_name)"
+.br
+.ti -1c
+.RI "bool \fBhas_channel_name\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_channel_name\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBchannel_name\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_channel_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_channel_name\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_channel_name\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_channel_name\fP (std::string *channel_name)"
+.br
+.ti -1c
+.RI "bool \fBhas_message_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_message_type\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBmessage_type\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_message_type\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_message_type\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_message_type\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_message_type\fP (std::string *message_type)"
+.br
+.ti -1c
+.RI "bool \fBhas_proto_desc\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_proto_desc\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBproto_desc\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_proto_desc\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_proto_desc\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_proto_desc\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_proto_desc\fP (std::string *proto_desc)"
+.br
+.ti -1c
+.RI "bool \fBhas_service_name\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_service_name\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBservice_name\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_service_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_service_name\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_service_name\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_service_name\fP (std::string *service_name)"
+.br
+.ti -1c
+.RI "bool \fBhas_qos_profile\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_qos_profile\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::cyber::proto::QosProfile\fP & \fBqos_profile\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::cyber::proto::QosProfile\fP * \fBrelease_qos_profile\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::cyber::proto::QosProfile\fP * \fBmutable_qos_profile\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_qos_profile\fP (::\fBapollo::cyber::proto::QosProfile\fP *qos_profile)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_qos_profile\fP (::\fBapollo::cyber::proto::QosProfile\fP *qos_profile)"
+.br
+.ti -1c
+.RI "::\fBapollo::cyber::proto::QosProfile\fP * \fBunsafe_arena_release_qos_profile\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_socket_addr\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_socket_addr\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::cyber::proto::SocketAddr\fP & \fBsocket_addr\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::cyber::proto::SocketAddr\fP * \fBrelease_socket_addr\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::cyber::proto::SocketAddr\fP * \fBmutable_socket_addr\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_socket_addr\fP (::\fBapollo::cyber::proto::SocketAddr\fP *socket_addr)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_socket_addr\fP (::\fBapollo::cyber::proto::SocketAddr\fP *socket_addr)"
+.br
+.ti -1c
+.RI "::\fBapollo::cyber::proto::SocketAddr\fP * \fBunsafe_arena_release_socket_addr\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_node_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_node_id\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBnode_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_node_id\fP (uint64_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_channel_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_channel_id\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBchannel_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_channel_id\fP (uint64_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_id\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_id\fP (uint64_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_service_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_service_id\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBservice_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_service_id\fP (uint64_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_process_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_process_id\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBprocess_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_process_id\fP (int32_t value)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_host_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_host_ip\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_node_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_channel_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_message_type\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_proto_desc\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_service_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBRoleAttributes\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBRoleAttributes\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRoleAttributes\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_cyber_2fproto_2frole_5fattributes_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBRoleAttributes\fP &a, \fBRoleAttributes\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::cyber::proto::RoleAttributes::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    RoleAttributes::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::cyber::proto::RoleAttributes::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    1
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

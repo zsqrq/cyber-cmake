@@ -1,5 +1,7 @@
 <map id="cyber_channel.CyberChannelecho.callback" name="cyber_channel.CyberChannelecho.callback">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,305,57"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1blocker_1_1BlockerBase.html#aa9606bd0d65712dfd8c62bee4db5180b" title=" " alt="" coords="353,5,705,32"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1blocker_1_1Blocker.html#ad121ab8e1fb379cd348267cccdc62624" title=" " alt="" coords="369,56,689,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,305,108"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1proto_1_1SingleMessage.html#a682dd6466436d8eef8934c2719f2ea4f" title=" " alt="" coords="353,5,711,32"/>
+<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html#a1522ad4d61caa55eaaf0862ffafbfc81" title=" " alt="" coords="356,56,708,83"/>
+<area shape="rect" id="node4" href="$classapollo_1_1cyber_1_1blocker_1_1BlockerBase.html#aa9606bd0d65712dfd8c62bee4db5180b" title=" " alt="" coords="356,107,708,133"/>
+<area shape="rect" id="node5" href="$classapollo_1_1cyber_1_1blocker_1_1Blocker.html#ad121ab8e1fb379cd348267cccdc62624" title=" " alt="" coords="372,157,692,184"/>
 </map>

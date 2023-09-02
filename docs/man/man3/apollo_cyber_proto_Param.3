@@ -1,0 +1,313 @@
+.TH "apollo::cyber::proto::Param" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::proto::Param
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBOneofValueCase\fP { \fBkBoolValue\fP = 4, \fBkIntValue\fP = 5, \fBkDoubleValue\fP = 6, \fBkStringValue\fP = 7, \fBONEOF_VALUE_NOT_SET\fP = 0 }"
+.br
+.ti -1c
+.RI "enum : int { \fBkNameFieldNumber\fP = 1, \fBkTypeNameFieldNumber\fP = 3, \fBkProtoDescFieldNumber\fP = 8, \fBkTypeFieldNumber\fP = 2, \fBkBoolValueFieldNumber\fP = 4, \fBkIntValueFieldNumber\fP = 5, \fBkDoubleValueFieldNumber\fP = 6, \fBkStringValueFieldNumber\fP = 7 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBParam\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBParam\fP (const \fBParam\fP &from)"
+.br
+.ti -1c
+.RI "\fBParam\fP (\fBParam\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBParam\fP & \fBoperator=\fP (const \fBParam\fP &from)"
+.br
+.ti -1c
+.RI "\fBParam\fP & \fBoperator=\fP (\fBParam\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBParam\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBParam\fP *other)"
+.br
+.ti -1c
+.RI "\fBParam\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBParam\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBParam\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_name\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_name\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBname\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_name\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_name\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_name\fP (std::string *name)"
+.br
+.ti -1c
+.RI "bool \fBhas_type_name\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_type_name\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBtype_name\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_type_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_type_name\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_type_name\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_type_name\fP (std::string *type_name)"
+.br
+.ti -1c
+.RI "bool \fBhas_proto_desc\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_proto_desc\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBproto_desc\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_proto_desc\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_proto_desc\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_proto_desc\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_proto_desc\fP (std::string *proto_desc)"
+.br
+.ti -1c
+.RI "bool \fBhas_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::cyber::proto::ParamType \fBtype\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_type\fP (::apollo::cyber::proto::ParamType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_bool_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_bool_value\fP ()"
+.br
+.ti -1c
+.RI "bool \fBbool_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_bool_value\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_int_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_int_value\fP ()"
+.br
+.ti -1c
+.RI "int64_t \fBint_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_int_value\fP (int64_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_double_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_double_value\fP ()"
+.br
+.ti -1c
+.RI "double \fBdouble_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_double_value\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_string_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_string_value\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBstring_value\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_string_value\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_string_value\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_string_value\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_string_value\fP (std::string *string_value)"
+.br
+.ti -1c
+.RI "void \fBclear_oneof_value\fP ()"
+.br
+.ti -1c
+.RI "OneofValueCase \fBoneof_value_case\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_type_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_proto_desc\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBParam\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBParam\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBParam\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_cyber_2fproto_2fparameter_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBParam\fP &a, \fBParam\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::cyber::proto::Param::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Param::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::cyber::proto::Param::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    0
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

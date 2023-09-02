@@ -1,0 +1,66 @@
+.TH "third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/security/authentication/Authentication.h" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/security/authentication/Authentication.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./common/Handle\&.h'\fP
+.br
+\fC#include '\&.\&./common/SharedSecretHandle\&.h'\fP
+.br
+\fC#include '\&.\&./\&.\&./common/Guid\&.h'\fP
+.br
+\fC#include '\&.\&./\&.\&./attributes/RTPSParticipantAttributes\&.h'\fP
+.br
+\fC#include '\&.\&./exceptions/SecurityException\&.h'\fP
+.br
+\fC#include '\&.\&./\&.\&./common/Token\&.h'\fP
+.br
+\fC#include '\&.\&./\&.\&./common/CDRMessage_t\&.h'\fP
+.br
+\fC#include 'Handshake\&.h'\fP
+.br
+\fC#include <cstdint>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::security::AuthenticationListener\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::security::Authentication\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBeprosima\fP"
+.br
+.RI "Maximum payload is maximum of UDP packet size minus 536bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) With those 536 bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) bytes is posible to send RTPS Header plus RTPS Data submessage plus RTPS Heartbeat submessage\&. "
+.ti -1c
+.RI " \fBeprosima::fastrtps\fP"
+.br
+.ti -1c
+.RI " \fBeprosima::fastrtps::rtps\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBValidationResult_t\fP : uint32_t { \fBVALIDATION_OK\fP = 0, \fBVALIDATION_FAILED\fP, \fBVALIDATION_PENDING_RETRY\fP, \fBVALIDATION_PENDING_HANDSHAKE_REQUEST\fP, \fBVALIDATION_PENDING_HANDSHAKE_MESSAGE\fP, \fBVALIDATION_OK_WITH_FINAL_MESSAGE\fP }"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

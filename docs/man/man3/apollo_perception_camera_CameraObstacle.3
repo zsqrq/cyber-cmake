@@ -1,0 +1,439 @@
+.TH "apollo::perception::camera::CameraObstacle" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::perception::camera::CameraObstacle
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkTypeProbsFieldNumber\fP = 22, \fBkKeyPointsFieldNumber\fP = 25, \fBkDebugMessageFieldNumber\fP = 26, \fBkObstacleFieldNumber\fP = 1, \fBkUpperLeftFieldNumber\fP = 23, \fBkLowerRightFieldNumber\fP = 24, \fBkTypeFieldNumber\fP = 21 }"
+.br
+.ti -1c
+.RI "typedef CameraObstacle_CameraType \fBCameraType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBCameraObstacle\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBCameraObstacle\fP (const \fBCameraObstacle\fP &from)"
+.br
+.ti -1c
+.RI "\fBCameraObstacle\fP (\fBCameraObstacle\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBCameraObstacle\fP & \fBoperator=\fP (const \fBCameraObstacle\fP &from)"
+.br
+.ti -1c
+.RI "\fBCameraObstacle\fP & \fBoperator=\fP (\fBCameraObstacle\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBCameraObstacle\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBCameraObstacle\fP *other)"
+.br
+.ti -1c
+.RI "\fBCameraObstacle\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBCameraObstacle\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBCameraObstacle\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBtype_probs_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_type_probs\fP ()"
+.br
+.ti -1c
+.RI "float \fBtype_probs\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_type_probs\fP (int index, float value)"
+.br
+.ti -1c
+.RI "void \fBadd_type_probs\fP (float value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< float > & \fBtype_probs\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< float > * \fBmutable_type_probs\fP ()"
+.br
+.ti -1c
+.RI "int \fBkey_points_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_key_points\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBmutable_key_points\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::Point2D\fP > * \fBmutable_key_points\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point2D\fP & \fBkey_points\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBadd_key_points\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::Point2D\fP > & \fBkey_points\fP () const"
+.br
+.ti -1c
+.RI "int \fBdebug_message_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_debug_message\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBdebug_message\fP (int index) const"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_debug_message\fP (int index)"
+.br
+.ti -1c
+.RI "void \fBset_debug_message\fP (int index, const std::string &value)"
+.br
+.ti -1c
+.RI "void \fBset_debug_message\fP (int index, std::string &&value)"
+.br
+.ti -1c
+.RI "void \fBset_debug_message\fP (int index, const char *value)"
+.br
+.ti -1c
+.RI "void \fBset_debug_message\fP (int index, const char *value, size_t size)"
+.br
+.ti -1c
+.RI "std::string * \fBadd_debug_message\fP ()"
+.br
+.ti -1c
+.RI "void \fBadd_debug_message\fP (const std::string &value)"
+.br
+.ti -1c
+.RI "void \fBadd_debug_message\fP (std::string &&value)"
+.br
+.ti -1c
+.RI "void \fBadd_debug_message\fP (const char *value)"
+.br
+.ti -1c
+.RI "void \fBadd_debug_message\fP (const char *value, size_t size)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< std::string > & \fBdebug_message\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< std::string > * \fBmutable_debug_message\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_obstacle\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_obstacle\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::PerceptionObstacle\fP & \fBobstacle\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::perception::PerceptionObstacle\fP * \fBrelease_obstacle\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::PerceptionObstacle\fP * \fBmutable_obstacle\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_obstacle\fP (::\fBapollo::perception::PerceptionObstacle\fP *obstacle)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_obstacle\fP (::\fBapollo::perception::PerceptionObstacle\fP *obstacle)"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::PerceptionObstacle\fP * \fBunsafe_arena_release_obstacle\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_upper_left\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_upper_left\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point2D\fP & \fBupper_left\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point2D\fP * \fBrelease_upper_left\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBmutable_upper_left\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_upper_left\fP (::\fBapollo::common::Point2D\fP *upper_left)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_upper_left\fP (::\fBapollo::common::Point2D\fP *upper_left)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBunsafe_arena_release_upper_left\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_lower_right\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_lower_right\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point2D\fP & \fBlower_right\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point2D\fP * \fBrelease_lower_right\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBmutable_lower_right\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_lower_right\fP (::\fBapollo::common::Point2D\fP *lower_right)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_lower_right\fP (::\fBapollo::common::Point2D\fP *lower_right)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBunsafe_arena_release_lower_right\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::perception::camera::CameraObstacle_CameraType \fBtype\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_type\fP (::apollo::perception::camera::CameraObstacle_CameraType value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBCameraObstacle\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBCameraObstacle\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBCameraType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCameraType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCameraType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCameraType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, CameraType *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr CameraType \fBUNKNOWN\fP"
+.br
+.ti -1c
+.RI "static constexpr CameraType \fBUNKNOWN_MOVABLE\fP"
+.br
+.ti -1c
+.RI "static constexpr CameraType \fBUNKNOWN_UNMOVABLE\fP"
+.br
+.ti -1c
+.RI "static constexpr CameraType \fBPEDESTRIAN\fP"
+.br
+.ti -1c
+.RI "static constexpr CameraType \fBBICYCLE\fP"
+.br
+.ti -1c
+.RI "static constexpr CameraType \fBVEHICLE\fP"
+.br
+.ti -1c
+.RI "static constexpr CameraType \fBCameraType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr CameraType \fBCameraType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCameraType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCameraObstacle\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fperception_5fmsgs_2fperception_5fcamera_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBCameraObstacle\fP &a, \fBCameraObstacle\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::perception::camera::CameraObstacle::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    CameraObstacle::MergeImpl
+}
+.fi
+.SS "constexpr CameraObstacle_CameraType apollo::perception::camera::CameraObstacle::BICYCLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CameraObstacle_CameraType_BICYCLE
+.fi
+.SS "constexpr int apollo::perception::camera::CameraObstacle::CameraType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CameraObstacle_CameraType_CameraType_ARRAYSIZE
+.fi
+.SS "constexpr CameraObstacle_CameraType apollo::perception::camera::CameraObstacle::CameraType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CameraObstacle_CameraType_CameraType_MAX
+.fi
+.SS "constexpr CameraObstacle_CameraType apollo::perception::camera::CameraObstacle::CameraType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CameraObstacle_CameraType_CameraType_MIN
+.fi
+.SS "constexpr int apollo::perception::camera::CameraObstacle::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    4
+.fi
+.SS "constexpr CameraObstacle_CameraType apollo::perception::camera::CameraObstacle::PEDESTRIAN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CameraObstacle_CameraType_PEDESTRIAN
+.fi
+.SS "constexpr CameraObstacle_CameraType apollo::perception::camera::CameraObstacle::UNKNOWN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CameraObstacle_CameraType_UNKNOWN
+.fi
+.SS "constexpr CameraObstacle_CameraType apollo::perception::camera::CameraObstacle::UNKNOWN_MOVABLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CameraObstacle_CameraType_UNKNOWN_MOVABLE
+.fi
+.SS "constexpr CameraObstacle_CameraType apollo::perception::camera::CameraObstacle::UNKNOWN_UNMOVABLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CameraObstacle_CameraType_UNKNOWN_UNMOVABLE
+.fi
+.SS "constexpr CameraObstacle_CameraType apollo::perception::camera::CameraObstacle::VEHICLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CameraObstacle_CameraType_VEHICLE
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

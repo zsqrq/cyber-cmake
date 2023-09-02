@@ -1,0 +1,1068 @@
+.TH "apollo::perception::PerceptionObstacle" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::perception::PerceptionObstacle
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkPolygonPointFieldNumber\fP = 8, \fBkPointCloudFieldNumber\fP = 12, \fBkDropsFieldNumber\fP = 15, \fBkMeasurementsFieldNumber\fP = 20, \fBkPositionCovarianceFieldNumber\fP = 22, \fBkVelocityCovarianceFieldNumber\fP = 23, \fBkAccelerationCovarianceFieldNumber\fP = 24, \fBkPositionFieldNumber\fP = 2, \fBkVelocityFieldNumber\fP = 4, \fBkAccelerationFieldNumber\fP = 16, \fBkAnchorPointFieldNumber\fP = 17, \fBkBbox2DFieldNumber\fP = 18, \fBkLightStatusFieldNumber\fP = 25, \fBkMsgFieldNumber\fP = 26, \fBkV2XInfoFieldNumber\fP = 28, \fBkThetaFieldNumber\fP = 3, \fBkLengthFieldNumber\fP = 5, \fBkIdFieldNumber\fP = 1, \fBkTypeFieldNumber\fP = 10, \fBkWidthFieldNumber\fP = 6, \fBkHeightFieldNumber\fP = 7, \fBkTrackingTimeFieldNumber\fP = 9, \fBkTimestampFieldNumber\fP = 11, \fBkConfidenceFieldNumber\fP = 13, \fBkConfidenceTypeFieldNumber\fP = 14, \fBkSubTypeFieldNumber\fP = 19, \fBkSourceFieldNumber\fP = 27, \fBkHeightAboveGroundFieldNumber\fP = 21 }"
+.br
+.ti -1c
+.RI "typedef PerceptionObstacle_Type \fBType\fP"
+.br
+.ti -1c
+.RI "typedef PerceptionObstacle_ConfidenceType \fBConfidenceType\fP"
+.br
+.ti -1c
+.RI "typedef PerceptionObstacle_SubType \fBSubType\fP"
+.br
+.ti -1c
+.RI "typedef PerceptionObstacle_Source \fBSource\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBPerceptionObstacle\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBPerceptionObstacle\fP (const \fBPerceptionObstacle\fP &from)"
+.br
+.ti -1c
+.RI "\fBPerceptionObstacle\fP (\fBPerceptionObstacle\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBPerceptionObstacle\fP & \fBoperator=\fP (const \fBPerceptionObstacle\fP &from)"
+.br
+.ti -1c
+.RI "\fBPerceptionObstacle\fP & \fBoperator=\fP (\fBPerceptionObstacle\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBPerceptionObstacle\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBPerceptionObstacle\fP *other)"
+.br
+.ti -1c
+.RI "\fBPerceptionObstacle\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBPerceptionObstacle\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBPerceptionObstacle\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBpolygon_point_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_polygon_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_polygon_point\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::Point3D\fP > * \fBmutable_polygon_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBpolygon_point\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBadd_polygon_point\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::Point3D\fP > & \fBpolygon_point\fP () const"
+.br
+.ti -1c
+.RI "int \fBpoint_cloud_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_point_cloud\fP ()"
+.br
+.ti -1c
+.RI "double \fBpoint_cloud\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_point_cloud\fP (int index, double value)"
+.br
+.ti -1c
+.RI "void \fBadd_point_cloud\fP (double value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > & \fBpoint_cloud\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< double > * \fBmutable_point_cloud\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED int \fBdrops_size\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_drops\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED ::\fBapollo::common::Point3D\fP * \fBmutable_drops\fP (int index)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::Point3D\fP > * \fBmutable_drops\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATEDconst ::\fBapollo::common::Point3D\fP & \fBdrops\fP (int index) const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED ::\fBapollo::common::Point3D\fP * \fBadd_drops\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::Point3D\fP > & \fBdrops\fP () const"
+.br
+.ti -1c
+.RI "int \fBmeasurements_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_measurements\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::SensorMeasurement\fP * \fBmutable_measurements\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::perception::SensorMeasurement\fP > * \fBmutable_measurements\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::SensorMeasurement\fP & \fBmeasurements\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::SensorMeasurement\fP * \fBadd_measurements\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::perception::SensorMeasurement\fP > & \fBmeasurements\fP () const"
+.br
+.ti -1c
+.RI "int \fBposition_covariance_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_position_covariance\fP ()"
+.br
+.ti -1c
+.RI "double \fBposition_covariance\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_position_covariance\fP (int index, double value)"
+.br
+.ti -1c
+.RI "void \fBadd_position_covariance\fP (double value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > & \fBposition_covariance\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< double > * \fBmutable_position_covariance\fP ()"
+.br
+.ti -1c
+.RI "int \fBvelocity_covariance_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_velocity_covariance\fP ()"
+.br
+.ti -1c
+.RI "double \fBvelocity_covariance\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_velocity_covariance\fP (int index, double value)"
+.br
+.ti -1c
+.RI "void \fBadd_velocity_covariance\fP (double value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > & \fBvelocity_covariance\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< double > * \fBmutable_velocity_covariance\fP ()"
+.br
+.ti -1c
+.RI "int \fBacceleration_covariance_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration_covariance\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration_covariance\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration_covariance\fP (int index, double value)"
+.br
+.ti -1c
+.RI "void \fBadd_acceleration_covariance\fP (double value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > & \fBacceleration_covariance\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< double > * \fBmutable_acceleration_covariance\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_position\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBposition\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_position\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_position\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_position\fP (::\fBapollo::common::Point3D\fP *position)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_position\fP (::\fBapollo::common::Point3D\fP *position)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_position\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_velocity\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_velocity\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBvelocity\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_velocity\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_velocity\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_velocity\fP (::\fBapollo::common::Point3D\fP *velocity)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_velocity\fP (::\fBapollo::common::Point3D\fP *velocity)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_velocity\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBacceleration\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_acceleration\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_acceleration\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_acceleration\fP (::\fBapollo::common::Point3D\fP *acceleration)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_acceleration\fP (::\fBapollo::common::Point3D\fP *acceleration)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_acceleration\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_anchor_point\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_anchor_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBanchor_point\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_anchor_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_anchor_point\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_anchor_point\fP (::\fBapollo::common::Point3D\fP *anchor_point)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_anchor_point\fP (::\fBapollo::common::Point3D\fP *anchor_point)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_anchor_point\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_bbox2d\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_bbox2d\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::BBox2D\fP & \fBbbox2d\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::perception::BBox2D\fP * \fBrelease_bbox2d\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::BBox2D\fP * \fBmutable_bbox2d\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_bbox2d\fP (::\fBapollo::perception::BBox2D\fP *bbox2d)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_bbox2d\fP (::\fBapollo::perception::BBox2D\fP *bbox2d)"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::BBox2D\fP * \fBunsafe_arena_release_bbox2d\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_light_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_light_status\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::LightStatus\fP & \fBlight_status\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::perception::LightStatus\fP * \fBrelease_light_status\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::LightStatus\fP * \fBmutable_light_status\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_light_status\fP (::\fBapollo::perception::LightStatus\fP *light_status)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_light_status\fP (::\fBapollo::perception::LightStatus\fP *light_status)"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::LightStatus\fP * \fBunsafe_arena_release_light_status\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_msg\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_msg\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::DebugMessage\fP & \fBmsg\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::perception::DebugMessage\fP * \fBrelease_msg\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::DebugMessage\fP * \fBmutable_msg\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_msg\fP (::\fBapollo::perception::DebugMessage\fP *msg)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_msg\fP (::\fBapollo::perception::DebugMessage\fP *msg)"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::DebugMessage\fP * \fBunsafe_arena_release_msg\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_v2x_info\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_v2x_info\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::V2XInformation\fP & \fBv2x_info\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::perception::V2XInformation\fP * \fBrelease_v2x_info\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::V2XInformation\fP * \fBmutable_v2x_info\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_v2x_info\fP (::\fBapollo::perception::V2XInformation\fP *v2x_info)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_v2x_info\fP (::\fBapollo::perception::V2XInformation\fP *v2x_info)"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::V2XInformation\fP * \fBunsafe_arena_release_v2x_info\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_theta\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_theta\fP ()"
+.br
+.ti -1c
+.RI "double \fBtheta\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_theta\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_length\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_length\fP ()"
+.br
+.ti -1c
+.RI "double \fBlength\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_length\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_id\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_id\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::perception::PerceptionObstacle_Type \fBtype\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_type\fP (::apollo::perception::PerceptionObstacle_Type value)"
+.br
+.ti -1c
+.RI "bool \fBhas_width\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_width\fP ()"
+.br
+.ti -1c
+.RI "double \fBwidth\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_width\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_height\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_height\fP ()"
+.br
+.ti -1c
+.RI "double \fBheight\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_height\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_tracking_time\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_tracking_time\fP ()"
+.br
+.ti -1c
+.RI "double \fBtracking_time\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_tracking_time\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_timestamp\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_timestamp\fP ()"
+.br
+.ti -1c
+.RI "double \fBtimestamp\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_timestamp\fP (double value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_confidence\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_confidence\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED double \fBconfidence\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_confidence\fP (double value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_confidence_type\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_confidence_type\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED ::apollo::perception::PerceptionObstacle_ConfidenceType \fBconfidence_type\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_confidence_type\fP (::apollo::perception::PerceptionObstacle_ConfidenceType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_sub_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_sub_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::perception::PerceptionObstacle_SubType \fBsub_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_sub_type\fP (::apollo::perception::PerceptionObstacle_SubType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_source\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_source\fP ()"
+.br
+.ti -1c
+.RI "::apollo::perception::PerceptionObstacle_Source \fBsource\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_source\fP (::apollo::perception::PerceptionObstacle_Source value)"
+.br
+.ti -1c
+.RI "bool \fBhas_height_above_ground\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_height_above_ground\fP ()"
+.br
+.ti -1c
+.RI "double \fBheight_above_ground\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_height_above_ground\fP (double value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBPerceptionObstacle\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBPerceptionObstacle\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Type *value)"
+.br
+.ti -1c
+.RI "static bool \fBConfidenceType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBConfidenceType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBConfidenceType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBConfidenceType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, ConfidenceType *value)"
+.br
+.ti -1c
+.RI "static bool \fBSubType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBSubType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBSubType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBSubType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, SubType *value)"
+.br
+.ti -1c
+.RI "static bool \fBSource_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBSource_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBSource_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBSource_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Source *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBUNKNOWN\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBUNKNOWN_MOVABLE\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBUNKNOWN_UNMOVABLE\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBPEDESTRIAN\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBBICYCLE\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBVEHICLE\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr ConfidenceType \fBCONFIDENCE_UNKNOWN\fP"
+.br
+.ti -1c
+.RI "static constexpr ConfidenceType \fBCONFIDENCE_CNN\fP"
+.br
+.ti -1c
+.RI "static constexpr ConfidenceType \fBCONFIDENCE_RADAR\fP"
+.br
+.ti -1c
+.RI "static constexpr ConfidenceType \fBConfidenceType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr ConfidenceType \fBConfidenceType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBConfidenceType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBST_UNKNOWN\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBST_UNKNOWN_MOVABLE\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBST_UNKNOWN_UNMOVABLE\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBST_CAR\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBST_VAN\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBST_TRUCK\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBST_BUS\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBST_CYCLIST\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBST_MOTORCYCLIST\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBST_TRICYCLIST\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBST_PEDESTRIAN\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBST_TRAFFICCONE\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBSubType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr SubType \fBSubType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBSubType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Source \fBHOST_VEHICLE\fP"
+.br
+.ti -1c
+.RI "static constexpr Source \fBV2X\fP"
+.br
+.ti -1c
+.RI "static constexpr Source \fBSource_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Source \fBSource_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBSource_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPerceptionObstacle\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fperception_5fmsgs_2fperception_5fobstacle_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBPerceptionObstacle\fP &a, \fBPerceptionObstacle\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::perception::PerceptionObstacle::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    PerceptionObstacle::MergeImpl
+}
+.fi
+.SS "constexpr PerceptionObstacle_Type apollo::perception::PerceptionObstacle::BICYCLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Type_BICYCLE
+.fi
+.SS "constexpr PerceptionObstacle_ConfidenceType apollo::perception::PerceptionObstacle::CONFIDENCE_CNN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_ConfidenceType_CONFIDENCE_CNN
+.fi
+.SS "constexpr PerceptionObstacle_ConfidenceType apollo::perception::PerceptionObstacle::CONFIDENCE_RADAR\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_ConfidenceType_CONFIDENCE_RADAR
+.fi
+.SS "constexpr PerceptionObstacle_ConfidenceType apollo::perception::PerceptionObstacle::CONFIDENCE_UNKNOWN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_ConfidenceType_CONFIDENCE_UNKNOWN
+.fi
+.SS "constexpr int apollo::perception::PerceptionObstacle::ConfidenceType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_ConfidenceType_ConfidenceType_ARRAYSIZE
+.fi
+.SS "constexpr PerceptionObstacle_ConfidenceType apollo::perception::PerceptionObstacle::ConfidenceType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_ConfidenceType_ConfidenceType_MAX
+.fi
+.SS "constexpr PerceptionObstacle_ConfidenceType apollo::perception::PerceptionObstacle::ConfidenceType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_ConfidenceType_ConfidenceType_MIN
+.fi
+.SS "constexpr PerceptionObstacle_Source apollo::perception::PerceptionObstacle::HOST_VEHICLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Source_HOST_VEHICLE
+.fi
+.SS "constexpr int apollo::perception::PerceptionObstacle::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    6
+.fi
+.SS "constexpr PerceptionObstacle_Type apollo::perception::PerceptionObstacle::PEDESTRIAN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Type_PEDESTRIAN
+.fi
+.SS "constexpr int apollo::perception::PerceptionObstacle::Source_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Source_Source_ARRAYSIZE
+.fi
+.SS "constexpr PerceptionObstacle_Source apollo::perception::PerceptionObstacle::Source_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Source_Source_MAX
+.fi
+.SS "constexpr PerceptionObstacle_Source apollo::perception::PerceptionObstacle::Source_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Source_Source_MIN
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::ST_BUS\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_ST_BUS
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::ST_CAR\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_ST_CAR
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::ST_CYCLIST\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_ST_CYCLIST
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::ST_MOTORCYCLIST\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_ST_MOTORCYCLIST
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::ST_PEDESTRIAN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_ST_PEDESTRIAN
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::ST_TRAFFICCONE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_ST_TRAFFICCONE
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::ST_TRICYCLIST\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_ST_TRICYCLIST
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::ST_TRUCK\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_ST_TRUCK
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::ST_UNKNOWN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_ST_UNKNOWN
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::ST_UNKNOWN_MOVABLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_ST_UNKNOWN_MOVABLE
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::ST_UNKNOWN_UNMOVABLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_ST_UNKNOWN_UNMOVABLE
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::ST_VAN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_ST_VAN
+.fi
+.SS "constexpr int apollo::perception::PerceptionObstacle::SubType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_SubType_ARRAYSIZE
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::SubType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_SubType_MAX
+.fi
+.SS "constexpr PerceptionObstacle_SubType apollo::perception::PerceptionObstacle::SubType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_SubType_SubType_MIN
+.fi
+.SS "constexpr int apollo::perception::PerceptionObstacle::Type_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Type_Type_ARRAYSIZE
+.fi
+.SS "constexpr PerceptionObstacle_Type apollo::perception::PerceptionObstacle::Type_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Type_Type_MAX
+.fi
+.SS "constexpr PerceptionObstacle_Type apollo::perception::PerceptionObstacle::Type_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Type_Type_MIN
+.fi
+.SS "constexpr PerceptionObstacle_Type apollo::perception::PerceptionObstacle::UNKNOWN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Type_UNKNOWN
+.fi
+.SS "constexpr PerceptionObstacle_Type apollo::perception::PerceptionObstacle::UNKNOWN_MOVABLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Type_UNKNOWN_MOVABLE
+.fi
+.SS "constexpr PerceptionObstacle_Type apollo::perception::PerceptionObstacle::UNKNOWN_UNMOVABLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Type_UNKNOWN_UNMOVABLE
+.fi
+.SS "constexpr PerceptionObstacle_Source apollo::perception::PerceptionObstacle::V2X\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Source_V2X
+.fi
+.SS "constexpr PerceptionObstacle_Type apollo::perception::PerceptionObstacle::VEHICLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    PerceptionObstacle_Type_VEHICLE
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

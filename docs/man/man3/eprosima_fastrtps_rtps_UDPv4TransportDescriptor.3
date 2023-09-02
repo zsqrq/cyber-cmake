@@ -1,0 +1,53 @@
+.TH "eprosima::fastrtps::rtps::UDPv4TransportDescriptor" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::UDPv4TransportDescriptor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <UDPv4TransportDescriptor\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::TransportDescriptorInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "RTPS_DllAPI \fBUDPv4TransportDescriptor\fP (const \fBUDPv4TransportDescriptor\fP &t)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBsendBufferSize\fP"
+.br
+.RI "Length of the send buffer\&. "
+.ti -1c
+.RI "uint32_t \fBreceiveBufferSize\fP"
+.br
+.RI "Length of the receive buffer\&. "
+.ti -1c
+.RI "std::vector< std::string > \fBinterfaceWhiteList\fP"
+.br
+.RI "Allowed interfaces in an IP string format\&. "
+.ti -1c
+.RI "uint8_t \fBTTL\fP"
+.br
+.RI "Specified time to live (8bit - 255 max TTL) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Transport configuration
+.PP
+.IP "\(bu" 2
+bufferSize: length of the buffers used for transmission\&. Passing a buffer of different size will cause transmission to fail\&.
+.IP "\(bu" 2
+interfaceWhiteList: Lists the allowed interfaces\&. 
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

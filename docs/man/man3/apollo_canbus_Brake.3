@@ -1,0 +1,733 @@
+.TH "apollo::canbus::Brake" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::canbus::Brake
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkBrakePedalPositionFieldNumber\fP = 5, \fBkIsBrakePedalPressedFieldNumber\fP = 1, \fBkIsBrakeForceExistFieldNumber\fP = 2, \fBkIsBrakeOverHeatFieldNumber\fP = 3, \fBkIsHandBrakeOnFieldNumber\fP = 4, \fBkIsBrakeValidFieldNumber\fP = 6, \fBkBooInputFieldNumber\fP = 10, \fBkBooCmdFieldNumber\fP = 11, \fBkBooOutputFieldNumber\fP = 12, \fBkBrakeInputFieldNumber\fP = 7, \fBkBrakeCmdFieldNumber\fP = 8, \fBkBrakeOutputFieldNumber\fP = 9, \fBkWatchdogSourceFieldNumber\fP = 14, \fBkWatchdogApplyingBrakesFieldNumber\fP = 13, \fBkBrakeEnabledFieldNumber\fP = 15, \fBkDriverOverrideFieldNumber\fP = 16, \fBkDriverActivityFieldNumber\fP = 17, \fBkWatchdogFaultFieldNumber\fP = 18, \fBkChannel1FaultFieldNumber\fP = 19, \fBkChannel2FaultFieldNumber\fP = 20, \fBkBooFaultFieldNumber\fP = 21, \fBkConnectorFaultFieldNumber\fP = 22, \fBkBrakeTorqueReqFieldNumber\fP = 23, \fBkBrakeTorqueActFieldNumber\fP = 25, \fBkHsaStatusFieldNumber\fP = 24, \fBkHsaModeFieldNumber\fP = 26, \fBkWheelTorqueActFieldNumber\fP = 27, \fBkMajorVersionFieldNumber\fP = 28, \fBkMinorVersionFieldNumber\fP = 29, \fBkBuildNumberFieldNumber\fP = 30 }"
+.br
+.ti -1c
+.RI "typedef Brake_HSAStatusType \fBHSAStatusType\fP"
+.br
+.ti -1c
+.RI "typedef Brake_HSAModeType \fBHSAModeType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBBrake\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBBrake\fP (const \fBBrake\fP &from)"
+.br
+.ti -1c
+.RI "\fBBrake\fP (\fBBrake\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBBrake\fP & \fBoperator=\fP (const \fBBrake\fP &from)"
+.br
+.ti -1c
+.RI "\fBBrake\fP & \fBoperator=\fP (\fBBrake\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBBrake\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBBrake\fP *other)"
+.br
+.ti -1c
+.RI "\fBBrake\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBBrake\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBBrake\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_brake_pedal_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brake_pedal_position\fP ()"
+.br
+.ti -1c
+.RI "double \fBbrake_pedal_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brake_pedal_position\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_brake_pedal_pressed\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_brake_pedal_pressed\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_brake_pedal_pressed\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_brake_pedal_pressed\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_brake_force_exist\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_brake_force_exist\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_brake_force_exist\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_brake_force_exist\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_brake_over_heat\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_brake_over_heat\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_brake_over_heat\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_brake_over_heat\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_hand_brake_on\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_hand_brake_on\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_hand_brake_on\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_hand_brake_on\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_brake_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_brake_valid\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_brake_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_brake_valid\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_boo_input\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_boo_input\fP ()"
+.br
+.ti -1c
+.RI "bool \fBboo_input\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_boo_input\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_boo_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_boo_cmd\fP ()"
+.br
+.ti -1c
+.RI "bool \fBboo_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_boo_cmd\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_boo_output\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_boo_output\fP ()"
+.br
+.ti -1c
+.RI "bool \fBboo_output\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_boo_output\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_brake_input\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brake_input\fP ()"
+.br
+.ti -1c
+.RI "double \fBbrake_input\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brake_input\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_brake_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brake_cmd\fP ()"
+.br
+.ti -1c
+.RI "double \fBbrake_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brake_cmd\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_brake_output\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brake_output\fP ()"
+.br
+.ti -1c
+.RI "double \fBbrake_output\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brake_output\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_watchdog_source\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_watchdog_source\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBwatchdog_source\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_watchdog_source\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_watchdog_applying_brakes\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_watchdog_applying_brakes\fP ()"
+.br
+.ti -1c
+.RI "bool \fBwatchdog_applying_brakes\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_watchdog_applying_brakes\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_brake_enabled\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brake_enabled\fP ()"
+.br
+.ti -1c
+.RI "bool \fBbrake_enabled\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brake_enabled\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_driver_override\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_driver_override\fP ()"
+.br
+.ti -1c
+.RI "bool \fBdriver_override\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_driver_override\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_driver_activity\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_driver_activity\fP ()"
+.br
+.ti -1c
+.RI "bool \fBdriver_activity\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_driver_activity\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_watchdog_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_watchdog_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBwatchdog_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_watchdog_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_channel_1_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_channel_1_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBchannel_1_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_channel_1_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_channel_2_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_channel_2_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBchannel_2_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_channel_2_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_boo_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_boo_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBboo_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_boo_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_connector_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_connector_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBconnector_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_connector_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_brake_torque_req\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brake_torque_req\fP ()"
+.br
+.ti -1c
+.RI "double \fBbrake_torque_req\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brake_torque_req\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_brake_torque_act\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brake_torque_act\fP ()"
+.br
+.ti -1c
+.RI "double \fBbrake_torque_act\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brake_torque_act\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_hsa_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_hsa_status\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Brake_HSAStatusType \fBhsa_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_hsa_status\fP (::apollo::canbus::Brake_HSAStatusType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_hsa_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_hsa_mode\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Brake_HSAModeType \fBhsa_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_hsa_mode\fP (::apollo::canbus::Brake_HSAModeType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_wheel_torque_act\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_wheel_torque_act\fP ()"
+.br
+.ti -1c
+.RI "double \fBwheel_torque_act\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_wheel_torque_act\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_major_version\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_major_version\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBmajor_version\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_major_version\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_minor_version\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_minor_version\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBminor_version\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_minor_version\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_build_number\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_build_number\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBbuild_number\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_build_number\fP (int32_t value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBBrake\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBBrake\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBHSAStatusType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBHSAStatusType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBHSAStatusType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBHSAStatusType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, HSAStatusType *value)"
+.br
+.ti -1c
+.RI "static bool \fBHSAModeType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBHSAModeType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBHSAModeType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBHSAModeType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, HSAModeType *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAStatusType \fBHSA_INACTIVE\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAStatusType \fBHSA_FINDING_GRADIENT\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAStatusType \fBHSA_ACTIVE_PRESSED\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAStatusType \fBHSA_ACTIVE_RELEASED\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAStatusType \fBHSA_FAST_RELEASE\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAStatusType \fBHSA_SLOW_RELEASE\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAStatusType \fBHSA_FAILED\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAStatusType \fBHSA_UNDEFINED\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAStatusType \fBHSAStatusType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAStatusType \fBHSAStatusType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBHSAStatusType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAModeType \fBHSA_OFF\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAModeType \fBHSA_AUTO\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAModeType \fBHSA_MANUAL\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAModeType \fBHSA_MODE_UNDEFINED\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAModeType \fBHSAModeType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr HSAModeType \fBHSAModeType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBHSAModeType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBrake\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fchassis_5fmsgs_2fchassis_5fdetail_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBBrake\fP &a, \fBBrake\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::canbus::Brake::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Brake::MergeImpl
+}
+.fi
+.SS "constexpr Brake_HSAStatusType apollo::canbus::Brake::HSA_ACTIVE_PRESSED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAStatusType_HSA_ACTIVE_PRESSED
+.fi
+.SS "constexpr Brake_HSAStatusType apollo::canbus::Brake::HSA_ACTIVE_RELEASED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAStatusType_HSA_ACTIVE_RELEASED
+.fi
+.SS "constexpr Brake_HSAModeType apollo::canbus::Brake::HSA_AUTO\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAModeType_HSA_AUTO
+.fi
+.SS "constexpr Brake_HSAStatusType apollo::canbus::Brake::HSA_FAILED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAStatusType_HSA_FAILED
+.fi
+.SS "constexpr Brake_HSAStatusType apollo::canbus::Brake::HSA_FAST_RELEASE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAStatusType_HSA_FAST_RELEASE
+.fi
+.SS "constexpr Brake_HSAStatusType apollo::canbus::Brake::HSA_FINDING_GRADIENT\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAStatusType_HSA_FINDING_GRADIENT
+.fi
+.SS "constexpr Brake_HSAStatusType apollo::canbus::Brake::HSA_INACTIVE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAStatusType_HSA_INACTIVE
+.fi
+.SS "constexpr Brake_HSAModeType apollo::canbus::Brake::HSA_MANUAL\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAModeType_HSA_MANUAL
+.fi
+.SS "constexpr Brake_HSAModeType apollo::canbus::Brake::HSA_MODE_UNDEFINED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAModeType_HSA_MODE_UNDEFINED
+.fi
+.SS "constexpr Brake_HSAModeType apollo::canbus::Brake::HSA_OFF\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAModeType_HSA_OFF
+.fi
+.SS "constexpr Brake_HSAStatusType apollo::canbus::Brake::HSA_SLOW_RELEASE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAStatusType_HSA_SLOW_RELEASE
+.fi
+.SS "constexpr Brake_HSAStatusType apollo::canbus::Brake::HSA_UNDEFINED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAStatusType_HSA_UNDEFINED
+.fi
+.SS "constexpr int apollo::canbus::Brake::HSAModeType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAModeType_HSAModeType_ARRAYSIZE
+.fi
+.SS "constexpr Brake_HSAModeType apollo::canbus::Brake::HSAModeType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAModeType_HSAModeType_MAX
+.fi
+.SS "constexpr Brake_HSAModeType apollo::canbus::Brake::HSAModeType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAModeType_HSAModeType_MIN
+.fi
+.SS "constexpr int apollo::canbus::Brake::HSAStatusType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAStatusType_HSAStatusType_ARRAYSIZE
+.fi
+.SS "constexpr Brake_HSAStatusType apollo::canbus::Brake::HSAStatusType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAStatusType_HSAStatusType_MAX
+.fi
+.SS "constexpr Brake_HSAStatusType apollo::canbus::Brake::HSAStatusType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_HSAStatusType_HSAStatusType_MIN
+.fi
+.SS "constexpr int apollo::canbus::Brake::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    7
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

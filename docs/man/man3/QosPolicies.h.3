@@ -1,0 +1,155 @@
+.TH "third_party/fast-rtps-1.5.0-1/include/fastrtps/qos/QosPolicies.h" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+third_party/fast-rtps-1.5.0-1/include/fastrtps/qos/QosPolicies.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+\fC#include '\&.\&./rtps/common/Types\&.h'\fP
+.br
+\fC#include '\&.\&./rtps/common/Time_t\&.h'\fP
+.br
+\fC#include 'ParameterTypes\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBeprosima::fastrtps::QosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::DurabilityQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::DeadlineQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::LatencyBudgetQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::LivelinessQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ReliabilityQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::OwnershipQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::DestinationOrderQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::UserDataQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::TimeBasedFilterQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::PresentationQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::PartitionQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::TopicDataQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::GroupDataQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::HistoryQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ResourceLimitsQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::DurabilityServiceQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::LifespanQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::OwnershipStrengthQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::TransportPriorityQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::PublishModeQosPolicy\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBeprosima\fP"
+.br
+.RI "Maximum payload is maximum of UDP packet size minus 536bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) With those 536 bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) bytes is posible to send RTPS Header plus RTPS Data submessage plus RTPS Heartbeat submessage\&. "
+.ti -1c
+.RI " \fBeprosima::fastrtps\fP"
+.br
+.ti -1c
+.RI " \fBeprosima::fastrtps::rtps\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPARAMETER_KIND_LENGTH\fP   4"
+.br
+.ti -1c
+.RI "#define \fBPARAMETER_PRESENTATION_LENGTH\fP   8"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::DurabilityQosPolicyKind\fP \fBeprosima::fastrtps::DurabilityQosPolicyKind_t\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::LivelinessQosPolicyKind\fP \fBeprosima::fastrtps::LivelinessQosPolicyKind\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::ReliabilityQosPolicyKind\fP \fBeprosima::fastrtps::ReliabilityQosPolicyKind\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::PublishModeQosPolicyKind\fP \fBeprosima::fastrtps::PublishModeQosPolicyKind_t\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::DurabilityQosPolicyKind\fP : octet { \fBeprosima::fastrtps::VOLATILE_DURABILITY_QOS\fP, \fBeprosima::fastrtps::TRANSIENT_LOCAL_DURABILITY_QOS\fP, \fBeprosima::fastrtps::TRANSIENT_DURABILITY_QOS\fP, \fBeprosima::fastrtps::PERSISTENT_DURABILITY_QOS\fP }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::LivelinessQosPolicyKind\fP : octet { \fBeprosima::fastrtps::AUTOMATIC_LIVELINESS_QOS\fP, \fBeprosima::fastrtps::MANUAL_BY_PARTICIPANT_LIVELINESS_QOS\fP, \fBeprosima::fastrtps::MANUAL_BY_TOPIC_LIVELINESS_QOS\fP }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::ReliabilityQosPolicyKind\fP : octet { \fBeprosima::fastrtps::BEST_EFFORT_RELIABILITY_QOS\fP = 0x01, \fBeprosima::fastrtps::RELIABLE_RELIABILITY_QOS\fP = 0x02 }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::OwnershipQosPolicyKind\fP : octet { \fBeprosima::fastrtps::SHARED_OWNERSHIP_QOS\fP, \fBeprosima::fastrtps::EXCLUSIVE_OWNERSHIP_QOS\fP }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::DestinationOrderQosPolicyKind\fP : octet { \fBeprosima::fastrtps::BY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS\fP, \fBeprosima::fastrtps::BY_SOURCE_TIMESTAMP_DESTINATIONORDER_QOS\fP }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::PresentationQosPolicyAccessScopeKind\fP : octet { \fBeprosima::fastrtps::INSTANCE_PRESENTATION_QOS\fP, \fBeprosima::fastrtps::TOPIC_PRESENTATION_QOS\fP, \fBeprosima::fastrtps::GROUP_PRESENTATION_QOS\fP }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::HistoryQosPolicyKind\fP : octet { \fBeprosima::fastrtps::KEEP_LAST_HISTORY_QOS\fP, \fBeprosima::fastrtps::KEEP_ALL_HISTORY_QOS\fP }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::PublishModeQosPolicyKind\fP : octet { \fBeprosima::fastrtps::SYNCHRONOUS_PUBLISH_MODE\fP, \fBeprosima::fastrtps::ASYNCHRONOUS_PUBLISH_MODE\fP }"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

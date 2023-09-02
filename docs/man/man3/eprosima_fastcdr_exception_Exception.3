@@ -1,0 +1,132 @@
+.TH "eprosima::fastcdr::exception::Exception" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastcdr::exception::Exception \- This abstract class is used to create exceptions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Exception\&.h>\fP
+.PP
+Inherits std::exception\&.
+.PP
+Inherited by \fBeprosima::fastcdr::exception::BadParamException\fP, and \fBeprosima::fastcdr::exception::NotEnoughMemoryException\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual Cdr_DllAPI \fB~Exception\fP ()  throw ()"
+.br
+.RI "Default destructor\&. "
+.ti -1c
+.RI "virtual Cdr_DllAPI void \fBraise\fP () const =0"
+.br
+.RI "This function throws the object as exception\&. "
+.ti -1c
+.RI "virtual Cdr_DllAPI const char * \fBwhat\fP () const  throw ()"
+.br
+.RI "This function returns the error message\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Cdr_DllAPI \fBException\fP (const char *const &message)"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "Cdr_DllAPI \fBException\fP (const \fBException\fP &ex)"
+.br
+.RI "Default copy constructor\&. "
+.ti -1c
+.RI "Cdr_DllAPI \fBException\fP (\fBException\fP &&ex)"
+.br
+.RI "Default move constructor\&. "
+.ti -1c
+.RI "Cdr_DllAPI \fBException\fP & \fBoperator=\fP (const \fBException\fP &ex)"
+.br
+.RI "Assigment operation\&. "
+.ti -1c
+.RI "Cdr_DllAPI \fBException\fP & \fBoperator=\fP (\fBException\fP &&)"
+.br
+.RI "Assigment operation\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This abstract class is used to create exceptions\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Cdr_DllAPI eprosima::fastcdr::exception::Exception::Exception (const char *const & message)\fC [protected]\fP"
+
+.PP
+Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP A error message\&. This message is copied\&. 
+.RE
+.PP
+
+.SS "Cdr_DllAPI eprosima::fastcdr::exception::Exception::Exception (const \fBException\fP & ex)\fC [protected]\fP"
+
+.PP
+Default copy constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIex\fP \fBException\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "Cdr_DllAPI eprosima::fastcdr::exception::Exception::Exception (\fBException\fP && ex)\fC [protected]\fP"
+
+.PP
+Default move constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIex\fP \fBException\fP that will be moved\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "Cdr_DllAPI \fBException\fP& eprosima::fastcdr::exception::Exception::operator= (const \fBException\fP & ex)\fC [protected]\fP"
+
+.PP
+Assigment operation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIex\fP \fBException\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "Cdr_DllAPI \fBException\fP& eprosima::fastcdr::exception::Exception::operator= (\fBException\fP &&)\fC [protected]\fP"
+
+.PP
+Assigment operation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIex\fP \fBException\fP that will be moved\&. 
+.RE
+.PP
+
+.SS "virtual Cdr_DllAPI const char* eprosima::fastcdr::exception::Exception::what () const\fC [virtual]\fP"
+
+.PP
+This function returns the error message\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The error message\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

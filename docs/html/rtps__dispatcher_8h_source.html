@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -109,7 +111,7 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structapollo_1_1cyber_1_1transport_1_1Subscriber.html">   38</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structapollo_1_1cyber_1_1transport_1_1Subscriber.html">Subscriber</a> {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="structapollo_1_1cyber_1_1transport_1_1Subscriber.html">Subscriber</a>() : sub(<span class="keyword">nullptr</span>), sub_listener(<span class="keyword">nullptr</span>) {}</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  eprosima::fastrtps::Subscriber* sub;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classeprosima_1_1fastrtps_1_1Subscriber.html">eprosima::fastrtps::Subscriber</a>* sub;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  SubListenerPtr sub_listener;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
@@ -123,12 +125,12 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">void</span> Shutdown() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageT&gt;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> AddListener(<span class="keyword">const</span> RoleAttributes&amp; self_attr,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> AddListener(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; self_attr,</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                   <span class="keyword">const</span> MessageListener&lt;MessageT&gt;&amp; listener);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageT&gt;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">void</span> AddListener(<span class="keyword">const</span> RoleAttributes&amp; self_attr,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                   <span class="keyword">const</span> RoleAttributes&amp; opposite_attr,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">void</span> AddListener(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; self_attr,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                   <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; opposite_attr,</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                   <span class="keyword">const</span> MessageListener&lt;MessageT&gt;&amp; listener);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">void</span> set_participant(<span class="keyword">const</span> ParticipantPtr&amp; participant) {</div>
@@ -139,7 +141,7 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">void</span> OnMessage(uint64_t channel_id,</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                 <span class="keyword">const</span> std::shared_ptr&lt;std::string&gt;&amp; msg_str,</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                 <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1transport_1_1MessageInfo.html">MessageInfo</a>&amp; msg_info);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> AddSubscriber(<span class="keyword">const</span> RoleAttributes&amp; self_attr);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> AddSubscriber(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; self_attr);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="comment">// key: channel_id</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  std::unordered_map&lt;uint64_t, Subscriber&gt; subs_;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  std::mutex subs_mutex_;</div>
@@ -150,7 +152,7 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageT&gt;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> RtpsDispatcher::AddListener(<span class="keyword">const</span> RoleAttributes&amp; self_attr,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> RtpsDispatcher::AddListener(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; self_attr,</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                 <span class="keyword">const</span> MessageListener&lt;MessageT&gt;&amp; listener) {</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">auto</span> listener_adapter = [listener](</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                              <span class="keyword">const</span> std::shared_ptr&lt;std::string&gt;&amp; msg_str,</div>
@@ -186,10 +188,12 @@ $(function() {
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}  <span class="comment">// namespace apollo</span></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CYBER_TRANSPORT_DISPATCHER_RTPS_DISPATCHER_H_</span></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1RoleAttributes_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a></div><div class="ttdef"><b>Definition:</b> role_attributes.pb.h:258</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1Dispatcher_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1Dispatcher.html">apollo::cyber::transport::Dispatcher</a></div><div class="ttdef"><b>Definition:</b> dispatcher.h:54</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1MessageInfo_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1MessageInfo.html">apollo::cyber::transport::MessageInfo</a></div><div class="ttdef"><b>Definition:</b> message_info.h:30</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher.html">apollo::cyber::transport::RtpsDispatcher</a></div><div class="ttdef"><b>Definition:</b> rtps_dispatcher.h:48</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="aclasseprosima_1_1fastrtps_1_1Subscriber_html"><div class="ttname"><a href="classeprosima_1_1fastrtps_1_1Subscriber.html">eprosima::fastrtps::Subscriber</a></div><div class="ttdef"><b>Definition:</b> Subscriber.h:41</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 <div class="ttc" id="astructapollo_1_1cyber_1_1transport_1_1Subscriber_html"><div class="ttname"><a href="structapollo_1_1cyber_1_1transport_1_1Subscriber.html">apollo::cyber::transport::Subscriber</a></div><div class="ttdef"><b>Definition:</b> rtps_dispatcher.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

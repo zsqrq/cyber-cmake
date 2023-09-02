@@ -1,0 +1,172 @@
+.TH "eprosima::fastrtps::rtps::StatelessWriter" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::StatelessWriter
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <StatelessWriter\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::RTPSWriter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBunsent_change_added_to_history\fP (\fBCacheChange_t\fP *p)"
+.br
+.ti -1c
+.RI "bool \fBchange_removed_by_history\fP (\fBCacheChange_t\fP *a_change)"
+.br
+.ti -1c
+.RI "bool \fBmatched_reader_add\fP (\fBRemoteReaderAttributes\fP &ratt)"
+.br
+.ti -1c
+.RI "bool \fBmatched_reader_remove\fP (\fBRemoteReaderAttributes\fP &ratt)"
+.br
+.ti -1c
+.RI "bool \fBmatched_reader_is_matched\fP (\fBRemoteReaderAttributes\fP &ratt)"
+.br
+.ti -1c
+.RI "void \fBsend_any_unsent_changes\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateAttributes\fP (\fBWriterAttributes\fP &att)"
+.br
+.ti -1c
+.RI "bool \fBadd_locator\fP (\fBLocator_t\fP &loc)"
+.br
+.ti -1c
+.RI "void \fBupdate_unsent_changes\fP (\fBReaderLocator\fP &reader_locator, const \fBSequenceNumber_t\fP &seqNum, const FragmentNumber_t fragNum)"
+.br
+.ti -1c
+.RI "void \fBunsent_changes_reset\fP ()"
+.br
+.RI "Reset the unsent changes\&. "
+.ti -1c
+.RI "size_t \fBgetMatchedReadersSize\fP () const"
+.br
+.ti -1c
+.RI "bool \fBclean_history\fP (unsigned int max=0)"
+.br
+.ti -1c
+.RI "void \fBadd_flow_controller\fP (std::unique_ptr< FlowController > controller)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBRTPSParticipantImpl\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Class \fBStatelessWriter\fP, specialization of \fBRTPSWriter\fP that manages writers that don't keep state of the matched readers\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool eprosima::fastrtps::rtps::StatelessWriter::change_removed_by_history (\fBCacheChange_t\fP * a_change)\fC [virtual]\fP"
+Indicate the writer that a change has been removed by the history due to some HistoryQos requirement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_change\fP Pointer to the change that is going to be removed\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if removed correctly\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::RTPSWriter\fP\&.
+.SS "size_t eprosima::fastrtps::rtps::StatelessWriter::getMatchedReadersSize () const\fC [inline]\fP"
+Get the number of matched readers 
+.PP
+\fBReturns\fP
+.RS 4
+Number of matched readers 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::StatelessWriter::matched_reader_add (\fBRemoteReaderAttributes\fP & ratt)\fC [virtual]\fP"
+Add a matched reader\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIratt\fP Attributes of the reader to add\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if added\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::RTPSWriter\fP\&.
+.SS "bool eprosima::fastrtps::rtps::StatelessWriter::matched_reader_is_matched (\fBRemoteReaderAttributes\fP & ratt)\fC [virtual]\fP"
+Tells us if a specific Reader is matched against this writer 
+.PP
+\fBParameters\fP
+.RS 4
+\fIratt\fP Attributes of the reader to check\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if it was matched\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::RTPSWriter\fP\&.
+.SS "bool eprosima::fastrtps::rtps::StatelessWriter::matched_reader_remove (\fBRemoteReaderAttributes\fP & ratt)\fC [virtual]\fP"
+Remove a matched reader\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIratt\fP Attributes of the reader to remove\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if removed\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::RTPSWriter\fP\&.
+.SS "void eprosima::fastrtps::rtps::StatelessWriter::send_any_unsent_changes ()\fC [virtual]\fP"
+Method to indicate that there are changes not sent in some of all \fBReaderProxy\fP\&. 
+.PP
+Implements \fBeprosima::fastrtps::rtps::RTPSWriter\fP\&.
+.SS "void eprosima::fastrtps::rtps::StatelessWriter::unsent_change_added_to_history (\fBCacheChange_t\fP * p)\fC [virtual]\fP"
+Add a specific change to all ReaderLocators\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Pointer to the change\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::RTPSWriter\fP\&.
+.SS "void eprosima::fastrtps::rtps::StatelessWriter::updateAttributes (\fBWriterAttributes\fP & att)\fC [inline]\fP, \fC [virtual]\fP"
+Update the Attributes of the Writer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIatt\fP New attributes 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::RTPSWriter\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

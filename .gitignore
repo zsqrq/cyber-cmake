@@ -3,6 +3,7 @@
 build*
 cmake-build-debug
 production
+docs/man
 .vscode
 .idea
 # Compiled Object files

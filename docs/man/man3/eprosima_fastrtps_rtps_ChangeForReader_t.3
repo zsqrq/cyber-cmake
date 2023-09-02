@@ -1,0 +1,89 @@
+.TH "eprosima::fastrtps::rtps::ChangeForReader_t" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::ChangeForReader_t
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CacheChange\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeForReader_t\fP (const \fBChangeForReader_t\fP &ch)"
+.br
+.ti -1c
+.RI "\fBChangeForReader_t\fP (\fBCacheChange_t\fP *change)"
+.br
+.ti -1c
+.RI "\fBChangeForReader_t\fP (const \fBSequenceNumber_t\fP &seq_num)"
+.br
+.ti -1c
+.RI "\fBChangeForReader_t\fP & \fBoperator=\fP (const \fBChangeForReader_t\fP &ch)"
+.br
+.ti -1c
+.RI "\fBCacheChange_t\fP * \fBgetChange\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetStatus\fP (const \fBChangeForReaderStatus_t\fP status)"
+.br
+.ti -1c
+.RI "\fBChangeForReaderStatus_t\fP \fBgetStatus\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetRelevance\fP (const bool relevance)"
+.br
+.ti -1c
+.RI "bool \fBisRelevant\fP () const"
+.br
+.ti -1c
+.RI "const \fBSequenceNumber_t\fP \fBgetSequenceNumber\fP () const"
+.br
+.ti -1c
+.RI "void \fBnotValid\fP ()"
+.br
+.RI "Set change as not valid\&. "
+.ti -1c
+.RI "bool \fBisValid\fP () const"
+.br
+.RI "Set change as valid\&. "
+.ti -1c
+.RI "\fBFragmentNumberSet_t\fP \fBgetUnsentFragments\fP () const"
+.br
+.ti -1c
+.RI "void \fBmarkAllFragmentsAsUnsent\fP ()"
+.br
+.ti -1c
+.RI "void \fBmarkFragmentsAsSent\fP (const FragmentNumber_t &sentFragment)"
+.br
+.ti -1c
+.RI "void \fBmarkFragmentsAsUnsent\fP (const \fBFragmentNumberSet_t\fP &unsentFragments)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "struct \fBChangeForReaderCmp\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Struct \fBChangeForReader_t\fP used to represent the state of a specific change with respect to a specific reader, as well as its relevance\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCacheChange_t\fP* eprosima::fastrtps::rtps::ChangeForReader_t::getChange () const\fC [inline]\fP"
+Get the cache change 
+.PP
+\fBReturns\fP
+.RS 4
+Cache change 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

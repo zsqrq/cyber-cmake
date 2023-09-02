@@ -1,0 +1,235 @@
+.TH "COMMON_MODULE" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+COMMON_MODULE \- Common Module\&.
+.SH SYNOPSIS
+.br
+.PP
+.SS "Modules"
+
+.in +1c
+.ti -1c
+.RI "\fBTransport Module\&.\fP"
+.br
+.ti -1c
+.RI "\fBQos Module\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBeprosima::fastrtps::Log\fP"
+.br
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::CacheChange_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::ChangeForReader_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::ChangeFromWriter_t\fP"
+.br
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::CDRMessage_t\fP"
+.br
+.RI "Structure \fBCDRMessage_t\fP, contains a serialized message\&. "
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::FragmentNumberSet_t\fP"
+.br
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::GuidPrefix_t\fP"
+.br
+.RI "Structure \fBGuidPrefix_t\fP, Guid Prefix of \fBGUID_t\fP\&. "
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::EntityId_t\fP"
+.br
+.RI "Structure \fBEntityId_t\fP, entity id part of \fBGUID_t\fP\&. "
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::GUID_t\fP"
+.br
+.RI "Structure \fBGUID_t\fP, entity identifier, unique in DDS-RTPS \fBDomain\fP\&. "
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::InstanceHandle_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::Locator_t\fP"
+.br
+.RI "Class \fBLocator_t\fP, uniquely identifies a communication channel for a particular transport\&. "
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::LocatorList_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::MatchingInfo\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::SampleIdentity\fP"
+.br
+.RI "This class is used to specify a sample\&. "
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::SequenceNumber_t\fP"
+.br
+.RI "Structure \fBSequenceNumber_t\fP, different for each change in the same writer\&. "
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::SequenceNumberSet_t\fP"
+.br
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::SerializedPayload_t\fP"
+.br
+.RI "Structure \fBSerializedPayload_t\fP\&. "
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::Time_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::WriteParams\fP"
+.br
+.RI "This class contains additional information of a CacheChange\&. "
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::Endpoint\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::CacheChangePool\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::History\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::CDRMessagePool\fP"
+.br
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::Header_t\fP"
+.br
+.RI "Structure \fBHeader_t\fP, RTPS Message Header Structure\&. "
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::AsyncWriterThread\fP"
+.br
+.RI "This static class owns a thread that manages asynchronous writes\&. Asynchronous writes happen directly (when using an async writer) and indirectly (when responding to a NACK)\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::rtps::ReliabilityKind_t\fP \fBeprosima::fastrtps::rtps::ReliabilityKind_t\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::rtps::DurabilityKind_t\fP \fBeprosima::fastrtps::rtps::DurabilityKind_t\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::rtps::EndpointKind_t\fP \fBeprosima::fastrtps::rtps::EndpointKind_t\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::ChangeForReaderStatus_t\fP { \fBeprosima::fastrtps::rtps::UNSENT\fP = 0, \fBeprosima::fastrtps::rtps::UNACKNOWLEDGED\fP = 1, \fBeprosima::fastrtps::rtps::REQUESTED\fP = 2, \fBeprosima::fastrtps::rtps::ACKNOWLEDGED\fP = 3, \fBeprosima::fastrtps::rtps::UNDERWAY\fP = 4 }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::ChangeFromWriterStatus_t\fP { \fBUNKNOWN\fP = 0, \fBMISSING\fP = 1, \fBRECEIVED\fP = 2, \fBLOST\fP = 3 }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::Endianness_t\fP { \fBeprosima::fastrtps::rtps::BIGEND\fP = 0x1, \fBeprosima::fastrtps::rtps::LITTLEEND\fP = 0x0 }"
+.br
+.RI "This enumeration represents endianness types\&. "
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::ReliabilityKind_t\fP { \fBRELIABLE\fP, \fBBEST_EFFORT\fP }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::DurabilityKind_t\fP { \fBVOLATILE\fP, \fBTRANSIENT_LOCAL\fP }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::EndpointKind_t\fP { \fBREADER\fP, \fBWRITER\fP }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::ChangeKind_t\fP { \fBeprosima::fastrtps::rtps::ALIVE\fP, \fBeprosima::fastrtps::rtps::NOT_ALIVE_DISPOSED\fP, \fBeprosima::fastrtps::rtps::NOT_ALIVE_UNREGISTERED\fP, \fBeprosima::fastrtps::rtps::NOT_ALIVE_DISPOSED_UNREGISTERED\fP }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::MatchingStatus\fP { \fBeprosima::fastrtps::rtps::MATCHED_MATCHING\fP, \fBeprosima::fastrtps::rtps::REMOVED_MATCHING\fP }"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Common structures used by multiple elements\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef enum \fBeprosima::fastrtps::rtps::DurabilityKind_t\fP \fBeprosima::fastrtps::rtps::DurabilityKind_t\fP"
+Durability kind 
+.SS "typedef enum \fBeprosima::fastrtps::rtps::EndpointKind_t\fP \fBeprosima::fastrtps::rtps::EndpointKind_t\fP"
+\fBEndpoint\fP kind 
+.SS "typedef enum \fBeprosima::fastrtps::rtps::ReliabilityKind_t\fP \fBeprosima::fastrtps::rtps::ReliabilityKind_t\fP"
+Reliability enum used for internal purposes 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBeprosima::fastrtps::rtps::ChangeForReaderStatus_t\fP"
+Enum ChangeForReaderStatus_t, possible states for a \fBCacheChange_t\fP in a \fBReaderProxy\fP\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIUNSENT \fP\fP
+UNSENT\&. 
+.TP
+\fB\fIUNACKNOWLEDGED \fP\fP
+UNACKNOWLEDGED\&. 
+.TP
+\fB\fIREQUESTED \fP\fP
+REQUESTED\&. 
+.TP
+\fB\fIACKNOWLEDGED \fP\fP
+ACKNOWLEDGED\&. 
+.TP
+\fB\fIUNDERWAY \fP\fP
+UNDERWAY\&. 
+.SS "enum \fBeprosima::fastrtps::rtps::ChangeFromWriterStatus_t\fP"
+Enum ChangeFromWriterStatus_t, possible states for a \fBCacheChange_t\fP in a \fBWriterProxy\fP\&. 
+.SS "enum \fBeprosima::fastrtps::rtps::ChangeKind_t\fP"
+, different types of \fBCacheChange_t\fP\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIALIVE \fP\fP
+ALIVE\&. 
+.TP
+\fB\fINOT_ALIVE_DISPOSED \fP\fP
+NOT_ALIVE_DISPOSED\&. 
+.TP
+\fB\fINOT_ALIVE_UNREGISTERED \fP\fP
+NOT_ALIVE_UNREGISTERED\&. 
+.TP
+\fB\fINOT_ALIVE_DISPOSED_UNREGISTERED \fP\fP
+NOT_ALIVE_DISPOSED_UNREGISTERED\&. 
+.SS "enum \fBeprosima::fastrtps::rtps::DurabilityKind_t\fP"
+Durability kind 
+.SS "enum \fBeprosima::fastrtps::rtps::Endianness_t\fP"
+
+.PP
+This enumeration represents endianness types\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIBIGEND \fP\fP
+Big endianness\&. 
+.TP
+\fB\fILITTLEEND \fP\fP
+Little endianness\&. 
+.SS "enum \fBeprosima::fastrtps::rtps::EndpointKind_t\fP"
+\fBEndpoint\fP kind 
+.SS "enum \fBeprosima::fastrtps::rtps::MatchingStatus\fP"
+, indicates whether the matched publication/subscription method of the \fBPublisherListener\fP or \fBSubscriberListener\fP has been called for a matching or a removal of a remote endpoint\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIMATCHED_MATCHING \fP\fP
+MATCHED_MATCHING, new publisher/subscriber found\&. 
+.TP
+\fB\fIREMOVED_MATCHING \fP\fP
+REMOVED_MATCHING, publisher/subscriber removed\&. 
+.SS "enum \fBeprosima::fastrtps::rtps::ReliabilityKind_t\fP"
+Reliability enum used for internal purposes 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,163 @@
+.TH "eprosima::fastrtps::rtps::RTPSDomain" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::RTPSDomain
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RTPSDomain\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static RTPS_DllAPI void \fBstopAll\fP ()"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI \fBRTPSParticipant\fP * \fBcreateParticipant\fP (\fBRTPSParticipantAttributes\fP &PParam, \fBRTPSParticipantListener\fP *plisten=nullptr)"
+.br
+.RI "Create a \fBRTPSParticipant\fP\&. "
+.ti -1c
+.RI "static RTPS_DllAPI \fBRTPSWriter\fP * \fBcreateRTPSWriter\fP (\fBRTPSParticipant\fP *p, \fBWriterAttributes\fP &watt, \fBWriterHistory\fP *hist, \fBWriterListener\fP *listen=nullptr)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBremoveRTPSWriter\fP (\fBRTPSWriter\fP *writer)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI \fBRTPSReader\fP * \fBcreateRTPSReader\fP (\fBRTPSParticipant\fP *p, \fBReaderAttributes\fP &ratt, \fBReaderHistory\fP *hist, \fBReaderListener\fP *listen=nullptr)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBremoveRTPSReader\fP (\fBRTPSReader\fP *reader)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBremoveRTPSParticipant\fP (\fBRTPSParticipant\fP *p)"
+.br
+.ti -1c
+.RI "static void \fBsetMaxRTPSParticipantId\fP (uint32_t maxRTPSParticipantId)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBRTPSDomain\fP,it manages the creation and destruction of \fBRTPSParticipant\fP \fBRTPSWriter\fP and \fBRTPSReader\fP\&. It stores a list of all created \fBRTPSParticipant\fP\&. Is has only static methods\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "static RTPS_DllAPI \fBRTPSParticipant\fP* eprosima::fastrtps::rtps::RTPSDomain::createParticipant (\fBRTPSParticipantAttributes\fP & PParam, \fBRTPSParticipantListener\fP * plisten = \fCnullptr\fP)\fC [static]\fP"
+
+.PP
+Create a \fBRTPSParticipant\fP\&. 
+.PP
+.nf
+
+.fi
+.PP
+\fBParameters\fP
+.RS 4
+\fIPParam\fP \fBRTPSParticipant\fP Parameters\&. 
+.br
+\fIplisten\fP Pointer to the \fBParticipantListener\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the \fBRTPSParticipant\fP\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI \fBRTPSReader\fP* eprosima::fastrtps::rtps::RTPSDomain::createRTPSReader (\fBRTPSParticipant\fP * p, \fBReaderAttributes\fP & ratt, \fBReaderHistory\fP * hist, \fBReaderListener\fP * listen = \fCnullptr\fP)\fC [static]\fP"
+Create a \fBRTPSReader\fP in a participant\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Pointer to the \fBRTPSParticipant\fP\&. 
+.br
+\fIratt\fP Reader Attributes\&. 
+.br
+\fIhist\fP Pointer to the \fBReaderHistory\fP\&. 
+.br
+\fIlisten\fP Pointer to the \fBReaderListener\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the created \fBRTPSReader\fP\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI \fBRTPSWriter\fP* eprosima::fastrtps::rtps::RTPSDomain::createRTPSWriter (\fBRTPSParticipant\fP * p, \fBWriterAttributes\fP & watt, \fBWriterHistory\fP * hist, \fBWriterListener\fP * listen = \fCnullptr\fP)\fC [static]\fP"
+Create a \fBRTPSWriter\fP in a participant\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Pointer to the \fBRTPSParticipant\fP\&. 
+.br
+\fIwatt\fP Writer Attributes\&. 
+.br
+\fIhist\fP Pointer to the \fBWriterHistory\fP\&. 
+.br
+\fIlisten\fP Pointer to the \fBWriterListener\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the created \fBRTPSWriter\fP\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::rtps::RTPSDomain::removeRTPSParticipant (\fBRTPSParticipant\fP * p)\fC [static]\fP"
+Remove a \fBRTPSParticipant\fP and delete all its associated Writers, Readers, resources, etc\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Pointer to the \fBRTPSParticipant\fP; 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::rtps::RTPSDomain::removeRTPSReader (\fBRTPSReader\fP * reader)\fC [static]\fP"
+Remove a \fBRTPSReader\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreader\fP Pointer to the reader you want to remove\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly removed\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::rtps::RTPSDomain::removeRTPSWriter (\fBRTPSWriter\fP * writer)\fC [static]\fP"
+Remove a \fBRTPSWriter\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwriter\fP Pointer to the writer you want to remove\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly removed\&. 
+.RE
+.PP
+
+.SS "static void eprosima::fastrtps::rtps::RTPSDomain::setMaxRTPSParticipantId (uint32_t maxRTPSParticipantId)\fC [inline]\fP, \fC [static]\fP"
+Set the maximum RTPSParticipantID\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImaxRTPSParticipantId\fP ID\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI void eprosima::fastrtps::rtps::RTPSDomain::stopAll ()\fC [static]\fP"
+Method to shut down all RTPSParticipants, readers, writers, etc\&. It must be called at the end of the process to avoid memory leaks\&. It also shut downs the DomainRTPSParticipant\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

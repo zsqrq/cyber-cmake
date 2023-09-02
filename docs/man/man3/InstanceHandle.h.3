@@ -1,0 +1,70 @@
+.TH "third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/common/InstanceHandle.h" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/common/InstanceHandle.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./\&.\&./fastrtps_dll\&.h'\fP
+.br
+\fC#include 'Types\&.h'\fP
+.br
+\fC#include 'Guid\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::InstanceHandle_t\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBeprosima\fP"
+.br
+.RI "Maximum payload is maximum of UDP packet size minus 536bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) With those 536 bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) bytes is posible to send RTPS Header plus RTPS Data submessage plus RTPS Heartbeat submessage\&. "
+.ti -1c
+.RI " \fBeprosima::fastrtps\fP"
+.br
+.ti -1c
+.RI " \fBeprosima::fastrtps::rtps\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::operator==\fP (const InstanceHandle_t &ihandle1, const InstanceHandle_t &ihandle2)"
+.br
+.ti -1c
+.RI "void \fBeprosima::fastrtps::rtps::iHandle2GUID\fP (GUID_t &guid, const InstanceHandle_t &ihandle)"
+.br
+.ti -1c
+.RI "GUID_t \fBeprosima::fastrtps::rtps::iHandle2GUID\fP (const InstanceHandle_t &ihandle)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::operator<\fP (const InstanceHandle_t &h1, const InstanceHandle_t &h2)"
+.br
+.ti -1c
+.RI "std::ostream & \fBeprosima::fastrtps::rtps::operator<<\fP (std::ostream &output, const InstanceHandle_t &iHandle)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const InstanceHandle_t \fBeprosima::fastrtps::rtps::c_InstanceHandle_Unknown\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

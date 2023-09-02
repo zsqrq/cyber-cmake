@@ -1,0 +1,86 @@
+.TH "eprosima::fastrtps::QosList" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::QosList
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QosList\&.h>\fP
+.SS "Static Public Member Functions"
+
+.PP
+.RI "\fBAddQos methods\&.\fP"
+.br
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIqos\fP Pointer to the QOsList_t list\&. 
+.br
+\fIpid\fP PID of the parameter to add to the \fBQosList_t\fP\&. 
+.br
+\fIparam\fP Parameter to add\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, std::string &string_in)"
+.br
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, \fBLocator_t\fP &loc)"
+.br
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, uint32_t uintlong)"
+.br
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, const \fBGUID_t\fP &guid)"
+.br
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, \fBProtocolVersion_t\fP &protocol)"
+.br
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, VendorId_t &vendor)"
+.br
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, octet o1, octet o2, octet o3, octet o4)"
+.br
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, const \fBEntityId_t\fP &entity)"
+.br
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, \fBTime_t\fP &entity)"
+.br
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, bool in_bool)"
+.br
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, std::string &str1, std::string &str2)"
+.br
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, std::vector< octet > &ocVec)"
+.br
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, const \fBParameterPropertyList_t\fP &list)"
+.br
+.ti -1c
+.RI "static bool \fBaddQos\fP (\fBQosList_t\fP *qos, ParameterId_t pid, const \fBIdentityToken\fP &identity_token)"
+.br
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBQosList\fP class, that contains static methods to add Qos to a \fBQosList_t\fP structure\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

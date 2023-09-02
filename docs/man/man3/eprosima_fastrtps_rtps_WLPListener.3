@@ -1,0 +1,96 @@
+.TH "eprosima::fastrtps::rtps::WLPListener" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::WLPListener
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WLPListener\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::ReaderListener\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWLPListener\fP (\fBWLP\fP *pwlp)"
+.br
+.ti -1c
+.RI "void \fBonNewCacheChangeAdded\fP (\fBRTPSReader\fP *reader, const \fBCacheChange_t\fP *const change)"
+.br
+.ti -1c
+.RI "bool \fBseparateKey\fP (\fBInstanceHandle_t\fP &key, \fBGuidPrefix_t\fP *guidP, \fBLivelinessQosPolicyKind\fP *liveliness)"
+.br
+.ti -1c
+.RI "bool \fBcomputeKey\fP (\fBCacheChange_t\fP *change)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCDRMessage_t\fP \fBaux_msg\fP"
+.br
+.RI "Auxiliary message\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBWLPListener\fP that receives the liveliness messages asserting the liveliness of remote endpoints\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::WLPListener::WLPListener (\fBWLP\fP * pwlp)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpwlp\fP Pointer to the \fBWLP\fP object\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool eprosima::fastrtps::rtps::WLPListener::computeKey (\fBCacheChange_t\fP * change)"
+Compute the key from a \fBCacheChange_t\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchange\fP 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::WLPListener::onNewCacheChangeAdded (\fBRTPSReader\fP * reader, const \fBCacheChange_t\fP *const change)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIreader\fP 
+.br
+\fIchange\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBeprosima::fastrtps::rtps::ReaderListener\fP\&.
+.SS "bool eprosima::fastrtps::rtps::WLPListener::separateKey (\fBInstanceHandle_t\fP & key, \fBGuidPrefix_t\fP * guidP, \fBLivelinessQosPolicyKind\fP * liveliness)"
+Separate the Key between the \fBGuidPrefix_t\fP and the liveliness Kind 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP \fBInstanceHandle_t\fP to separate\&. 
+.br
+\fIguidP\fP \fBGuidPrefix_t\fP pointer to store the info\&. 
+.br
+\fIliveliness\fP Liveliness Kind Pointer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly separated\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

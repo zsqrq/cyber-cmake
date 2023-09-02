@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -155,14 +157,14 @@ $(function() {
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager.html#ad7a6a93c25b30eca132bd945f1771a59">IsMessageTypeMatching</a>(<span class="keyword">const</span> std::string&amp; lhs, <span class="keyword">const</span> std::string&amp; rhs);</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordtype">bool</span> Check(<span class="keyword">const</span> RoleAttributes&amp; attr) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">void</span> Dispose(<span class="keyword">const</span> ChangeMsg&amp; msg) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordtype">bool</span> Check(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; attr) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">void</span> Dispose(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ChangeMsg.html">ChangeMsg</a>&amp; msg) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordtype">void</span> OnTopoModuleLeave(<span class="keyword">const</span> std::string&amp; host_name, <span class="keywordtype">int</span> process_id) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordtype">void</span> DisposeJoin(<span class="keyword">const</span> ChangeMsg&amp; msg);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordtype">void</span> DisposeLeave(<span class="keyword">const</span> ChangeMsg&amp; msg);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordtype">void</span> DisposeJoin(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ChangeMsg.html">ChangeMsg</a>&amp; msg);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordtype">void</span> DisposeLeave(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ChangeMsg.html">ChangeMsg</a>&amp; msg);</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keywordtype">void</span> ScanMessageType(<span class="keyword">const</span> ChangeMsg&amp; msg);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keywordtype">void</span> ScanMessageType(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ChangeMsg.html">ChangeMsg</a>&amp; msg);</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  ExemptedMessageTypes exempted_msg_types_;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
@@ -181,6 +183,8 @@ $(function() {
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}  <span class="comment">// namespace apollo</span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">//  CYBER_SERVICE_DISCOVERY_SPECIFIC_MANAGER_CHANNEL_MANAGER_H_</span></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1ChangeMsg_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1ChangeMsg.html">apollo::cyber::proto::ChangeMsg</a></div><div class="ttdef"><b>Definition:</b> topology_change.pb.h:152</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1RoleAttributes_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a></div><div class="ttdef"><b>Definition:</b> role_attributes.pb.h:258</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager.html">apollo::cyber::service_discovery::ChannelManager</a></div><div class="ttdoc">Topology Manager of Service related.</div><div class="ttdef"><b>Definition:</b> channel_manager.h:42</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_html_a06a205015433a25d5f2acf20eee4c445"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager.html#a06a205015433a25d5f2acf20eee4c445">apollo::cyber::service_discovery::ChannelManager::GetMsgType</a></div><div class="ttdeci">void GetMsgType(const std::string &amp;channel_name, std::string *msg_type)</div><div class="ttdoc">Get the Msg Type of channel_name</div><div class="ttdef"><b>Definition:</b> channel_manager.cc:74</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_html_a2259a9d33b8391ffb2ec307f6c442bc8"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager.html#a2259a9d33b8391ffb2ec307f6c442bc8">apollo::cyber::service_discovery::ChannelManager::GetProtoDesc</a></div><div class="ttdeci">void GetProtoDesc(const std::string &amp;channel_name, std::string *proto_desc)</div><div class="ttdoc">Get the Protocol Desc of channel_name</div><div class="ttdef"><b>Definition:</b> channel_manager.cc:60</div></div>
@@ -203,7 +207,7 @@ $(function() {
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1Manager_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1Manager.html">apollo::cyber::service_discovery::Manager</a></div><div class="ttdoc">Base class for management of Topology elements. Manager can Join/Leave the Topology,...</div><div class="ttdef"><b>Definition:</b> manager.h:51</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse.html">apollo::cyber::service_discovery::MultiValueWarehouse</a></div><div class="ttdef"><b>Definition:</b> multi_value_warehouse.h:31</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager.html">apollo::cyber::service_discovery::TopologyManager</a></div><div class="ttdoc">elements in Cyber – Node, Channel, Service, Writer, Reader, Client and Server's relationship is prese...</div><div class="ttdef"><b>Definition:</b> topology_manager.h:64</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,0 +1,818 @@
+.TH "apollo::drivers::Vehicle3_5f2" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::drivers::Vehicle3_5f2
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkCanRxServAlignUpdatesNeedFieldNumber\fP = 1, \fBkCanRxServAlignTypeFieldNumber\fP = 2, \fBkCanRxAalignAvgCtrTotalFieldNumber\fP = 4, \fBkCanRxServAlignEnableFieldNumber\fP = 3, \fBkCanRxAutoAlignConvergedFieldNumber\fP = 5, \fBkCanRxAngleMountingOffsetFieldNumber\fP = 7, \fBkCanRxAutoAlignDisableFieldNumber\fP = 6, \fBkCanRxWheelSlipFieldNumber\fP = 8, \fBkCanRxRadarHeightFieldNumber\fP = 9, \fBkCanRxRadarFovMrFieldNumber\fP = 10, \fBkCanRxRadarFovLrFieldNumber\fP = 11, \fBkCanRxLongAccelValidityFieldNumber\fP = 12, \fBkCanRxLongAccelFieldNumber\fP = 13, \fBkCanRxLatAccelFieldNumber\fP = 15, \fBkCanRxLatAccelValidityFieldNumber\fP = 14 }"
+.br
+.ti -1c
+.RI "typedef Vehicle3_5f2_Can_rx_serv_align_typeType \fBCan_rx_serv_align_typeType\fP"
+.br
+.ti -1c
+.RI "typedef Vehicle3_5f2_Can_rx_serv_align_enableType \fBCan_rx_serv_align_enableType\fP"
+.br
+.ti -1c
+.RI "typedef Vehicle3_5f2_Can_rx_auto_align_convergedType \fBCan_rx_auto_align_convergedType\fP"
+.br
+.ti -1c
+.RI "typedef Vehicle3_5f2_Can_rx_auto_align_disableType \fBCan_rx_auto_align_disableType\fP"
+.br
+.ti -1c
+.RI "typedef Vehicle3_5f2_Can_rx_wheel_slipType \fBCan_rx_wheel_slipType\fP"
+.br
+.ti -1c
+.RI "typedef Vehicle3_5f2_Can_rx_long_accel_validityType \fBCan_rx_long_accel_validityType\fP"
+.br
+.ti -1c
+.RI "typedef Vehicle3_5f2_Can_rx_lat_accel_validityType \fBCan_rx_lat_accel_validityType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBVehicle3_5f2\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBVehicle3_5f2\fP (const \fBVehicle3_5f2\fP &from)"
+.br
+.ti -1c
+.RI "\fBVehicle3_5f2\fP (\fBVehicle3_5f2\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBVehicle3_5f2\fP & \fBoperator=\fP (const \fBVehicle3_5f2\fP &from)"
+.br
+.ti -1c
+.RI "\fBVehicle3_5f2\fP & \fBoperator=\fP (\fBVehicle3_5f2\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBVehicle3_5f2\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBVehicle3_5f2\fP *other)"
+.br
+.ti -1c
+.RI "\fBVehicle3_5f2\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBVehicle3_5f2\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBVehicle3_5f2\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_serv_align_updates_need\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_serv_align_updates_need\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBcan_rx_serv_align_updates_need\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_serv_align_updates_need\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_serv_align_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_serv_align_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Vehicle3_5f2_Can_rx_serv_align_typeType \fBcan_rx_serv_align_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_serv_align_type\fP (::apollo::drivers::Vehicle3_5f2_Can_rx_serv_align_typeType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_aalign_avg_ctr_total\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_aalign_avg_ctr_total\fP ()"
+.br
+.ti -1c
+.RI "double \fBcan_rx_aalign_avg_ctr_total\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_aalign_avg_ctr_total\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_serv_align_enable\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_serv_align_enable\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Vehicle3_5f2_Can_rx_serv_align_enableType \fBcan_rx_serv_align_enable\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_serv_align_enable\fP (::apollo::drivers::Vehicle3_5f2_Can_rx_serv_align_enableType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_auto_align_converged\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_auto_align_converged\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Vehicle3_5f2_Can_rx_auto_align_convergedType \fBcan_rx_auto_align_converged\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_auto_align_converged\fP (::apollo::drivers::Vehicle3_5f2_Can_rx_auto_align_convergedType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_angle_mounting_offset\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_angle_mounting_offset\fP ()"
+.br
+.ti -1c
+.RI "double \fBcan_rx_angle_mounting_offset\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_angle_mounting_offset\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_auto_align_disable\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_auto_align_disable\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Vehicle3_5f2_Can_rx_auto_align_disableType \fBcan_rx_auto_align_disable\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_auto_align_disable\fP (::apollo::drivers::Vehicle3_5f2_Can_rx_auto_align_disableType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_wheel_slip\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_wheel_slip\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Vehicle3_5f2_Can_rx_wheel_slipType \fBcan_rx_wheel_slip\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_wheel_slip\fP (::apollo::drivers::Vehicle3_5f2_Can_rx_wheel_slipType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_radar_height\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_radar_height\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBcan_rx_radar_height\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_radar_height\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_radar_fov_mr\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_radar_fov_mr\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBcan_rx_radar_fov_mr\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_radar_fov_mr\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_radar_fov_lr\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_radar_fov_lr\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBcan_rx_radar_fov_lr\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_radar_fov_lr\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_long_accel_validity\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_long_accel_validity\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Vehicle3_5f2_Can_rx_long_accel_validityType \fBcan_rx_long_accel_validity\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_long_accel_validity\fP (::apollo::drivers::Vehicle3_5f2_Can_rx_long_accel_validityType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_long_accel\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_long_accel\fP ()"
+.br
+.ti -1c
+.RI "double \fBcan_rx_long_accel\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_long_accel\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_lat_accel\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_lat_accel\fP ()"
+.br
+.ti -1c
+.RI "double \fBcan_rx_lat_accel\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_lat_accel\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_rx_lat_accel_validity\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_rx_lat_accel_validity\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Vehicle3_5f2_Can_rx_lat_accel_validityType \fBcan_rx_lat_accel_validity\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_rx_lat_accel_validity\fP (::apollo::drivers::Vehicle3_5f2_Can_rx_lat_accel_validityType value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBVehicle3_5f2\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBVehicle3_5f2\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_serv_align_typeType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_rx_serv_align_typeType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_rx_serv_align_typeType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_serv_align_typeType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_rx_serv_align_typeType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_serv_align_enableType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_rx_serv_align_enableType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_rx_serv_align_enableType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_serv_align_enableType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_rx_serv_align_enableType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_auto_align_convergedType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_rx_auto_align_convergedType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_rx_auto_align_convergedType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_auto_align_convergedType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_rx_auto_align_convergedType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_auto_align_disableType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_rx_auto_align_disableType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_rx_auto_align_disableType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_auto_align_disableType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_rx_auto_align_disableType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_wheel_slipType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_rx_wheel_slipType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_rx_wheel_slipType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_wheel_slipType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_rx_wheel_slipType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_long_accel_validityType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_rx_long_accel_validityType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_rx_long_accel_validityType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_long_accel_validityType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_rx_long_accel_validityType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_lat_accel_validityType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_rx_lat_accel_validityType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_rx_lat_accel_validityType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_rx_lat_accel_validityType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_rx_lat_accel_validityType *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_serv_align_typeType \fBCAN_RX_SERV_ALIGN_TYPE_AUTO_OR_DEALER\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_serv_align_typeType \fBCAN_RX_SERV_ALIGN_TYPE_VOLVO_SHORT_TRACK\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_serv_align_typeType \fBCan_rx_serv_align_typeType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_serv_align_typeType \fBCan_rx_serv_align_typeType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_rx_serv_align_typeType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_serv_align_enableType \fBCAN_RX_SERV_ALIGN_ENABLE_DISABLED\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_serv_align_enableType \fBCAN_RX_SERV_ALIGN_ENABLE_ENABLED\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_serv_align_enableType \fBCan_rx_serv_align_enableType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_serv_align_enableType \fBCan_rx_serv_align_enableType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_rx_serv_align_enableType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_auto_align_convergedType \fBCAN_RX_AUTO_ALIGN_CONVERGED_NOT_CONVERGED\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_auto_align_convergedType \fBCAN_RX_AUTO_ALIGN_CONVERGED_CONVERGED\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_auto_align_convergedType \fBCan_rx_auto_align_convergedType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_auto_align_convergedType \fBCan_rx_auto_align_convergedType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_rx_auto_align_convergedType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_auto_align_disableType \fBCAN_RX_AUTO_ALIGN_DISABLE_ENABLED\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_auto_align_disableType \fBCAN_RX_AUTO_ALIGN_DISABLE_DISABLED\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_auto_align_disableType \fBCan_rx_auto_align_disableType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_auto_align_disableType \fBCan_rx_auto_align_disableType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_rx_auto_align_disableType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_wheel_slipType \fBCAN_RX_WHEEL_SLIP_NO_CONTROL\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_wheel_slipType \fBCAN_RX_WHEEL_SLIP_BRAKE_SLIP_CONTROL\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_wheel_slipType \fBCAN_RX_WHEEL_SLIP_TRACTION_SLIP_CONTROL\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_wheel_slipType \fBCAN_RX_WHEEL_SLIP_INVALID_3\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_wheel_slipType \fBCan_rx_wheel_slipType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_wheel_slipType \fBCan_rx_wheel_slipType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_rx_wheel_slipType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_long_accel_validityType \fBCAN_RX_LONG_ACCEL_VALIDITY_INVALID\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_long_accel_validityType \fBCAN_RX_LONG_ACCEL_VALIDITY_VALID\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_long_accel_validityType \fBCan_rx_long_accel_validityType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_long_accel_validityType \fBCan_rx_long_accel_validityType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_rx_long_accel_validityType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_lat_accel_validityType \fBCAN_RX_LAT_ACCEL_VALIDITY_INVALID\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_lat_accel_validityType \fBCAN_RX_LAT_ACCEL_VALIDITY_VALID\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_lat_accel_validityType \fBCan_rx_lat_accel_validityType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_rx_lat_accel_validityType \fBCan_rx_lat_accel_validityType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_rx_lat_accel_validityType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVehicle3_5f2\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fsensor_5fmsgs_2fdelphi_5fesr_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBVehicle3_5f2\fP &a, \fBVehicle3_5f2\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::drivers::Vehicle3_5f2::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Vehicle3_5f2::MergeImpl
+}
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_auto_align_convergedType apollo::drivers::Vehicle3_5f2::CAN_RX_AUTO_ALIGN_CONVERGED_CONVERGED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_auto_align_convergedType_CAN_RX_AUTO_ALIGN_CONVERGED_CONVERGED
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_auto_align_convergedType apollo::drivers::Vehicle3_5f2::CAN_RX_AUTO_ALIGN_CONVERGED_NOT_CONVERGED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_auto_align_convergedType_CAN_RX_AUTO_ALIGN_CONVERGED_NOT_CONVERGED
+.fi
+.SS "constexpr int apollo::drivers::Vehicle3_5f2::Can_rx_auto_align_convergedType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_auto_align_convergedType_Can_rx_auto_align_convergedType_ARRAYSIZE
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_auto_align_convergedType apollo::drivers::Vehicle3_5f2::Can_rx_auto_align_convergedType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_auto_align_convergedType_Can_rx_auto_align_convergedType_MAX
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_auto_align_convergedType apollo::drivers::Vehicle3_5f2::Can_rx_auto_align_convergedType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_auto_align_convergedType_Can_rx_auto_align_convergedType_MIN
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_auto_align_disableType apollo::drivers::Vehicle3_5f2::CAN_RX_AUTO_ALIGN_DISABLE_DISABLED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_auto_align_disableType_CAN_RX_AUTO_ALIGN_DISABLE_DISABLED
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_auto_align_disableType apollo::drivers::Vehicle3_5f2::CAN_RX_AUTO_ALIGN_DISABLE_ENABLED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_auto_align_disableType_CAN_RX_AUTO_ALIGN_DISABLE_ENABLED
+.fi
+.SS "constexpr int apollo::drivers::Vehicle3_5f2::Can_rx_auto_align_disableType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_auto_align_disableType_Can_rx_auto_align_disableType_ARRAYSIZE
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_auto_align_disableType apollo::drivers::Vehicle3_5f2::Can_rx_auto_align_disableType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_auto_align_disableType_Can_rx_auto_align_disableType_MAX
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_auto_align_disableType apollo::drivers::Vehicle3_5f2::Can_rx_auto_align_disableType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_auto_align_disableType_Can_rx_auto_align_disableType_MIN
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_lat_accel_validityType apollo::drivers::Vehicle3_5f2::CAN_RX_LAT_ACCEL_VALIDITY_INVALID\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_lat_accel_validityType_CAN_RX_LAT_ACCEL_VALIDITY_INVALID
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_lat_accel_validityType apollo::drivers::Vehicle3_5f2::CAN_RX_LAT_ACCEL_VALIDITY_VALID\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_lat_accel_validityType_CAN_RX_LAT_ACCEL_VALIDITY_VALID
+.fi
+.SS "constexpr int apollo::drivers::Vehicle3_5f2::Can_rx_lat_accel_validityType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_lat_accel_validityType_Can_rx_lat_accel_validityType_ARRAYSIZE
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_lat_accel_validityType apollo::drivers::Vehicle3_5f2::Can_rx_lat_accel_validityType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_lat_accel_validityType_Can_rx_lat_accel_validityType_MAX
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_lat_accel_validityType apollo::drivers::Vehicle3_5f2::Can_rx_lat_accel_validityType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_lat_accel_validityType_Can_rx_lat_accel_validityType_MIN
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_long_accel_validityType apollo::drivers::Vehicle3_5f2::CAN_RX_LONG_ACCEL_VALIDITY_INVALID\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_long_accel_validityType_CAN_RX_LONG_ACCEL_VALIDITY_INVALID
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_long_accel_validityType apollo::drivers::Vehicle3_5f2::CAN_RX_LONG_ACCEL_VALIDITY_VALID\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_long_accel_validityType_CAN_RX_LONG_ACCEL_VALIDITY_VALID
+.fi
+.SS "constexpr int apollo::drivers::Vehicle3_5f2::Can_rx_long_accel_validityType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_long_accel_validityType_Can_rx_long_accel_validityType_ARRAYSIZE
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_long_accel_validityType apollo::drivers::Vehicle3_5f2::Can_rx_long_accel_validityType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_long_accel_validityType_Can_rx_long_accel_validityType_MAX
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_long_accel_validityType apollo::drivers::Vehicle3_5f2::Can_rx_long_accel_validityType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_long_accel_validityType_Can_rx_long_accel_validityType_MIN
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_serv_align_enableType apollo::drivers::Vehicle3_5f2::CAN_RX_SERV_ALIGN_ENABLE_DISABLED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_serv_align_enableType_CAN_RX_SERV_ALIGN_ENABLE_DISABLED
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_serv_align_enableType apollo::drivers::Vehicle3_5f2::CAN_RX_SERV_ALIGN_ENABLE_ENABLED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_serv_align_enableType_CAN_RX_SERV_ALIGN_ENABLE_ENABLED
+.fi
+.SS "constexpr int apollo::drivers::Vehicle3_5f2::Can_rx_serv_align_enableType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_serv_align_enableType_Can_rx_serv_align_enableType_ARRAYSIZE
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_serv_align_enableType apollo::drivers::Vehicle3_5f2::Can_rx_serv_align_enableType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_serv_align_enableType_Can_rx_serv_align_enableType_MAX
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_serv_align_enableType apollo::drivers::Vehicle3_5f2::Can_rx_serv_align_enableType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_serv_align_enableType_Can_rx_serv_align_enableType_MIN
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_serv_align_typeType apollo::drivers::Vehicle3_5f2::CAN_RX_SERV_ALIGN_TYPE_AUTO_OR_DEALER\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_serv_align_typeType_CAN_RX_SERV_ALIGN_TYPE_AUTO_OR_DEALER
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_serv_align_typeType apollo::drivers::Vehicle3_5f2::CAN_RX_SERV_ALIGN_TYPE_VOLVO_SHORT_TRACK\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_serv_align_typeType_CAN_RX_SERV_ALIGN_TYPE_VOLVO_SHORT_TRACK
+.fi
+.SS "constexpr int apollo::drivers::Vehicle3_5f2::Can_rx_serv_align_typeType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_serv_align_typeType_Can_rx_serv_align_typeType_ARRAYSIZE
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_serv_align_typeType apollo::drivers::Vehicle3_5f2::Can_rx_serv_align_typeType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_serv_align_typeType_Can_rx_serv_align_typeType_MAX
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_serv_align_typeType apollo::drivers::Vehicle3_5f2::Can_rx_serv_align_typeType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_serv_align_typeType_Can_rx_serv_align_typeType_MIN
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_wheel_slipType apollo::drivers::Vehicle3_5f2::CAN_RX_WHEEL_SLIP_BRAKE_SLIP_CONTROL\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_wheel_slipType_CAN_RX_WHEEL_SLIP_BRAKE_SLIP_CONTROL
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_wheel_slipType apollo::drivers::Vehicle3_5f2::CAN_RX_WHEEL_SLIP_INVALID_3\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_wheel_slipType_CAN_RX_WHEEL_SLIP_INVALID_3
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_wheel_slipType apollo::drivers::Vehicle3_5f2::CAN_RX_WHEEL_SLIP_NO_CONTROL\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_wheel_slipType_CAN_RX_WHEEL_SLIP_NO_CONTROL
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_wheel_slipType apollo::drivers::Vehicle3_5f2::CAN_RX_WHEEL_SLIP_TRACTION_SLIP_CONTROL\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_wheel_slipType_CAN_RX_WHEEL_SLIP_TRACTION_SLIP_CONTROL
+.fi
+.SS "constexpr int apollo::drivers::Vehicle3_5f2::Can_rx_wheel_slipType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_wheel_slipType_Can_rx_wheel_slipType_ARRAYSIZE
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_wheel_slipType apollo::drivers::Vehicle3_5f2::Can_rx_wheel_slipType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_wheel_slipType_Can_rx_wheel_slipType_MAX
+.fi
+.SS "constexpr Vehicle3_5f2_Can_rx_wheel_slipType apollo::drivers::Vehicle3_5f2::Can_rx_wheel_slipType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Vehicle3_5f2_Can_rx_wheel_slipType_Can_rx_wheel_slipType_MIN
+.fi
+.SS "constexpr int apollo::drivers::Vehicle3_5f2::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    19
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

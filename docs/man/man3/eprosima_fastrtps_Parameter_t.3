@@ -1,0 +1,72 @@
+.TH "eprosima::fastrtps::Parameter_t" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::Parameter_t
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ParameterTypes\&.h>\fP
+.PP
+Inherited by \fBeprosima::fastrtps::DeadlineQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::DestinationOrderQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::DurabilityQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::DurabilityServiceQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::GroupDataQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::HistoryQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::LatencyBudgetQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::LifespanQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::LivelinessQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::OwnershipQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::OwnershipStrengthQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::ParameterBool_t\fP, \fBeprosima::fastrtps::ParameterBuiltinEndpointSet_t\fP, \fBeprosima::fastrtps::ParameterCount_t\fP, \fBeprosima::fastrtps::ParameterEntityId_t\fP, \fBeprosima::fastrtps::ParameterGuid_t\fP, \fBeprosima::fastrtps::ParameterIP4Address_t\fP, \fBeprosima::fastrtps::ParameterKey_t\fP, \fBeprosima::fastrtps::ParameterLocator_t\fP, \fBeprosima::fastrtps::ParameterPort_t\fP, \fBeprosima::fastrtps::ParameterPropertyList_t\fP, \fBeprosima::fastrtps::ParameterProtocolVersion_t\fP, \fBeprosima::fastrtps::ParameterSampleIdentity_t\fP, \fBeprosima::fastrtps::ParameterString_t\fP, \fBeprosima::fastrtps::ParameterTime_t\fP, \fBeprosima::fastrtps::ParameterToken_t\fP, \fBeprosima::fastrtps::ParameterVendorId_t\fP, \fBeprosima::fastrtps::PartitionQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::PresentationQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::ReliabilityQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::ResourceLimitsQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::TimeBasedFilterQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::TopicDataQosPolicy\fP\fC [private]\fP, \fBeprosima::fastrtps::TransportPriorityQosPolicy\fP\fC [private]\fP, and \fBeprosima::fastrtps::UserDataQosPolicy\fP\fC [private]\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "RTPS_DllAPI \fBParameter_t\fP (ParameterId_t pid, uint16_t \fBlength\fP)"
+.br
+.ti -1c
+.RI "virtual bool \fBaddToCDRMessage\fP (\fBCDRMessage_t\fP *msg)=0"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "ParameterId_t \fBPid\fP"
+.br
+.RI "Parameter ID\&. "
+.ti -1c
+.RI "uint16_t \fBlength\fP"
+.br
+.RI "Parameter length\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBBase\fP Parameter class with parameter PID and parameter length in bytes\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RTPS_DllAPI eprosima::fastrtps::Parameter_t::Parameter_t (ParameterId_t pid, uint16_t length)"
+Constructor using a parameter PID and the parameter length 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpid\fP Pid of the parameter 
+.br
+\fIlength\fP Its associated length 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool eprosima::fastrtps::Parameter_t::addToCDRMessage (\fBCDRMessage_t\fP * msg)\fC [pure virtual]\fP"
+Virtual method used to add the parameter to a CDRMessage_t message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP Pointer to the message where the parameter should be added\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the parameter was correctly added\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBeprosima::fastrtps::TransportPriorityQosPolicy\fP, \fBeprosima::fastrtps::OwnershipStrengthQosPolicy\fP, \fBeprosima::fastrtps::LifespanQosPolicy\fP, \fBeprosima::fastrtps::DurabilityServiceQosPolicy\fP, \fBeprosima::fastrtps::ResourceLimitsQosPolicy\fP, \fBeprosima::fastrtps::HistoryQosPolicy\fP, \fBeprosima::fastrtps::GroupDataQosPolicy\fP, \fBeprosima::fastrtps::TopicDataQosPolicy\fP, \fBeprosima::fastrtps::PartitionQosPolicy\fP, \fBeprosima::fastrtps::PresentationQosPolicy\fP, \fBeprosima::fastrtps::TimeBasedFilterQosPolicy\fP, \fBeprosima::fastrtps::UserDataQosPolicy\fP, \fBeprosima::fastrtps::DestinationOrderQosPolicy\fP, \fBeprosima::fastrtps::OwnershipQosPolicy\fP, \fBeprosima::fastrtps::ReliabilityQosPolicy\fP, \fBeprosima::fastrtps::LivelinessQosPolicy\fP, \fBeprosima::fastrtps::LatencyBudgetQosPolicy\fP, \fBeprosima::fastrtps::DeadlineQosPolicy\fP, \fBeprosima::fastrtps::DurabilityQosPolicy\fP, \fBeprosima::fastrtps::ParameterToken_t\fP, \fBeprosima::fastrtps::ParameterSampleIdentity_t\fP, \fBeprosima::fastrtps::ParameterPropertyList_t\fP, \fBeprosima::fastrtps::ParameterBuiltinEndpointSet_t\fP, \fBeprosima::fastrtps::ParameterTime_t\fP, \fBeprosima::fastrtps::ParameterEntityId_t\fP, \fBeprosima::fastrtps::ParameterCount_t\fP, \fBeprosima::fastrtps::ParameterBool_t\fP, \fBeprosima::fastrtps::ParameterIP4Address_t\fP, \fBeprosima::fastrtps::ParameterVendorId_t\fP, \fBeprosima::fastrtps::ParameterProtocolVersion_t\fP, \fBeprosima::fastrtps::ParameterGuid_t\fP, \fBeprosima::fastrtps::ParameterPort_t\fP, \fBeprosima::fastrtps::ParameterString_t\fP, \fBeprosima::fastrtps::ParameterLocator_t\fP, and \fBeprosima::fastrtps::ParameterKey_t\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

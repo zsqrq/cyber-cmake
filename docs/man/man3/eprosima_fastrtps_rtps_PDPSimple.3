@@ -1,0 +1,418 @@
+.TH "eprosima::fastrtps::rtps::PDPSimple" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::PDPSimple
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PDPSimple\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPDPSimple\fP (\fBBuiltinProtocols\fP *builtin)"
+.br
+.ti -1c
+.RI "void \fBinitializeParticipantProxyData\fP (\fBParticipantProxyData\fP *participant_data)"
+.br
+.ti -1c
+.RI "bool \fBinitPDP\fP (RTPSParticipantImpl *part)"
+.br
+.ti -1c
+.RI "void \fBannounceParticipantState\fP (bool new_change, bool dispose=false)"
+.br
+.ti -1c
+.RI "void \fBstopParticipantAnnouncement\fP ()"
+.br
+.RI "Stop the RTPSParticipantAnnouncement (only used in tests)\&. "
+.ti -1c
+.RI "void \fBresetParticipantAnnouncement\fP ()"
+.br
+.RI "Reset the RTPSParticipantAnnouncement (only used in tests)\&. "
+.ti -1c
+.RI "bool \fBaddReaderProxyData\fP (\fBReaderProxyData\fP *rdata, bool copydata=false, \fBReaderProxyData\fP **returnReaderProxyData=nullptr, \fBParticipantProxyData\fP **pdata=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBaddWriterProxyData\fP (\fBWriterProxyData\fP *wdata, bool copydata=false, \fBWriterProxyData\fP **returnWriterProxyData=nullptr, \fBParticipantProxyData\fP **pdata=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBlookupReaderProxyData\fP (const \fBGUID_t\fP &reader, \fBReaderProxyData\fP **rdata, \fBParticipantProxyData\fP **pdata)"
+.br
+.ti -1c
+.RI "bool \fBlookupWriterProxyData\fP (const \fBGUID_t\fP &writer, \fBWriterProxyData\fP **wdata, \fBParticipantProxyData\fP **pdata)"
+.br
+.ti -1c
+.RI "bool \fBlookupParticipantProxyData\fP (const \fBGUID_t\fP &pguid, \fBParticipantProxyData\fP **pdata)"
+.br
+.ti -1c
+.RI "bool \fBremoveReaderProxyData\fP (\fBParticipantProxyData\fP *pdata, \fBReaderProxyData\fP *rdata)"
+.br
+.ti -1c
+.RI "bool \fBremoveWriterProxyData\fP (\fBParticipantProxyData\fP *pdata, \fBWriterProxyData\fP *wdata)"
+.br
+.ti -1c
+.RI "void \fBassignRemoteEndpoints\fP (\fBParticipantProxyData\fP *pdata)"
+.br
+.ti -1c
+.RI "void \fBnotifyAboveRemoteEndpoints\fP (\fBParticipantProxyData\fP *pdata)"
+.br
+.ti -1c
+.RI "void \fBremoveRemoteEndpoints\fP (\fBParticipantProxyData\fP *pdata)"
+.br
+.ti -1c
+.RI "bool \fBremoveRemoteParticipant\fP (\fBGUID_t\fP &partGUID)"
+.br
+.ti -1c
+.RI "\fBParticipantProxyData\fP * \fBgetLocalParticipantProxyData\fP ()"
+.br
+.ti -1c
+.RI "\fBEDP\fP * \fBgetEDP\fP ()"
+.br
+.ti -1c
+.RI "std::vector< \fBParticipantProxyData\fP * >::const_iterator \fBParticipantProxiesBegin\fP ()"
+.br
+.ti -1c
+.RI "std::vector< \fBParticipantProxyData\fP * >::const_iterator \fBParticipantProxiesEnd\fP ()"
+.br
+.ti -1c
+.RI "void \fBassertRemoteParticipantLiveliness\fP (const \fBGuidPrefix_t\fP &guidP)"
+.br
+.ti -1c
+.RI "void \fBassertLocalWritersLiveliness\fP (\fBLivelinessQosPolicyKind\fP kind)"
+.br
+.ti -1c
+.RI "void \fBassertRemoteWritersLiveliness\fP (\fBGuidPrefix_t\fP &guidP, \fBLivelinessQosPolicyKind\fP kind)"
+.br
+.ti -1c
+.RI "bool \fBnewRemoteEndpointStaticallyDiscovered\fP (const \fBGUID_t\fP &pguid, int16_t userDefinedId, \fBEndpointKind_t\fP kind)"
+.br
+.ti -1c
+.RI "RTPSParticipantImpl * \fBgetRTPSParticipant\fP () const"
+.br
+.ti -1c
+.RI "std::recursive_mutex * \fBgetMutex\fP () const"
+.br
+.ti -1c
+.RI "\fBCDRMessage_t\fP \fBget_participant_proxy_data_serialized\fP (\fBEndianness_t\fP endian)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBBuiltinProtocols\fP * \fBmp_builtin\fP"
+.br
+.RI "Pointer to the builtin protocols object\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBResendRTPSParticipantProxyDataPeriod\fP"
+.br
+.ti -1c
+.RI "class \fBRemoteRTPSParticipantLeaseDuration\fP"
+.br
+.ti -1c
+.RI "class \fBPDPSimpleListener\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBPDPSimple\fP that implements the SimpleRTPSParticipantDiscoveryProtocol as defined in the RTPS specification\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::PDPSimple::PDPSimple (\fBBuiltinProtocols\fP * builtin)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuiltin\fP Pointer to the BuiltinProcols object\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool eprosima::fastrtps::rtps::PDPSimple::addReaderProxyData (\fBReaderProxyData\fP * rdata, bool copydata = \fCfalse\fP, \fBReaderProxyData\fP ** returnReaderProxyData = \fCnullptr\fP, \fBParticipantProxyData\fP ** pdata = \fCnullptr\fP)"
+Add a \fBReaderProxyData\fP to the correct \fBParticipantProxyData\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrdata\fP Pointer to the \fBReaderProxyData\fP objectr to add\&. 
+.br
+\fIcopydata\fP Boolean variable indicating the need to copy the passed object\&. 
+.br
+\fIreturnReaderProxyData\fP Pointer to pointer in case you wanted the data copied\&. 
+.br
+\fIpdata\fP Pointer to the associated \fBParticipantProxyData\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::PDPSimple::addWriterProxyData (\fBWriterProxyData\fP * wdata, bool copydata = \fCfalse\fP, \fBWriterProxyData\fP ** returnWriterProxyData = \fCnullptr\fP, \fBParticipantProxyData\fP ** pdata = \fCnullptr\fP)"
+Add a \fBWriterProxyData\fP to the correct \fBParticipantProxyData\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwdata\fP Pointer to the \fBWriterProxyData\fP objectr to add\&. 
+.br
+\fIcopydata\fP Boolean variable indicating the need to copy the passed object\&. 
+.br
+\fIreturnWriterProxyData\fP Pointer to pointer in case you wanted the data copied\&. 
+.br
+\fIpdata\fP Pointer to the associated \fBParticipantProxyData\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::PDPSimple::announceParticipantState (bool new_change, bool dispose = \fCfalse\fP)"
+Force the sending of our local DPD to all remote RTPSParticipants and multicast Locators\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_change\fP If true a new change (with new seqNum) is created and sent; if false the last change is re-sent 
+.br
+\fIdispose\fP Sets change kind to NOT_ALIVE_DISPOSED_UNREGISTERED 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::PDPSimple::assertLocalWritersLiveliness (\fBLivelinessQosPolicyKind\fP kind)"
+Assert the liveliness of a Local Writer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkind\fP LivilinessQosPolicyKind to be asserted\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::PDPSimple::assertRemoteParticipantLiveliness (const \fBGuidPrefix_t\fP & guidP)"
+Assert the liveliness of a Remote \fBParticipant\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIguidP\fP \fBGuidPrefix_t\fP of the participant whose liveliness is being asserted\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::PDPSimple::assertRemoteWritersLiveliness (\fBGuidPrefix_t\fP & guidP, \fBLivelinessQosPolicyKind\fP kind)"
+Assert the liveliness of remote writers\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIguidP\fP \fBGuidPrefix_t\fP of the participant whose writers liveliness is begin asserted\&. 
+.br
+\fIkind\fP LivelinessQosPolicyKind of the writers\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::PDPSimple::assignRemoteEndpoints (\fBParticipantProxyData\fP * pdata)"
+This method assigns remtoe endpoints to the builtin endpoints defined in this protocol\&. It also calls the corresponding methods in \fBEDP\fP and \fBWLP\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdata\fP Pointer to the RTPSParticipantProxyData object\&. 
+.RE
+.PP
+
+.SS "\fBEDP\fP* eprosima::fastrtps::rtps::PDPSimple::getEDP ()\fC [inline]\fP"
+Get a pointer to the \fBEDP\fP object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+pointer to the \fBEDP\fP object\&. 
+.RE
+.PP
+
+.SS "\fBParticipantProxyData\fP* eprosima::fastrtps::rtps::PDPSimple::getLocalParticipantProxyData ()\fC [inline]\fP"
+Get a pointer to the local \fBRTPSParticipant\fP RTPSParticipantProxyData object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the local \fBRTPSParticipant\fP RTPSParticipantProxyData object\&. 
+.RE
+.PP
+
+.SS "std::recursive_mutex* eprosima::fastrtps::rtps::PDPSimple::getMutex () const\fC [inline]\fP"
+Get the mutex\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the Mutex 
+.RE
+.PP
+
+.SS "RTPSParticipantImpl* eprosima::fastrtps::rtps::PDPSimple::getRTPSParticipant () const\fC [inline]\fP"
+Get the RTPS participant 
+.PP
+\fBReturns\fP
+.RS 4
+RTPS participant 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::PDPSimple::initPDP (RTPSParticipantImpl * part)"
+Initialize the PDP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart\fP Pointer to the \fBRTPSParticipant\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True on success 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::PDPSimple::lookupParticipantProxyData (const \fBGUID_t\fP & pguid, \fBParticipantProxyData\fP ** pdata)"
+This method returns a pointer to a RTPSParticipantProxyData object if it is found among the registered RTPSParticipants\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpguid\fP \fBGUID_t\fP of the \fBRTPSParticipant\fP we are looking for\&. 
+.br
+\fIpdata\fP Pointer to pointer of the \fBParticipantProxyData\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if found\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::PDPSimple::lookupReaderProxyData (const \fBGUID_t\fP & reader, \fBReaderProxyData\fP ** rdata, \fBParticipantProxyData\fP ** pdata)"
+This method returns a pointer to a \fBReaderProxyData\fP object if it is found among the registered RTPSParticipants (including the local \fBRTPSParticipant\fP)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreader\fP \fBGUID_t\fP of the reader we are looking for\&. 
+.br
+\fIrdata\fP Pointer to pointer of the \fBReaderProxyData\fP object\&. 
+.br
+\fIpdata\fP Pointer to pointer of the \fBParticipantProxyData\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if found\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::PDPSimple::lookupWriterProxyData (const \fBGUID_t\fP & writer, \fBWriterProxyData\fP ** wdata, \fBParticipantProxyData\fP ** pdata)"
+This method returns a pointer to a \fBWriterProxyData\fP object if it is found among the registered RTPSParticipants (including the local \fBRTPSParticipant\fP)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwriter\fP \fBGUID_t\fP of the writer we are looking for\&. 
+.br
+\fIwdata\fP Pointer to pointer of the \fBWriterProxyData\fP object\&. 
+.br
+\fIpdata\fP Pointer to pointer of the \fBParticipantProxyData\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if found\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::PDPSimple::newRemoteEndpointStaticallyDiscovered (const \fBGUID_t\fP & pguid, int16_t userDefinedId, \fBEndpointKind_t\fP kind)"
+Activate a new Remote \fBEndpoint\fP that has been statically discovered\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpguid\fP \fBGUID_t\fP of the participant\&. 
+.br
+\fIuserDefinedId\fP User Defined ID\&. 
+.br
+\fIkind\fP Kind of endpoint\&. 
+.RE
+.PP
+
+.SS "std::vector<\fBParticipantProxyData\fP*>::const_iterator eprosima::fastrtps::rtps::PDPSimple::ParticipantProxiesBegin ()\fC [inline]\fP"
+Get a cons_iterator to the beginning of the \fBRTPSParticipant\fP Proxies\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const_iterator\&. 
+.RE
+.PP
+
+.SS "std::vector<\fBParticipantProxyData\fP*>::const_iterator eprosima::fastrtps::rtps::PDPSimple::ParticipantProxiesEnd ()\fC [inline]\fP"
+Get a cons_iterator to the end \fBRTPSParticipant\fP Proxies\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const_iterator\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::PDPSimple::removeReaderProxyData (\fBParticipantProxyData\fP * pdata, \fBReaderProxyData\fP * rdata)"
+This method removes and deletes a \fBReaderProxyData\fP object from its corresponding \fBRTPSParticipant\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrdata\fP Pointer to the \fBReaderProxyData\fP object\&. 
+.br
+\fIpdata\fP Pointer to pointer of the \fBParticipantProxyData\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if found and deleted\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::PDPSimple::removeRemoteEndpoints (\fBParticipantProxyData\fP * pdata)"
+Remove remote endpoints from the participant discovery protocol 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdata\fP Pointer to the \fBParticipantProxyData\fP to remove 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::PDPSimple::removeRemoteParticipant (\fBGUID_t\fP & partGUID)"
+This method removes a remote \fBRTPSParticipant\fP and all its writers and readers\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpartGUID\fP \fBGUID_t\fP of the remote \fBRTPSParticipant\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if correct\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::PDPSimple::removeWriterProxyData (\fBParticipantProxyData\fP * pdata, \fBWriterProxyData\fP * wdata)"
+This method removes and deletes a \fBWriterProxyData\fP object from its corresponding \fBRTPSParticipant\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwdata\fP Pointer to the \fBWriterProxyData\fP object\&. 
+.br
+\fIpdata\fP Pointer to pointer of the \fBParticipantProxyData\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if found and deleted\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

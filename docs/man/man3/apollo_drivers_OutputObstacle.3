@@ -1,0 +1,798 @@
+.TH "apollo::drivers::OutputObstacle" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::drivers::OutputObstacle
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkCurrentspeedFieldNumber\fP = 1, \fBkFramerateFieldNumber\fP = 2, \fBkTrackidFieldNumber\fP = 3, \fBkTrackframenumFieldNumber\fP = 4, \fBkStatelabelFieldNumber\fP = 5, \fBkClasslabelFieldNumber\fP = 6, \fBkContinuouslabelFieldNumber\fP = 7, \fBkFuzzyestimationvalidFieldNumber\fP = 8, \fBkObstacletypeFieldNumber\fP = 9, \fBkAvgdispFieldNumber\fP = 10, \fBkAvgdistancezFieldNumber\fP = 11, \fBkNeardistancezFieldNumber\fP = 12, \fBkFardistancezFieldNumber\fP = 13, \fBkReal3DleftxFieldNumber\fP = 14, \fBkReal3DrightxFieldNumber\fP = 15, \fBkReal3DcenterxFieldNumber\fP = 16, \fBkReal3DupyFieldNumber\fP = 17, \fBkReal3DlowyFieldNumber\fP = 18, \fBkFirstpointxFieldNumber\fP = 19, \fBkFirstpointyFieldNumber\fP = 20, \fBkSecondpointxFieldNumber\fP = 21, \fBkSecondpointyFieldNumber\fP = 22, \fBkThirdpointxFieldNumber\fP = 23, \fBkThirdpointyFieldNumber\fP = 24, \fBkFourthpointxFieldNumber\fP = 25, \fBkFourthpointyFieldNumber\fP = 26, \fBkFuzzyrelativedistancezFieldNumber\fP = 27, \fBkFuzzyrelativespeedzFieldNumber\fP = 28, \fBkFuzzycollisiontimezFieldNumber\fP = 29, \fBkFuzzycollisionxFieldNumber\fP = 30, \fBkFuzzy3DwidthFieldNumber\fP = 31, \fBkFuzzy3DcenterxFieldNumber\fP = 32, \fBkFuzzy3DleftxFieldNumber\fP = 33, \fBkFuzzy3DrightxFieldNumber\fP = 34, \fBkFuzzy3DheightFieldNumber\fP = 35, \fBkFuzzy3DupyFieldNumber\fP = 36, \fBkFuzzy3DlowyFieldNumber\fP = 37, \fBkFuzzyrelativespeedcenterxFieldNumber\fP = 38, \fBkFuzzyrelativespeedleftxFieldNumber\fP = 39, \fBkFuzzyrelativespeedrightxFieldNumber\fP = 40 }"
+.br
+.ti -1c
+.RI "typedef OutputObstacle_RecognitionType \fBRecognitionType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBOutputObstacle\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBOutputObstacle\fP (const \fBOutputObstacle\fP &from)"
+.br
+.ti -1c
+.RI "\fBOutputObstacle\fP (\fBOutputObstacle\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBOutputObstacle\fP & \fBoperator=\fP (const \fBOutputObstacle\fP &from)"
+.br
+.ti -1c
+.RI "\fBOutputObstacle\fP & \fBoperator=\fP (\fBOutputObstacle\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBOutputObstacle\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBOutputObstacle\fP *other)"
+.br
+.ti -1c
+.RI "\fBOutputObstacle\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBOutputObstacle\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBOutputObstacle\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_currentspeed\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_currentspeed\fP ()"
+.br
+.ti -1c
+.RI "float \fBcurrentspeed\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_currentspeed\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_framerate\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_framerate\fP ()"
+.br
+.ti -1c
+.RI "float \fBframerate\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_framerate\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_trackid\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_trackid\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBtrackid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_trackid\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_trackframenum\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_trackframenum\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBtrackframenum\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_trackframenum\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_statelabel\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_statelabel\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBstatelabel\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_statelabel\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_classlabel\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_classlabel\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBclasslabel\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_classlabel\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_continuouslabel\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_continuouslabel\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBcontinuouslabel\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_continuouslabel\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzyestimationvalid\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzyestimationvalid\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBfuzzyestimationvalid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzyestimationvalid\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_obstacletype\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_obstacletype\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::OutputObstacle_RecognitionType \fBobstacletype\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_obstacletype\fP (::apollo::drivers::OutputObstacle_RecognitionType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_avgdisp\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_avgdisp\fP ()"
+.br
+.ti -1c
+.RI "float \fBavgdisp\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_avgdisp\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_avgdistancez\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_avgdistancez\fP ()"
+.br
+.ti -1c
+.RI "float \fBavgdistancez\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_avgdistancez\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_neardistancez\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_neardistancez\fP ()"
+.br
+.ti -1c
+.RI "float \fBneardistancez\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_neardistancez\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fardistancez\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fardistancez\fP ()"
+.br
+.ti -1c
+.RI "float \fBfardistancez\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fardistancez\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_real3dleftx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_real3dleftx\fP ()"
+.br
+.ti -1c
+.RI "float \fBreal3dleftx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_real3dleftx\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_real3drightx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_real3drightx\fP ()"
+.br
+.ti -1c
+.RI "float \fBreal3drightx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_real3drightx\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_real3dcenterx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_real3dcenterx\fP ()"
+.br
+.ti -1c
+.RI "float \fBreal3dcenterx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_real3dcenterx\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_real3dupy\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_real3dupy\fP ()"
+.br
+.ti -1c
+.RI "float \fBreal3dupy\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_real3dupy\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_real3dlowy\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_real3dlowy\fP ()"
+.br
+.ti -1c
+.RI "float \fBreal3dlowy\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_real3dlowy\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_firstpointx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_firstpointx\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBfirstpointx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_firstpointx\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_firstpointy\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_firstpointy\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBfirstpointy\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_firstpointy\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_secondpointx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_secondpointx\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBsecondpointx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_secondpointx\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_secondpointy\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_secondpointy\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBsecondpointy\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_secondpointy\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_thirdpointx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_thirdpointx\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBthirdpointx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_thirdpointx\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_thirdpointy\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_thirdpointy\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBthirdpointy\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_thirdpointy\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fourthpointx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fourthpointx\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBfourthpointx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fourthpointx\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fourthpointy\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fourthpointy\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBfourthpointy\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fourthpointy\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzyrelativedistancez\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzyrelativedistancez\fP ()"
+.br
+.ti -1c
+.RI "float \fBfuzzyrelativedistancez\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzyrelativedistancez\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzyrelativespeedz\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzyrelativespeedz\fP ()"
+.br
+.ti -1c
+.RI "float \fBfuzzyrelativespeedz\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzyrelativespeedz\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzycollisiontimez\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzycollisiontimez\fP ()"
+.br
+.ti -1c
+.RI "float \fBfuzzycollisiontimez\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzycollisiontimez\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzycollisionx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzycollisionx\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBfuzzycollisionx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzycollisionx\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzy3dwidth\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzy3dwidth\fP ()"
+.br
+.ti -1c
+.RI "float \fBfuzzy3dwidth\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzy3dwidth\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzy3dcenterx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzy3dcenterx\fP ()"
+.br
+.ti -1c
+.RI "float \fBfuzzy3dcenterx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzy3dcenterx\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzy3dleftx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzy3dleftx\fP ()"
+.br
+.ti -1c
+.RI "float \fBfuzzy3dleftx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzy3dleftx\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzy3drightx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzy3drightx\fP ()"
+.br
+.ti -1c
+.RI "float \fBfuzzy3drightx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzy3drightx\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzy3dheight\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzy3dheight\fP ()"
+.br
+.ti -1c
+.RI "float \fBfuzzy3dheight\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzy3dheight\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzy3dupy\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzy3dupy\fP ()"
+.br
+.ti -1c
+.RI "float \fBfuzzy3dupy\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzy3dupy\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzy3dlowy\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzy3dlowy\fP ()"
+.br
+.ti -1c
+.RI "float \fBfuzzy3dlowy\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzy3dlowy\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzyrelativespeedcenterx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzyrelativespeedcenterx\fP ()"
+.br
+.ti -1c
+.RI "float \fBfuzzyrelativespeedcenterx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzyrelativespeedcenterx\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzyrelativespeedleftx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzyrelativespeedleftx\fP ()"
+.br
+.ti -1c
+.RI "float \fBfuzzyrelativespeedleftx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzyrelativespeedleftx\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_fuzzyrelativespeedrightx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuzzyrelativespeedrightx\fP ()"
+.br
+.ti -1c
+.RI "float \fBfuzzyrelativespeedrightx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuzzyrelativespeedrightx\fP (float value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBOutputObstacle\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBOutputObstacle\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBRecognitionType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBRecognitionType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBRecognitionType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBRecognitionType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, RecognitionType *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr RecognitionType \fBINVALID\fP"
+.br
+.ti -1c
+.RI "static constexpr RecognitionType \fBVEHICLE\fP"
+.br
+.ti -1c
+.RI "static constexpr RecognitionType \fBPEDESTRIAN\fP"
+.br
+.ti -1c
+.RI "static constexpr RecognitionType \fBCHILD\fP"
+.br
+.ti -1c
+.RI "static constexpr RecognitionType \fBBICYCLE\fP"
+.br
+.ti -1c
+.RI "static constexpr RecognitionType \fBMOTO\fP"
+.br
+.ti -1c
+.RI "static constexpr RecognitionType \fBTRUCK\fP"
+.br
+.ti -1c
+.RI "static constexpr RecognitionType \fBBUS\fP"
+.br
+.ti -1c
+.RI "static constexpr RecognitionType \fBOTHERS\fP"
+.br
+.ti -1c
+.RI "static constexpr RecognitionType \fBESTIMATED\fP"
+.br
+.ti -1c
+.RI "static constexpr RecognitionType \fBCONTINUOUS\fP"
+.br
+.ti -1c
+.RI "static constexpr RecognitionType \fBRecognitionType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr RecognitionType \fBRecognitionType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBRecognitionType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOutputObstacle\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fsensor_5fmsgs_2fsmartereye_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBOutputObstacle\fP &a, \fBOutputObstacle\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::drivers::OutputObstacle::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    OutputObstacle::MergeImpl
+}
+.fi
+.SS "constexpr OutputObstacle_RecognitionType apollo::drivers::OutputObstacle::BICYCLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_BICYCLE
+.fi
+.SS "constexpr OutputObstacle_RecognitionType apollo::drivers::OutputObstacle::BUS\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_BUS
+.fi
+.SS "constexpr OutputObstacle_RecognitionType apollo::drivers::OutputObstacle::CHILD\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_CHILD
+.fi
+.SS "constexpr OutputObstacle_RecognitionType apollo::drivers::OutputObstacle::CONTINUOUS\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_CONTINUOUS
+.fi
+.SS "constexpr OutputObstacle_RecognitionType apollo::drivers::OutputObstacle::ESTIMATED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_ESTIMATED
+.fi
+.SS "constexpr OutputObstacle_RecognitionType apollo::drivers::OutputObstacle::INVALID\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_INVALID
+.fi
+.SS "constexpr int apollo::drivers::OutputObstacle::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    5
+.fi
+.SS "constexpr OutputObstacle_RecognitionType apollo::drivers::OutputObstacle::MOTO\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_MOTO
+.fi
+.SS "constexpr OutputObstacle_RecognitionType apollo::drivers::OutputObstacle::OTHERS\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_OTHERS
+.fi
+.SS "constexpr OutputObstacle_RecognitionType apollo::drivers::OutputObstacle::PEDESTRIAN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_PEDESTRIAN
+.fi
+.SS "constexpr int apollo::drivers::OutputObstacle::RecognitionType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_RecognitionType_ARRAYSIZE
+.fi
+.SS "constexpr OutputObstacle_RecognitionType apollo::drivers::OutputObstacle::RecognitionType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_RecognitionType_MAX
+.fi
+.SS "constexpr OutputObstacle_RecognitionType apollo::drivers::OutputObstacle::RecognitionType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_RecognitionType_MIN
+.fi
+.SS "constexpr OutputObstacle_RecognitionType apollo::drivers::OutputObstacle::TRUCK\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_TRUCK
+.fi
+.SS "constexpr OutputObstacle_RecognitionType apollo::drivers::OutputObstacle::VEHICLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    OutputObstacle_RecognitionType_VEHICLE
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

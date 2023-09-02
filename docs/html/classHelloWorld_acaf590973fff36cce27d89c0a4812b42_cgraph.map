@@ -1,0 +1,4 @@
+<map id="HelloWorld::getCdrSerializedSize" name="HelloWorld::getCdrSerializedSize">
+<area shape="rect" id="node1" title="This function returns the serialized size of a data depending on the buffer alignment." alt="" coords="5,5,241,32"/>
+<area shape="rect" id="node2" href="$classeprosima_1_1fastcdr_1_1Cdr.html#a13af0f46117d10e3bba943870ecb3efd" title=" " alt="" coords="289,5,529,32"/>
+</map>

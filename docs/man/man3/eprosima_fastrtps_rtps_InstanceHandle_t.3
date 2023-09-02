@@ -1,0 +1,70 @@
+.TH "eprosima::fastrtps::rtps::InstanceHandle_t" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::InstanceHandle_t
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <InstanceHandle\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInstanceHandle_t\fP (const \fBInstanceHandle_t\fP &ihandle)"
+.br
+.ti -1c
+.RI "\fBInstanceHandle_t\fP & \fBoperator=\fP (const \fBInstanceHandle_t\fP &ihandle)"
+.br
+.ti -1c
+.RI "\fBInstanceHandle_t\fP & \fBoperator=\fP (const \fBGUID_t\fP &guid)"
+.br
+.ti -1c
+.RI "bool \fBisDefined\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "octet \fBvalue\fP [16]"
+.br
+.RI "Value\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Struct \fBInstanceHandle_t\fP, used to contain the key for WITH_KEY topics\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool eprosima::fastrtps::rtps::InstanceHandle_t::isDefined ()\fC [inline]\fP"
+Know if the instance handle is defined 
+.PP
+\fBReturns\fP
+.RS 4
+True if the values are not zero\&. 
+.RE
+.PP
+
+.SS "\fBInstanceHandle_t\fP& eprosima::fastrtps::rtps::InstanceHandle_t::operator= (const \fBGUID_t\fP & guid)\fC [inline]\fP"
+Assingment operator 
+.PP
+\fBParameters\fP
+.RS 4
+\fIguid\fP GUID to copy the data from 
+.RE
+.PP
+
+.SS "\fBInstanceHandle_t\fP& eprosima::fastrtps::rtps::InstanceHandle_t::operator= (const \fBInstanceHandle_t\fP & ihandle)\fC [inline]\fP"
+Assingment operator 
+.PP
+\fBParameters\fP
+.RS 4
+\fIihandle\fP Instance handle to copy the data from 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

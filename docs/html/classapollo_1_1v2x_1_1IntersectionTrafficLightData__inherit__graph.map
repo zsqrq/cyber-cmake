@@ -1,0 +1,4 @@
+<map id="apollo::v2x::IntersectionTrafficLightData" name="apollo::v2x::IntersectionTrafficLightData">
+<area shape="rect" id="node1" title=" " alt="" coords="5,131,727,457"/>
+<area shape="rect" id="node2" title=" " alt="" coords="231,5,501,83"/>
+</map>

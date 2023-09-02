@@ -1,0 +1,260 @@
+.TH "third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/messages/CDRMessage.h" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/messages/CDRMessage.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./common/CDRMessage_t\&.h'\fP
+.br
+\fC#include '\&.\&./\&.\&./qos/ParameterTypes\&.h'\fP
+.br
+\fC#include '\&.\&./common/Property\&.h'\fP
+.br
+\fC#include '\&.\&./common/BinaryProperty\&.h'\fP
+.br
+\fC#include '\&.\&./security/common/ParticipantGenericMessage\&.h'\fP
+.br
+\fC#include 'CDRMessage\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBeprosima\fP"
+.br
+.RI "Maximum payload is maximum of UDP packet size minus 536bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) With those 536 bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) bytes is posible to send RTPS Header plus RTPS Data submessage plus RTPS Heartbeat submessage\&. "
+.ti -1c
+.RI " \fBeprosima::fastrtps\fP"
+.br
+.ti -1c
+.RI " \fBeprosima::fastrtps::rtps\fP"
+.br
+.ti -1c
+.RI " \fBeprosima::fastrtps::rtps::CDRMessage\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::initCDRMsg\fP (CDRMessage_t *msg, uint32_t data_size=RTPSMESSAGE_COMMON_DATA_PAYLOAD_SIZE)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::wrapVector\fP (CDRMessage_t *msg, std::vector< octet > &vectorToWrap)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::appendMsg\fP (CDRMessage_t *first, CDRMessage_t *second)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addProperty\fP (CDRMessage_t *msg, const Property &property)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addBinaryProperty\fP (CDRMessage_t *msg, const BinaryProperty &binary_property)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addPropertySeq\fP (CDRMessage_t *msg, const PropertySeq &properties)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addBinaryPropertySeq\fP (CDRMessage_t *msg, const BinaryPropertySeq &binary_properties)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addBinaryPropertySeq\fP (CDRMessage_t *msg, const BinaryPropertySeq &binary_properties, const std::string &property_limit)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addDataHolder\fP (CDRMessage_t *msg, const DataHolder &data_holder)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addDataHolderSeq\fP (CDRMessage_t *msg, const DataHolderSeq &data_holders)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addMessageIdentity\fP (CDRMessage_t *msg, const ::security::MessageIdentity &message_identity)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addParticipantGenericMessage\fP (CDRMessage_t *msg, const ::security::ParticipantGenericMessage &message)"
+.br
+.in -1c
+.PP
+.RI "\fBRead from a CDRMessage_t\&.\fP"
+.br
+Methods to read different data types from a CDR message\&. Pointers to the message and to the data types are provided\&. The read position is updated in the message\&. It fails if you attempt to read outside the boundaries of the message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP Pointer to message\&. 
+.br
+\fIdata_ptr\fP Pointer to data\&. 
+.br
+\fIsize\fP Number of bytes (if necessary)\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readEntityId\fP (CDRMessage_t *msg, const EntityId_t *id)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readData\fP (CDRMessage_t *msg, octet *o, uint32_t length)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readDataReversed\fP (CDRMessage_t *msg, octet *o, uint32_t length)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readInt32\fP (CDRMessage_t *msg, int32_t *lo)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readUInt32\fP (CDRMessage_t *msg, uint32_t *ulo)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readInt64\fP (CDRMessage_t *msg, int64_t *lolo)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readSequenceNumber\fP (CDRMessage_t *msg, SequenceNumber_t *sn)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readInt16\fP (CDRMessage_t *msg, int16_t *i16)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readUInt16\fP (CDRMessage_t *msg, uint16_t *i16)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readLocator\fP (CDRMessage_t *msg, Locator_t *loc)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readOctet\fP (CDRMessage_t *msg, octet *o)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readSequenceNumberSet\fP (CDRMessage_t *msg, SequenceNumberSet_t *snset)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readFragmentNumberSet\fP (CDRMessage_t *msg, FragmentNumberSet_t *snset)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readTimestamp\fP (CDRMessage_t *msg, Time_t *ts)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readString\fP (CDRMessage_t *msg, std::string *p_str)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readOctetVector\fP (CDRMessage_t *msg, std::vector< octet > *ocvec)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readProperty\fP (CDRMessage_t *msg, Property &property)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readBinaryProperty\fP (CDRMessage_t *msg, BinaryProperty &binary_property)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readPropertySeq\fP (CDRMessage_t *msg, PropertySeq &properties)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readBinaryPropertySeq\fP (CDRMessage_t *msg, BinaryPropertySeq &binary_properties)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readDataHolder\fP (CDRMessage_t *msg, DataHolder &data_holder)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readDataHolderSeq\fP (CDRMessage_t *msg, DataHolderSeq &data_holders)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readMessageIdentity\fP (CDRMessage_t *msg, ::security::MessageIdentity &message_identity)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::readParticipantGenericMessage\fP (CDRMessage_t *msg, ::security::ParticipantGenericMessage &message)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBAdd to a CDRMessage_t\&.\fP"
+.br
+Methods to add different data types to a CDR message\&. Pointers to the message and to the data types are provided\&. The write position is updated in the message\&. It fails if you attempt to write outside the boundaries of the message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIPointer\fP to message\&. 
+.br
+\fIdata\fP Data to add (might be a pointer)\&. 
+.br
+\fIbyteSize\fP Number of bytes (if necessary)\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addData\fP (CDRMessage_t *, const octet *, const uint32_t number_bytes)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addDataReversed\fP (CDRMessage_t *, const octet *, const uint32_t byte_number)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addOctet\fP (CDRMessage_t *msg, octet o)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addUInt16\fP (CDRMessage_t *msg, uint16_t us)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addInt32\fP (CDRMessage_t *msg, int32_t lo)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addUInt32\fP (CDRMessage_t *msg, uint32_t lo)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addInt64\fP (CDRMessage_t *msg, int64_t lo)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addEntityId\fP (CDRMessage_t *msg, const EntityId_t *id)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addSequenceNumber\fP (CDRMessage_t *msg, const SequenceNumber_t *sn)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addSequenceNumberSet\fP (CDRMessage_t *msg, const SequenceNumberSet_t *sns)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addFragmentNumberSet\fP (CDRMessage_t *msg, FragmentNumberSet_t *fns)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addLocator\fP (CDRMessage_t *msg, Locator_t *loc)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addParameterStatus\fP (CDRMessage_t *msg, octet status)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addParameterKey\fP (CDRMessage_t *msg, const InstanceHandle_t *iHandle)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addParameterSentinel\fP (CDRMessage_t *msg)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addParameterId\fP (CDRMessage_t *msg, ParameterId_t pid)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addString\fP (CDRMessage_t *msg, const std::string &in_str)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addOctetVector\fP (CDRMessage_t *msg, const std::vector< octet > *ocvec)"
+.br
+.ti -1c
+.RI "bool \fBeprosima::fastrtps::rtps::CDRMessage::addParameterSampleIdentity\fP (CDRMessage_t *msg, const SampleIdentity &sample_id)"
+.br
+.in -1c
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

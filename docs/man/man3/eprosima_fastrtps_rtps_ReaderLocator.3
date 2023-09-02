@@ -1,0 +1,45 @@
+.TH "eprosima::fastrtps::rtps::ReaderLocator" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::ReaderLocator
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ReaderLocator\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReaderLocator\fP (\fBReaderLocator\fP &&readerLocator)"
+.br
+.ti -1c
+.RI "\fBReaderLocator\fP (const \fBReaderLocator\fP &readerLocator)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBLocator_t\fP \fBlocator\fP"
+.br
+.RI "Address of this \fBReaderLocator\fP\&. "
+.ti -1c
+.RI "bool \fBexpectsInlineQos\fP"
+.br
+.RI "Whether the Reader expects inlineQos with its data messages\&. "
+.ti -1c
+.RI "std::vector< \fBGUID_t\fP > \fBremote_guids\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBChangeForReader_t\fP > \fBunsent_changes\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBReaderLocator\fP, contains information about a locator, without saving its state\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

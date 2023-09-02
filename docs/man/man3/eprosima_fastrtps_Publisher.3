@@ -1,0 +1,184 @@
+.TH "eprosima::fastrtps::Publisher" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::Publisher
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Publisher\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPublisher\fP (PublisherImpl *pimpl)"
+.br
+.ti -1c
+.RI "bool \fBwrite\fP (void *Data)"
+.br
+.ti -1c
+.RI "bool \fBwrite\fP (void *Data, \fBWriteParams\fP &wparams)"
+.br
+.ti -1c
+.RI "bool \fBdispose\fP (void *Data)"
+.br
+.ti -1c
+.RI "bool \fBunregister\fP (void *Data)"
+.br
+.ti -1c
+.RI "bool \fBdispose_and_unregister\fP (void *Data)"
+.br
+.ti -1c
+.RI "bool \fBremoveAllChange\fP (size_t *removed=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBwait_for_all_acked\fP (const \fBTime_t\fP &max_wait)"
+.br
+.ti -1c
+.RI "const \fBGUID_t\fP & \fBgetGuid\fP ()"
+.br
+.ti -1c
+.RI "\fBPublisherAttributes\fP \fBgetAttributes\fP ()"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBPublisherImpl\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBPublisher\fP, used to send data to associated subscribers\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool eprosima::fastrtps::Publisher::dispose (void * Data)"
+Dispose of a previously written data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIData\fP Pointer to the data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::Publisher::dispose_and_unregister (void * Data)"
+Dispose and unregister a previously written data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIData\fP Pointer to the data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "\fBPublisherAttributes\fP eprosima::fastrtps::Publisher::getAttributes ()"
+Get the Attributes of the \fBPublisher\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Attributes of the publisher 
+.RE
+.PP
+
+.SS "const \fBGUID_t\fP& eprosima::fastrtps::Publisher::getGuid ()"
+Get the GUID_t of the associated RTPSWriter\&. 
+.PP
+\fBReturns\fP
+.RS 4
+GUID_t\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::Publisher::removeAllChange (size_t * removed = \fCnullptr\fP)"
+Remove all the Changes in the associated RTPSWriter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIremoved\fP Number of elements removed 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if all elements were removed\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::Publisher::unregister (void * Data)"
+Unregister a previously written data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIData\fP Pointer to the data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::Publisher::write (void * Data)"
+Write data to the topic\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIData\fP Pointer to the data 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct 
+.RE
+.PP
+\fBCalling example:\fP
+.RS 4
+
+.PP
+.nf
+
+.fi
+.PP
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::Publisher::write (void * Data, \fBWriteParams\fP & wparams)"
+Write data with params to the topic\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIData\fP Pointer to the data 
+.br
+\fIwparams\fP Extra write parameters\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct 
+.RE
+.PP
+\fBCalling example:\fP
+.RS 4
+
+.PP
+.nf
+
+.fi
+.PP
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

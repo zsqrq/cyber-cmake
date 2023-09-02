@@ -1,0 +1,6 @@
+<map id="apollo::cyber::transport::UnderlayMessageType::getKey" name="apollo::cyber::transport::UnderlayMessageType::getKey">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,387,83"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#a5b087f83c2128e4aba8bab907315145c" title="This function returns the maximum serialized size of the Key of an object depending on the buffer ali..." alt="" coords="435,5,927,32"/>
+<area shape="rect" id="node3" href="$classeprosima_1_1fastcdr_1_1Cdr.html#a5eb8dce4596e00ee0c4566fc4cc092d6" title="This function returns the length of the serialized data inside the stream." alt="" coords="513,56,848,83"/>
+<area shape="rect" id="node4" href="$classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#a197d158daa38234f6432bb296ab93bd5" title="This function serializes the key members of an object using CDR serialization." alt="" coords="488,107,873,133"/>
+</map>

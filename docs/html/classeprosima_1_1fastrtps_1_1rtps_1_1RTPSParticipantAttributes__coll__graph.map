@@ -1,0 +1,10 @@
+<map id="eprosima::fastrtps::rtps::RTPSParticipantAttributes" name="eprosima::fastrtps::rtps::RTPSParticipantAttributes">
+<area shape="rect" id="node1" title=" " alt="" coords="1095,593,1645,832"/>
+<area shape="rect" id="node2" href="$classeprosima_1_1fastrtps_1_1rtps_1_1BuiltinAttributes.html" title=" " alt="" coords="365,336,740,516"/>
+<area shape="rect" id="node3" href="$structeprosima_1_1fastrtps_1_1rtps_1_1Time__t.html" title=" " alt="" coords="5,64,257,171"/>
+<area shape="rect" id="node4" href="$classeprosima_1_1fastrtps_1_1rtps_1_1LocatorList__t.html" title=" " alt="" coords="672,5,1159,229"/>
+<area shape="rect" id="node5" href="$classeprosima_1_1fastrtps_1_1rtps_1_1SimpleEDPAttributes.html" title=" " alt="" coords="281,71,648,163"/>
+<area shape="rect" id="node6" href="$structeprosima_1_1fastrtps_1_1rtps_1_1ThroughputControllerDescriptor.html" title=" " alt="" coords="1113,373,1627,479"/>
+<area shape="rect" id="node7" href="$classeprosima_1_1fastrtps_1_1rtps_1_1PortParameters.html" title=" " alt="" coords="1651,321,2151,531"/>
+<area shape="rect" id="node8" href="$classeprosima_1_1fastrtps_1_1rtps_1_1PropertyPolicy.html" title=" " alt="" coords="2175,329,2731,523"/>
+</map>

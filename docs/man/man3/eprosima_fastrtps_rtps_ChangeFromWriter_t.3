@@ -1,0 +1,56 @@
+.TH "eprosima::fastrtps::rtps::ChangeFromWriter_t" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::ChangeFromWriter_t
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CacheChange\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeFromWriter_t\fP (const \fBChangeFromWriter_t\fP &ch)"
+.br
+.ti -1c
+.RI "\fBChangeFromWriter_t\fP (const \fBSequenceNumber_t\fP &seq_num)"
+.br
+.ti -1c
+.RI "\fBChangeFromWriter_t\fP & \fBoperator=\fP (const \fBChangeFromWriter_t\fP &ch)"
+.br
+.ti -1c
+.RI "void \fBsetStatus\fP (const \fBChangeFromWriterStatus_t\fP status)"
+.br
+.ti -1c
+.RI "\fBChangeFromWriterStatus_t\fP \fBgetStatus\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetRelevance\fP (const bool relevance)"
+.br
+.ti -1c
+.RI "bool \fBisRelevant\fP () const"
+.br
+.ti -1c
+.RI "const \fBSequenceNumber_t\fP \fBgetSequenceNumber\fP () const"
+.br
+.ti -1c
+.RI "void \fBnotValid\fP ()"
+.br
+.RI "Set change as not valid\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "struct \fBChangeFromWriterCmp\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Struct \fBChangeFromWriter_t\fP used to indicate the state of a specific change with respect to a specific writer, as well as its relevance\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

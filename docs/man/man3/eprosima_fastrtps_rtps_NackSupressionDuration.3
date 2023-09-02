@@ -1,0 +1,66 @@
+.TH "eprosima::fastrtps::rtps::NackSupressionDuration" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::NackSupressionDuration
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <NackSupressionDuration\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::TimedEvent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNackSupressionDuration\fP (\fBReaderProxy\fP *p_RP, double intervalmillisec)"
+.br
+.ti -1c
+.RI "void \fBevent\fP (\fBEventCode\fP code, const char *msg=nullptr)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBReaderProxy\fP * \fBmp_RP\fP"
+.br
+.RI "Reader proxy\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+\fBNackSupressionDuration\fP class, used to avoid too 'recent' NACK messages\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::NackSupressionDuration::NackSupressionDuration (\fBReaderProxy\fP * p_RP, double intervalmillisec)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIp_RP\fP 
+.br
+\fIintervalmillisec\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void eprosima::fastrtps::rtps::NackSupressionDuration::event (\fBEventCode\fP code, const char * msg = \fCnullptr\fP)\fC [virtual]\fP"
+Method invoked when the event occurs
+.PP
+\fBParameters\fP
+.RS 4
+\fIcode\fP Code representing the status of the event 
+.br
+\fImsg\fP Message associated to the event 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::TimedEvent\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

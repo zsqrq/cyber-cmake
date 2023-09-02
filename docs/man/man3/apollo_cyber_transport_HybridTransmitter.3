@@ -1,4 +1,4 @@
-.TH "apollo::cyber::transport::HybridTransmitter< M >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::transport::HybridTransmitter< M >" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -27,7 +27,7 @@ Inherits \fBapollo::cyber::transport::Transmitter< M >\fP\&.
 .RI "using \fBReceiverMap\fP = std::unordered_map< OptionalMode, std::set< uint64_t >, std::hash< int > >"
 .br
 .ti -1c
-.RI "using \fBCommunicationModePtr\fP = std::shared_ptr< proto::CommunicationMode >"
+.RI "using \fBCommunicationModePtr\fP = std::shared_ptr< \fBproto::CommunicationMode\fP >"
 .br
 .ti -1c
 .RI "using \fBMappingTable\fP = std::unordered_map< Relation, OptionalMode, std::hash< int > >"
@@ -37,7 +37,7 @@ Inherits \fBapollo::cyber::transport::Transmitter< M >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBHybridTransmitter\fP (const RoleAttributes &attr, const ParticipantPtr &participant)"
+.RI "\fBHybridTransmitter\fP (const \fBRoleAttributes\fP &attr, const ParticipantPtr &participant)"
 .br
 .ti -1c
 .RI "void \fBEnable\fP () override"
@@ -46,10 +46,10 @@ Inherits \fBapollo::cyber::transport::Transmitter< M >\fP\&.
 .RI "void \fBDisable\fP () override"
 .br
 .ti -1c
-.RI "void \fBEnable\fP (const RoleAttributes &opposite_attr) override"
+.RI "void \fBEnable\fP (const \fBRoleAttributes\fP &opposite_attr) override"
 .br
 .ti -1c
-.RI "void \fBDisable\fP (const RoleAttributes &opposite_attr) override"
+.RI "void \fBDisable\fP (const \fBRoleAttributes\fP &opposite_attr) override"
 .br
 .ti -1c
 .RI "bool \fBTransmit\fP (const MessagePtr &msg, const \fBMessageInfo\fP &msg_info) override"

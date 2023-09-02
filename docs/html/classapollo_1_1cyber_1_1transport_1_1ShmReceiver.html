@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -87,18 +89,19 @@ Collaboration diagram for apollo::cyber::transport::ShmReceiver&lt; M &gt;:</div
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1transport_1_1ShmReceiver__coll__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1transport_1_1ShmReceiver_3_01M_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="aapollo_1_1cyber_1_1transport_1_1ShmReceiver_3_01M_01_4_coll__map" id="aapollo_1_1cyber_1_1transport_1_1ShmReceiver_3_01M_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="5,677,740,828"/>
-<area shape="rect" href="classapollo_1_1cyber_1_1transport_1_1Receiver.html" title=" " alt="" coords="100,463,645,628"/>
-<area shape="rect" href="classapollo_1_1cyber_1_1transport_1_1Endpoint.html" title=" " alt="" coords="223,292,522,413"/>
-<area shape="rect" title=" " alt="" coords="187,79,302,156"/>
-<area shape="rect" href="classapollo_1_1cyber_1_1transport_1_1Identity.html" title=" " alt="" coords="327,5,675,229"/>
+<area shape="rect" title=" " alt="" coords="340,907,1075,1057"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1transport_1_1Receiver.html" title=" " alt="" coords="435,692,980,857"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1transport_1_1Endpoint.html" title=" " alt="" coords="558,521,857,643"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html" title=" " alt="" coords="5,132,639,459"/>
+<area shape="rect" title=" " alt="" coords="187,5,457,83"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1transport_1_1Identity.html" title=" " alt="" coords="663,183,1011,407"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae40a34997049cdf61df823e06cb2b54e"><td class="memItemLeft" align="right" valign="top"><a id="ae40a34997049cdf61df823e06cb2b54e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ShmReceiver</b> (const RoleAttributes &amp;attr, const typename <a class="el" href="classapollo_1_1cyber_1_1transport_1_1Receiver.html">Receiver</a>&lt; M &gt;::MessageListener &amp;msg_listener)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ShmReceiver</b> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a> &amp;attr, const typename <a class="el" href="classapollo_1_1cyber_1_1transport_1_1Receiver.html">Receiver</a>&lt; M &gt;::MessageListener &amp;msg_listener)</td></tr>
 <tr class="separator:ae40a34997049cdf61df823e06cb2b54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e0e9bb92682c19452714377d7b7085f"><td class="memItemLeft" align="right" valign="top"><a id="a8e0e9bb92682c19452714377d7b7085f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Enable</b> () override</td></tr>
@@ -107,24 +110,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Enable</b> () overrid
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Disable</b> () override</td></tr>
 <tr class="separator:afcf2bfb1a7a604c9b80b14f0d5e2cb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae484aefe5ab646b4d4439fdef4b2c89a"><td class="memItemLeft" align="right" valign="top"><a id="ae484aefe5ab646b4d4439fdef4b2c89a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Enable</b> (const RoleAttributes &amp;opposite_attr) override</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Enable</b> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a> &amp;opposite_attr) override</td></tr>
 <tr class="separator:ae484aefe5ab646b4d4439fdef4b2c89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c1fab03189119797ff3de40b02342d8"><td class="memItemLeft" align="right" valign="top"><a id="a8c1fab03189119797ff3de40b02342d8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Disable</b> (const RoleAttributes &amp;opposite_attr) override</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Disable</b> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a> &amp;opposite_attr) override</td></tr>
 <tr class="separator:a8c1fab03189119797ff3de40b02342d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classapollo_1_1cyber_1_1transport_1_1Receiver"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classapollo_1_1cyber_1_1transport_1_1Receiver')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classapollo_1_1cyber_1_1transport_1_1Receiver.html">apollo::cyber::transport::Receiver&lt; M &gt;</a></td></tr>
 <tr class="memitem:a5c95fdfe9d06a15f5474541a1b9ea2f5 inherit pub_methods_classapollo_1_1cyber_1_1transport_1_1Receiver"><td class="memItemLeft" align="right" valign="top"><a id="a5c95fdfe9d06a15f5474541a1b9ea2f5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Receiver</b> (const RoleAttributes &amp;attr, const MessageListener &amp;msg_listener)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Receiver</b> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a> &amp;attr, const MessageListener &amp;msg_listener)</td></tr>
 <tr class="separator:a5c95fdfe9d06a15f5474541a1b9ea2f5 inherit pub_methods_classapollo_1_1cyber_1_1transport_1_1Receiver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classapollo_1_1cyber_1_1transport_1_1Endpoint"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classapollo_1_1cyber_1_1transport_1_1Endpoint')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classapollo_1_1cyber_1_1transport_1_1Endpoint.html">apollo::cyber::transport::Endpoint</a></td></tr>
 <tr class="memitem:a9ac289b2b1952934f326ab80bc63beb2 inherit pub_methods_classapollo_1_1cyber_1_1transport_1_1Endpoint"><td class="memItemLeft" align="right" valign="top"><a id="a9ac289b2b1952934f326ab80bc63beb2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Endpoint</b> (const RoleAttributes &amp;attr)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Endpoint</b> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a> &amp;attr)</td></tr>
 <tr class="separator:a9ac289b2b1952934f326ab80bc63beb2 inherit pub_methods_classapollo_1_1cyber_1_1transport_1_1Endpoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5775318e78c33c5ce65e73f65f14926 inherit pub_methods_classapollo_1_1cyber_1_1transport_1_1Endpoint"><td class="memItemLeft" align="right" valign="top"><a id="ac5775318e78c33c5ce65e73f65f14926"></a>
 const <a class="el" href="classapollo_1_1cyber_1_1transport_1_1Identity.html">Identity</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>id</b> () const</td></tr>
 <tr class="separator:ac5775318e78c33c5ce65e73f65f14926 inherit pub_methods_classapollo_1_1cyber_1_1transport_1_1Endpoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a512064e7e1dba56cde061144e2f313c4 inherit pub_methods_classapollo_1_1cyber_1_1transport_1_1Endpoint"><td class="memItemLeft" align="right" valign="top"><a id="a512064e7e1dba56cde061144e2f313c4"></a>
-const RoleAttributes &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>attributes</b> () const</td></tr>
+const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>attributes</b> () const</td></tr>
 <tr class="separator:a512064e7e1dba56cde061144e2f313c4 inherit pub_methods_classapollo_1_1cyber_1_1transport_1_1Endpoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -134,7 +137,7 @@ Additional Inherited Members</h2></td></tr>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>MessagePtr</b> = std::shared_ptr&lt; M &gt;</td></tr>
 <tr class="separator:af02a7bde2d210b5e2e122ba3810933d1 inherit pub_types_classapollo_1_1cyber_1_1transport_1_1Receiver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd906fd03582b49acbdc81b48a8974aa inherit pub_types_classapollo_1_1cyber_1_1transport_1_1Receiver"><td class="memItemLeft" align="right" valign="top"><a id="abd906fd03582b49acbdc81b48a8974aa"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>MessageListener</b> = std::function&lt; void(const MessagePtr &amp;, const <a class="el" href="classapollo_1_1cyber_1_1transport_1_1MessageInfo.html">MessageInfo</a> &amp;, const RoleAttributes &amp;)&gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>MessageListener</b> = std::function&lt; void(const MessagePtr &amp;, const <a class="el" href="classapollo_1_1cyber_1_1transport_1_1MessageInfo.html">MessageInfo</a> &amp;, const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a> &amp;)&gt;</td></tr>
 <tr class="separator:abd906fd03582b49acbdc81b48a8974aa inherit pub_types_classapollo_1_1cyber_1_1transport_1_1Receiver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classapollo_1_1cyber_1_1transport_1_1Receiver"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classapollo_1_1cyber_1_1transport_1_1Receiver')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classapollo_1_1cyber_1_1transport_1_1Receiver.html">apollo::cyber::transport::Receiver&lt; M &gt;</a></td></tr>
 <tr class="memitem:ab6db34cf266f899c426ed37d8410ecc2 inherit pro_methods_classapollo_1_1cyber_1_1transport_1_1Receiver"><td class="memItemLeft" align="right" valign="top"><a id="ab6db34cf266f899c426ed37d8410ecc2"></a>
@@ -152,7 +155,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled_</b></td></tr
 <a class="el" href="classapollo_1_1cyber_1_1transport_1_1Identity.html">Identity</a>&#160;</td><td class="memItemRight" valign="bottom"><b>id_</b></td></tr>
 <tr class="separator:ab13e5b3e9b7b614f687159ad7ff07655 inherit pro_attribs_classapollo_1_1cyber_1_1transport_1_1Endpoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5eef9d783a55addf75c73f3b2d3d922 inherit pro_attribs_classapollo_1_1cyber_1_1transport_1_1Endpoint"><td class="memItemLeft" align="right" valign="top"><a id="ae5eef9d783a55addf75c73f3b2d3d922"></a>
-RoleAttributes&#160;</td><td class="memItemRight" valign="bottom"><b>attr_</b></td></tr>
+<a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&#160;</td><td class="memItemRight" valign="bottom"><b>attr_</b></td></tr>
 <tr class="separator:ae5eef9d783a55addf75c73f3b2d3d922 inherit pro_attribs_classapollo_1_1cyber_1_1transport_1_1Endpoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>

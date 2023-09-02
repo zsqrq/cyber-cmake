@@ -1,4 +1,4 @@
-.TH "apollo::cyber::transport::Dispatcher" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::transport::Dispatcher" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,16 +15,16 @@ Inherited by \fBapollo::cyber::transport::IntraDispatcher\fP, \fBapollo::cyber::
 .RI "virtual void \fBShutdown\fP ()"
 .br
 .ti -1c
-.RI "template<typename MessageT > void \fBAddListener\fP (const RoleAttributes &self_attr, const MessageListener< MessageT > &listener)"
+.RI "template<typename MessageT > void \fBAddListener\fP (const \fBRoleAttributes\fP &self_attr, const MessageListener< MessageT > &listener)"
 .br
 .ti -1c
-.RI "template<typename MessageT > void \fBAddListener\fP (const RoleAttributes &self_attr, const RoleAttributes &opposite_attr, const MessageListener< MessageT > &listener)"
+.RI "template<typename MessageT > void \fBAddListener\fP (const \fBRoleAttributes\fP &self_attr, const \fBRoleAttributes\fP &opposite_attr, const MessageListener< MessageT > &listener)"
 .br
 .ti -1c
-.RI "template<typename MessageT > void \fBRemoveListener\fP (const RoleAttributes &self_attr)"
+.RI "template<typename MessageT > void \fBRemoveListener\fP (const \fBRoleAttributes\fP &self_attr)"
 .br
 .ti -1c
-.RI "template<typename MessageT > void \fBRemoveListener\fP (const RoleAttributes &self_attr, const RoleAttributes &opposite_attr)"
+.RI "template<typename MessageT > void \fBRemoveListener\fP (const \fBRoleAttributes\fP &self_attr, const \fBRoleAttributes\fP &opposite_attr)"
 .br
 .ti -1c
 .RI "bool \fBHasChannel\fP (uint64_t channel_id)"

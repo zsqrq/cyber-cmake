@@ -1,0 +1,271 @@
+.TH "apollo::drivers::LdwLensInfo" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::drivers::LdwLensInfo
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkXImageFocalFieldNumber\fP = 1, \fBkYImageFocalFieldNumber\fP = 2, \fBkXratioFocalPixelFieldNumber\fP = 3, \fBkYratioFocalPixelFieldNumber\fP = 4, \fBkMountingheightFieldNumber\fP = 5, \fBkMcosrxFieldNumber\fP = 6, \fBkMsinrxFieldNumber\fP = 7, \fBkMcosryFieldNumber\fP = 8, \fBkMsinryFieldNumber\fP = 9 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBLdwLensInfo\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBLdwLensInfo\fP (const \fBLdwLensInfo\fP &from)"
+.br
+.ti -1c
+.RI "\fBLdwLensInfo\fP (\fBLdwLensInfo\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBLdwLensInfo\fP & \fBoperator=\fP (const \fBLdwLensInfo\fP &from)"
+.br
+.ti -1c
+.RI "\fBLdwLensInfo\fP & \fBoperator=\fP (\fBLdwLensInfo\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBLdwLensInfo\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBLdwLensInfo\fP *other)"
+.br
+.ti -1c
+.RI "\fBLdwLensInfo\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBLdwLensInfo\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBLdwLensInfo\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_x_image_focal\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_x_image_focal\fP ()"
+.br
+.ti -1c
+.RI "float \fBx_image_focal\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_x_image_focal\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_y_image_focal\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_y_image_focal\fP ()"
+.br
+.ti -1c
+.RI "float \fBy_image_focal\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_y_image_focal\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_xratio_focal_pixel\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_xratio_focal_pixel\fP ()"
+.br
+.ti -1c
+.RI "float \fBxratio_focal_pixel\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_xratio_focal_pixel\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_yratio_focal_pixel\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_yratio_focal_pixel\fP ()"
+.br
+.ti -1c
+.RI "float \fByratio_focal_pixel\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_yratio_focal_pixel\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_mountingheight\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_mountingheight\fP ()"
+.br
+.ti -1c
+.RI "float \fBmountingheight\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_mountingheight\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_mcosrx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_mcosrx\fP ()"
+.br
+.ti -1c
+.RI "float \fBmcosrx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_mcosrx\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_msinrx\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_msinrx\fP ()"
+.br
+.ti -1c
+.RI "float \fBmsinrx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_msinrx\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_mcosry\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_mcosry\fP ()"
+.br
+.ti -1c
+.RI "float \fBmcosry\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_mcosry\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_msinry\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_msinry\fP ()"
+.br
+.ti -1c
+.RI "float \fBmsinry\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_msinry\fP (float value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBLdwLensInfo\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBLdwLensInfo\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLdwLensInfo\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fsensor_5fmsgs_2fsmartereye_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBLdwLensInfo\fP &a, \fBLdwLensInfo\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::drivers::LdwLensInfo::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    LdwLensInfo::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::drivers::LdwLensInfo::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    3
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

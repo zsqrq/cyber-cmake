@@ -1,0 +1,24 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,512,373,539"/>
+<area shape="rect" id="node2" href="$classapollo_1_1hdmap_1_1ClearAreaOverlapInfo.html" title=" " alt="" coords="467,5,730,32"/>
+<area shape="rect" id="node3" href="$classapollo_1_1hdmap_1_1JunctionOverlapInfo.html" title=" " alt="" coords="473,56,724,83"/>
+<area shape="rect" id="node4" href="$classapollo_1_1hdmap_1_1PNCJunctionOverlapInfo.html" title=" " alt="" coords="459,107,738,133"/>
+<area shape="rect" id="node5" href="$classapollo_1_1hdmap_1_1ParkingSpaceOverlapInfo.html" title=" " alt="" coords="455,157,742,184"/>
+<area shape="rect" id="node6" href="$classapollo_1_1hdmap_1_1RSUOverlapInfo.html" title=" " alt="" coords="485,208,712,235"/>
+<area shape="rect" id="node7" href="$classapollo_1_1hdmap_1_1SignalOverlapInfo.html" title=" " alt="" coords="479,259,718,285"/>
+<area shape="rect" id="node8" href="$classapollo_1_1hdmap_1_1SpeedBumpOverlapInfo.html" title=" " alt="" coords="460,309,737,336"/>
+<area shape="rect" id="node9" href="$classapollo_1_1hdmap_1_1StopSignOverlapInfo.html" title=" " alt="" coords="471,360,727,387"/>
+<area shape="rect" id="node10" href="$classapollo_1_1hdmap_1_1YieldOverlapInfo.html" title=" " alt="" coords="483,411,714,437"/>
+<area shape="rect" id="node11" href="$classapollo_1_1planning_1_1EmergencyStopCruiseToStop.html" title=" " alt="" coords="439,461,759,488"/>
+<area shape="rect" id="node12" href="$classapollo_1_1planning_1_1EmergencyStopHardBrake.html" title=" " alt="" coords="447,512,751,539"/>
+<area shape="rect" id="node13" href="$classapollo_1_1planning_1_1ObjectAvoid.html" title=" " alt="" coords="493,563,705,589"/>
+<area shape="rect" id="node14" href="$classapollo_1_1planning_1_1ObjectDynamic.html" title=" " alt="" coords="481,613,716,640"/>
+<area shape="rect" id="node15" href="$classapollo_1_1planning_1_1ObjectIgnore.html" title=" " alt="" coords="490,664,707,691"/>
+<area shape="rect" id="node16" href="$classapollo_1_1planning_1_1ObjectStatic.html" title=" " alt="" coords="492,715,705,741"/>
+<area shape="rect" id="node17" href="$classapollo_1_1simulation_1_1ChangeLaneAtJunctionCondition.html" title=" " alt="" coords="421,765,776,792"/>
+<area shape="rect" id="node18" href="$classapollo_1_1simulation_1_1CrosswalkYieldCondition.html" title=" " alt="" coords="445,816,752,843"/>
+<area shape="rect" id="node19" href="$classapollo_1_1simulation_1_1DistToEndCondition.html" title=" " alt="" coords="462,867,735,893"/>
+<area shape="rect" id="node20" href="$classapollo_1_1simulation_1_1DistToLaneCenterCondition.html" title=" " alt="" coords="437,917,760,944"/>
+<area shape="rect" id="node21" href="$classapollo_1_1simulation_1_1FuzzingConfig.html" title=" " alt="" coords="479,968,718,995"/>
+<area shape="rect" id="node22" href="$classapollo_1_1simulation_1_1RoutingCondition.html" title=" " alt="" coords="469,1019,728,1045"/>
+</map>

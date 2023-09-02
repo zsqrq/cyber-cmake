@@ -1,0 +1,574 @@
+.TH "apollo::canbus::Wiper_rpt_91" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::canbus::Wiper_rpt_91
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkOutputValueFieldNumber\fP = 1, \fBkCommandedValueFieldNumber\fP = 2, \fBkManualInputFieldNumber\fP = 3 }"
+.br
+.ti -1c
+.RI "typedef Wiper_rpt_91_Output_valueType \fBOutput_valueType\fP"
+.br
+.ti -1c
+.RI "typedef Wiper_rpt_91_Commanded_valueType \fBCommanded_valueType\fP"
+.br
+.ti -1c
+.RI "typedef Wiper_rpt_91_Manual_inputType \fBManual_inputType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBWiper_rpt_91\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBWiper_rpt_91\fP (const \fBWiper_rpt_91\fP &from)"
+.br
+.ti -1c
+.RI "\fBWiper_rpt_91\fP (\fBWiper_rpt_91\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBWiper_rpt_91\fP & \fBoperator=\fP (const \fBWiper_rpt_91\fP &from)"
+.br
+.ti -1c
+.RI "\fBWiper_rpt_91\fP & \fBoperator=\fP (\fBWiper_rpt_91\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBWiper_rpt_91\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBWiper_rpt_91\fP *other)"
+.br
+.ti -1c
+.RI "\fBWiper_rpt_91\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBWiper_rpt_91\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBWiper_rpt_91\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_output_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_output_value\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Wiper_rpt_91_Output_valueType \fBoutput_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_output_value\fP (::apollo::canbus::Wiper_rpt_91_Output_valueType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_commanded_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_commanded_value\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Wiper_rpt_91_Commanded_valueType \fBcommanded_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_commanded_value\fP (::apollo::canbus::Wiper_rpt_91_Commanded_valueType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_manual_input\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_manual_input\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Wiper_rpt_91_Manual_inputType \fBmanual_input\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_manual_input\fP (::apollo::canbus::Wiper_rpt_91_Manual_inputType value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBWiper_rpt_91\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBWiper_rpt_91\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBOutput_valueType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBOutput_valueType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBOutput_valueType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBOutput_valueType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Output_valueType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCommanded_valueType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCommanded_valueType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCommanded_valueType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCommanded_valueType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Commanded_valueType *value)"
+.br
+.ti -1c
+.RI "static bool \fBManual_inputType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBManual_inputType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBManual_inputType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBManual_inputType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Manual_inputType *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr Output_valueType \fBOUTPUT_VALUE_WIPERS_OFF\fP"
+.br
+.ti -1c
+.RI "static constexpr Output_valueType \fBOUTPUT_VALUE_INTERMITTENT_1\fP"
+.br
+.ti -1c
+.RI "static constexpr Output_valueType \fBOUTPUT_VALUE_INTERMITTENT_2\fP"
+.br
+.ti -1c
+.RI "static constexpr Output_valueType \fBOUTPUT_VALUE_INTERMITTENT_3\fP"
+.br
+.ti -1c
+.RI "static constexpr Output_valueType \fBOUTPUT_VALUE_INTERMITTENT_4\fP"
+.br
+.ti -1c
+.RI "static constexpr Output_valueType \fBOUTPUT_VALUE_INTERMITTENT_5\fP"
+.br
+.ti -1c
+.RI "static constexpr Output_valueType \fBOUTPUT_VALUE_LOW\fP"
+.br
+.ti -1c
+.RI "static constexpr Output_valueType \fBOUTPUT_VALUE_HIGH\fP"
+.br
+.ti -1c
+.RI "static constexpr Output_valueType \fBOutput_valueType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Output_valueType \fBOutput_valueType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBOutput_valueType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Commanded_valueType \fBCOMMANDED_VALUE_WIPERS_OFF\fP"
+.br
+.ti -1c
+.RI "static constexpr Commanded_valueType \fBCOMMANDED_VALUE_INTERMITTENT_1\fP"
+.br
+.ti -1c
+.RI "static constexpr Commanded_valueType \fBCOMMANDED_VALUE_INTERMITTENT_2\fP"
+.br
+.ti -1c
+.RI "static constexpr Commanded_valueType \fBCOMMANDED_VALUE_INTERMITTENT_3\fP"
+.br
+.ti -1c
+.RI "static constexpr Commanded_valueType \fBCOMMANDED_VALUE_INTERMITTENT_4\fP"
+.br
+.ti -1c
+.RI "static constexpr Commanded_valueType \fBCOMMANDED_VALUE_INTERMITTENT_5\fP"
+.br
+.ti -1c
+.RI "static constexpr Commanded_valueType \fBCOMMANDED_VALUE_LOW\fP"
+.br
+.ti -1c
+.RI "static constexpr Commanded_valueType \fBCOMMANDED_VALUE_HIGH\fP"
+.br
+.ti -1c
+.RI "static constexpr Commanded_valueType \fBCommanded_valueType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Commanded_valueType \fBCommanded_valueType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCommanded_valueType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Manual_inputType \fBMANUAL_INPUT_WIPERS_OFF\fP"
+.br
+.ti -1c
+.RI "static constexpr Manual_inputType \fBMANUAL_INPUT_INTERMITTENT_1\fP"
+.br
+.ti -1c
+.RI "static constexpr Manual_inputType \fBMANUAL_INPUT_INTERMITTENT_2\fP"
+.br
+.ti -1c
+.RI "static constexpr Manual_inputType \fBMANUAL_INPUT_INTERMITTENT_3\fP"
+.br
+.ti -1c
+.RI "static constexpr Manual_inputType \fBMANUAL_INPUT_INTERMITTENT_4\fP"
+.br
+.ti -1c
+.RI "static constexpr Manual_inputType \fBMANUAL_INPUT_INTERMITTENT_5\fP"
+.br
+.ti -1c
+.RI "static constexpr Manual_inputType \fBMANUAL_INPUT_LOW\fP"
+.br
+.ti -1c
+.RI "static constexpr Manual_inputType \fBMANUAL_INPUT_HIGH\fP"
+.br
+.ti -1c
+.RI "static constexpr Manual_inputType \fBManual_inputType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Manual_inputType \fBManual_inputType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBManual_inputType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWiper_rpt_91\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fchassis_5fmsgs_2fchassis_5fdetail_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBWiper_rpt_91\fP &a, \fBWiper_rpt_91\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::canbus::Wiper_rpt_91::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Wiper_rpt_91::MergeImpl
+}
+.fi
+.SS "constexpr Wiper_rpt_91_Commanded_valueType apollo::canbus::Wiper_rpt_91::COMMANDED_VALUE_HIGH\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Commanded_valueType_COMMANDED_VALUE_HIGH
+.fi
+.SS "constexpr Wiper_rpt_91_Commanded_valueType apollo::canbus::Wiper_rpt_91::COMMANDED_VALUE_INTERMITTENT_1\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Commanded_valueType_COMMANDED_VALUE_INTERMITTENT_1
+.fi
+.SS "constexpr Wiper_rpt_91_Commanded_valueType apollo::canbus::Wiper_rpt_91::COMMANDED_VALUE_INTERMITTENT_2\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Commanded_valueType_COMMANDED_VALUE_INTERMITTENT_2
+.fi
+.SS "constexpr Wiper_rpt_91_Commanded_valueType apollo::canbus::Wiper_rpt_91::COMMANDED_VALUE_INTERMITTENT_3\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Commanded_valueType_COMMANDED_VALUE_INTERMITTENT_3
+.fi
+.SS "constexpr Wiper_rpt_91_Commanded_valueType apollo::canbus::Wiper_rpt_91::COMMANDED_VALUE_INTERMITTENT_4\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Commanded_valueType_COMMANDED_VALUE_INTERMITTENT_4
+.fi
+.SS "constexpr Wiper_rpt_91_Commanded_valueType apollo::canbus::Wiper_rpt_91::COMMANDED_VALUE_INTERMITTENT_5\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Commanded_valueType_COMMANDED_VALUE_INTERMITTENT_5
+.fi
+.SS "constexpr Wiper_rpt_91_Commanded_valueType apollo::canbus::Wiper_rpt_91::COMMANDED_VALUE_LOW\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Commanded_valueType_COMMANDED_VALUE_LOW
+.fi
+.SS "constexpr Wiper_rpt_91_Commanded_valueType apollo::canbus::Wiper_rpt_91::COMMANDED_VALUE_WIPERS_OFF\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Commanded_valueType_COMMANDED_VALUE_WIPERS_OFF
+.fi
+.SS "constexpr int apollo::canbus::Wiper_rpt_91::Commanded_valueType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Commanded_valueType_Commanded_valueType_ARRAYSIZE
+.fi
+.SS "constexpr Wiper_rpt_91_Commanded_valueType apollo::canbus::Wiper_rpt_91::Commanded_valueType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Commanded_valueType_Commanded_valueType_MAX
+.fi
+.SS "constexpr Wiper_rpt_91_Commanded_valueType apollo::canbus::Wiper_rpt_91::Commanded_valueType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Commanded_valueType_Commanded_valueType_MIN
+.fi
+.SS "constexpr int apollo::canbus::Wiper_rpt_91::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    37
+.fi
+.SS "constexpr Wiper_rpt_91_Manual_inputType apollo::canbus::Wiper_rpt_91::MANUAL_INPUT_HIGH\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Manual_inputType_MANUAL_INPUT_HIGH
+.fi
+.SS "constexpr Wiper_rpt_91_Manual_inputType apollo::canbus::Wiper_rpt_91::MANUAL_INPUT_INTERMITTENT_1\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Manual_inputType_MANUAL_INPUT_INTERMITTENT_1
+.fi
+.SS "constexpr Wiper_rpt_91_Manual_inputType apollo::canbus::Wiper_rpt_91::MANUAL_INPUT_INTERMITTENT_2\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Manual_inputType_MANUAL_INPUT_INTERMITTENT_2
+.fi
+.SS "constexpr Wiper_rpt_91_Manual_inputType apollo::canbus::Wiper_rpt_91::MANUAL_INPUT_INTERMITTENT_3\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Manual_inputType_MANUAL_INPUT_INTERMITTENT_3
+.fi
+.SS "constexpr Wiper_rpt_91_Manual_inputType apollo::canbus::Wiper_rpt_91::MANUAL_INPUT_INTERMITTENT_4\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Manual_inputType_MANUAL_INPUT_INTERMITTENT_4
+.fi
+.SS "constexpr Wiper_rpt_91_Manual_inputType apollo::canbus::Wiper_rpt_91::MANUAL_INPUT_INTERMITTENT_5\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Manual_inputType_MANUAL_INPUT_INTERMITTENT_5
+.fi
+.SS "constexpr Wiper_rpt_91_Manual_inputType apollo::canbus::Wiper_rpt_91::MANUAL_INPUT_LOW\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Manual_inputType_MANUAL_INPUT_LOW
+.fi
+.SS "constexpr Wiper_rpt_91_Manual_inputType apollo::canbus::Wiper_rpt_91::MANUAL_INPUT_WIPERS_OFF\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Manual_inputType_MANUAL_INPUT_WIPERS_OFF
+.fi
+.SS "constexpr int apollo::canbus::Wiper_rpt_91::Manual_inputType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Manual_inputType_Manual_inputType_ARRAYSIZE
+.fi
+.SS "constexpr Wiper_rpt_91_Manual_inputType apollo::canbus::Wiper_rpt_91::Manual_inputType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Manual_inputType_Manual_inputType_MAX
+.fi
+.SS "constexpr Wiper_rpt_91_Manual_inputType apollo::canbus::Wiper_rpt_91::Manual_inputType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Manual_inputType_Manual_inputType_MIN
+.fi
+.SS "constexpr Wiper_rpt_91_Output_valueType apollo::canbus::Wiper_rpt_91::OUTPUT_VALUE_HIGH\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Output_valueType_OUTPUT_VALUE_HIGH
+.fi
+.SS "constexpr Wiper_rpt_91_Output_valueType apollo::canbus::Wiper_rpt_91::OUTPUT_VALUE_INTERMITTENT_1\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Output_valueType_OUTPUT_VALUE_INTERMITTENT_1
+.fi
+.SS "constexpr Wiper_rpt_91_Output_valueType apollo::canbus::Wiper_rpt_91::OUTPUT_VALUE_INTERMITTENT_2\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Output_valueType_OUTPUT_VALUE_INTERMITTENT_2
+.fi
+.SS "constexpr Wiper_rpt_91_Output_valueType apollo::canbus::Wiper_rpt_91::OUTPUT_VALUE_INTERMITTENT_3\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Output_valueType_OUTPUT_VALUE_INTERMITTENT_3
+.fi
+.SS "constexpr Wiper_rpt_91_Output_valueType apollo::canbus::Wiper_rpt_91::OUTPUT_VALUE_INTERMITTENT_4\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Output_valueType_OUTPUT_VALUE_INTERMITTENT_4
+.fi
+.SS "constexpr Wiper_rpt_91_Output_valueType apollo::canbus::Wiper_rpt_91::OUTPUT_VALUE_INTERMITTENT_5\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Output_valueType_OUTPUT_VALUE_INTERMITTENT_5
+.fi
+.SS "constexpr Wiper_rpt_91_Output_valueType apollo::canbus::Wiper_rpt_91::OUTPUT_VALUE_LOW\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Output_valueType_OUTPUT_VALUE_LOW
+.fi
+.SS "constexpr Wiper_rpt_91_Output_valueType apollo::canbus::Wiper_rpt_91::OUTPUT_VALUE_WIPERS_OFF\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Output_valueType_OUTPUT_VALUE_WIPERS_OFF
+.fi
+.SS "constexpr int apollo::canbus::Wiper_rpt_91::Output_valueType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Output_valueType_Output_valueType_ARRAYSIZE
+.fi
+.SS "constexpr Wiper_rpt_91_Output_valueType apollo::canbus::Wiper_rpt_91::Output_valueType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Output_valueType_Output_valueType_MAX
+.fi
+.SS "constexpr Wiper_rpt_91_Output_valueType apollo::canbus::Wiper_rpt_91::Output_valueType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Wiper_rpt_91_Output_valueType_Output_valueType_MIN
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -111,7 +113,7 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">using</span> MessagePtr = std::shared_ptr&lt;M&gt;;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classapollo_1_1cyber_1_1transport_1_1ShmTransmitter.html">ShmTransmitter</a>(<span class="keyword">const</span> RoleAttributes&amp; attr);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classapollo_1_1cyber_1_1transport_1_1ShmTransmitter.html">ShmTransmitter</a>(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; attr);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classapollo_1_1cyber_1_1transport_1_1ShmTransmitter.html">ShmTransmitter</a>();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">void</span> Enable() <span class="keyword">override</span>;</div>
@@ -129,7 +131,7 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> M&gt;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="classapollo_1_1cyber_1_1transport_1_1ShmTransmitter.html">ShmTransmitter&lt;M&gt;::ShmTransmitter</a>(<span class="keyword">const</span> RoleAttributes&amp; attr)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="classapollo_1_1cyber_1_1transport_1_1ShmTransmitter.html">ShmTransmitter&lt;M&gt;::ShmTransmitter</a>(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; attr)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    : <a class="code" href="classapollo_1_1cyber_1_1transport_1_1Transmitter.html">Transmitter</a>&lt;M&gt;(attr),</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      segment_(nullptr),</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      channel_id_(attr.channel_id()),</div>
@@ -212,11 +214,12 @@ $(function() {
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}  <span class="comment">// namespace apollo</span></div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CYBER_TRANSPORT_TRANSMITTER_SHM_TRANSMITTER_H_</span></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1RoleAttributes_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a></div><div class="ttdef"><b>Definition:</b> role_attributes.pb.h:258</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1MessageInfo_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1MessageInfo.html">apollo::cyber::transport::MessageInfo</a></div><div class="ttdef"><b>Definition:</b> message_info.h:30</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1NotifierBase_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1NotifierBase.html">apollo::cyber::transport::NotifierBase</a></div><div class="ttdef"><b>Definition:</b> notifier_base.h:31</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1ShmTransmitter_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1ShmTransmitter.html">apollo::cyber::transport::ShmTransmitter</a></div><div class="ttdef"><b>Definition:</b> shm_transmitter.h:39</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1Transmitter_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1Transmitter.html">apollo::cyber::transport::Transmitter</a></div><div class="ttdef"><b>Definition:</b> transmitter.h:36</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

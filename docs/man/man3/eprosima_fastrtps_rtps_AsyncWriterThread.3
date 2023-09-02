@@ -1,0 +1,88 @@
+.TH "eprosima::fastrtps::rtps::AsyncWriterThread" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::AsyncWriterThread \- This static class owns a thread that manages asynchronous writes\&. Asynchronous writes happen directly (when using an async writer) and indirectly (when responding to a NACK)\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AsyncWriterThread\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBaddWriter\fP (\fBRTPSWriter\fP &writer)"
+.br
+.RI "Adds a writer to be managed by this thread\&. Only asynchronous writers are permitted\&. "
+.ti -1c
+.RI "static bool \fBremoveWriter\fP (\fBRTPSWriter\fP &writer)"
+.br
+.RI "Removes a writer\&. "
+.ti -1c
+.RI "static void \fBwakeUp\fP (const RTPSParticipantImpl *interestedParticipant)"
+.br
+.ti -1c
+.RI "static void \fBwakeUp\fP (const \fBRTPSWriter\fP *interestedWriter)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This static class owns a thread that manages asynchronous writes\&. Asynchronous writes happen directly (when using an async writer) and indirectly (when responding to a NACK)\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "static bool eprosima::fastrtps::rtps::AsyncWriterThread::addWriter (\fBRTPSWriter\fP & writer)\fC [static]\fP"
+
+.PP
+Adds a writer to be managed by this thread\&. Only asynchronous writers are permitted\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwriter\fP Asynchronous writer to be added\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Result of the operation\&. 
+.RE
+.PP
+
+.SS "static bool eprosima::fastrtps::rtps::AsyncWriterThread::removeWriter (\fBRTPSWriter\fP & writer)\fC [static]\fP"
+
+.PP
+Removes a writer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwriter\fP Asynchronous writer to be removed\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Result of the operation\&. 
+.RE
+.PP
+
+.SS "static void eprosima::fastrtps::rtps::AsyncWriterThread::wakeUp (const RTPSParticipantImpl * interestedParticipant)\fC [static]\fP"
+Wakes the thread up\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinterestedParticipant\fP The participant interested in an async write\&. 
+.RE
+.PP
+
+.SS "static void eprosima::fastrtps::rtps::AsyncWriterThread::wakeUp (const \fBRTPSWriter\fP * interestedWriter)\fC [static]\fP"
+Wakes the thread up\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinterestedParticipant\fP The writer interested in an async write\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

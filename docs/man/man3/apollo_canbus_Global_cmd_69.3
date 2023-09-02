@@ -1,0 +1,394 @@
+.TH "apollo::canbus::Global_cmd_69" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::canbus::Global_cmd_69
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkPacmodEnableFieldNumber\fP = 1, \fBkClearOverrideFieldNumber\fP = 2, \fBkIgnoreOverrideFieldNumber\fP = 3 }"
+.br
+.ti -1c
+.RI "typedef Global_cmd_69_Pacmod_enableType \fBPacmod_enableType\fP"
+.br
+.ti -1c
+.RI "typedef Global_cmd_69_Clear_overrideType \fBClear_overrideType\fP"
+.br
+.ti -1c
+.RI "typedef Global_cmd_69_Ignore_overrideType \fBIgnore_overrideType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBGlobal_cmd_69\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBGlobal_cmd_69\fP (const \fBGlobal_cmd_69\fP &from)"
+.br
+.ti -1c
+.RI "\fBGlobal_cmd_69\fP (\fBGlobal_cmd_69\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBGlobal_cmd_69\fP & \fBoperator=\fP (const \fBGlobal_cmd_69\fP &from)"
+.br
+.ti -1c
+.RI "\fBGlobal_cmd_69\fP & \fBoperator=\fP (\fBGlobal_cmd_69\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBGlobal_cmd_69\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBGlobal_cmd_69\fP *other)"
+.br
+.ti -1c
+.RI "\fBGlobal_cmd_69\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBGlobal_cmd_69\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBGlobal_cmd_69\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_pacmod_enable\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_pacmod_enable\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Global_cmd_69_Pacmod_enableType \fBpacmod_enable\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_pacmod_enable\fP (::apollo::canbus::Global_cmd_69_Pacmod_enableType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_clear_override\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_clear_override\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Global_cmd_69_Clear_overrideType \fBclear_override\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_clear_override\fP (::apollo::canbus::Global_cmd_69_Clear_overrideType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_ignore_override\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_ignore_override\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Global_cmd_69_Ignore_overrideType \fBignore_override\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_ignore_override\fP (::apollo::canbus::Global_cmd_69_Ignore_overrideType value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBGlobal_cmd_69\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBGlobal_cmd_69\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBPacmod_enableType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBPacmod_enableType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBPacmod_enableType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBPacmod_enableType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Pacmod_enableType *value)"
+.br
+.ti -1c
+.RI "static bool \fBClear_overrideType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBClear_overrideType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBClear_overrideType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBClear_overrideType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Clear_overrideType *value)"
+.br
+.ti -1c
+.RI "static bool \fBIgnore_overrideType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBIgnore_overrideType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBIgnore_overrideType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBIgnore_overrideType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Ignore_overrideType *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr Pacmod_enableType \fBPACMOD_ENABLE_CONTROL_DISABLED\fP"
+.br
+.ti -1c
+.RI "static constexpr Pacmod_enableType \fBPACMOD_ENABLE_CONTROL_ENABLED\fP"
+.br
+.ti -1c
+.RI "static constexpr Pacmod_enableType \fBPacmod_enableType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Pacmod_enableType \fBPacmod_enableType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBPacmod_enableType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Clear_overrideType \fBCLEAR_OVERRIDE_DON_T_CLEAR_ACTIVE_OVERRIDES\fP"
+.br
+.ti -1c
+.RI "static constexpr Clear_overrideType \fBCLEAR_OVERRIDE_CLEAR_ACTIVE_OVERRIDES\fP"
+.br
+.ti -1c
+.RI "static constexpr Clear_overrideType \fBClear_overrideType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Clear_overrideType \fBClear_overrideType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBClear_overrideType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Ignore_overrideType \fBIGNORE_OVERRIDE_DON_T_IGNORE_USER_OVERRIDES\fP"
+.br
+.ti -1c
+.RI "static constexpr Ignore_overrideType \fBIGNORE_OVERRIDE_IGNORE_USER_OVERRIDES\fP"
+.br
+.ti -1c
+.RI "static constexpr Ignore_overrideType \fBIgnore_overrideType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Ignore_overrideType \fBIgnore_overrideType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBIgnore_overrideType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGlobal_cmd_69\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fchassis_5fmsgs_2fchassis_5fdetail_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBGlobal_cmd_69\fP &a, \fBGlobal_cmd_69\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::canbus::Global_cmd_69::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Global_cmd_69::MergeImpl
+}
+.fi
+.SS "constexpr Global_cmd_69_Clear_overrideType apollo::canbus::Global_cmd_69::CLEAR_OVERRIDE_CLEAR_ACTIVE_OVERRIDES\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Clear_overrideType_CLEAR_OVERRIDE_CLEAR_ACTIVE_OVERRIDES
+.fi
+.SS "constexpr Global_cmd_69_Clear_overrideType apollo::canbus::Global_cmd_69::CLEAR_OVERRIDE_DON_T_CLEAR_ACTIVE_OVERRIDES\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Clear_overrideType_CLEAR_OVERRIDE_DON_T_CLEAR_ACTIVE_OVERRIDES
+.fi
+.SS "constexpr int apollo::canbus::Global_cmd_69::Clear_overrideType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Clear_overrideType_Clear_overrideType_ARRAYSIZE
+.fi
+.SS "constexpr Global_cmd_69_Clear_overrideType apollo::canbus::Global_cmd_69::Clear_overrideType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Clear_overrideType_Clear_overrideType_MAX
+.fi
+.SS "constexpr Global_cmd_69_Clear_overrideType apollo::canbus::Global_cmd_69::Clear_overrideType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Clear_overrideType_Clear_overrideType_MIN
+.fi
+.SS "constexpr Global_cmd_69_Ignore_overrideType apollo::canbus::Global_cmd_69::IGNORE_OVERRIDE_DON_T_IGNORE_USER_OVERRIDES\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Ignore_overrideType_IGNORE_OVERRIDE_DON_T_IGNORE_USER_OVERRIDES
+.fi
+.SS "constexpr Global_cmd_69_Ignore_overrideType apollo::canbus::Global_cmd_69::IGNORE_OVERRIDE_IGNORE_USER_OVERRIDES\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Ignore_overrideType_IGNORE_OVERRIDE_IGNORE_USER_OVERRIDES
+.fi
+.SS "constexpr int apollo::canbus::Global_cmd_69::Ignore_overrideType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Ignore_overrideType_Ignore_overrideType_ARRAYSIZE
+.fi
+.SS "constexpr Global_cmd_69_Ignore_overrideType apollo::canbus::Global_cmd_69::Ignore_overrideType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Ignore_overrideType_Ignore_overrideType_MAX
+.fi
+.SS "constexpr Global_cmd_69_Ignore_overrideType apollo::canbus::Global_cmd_69::Ignore_overrideType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Ignore_overrideType_Ignore_overrideType_MIN
+.fi
+.SS "constexpr int apollo::canbus::Global_cmd_69::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    32
+.fi
+.SS "constexpr Global_cmd_69_Pacmod_enableType apollo::canbus::Global_cmd_69::PACMOD_ENABLE_CONTROL_DISABLED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Pacmod_enableType_PACMOD_ENABLE_CONTROL_DISABLED
+.fi
+.SS "constexpr Global_cmd_69_Pacmod_enableType apollo::canbus::Global_cmd_69::PACMOD_ENABLE_CONTROL_ENABLED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Pacmod_enableType_PACMOD_ENABLE_CONTROL_ENABLED
+.fi
+.SS "constexpr int apollo::canbus::Global_cmd_69::Pacmod_enableType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Pacmod_enableType_Pacmod_enableType_ARRAYSIZE
+.fi
+.SS "constexpr Global_cmd_69_Pacmod_enableType apollo::canbus::Global_cmd_69::Pacmod_enableType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Pacmod_enableType_Pacmod_enableType_MAX
+.fi
+.SS "constexpr Global_cmd_69_Pacmod_enableType apollo::canbus::Global_cmd_69::Pacmod_enableType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_cmd_69_Pacmod_enableType_Pacmod_enableType_MIN
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

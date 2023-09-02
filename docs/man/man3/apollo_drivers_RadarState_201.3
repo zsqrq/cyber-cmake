@@ -1,0 +1,395 @@
+.TH "apollo::drivers::RadarState_201" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::drivers::RadarState_201
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkMaxDistanceFieldNumber\fP = 1, \fBkRadarPowerFieldNumber\fP = 2, \fBkOutputTypeFieldNumber\fP = 3, \fBkRcsThresholdFieldNumber\fP = 4, \fBkSendQualityFieldNumber\fP = 5, \fBkSendExtInfoFieldNumber\fP = 6 }"
+.br
+.ti -1c
+.RI "typedef RadarState_201_OutputType \fBOutputType\fP"
+.br
+.ti -1c
+.RI "typedef RadarState_201_RcsThreshold \fBRcsThreshold\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBRadarState_201\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBRadarState_201\fP (const \fBRadarState_201\fP &from)"
+.br
+.ti -1c
+.RI "\fBRadarState_201\fP (\fBRadarState_201\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBRadarState_201\fP & \fBoperator=\fP (const \fBRadarState_201\fP &from)"
+.br
+.ti -1c
+.RI "\fBRadarState_201\fP & \fBoperator=\fP (\fBRadarState_201\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBRadarState_201\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBRadarState_201\fP *other)"
+.br
+.ti -1c
+.RI "\fBRadarState_201\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBRadarState_201\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBRadarState_201\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_max_distance\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_max_distance\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBmax_distance\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_max_distance\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_radar_power\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_radar_power\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBradar_power\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_radar_power\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_output_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_output_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::RadarState_201_OutputType \fBoutput_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_output_type\fP (::apollo::drivers::RadarState_201_OutputType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_rcs_threshold\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_rcs_threshold\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::RadarState_201_RcsThreshold \fBrcs_threshold\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_rcs_threshold\fP (::apollo::drivers::RadarState_201_RcsThreshold value)"
+.br
+.ti -1c
+.RI "bool \fBhas_send_quality\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_send_quality\fP ()"
+.br
+.ti -1c
+.RI "bool \fBsend_quality\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_send_quality\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_send_ext_info\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_send_ext_info\fP ()"
+.br
+.ti -1c
+.RI "bool \fBsend_ext_info\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_send_ext_info\fP (bool value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBRadarState_201\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBRadarState_201\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBOutputType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBOutputType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBOutputType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBOutputType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, OutputType *value)"
+.br
+.ti -1c
+.RI "static bool \fBRcsThreshold_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBRcsThreshold_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBRcsThreshold_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBRcsThreshold_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, RcsThreshold *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr OutputType \fBOUTPUT_TYPE_NONE\fP"
+.br
+.ti -1c
+.RI "static constexpr OutputType \fBOUTPUT_TYPE_OBJECTS\fP"
+.br
+.ti -1c
+.RI "static constexpr OutputType \fBOUTPUT_TYPE_CLUSTERS\fP"
+.br
+.ti -1c
+.RI "static constexpr OutputType \fBOUTPUT_TYPE_ERROR\fP"
+.br
+.ti -1c
+.RI "static constexpr OutputType \fBOutputType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr OutputType \fBOutputType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBOutputType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr RcsThreshold \fBRCS_THRESHOLD_STANDARD\fP"
+.br
+.ti -1c
+.RI "static constexpr RcsThreshold \fBRCS_THRESHOLD_HIGH_SENSITIVITY\fP"
+.br
+.ti -1c
+.RI "static constexpr RcsThreshold \fBRCS_THRESHOLD_ERROR\fP"
+.br
+.ti -1c
+.RI "static constexpr RcsThreshold \fBRcsThreshold_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr RcsThreshold \fBRcsThreshold_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBRcsThreshold_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRadarState_201\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fsensor_5fmsgs_2fconti_5fradar_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBRadarState_201\fP &a, \fBRadarState_201\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::drivers::RadarState_201::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    RadarState_201::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::drivers::RadarState_201::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    2
+.fi
+.SS "constexpr RadarState_201_OutputType apollo::drivers::RadarState_201::OUTPUT_TYPE_CLUSTERS\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarState_201_OutputType_OUTPUT_TYPE_CLUSTERS
+.fi
+.SS "constexpr RadarState_201_OutputType apollo::drivers::RadarState_201::OUTPUT_TYPE_ERROR\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarState_201_OutputType_OUTPUT_TYPE_ERROR
+.fi
+.SS "constexpr RadarState_201_OutputType apollo::drivers::RadarState_201::OUTPUT_TYPE_NONE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarState_201_OutputType_OUTPUT_TYPE_NONE
+.fi
+.SS "constexpr RadarState_201_OutputType apollo::drivers::RadarState_201::OUTPUT_TYPE_OBJECTS\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarState_201_OutputType_OUTPUT_TYPE_OBJECTS
+.fi
+.SS "constexpr int apollo::drivers::RadarState_201::OutputType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarState_201_OutputType_OutputType_ARRAYSIZE
+.fi
+.SS "constexpr RadarState_201_OutputType apollo::drivers::RadarState_201::OutputType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarState_201_OutputType_OutputType_MAX
+.fi
+.SS "constexpr RadarState_201_OutputType apollo::drivers::RadarState_201::OutputType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarState_201_OutputType_OutputType_MIN
+.fi
+.SS "constexpr RadarState_201_RcsThreshold apollo::drivers::RadarState_201::RCS_THRESHOLD_ERROR\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarState_201_RcsThreshold_RCS_THRESHOLD_ERROR
+.fi
+.SS "constexpr RadarState_201_RcsThreshold apollo::drivers::RadarState_201::RCS_THRESHOLD_HIGH_SENSITIVITY\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarState_201_RcsThreshold_RCS_THRESHOLD_HIGH_SENSITIVITY
+.fi
+.SS "constexpr RadarState_201_RcsThreshold apollo::drivers::RadarState_201::RCS_THRESHOLD_STANDARD\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarState_201_RcsThreshold_RCS_THRESHOLD_STANDARD
+.fi
+.SS "constexpr int apollo::drivers::RadarState_201::RcsThreshold_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarState_201_RcsThreshold_RcsThreshold_ARRAYSIZE
+.fi
+.SS "constexpr RadarState_201_RcsThreshold apollo::drivers::RadarState_201::RcsThreshold_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarState_201_RcsThreshold_RcsThreshold_MAX
+.fi
+.SS "constexpr RadarState_201_RcsThreshold apollo::drivers::RadarState_201::RcsThreshold_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    RadarState_201_RcsThreshold_RcsThreshold_MIN
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

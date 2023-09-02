@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -109,7 +111,7 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">using</span> Iterator =</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keyword">typename</span> std::list&lt;std::shared_ptr&lt;MessageT&gt;&gt;::const_iterator;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1blocker_1_1IntraReader.html">IntraReader</a>(<span class="keyword">const</span> proto::RoleAttributes&amp; attr, <span class="keyword">const</span> Callback&amp; callback);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1blocker_1_1IntraReader.html">IntraReader</a>(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&amp; attr, <span class="keyword">const</span> Callback&amp; callback);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classapollo_1_1cyber_1_1blocker_1_1IntraReader.html">IntraReader</a>();</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1blocker_1_1IntraReader.html#a43e61ca2814c9ca792b89c67e2a02daf">Init</a>() <span class="keyword">override</span>;</div>
@@ -135,7 +137,7 @@ $(function() {
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageT&gt;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<a class="code" href="classapollo_1_1cyber_1_1blocker_1_1IntraReader.html">IntraReader&lt;MessageT&gt;::IntraReader</a>(<span class="keyword">const</span> proto::RoleAttributes&amp; attr,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<a class="code" href="classapollo_1_1cyber_1_1blocker_1_1IntraReader.html">IntraReader&lt;MessageT&gt;::IntraReader</a>(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&amp; attr,</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                   <span class="keyword">const</span> Callback&amp; callback)</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    : <a class="code" href="classapollo_1_1cyber_1_1Reader.html">Reader</a>&lt;MessageT&gt;(attr), msg_callback_(callback) {}</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
@@ -296,7 +298,8 @@ $(function() {
 <div class="ttc" id="aclassapollo_1_1cyber_1_1blocker_1_1IntraReader_html_a9249758337ab94e2aefe657f1f8a3580"><div class="ttname"><a href="classapollo_1_1cyber_1_1blocker_1_1IntraReader.html#a9249758337ab94e2aefe657f1f8a3580">apollo::cyber::blocker::IntraReader::Begin</a></div><div class="ttdeci">Iterator Begin() const override</div><div class="ttdoc">Get the begin iterator of ObserveQueue, used to traverse.</div><div class="ttdef"><b>Definition:</b> intra_reader.h:182</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1blocker_1_1IntraReader_html_ab94a92e11479f932b99f1c2e1f2df931"><div class="ttname"><a href="classapollo_1_1cyber_1_1blocker_1_1IntraReader.html#ab94a92e11479f932b99f1c2e1f2df931">apollo::cyber::blocker::IntraReader::End</a></div><div class="ttdeci">Iterator End() const override</div><div class="ttdoc">Get the end iterator of ObserveQueue, used to traverse.</div><div class="ttdef"><b>Definition:</b> intra_reader.h:190</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1blocker_1_1IntraReader_html_adb4056ff1f7ed30e7fbff720fb85887a"><div class="ttname"><a href="classapollo_1_1cyber_1_1blocker_1_1IntraReader.html#adb4056ff1f7ed30e7fbff720fb85887a">apollo::cyber::blocker::IntraReader::GetHistoryDepth</a></div><div class="ttdeci">uint32_t GetHistoryDepth() const override</div><div class="ttdoc">Get Blocker's PublishQueue's capacity.</div><div class="ttdef"><b>Definition:</b> intra_reader.h:152</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1RoleAttributes_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a></div><div class="ttdef"><b>Definition:</b> role_attributes.pb.h:258</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

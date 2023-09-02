@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -93,14 +95,15 @@ Collaboration diagram for apollo::cyber::WriterBase:</div>
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1WriterBase__coll__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1WriterBase_coll__map" alt="Collaboration graph"/></div>
 <map name="aapollo_1_1cyber_1_1WriterBase_coll__map" id="aapollo_1_1cyber_1_1WriterBase_coll__map">
-<area shape="rect" title="Base class for a Writer. A Writer is an object to send messages through a &#39;Channel&#39;." alt="" coords="5,145,500,340"/>
-<area shape="rect" title=" " alt="" coords="195,5,310,83"/>
+<area shape="rect" title="Base class for a Writer. A Writer is an object to send messages through a &#39;Channel&#39;." alt="" coords="75,521,569,716"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html" title=" " alt="" coords="5,132,639,459"/>
+<area shape="rect" title=" " alt="" coords="187,5,457,83"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1c04642de705c6bee86124f18728a4b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1WriterBase.html#a1c04642de705c6bee86124f18728a4b9">WriterBase</a> (const proto::RoleAttributes &amp;role_attr)</td></tr>
+<tr class="memitem:a1c04642de705c6bee86124f18728a4b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1WriterBase.html#a1c04642de705c6bee86124f18728a4b9">WriterBase</a> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &amp;role_attr)</td></tr>
 <tr class="memdesc:a1c04642de705c6bee86124f18728a4b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classapollo_1_1cyber_1_1Writer.html">Writer</a> <a class="el" href="classBase.html">Base</a> object.  <a href="classapollo_1_1cyber_1_1WriterBase.html#a1c04642de705c6bee86124f18728a4b9">More...</a><br /></td></tr>
 <tr class="separator:a1c04642de705c6bee86124f18728a4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acff05a3215b2a2da4b2a140069ac001d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1WriterBase.html#acff05a3215b2a2da4b2a140069ac001d">Init</a> ()=0</td></tr>
@@ -113,7 +116,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a2c158df45980927544cff2c55214c31a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1WriterBase.html#a2c158df45980927544cff2c55214c31a">HasReader</a> ()</td></tr>
 <tr class="memdesc:a2c158df45980927544cff2c55214c31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is there any <a class="el" href="classapollo_1_1cyber_1_1Reader.html" title="Reader subscribes a channel, it has two main functions:">Reader</a> that subscribes our Channel? You can publish message when this return true.  <a href="classapollo_1_1cyber_1_1WriterBase.html#a2c158df45980927544cff2c55214c31a">More...</a><br /></td></tr>
 <tr class="separator:a2c158df45980927544cff2c55214c31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93845a2774b7515bf63d432ffbed5fda"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1WriterBase.html#a93845a2774b7515bf63d432ffbed5fda">GetReaders</a> (std::vector&lt; proto::RoleAttributes &gt; *readers)</td></tr>
+<tr class="memitem:a93845a2774b7515bf63d432ffbed5fda"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1WriterBase.html#a93845a2774b7515bf63d432ffbed5fda">GetReaders</a> (std::vector&lt; <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &gt; *readers)</td></tr>
 <tr class="memdesc:a93845a2774b7515bf63d432ffbed5fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all Readers that subscriber our writing channel.  <a href="classapollo_1_1cyber_1_1WriterBase.html#a93845a2774b7515bf63d432ffbed5fda">More...</a><br /></td></tr>
 <tr class="separator:a93845a2774b7515bf63d432ffbed5fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11940eab64694be28d557e7137419f4f"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1WriterBase.html#a11940eab64694be28d557e7137419f4f">GetChannelName</a> () const</td></tr>
@@ -126,7 +129,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aa6fa91676f28b3010a849b7eecb18b76"><td class="memItemLeft" align="right" valign="top"><a id="aa6fa91676f28b3010a849b7eecb18b76"></a>
-proto::RoleAttributes&#160;</td><td class="memItemRight" valign="bottom"><b>role_attr_</b></td></tr>
+<a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&#160;</td><td class="memItemRight" valign="bottom"><b>role_attr_</b></td></tr>
 <tr class="separator:aa6fa91676f28b3010a849b7eecb18b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee167e7d2135c520e2e635b545449acb"><td class="memItemLeft" align="right" valign="top"><a id="aee167e7d2135c520e2e635b545449acb"></a>
 std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>lock_</b></td></tr>
@@ -151,7 +154,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>init_</b></td></tr>
         <tr>
           <td class="memname">apollo::cyber::WriterBase::WriterBase </td>
           <td>(</td>
-          <td class="paramtype">const proto::RoleAttributes &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &amp;&#160;</td>
           <td class="paramname"><em>role_attr</em></td><td>)</td>
           <td></td>
         </tr>
@@ -214,7 +217,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>init_</b></td></tr>
         <tr>
           <td class="memname">virtual void apollo::cyber::WriterBase::GetReaders </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; proto::RoleAttributes &gt; *&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &gt; *&#160;</td>
           <td class="paramname"><em>readers</em></td><td>)</td>
           <td></td>
         </tr>

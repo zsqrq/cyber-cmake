@@ -1,4 +1,4 @@
 <map id="apollo::cyber::Parameter::value" name="apollo::cyber::Parameter::value">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,231,32"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1Parameter.html#a2f98278500032416ab856dc2c64e4deb" title="Get Paramter&#39;s type name, i.e. INT,DOUBLE,STRING or protobuf message&#39;s fullname." alt="" coords="279,5,537,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,232,32"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1Parameter.html#a2f98278500032416ab856dc2c64e4deb" title="Get Paramter&#39;s type name, i.e. INT,DOUBLE,STRING or protobuf message&#39;s fullname." alt="" coords="280,5,539,32"/>
 </map>

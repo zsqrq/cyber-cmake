@@ -1,0 +1,403 @@
+.TH "apollo::canbus::ChassisGPS" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::canbus::ChassisGPS
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkLatitudeFieldNumber\fP = 1, \fBkLongitudeFieldNumber\fP = 2, \fBkYearFieldNumber\fP = 4, \fBkMonthFieldNumber\fP = 5, \fBkDayFieldNumber\fP = 6, \fBkHoursFieldNumber\fP = 7, \fBkMinutesFieldNumber\fP = 8, \fBkSecondsFieldNumber\fP = 9, \fBkCompassDirectionFieldNumber\fP = 10, \fBkPdopFieldNumber\fP = 11, \fBkGpsValidFieldNumber\fP = 3, \fBkIsGpsFaultFieldNumber\fP = 12, \fBkIsInferredFieldNumber\fP = 13, \fBkQualityFieldNumber\fP = 18, \fBkAltitudeFieldNumber\fP = 14, \fBkHeadingFieldNumber\fP = 15, \fBkHdopFieldNumber\fP = 16, \fBkVdopFieldNumber\fP = 17, \fBkGpsSpeedFieldNumber\fP = 20, \fBkNumSatellitesFieldNumber\fP = 19 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBChassisGPS\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBChassisGPS\fP (const \fBChassisGPS\fP &from)"
+.br
+.ti -1c
+.RI "\fBChassisGPS\fP (\fBChassisGPS\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBChassisGPS\fP & \fBoperator=\fP (const \fBChassisGPS\fP &from)"
+.br
+.ti -1c
+.RI "\fBChassisGPS\fP & \fBoperator=\fP (\fBChassisGPS\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBChassisGPS\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBChassisGPS\fP *other)"
+.br
+.ti -1c
+.RI "\fBChassisGPS\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBChassisGPS\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBChassisGPS\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_latitude\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_latitude\fP ()"
+.br
+.ti -1c
+.RI "double \fBlatitude\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_latitude\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_longitude\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_longitude\fP ()"
+.br
+.ti -1c
+.RI "double \fBlongitude\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_longitude\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_year\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_year\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fByear\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_year\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_month\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_month\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBmonth\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_month\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_day\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_day\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBday\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_day\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_hours\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_hours\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBhours\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_hours\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_minutes\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_minutes\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBminutes\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_minutes\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_seconds\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_seconds\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBseconds\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_seconds\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_compass_direction\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_compass_direction\fP ()"
+.br
+.ti -1c
+.RI "double \fBcompass_direction\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_compass_direction\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_pdop\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_pdop\fP ()"
+.br
+.ti -1c
+.RI "double \fBpdop\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_pdop\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_gps_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_gps_valid\fP ()"
+.br
+.ti -1c
+.RI "bool \fBgps_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_gps_valid\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_gps_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_gps_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_gps_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_gps_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_inferred\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_inferred\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_inferred\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_inferred\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_quality\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_quality\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::GpsQuality \fBquality\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_quality\fP (::apollo::canbus::GpsQuality value)"
+.br
+.ti -1c
+.RI "bool \fBhas_altitude\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_altitude\fP ()"
+.br
+.ti -1c
+.RI "double \fBaltitude\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_altitude\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_heading\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_heading\fP ()"
+.br
+.ti -1c
+.RI "double \fBheading\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_heading\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_hdop\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_hdop\fP ()"
+.br
+.ti -1c
+.RI "double \fBhdop\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_hdop\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_vdop\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_vdop\fP ()"
+.br
+.ti -1c
+.RI "double \fBvdop\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_vdop\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_gps_speed\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_gps_speed\fP ()"
+.br
+.ti -1c
+.RI "double \fBgps_speed\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_gps_speed\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_num_satellites\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_num_satellites\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBnum_satellites\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_num_satellites\fP (int32_t value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBChassisGPS\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBChassisGPS\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChassisGPS\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fchassis_5fmsgs_2fchassis_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBChassisGPS\fP &a, \fBChassisGPS\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::canbus::ChassisGPS::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ChassisGPS::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::canbus::ChassisGPS::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    1
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,308 @@
+.TH "apollo::common::VehicleSignal" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::common::VehicleSignal
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkTurnSignalFieldNumber\fP = 1, \fBkHighBeamFieldNumber\fP = 2, \fBkLowBeamFieldNumber\fP = 3, \fBkHornFieldNumber\fP = 4, \fBkEmergencyLightFieldNumber\fP = 5 }"
+.br
+.ti -1c
+.RI "typedef VehicleSignal_TurnSignal \fBTurnSignal\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBVehicleSignal\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBVehicleSignal\fP (const \fBVehicleSignal\fP &from)"
+.br
+.ti -1c
+.RI "\fBVehicleSignal\fP (\fBVehicleSignal\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBVehicleSignal\fP & \fBoperator=\fP (const \fBVehicleSignal\fP &from)"
+.br
+.ti -1c
+.RI "\fBVehicleSignal\fP & \fBoperator=\fP (\fBVehicleSignal\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBVehicleSignal\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBVehicleSignal\fP *other)"
+.br
+.ti -1c
+.RI "\fBVehicleSignal\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBVehicleSignal\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBVehicleSignal\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_turn_signal\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_turn_signal\fP ()"
+.br
+.ti -1c
+.RI "::apollo::common::VehicleSignal_TurnSignal \fBturn_signal\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_turn_signal\fP (::apollo::common::VehicleSignal_TurnSignal value)"
+.br
+.ti -1c
+.RI "bool \fBhas_high_beam\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_high_beam\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhigh_beam\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_high_beam\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_low_beam\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_low_beam\fP ()"
+.br
+.ti -1c
+.RI "bool \fBlow_beam\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_low_beam\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_horn\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_horn\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhorn\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_horn\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_emergency_light\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_emergency_light\fP ()"
+.br
+.ti -1c
+.RI "bool \fBemergency_light\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_emergency_light\fP (bool value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBVehicleSignal\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBVehicleSignal\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBTurnSignal_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBTurnSignal_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBTurnSignal_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBTurnSignal_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, TurnSignal *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr TurnSignal \fBTURN_NONE\fP"
+.br
+.ti -1c
+.RI "static constexpr TurnSignal \fBTURN_LEFT\fP"
+.br
+.ti -1c
+.RI "static constexpr TurnSignal \fBTURN_RIGHT\fP"
+.br
+.ti -1c
+.RI "static constexpr TurnSignal \fBTURN_HAZARD_WARNING\fP"
+.br
+.ti -1c
+.RI "static constexpr TurnSignal \fBTurnSignal_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr TurnSignal \fBTurnSignal_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBTurnSignal_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVehicleSignal\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fbasic_5fmsgs_2fvehicle_5fsignal_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBVehicleSignal\fP &a, \fBVehicleSignal\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::common::VehicleSignal::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    VehicleSignal::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::common::VehicleSignal::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    0
+.fi
+.SS "constexpr VehicleSignal_TurnSignal apollo::common::VehicleSignal::TURN_HAZARD_WARNING\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    VehicleSignal_TurnSignal_TURN_HAZARD_WARNING
+.fi
+.SS "constexpr VehicleSignal_TurnSignal apollo::common::VehicleSignal::TURN_LEFT\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    VehicleSignal_TurnSignal_TURN_LEFT
+.fi
+.SS "constexpr VehicleSignal_TurnSignal apollo::common::VehicleSignal::TURN_NONE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    VehicleSignal_TurnSignal_TURN_NONE
+.fi
+.SS "constexpr VehicleSignal_TurnSignal apollo::common::VehicleSignal::TURN_RIGHT\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    VehicleSignal_TurnSignal_TURN_RIGHT
+.fi
+.SS "constexpr int apollo::common::VehicleSignal::TurnSignal_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    VehicleSignal_TurnSignal_TurnSignal_ARRAYSIZE
+.fi
+.SS "constexpr VehicleSignal_TurnSignal apollo::common::VehicleSignal::TurnSignal_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    VehicleSignal_TurnSignal_TurnSignal_MAX
+.fi
+.SS "constexpr VehicleSignal_TurnSignal apollo::common::VehicleSignal::TurnSignal_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    VehicleSignal_TurnSignal_TurnSignal_MIN
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

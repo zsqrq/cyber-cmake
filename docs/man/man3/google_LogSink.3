@@ -1,0 +1,29 @@
+.TH "google::LogSink" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+google::LogSink
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBsend\fP (LogSeverity severity, const char *full_filename, const char *base_filename, int line, const struct ::tm *tm_time, const char *message, size_t message_len)=0"
+.br
+.ti -1c
+.RI "virtual void \fBWaitTillSent\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::string \fBToString\fP (LogSeverity severity, const char *file, int line, const struct ::tm *tm_time, const char *message, size_t message_len)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

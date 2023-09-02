@@ -1,4 +1,4 @@
-.TH "apollo::cyber::transport::Receiver< M >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::transport::Receiver< M >" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,14 +17,14 @@ Inherited by \fBapollo::cyber::transport::HybridReceiver< M >\fP, \fBapollo::cyb
 .RI "using \fBMessagePtr\fP = std::shared_ptr< M >"
 .br
 .ti -1c
-.RI "using \fBMessageListener\fP = std::function< void(const MessagePtr &, const \fBMessageInfo\fP &, const RoleAttributes &)>"
+.RI "using \fBMessageListener\fP = std::function< void(const MessagePtr &, const \fBMessageInfo\fP &, const \fBRoleAttributes\fP &)>"
 .br
 .in -1c
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBReceiver\fP (const RoleAttributes &attr, const MessageListener &msg_listener)"
+.RI "\fBReceiver\fP (const \fBRoleAttributes\fP &attr, const MessageListener &msg_listener)"
 .br
 .ti -1c
 .RI "virtual void \fBEnable\fP ()=0"
@@ -33,10 +33,10 @@ Inherited by \fBapollo::cyber::transport::HybridReceiver< M >\fP, \fBapollo::cyb
 .RI "virtual void \fBDisable\fP ()=0"
 .br
 .ti -1c
-.RI "virtual void \fBEnable\fP (const RoleAttributes &opposite_attr)=0"
+.RI "virtual void \fBEnable\fP (const \fBRoleAttributes\fP &opposite_attr)=0"
 .br
 .ti -1c
-.RI "virtual void \fBDisable\fP (const RoleAttributes &opposite_attr)=0"
+.RI "virtual void \fBDisable\fP (const \fBRoleAttributes\fP &opposite_attr)=0"
 .br
 .in -1c
 .SS "Protected Member Functions"

@@ -1,0 +1,189 @@
+.TH "eprosima::fastrtps::rtps::ParticipantProxyData" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::ParticipantProxyData
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ParticipantProxyData\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBinitializeData\fP (RTPSParticipantImpl *part, \fBPDPSimple\fP *pdp)"
+.br
+.ti -1c
+.RI "bool \fBupdateData\fP (\fBParticipantProxyData\fP &pdata)"
+.br
+.ti -1c
+.RI "bool \fBtoParameterList\fP ()"
+.br
+.ti -1c
+.RI "bool \fBreadFromCDRMessage\fP (\fBCDRMessage_t\fP *msg)"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "Clear the data (restore to default state\&.) "
+.ti -1c
+.RI "void \fBcopy\fP (\fBParticipantProxyData\fP &pdata)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBProtocolVersion_t\fP \fBm_protocolVersion\fP"
+.br
+.RI "Protocol version\&. "
+.ti -1c
+.RI "\fBGUID_t\fP \fBm_guid\fP"
+.br
+.RI "GUID\&. "
+.ti -1c
+.RI "\fBVendorId_t\fP \fBm_VendorId\fP"
+.br
+.RI "Vendor ID\&. "
+.ti -1c
+.RI "bool \fBm_expectsInlineQos\fP"
+.br
+.RI "Expects Inline QOS\&. "
+.ti -1c
+.RI "BuiltinEndpointSet_t \fBm_availableBuiltinEndpoints\fP"
+.br
+.RI "Available builtin endpoints\&. "
+.ti -1c
+.RI "\fBLocatorList_t\fP \fBm_metatrafficUnicastLocatorList\fP"
+.br
+.RI "Metatraffic unicast locator list\&. "
+.ti -1c
+.RI "\fBLocatorList_t\fP \fBm_metatrafficMulticastLocatorList\fP"
+.br
+.RI "Metatraffic multicast locator list\&. "
+.ti -1c
+.RI "\fBLocatorList_t\fP \fBm_defaultUnicastLocatorList\fP"
+.br
+.RI "Default unicast locator list\&. "
+.ti -1c
+.RI "\fBLocatorList_t\fP \fBm_defaultMulticastLocatorList\fP"
+.br
+.RI "Default multicast locator list\&. "
+.ti -1c
+.RI "Count_t \fBm_manualLivelinessCount\fP"
+.br
+.RI "Manual liveliness count\&. "
+.ti -1c
+.RI "std::string \fBm_participantName\fP"
+.br
+.RI "\fBParticipant\fP name\&. "
+.ti -1c
+.RI "\fBInstanceHandle_t\fP \fBm_key\fP"
+.br
+.ti -1c
+.RI "\fBDuration_t\fP \fBm_leaseDuration\fP"
+.br
+.ti -1c
+.RI "\fBIdentityToken\fP \fBidentity_token_\fP"
+.br
+.ti -1c
+.RI "bool \fBisAlive\fP"
+.br
+.ti -1c
+.RI "\fBQosList_t\fP \fBm_QosList\fP"
+.br
+.ti -1c
+.RI "\fBParameterPropertyList_t\fP \fBm_properties\fP"
+.br
+.ti -1c
+.RI "std::vector< octet > \fBm_userData\fP"
+.br
+.ti -1c
+.RI "bool \fBm_hasChanged\fP"
+.br
+.ti -1c
+.RI "\fBRemoteParticipantLeaseDuration\fP * \fBmp_leaseDurationTimer\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBReaderProxyData\fP * > \fBm_readers\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBWriterProxyData\fP * > \fBm_writers\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBRemoteReaderAttributes\fP > \fBm_builtinReaders\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBRemoteWriterAttributes\fP > \fBm_builtinWriters\fP"
+.br
+.ti -1c
+.RI "std::recursive_mutex * \fBmp_mutex\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBParticipantProxyData\fP class is used to store and convert the information Participants send to each other during the PDP phase\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void eprosima::fastrtps::rtps::ParticipantProxyData::copy (\fBParticipantProxyData\fP & pdata)"
+Copy the data from another object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdata\fP Object to copy the data from 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::ParticipantProxyData::initializeData (RTPSParticipantImpl * part, \fBPDPSimple\fP * pdp)"
+Initialize the object with the data of the lcoal \fBRTPSParticipant\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart\fP Pointer to the \fBRTPSParticipant\fP\&. 
+.br
+\fIpdp\fP Pointer to the \fBPDPSimple\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly initialized\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::ParticipantProxyData::readFromCDRMessage (\fBCDRMessage_t\fP * msg)"
+Read the parameter list from a recevied \fBCDRMessage_t\fP 
+.PP
+\fBReturns\fP
+.RS 4
+True on success 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::ParticipantProxyData::toParameterList ()"
+Convert information to parameter list\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True on success 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::ParticipantProxyData::updateData (\fBParticipantProxyData\fP & pdata)"
+Update the data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdata\fP Object to copy the data from 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True on success 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

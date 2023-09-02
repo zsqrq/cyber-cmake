@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -96,13 +98,13 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1record_1_1HeaderBuilder.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classapollo_1_1cyber_1_1record_1_1HeaderBuilder.html">HeaderBuilder</a> {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">static</span> proto::Header <a class="code" href="classapollo_1_1cyber_1_1record_1_1HeaderBuilder.html#ac5b2fc38a1a2b766c35b9226b66a9e3b">GetHeaderWithSegmentParams</a>(</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">static</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a> <a class="code" href="classapollo_1_1cyber_1_1record_1_1HeaderBuilder.html#ac5b2fc38a1a2b766c35b9226b66a9e3b">GetHeaderWithSegmentParams</a>(</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">const</span> uint64_t segment_interval, <span class="keyword">const</span> uint64_t segment_raw_size);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">static</span> proto::Header <a class="code" href="classapollo_1_1cyber_1_1record_1_1HeaderBuilder.html#a7bb611316273449f1ed30b1279974204">GetHeaderWithChunkParams</a>(<span class="keyword">const</span> uint64_t chunk_interval,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">static</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a> <a class="code" href="classapollo_1_1cyber_1_1record_1_1HeaderBuilder.html#a7bb611316273449f1ed30b1279974204">GetHeaderWithChunkParams</a>(<span class="keyword">const</span> uint64_t chunk_interval,</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                                <span class="keyword">const</span> uint64_t chunk_raw_size);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">static</span> proto::Header <a class="code" href="classapollo_1_1cyber_1_1record_1_1HeaderBuilder.html#a53727dd8490273d828682dec4b900b4c">GetHeader</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">static</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a> <a class="code" href="classapollo_1_1cyber_1_1record_1_1HeaderBuilder.html#a53727dd8490273d828682dec4b900b4c">GetHeader</a>();</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> uint32_t MAJOR_VERSION_ = 1;</div>
@@ -120,11 +122,12 @@ $(function() {
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}  <span class="comment">// namespace apollo</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CYBER_RECORD_HEADER_BUILDER_H_</span></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1Header_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1Header.html">apollo::cyber::proto::Header</a></div><div class="ttdef"><b>Definition:</b> record.pb.h:1193</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1HeaderBuilder_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1HeaderBuilder.html">apollo::cyber::record::HeaderBuilder</a></div><div class="ttdoc">The builder of record header.</div><div class="ttdef"><b>Definition:</b> header_builder.h:29</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1HeaderBuilder_html_a53727dd8490273d828682dec4b900b4c"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1HeaderBuilder.html#a53727dd8490273d828682dec4b900b4c">apollo::cyber::record::HeaderBuilder::GetHeader</a></div><div class="ttdeci">static proto::Header GetHeader()</div><div class="ttdoc">Build a default record header.</div><div class="ttdef"><b>Definition:</b> header_builder.cc:25</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1HeaderBuilder_html_a7bb611316273449f1ed30b1279974204"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1HeaderBuilder.html#a7bb611316273449f1ed30b1279974204">apollo::cyber::record::HeaderBuilder::GetHeaderWithChunkParams</a></div><div class="ttdeci">static proto::Header GetHeaderWithChunkParams(const uint64_t chunk_interval, const uint64_t chunk_raw_size)</div><div class="ttdoc">Build a record header with customized max interval time (ns) and max raw size (byte) for chunk.</div><div class="ttdef"><b>Definition:</b> header_builder.cc:66</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1HeaderBuilder_html_ac5b2fc38a1a2b766c35b9226b66a9e3b"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1HeaderBuilder.html#ac5b2fc38a1a2b766c35b9226b66a9e3b">apollo::cyber::record::HeaderBuilder::GetHeaderWithSegmentParams</a></div><div class="ttdeci">static proto::Header GetHeaderWithSegmentParams(const uint64_t segment_interval, const uint64_t segment_raw_size)</div><div class="ttdoc">Build a record header with customized max interval time (ns) and max raw size (byte) for segment.</div><div class="ttdef"><b>Definition:</b> header_builder.cc:45</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

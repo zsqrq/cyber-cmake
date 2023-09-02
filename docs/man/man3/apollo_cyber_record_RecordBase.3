@@ -1,4 +1,4 @@
-.TH "apollo::cyber::record::RecordBase" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::record::RecordBase" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -35,7 +35,7 @@ Inherited by \fBapollo::cyber::record::RecordReader\fP, and \fBapollo::cyber::re
 .br
 .RI "Get channel list\&. "
 .ti -1c
-.RI "const proto::Header & \fBGetHeader\fP () const"
+.RI "const \fBproto::Header\fP & \fBGetHeader\fP () const"
 .br
 .RI "Get record header\&. "
 .ti -1c
@@ -50,7 +50,7 @@ Inherited by \fBapollo::cyber::record::RecordReader\fP, and \fBapollo::cyber::re
 .RI "std::string \fBfile_\fP"
 .br
 .ti -1c
-.RI "proto::Header \fBheader_\fP"
+.RI "\fBproto::Header\fP \fBheader_\fP"
 .br
 .ti -1c
 .RI "bool \fBis_opened_\fP = false"
@@ -85,7 +85,7 @@ Record file path\&.
 .RE
 .PP
 
-.SS "const proto::Header& apollo::cyber::record::RecordBase::GetHeader () const\fC [inline]\fP"
+.SS "const \fBproto::Header\fP& apollo::cyber::record::RecordBase::GetHeader () const\fC [inline]\fP"
 
 .PP
 Get record header\&. 

@@ -1,0 +1,729 @@
+.TH "apollo::drivers::Esr_status2_4e1" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::drivers::Esr_status2_4e1
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkCanTxYawRateBiasFieldNumber\fP = 1, \fBkCanTxVehSpdCompFactorFieldNumber\fP = 2, \fBkCanTxSwVersionDspFieldNumber\fP = 3, \fBkCanTxTemperatureFieldNumber\fP = 4, \fBkCanTxRawDataModeFieldNumber\fP = 5, \fBkCanTxRangePerfErrorFieldNumber\fP = 6, \fBkCanTxOverheatErrorFieldNumber\fP = 7, \fBkCanTxMaximumTracksAckFieldNumber\fP = 8, \fBkCanTxInternalErrorFieldNumber\fP = 9, \fBkCanTxGroupingModeFieldNumber\fP = 10, \fBkCanTxXcvrOperationalFieldNumber\fP = 11, \fBkCanTxSteeringAngleAckFieldNumber\fP = 12, \fBkCanTxRollingCount2FieldNumber\fP = 13 }"
+.br
+.ti -1c
+.RI "typedef Esr_status2_4e1_Can_tx_raw_data_modeType \fBCan_tx_raw_data_modeType\fP"
+.br
+.ti -1c
+.RI "typedef Esr_status2_4e1_Can_tx_range_perf_errorType \fBCan_tx_range_perf_errorType\fP"
+.br
+.ti -1c
+.RI "typedef Esr_status2_4e1_Can_tx_overheat_errorType \fBCan_tx_overheat_errorType\fP"
+.br
+.ti -1c
+.RI "typedef Esr_status2_4e1_Can_tx_internal_errorType \fBCan_tx_internal_errorType\fP"
+.br
+.ti -1c
+.RI "typedef Esr_status2_4e1_Can_tx_grouping_modeType \fBCan_tx_grouping_modeType\fP"
+.br
+.ti -1c
+.RI "typedef Esr_status2_4e1_Can_tx_xcvr_operationalType \fBCan_tx_xcvr_operationalType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBEsr_status2_4e1\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBEsr_status2_4e1\fP (const \fBEsr_status2_4e1\fP &from)"
+.br
+.ti -1c
+.RI "\fBEsr_status2_4e1\fP (\fBEsr_status2_4e1\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBEsr_status2_4e1\fP & \fBoperator=\fP (const \fBEsr_status2_4e1\fP &from)"
+.br
+.ti -1c
+.RI "\fBEsr_status2_4e1\fP & \fBoperator=\fP (\fBEsr_status2_4e1\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBEsr_status2_4e1\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBEsr_status2_4e1\fP *other)"
+.br
+.ti -1c
+.RI "\fBEsr_status2_4e1\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBEsr_status2_4e1\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBEsr_status2_4e1\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_yaw_rate_bias\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_yaw_rate_bias\fP ()"
+.br
+.ti -1c
+.RI "double \fBcan_tx_yaw_rate_bias\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_yaw_rate_bias\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_veh_spd_comp_factor\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_veh_spd_comp_factor\fP ()"
+.br
+.ti -1c
+.RI "double \fBcan_tx_veh_spd_comp_factor\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_veh_spd_comp_factor\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_sw_version_dsp\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_sw_version_dsp\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBcan_tx_sw_version_dsp\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_sw_version_dsp\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_temperature\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_temperature\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBcan_tx_temperature\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_temperature\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_raw_data_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_raw_data_mode\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Esr_status2_4e1_Can_tx_raw_data_modeType \fBcan_tx_raw_data_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_raw_data_mode\fP (::apollo::drivers::Esr_status2_4e1_Can_tx_raw_data_modeType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_range_perf_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_range_perf_error\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Esr_status2_4e1_Can_tx_range_perf_errorType \fBcan_tx_range_perf_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_range_perf_error\fP (::apollo::drivers::Esr_status2_4e1_Can_tx_range_perf_errorType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_overheat_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_overheat_error\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Esr_status2_4e1_Can_tx_overheat_errorType \fBcan_tx_overheat_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_overheat_error\fP (::apollo::drivers::Esr_status2_4e1_Can_tx_overheat_errorType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_maximum_tracks_ack\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_maximum_tracks_ack\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBcan_tx_maximum_tracks_ack\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_maximum_tracks_ack\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_internal_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_internal_error\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Esr_status2_4e1_Can_tx_internal_errorType \fBcan_tx_internal_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_internal_error\fP (::apollo::drivers::Esr_status2_4e1_Can_tx_internal_errorType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_grouping_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_grouping_mode\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Esr_status2_4e1_Can_tx_grouping_modeType \fBcan_tx_grouping_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_grouping_mode\fP (::apollo::drivers::Esr_status2_4e1_Can_tx_grouping_modeType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_xcvr_operational\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_xcvr_operational\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Esr_status2_4e1_Can_tx_xcvr_operationalType \fBcan_tx_xcvr_operational\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_xcvr_operational\fP (::apollo::drivers::Esr_status2_4e1_Can_tx_xcvr_operationalType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_steering_angle_ack\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_steering_angle_ack\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBcan_tx_steering_angle_ack\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_steering_angle_ack\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_rolling_count_2\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_rolling_count_2\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBcan_tx_rolling_count_2\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_rolling_count_2\fP (int32_t value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBEsr_status2_4e1\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBEsr_status2_4e1\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_raw_data_modeType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_tx_raw_data_modeType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_tx_raw_data_modeType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_raw_data_modeType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_tx_raw_data_modeType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_range_perf_errorType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_tx_range_perf_errorType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_tx_range_perf_errorType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_range_perf_errorType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_tx_range_perf_errorType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_overheat_errorType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_tx_overheat_errorType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_tx_overheat_errorType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_overheat_errorType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_tx_overheat_errorType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_internal_errorType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_tx_internal_errorType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_tx_internal_errorType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_internal_errorType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_tx_internal_errorType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_grouping_modeType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_tx_grouping_modeType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_tx_grouping_modeType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_grouping_modeType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_tx_grouping_modeType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_xcvr_operationalType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_tx_xcvr_operationalType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_tx_xcvr_operationalType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_xcvr_operationalType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_tx_xcvr_operationalType *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_raw_data_modeType \fBCAN_TX_RAW_DATA_MODE_FILTERED\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_raw_data_modeType \fBCAN_TX_RAW_DATA_MODE_RAW\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_raw_data_modeType \fBCan_tx_raw_data_modeType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_raw_data_modeType \fBCan_tx_raw_data_modeType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_tx_raw_data_modeType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_range_perf_errorType \fBCAN_TX_RANGE_PERF_ERROR_NOT_BLOCKED\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_range_perf_errorType \fBCAN_TX_RANGE_PERF_ERROR_BLOCKED\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_range_perf_errorType \fBCan_tx_range_perf_errorType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_range_perf_errorType \fBCan_tx_range_perf_errorType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_tx_range_perf_errorType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_overheat_errorType \fBCAN_TX_OVERHEAT_ERROR_NOT_OVERTEMP\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_overheat_errorType \fBCAN_TX_OVERHEAT_ERROR_OVERTEMP\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_overheat_errorType \fBCan_tx_overheat_errorType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_overheat_errorType \fBCan_tx_overheat_errorType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_tx_overheat_errorType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_internal_errorType \fBCAN_TX_INTERNAL_ERROR_NOT_FAILED\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_internal_errorType \fBCAN_TX_INTERNAL_ERROR_FAILED\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_internal_errorType \fBCan_tx_internal_errorType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_internal_errorType \fBCan_tx_internal_errorType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_tx_internal_errorType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_grouping_modeType \fBCAN_TX_GROUPING_MODE_NO_GROUPING\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_grouping_modeType \fBCAN_TX_GROUPING_MODE_GROUP_MOVING_ONLY\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_grouping_modeType \fBCAN_TX_GROUPING_MODE_GROUP_STATIONARY_ONLY\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_grouping_modeType \fBCAN_TX_GROUPING_MODE_GROUP_MOVING_STATIONARY\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_grouping_modeType \fBCan_tx_grouping_modeType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_grouping_modeType \fBCan_tx_grouping_modeType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_tx_grouping_modeType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_xcvr_operationalType \fBCAN_TX_XCVR_OPERATIONAL_OFF\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_xcvr_operationalType \fBCAN_TX_XCVR_OPERATIONAL_ON\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_xcvr_operationalType \fBCan_tx_xcvr_operationalType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_xcvr_operationalType \fBCan_tx_xcvr_operationalType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_tx_xcvr_operationalType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEsr_status2_4e1\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fsensor_5fmsgs_2fdelphi_5fesr_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBEsr_status2_4e1\fP &a, \fBEsr_status2_4e1\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::drivers::Esr_status2_4e1::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Esr_status2_4e1::MergeImpl
+}
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_grouping_modeType apollo::drivers::Esr_status2_4e1::CAN_TX_GROUPING_MODE_GROUP_MOVING_ONLY\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_grouping_modeType_CAN_TX_GROUPING_MODE_GROUP_MOVING_ONLY
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_grouping_modeType apollo::drivers::Esr_status2_4e1::CAN_TX_GROUPING_MODE_GROUP_MOVING_STATIONARY\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_grouping_modeType_CAN_TX_GROUPING_MODE_GROUP_MOVING_STATIONARY
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_grouping_modeType apollo::drivers::Esr_status2_4e1::CAN_TX_GROUPING_MODE_GROUP_STATIONARY_ONLY\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_grouping_modeType_CAN_TX_GROUPING_MODE_GROUP_STATIONARY_ONLY
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_grouping_modeType apollo::drivers::Esr_status2_4e1::CAN_TX_GROUPING_MODE_NO_GROUPING\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_grouping_modeType_CAN_TX_GROUPING_MODE_NO_GROUPING
+.fi
+.SS "constexpr int apollo::drivers::Esr_status2_4e1::Can_tx_grouping_modeType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_grouping_modeType_Can_tx_grouping_modeType_ARRAYSIZE
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_grouping_modeType apollo::drivers::Esr_status2_4e1::Can_tx_grouping_modeType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_grouping_modeType_Can_tx_grouping_modeType_MAX
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_grouping_modeType apollo::drivers::Esr_status2_4e1::Can_tx_grouping_modeType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_grouping_modeType_Can_tx_grouping_modeType_MIN
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_internal_errorType apollo::drivers::Esr_status2_4e1::CAN_TX_INTERNAL_ERROR_FAILED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_internal_errorType_CAN_TX_INTERNAL_ERROR_FAILED
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_internal_errorType apollo::drivers::Esr_status2_4e1::CAN_TX_INTERNAL_ERROR_NOT_FAILED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_internal_errorType_CAN_TX_INTERNAL_ERROR_NOT_FAILED
+.fi
+.SS "constexpr int apollo::drivers::Esr_status2_4e1::Can_tx_internal_errorType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_internal_errorType_Can_tx_internal_errorType_ARRAYSIZE
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_internal_errorType apollo::drivers::Esr_status2_4e1::Can_tx_internal_errorType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_internal_errorType_Can_tx_internal_errorType_MAX
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_internal_errorType apollo::drivers::Esr_status2_4e1::Can_tx_internal_errorType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_internal_errorType_Can_tx_internal_errorType_MIN
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_overheat_errorType apollo::drivers::Esr_status2_4e1::CAN_TX_OVERHEAT_ERROR_NOT_OVERTEMP\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_overheat_errorType_CAN_TX_OVERHEAT_ERROR_NOT_OVERTEMP
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_overheat_errorType apollo::drivers::Esr_status2_4e1::CAN_TX_OVERHEAT_ERROR_OVERTEMP\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_overheat_errorType_CAN_TX_OVERHEAT_ERROR_OVERTEMP
+.fi
+.SS "constexpr int apollo::drivers::Esr_status2_4e1::Can_tx_overheat_errorType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_overheat_errorType_Can_tx_overheat_errorType_ARRAYSIZE
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_overheat_errorType apollo::drivers::Esr_status2_4e1::Can_tx_overheat_errorType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_overheat_errorType_Can_tx_overheat_errorType_MAX
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_overheat_errorType apollo::drivers::Esr_status2_4e1::Can_tx_overheat_errorType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_overheat_errorType_Can_tx_overheat_errorType_MIN
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_range_perf_errorType apollo::drivers::Esr_status2_4e1::CAN_TX_RANGE_PERF_ERROR_BLOCKED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_range_perf_errorType_CAN_TX_RANGE_PERF_ERROR_BLOCKED
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_range_perf_errorType apollo::drivers::Esr_status2_4e1::CAN_TX_RANGE_PERF_ERROR_NOT_BLOCKED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_range_perf_errorType_CAN_TX_RANGE_PERF_ERROR_NOT_BLOCKED
+.fi
+.SS "constexpr int apollo::drivers::Esr_status2_4e1::Can_tx_range_perf_errorType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_range_perf_errorType_Can_tx_range_perf_errorType_ARRAYSIZE
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_range_perf_errorType apollo::drivers::Esr_status2_4e1::Can_tx_range_perf_errorType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_range_perf_errorType_Can_tx_range_perf_errorType_MAX
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_range_perf_errorType apollo::drivers::Esr_status2_4e1::Can_tx_range_perf_errorType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_range_perf_errorType_Can_tx_range_perf_errorType_MIN
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_raw_data_modeType apollo::drivers::Esr_status2_4e1::CAN_TX_RAW_DATA_MODE_FILTERED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_raw_data_modeType_CAN_TX_RAW_DATA_MODE_FILTERED
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_raw_data_modeType apollo::drivers::Esr_status2_4e1::CAN_TX_RAW_DATA_MODE_RAW\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_raw_data_modeType_CAN_TX_RAW_DATA_MODE_RAW
+.fi
+.SS "constexpr int apollo::drivers::Esr_status2_4e1::Can_tx_raw_data_modeType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_raw_data_modeType_Can_tx_raw_data_modeType_ARRAYSIZE
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_raw_data_modeType apollo::drivers::Esr_status2_4e1::Can_tx_raw_data_modeType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_raw_data_modeType_Can_tx_raw_data_modeType_MAX
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_raw_data_modeType apollo::drivers::Esr_status2_4e1::Can_tx_raw_data_modeType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_raw_data_modeType_Can_tx_raw_data_modeType_MIN
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_xcvr_operationalType apollo::drivers::Esr_status2_4e1::CAN_TX_XCVR_OPERATIONAL_OFF\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_xcvr_operationalType_CAN_TX_XCVR_OPERATIONAL_OFF
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_xcvr_operationalType apollo::drivers::Esr_status2_4e1::CAN_TX_XCVR_OPERATIONAL_ON\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_xcvr_operationalType_CAN_TX_XCVR_OPERATIONAL_ON
+.fi
+.SS "constexpr int apollo::drivers::Esr_status2_4e1::Can_tx_xcvr_operationalType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_xcvr_operationalType_Can_tx_xcvr_operationalType_ARRAYSIZE
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_xcvr_operationalType apollo::drivers::Esr_status2_4e1::Can_tx_xcvr_operationalType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_xcvr_operationalType_Can_tx_xcvr_operationalType_MAX
+.fi
+.SS "constexpr Esr_status2_4e1_Can_tx_xcvr_operationalType apollo::drivers::Esr_status2_4e1::Can_tx_xcvr_operationalType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_status2_4e1_Can_tx_xcvr_operationalType_Can_tx_xcvr_operationalType_MIN
+.fi
+.SS "constexpr int apollo::drivers::Esr_status2_4e1::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    16
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

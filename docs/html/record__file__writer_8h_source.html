@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -114,16 +116,16 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="structapollo_1_1cyber_1_1record_1_1Chunk.html">Chunk</a>() { clear(); }</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> clear() {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    body_.reset(<span class="keyword">new</span> proto::ChunkBody());</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    body_.reset(<span class="keyword">new</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ChunkBody.html">proto::ChunkBody</a>());</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    header_.set_begin_time(0);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    header_.set_end_time(0);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    header_.set_message_number(0);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    header_.set_raw_size(0);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> add(<span class="keyword">const</span> proto::SingleMessage&amp; message) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> add(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1SingleMessage.html">proto::SingleMessage</a>&amp; message) {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::lock_guard&lt;std::mutex&gt; lock(mutex_);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    proto::SingleMessage* p_message = body_-&gt;add_messages();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classapollo_1_1cyber_1_1proto_1_1SingleMessage.html">proto::SingleMessage</a>* p_message = body_-&gt;add_messages();</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    *p_message = message;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (header_.begin_time() == 0) {</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      header_.set_begin_time(message.time());</div>
@@ -141,7 +143,7 @@ $(function() {
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> empty() { <span class="keywordflow">return</span> header_.message_number() == 0; }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  std::mutex mutex_;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  proto::ChunkHeader header_;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ChunkHeader.html">proto::ChunkHeader</a> header_;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  std::unique_ptr&lt;proto::ChunkBody&gt; body_ = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
@@ -151,14 +153,14 @@ $(function() {
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classapollo_1_1cyber_1_1record_1_1RecordFileWriter.html">RecordFileWriter</a>();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">bool</span> Open(<span class="keyword">const</span> std::string&amp; path) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">void</span> Close() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">bool</span> WriteHeader(<span class="keyword">const</span> proto::Header&amp; header);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">bool</span> WriteChannel(<span class="keyword">const</span> proto::Channel&amp; channel);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">bool</span> WriteMessage(<span class="keyword">const</span> proto::SingleMessage&amp; message);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">bool</span> WriteHeader(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a>&amp; header);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">bool</span> WriteChannel(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Channel.html">proto::Channel</a>&amp; channel);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">bool</span> WriteMessage(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1SingleMessage.html">proto::SingleMessage</a>&amp; message);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  uint64_t GetMessageNumber(<span class="keyword">const</span> std::string&amp; channel_name) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">bool</span> WriteChunk(<span class="keyword">const</span> proto::ChunkHeader&amp; chunk_header,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                  <span class="keyword">const</span> proto::ChunkBody&amp; chunk_body);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">bool</span> WriteChunk(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ChunkHeader.html">proto::ChunkHeader</a>&amp; chunk_header,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                  <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ChunkBody.html">proto::ChunkBody</a>&amp; chunk_body);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">bool</span> WriteSection(<span class="keyword">const</span> T&amp; message);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordtype">bool</span> WriteIndex();</div>
@@ -234,9 +236,14 @@ $(function() {
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}  <span class="comment">// namespace apollo</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CYBER_RECORD_FILE_RECORD_FILE_WRITER_H_</span></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1Channel_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1Channel.html">apollo::cyber::proto::Channel</a></div><div class="ttdef"><b>Definition:</b> record.pb.h:1561</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1ChunkBody_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1ChunkBody.html">apollo::cyber::proto::ChunkBody</a></div><div class="ttdef"><b>Definition:</b> record.pb.h:1967</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1ChunkHeader_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1ChunkHeader.html">apollo::cyber::proto::ChunkHeader</a></div><div class="ttdef"><b>Definition:</b> record.pb.h:1764</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1Header_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1Header.html">apollo::cyber::proto::Header</a></div><div class="ttdef"><b>Definition:</b> record.pb.h:1193</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1SingleMessage_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1SingleMessage.html">apollo::cyber::proto::SingleMessage</a></div><div class="ttdef"><b>Definition:</b> record.pb.h:995</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordFileBase_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordFileBase.html">apollo::cyber::record::RecordFileBase</a></div><div class="ttdef"><b>Definition:</b> record_file_base.h:31</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordFileWriter_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordFileWriter.html">apollo::cyber::record::RecordFileWriter</a></div><div class="ttdef"><b>Definition:</b> record_file_writer.h:77</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 <div class="ttc" id="astructapollo_1_1cyber_1_1record_1_1Chunk_html"><div class="ttname"><a href="structapollo_1_1cyber_1_1record_1_1Chunk.html">apollo::cyber::record::Chunk</a></div><div class="ttdef"><b>Definition:</b> record_file_writer.h:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

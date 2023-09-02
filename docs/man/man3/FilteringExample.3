@@ -1,0 +1,261 @@
+.TH "FilteringExample" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FilteringExample \- This class represents the structure \fBFilteringExample\fP defined by the user in the IDL file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <FilteringExample\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "eProsima_user_DllExport \fBFilteringExample\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fB~FilteringExample\fP ()"
+.br
+.RI "Default destructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBFilteringExample\fP (const \fBFilteringExample\fP &x)"
+.br
+.RI "Copy constructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBFilteringExample\fP (\fBFilteringExample\fP &&x)"
+.br
+.RI "Move constructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBFilteringExample\fP & \fBoperator=\fP (const \fBFilteringExample\fP &x)"
+.br
+.RI "Copy assignment\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBFilteringExample\fP & \fBoperator=\fP (\fBFilteringExample\fP &&x)"
+.br
+.RI "Move assignment\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBsampleNumber\fP (int32_t _sampleNumber)"
+.br
+.RI "This function sets a value in member sampleNumber\&. "
+.ti -1c
+.RI "eProsima_user_DllExport int32_t \fBsampleNumber\fP () const"
+.br
+.RI "This function returns the value of member sampleNumber\&. "
+.ti -1c
+.RI "eProsima_user_DllExport int32_t & \fBsampleNumber\fP ()"
+.br
+.RI "This function returns a reference to member sampleNumber\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBserialize\fP (\fBeprosima::fastcdr::Cdr\fP &cdr) const"
+.br
+.RI "This function serializes an object using CDR serialization\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBdeserialize\fP (\fBeprosima::fastcdr::Cdr\fP &cdr)"
+.br
+.RI "This function deserializes an object using CDR serialization\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBserializeKey\fP (\fBeprosima::fastcdr::Cdr\fP &cdr) const"
+.br
+.RI "This function serializes the key members of an object using CDR serialization\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static eProsima_user_DllExport size_t \fBgetMaxCdrSerializedSize\fP (size_t current_alignment=0)"
+.br
+.RI "This function returns the maximum serialized size of an object depending on the buffer alignment\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport size_t \fBgetCdrSerializedSize\fP (const \fBFilteringExample\fP &data, size_t current_alignment=0)"
+.br
+.RI "This function returns the serialized size of a data depending on the buffer alignment\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport size_t \fBgetKeyMaxCdrSerializedSize\fP (size_t current_alignment=0)"
+.br
+.RI "This function returns the maximum serialized size of the Key of an object depending on the buffer alignment\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport bool \fBisKeyDefined\fP ()"
+.br
+.RI "This function tells you if the Key has been defined for this type\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "long \fBsampleNumber\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents the structure \fBFilteringExample\fP defined by the user in the IDL file\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "FilteringExample::FilteringExample (const \fBFilteringExample\fP & x)"
+
+.PP
+Copy constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBFilteringExample\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "FilteringExample::FilteringExample (\fBFilteringExample\fP && x)"
+
+.PP
+Move constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBFilteringExample\fP that will be copied\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void FilteringExample::deserialize (\fBeprosima::fastcdr::Cdr\fP & cdr)"
+
+.PP
+This function deserializes an object using CDR serialization\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcdr\fP CDR serialization object\&. 
+.RE
+.PP
+
+.SS "size_t FilteringExample::getCdrSerializedSize (const \fBFilteringExample\fP & data, size_t current_alignment = \fC0\fP)\fC [static]\fP"
+
+.PP
+This function returns the serialized size of a data depending on the buffer alignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Data which is calculated its serialized size\&. 
+.br
+\fIcurrent_alignment\fP Buffer alignment\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Serialized size\&. 
+.RE
+.PP
+
+.SS "size_t FilteringExample::getKeyMaxCdrSerializedSize (size_t current_alignment = \fC0\fP)\fC [static]\fP"
+
+.PP
+This function returns the maximum serialized size of the Key of an object depending on the buffer alignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrent_alignment\fP Buffer alignment\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Maximum serialized size\&. 
+.RE
+.PP
+
+.SS "size_t FilteringExample::getMaxCdrSerializedSize (size_t current_alignment = \fC0\fP)\fC [static]\fP"
+
+.PP
+This function returns the maximum serialized size of an object depending on the buffer alignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrent_alignment\fP Buffer alignment\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Maximum serialized size\&. 
+.RE
+.PP
+
+.SS "\fBFilteringExample\fP & FilteringExample::operator= (const \fBFilteringExample\fP & x)"
+
+.PP
+Copy assignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBFilteringExample\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "\fBFilteringExample\fP & FilteringExample::operator= (\fBFilteringExample\fP && x)"
+
+.PP
+Move assignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBFilteringExample\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport int32_t& FilteringExample::sampleNumber ()\fC [inline]\fP"
+
+.PP
+This function returns a reference to member sampleNumber\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Reference to member sampleNumber 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport int32_t FilteringExample::sampleNumber () const\fC [inline]\fP"
+
+.PP
+This function returns the value of member sampleNumber\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Value of member sampleNumber 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void FilteringExample::sampleNumber (int32_t _sampleNumber)\fC [inline]\fP"
+
+.PP
+This function sets a value in member sampleNumber\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_sampleNumber\fP New value for member sampleNumber 
+.RE
+.PP
+
+.SS "void FilteringExample::serialize (\fBeprosima::fastcdr::Cdr\fP & cdr) const"
+
+.PP
+This function serializes an object using CDR serialization\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcdr\fP CDR serialization object\&. 
+.RE
+.PP
+
+.SS "void FilteringExample::serializeKey (\fBeprosima::fastcdr::Cdr\fP & cdr) const"
+
+.PP
+This function serializes the key members of an object using CDR serialization\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcdr\fP CDR serialization object\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

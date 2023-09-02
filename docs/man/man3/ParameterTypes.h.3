@@ -1,0 +1,133 @@
+.TH "third_party/fast-rtps-1.5.0-1/include/fastrtps/qos/ParameterTypes.h" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+third_party/fast-rtps-1.5.0-1/include/fastrtps/qos/ParameterTypes.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./rtps/common/all_common\&.h'\fP
+.br
+\fC#include '\&.\&./rtps/common/Token\&.h'\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <vector>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBeprosima::fastrtps::Parameter_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterKey_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterLocator_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterString_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterPort_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterGuid_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterProtocolVersion_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterVendorId_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterIP4Address_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterBool_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterCount_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterEntityId_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterTime_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterBuiltinEndpointSet_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterPropertyList_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterSampleIdentity_t\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::ParameterToken_t\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBeprosima\fP"
+.br
+.RI "Maximum payload is maximum of UDP packet size minus 536bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) With those 536 bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) bytes is posible to send RTPS Header plus RTPS Data submessage plus RTPS Heartbeat submessage\&. "
+.ti -1c
+.RI " \fBeprosima::fastrtps\fP"
+.br
+.ti -1c
+.RI " \fBeprosima::fastrtps::rtps\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPARAMETER_LOCATOR_LENGTH\fP   24"
+.br
+.ti -1c
+.RI "#define \fBPARAMETER_PORT_LENGTH\fP   4"
+.br
+.ti -1c
+.RI "#define \fBPARAMETER_GUID_LENGTH\fP   16"
+.br
+.ti -1c
+.RI "#define \fBPARAMETER_PROTOCOL_LENGTH\fP   4"
+.br
+.ti -1c
+.RI "#define \fBPARAMETER_VENDOR_LENGTH\fP   4"
+.br
+.ti -1c
+.RI "#define \fBPARAMETER_IP4_LENGTH\fP   4"
+.br
+.ti -1c
+.RI "#define \fBPARAMETER_BOOL_LENGTH\fP   4"
+.br
+.ti -1c
+.RI "#define \fBPARAMETER_COUNT_LENGTH\fP   4"
+.br
+.ti -1c
+.RI "#define \fBPARAMETER_ENTITYID_LENGTH\fP   4"
+.br
+.ti -1c
+.RI "#define \fBPARAMETER_TIME_LENGTH\fP   8"
+.br
+.ti -1c
+.RI "#define \fBPARAMETER_BUILTINENDPOINTSET_LENGTH\fP   4"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBParameterId_t\fP : uint16_t { \fBPID_PAD\fP = 0x0000, \fBPID_SENTINEL\fP = 0x0001, \fBPID_USER_DATA\fP = 0x002c, \fBPID_TOPIC_NAME\fP = 0x0005, \fBPID_TYPE_NAME\fP = 0x0007, \fBPID_GROUP_DATA\fP =0x002d, \fBPID_TOPIC_DATA\fP =0x002e, \fBPID_DURABILITY\fP =0x001d, \fBPID_DURABILITY_SERVICE\fP =0x001e, \fBPID_DEADLINE\fP =0x0023, \fBPID_LATENCY_BUDGET\fP =0x0027, \fBPID_LIVELINESS\fP =0x001b, \fBPID_RELIABILITY\fP =0x001A, \fBPID_LIFESPAN\fP =0x002b, \fBPID_DESTINATION_ORDER\fP =0x0025, \fBPID_HISTORY\fP =0x0040, \fBPID_RESOURCE_LIMITS\fP =0x0041, \fBPID_OWNERSHIP\fP =0x001f, \fBPID_OWNERSHIP_STRENGTH\fP =0x0006, \fBPID_PRESENTATION\fP =0x0021, \fBPID_PARTITION\fP =0x0029, \fBPID_TIME_BASED_FILTER\fP =0x0004, \fBPID_TRANSPORT_PRIORITY\fP =0x0049, \fBPID_PROTOCOL_VERSION\fP = 0x0015, \fBPID_VENDORID\fP = 0x0016, \fBPID_UNICAST_LOCATOR\fP = 0x002f, \fBPID_MULTICAST_LOCATOR\fP = 0x0030, \fBPID_MULTICAST_IPADDRESS\fP =0x0011, \fBPID_DEFAULT_UNICAST_LOCATOR\fP = 0x0031, \fBPID_DEFAULT_MULTICAST_LOCATOR\fP = 0x0048, \fBPID_METATRAFFIC_UNICAST_LOCATOR\fP = 0x0032, \fBPID_METATRAFFIC_MULTICAST_LOCATOR\fP = 0x0033, \fBPID_DEFAULT_UNICAST_IPADDRESS\fP =0x000c, \fBPID_DEFAULT_UNICAST_PORT\fP = 0x000e, \fBPID_METATRAFFIC_UNICAST_IPADDRESS\fP =0x0045, \fBPID_METATRAFFIC_UNICAST_PORT\fP = 0x000d, \fBPID_METATRAFFIC_MULTICAST_IPADDRESS\fP =0x000b, \fBPID_METATRAFFIC_MULTICAST_PORT\fP = 0x0046, \fBPID_EXPECTS_INLINE_QOS\fP =0x0043, \fBPID_PARTICIPANT_MANUAL_LIVELINESS_COUNT\fP =0x0034, \fBPID_PARTICIPANT_BUILTIN_ENDPOINTS\fP = 0x0044, \fBPID_PARTICIPANT_LEASE_DURATION\fP = 0x0002, \fBPID_CONTENT_FILTER_PROPERTY\fP =0x0035, \fBPID_PARTICIPANT_GUID\fP = 0x0050, \fBPID_PARTICIPANT_ENTITYID\fP =0x0051, \fBPID_GROUP_GUID\fP =0x0052, \fBPID_GROUP_ENTITYID\fP =0x0053, \fBPID_BUILTIN_ENDPOINT_SET\fP = 0x0058, \fBPID_PROPERTY_LIST\fP = 0x0059, \fBPID_TYPE_MAX_SIZE_SERIALIZED\fP =0x0060, \fBPID_ENTITY_NAME\fP = 0x0062, \fBPID_KEY_HASH\fP = 0x0070, \fBPID_STATUS_INFO\fP = 0x0071, \fBPID_ENDPOINT_GUID\fP = 0x005a, \fBPID_IDENTITY_TOKEN\fP = 0x1001, \fBPID_RELATED_SAMPLE_IDENTITY\fP = 0x800f }"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

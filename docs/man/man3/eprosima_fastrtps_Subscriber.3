@@ -1,0 +1,149 @@
+.TH "eprosima::fastrtps::Subscriber" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::Subscriber
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Subscriber\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSubscriber\fP (SubscriberImpl *pimpl)"
+.br
+.ti -1c
+.RI "const \fBGUID_t\fP & \fBgetGuid\fP ()"
+.br
+.ti -1c
+.RI "void \fBwaitForUnreadMessage\fP ()"
+.br
+.ti -1c
+.RI "bool \fBreadNextData\fP (void *data, \fBSampleInfo_t\fP *info)"
+.br
+.ti -1c
+.RI "bool \fBtakeNextData\fP (void *data, \fBSampleInfo_t\fP *info)"
+.br
+.ti -1c
+.RI "bool \fBupdateAttributes\fP (\fBSubscriberAttributes\fP &att)"
+.br
+.ti -1c
+.RI "\fBSubscriberAttributes\fP \fBgetAttributes\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisInCleanState\fP () const"
+.br
+.RI "Returns there is a clean state with all Publishers\&. It occurs when the \fBSubscriber\fP received all samples sent by Publishers\&. In other words, its WriterProxies are up to date\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBSubscriberImpl\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBSubscriber\fP, contains the public API that allows the user to control the reception of messages\&. This class should not be instantiated directly\&. DomainRTPSParticipant class should be used to correctly create this element\&.
+.PP
+.PP
+.nf
+.fi
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::Subscriber::Subscriber (SubscriberImpl * pimpl)\fC [inline]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIpimpl\fP Actual implementation of the subscriber 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBSubscriberAttributes\fP eprosima::fastrtps::Subscriber::getAttributes ()"
+Get the Attributes of the \fBSubscriber\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Attributes of the subscriber 
+.RE
+.PP
+
+.SS "const \fBGUID_t\fP& eprosima::fastrtps::Subscriber::getGuid ()"
+Get the associated GUID 
+.PP
+\fBReturns\fP
+.RS 4
+Associated GUID 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::Subscriber::isInCleanState () const"
+
+.PP
+Returns there is a clean state with all Publishers\&. It occurs when the \fBSubscriber\fP received all samples sent by Publishers\&. In other words, its WriterProxies are up to date\&. 
+.PP
+\fBReturns\fP
+.RS 4
+There is a clean state with all Publishers\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::Subscriber::readNextData (void * data, \fBSampleInfo_t\fP * info)"
+Read next unread Data from the \fBSubscriber\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Pointer to the object where you want the data stored\&. 
+.br
+\fIinfo\fP Pointer to a \fBSampleInfo_t\fP structure that informs you about your sample\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if a sample was read\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::Subscriber::takeNextData (void * data, \fBSampleInfo_t\fP * info)"
+Take next Data from the \fBSubscriber\fP\&. The data is removed from the subscriber\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Pointer to the object where you want the data stored\&. 
+.br
+\fIinfo\fP Pointer to a \fBSampleInfo_t\fP structure that informs you about your sample\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if a sample was taken\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::Subscriber::updateAttributes (\fBSubscriberAttributes\fP & att)"
+Update the Attributes of the subscriber; 
+.PP
+\fBParameters\fP
+.RS 4
+\fIatt\fP Reference to a \fBSubscriberAttributes\fP object to update the parameters; 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly updated, false if ANY of the updated parameters cannot be updated 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::Subscriber::waitForUnreadMessage ()"
+Method to block the current thread until an unread message is available 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

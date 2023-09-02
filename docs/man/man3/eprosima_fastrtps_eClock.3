@@ -1,0 +1,94 @@
+.TH "eprosima::fastrtps::eClock" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::eClock
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <eClock\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBsetTimeNow\fP (\fBTime_t\fP *now)"
+.br
+.ti -1c
+.RI "void \fBintervalStart\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBintervalEnd\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBmy_sleep\fP (uint32_t milliseconds)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int32_t \fBm_seconds_from_1900_to_1970\fP"
+.br
+.RI "Seconds from 1900 to 1970, initialized to 0 to comply with RTPS 2\&.2\&. "
+.ti -1c
+.RI "int32_t \fBm_utc_seconds_diff\fP"
+.br
+.RI "Difference from UTC in seconds\&. "
+.ti -1c
+.RI "timeval \fBm_now\fP"
+.br
+.ti -1c
+.RI "timeval \fBm_interval1\fP"
+.br
+.ti -1c
+.RI "timeval \fBm_interval2\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBeClock\fP used to obtain the time and to sleep some processes\&. Time measured since 1970\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "uint64_t eprosima::fastrtps::eClock::intervalEnd ()"
+Method to finish measuring an interval in us\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Time of the interval in us 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::eClock::intervalStart ()"
+Method to start measuring an interval in us\&. 
+.SS "static void eprosima::fastrtps::eClock::my_sleep (uint32_t milliseconds)\fC [static]\fP"
+Put the current thread to sleep\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImilliseconds\fP Time to sleep 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::eClock::setTimeNow (\fBTime_t\fP * now)"
+Fill a Time_t with the current time 
+.PP
+\fBParameters\fP
+.RS 4
+\fInow\fP Pointer to a Time_t instance to fill with the current time 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true on success 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

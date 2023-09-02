@@ -1,4 +1,4 @@
-.TH "apollo::cyber::TimerComponent" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::TimerComponent" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,7 +17,7 @@ Inherited by \fBTimerComponentSample\fP, and \fBapollo::cyber::Component_Timer\f
 
 .in +1c
 .ti -1c
-.RI "bool \fBInitialize\fP (const TimerComponentConfig &config) override"
+.RI "bool \fBInitialize\fP (const \fBTimerComponentConfig\fP &config) override"
 .br
 .RI "init the component by protobuf object\&. "
 .ti -1c
@@ -36,7 +36,7 @@ Inherited by \fBTimerComponentSample\fP, and \fBapollo::cyber::Component_Timer\f
 \fBTimerComponent\fP is a timer component\&. Your component can inherit from \fBComponent\fP, and implement Init() & Proc(), They are called by the CyberRT frame\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "bool apollo::cyber::TimerComponent::Initialize (const TimerComponentConfig & config)\fC [override]\fP, \fC [virtual]\fP"
+.SS "bool apollo::cyber::TimerComponent::Initialize (const \fBTimerComponentConfig\fP & config)\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 init the component by protobuf object\&. 

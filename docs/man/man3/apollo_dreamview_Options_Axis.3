@@ -1,0 +1,247 @@
+.TH "apollo::dreamview::Options_Axis" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::dreamview::Options_Axis
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkLabelStringFieldNumber\fP = 3, \fBkMinFieldNumber\fP = 1, \fBkMaxFieldNumber\fP = 2, \fBkWindowSizeFieldNumber\fP = 4, \fBkStepSizeFieldNumber\fP = 5, \fBkMidValueFieldNumber\fP = 6 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBOptions_Axis\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBOptions_Axis\fP (const \fBOptions_Axis\fP &from)"
+.br
+.ti -1c
+.RI "\fBOptions_Axis\fP (\fBOptions_Axis\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBOptions_Axis\fP & \fBoperator=\fP (const \fBOptions_Axis\fP &from)"
+.br
+.ti -1c
+.RI "\fBOptions_Axis\fP & \fBoperator=\fP (\fBOptions_Axis\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBOptions_Axis\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBOptions_Axis\fP *other)"
+.br
+.ti -1c
+.RI "\fBOptions_Axis\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBOptions_Axis\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBOptions_Axis\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_label_string\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_label_string\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBlabel_string\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_label_string\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_label_string\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_label_string\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_label_string\fP (std::string *label_string)"
+.br
+.ti -1c
+.RI "bool \fBhas_min\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_min\fP ()"
+.br
+.ti -1c
+.RI "double \fBmin\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_min\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_max\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_max\fP ()"
+.br
+.ti -1c
+.RI "double \fBmax\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_max\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_window_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_window_size\fP ()"
+.br
+.ti -1c
+.RI "double \fBwindow_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_window_size\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_step_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_step_size\fP ()"
+.br
+.ti -1c
+.RI "double \fBstep_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_step_size\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_mid_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_mid_value\fP ()"
+.br
+.ti -1c
+.RI "double \fBmid_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_mid_value\fP (double value)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_label_string\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBOptions_Axis\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBOptions_Axis\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOptions_Axis\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fdreamview_5fmsgs_2fchart_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBOptions_Axis\fP &a, \fBOptions_Axis\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::dreamview::Options_Axis::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Options_Axis::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::dreamview::Options_Axis::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    0
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,4 +1,4 @@
-.TH "apollo::cyber::record::Chunk" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::record::Chunk" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,7 +13,7 @@ apollo::cyber::record::Chunk
 .RI "void \fBclear\fP ()"
 .br
 .ti -1c
-.RI "void \fBadd\fP (const proto::SingleMessage &message)"
+.RI "void \fBadd\fP (const \fBproto::SingleMessage\fP &message)"
 .br
 .ti -1c
 .RI "bool \fBempty\fP ()"
@@ -26,10 +26,10 @@ apollo::cyber::record::Chunk
 .RI "std::mutex \fBmutex_\fP"
 .br
 .ti -1c
-.RI "proto::ChunkHeader \fBheader_\fP"
+.RI "\fBproto::ChunkHeader\fP \fBheader_\fP"
 .br
 .ti -1c
-.RI "std::unique_ptr< proto::ChunkBody > \fBbody_\fP = nullptr"
+.RI "std::unique_ptr< \fBproto::ChunkBody\fP > \fBbody_\fP = nullptr"
 .br
 .in -1c
 

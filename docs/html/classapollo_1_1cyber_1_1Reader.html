@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -94,9 +96,10 @@ Collaboration diagram for apollo::cyber::Reader&lt; MessageT &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1Reader__coll__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1Reader_3_01MessageT_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="aapollo_1_1cyber_1_1Reader_3_01MessageT_01_4_coll__map" id="aapollo_1_1cyber_1_1Reader_3_01MessageT_01_4_coll__map">
-<area shape="rect" title="Reader subscribes a channel, it has two main functions:" alt="" coords="5,419,759,687"/>
-<area shape="rect" href="classapollo_1_1cyber_1_1ReaderBase.html" title="Base Class for Reader Reader is identified by one apollo::cyber::proto::RoleAttribute,..." alt="" coords="198,145,566,369"/>
-<area shape="rect" title=" " alt="" coords="325,5,439,83"/>
+<area shape="rect" title="Reader subscribes a channel, it has two main functions:" alt="" coords="5,795,759,1063"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1ReaderBase.html" title="Base Class for Reader Reader is identified by one apollo::cyber::proto::RoleAttribute,..." alt="" coords="198,521,566,745"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html" title=" " alt="" coords="65,132,699,459"/>
+<area shape="rect" title=" " alt="" coords="247,5,517,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -117,7 +120,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Iterator</b> = typen
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a69f4d76924d5313aa62254b479f74741"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1Reader.html#a69f4d76924d5313aa62254b479f74741">Reader</a> (const proto::RoleAttributes &amp;role_attr, const CallbackFunc&lt; MessageT &gt; &amp;reader_func=nullptr, uint32_t pending_queue_size=DEFAULT_PENDING_QUEUE_SIZE)</td></tr>
+<tr class="memitem:a69f4d76924d5313aa62254b479f74741"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1Reader.html#a69f4d76924d5313aa62254b479f74741">Reader</a> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &amp;role_attr, const CallbackFunc&lt; MessageT &gt; &amp;reader_func=nullptr, uint32_t pending_queue_size=DEFAULT_PENDING_QUEUE_SIZE)</td></tr>
 <tr class="separator:a69f4d76924d5313aa62254b479f74741"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a249fd8fc318b8f86d018d2016b926ca4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1Reader.html#a249fd8fc318b8f86d018d2016b926ca4">Init</a> () override</td></tr>
 <tr class="memdesc:a249fd8fc318b8f86d018d2016b926ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init <a class="el" href="classapollo_1_1cyber_1_1Reader.html" title="Reader subscribes a channel, it has two main functions:">Reader</a>.  <a href="classapollo_1_1cyber_1_1Reader.html#a249fd8fc318b8f86d018d2016b926ca4">More...</a><br /></td></tr>
@@ -170,12 +173,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a9fc3587c84ebe1e483b12c2c91314786"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1Reader.html#a9fc3587c84ebe1e483b12c2c91314786">HasWriter</a> () override</td></tr>
 <tr class="memdesc:a9fc3587c84ebe1e483b12c2c91314786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is there is at least one writer publish the channel that we subscribes?  <a href="classapollo_1_1cyber_1_1Reader.html#a9fc3587c84ebe1e483b12c2c91314786">More...</a><br /></td></tr>
 <tr class="separator:a9fc3587c84ebe1e483b12c2c91314786"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d2fe028b8ba545a07621d8412a6df95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1Reader.html#a5d2fe028b8ba545a07621d8412a6df95">GetWriters</a> (std::vector&lt; proto::RoleAttributes &gt; *writers) override</td></tr>
+<tr class="memitem:a5d2fe028b8ba545a07621d8412a6df95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1Reader.html#a5d2fe028b8ba545a07621d8412a6df95">GetWriters</a> (std::vector&lt; <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &gt; *writers) override</td></tr>
 <tr class="memdesc:a5d2fe028b8ba545a07621d8412a6df95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all writers pushlish the channel we subscribes.  <a href="classapollo_1_1cyber_1_1Reader.html#a5d2fe028b8ba545a07621d8412a6df95">More...</a><br /></td></tr>
 <tr class="separator:a5d2fe028b8ba545a07621d8412a6df95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classapollo_1_1cyber_1_1ReaderBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classapollo_1_1cyber_1_1ReaderBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html">apollo::cyber::ReaderBase</a></td></tr>
 <tr class="memitem:a9f7a08c0ec4ad3d007efd2b8673312fc inherit pub_methods_classapollo_1_1cyber_1_1ReaderBase"><td class="memItemLeft" align="right" valign="top"><a id="a9f7a08c0ec4ad3d007efd2b8673312fc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ReaderBase</b> (const proto::RoleAttributes &amp;role_attr)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ReaderBase</b> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &amp;role_attr)</td></tr>
 <tr class="separator:a9f7a08c0ec4ad3d007efd2b8673312fc inherit pub_methods_classapollo_1_1cyber_1_1ReaderBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16c2fbbfd0f90ea1dc8302d9334259ca inherit pub_methods_classapollo_1_1cyber_1_1ReaderBase"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#a16c2fbbfd0f90ea1dc8302d9334259ca">GetChannelName</a> () const</td></tr>
 <tr class="memdesc:a16c2fbbfd0f90ea1dc8302d9334259ca inherit pub_methods_classapollo_1_1cyber_1_1ReaderBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classapollo_1_1cyber_1_1Reader.html" title="Reader subscribes a channel, it has two main functions:">Reader</a>'s Channel name.  <a href="classapollo_1_1cyber_1_1ReaderBase.html#a16c2fbbfd0f90ea1dc8302d9334259ca">More...</a><br /></td></tr>
@@ -183,7 +186,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a9d4deb3337b6fa4be339401cf419576f inherit pub_methods_classapollo_1_1cyber_1_1ReaderBase"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#a9d4deb3337b6fa4be339401cf419576f">ChannelId</a> () const</td></tr>
 <tr class="memdesc:a9d4deb3337b6fa4be339401cf419576f inherit pub_methods_classapollo_1_1cyber_1_1ReaderBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classapollo_1_1cyber_1_1Reader.html" title="Reader subscribes a channel, it has two main functions:">Reader</a>'s Channel id.  <a href="classapollo_1_1cyber_1_1ReaderBase.html#a9d4deb3337b6fa4be339401cf419576f">More...</a><br /></td></tr>
 <tr class="separator:a9d4deb3337b6fa4be339401cf419576f inherit pub_methods_classapollo_1_1cyber_1_1ReaderBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad88f5f4832908944212781ccc3a075af inherit pub_methods_classapollo_1_1cyber_1_1ReaderBase"><td class="memItemLeft" align="right" valign="top">const proto::QosProfile &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#ad88f5f4832908944212781ccc3a075af">QosProfile</a> () const</td></tr>
+<tr class="memitem:ad88f5f4832908944212781ccc3a075af inherit pub_methods_classapollo_1_1cyber_1_1ReaderBase"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1QosProfile.html">proto::QosProfile</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#ad88f5f4832908944212781ccc3a075af">QosProfile</a> () const</td></tr>
 <tr class="memdesc:ad88f5f4832908944212781ccc3a075af inherit pub_methods_classapollo_1_1cyber_1_1ReaderBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get qos profile. You can see qos description.  <a href="classapollo_1_1cyber_1_1ReaderBase.html#ad88f5f4832908944212781ccc3a075af">More...</a><br /></td></tr>
 <tr class="separator:ad88f5f4832908944212781ccc3a075af inherit pub_methods_classapollo_1_1cyber_1_1ReaderBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16632fb6fb7592aafc89e1c8e815129f inherit pub_methods_classapollo_1_1cyber_1_1ReaderBase"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#a16632fb6fb7592aafc89e1c8e815129f">IsInit</a> () const</td></tr>
@@ -203,7 +206,7 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>pending_queue_siz
 <tr class="separator:a87f1ff71f13f5fee1e4b93b58da506d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classapollo_1_1cyber_1_1ReaderBase"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classapollo_1_1cyber_1_1ReaderBase')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html">apollo::cyber::ReaderBase</a></td></tr>
 <tr class="memitem:abb179fb694df505798fc959ff51614ed inherit pro_attribs_classapollo_1_1cyber_1_1ReaderBase"><td class="memItemLeft" align="right" valign="top"><a id="abb179fb694df505798fc959ff51614ed"></a>
-proto::RoleAttributes&#160;</td><td class="memItemRight" valign="bottom"><b>role_attr_</b></td></tr>
+<a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&#160;</td><td class="memItemRight" valign="bottom"><b>role_attr_</b></td></tr>
 <tr class="separator:abb179fb694df505798fc959ff51614ed inherit pro_attribs_classapollo_1_1cyber_1_1ReaderBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1069158d442f829dcfe467b45c7dd39a inherit pro_attribs_classapollo_1_1cyber_1_1ReaderBase"><td class="memItemLeft" align="right" valign="top"><a id="a1069158d442f829dcfe467b45c7dd39a"></a>
 std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>init_</b></td></tr>
@@ -234,7 +237,7 @@ template&lt;typename MessageT &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classapollo_1_1cyber_1_1Reader.html">apollo::cyber::Reader</a>&lt; MessageT &gt;::<a class="el" href="classapollo_1_1cyber_1_1Reader.html">Reader</a> </td>
           <td>(</td>
-          <td class="paramtype">const proto::RoleAttributes &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &amp;&#160;</td>
           <td class="paramname"><em>role_attr</em>, </td>
         </tr>
         <tr>
@@ -410,8 +413,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classapollo_1_1cyber_1_1Reader_a9acce2d137849540e434596de51b10bf_cgraph.png" border="0" usemap="#aclassapollo_1_1cyber_1_1Reader_a9acce2d137849540e434596de51b10bf_cgraph" alt=""/></div>
 <map name="aclassapollo_1_1cyber_1_1Reader_a9acce2d137849540e434596de51b10bf_cgraph" id="aclassapollo_1_1cyber_1_1Reader_a9acce2d137849540e434596de51b10bf_cgraph">
 <area shape="rect" title="Push msg to Blocker&#39;s PublishQueue" alt="" coords="5,31,229,57"/>
-<area shape="rect" href="classapollo_1_1cyber_1_1Time.html#ab5172323c08151c59632aab53fac9f5e" title="get the current time." alt="" coords="293,5,477,32"/>
-<area shape="rect" href="classapollo_1_1cyber_1_1Time.html#af2907405c33e3d38863a3c6f2b85648c" title="convert time to second." alt="" coords="277,56,493,83"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1Time.html#ab5172323c08151c59632aab53fac9f5e" title="get the current time." alt="" coords="293,5,476,32"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1Time.html#af2907405c33e3d38863a3c6f2b85648c" title="convert time to second." alt="" coords="277,56,492,83"/>
 </map>
 </div>
 
@@ -449,8 +452,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classapollo_1_1cyber_1_1Reader_a51cdaa33430e6c1b2905336066a4b6f2_cgraph.png" border="0" usemap="#aclassapollo_1_1cyber_1_1Reader_a51cdaa33430e6c1b2905336066a4b6f2_cgraph" alt=""/></div>
 <map name="aclassapollo_1_1cyber_1_1Reader_a51cdaa33430e6c1b2905336066a4b6f2_cgraph" id="aclassapollo_1_1cyber_1_1Reader_a51cdaa33430e6c1b2905336066a4b6f2_cgraph">
 <area shape="rect" title="Get time interval of since last receive message." alt="" coords="5,31,257,57"/>
-<area shape="rect" href="classapollo_1_1cyber_1_1Time.html#ab5172323c08151c59632aab53fac9f5e" title="get the current time." alt="" coords="321,5,505,32"/>
-<area shape="rect" href="classapollo_1_1cyber_1_1Time.html#af2907405c33e3d38863a3c6f2b85648c" title="convert time to second." alt="" coords="305,56,521,83"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1Time.html#ab5172323c08151c59632aab53fac9f5e" title="get the current time." alt="" coords="321,5,504,32"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1Time.html#af2907405c33e3d38863a3c6f2b85648c" title="convert time to second." alt="" coords="305,56,520,83"/>
 </map>
 </div>
 
@@ -557,7 +560,7 @@ template&lt;typename MessageT &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classapollo_1_1cyber_1_1Reader.html">apollo::cyber::Reader</a>&lt; MessageT &gt;::GetWriters </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; proto::RoleAttributes &gt; *&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &gt; *&#160;</td>
           <td class="paramname"><em>writers</em></td><td>)</td>
           <td></td>
         </tr>

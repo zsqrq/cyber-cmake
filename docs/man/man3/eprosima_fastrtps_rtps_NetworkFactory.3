@@ -1,0 +1,94 @@
+.TH "eprosima::fastrtps::rtps::NetworkFactory" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::NetworkFactory
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <NetworkFactory\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<class T , class D > void \fBRegisterTransport\fP (const D &descriptor)"
+.br
+.ti -1c
+.RI "void \fBRegisterTransport\fP (const \fBTransportDescriptorInterface\fP *descriptor)"
+.br
+.ti -1c
+.RI "std::vector< \fBSenderResource\fP > \fBBuildSenderResources\fP (\fBLocator_t\fP &local)"
+.br
+.ti -1c
+.RI "std::vector< \fBSenderResource\fP > \fBBuildSenderResourcesForRemoteLocator\fP (const \fBLocator_t\fP &remote)"
+.br
+.ti -1c
+.RI "bool \fBBuildReceiverResources\fP (const \fBLocator_t\fP &local, std::vector< \fBReceiverResource\fP > &returned_resources_list)"
+.br
+.ti -1c
+.RI "void \fBNormalizeLocators\fP (\fBLocatorList_t\fP &locators)"
+.br
+.ti -1c
+.RI "\fBLocatorList_t\fP \fBShrinkLocatorLists\fP (const std::vector< \fBLocatorList_t\fP > &locatorLists)"
+.br
+.ti -1c
+.RI "bool \fBis_local_locator\fP (const \fBLocator_t\fP &locator) const"
+.br
+.ti -1c
+.RI "size_t \fBnumberOfRegisteredTransports\fP () const"
+.br
+.ti -1c
+.RI "uint32_t \fBget_max_message_size_between_transports\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBget_min_send_buffer_size\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides the FastRTPS library with abstract resources, which in turn manage the SEND and RECEIVE operations over some transport\&. Once a transport is registered, it becomes invisible to the library and is abstracted away for good\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool eprosima::fastrtps::rtps::NetworkFactory::BuildReceiverResources (const \fBLocator_t\fP & local, std::vector< \fBReceiverResource\fP > & returned_resources_list)"
+Walks over the list of transports, opening every possible channel that we can listen to from the given locator, and returns a vector of Receiver Resources for this goal\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocal\fP Locator from which to listen\&. 
+.RE
+.PP
+
+.SS "std::vector<\fBSenderResource\fP> eprosima::fastrtps::rtps::NetworkFactory::BuildSenderResources (\fBLocator_t\fP & local)"
+Walks over the list of transports, opening every possible channel that can send through the given locator and returning a vector of Sender Resources associated with it\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocal\fP Locator through which to send\&. 
+.RE
+.PP
+
+.SS "std::vector<\fBSenderResource\fP> eprosima::fastrtps::rtps::NetworkFactory::BuildSenderResourcesForRemoteLocator (const \fBLocator_t\fP & remote)"
+Walks over the list of transports, opening every possible channel that can send to the given remote locator and returning a vector of Sender Resources associated with it\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocal\fP Destination locator that we intend to send to\&. 
+.RE
+.PP
+
+.SS "template<class T , class D > void eprosima::fastrtps::rtps::NetworkFactory::RegisterTransport (const D & descriptor)\fC [inline]\fP"
+Allows registration of a transport statically, by specifying the transport type and its associated descriptor type\&. This is particularly useful for user-defined transports\&. 
+.SS "void eprosima::fastrtps::rtps::NetworkFactory::RegisterTransport (const \fBTransportDescriptorInterface\fP * descriptor)"
+Allows registration of a transport dynamically\&. Only the transports built into FastRTPS are supported here (although it can be easily extended at NetworkFactory\&.cpp) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdescriptor\fP Structure that defines all initial configuration for a given transport\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

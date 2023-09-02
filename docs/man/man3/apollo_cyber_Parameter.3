@@ -1,8 +1,8 @@
-.TH "apollo::cyber::Parameter" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::Parameter" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-apollo::cyber::Parameter \- A \fC\fBParameter\fP\fP holds an apollo::cyber::proto::Param, It's more human-readable, you can use basic-value type and Protobuf values to construct a paramter\&. \fBParameter\fP is identified by their \fCname\fP, and you can get \fBParameter\fP content by call \fBvalue()\fP  
+apollo::cyber::Parameter \- A \fC\fBParameter\fP\fP holds an \fBapollo::cyber::proto::Param\fP, It's more human-readable, you can use basic-value type and Protobuf values to construct a paramter\&. \fBParameter\fP is identified by their \fCname\fP, and you can get \fBParameter\fP content by call \fBvalue()\fP  
 
 .SH SYNOPSIS
 .br
@@ -61,13 +61,13 @@ apollo::cyber::Parameter \- A \fC\fBParameter\fP\fP holds an apollo::cyber::prot
 .br
 .RI "use a google::protobuf::Message type value to construct the parameter "
 .ti -1c
-.RI "void \fBFromProtoParam\fP (const Param &param)"
+.RI "void \fBFromProtoParam\fP (const \fBParam\fP &param)"
 .br
-.RI "Parse a cyber::proto::Param object to cyber::parameter::Parameter object\&. "
+.RI "Parse a \fBcyber::proto::Param\fP object to cyber::parameter::Parameter object\&. "
 .ti -1c
-.RI "Param \fBToProtoParam\fP () const"
+.RI "\fBParam\fP \fBToProtoParam\fP () const"
 .br
-.RI "Parse a cyber::parameter::Parameter object to cyber::proto::Param object\&. "
+.RI "Parse a cyber::parameter::Parameter object to \fBcyber::proto::Param\fP object\&. "
 .ti -1c
 .RI "ParamType \fBType\fP () const"
 .br
@@ -123,7 +123,7 @@ apollo::cyber::Parameter \- A \fC\fBParameter\fP\fP holds an apollo::cyber::prot
 .in -1c
 .SH "Detailed Description"
 .PP 
-A \fC\fBParameter\fP\fP holds an apollo::cyber::proto::Param, It's more human-readable, you can use basic-value type and Protobuf values to construct a paramter\&. \fBParameter\fP is identified by their \fCname\fP, and you can get \fBParameter\fP content by call \fBvalue()\fP 
+A \fC\fBParameter\fP\fP holds an \fBapollo::cyber::proto::Param\fP, It's more human-readable, you can use basic-value type and Protobuf values to construct a paramter\&. \fBParameter\fP is identified by their \fCname\fP, and you can get \fBParameter\fP content by call \fBvalue()\fP 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "apollo::cyber::Parameter::Parameter (const std::string & name)\fC [explicit]\fP"
@@ -328,14 +328,14 @@ std::string the \fBParameter\fP's type name
 .RE
 .PP
 
-.SS "void apollo::cyber::Parameter::FromProtoParam (const Param & param)"
+.SS "void apollo::cyber::Parameter::FromProtoParam (const \fBParam\fP & param)"
 
 .PP
-Parse a cyber::proto::Param object to cyber::parameter::Parameter object\&. 
+Parse a \fBcyber::proto::Param\fP object to cyber::parameter::Parameter object\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIparam\fP The cyber::proto::Param object parse from A pointer to the target \fBParameter\fP object 
+\fIparam\fP The \fBcyber::proto::Param\fP object parse from A pointer to the target \fBParameter\fP object 
 .RE
 .PP
 \fBReturns\fP
@@ -355,14 +355,14 @@ const std::string the \fBParameter\fP's name
 .RE
 .PP
 
-.SS "Param apollo::cyber::Parameter::ToProtoParam () const"
+.SS "\fBParam\fP apollo::cyber::Parameter::ToProtoParam () const"
 
 .PP
-Parse a cyber::parameter::Parameter object to cyber::proto::Param object\&. 
+Parse a cyber::parameter::Parameter object to \fBcyber::proto::Param\fP object\&. 
 .PP
 \fBReturns\fP
 .RS 4
-The target cyber::proto::Param object 
+The target \fBcyber::proto::Param\fP object 
 .RE
 .PP
 

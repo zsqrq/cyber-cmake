@@ -1,4 +1,4 @@
-.TH "apollo::cyber::ReaderBase" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::ReaderBase" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,7 +15,7 @@ Inherited by \fBapollo::cyber::Reader< MessageT >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBReaderBase\fP (const proto::RoleAttributes &role_attr)"
+.RI "\fBReaderBase\fP (const \fBproto::RoleAttributes\fP &role_attr)"
 .br
 .ti -1c
 .RI "virtual bool \fBInit\fP ()=0"
@@ -54,7 +54,7 @@ Inherited by \fBapollo::cyber::Reader< MessageT >\fP\&.
 .br
 .RI "Query is there any writer that publish the subscribed channel\&. "
 .ti -1c
-.RI "virtual void \fBGetWriters\fP (std::vector< proto::RoleAttributes > *writers)"
+.RI "virtual void \fBGetWriters\fP (std::vector< \fBproto::RoleAttributes\fP > *writers)"
 .br
 .RI "Get all writers pushlish the channel we subscribes\&. "
 .ti -1c
@@ -66,7 +66,7 @@ Inherited by \fBapollo::cyber::Reader< MessageT >\fP\&.
 .br
 .RI "Get \fBReader\fP's Channel id\&. "
 .ti -1c
-.RI "const proto::QosProfile & \fBQosProfile\fP () const"
+.RI "const \fBproto::QosProfile\fP & \fBQosProfile\fP () const"
 .br
 .RI "Get qos profile\&. You can see qos description\&. "
 .ti -1c
@@ -78,7 +78,7 @@ Inherited by \fBapollo::cyber::Reader< MessageT >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "proto::RoleAttributes \fBrole_attr_\fP"
+.RI "\fBproto::RoleAttributes\fP \fBrole_attr_\fP"
 .br
 .ti -1c
 .RI "std::atomic< bool > \fBinit_\fP"
@@ -139,7 +139,7 @@ double seconds delay
 
 .PP
 Implemented in \fBapollo::cyber::Reader< MessageT >\fP\&.
-.SS "virtual void apollo::cyber::ReaderBase::GetWriters (std::vector< proto::RoleAttributes > * writers)\fC [inline]\fP, \fC [virtual]\fP"
+.SS "virtual void apollo::cyber::ReaderBase::GetWriters (std::vector< \fBproto::RoleAttributes\fP > * writers)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Get all writers pushlish the channel we subscribes\&. 
@@ -223,14 +223,14 @@ uint32_t result value
 
 .PP
 Implemented in \fBapollo::cyber::Reader< MessageT >\fP\&.
-.SS "const proto::QosProfile& apollo::cyber::ReaderBase::QosProfile () const\fC [inline]\fP"
+.SS "const \fBproto::QosProfile\fP& apollo::cyber::ReaderBase::QosProfile () const\fC [inline]\fP"
 
 .PP
 Get qos profile\&. You can see qos description\&. 
 .PP
 \fBReturns\fP
 .RS 4
-const proto::QosProfile& result qos 
+const \fBproto::QosProfile\fP& result qos 
 .RE
 .PP
 

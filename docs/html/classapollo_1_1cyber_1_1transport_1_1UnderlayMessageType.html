@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -84,8 +86,8 @@ Inheritance diagram for apollo::cyber::transport::UnderlayMessageType:</div>
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType__inherit__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_inherit__map" alt="Inheritance graph"/></div>
 <map name="aapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_inherit__map" id="aapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_inherit__map">
-<area shape="rect" title="This class represents the TopicDataType of the type UnderlayMessage defined by the user in the IDL fi..." alt="" coords="5,131,460,325"/>
-<area shape="rect" title=" " alt="" coords="111,5,354,83"/>
+<area shape="rect" title="This class represents the TopicDataType of the type UnderlayMessage defined by the user in the IDL fi..." alt="" coords="79,277,534,472"/>
+<area shape="rect" href="classeprosima_1_1fastrtps_1_1TopicDataType.html" title=" " alt="" coords="5,5,608,229"/>
 </map>
 </div>
 <div class="dynheader">
@@ -93,8 +95,9 @@ Collaboration diagram for apollo::cyber::transport::UnderlayMessageType:</div>
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType__coll__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_coll__map" alt="Collaboration graph"/></div>
 <map name="aapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_coll__map" id="aapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_coll__map">
-<area shape="rect" title="This class represents the TopicDataType of the type UnderlayMessage defined by the user in the IDL fi..." alt="" coords="5,131,460,325"/>
-<area shape="rect" title=" " alt="" coords="111,5,354,83"/>
+<area shape="rect" title="This class represents the TopicDataType of the type UnderlayMessage defined by the user in the IDL fi..." alt="" coords="342,292,797,472"/>
+<area shape="rect" href="classeprosima_1_1fastrtps_1_1TopicDataType.html" title=" " alt="" coords="5,5,608,229"/>
+<area shape="rect" href="classMD5.html" title=" " alt="" coords="633,35,1034,200"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -106,37 +109,275 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> = <a class=
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa3a5b3cd4ac16b879e600d4652ce9d01"><td class="memItemLeft" align="right" valign="top"><a id="aa3a5b3cd4ac16b879e600d4652ce9d01"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>serialize</b> (void *data, SerializedPayload_t *payload)</td></tr>
+<tr class="memitem:aa3a5b3cd4ac16b879e600d4652ce9d01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType.html#aa3a5b3cd4ac16b879e600d4652ce9d01">serialize</a> (void *data, <a class="el" href="structeprosima_1_1fastrtps_1_1rtps_1_1SerializedPayload__t.html">SerializedPayload_t</a> *payload)</td></tr>
 <tr class="separator:aa3a5b3cd4ac16b879e600d4652ce9d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addcc30ac149aae4fd099e808a809cc58"><td class="memItemLeft" align="right" valign="top"><a id="addcc30ac149aae4fd099e808a809cc58"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>deserialize</b> (SerializedPayload_t *payload, void *data)</td></tr>
+<tr class="memitem:addcc30ac149aae4fd099e808a809cc58"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType.html#addcc30ac149aae4fd099e808a809cc58">deserialize</a> (<a class="el" href="structeprosima_1_1fastrtps_1_1rtps_1_1SerializedPayload__t.html">SerializedPayload_t</a> *payload, void *data)</td></tr>
 <tr class="separator:addcc30ac149aae4fd099e808a809cc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bf2bf82f4a3d18a4e3b5b060b97d94e"><td class="memItemLeft" align="right" valign="top"><a id="a0bf2bf82f4a3d18a4e3b5b060b97d94e"></a>
 std::function&lt; uint32_t()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getSerializedSizeProvider</b> (void *data)</td></tr>
 <tr class="separator:a0bf2bf82f4a3d18a4e3b5b060b97d94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a4bb79093137ddfe93e27ba5b3a336a"><td class="memItemLeft" align="right" valign="top"><a id="a5a4bb79093137ddfe93e27ba5b3a336a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getKey</b> (void *data, InstanceHandle_t *ihandle)</td></tr>
+<tr class="memitem:a5a4bb79093137ddfe93e27ba5b3a336a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType.html#a5a4bb79093137ddfe93e27ba5b3a336a">getKey</a> (void *data, <a class="el" href="structeprosima_1_1fastrtps_1_1rtps_1_1InstanceHandle__t.html">InstanceHandle_t</a> *ihandle)</td></tr>
 <tr class="separator:a5a4bb79093137ddfe93e27ba5b3a336a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab09273811e19388b64bd7514b20b3760"><td class="memItemLeft" align="right" valign="top"><a id="ab09273811e19388b64bd7514b20b3760"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>createData</b> ()</td></tr>
+<tr class="memitem:ab09273811e19388b64bd7514b20b3760"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType.html#ab09273811e19388b64bd7514b20b3760">createData</a> ()</td></tr>
 <tr class="separator:ab09273811e19388b64bd7514b20b3760"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa406d69101f4f1d0aec4de5f13f54e56"><td class="memItemLeft" align="right" valign="top"><a id="aa406d69101f4f1d0aec4de5f13f54e56"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteData</b> (void *data)</td></tr>
+<tr class="memitem:aa406d69101f4f1d0aec4de5f13f54e56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType.html#aa406d69101f4f1d0aec4de5f13f54e56">deleteData</a> (void *data)</td></tr>
 <tr class="separator:aa406d69101f4f1d0aec4de5f13f54e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classeprosima_1_1fastrtps_1_1TopicDataType"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classeprosima_1_1fastrtps_1_1TopicDataType')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classeprosima_1_1fastrtps_1_1TopicDataType.html">eprosima::fastrtps::TopicDataType</a></td></tr>
+<tr class="memitem:ad5c99a0c10d112f78b0ef5d7769413ba inherit pub_methods_classeprosima_1_1fastrtps_1_1TopicDataType"><td class="memItemLeft" align="right" valign="top">RTPS_DllAPI void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeprosima_1_1fastrtps_1_1TopicDataType.html#ad5c99a0c10d112f78b0ef5d7769413ba">setName</a> (const char *nam)</td></tr>
+<tr class="separator:ad5c99a0c10d112f78b0ef5d7769413ba inherit pub_methods_classeprosima_1_1fastrtps_1_1TopicDataType"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaac3e5668408b96e9c36a1c9d97d9bf7 inherit pub_methods_classeprosima_1_1fastrtps_1_1TopicDataType"><td class="memItemLeft" align="right" valign="top">RTPS_DllAPI const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeprosima_1_1fastrtps_1_1TopicDataType.html#aaac3e5668408b96e9c36a1c9d97d9bf7">getName</a> () const</td></tr>
+<tr class="separator:aaac3e5668408b96e9c36a1c9d97d9bf7 inherit pub_methods_classeprosima_1_1fastrtps_1_1TopicDataType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ad0c794c245214421d0a93f1c9df6ca03"><td class="memItemLeft" align="right" valign="top"><a id="ad0c794c245214421d0a93f1c9df6ca03"></a>
-MD5&#160;</td><td class="memItemRight" valign="bottom"><b>m_md5</b></td></tr>
+<a class="el" href="classMD5.html">MD5</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_md5</b></td></tr>
 <tr class="separator:ad0c794c245214421d0a93f1c9df6ca03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70946fdd8679f584bb8bd917cc845a21"><td class="memItemLeft" align="right" valign="top"><a id="a70946fdd8679f584bb8bd917cc845a21"></a>
 unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><b>m_keyBuffer</b></td></tr>
 <tr class="separator:a70946fdd8679f584bb8bd917cc845a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classeprosima_1_1fastrtps_1_1TopicDataType"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classeprosima_1_1fastrtps_1_1TopicDataType')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classeprosima_1_1fastrtps_1_1TopicDataType.html">eprosima::fastrtps::TopicDataType</a></td></tr>
+<tr class="memitem:a31dc2d73bb8680a69ea8cb2d745f3c22 inherit pub_attribs_classeprosima_1_1fastrtps_1_1TopicDataType"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeprosima_1_1fastrtps_1_1TopicDataType.html#a31dc2d73bb8680a69ea8cb2d745f3c22">m_typeSize</a></td></tr>
+<tr class="separator:a31dc2d73bb8680a69ea8cb2d745f3c22 inherit pub_attribs_classeprosima_1_1fastrtps_1_1TopicDataType"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64cced3bdb5a4202fa6947d65898dcf2 inherit pub_attribs_classeprosima_1_1fastrtps_1_1TopicDataType"><td class="memItemLeft" align="right" valign="top"><a id="a64cced3bdb5a4202fa6947d65898dcf2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeprosima_1_1fastrtps_1_1TopicDataType.html#a64cced3bdb5a4202fa6947d65898dcf2">m_isGetKeyDefined</a></td></tr>
+<tr class="memdesc:a64cced3bdb5a4202fa6947d65898dcf2 inherit pub_attribs_classeprosima_1_1fastrtps_1_1TopicDataType"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the method to obtain the key has been implemented. <br /></td></tr>
+<tr class="separator:a64cced3bdb5a4202fa6947d65898dcf2 inherit pub_attribs_classeprosima_1_1fastrtps_1_1TopicDataType"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class represents the TopicDataType of the type <a class="el" href="classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html" title="This class represents the structure UnderlayMessage defined by the user in the IDL file.">UnderlayMessage</a> defined by the user in the IDL file. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab09273811e19388b64bd7514b20b3760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab09273811e19388b64bd7514b20b3760">&#9670;&nbsp;</a></span>createData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * apollo::cyber::transport::UnderlayMessageType::createData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a Data Type. </p><dl class="section return"><dt>Returns</dt><dd>Void pointer to the created object. </dd></dl>
+
+<p>Implements <a class="el" href="classeprosima_1_1fastrtps_1_1TopicDataType.html#a4eeada4e63e366143f4cd80116c50b5d">eprosima::fastrtps::TopicDataType</a>.</p>
+
+</div>
+</div>
+<a id="aa406d69101f4f1d0aec4de5f13f54e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa406d69101f4f1d0aec4de5f13f54e56">&#9670;&nbsp;</a></span>deleteData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apollo::cyber::transport::UnderlayMessageType::deleteData </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Remove a previously created object. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Pointer to the created Data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classeprosima_1_1fastrtps_1_1TopicDataType.html#af0ac8b3853c99cdd0e08b0604bbffe71">eprosima::fastrtps::TopicDataType</a>.</p>
+
+</div>
+</div>
+<a id="addcc30ac149aae4fd099e808a809cc58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addcc30ac149aae4fd099e808a809cc58">&#9670;&nbsp;</a></span>deserialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool apollo::cyber::transport::UnderlayMessageType::deserialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structeprosima_1_1fastrtps_1_1rtps_1_1SerializedPayload__t.html">SerializedPayload_t</a> *&#160;</td>
+          <td class="paramname"><em>payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Deserialize method, it should be implemented by the user, since it is abstract. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">payload</td><td>Pointer to the payload </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>Pointer to the data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if correct. </dd></dl>
+
+<p>Implements <a class="el" href="classeprosima_1_1fastrtps_1_1TopicDataType.html#ab24862a02bf41396b0b7ba0070a09596">eprosima::fastrtps::TopicDataType</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_addcc30ac149aae4fd099e808a809cc58_cgraph.png" border="0" usemap="#aclassapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_addcc30ac149aae4fd099e808a809cc58_cgraph" alt=""/></div>
+<map name="aclassapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_addcc30ac149aae4fd099e808a809cc58_cgraph" id="aclassapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_addcc30ac149aae4fd099e808a809cc58_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,412,57"/>
+<area shape="rect" href="classeprosima_1_1fastcdr_1_1Cdr.html#af3780e0691ba1d364601435795c7e1be" title="This function returns the current endianness used by the CDR type." alt="" coords="487,5,735,32"/>
+<area shape="rect" href="classeprosima_1_1fastcdr_1_1Cdr.html#a04d1fe7b2dfad627c6a935f23ece9089" title="This function reads the encapsulation of the CDR stream. If the CDR stream contains an encapsulation,..." alt="" coords="460,56,761,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5a4bb79093137ddfe93e27ba5b3a336a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a4bb79093137ddfe93e27ba5b3a336a">&#9670;&nbsp;</a></span>getKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool apollo::cyber::transport::UnderlayMessageType::getKey </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structeprosima_1_1fastrtps_1_1rtps_1_1InstanceHandle__t.html">InstanceHandle_t</a> *&#160;</td>
+          <td class="paramname"><em>ihandle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the key associated with the data. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Pointer to the data. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ihandle</td><td>Pointer to the Handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if correct. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classeprosima_1_1fastrtps_1_1TopicDataType.html#a1f88b134c0fa95afe57c3d4d1cbc5d8c">eprosima::fastrtps::TopicDataType</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a5a4bb79093137ddfe93e27ba5b3a336a_cgraph.png" border="0" usemap="#aclassapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a5a4bb79093137ddfe93e27ba5b3a336a_cgraph" alt=""/></div>
+<map name="aclassapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a5a4bb79093137ddfe93e27ba5b3a336a_cgraph" id="aclassapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a5a4bb79093137ddfe93e27ba5b3a336a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,387,83"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#a5b087f83c2128e4aba8bab907315145c" title="This function returns the maximum serialized size of the Key of an object depending on the buffer ali..." alt="" coords="435,5,927,32"/>
+<area shape="rect" href="classeprosima_1_1fastcdr_1_1Cdr.html#a5eb8dce4596e00ee0c4566fc4cc092d6" title="This function returns the length of the serialized data inside the stream." alt="" coords="513,56,848,83"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#a197d158daa38234f6432bb296ab93bd5" title="This function serializes the key members of an object using CDR serialization." alt="" coords="488,107,873,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa3a5b3cd4ac16b879e600d4652ce9d01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a5b3cd4ac16b879e600d4652ce9d01">&#9670;&nbsp;</a></span>serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool apollo::cyber::transport::UnderlayMessageType::serialize </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structeprosima_1_1fastrtps_1_1rtps_1_1SerializedPayload__t.html">SerializedPayload_t</a> *&#160;</td>
+          <td class="paramname"><em>payload</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Serialize method, it should be implemented by the user, since it is abstract. It is VERY IMPORTANT that the user sets the serializedPaylaod length correctly. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Pointer to the data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">payload</td><td>Pointer to the payload </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if correct. </dd></dl>
+
+<p>Implements <a class="el" href="classeprosima_1_1fastrtps_1_1TopicDataType.html#a34e91432030056340a8f0e1419e4164d">eprosima::fastrtps::TopicDataType</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_aa3a5b3cd4ac16b879e600d4652ce9d01_cgraph.png" border="0" usemap="#aclassapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_aa3a5b3cd4ac16b879e600d4652ce9d01_cgraph" alt=""/></div>
+<map name="aclassapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_aa3a5b3cd4ac16b879e600d4652ce9d01_cgraph" id="aclassapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_aa3a5b3cd4ac16b879e600d4652ce9d01_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,396,32"/>
+<area shape="rect" href="classeprosima_1_1fastcdr_1_1Cdr.html#af3780e0691ba1d364601435795c7e1be" title="This function returns the current endianness used by the CDR type." alt="" coords="444,5,692,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>cyber/transport/rtps/<a class="el" href="underlay__message__type_8h_source.html">underlay_message_type.h</a></li>
 <li>cyber/transport/rtps/underlay_message_type.cc</li>
 </ul>

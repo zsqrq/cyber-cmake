@@ -1,0 +1,149 @@
+.TH "eprosima::fastrtps::rtps::ReaderHistory" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::ReaderHistory
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ReaderHistory\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::History\fP\&.
+.PP
+Inherited by \fBeprosima::fastrtps::SubscriberHistory\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "RTPS_DllAPI \fBReaderHistory\fP (const \fBHistoryAttributes\fP &att)"
+.br
+.ti -1c
+.RI "virtual RTPS_DllAPI bool \fBreceived_change\fP (\fBCacheChange_t\fP *change, size_t)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI bool \fBadd_change\fP (\fBCacheChange_t\fP *a_change)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI bool \fBremove_change\fP (\fBCacheChange_t\fP *a_change)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI bool \fBremove_changes_with_guid\fP (\fBGUID_t\fP *a_guid)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBsortCacheChanges\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBupdateMaxMinSeqNum\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBpostSemaphore\fP ()"
+.br
+.RI "Post to the semaphore\&. "
+.ti -1c
+.RI "RTPS_DllAPI void \fBwaitSemaphore\fP ()"
+.br
+.RI "Wait for the semaphore\&. "
+.ti -1c
+.RI "RTPS_DllAPI bool \fBget_min_change_from\fP (\fBCacheChange_t\fP **min_change, const \fBGUID_t\fP &writerGuid)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBRTPSReader\fP * \fBmp_reader\fP"
+.br
+.RI "Pointer to the reader\&. "
+.ti -1c
+.RI "\fBSemaphore\fP * \fBmp_semaphore\fP"
+.br
+.RI "Pointer to the semaphore, used to halt execution until new message arrives\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBRTPSReader\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Class \fBReaderHistory\fP, container of the different CacheChanges of a reader 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RTPS_DllAPI eprosima::fastrtps::rtps::ReaderHistory::ReaderHistory (const \fBHistoryAttributes\fP & att)"
+Constructor of the \fBReaderHistory\fP\&. It needs a \fBHistoryAttributes\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "RTPS_DllAPI bool eprosima::fastrtps::rtps::ReaderHistory::add_change (\fBCacheChange_t\fP * a_change)"
+Add a \fBCacheChange_t\fP to the \fBReaderHistory\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_change\fP Pointer to the CacheChange to add\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if added\&. 
+.RE
+.PP
+
+.SS "virtual RTPS_DllAPI bool eprosima::fastrtps::rtps::ReaderHistory::received_change (\fBCacheChange_t\fP * change, size_t)\fC [virtual]\fP"
+Virtual method that is called when a new change is received\&. In this implementation this method just calls add_change\&. The suer can overload this method in case he needs to perform additional checks before adding the change\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchange\fP Pointer to the change 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if added\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBeprosima::fastrtps::SubscriberHistory\fP\&.
+.SS "RTPS_DllAPI bool eprosima::fastrtps::rtps::ReaderHistory::remove_change (\fBCacheChange_t\fP * a_change)\fC [virtual]\fP"
+Remove a \fBCacheChange_t\fP from the \fBReaderHistory\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_change\fP Pointer to the CacheChange to remove\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if removed\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::History\fP\&.
+.SS "RTPS_DllAPI bool eprosima::fastrtps::rtps::ReaderHistory::remove_changes_with_guid (\fBGUID_t\fP * a_guid)"
+Remove all changes from the \fBHistory\fP that have a certain guid\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_guid\fP Pointer to the target guid to search for\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if succesful, even if no changes have been removed\&. 
+.RE
+.PP
+
+.SS "RTPS_DllAPI void eprosima::fastrtps::rtps::ReaderHistory::sortCacheChanges ()"
+Sort the \fBCacheChange_t\fP from the \fBHistory\fP\&. 
+.SS "RTPS_DllAPI void eprosima::fastrtps::rtps::ReaderHistory::updateMaxMinSeqNum ()\fC [virtual]\fP"
+Update the maximum and minimum sequenceNumber cacheChanges\&. 
+.PP
+Implements \fBeprosima::fastrtps::rtps::History\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

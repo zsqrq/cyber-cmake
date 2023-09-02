@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -122,12 +124,12 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager.html#a97196cc509625f9fd5376043f4381bb3">GetClients</a>(<span class="keyword">const</span> std::string&amp; service_name, RoleAttrVec* clients);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">bool</span> Check(<span class="keyword">const</span> RoleAttributes&amp; attr) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> Dispose(<span class="keyword">const</span> ChangeMsg&amp; msg) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">bool</span> Check(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; attr) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> Dispose(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ChangeMsg.html">ChangeMsg</a>&amp; msg) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">void</span> OnTopoModuleLeave(<span class="keyword">const</span> std::string&amp; host_name, <span class="keywordtype">int</span> process_id) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">void</span> DisposeJoin(<span class="keyword">const</span> ChangeMsg&amp; msg);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">void</span> DisposeLeave(<span class="keyword">const</span> ChangeMsg&amp; msg);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">void</span> DisposeJoin(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ChangeMsg.html">ChangeMsg</a>&amp; msg);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">void</span> DisposeLeave(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ChangeMsg.html">ChangeMsg</a>&amp; msg);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1service__discovery_1_1SingleValueWarehouse.html">ServerWarehouse</a> servers_;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse.html">ClientWarehouse</a> clients_;</div>
@@ -138,6 +140,8 @@ $(function() {
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}  <span class="comment">// namespace apollo</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">//  CYBER_SERVICE_DISCOVERY_SPECIFIC_MANAGER_SERVICE_MANAGER_H_</span></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1ChangeMsg_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1ChangeMsg.html">apollo::cyber::proto::ChangeMsg</a></div><div class="ttdef"><b>Definition:</b> topology_change.pb.h:152</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1RoleAttributes_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a></div><div class="ttdef"><b>Definition:</b> role_attributes.pb.h:258</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1Manager_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1Manager.html">apollo::cyber::service_discovery::Manager</a></div><div class="ttdoc">Base class for management of Topology elements. Manager can Join/Leave the Topology,...</div><div class="ttdef"><b>Definition:</b> manager.h:51</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse.html">apollo::cyber::service_discovery::MultiValueWarehouse</a></div><div class="ttdef"><b>Definition:</b> multi_value_warehouse.h:31</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager.html">apollo::cyber::service_discovery::ServiceManager</a></div><div class="ttdoc">Topology Manager of Service related.</div><div class="ttdef"><b>Definition:</b> service_manager.h:39</div></div>
@@ -148,7 +152,7 @@ $(function() {
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_html_af38ca75ea50d5e1bdd40b4cbb6c5f7d1"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager.html#af38ca75ea50d5e1bdd40b4cbb6c5f7d1">apollo::cyber::service_discovery::ServiceManager::GetServers</a></div><div class="ttdeci">void GetServers(RoleAttrVec *servers)</div><div class="ttdoc">Get the All Server in the topology.</div><div class="ttdef"><b>Definition:</b> service_manager.cc:41</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1SingleValueWarehouse_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1SingleValueWarehouse.html">apollo::cyber::service_discovery::SingleValueWarehouse</a></div><div class="ttdef"><b>Definition:</b> single_value_warehouse.h:31</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager.html">apollo::cyber::service_discovery::TopologyManager</a></div><div class="ttdoc">elements in Cyber – Node, Channel, Service, Writer, Reader, Client and Server's relationship is prese...</div><div class="ttdef"><b>Definition:</b> topology_manager.h:64</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

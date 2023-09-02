@@ -1,0 +1,44 @@
+.TH "testing::internal::RE" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::internal::RE
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRE\fP (const \fBRE\fP &other)"
+.br
+.ti -1c
+.RI "\fBRE\fP (const ::std::string &regex)"
+.br
+.ti -1c
+.RI "\fBRE\fP (const char *regex)"
+.br
+.ti -1c
+.RI "const char * \fBpattern\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBFullMatch\fP (const ::std::string &str, const \fBRE\fP &re)"
+.br
+.ti -1c
+.RI "static bool \fBPartialMatch\fP (const ::std::string &str, const \fBRE\fP &re)"
+.br
+.ti -1c
+.RI "static bool \fBFullMatch\fP (const char *str, const \fBRE\fP &re)"
+.br
+.ti -1c
+.RI "static bool \fBPartialMatch\fP (const char *str, const \fBRE\fP &re)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

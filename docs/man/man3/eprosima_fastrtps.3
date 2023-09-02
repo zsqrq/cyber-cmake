@@ -1,0 +1,410 @@
+.TH "eprosima::fastrtps" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBrtps\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBParticipantAttributes\fP"
+.br
+.ti -1c
+.RI "class \fBPublisherAttributes\fP"
+.br
+.ti -1c
+.RI "class \fBSubscriberAttributes\fP"
+.br
+.ti -1c
+.RI "class \fBTopicAttributes\fP"
+.br
+.ti -1c
+.RI "class \fBDomain\fP"
+.br
+.ti -1c
+.RI "class \fBLog\fP"
+.br
+.ti -1c
+.RI "class \fBLogConsumer\fP"
+.br
+.ti -1c
+.RI "class \fBStdoutConsumer\fP"
+.br
+.ti -1c
+.RI "class \fBParticipant\fP"
+.br
+.ti -1c
+.RI "class \fBParticipantDiscoveryInfo\fP"
+.br
+.ti -1c
+.RI "class \fBParticipantListener\fP"
+.br
+.ti -1c
+.RI "class \fBPublisher\fP"
+.br
+.ti -1c
+.RI "class \fBPublisherHistory\fP"
+.br
+.ti -1c
+.RI "class \fBPublisherListener\fP"
+.br
+.ti -1c
+.RI "class \fBParameterList_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterList\fP"
+.br
+.ti -1c
+.RI "class \fBParameter_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterKey_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterLocator_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterString_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterPort_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterGuid_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterProtocolVersion_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterVendorId_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterIP4Address_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterBool_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterCount_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterEntityId_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterTime_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterBuiltinEndpointSet_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterPropertyList_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterSampleIdentity_t\fP"
+.br
+.ti -1c
+.RI "class \fBParameterToken_t\fP"
+.br
+.ti -1c
+.RI "class \fBQosList_t\fP"
+.br
+.ti -1c
+.RI "class \fBQosList\fP"
+.br
+.ti -1c
+.RI "class \fBQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBDurabilityQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBDeadlineQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBLatencyBudgetQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBLivelinessQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBReliabilityQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBOwnershipQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBDestinationOrderQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBUserDataQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBTimeBasedFilterQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBPresentationQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBPartitionQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBTopicDataQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBGroupDataQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBHistoryQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBResourceLimitsQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBDurabilityServiceQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBLifespanQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBOwnershipStrengthQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBTransportPriorityQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBPublishModeQosPolicy\fP"
+.br
+.ti -1c
+.RI "class \fBReaderQos\fP"
+.br
+.ti -1c
+.RI "class \fBWriterQos\fP"
+.br
+.ti -1c
+.RI "class \fBSampleInfo_t\fP"
+.br
+.ti -1c
+.RI "class \fBSubscriber\fP"
+.br
+.ti -1c
+.RI "class \fBSubscriberHistory\fP"
+.br
+.ti -1c
+.RI "class \fBSubscriberListener\fP"
+.br
+.ti -1c
+.RI "class \fBTopicDataType\fP"
+.br
+.ti -1c
+.RI "class \fBDBQueue\fP"
+.br
+.ti -1c
+.RI "class \fBeClock\fP"
+.br
+.ti -1c
+.RI "class \fBIPFinder\fP"
+.br
+.ti -1c
+.RI "class \fBSemaphore\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::DurabilityQosPolicyKind\fP \fBDurabilityQosPolicyKind_t\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::LivelinessQosPolicyKind\fP \fBLivelinessQosPolicyKind\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::ReliabilityQosPolicyKind\fP \fBReliabilityQosPolicyKind\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::PublishModeQosPolicyKind\fP \fBPublishModeQosPolicyKind_t\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBParameterId_t\fP : uint16_t { \fBPID_PAD\fP = 0x0000, \fBPID_SENTINEL\fP = 0x0001, \fBPID_USER_DATA\fP = 0x002c, \fBPID_TOPIC_NAME\fP = 0x0005, \fBPID_TYPE_NAME\fP = 0x0007, \fBPID_GROUP_DATA\fP =0x002d, \fBPID_TOPIC_DATA\fP =0x002e, \fBPID_DURABILITY\fP =0x001d, \fBPID_DURABILITY_SERVICE\fP =0x001e, \fBPID_DEADLINE\fP =0x0023, \fBPID_LATENCY_BUDGET\fP =0x0027, \fBPID_LIVELINESS\fP =0x001b, \fBPID_RELIABILITY\fP =0x001A, \fBPID_LIFESPAN\fP =0x002b, \fBPID_DESTINATION_ORDER\fP =0x0025, \fBPID_HISTORY\fP =0x0040, \fBPID_RESOURCE_LIMITS\fP =0x0041, \fBPID_OWNERSHIP\fP =0x001f, \fBPID_OWNERSHIP_STRENGTH\fP =0x0006, \fBPID_PRESENTATION\fP =0x0021, \fBPID_PARTITION\fP =0x0029, \fBPID_TIME_BASED_FILTER\fP =0x0004, \fBPID_TRANSPORT_PRIORITY\fP =0x0049, \fBPID_PROTOCOL_VERSION\fP = 0x0015, \fBPID_VENDORID\fP = 0x0016, \fBPID_UNICAST_LOCATOR\fP = 0x002f, \fBPID_MULTICAST_LOCATOR\fP = 0x0030, \fBPID_MULTICAST_IPADDRESS\fP =0x0011, \fBPID_DEFAULT_UNICAST_LOCATOR\fP = 0x0031, \fBPID_DEFAULT_MULTICAST_LOCATOR\fP = 0x0048, \fBPID_METATRAFFIC_UNICAST_LOCATOR\fP = 0x0032, \fBPID_METATRAFFIC_MULTICAST_LOCATOR\fP = 0x0033, \fBPID_DEFAULT_UNICAST_IPADDRESS\fP =0x000c, \fBPID_DEFAULT_UNICAST_PORT\fP = 0x000e, \fBPID_METATRAFFIC_UNICAST_IPADDRESS\fP =0x0045, \fBPID_METATRAFFIC_UNICAST_PORT\fP = 0x000d, \fBPID_METATRAFFIC_MULTICAST_IPADDRESS\fP =0x000b, \fBPID_METATRAFFIC_MULTICAST_PORT\fP = 0x0046, \fBPID_EXPECTS_INLINE_QOS\fP =0x0043, \fBPID_PARTICIPANT_MANUAL_LIVELINESS_COUNT\fP =0x0034, \fBPID_PARTICIPANT_BUILTIN_ENDPOINTS\fP = 0x0044, \fBPID_PARTICIPANT_LEASE_DURATION\fP = 0x0002, \fBPID_CONTENT_FILTER_PROPERTY\fP =0x0035, \fBPID_PARTICIPANT_GUID\fP = 0x0050, \fBPID_PARTICIPANT_ENTITYID\fP =0x0051, \fBPID_GROUP_GUID\fP =0x0052, \fBPID_GROUP_ENTITYID\fP =0x0053, \fBPID_BUILTIN_ENDPOINT_SET\fP = 0x0058, \fBPID_PROPERTY_LIST\fP = 0x0059, \fBPID_TYPE_MAX_SIZE_SERIALIZED\fP =0x0060, \fBPID_ENTITY_NAME\fP = 0x0062, \fBPID_KEY_HASH\fP = 0x0070, \fBPID_STATUS_INFO\fP = 0x0071, \fBPID_ENDPOINT_GUID\fP = 0x005a, \fBPID_IDENTITY_TOKEN\fP = 0x1001, \fBPID_RELATED_SAMPLE_IDENTITY\fP = 0x800f }"
+.br
+.ti -1c
+.RI "enum \fBDurabilityQosPolicyKind\fP : octet { \fBVOLATILE_DURABILITY_QOS\fP, \fBTRANSIENT_LOCAL_DURABILITY_QOS\fP, \fBTRANSIENT_DURABILITY_QOS\fP, \fBPERSISTENT_DURABILITY_QOS\fP }"
+.br
+.ti -1c
+.RI "enum \fBLivelinessQosPolicyKind\fP : octet { \fBAUTOMATIC_LIVELINESS_QOS\fP, \fBMANUAL_BY_PARTICIPANT_LIVELINESS_QOS\fP, \fBMANUAL_BY_TOPIC_LIVELINESS_QOS\fP }"
+.br
+.ti -1c
+.RI "enum \fBReliabilityQosPolicyKind\fP : octet { \fBBEST_EFFORT_RELIABILITY_QOS\fP = 0x01, \fBRELIABLE_RELIABILITY_QOS\fP = 0x02 }"
+.br
+.ti -1c
+.RI "enum \fBOwnershipQosPolicyKind\fP : octet { \fBSHARED_OWNERSHIP_QOS\fP, \fBEXCLUSIVE_OWNERSHIP_QOS\fP }"
+.br
+.ti -1c
+.RI "enum \fBDestinationOrderQosPolicyKind\fP : octet { \fBBY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS\fP, \fBBY_SOURCE_TIMESTAMP_DESTINATIONORDER_QOS\fP }"
+.br
+.ti -1c
+.RI "enum \fBPresentationQosPolicyAccessScopeKind\fP : octet { \fBINSTANCE_PRESENTATION_QOS\fP, \fBTOPIC_PRESENTATION_QOS\fP, \fBGROUP_PRESENTATION_QOS\fP }"
+.br
+.ti -1c
+.RI "enum \fBHistoryQosPolicyKind\fP : octet { \fBKEEP_LAST_HISTORY_QOS\fP, \fBKEEP_ALL_HISTORY_QOS\fP }"
+.br
+.ti -1c
+.RI "enum \fBPublishModeQosPolicyKind\fP : octet { \fBSYNCHRONOUS_PUBLISH_MODE\fP, \fBASYNCHRONOUS_PUBLISH_MODE\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator!=\fP (\fBTopicAttributes\fP &t1, \fBTopicAttributes\fP &t2)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains the publisher subscriber layer\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef enum \fBeprosima::fastrtps::DurabilityQosPolicyKind\fP \fBeprosima::fastrtps::DurabilityQosPolicyKind_t\fP"
+Enum DurabilityQosPolicyKind_t, different kinds of durability for \fBDurabilityQosPolicy\fP\&. 
+.SS "typedef enum \fBeprosima::fastrtps::LivelinessQosPolicyKind\fP \fBeprosima::fastrtps::LivelinessQosPolicyKind\fP"
+Enum LivelinessQosPolicyKind, different kinds of liveliness for \fBLivelinessQosPolicy\fP 
+.SS "typedef enum \fBeprosima::fastrtps::PublishModeQosPolicyKind\fP \fBeprosima::fastrtps::PublishModeQosPolicyKind_t\fP"
+Enum PublishModeQosPolicyKind, different kinds of publication synchronism 
+.SS "typedef enum \fBeprosima::fastrtps::ReliabilityQosPolicyKind\fP \fBeprosima::fastrtps::ReliabilityQosPolicyKind\fP"
+Enum ReliabilityQosPolicyKind, different kinds of reliability for \fBReliabilityQosPolicy\fP\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBeprosima::fastrtps::DestinationOrderQosPolicyKind\fP : octet"
+Enum OwnershipQosPolicyKind, different kinds of destination order for \fBDestinationOrderQosPolicy\fP\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIBY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS \fP\fP
+By Reception Timestamp, default value\&. 
+.TP
+\fB\fIBY_SOURCE_TIMESTAMP_DESTINATIONORDER_QOS \fP\fP
+By Source Timestamp\&. 
+.SS "enum \fBeprosima::fastrtps::DurabilityQosPolicyKind\fP : octet"
+Enum DurabilityQosPolicyKind_t, different kinds of durability for \fBDurabilityQosPolicy\fP\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIVOLATILE_DURABILITY_QOS \fP\fP
+Volatile Durability (default for Subscribers)\&. 
+.TP
+\fB\fITRANSIENT_LOCAL_DURABILITY_QOS \fP\fP
+Transient Local Durability (default for Publishers)\&. 
+.TP
+\fB\fITRANSIENT_DURABILITY_QOS \fP\fP
+NOT IMPLEMENTED\&. 
+.TP
+\fB\fIPERSISTENT_DURABILITY_QOS \fP\fP
+NOT IMPLEMENTED\&. 
+.SS "enum \fBeprosima::fastrtps::HistoryQosPolicyKind\fP : octet"
+Enum HistoryQosPolicyKind, different kinds of History Qos for \fBHistoryQosPolicy\fP\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIKEEP_LAST_HISTORY_QOS \fP\fP
+Keep only a number of samples, default value\&. 
+.TP
+\fB\fIKEEP_ALL_HISTORY_QOS \fP\fP
+Keep all samples until the \fBResourceLimitsQosPolicy\fP are exhausted\&. 
+.SS "enum \fBeprosima::fastrtps::LivelinessQosPolicyKind\fP : octet"
+Enum LivelinessQosPolicyKind, different kinds of liveliness for \fBLivelinessQosPolicy\fP 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIAUTOMATIC_LIVELINESS_QOS \fP\fP
+Automatic Liveliness, default value\&. 
+.TP
+\fB\fIMANUAL_BY_PARTICIPANT_LIVELINESS_QOS \fP\fP
+MANUAL_BY_PARTICIPANT_LIVELINESS_QOS\&. 
+.TP
+\fB\fIMANUAL_BY_TOPIC_LIVELINESS_QOS \fP\fP
+MANUAL_BY_TOPIC_LIVELINESS_QOS\&. 
+.SS "enum \fBeprosima::fastrtps::OwnershipQosPolicyKind\fP : octet"
+Enum OwnershipQosPolicyKind, different kinds of ownership for \fBOwnershipQosPolicy\fP\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISHARED_OWNERSHIP_QOS \fP\fP
+Shared Ownership, default value\&. 
+.TP
+\fB\fIEXCLUSIVE_OWNERSHIP_QOS \fP\fP
+Exclusive ownership\&. 
+.SS "enum \fBeprosima::fastrtps::PresentationQosPolicyAccessScopeKind\fP : octet"
+Enum PresentationQosPolicyAccessScopeKind, different kinds of Presentation Policy order for \fBPresentationQosPolicy\fP\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIINSTANCE_PRESENTATION_QOS \fP\fP
+Instance Presentation, default value\&. 
+.TP
+\fB\fITOPIC_PRESENTATION_QOS \fP\fP
+Topic Presentation\&. 
+.TP
+\fB\fIGROUP_PRESENTATION_QOS \fP\fP
+Group Presentation\&. 
+.SS "enum \fBeprosima::fastrtps::PublishModeQosPolicyKind\fP : octet"
+Enum PublishModeQosPolicyKind, different kinds of publication synchronism 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISYNCHRONOUS_PUBLISH_MODE \fP\fP
+Synchronous publication mode (default for writers)\&. 
+.TP
+\fB\fIASYNCHRONOUS_PUBLISH_MODE \fP\fP
+Asynchronous publication mode\&. 
+.SS "enum \fBeprosima::fastrtps::ReliabilityQosPolicyKind\fP : octet"
+Enum ReliabilityQosPolicyKind, different kinds of reliability for \fBReliabilityQosPolicy\fP\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIBEST_EFFORT_RELIABILITY_QOS \fP\fP
+Best Effort reliability (default for Subscribers)\&. 
+.TP
+\fB\fIRELIABLE_RELIABILITY_QOS \fP\fP
+Reliable reliability (default for Publishers)\&. 
+.SH "Function Documentation"
+.PP 
+.SS "bool eprosima::fastrtps::operator!= (\fBTopicAttributes\fP & t1, \fBTopicAttributes\fP & t2)\fC [inline]\fP"
+Check if two topic attributes are not equal 
+.PP
+\fBParameters\fP
+.RS 4
+\fIt1\fP First instance of \fBTopicAttributes\fP to compare 
+.br
+\fIt2\fP Second instance of \fBTopicAttributes\fP to compare 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the instances are not equal\&. False if the instances are equal\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

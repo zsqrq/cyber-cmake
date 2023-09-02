@@ -1,0 +1,161 @@
+.TH "third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/common/Types.h" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/common/Types.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stddef\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <cstdint>\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include '\&.\&./\&.\&./fastrtps_dll\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::ProtocolVersion_t\fP"
+.br
+.RI "Structure \fBProtocolVersion_t\fP, contains the protocol version\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBeprosima\fP"
+.br
+.RI "Maximum payload is maximum of UDP packet size minus 536bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) With those 536 bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) bytes is posible to send RTPS Header plus RTPS Data submessage plus RTPS Heartbeat submessage\&. "
+.ti -1c
+.RI " \fBeprosima::fastrtps\fP"
+.br
+.ti -1c
+.RI " \fBeprosima::fastrtps::rtps\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBEPROSIMA_BIG_ENDIAN\fP   0"
+.br
+.ti -1c
+.RI "#define \fBBIT0\fP   0x1"
+.br
+.ti -1c
+.RI "#define \fBBIT1\fP   0x2"
+.br
+.ti -1c
+.RI "#define \fBBIT2\fP   0x4"
+.br
+.ti -1c
+.RI "#define \fBBIT3\fP   0x8"
+.br
+.ti -1c
+.RI "#define \fBBIT4\fP   0x10"
+.br
+.ti -1c
+.RI "#define \fBBIT5\fP   0x20"
+.br
+.ti -1c
+.RI "#define \fBBIT6\fP   0x40"
+.br
+.ti -1c
+.RI "#define \fBBIT7\fP   0x80"
+.br
+.ti -1c
+.RI "#define \fBBIT\fP(i)   ((i==0) ? BIT0 : (i==1) ? BIT1 :(i==2)?BIT2:(i==3)?BIT3:(i==4)?BIT4:(i==5)?BIT5:(i==6)?BIT6:(i==7)?BIT7:0x0)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::rtps::ReliabilityKind_t\fP \fBeprosima::fastrtps::rtps::ReliabilityKind_t\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::rtps::DurabilityKind_t\fP \fBeprosima::fastrtps::rtps::DurabilityKind_t\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::rtps::EndpointKind_t\fP \fBeprosima::fastrtps::rtps::EndpointKind_t\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBeprosima::fastrtps::rtps::TopicKind_t\fP \fBeprosima::fastrtps::rtps::TopicKind_t\fP"
+.br
+.RI "Topic kind\&. "
+.ti -1c
+.RI "typedef unsigned char \fBeprosima::fastrtps::rtps::octet\fP"
+.br
+.ti -1c
+.RI "typedef unsigned char \fBeprosima::fastrtps::rtps::SubmessageFlag\fP"
+.br
+.ti -1c
+.RI "typedef uint32_t \fBeprosima::fastrtps::rtps::BuiltinEndpointSet_t\fP"
+.br
+.ti -1c
+.RI "typedef uint32_t \fBeprosima::fastrtps::rtps::Count_t\fP"
+.br
+.ti -1c
+.RI "typedef octet \fBeprosima::fastrtps::rtps::VendorId_t\fP[2]"
+.br
+.RI "Structure VendorId_t, specifying the vendor Id of the implementation\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::Endianness_t\fP { \fBeprosima::fastrtps::rtps::BIGEND\fP = 0x1, \fBeprosima::fastrtps::rtps::LITTLEEND\fP = 0x0 }"
+.br
+.RI "This enumeration represents endianness types\&. "
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::ReliabilityKind_t\fP { \fBRELIABLE\fP, \fBBEST_EFFORT\fP }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::DurabilityKind_t\fP { \fBVOLATILE\fP, \fBTRANSIENT_LOCAL\fP }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::EndpointKind_t\fP { \fBREADER\fP, \fBWRITER\fP }"
+.br
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::TopicKind_t\fP { \fBNO_KEY\fP, \fBWITH_KEY\fP }"
+.br
+.RI "Topic kind\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "const ProtocolVersion_t \fBeprosima::fastrtps::rtps::c_ProtocolVersion_2_0\fP (2, 0)"
+.br
+.ti -1c
+.RI "const ProtocolVersion_t \fBeprosima::fastrtps::rtps::c_ProtocolVersion_2_1\fP (2, 1)"
+.br
+.ti -1c
+.RI "const ProtocolVersion_t \fBeprosima::fastrtps::rtps::c_ProtocolVersion_2_2\fP (2, 2)"
+.br
+.ti -1c
+.RI "const ProtocolVersion_t \fBeprosima::fastrtps::rtps::c_ProtocolVersion\fP (2, 1)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const Endianness_t \fBeprosima::fastrtps::rtps::DEFAULT_ENDIAN\fP = LITTLEEND"
+.br
+.ti -1c
+.RI "const VendorId_t \fBeprosima::fastrtps::rtps::c_VendorId_Unknown\fP ={0x00,0x00}"
+.br
+.ti -1c
+.RI "const VendorId_t \fBeprosima::fastrtps::rtps::c_VendorId_eProsima\fP ={0x01,0x0F}"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

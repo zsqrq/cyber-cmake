@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -83,8 +85,8 @@ Inheritance diagram for apollo::cyber::logger::AsyncLogger:</div>
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1logger_1_1AsyncLogger__inherit__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1logger_1_1AsyncLogger_inherit__map" alt="Inheritance graph"/></div>
 <map name="aapollo_1_1cyber_1_1logger_1_1AsyncLogger_inherit__map" id="aapollo_1_1cyber_1_1logger_1_1AsyncLogger_inherit__map">
-<area shape="rect" title="Wrapper for a glog Logger which asynchronously writes log messages. This class starts a new thread re..." alt="" coords="5,131,665,311"/>
-<area shape="rect" title=" " alt="" coords="257,5,414,83"/>
+<area shape="rect" title="Wrapper for a glog Logger which asynchronously writes log messages. This class starts a new thread re..." alt="" coords="9,175,670,355"/>
+<area shape="rect" href="classgoogle_1_1base_1_1Logger.html" title=" " alt="" coords="5,5,673,127"/>
 </map>
 </div>
 <div class="dynheader">
@@ -92,15 +94,15 @@ Collaboration diagram for apollo::cyber::logger::AsyncLogger:</div>
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1logger_1_1AsyncLogger__coll__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1logger_1_1AsyncLogger_coll__map" alt="Collaboration graph"/></div>
 <map name="aapollo_1_1cyber_1_1logger_1_1AsyncLogger_coll__map" id="aapollo_1_1cyber_1_1logger_1_1AsyncLogger_coll__map">
-<area shape="rect" title="Wrapper for a glog Logger which asynchronously writes log messages. This class starts a new thread re..." alt="" coords="5,131,665,311"/>
-<area shape="rect" title=" " alt="" coords="257,5,414,83"/>
+<area shape="rect" title="Wrapper for a glog Logger which asynchronously writes log messages. This class starts a new thread re..." alt="" coords="9,175,670,355"/>
+<area shape="rect" href="classgoogle_1_1base_1_1Logger.html" title=" " alt="" coords="5,5,673,127"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae1668301703ce3c01fe1fd2bf14c645c"><td class="memItemLeft" align="right" valign="top"><a id="ae1668301703ce3c01fe1fd2bf14c645c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AsyncLogger</b> (google::base::Logger *wrapped)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AsyncLogger</b> (<a class="el" href="classgoogle_1_1base_1_1Logger.html">google::base::Logger</a> *wrapped)</td></tr>
 <tr class="separator:ae1668301703ce3c01fe1fd2bf14c645c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57a56cd44d68c932c229638169a8ece1"><td class="memItemLeft" align="right" valign="top"><a id="a57a56cd44d68c932c229638169a8ece1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1logger_1_1AsyncLogger.html#a57a56cd44d68c932c229638169a8ece1">Start</a> ()</td></tr>
@@ -148,13 +150,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Get the current LOG file size. The return value is an approximate value since some logged data may not have been flushed to disk yet. </p>
 <dl class="section return"><dt>Returns</dt><dd>the log file size </dd></dl>
+
+<p>Implements <a class="el" href="classgoogle_1_1base_1_1Logger.html">google::base::Logger</a>.</p>
 
 </div>
 </div>
@@ -227,7 +231,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -242,6 +246,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </table>
   </dd>
 </dl>
+
+<p>Implements <a class="el" href="classgoogle_1_1base_1_1Logger.html">google::base::Logger</a>.</p>
 
 </div>
 </div>

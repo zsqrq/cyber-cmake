@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -93,7 +95,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6009e04041d3cb58d21ac45562cc44f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get node's name.  <a href="classapollo_1_1cyber_1_1Node.html#a6009e04041d3cb58d21ac45562cc44f2">More...</a><br /></td></tr>
 <tr class="separator:a6009e04041d3cb58d21ac45562cc44f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ba09b337623830c2a3c53e3f70de285"><td class="memTemplParams" colspan="2">template&lt;typename MessageT &gt; </td></tr>
-<tr class="memitem:a6ba09b337623830c2a3c53e3f70de285"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1Node.html#a6ba09b337623830c2a3c53e3f70de285">CreateWriter</a> (const proto::RoleAttributes &amp;role_attr) -&gt; std::shared_ptr&lt; <a class="el" href="classapollo_1_1cyber_1_1Writer.html">Writer</a>&lt; MessageT &gt;&gt;</td></tr>
+<tr class="memitem:a6ba09b337623830c2a3c53e3f70de285"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1Node.html#a6ba09b337623830c2a3c53e3f70de285">CreateWriter</a> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &amp;role_attr) -&gt; std::shared_ptr&lt; <a class="el" href="classapollo_1_1cyber_1_1Writer.html">Writer</a>&lt; MessageT &gt;&gt;</td></tr>
 <tr class="memdesc:a6ba09b337623830c2a3c53e3f70de285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classapollo_1_1cyber_1_1Writer.html">Writer</a> with specific message type.  <a href="classapollo_1_1cyber_1_1Node.html#a6ba09b337623830c2a3c53e3f70de285">More...</a><br /></td></tr>
 <tr class="separator:a6ba09b337623830c2a3c53e3f70de285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb01c315d71730e31fbd7687f99ad664"><td class="memTemplParams" colspan="2">template&lt;typename MessageT &gt; </td></tr>
@@ -109,7 +111,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2e17c58e7b3cd8867991cab633d90b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classapollo_1_1cyber_1_1Reader.html" title="Reader subscribes a channel, it has two main functions:">Reader</a> with specific message type with reader config.  <a href="classapollo_1_1cyber_1_1Node.html#a2e17c58e7b3cd8867991cab633d90b8f">More...</a><br /></td></tr>
 <tr class="separator:a2e17c58e7b3cd8867991cab633d90b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d2ff5d6345df80ab6f519539ef62f9f"><td class="memTemplParams" colspan="2">template&lt;typename MessageT &gt; </td></tr>
-<tr class="memitem:a1d2ff5d6345df80ab6f519539ef62f9f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1Node.html#a1d2ff5d6345df80ab6f519539ef62f9f">CreateReader</a> (const proto::RoleAttributes &amp;role_attr, const CallbackFunc&lt; MessageT &gt; &amp;reader_func=nullptr) -&gt; std::shared_ptr&lt; <a class="el" href="classapollo_1_1cyber_1_1Reader.html">cyber::Reader</a>&lt; MessageT &gt;&gt;</td></tr>
+<tr class="memitem:a1d2ff5d6345df80ab6f519539ef62f9f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1Node.html#a1d2ff5d6345df80ab6f519539ef62f9f">CreateReader</a> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &amp;role_attr, const CallbackFunc&lt; MessageT &gt; &amp;reader_func=nullptr) -&gt; std::shared_ptr&lt; <a class="el" href="classapollo_1_1cyber_1_1Reader.html">cyber::Reader</a>&lt; MessageT &gt;&gt;</td></tr>
 <tr class="memdesc:a1d2ff5d6345df80ab6f519539ef62f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classapollo_1_1cyber_1_1Reader.html" title="Reader subscribes a channel, it has two main functions:">Reader</a> object with <code>RoleAttributes</code>  <a href="classapollo_1_1cyber_1_1Node.html#a1d2ff5d6345df80ab6f519539ef62f9f">More...</a><br /></td></tr>
 <tr class="separator:a1d2ff5d6345df80ab6f519539ef62f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbf019140a656f819a7f91d9d39143c7"><td class="memTemplParams" colspan="2">template&lt;typename Request , typename Response &gt; </td></tr>
@@ -127,7 +129,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteReader</b> (con
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteReader</b> (const <a class="el" href="structapollo_1_1cyber_1_1ReaderConfig.html">ReaderConfig</a> &amp;config)</td></tr>
 <tr class="separator:aa6fc91116189ec17f80b3ca329a3b872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1cade35de1f455191d9a00342cd87c1"><td class="memItemLeft" align="right" valign="top"><a id="ab1cade35de1f455191d9a00342cd87c1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteReader</b> (const proto::RoleAttributes &amp;role_attr)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteReader</b> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &amp;role_attr)</td></tr>
 <tr class="separator:ab1cade35de1f455191d9a00342cd87c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4be2b14c6792747f8656dd919d27ab08"><td class="memItemLeft" align="right" valign="top"><a id="a4be2b14c6792747f8656dd919d27ab08"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1Node.html#a4be2b14c6792747f8656dd919d27ab08">Observe</a> ()</td></tr>
@@ -209,7 +211,7 @@ template&lt;typename MessageT &gt; </div>
         <tr>
           <td class="memname">auto apollo::cyber::Node::CreateReader </td>
           <td>(</td>
-          <td class="paramtype">const proto::RoleAttributes &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &amp;&#160;</td>
           <td class="paramname"><em>role_attr</em>, </td>
         </tr>
         <tr>
@@ -394,7 +396,7 @@ template&lt;typename MessageT &gt; </div>
         <tr>
           <td class="memname">auto apollo::cyber::Node::CreateWriter </td>
           <td>(</td>
-          <td class="paramtype">const proto::RoleAttributes &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &amp;&#160;</td>
           <td class="paramname"><em>role_attr</em></td><td>)</td>
           <td> -&gt; std::shared_ptr&lt;<a class="el" href="classapollo_1_1cyber_1_1Writer.html">Writer</a>&lt;MessageT&gt;&gt;</td>
         </tr>

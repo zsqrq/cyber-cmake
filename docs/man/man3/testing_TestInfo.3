@@ -1,0 +1,68 @@
+.TH "testing::TestInfo" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::TestInfo
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBtest_suite_name\fP () const"
+.br
+.ti -1c
+.RI "const char * \fBtest_case_name\fP () const"
+.br
+.ti -1c
+.RI "const char * \fBname\fP () const"
+.br
+.ti -1c
+.RI "const char * \fBtype_param\fP () const"
+.br
+.ti -1c
+.RI "const char * \fBvalue_param\fP () const"
+.br
+.ti -1c
+.RI "const char * \fBfile\fP () const"
+.br
+.ti -1c
+.RI "int \fBline\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_in_another_shard\fP () const"
+.br
+.ti -1c
+.RI "bool \fBshould_run\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_reportable\fP () const"
+.br
+.ti -1c
+.RI "const \fBTestResult\fP * \fBresult\fP () const"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBTest\fP"
+.br
+.ti -1c
+.RI "class \fBTestSuite\fP"
+.br
+.ti -1c
+.RI "class \fBinternal::UnitTestImpl\fP"
+.br
+.ti -1c
+.RI "class \fBinternal::StreamingListenerTest\fP"
+.br
+.ti -1c
+.RI "\fBTestInfo\fP * \fBinternal::MakeAndRegisterTestInfo\fP (const char *test_suite_name, const char *name, const char *type_param, const char *value_param, \fBinternal::CodeLocation\fP code_location, internal::TypeId fixture_class_id, internal::SetUpTestSuiteFunc set_up_tc, internal::TearDownTestSuiteFunc tear_down_tc, \fBinternal::TestFactoryBase\fP *factory)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

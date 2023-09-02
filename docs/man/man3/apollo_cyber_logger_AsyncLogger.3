@@ -1,4 +1,4 @@
-.TH "apollo::cyber::logger::AsyncLogger" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::logger::AsyncLogger" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,12 +10,12 @@ apollo::cyber::logger::AsyncLogger \- Wrapper for a glog \fBLogger\fP which asyn
 .PP
 \fC#include <async_logger\&.h>\fP
 .PP
-Inherits google::base::Logger\&.
+Inherits \fBgoogle::base::Logger\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBAsyncLogger\fP (google::base::Logger *wrapped)"
+.RI "\fBAsyncLogger\fP (\fBgoogle::base::Logger\fP *wrapped)"
 .br
 .ti -1c
 .RI "void \fBStart\fP ()"
@@ -58,7 +58,7 @@ The logger limits the total amount of buffer space, so if the underlying log blo
 
 .SH "Member Function Documentation"
 .PP 
-.SS "uint32_t apollo::cyber::logger::AsyncLogger::LogSize ()\fC [override]\fP"
+.SS "uint32_t apollo::cyber::logger::AsyncLogger::LogSize ()\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Get the current LOG file size\&. The return value is an approximate value since some logged data may not have been flushed to disk yet\&. 
@@ -69,6 +69,8 @@ the log file size
 .RE
 .PP
 
+.PP
+Implements \fBgoogle::base::Logger\fP\&.
 .SS "std::thread* apollo::cyber::logger::AsyncLogger::LogThread ()\fC [inline]\fP"
 
 .PP
@@ -80,7 +82,7 @@ the pointer of log thread
 .RE
 .PP
 
-.SS "void apollo::cyber::logger::AsyncLogger::Write (bool force_flush, time_t timestamp, const char * message, int message_len)\fC [override]\fP"
+.SS "void apollo::cyber::logger::AsyncLogger::Write (bool force_flush, time_t timestamp, const char * message, int message_len)\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Write a message to the log\&. \fBStart()\fP must have been called\&. 
@@ -97,6 +99,8 @@ Write a message to the log\&. \fBStart()\fP must have been called\&.
 .RE
 .PP
 
+.PP
+Implements \fBgoogle::base::Logger\fP\&.
 
 .SH "Author"
 .PP 

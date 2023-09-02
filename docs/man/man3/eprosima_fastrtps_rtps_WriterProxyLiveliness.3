@@ -1,0 +1,66 @@
+.TH "eprosima::fastrtps::rtps::WriterProxyLiveliness" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::WriterProxyLiveliness
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WriterProxyLiveliness\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::TimedEvent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWriterProxyLiveliness\fP (\fBWriterProxy\fP *wp, double interval)"
+.br
+.ti -1c
+.RI "void \fBevent\fP (\fBEventCode\fP code, const char *msg=nullptr)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBWriterProxy\fP * \fBmp_WP\fP"
+.br
+.RI "Pointer to the \fBWriterProxy\fP associated with this specific event\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Class \fBWriterProxyLiveliness\fP, timed event to check the liveliness of a writer each leaseDuration\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::WriterProxyLiveliness::WriterProxyLiveliness (\fBWriterProxy\fP * wp, double interval)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIwp\fP 
+.br
+\fIinterval\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void eprosima::fastrtps::rtps::WriterProxyLiveliness::event (\fBEventCode\fP code, const char * msg = \fCnullptr\fP)\fC [virtual]\fP"
+Method invoked when the event occurs
+.PP
+\fBParameters\fP
+.RS 4
+\fIcode\fP Code representing the status of the event 
+.br
+\fImsg\fP Message associated to the event 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::TimedEvent\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

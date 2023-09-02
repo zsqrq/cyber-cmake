@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -93,8 +95,10 @@ Collaboration diagram for apollo::cyber::record::RecordBase:</div>
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1record_1_1RecordBase__coll__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1record_1_1RecordBase_coll__map" alt="Collaboration graph"/></div>
 <map name="aapollo_1_1cyber_1_1record_1_1RecordBase_coll__map" id="aapollo_1_1cyber_1_1record_1_1RecordBase_coll__map">
-<area shape="rect" title="Base class for record reader and writer." alt="" coords="5,145,607,325"/>
-<area shape="rect" title=" " alt="" coords="277,5,335,83"/>
+<area shape="rect" title="Base class for record reader and writer." alt="" coords="5,521,607,687"/>
+<area shape="rect" title=" " alt="" coords="171,257,230,334"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1proto_1_1Header.html" title=" " alt="" coords="254,132,841,459"/>
+<area shape="rect" title=" " alt="" coords="413,5,682,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -116,7 +120,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:af0044467095e85135bdf7a636558487c"><td class="memItemLeft" align="right" valign="top">virtual std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#af0044467095e85135bdf7a636558487c">GetChannelList</a> () const =0</td></tr>
 <tr class="memdesc:af0044467095e85135bdf7a636558487c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get channel list.  <a href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#af0044467095e85135bdf7a636558487c">More...</a><br /></td></tr>
 <tr class="separator:af0044467095e85135bdf7a636558487c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d4b41f6e72ccd5b49aa928f2cbdabb7"><td class="memItemLeft" align="right" valign="top">const proto::Header &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2d4b41f6e72ccd5b49aa928f2cbdabb7">GetHeader</a> () const</td></tr>
+<tr class="memitem:a2d4b41f6e72ccd5b49aa928f2cbdabb7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2d4b41f6e72ccd5b49aa928f2cbdabb7">GetHeader</a> () const</td></tr>
 <tr class="memdesc:a2d4b41f6e72ccd5b49aa928f2cbdabb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get record header.  <a href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2d4b41f6e72ccd5b49aa928f2cbdabb7">More...</a><br /></td></tr>
 <tr class="separator:a2d4b41f6e72ccd5b49aa928f2cbdabb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f3cda4d56cb535da7a81ec7d5956078"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2f3cda4d56cb535da7a81ec7d5956078">GetFile</a> () const</td></tr>
@@ -129,7 +133,7 @@ Protected Attributes</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>file_</b></td></tr>
 <tr class="separator:a3ce26ca2d17eec9a3d4e47749ace66b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4b08d823c058d17eb38abe92d0ac7e7"><td class="memItemLeft" align="right" valign="top"><a id="af4b08d823c058d17eb38abe92d0ac7e7"></a>
-proto::Header&#160;</td><td class="memItemRight" valign="bottom"><b>header_</b></td></tr>
+<a class="el" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a>&#160;</td><td class="memItemRight" valign="bottom"><b>header_</b></td></tr>
 <tr class="separator:af4b08d823c058d17eb38abe92d0ac7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a122b01307f078dbb0e1baa5d57226c5f"><td class="memItemLeft" align="right" valign="top"><a id="a122b01307f078dbb0e1baa5d57226c5f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_opened_</b> = false</td></tr>
@@ -206,7 +210,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_opened_</b> = fals
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const proto::Header&amp; apollo::cyber::record::RecordBase::GetHeader </td>
+          <td class="memname">const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a>&amp; apollo::cyber::record::RecordBase::GetHeader </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

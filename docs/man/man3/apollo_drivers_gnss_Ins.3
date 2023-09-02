@@ -1,0 +1,511 @@
+.TH "apollo::drivers::gnss::Ins" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::drivers::gnss::Ins
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkPositionCovarianceFieldNumber\fP = 9, \fBkEulerAnglesCovarianceFieldNumber\fP = 10, \fBkLinearVelocityCovarianceFieldNumber\fP = 11, \fBkAngularVelocityCovarianceFieldNumber\fP = 12, \fBkLinearAccelerationCovarianceFieldNumber\fP = 13, \fBkHeaderFieldNumber\fP = 1, \fBkPositionFieldNumber\fP = 4, \fBkEulerAnglesFieldNumber\fP = 5, \fBkLinearVelocityFieldNumber\fP = 6, \fBkAngularVelocityFieldNumber\fP = 7, \fBkLinearAccelerationFieldNumber\fP = 8, \fBkMeasurementTimeFieldNumber\fP = 2, \fBkTypeFieldNumber\fP = 3 }"
+.br
+.ti -1c
+.RI "typedef Ins_Type \fBType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBIns\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBIns\fP (const \fBIns\fP &from)"
+.br
+.ti -1c
+.RI "\fBIns\fP (\fBIns\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBIns\fP & \fBoperator=\fP (const \fBIns\fP &from)"
+.br
+.ti -1c
+.RI "\fBIns\fP & \fBoperator=\fP (\fBIns\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBIns\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBIns\fP *other)"
+.br
+.ti -1c
+.RI "\fBIns\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBIns\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBIns\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBposition_covariance_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_position_covariance\fP ()"
+.br
+.ti -1c
+.RI "float \fBposition_covariance\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_position_covariance\fP (int index, float value)"
+.br
+.ti -1c
+.RI "void \fBadd_position_covariance\fP (float value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< float > & \fBposition_covariance\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< float > * \fBmutable_position_covariance\fP ()"
+.br
+.ti -1c
+.RI "int \fBeuler_angles_covariance_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_euler_angles_covariance\fP ()"
+.br
+.ti -1c
+.RI "float \fBeuler_angles_covariance\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_euler_angles_covariance\fP (int index, float value)"
+.br
+.ti -1c
+.RI "void \fBadd_euler_angles_covariance\fP (float value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< float > & \fBeuler_angles_covariance\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< float > * \fBmutable_euler_angles_covariance\fP ()"
+.br
+.ti -1c
+.RI "int \fBlinear_velocity_covariance_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_linear_velocity_covariance\fP ()"
+.br
+.ti -1c
+.RI "float \fBlinear_velocity_covariance\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_linear_velocity_covariance\fP (int index, float value)"
+.br
+.ti -1c
+.RI "void \fBadd_linear_velocity_covariance\fP (float value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< float > & \fBlinear_velocity_covariance\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< float > * \fBmutable_linear_velocity_covariance\fP ()"
+.br
+.ti -1c
+.RI "int \fBangular_velocity_covariance_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_angular_velocity_covariance\fP ()"
+.br
+.ti -1c
+.RI "float \fBangular_velocity_covariance\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_angular_velocity_covariance\fP (int index, float value)"
+.br
+.ti -1c
+.RI "void \fBadd_angular_velocity_covariance\fP (float value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< float > & \fBangular_velocity_covariance\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< float > * \fBmutable_angular_velocity_covariance\fP ()"
+.br
+.ti -1c
+.RI "int \fBlinear_acceleration_covariance_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_linear_acceleration_covariance\fP ()"
+.br
+.ti -1c
+.RI "float \fBlinear_acceleration_covariance\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_linear_acceleration_covariance\fP (int index, float value)"
+.br
+.ti -1c
+.RI "void \fBadd_linear_acceleration_covariance\fP (float value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< float > & \fBlinear_acceleration_covariance\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< float > * \fBmutable_linear_acceleration_covariance\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_header\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_header\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Header\fP & \fBheader\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Header\fP * \fBrelease_header\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBmutable_header\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBunsafe_arena_release_header\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_position\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::PointLLH\fP & \fBposition\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::PointLLH\fP * \fBrelease_position\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::PointLLH\fP * \fBmutable_position\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_position\fP (::\fBapollo::common::PointLLH\fP *position)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_position\fP (::\fBapollo::common::PointLLH\fP *position)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::PointLLH\fP * \fBunsafe_arena_release_position\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_euler_angles\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_euler_angles\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBeuler_angles\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_euler_angles\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_euler_angles\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_euler_angles\fP (::\fBapollo::common::Point3D\fP *euler_angles)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_euler_angles\fP (::\fBapollo::common::Point3D\fP *euler_angles)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_euler_angles\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_linear_velocity\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_linear_velocity\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBlinear_velocity\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_linear_velocity\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_linear_velocity\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_linear_velocity\fP (::\fBapollo::common::Point3D\fP *linear_velocity)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_linear_velocity\fP (::\fBapollo::common::Point3D\fP *linear_velocity)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_linear_velocity\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_angular_velocity\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_angular_velocity\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBangular_velocity\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_angular_velocity\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_angular_velocity\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_angular_velocity\fP (::\fBapollo::common::Point3D\fP *angular_velocity)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_angular_velocity\fP (::\fBapollo::common::Point3D\fP *angular_velocity)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_angular_velocity\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_linear_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_linear_acceleration\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBlinear_acceleration\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_linear_acceleration\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_linear_acceleration\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_linear_acceleration\fP (::\fBapollo::common::Point3D\fP *linear_acceleration)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_linear_acceleration\fP (::\fBapollo::common::Point3D\fP *linear_acceleration)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_linear_acceleration\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_measurement_time\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_measurement_time\fP ()"
+.br
+.ti -1c
+.RI "double \fBmeasurement_time\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_measurement_time\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::gnss::Ins_Type \fBtype\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_type\fP (::apollo::drivers::gnss::Ins_Type value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBIns\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBIns\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Type *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBINVALID\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBCONVERGING\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBGOOD\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIns\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fsensor_5fmsgs_2fins_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBIns\fP &a, \fBIns\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::drivers::gnss::Ins::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Ins::MergeImpl
+}
+.fi
+.SS "constexpr Ins_Type apollo::drivers::gnss::Ins::CONVERGING\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Ins_Type_CONVERGING
+.fi
+.SS "constexpr Ins_Type apollo::drivers::gnss::Ins::GOOD\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Ins_Type_GOOD
+.fi
+.SS "constexpr Ins_Type apollo::drivers::gnss::Ins::INVALID\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Ins_Type_INVALID
+.fi
+.SS "constexpr int apollo::drivers::gnss::Ins::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    1
+.fi
+.SS "constexpr int apollo::drivers::gnss::Ins::Type_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Ins_Type_Type_ARRAYSIZE
+.fi
+.SS "constexpr Ins_Type apollo::drivers::gnss::Ins::Type_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Ins_Type_Type_MAX
+.fi
+.SS "constexpr Ins_Type apollo::drivers::gnss::Ins::Type_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Ins_Type_Type_MIN
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

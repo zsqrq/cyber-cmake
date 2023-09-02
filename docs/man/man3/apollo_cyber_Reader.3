@@ -1,4 +1,4 @@
-.TH "apollo::cyber::Reader< MessageT >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::Reader< MessageT >" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -33,7 +33,7 @@ Inherited by \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBReader\fP (const proto::RoleAttributes &role_attr, const CallbackFunc< MessageT > &reader_func=nullptr, uint32_t pending_queue_size=DEFAULT_PENDING_QUEUE_SIZE)"
+.RI "\fBReader\fP (const \fBproto::RoleAttributes\fP &role_attr, const CallbackFunc< MessageT > &reader_func=nullptr, uint32_t pending_queue_size=DEFAULT_PENDING_QUEUE_SIZE)"
 .br
 .ti -1c
 .RI "bool \fBInit\fP () override"
@@ -100,7 +100,7 @@ Inherited by \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
 .br
 .RI "Is there is at least one writer publish the channel that we subscribes? "
 .ti -1c
-.RI "void \fBGetWriters\fP (std::vector< proto::RoleAttributes > *writers) override"
+.RI "void \fBGetWriters\fP (std::vector< \fBproto::RoleAttributes\fP > *writers) override"
 .br
 .RI "Get all writers pushlish the channel we subscribes\&. "
 .in -1c
@@ -141,7 +141,7 @@ To save resource, \fCChannelBuffer\fP has limited length, it's passed through th
 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "template<typename MessageT > \fBapollo::cyber::Reader\fP< MessageT >::\fBReader\fP (const proto::RoleAttributes & role_attr, const CallbackFunc< MessageT > & reader_func = \fCnullptr\fP, uint32_t pending_queue_size = \fCDEFAULT_PENDING_QUEUE_SIZE\fP)\fC [explicit]\fP"
+.SS "template<typename MessageT > \fBapollo::cyber::Reader\fP< MessageT >::\fBReader\fP (const \fBproto::RoleAttributes\fP & role_attr, const CallbackFunc< MessageT > & reader_func = \fCnullptr\fP, uint32_t pending_queue_size = \fCDEFAULT_PENDING_QUEUE_SIZE\fP)\fC [explicit]\fP"
 Constructor a \fBReader\fP object\&. 
 .PP
 \fBParameters\fP
@@ -267,7 +267,7 @@ std::shared_ptr<MessageT> the oldest message
 
 .PP
 Reimplemented in \fBapollo::cyber::blocker::IntraReader< MessageT >\fP\&.
-.SS "template<typename MessageT > void \fBapollo::cyber::Reader\fP< MessageT >::GetWriters (std::vector< proto::RoleAttributes > * writers)\fC [override]\fP, \fC [virtual]\fP"
+.SS "template<typename MessageT > void \fBapollo::cyber::Reader\fP< MessageT >::GetWriters (std::vector< \fBproto::RoleAttributes\fP > * writers)\fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 Get all writers pushlish the channel we subscribes\&. 

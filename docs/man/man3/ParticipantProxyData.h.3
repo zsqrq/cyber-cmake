@@ -1,0 +1,100 @@
+.TH "third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/builtin/data/ParticipantProxyData.h" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/builtin/data/ParticipantProxyData.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <mutex>\fP
+.br
+\fC#include '\&.\&./\&.\&./\&.\&./qos/QosList\&.h'\fP
+.br
+\fC#include '\&.\&./\&.\&./\&.\&./qos/ParameterList\&.h'\fP
+.br
+\fC#include '\&.\&./\&.\&./attributes/WriterAttributes\&.h'\fP
+.br
+\fC#include '\&.\&./\&.\&./attributes/ReaderAttributes\&.h'\fP
+.br
+\fC#include '\&.\&./\&.\&./common/Token\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::ParticipantProxyData\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBeprosima\fP"
+.br
+.RI "Maximum payload is maximum of UDP packet size minus 536bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) With those 536 bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) bytes is posible to send RTPS Header plus RTPS Data submessage plus RTPS Heartbeat submessage\&. "
+.ti -1c
+.RI " \fBeprosima::fastrtps\fP"
+.br
+.ti -1c
+.RI " \fBeprosima::fastrtps::rtps\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDISCOVERY_PARTICIPANT_DATA_MAX_SIZE\fP   5000"
+.br
+.ti -1c
+.RI "#define \fBDISCOVERY_TOPIC_DATA_MAX_SIZE\fP   500"
+.br
+.ti -1c
+.RI "#define \fBDISCOVERY_PUBLICATION_DATA_MAX_SIZE\fP   5000"
+.br
+.ti -1c
+.RI "#define \fBDISCOVERY_SUBSCRIPTION_DATA_MAX_SIZE\fP   5000"
+.br
+.ti -1c
+.RI "#define \fBBUILTIN_PARTICIPANT_DATA_MAX_SIZE\fP   100"
+.br
+.ti -1c
+.RI "#define \fBDISC_BUILTIN_ENDPOINT_PARTICIPANT_ANNOUNCER\fP   0x00000001 << 0;"
+.br
+.ti -1c
+.RI "#define \fBDISC_BUILTIN_ENDPOINT_PARTICIPANT_DETECTOR\fP   0x00000001 << 1;"
+.br
+.ti -1c
+.RI "#define \fBDISC_BUILTIN_ENDPOINT_PUBLICATION_ANNOUNCER\fP   0x00000001 << 2;"
+.br
+.ti -1c
+.RI "#define \fBDISC_BUILTIN_ENDPOINT_PUBLICATION_DETECTOR\fP   0x00000001 << 3;"
+.br
+.ti -1c
+.RI "#define \fBDISC_BUILTIN_ENDPOINT_SUBSCRIPTION_ANNOUNCER\fP   0x00000001 << 4;"
+.br
+.ti -1c
+.RI "#define \fBDISC_BUILTIN_ENDPOINT_SUBSCRIPTION_DETECTOR\fP   0x00000001 << 5;"
+.br
+.ti -1c
+.RI "#define \fBDISC_BUILTIN_ENDPOINT_PARTICIPANT_PROXY_ANNOUNCER\fP   0x00000001 << 6;"
+.br
+.ti -1c
+.RI "#define \fBDISC_BUILTIN_ENDPOINT_PARTICIPANT_PROXY_DETECTOR\fP   0x00000001 << 7;"
+.br
+.ti -1c
+.RI "#define \fBDISC_BUILTIN_ENDPOINT_PARTICIPANT_STATE_ANNOUNCER\fP   0x00000001 << 8;"
+.br
+.ti -1c
+.RI "#define \fBDISC_BUILTIN_ENDPOINT_PARTICIPANT_STATE_DETECTOR\fP   0x00000001 << 9;"
+.br
+.ti -1c
+.RI "#define \fBBUILTIN_ENDPOINT_PARTICIPANT_MESSAGE_DATA_WRITER\fP   0x00000001 << 10;"
+.br
+.ti -1c
+.RI "#define \fBBUILTIN_ENDPOINT_PARTICIPANT_MESSAGE_DATA_READER\fP   0x00000001 << 11;"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

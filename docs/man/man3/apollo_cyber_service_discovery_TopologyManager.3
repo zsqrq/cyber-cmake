@@ -1,4 +1,4 @@
-.TH "apollo::cyber::service_discovery::TopologyManager" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::service_discovery::TopologyManager" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,19 +13,19 @@ apollo::cyber::service_discovery::TopologyManager \- elements in Cyber -- \fBNod
 
 .in +1c
 .ti -1c
-.RI "using \fBChangeSignal\fP = \fBbase::Signal\fP< const ChangeMsg & >"
+.RI "using \fBChangeSignal\fP = \fBbase::Signal\fP< const \fBChangeMsg\fP & >"
 .br
 .ti -1c
-.RI "using \fBChangeFunc\fP = std::function< void(const ChangeMsg &)>"
+.RI "using \fBChangeFunc\fP = std::function< void(const \fBChangeMsg\fP &)>"
 .br
 .ti -1c
-.RI "using \fBChangeConnection\fP = \fBbase::Connection\fP< const ChangeMsg & >"
+.RI "using \fBChangeConnection\fP = \fBbase::Connection\fP< const \fBChangeMsg\fP & >"
 .br
 .ti -1c
-.RI "using \fBPartNameContainer\fP = std::map< eprosima::fastrtps::rtps::GUID_t, std::string >"
+.RI "using \fBPartNameContainer\fP = std::map< \fBeprosima::fastrtps::rtps::GUID_t\fP, std::string >"
 .br
 .ti -1c
-.RI "using \fBPartInfo\fP = eprosima::fastrtps::ParticipantDiscoveryInfo"
+.RI "using \fBPartInfo\fP = \fBeprosima::fastrtps::ParticipantDiscoveryInfo\fP"
 .br
 .in -1c
 .SS "Public Member Functions"

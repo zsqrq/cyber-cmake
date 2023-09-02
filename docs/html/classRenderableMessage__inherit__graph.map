@@ -1,7 +1,7 @@
 <map id="RenderableMessage" name="RenderableMessage">
 <area shape="rect" id="node1" title=" " alt="" coords="391,5,903,332"/>
 <area shape="rect" id="node2" href="$classCyberTopologyMessage.html" title=" " alt="" coords="5,446,592,597"/>
-<area shape="rect" id="node3" href="$classGeneralMessageBase.html" title=" " alt="" coords="616,380,1373,663"/>
+<area shape="rect" id="node3" href="$classGeneralMessageBase.html" title=" " alt="" coords="617,380,1373,663"/>
 <area shape="rect" id="node4" href="$classGeneralChannelMessage.html" title=" " alt="" coords="415,711,918,1037"/>
 <area shape="rect" id="node5" href="$classGeneralMessage.html" title=" " alt="" coords="943,813,1700,935"/>
 </map>

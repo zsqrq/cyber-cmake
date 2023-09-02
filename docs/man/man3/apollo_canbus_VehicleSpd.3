@@ -1,0 +1,523 @@
+.TH "apollo::canbus::VehicleSpd" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::canbus::VehicleSpd
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkVehicleSpdFieldNumber\fP = 3, \fBkIsVehicleStandstillFieldNumber\fP = 1, \fBkIsVehicleSpdValidFieldNumber\fP = 2, \fBkIsWheelSpdRrValidFieldNumber\fP = 4, \fBkIsWheelSpdRlValidFieldNumber\fP = 7, \fBkWheelDirectionRrFieldNumber\fP = 5, \fBkWheelSpdRrFieldNumber\fP = 6, \fBkWheelSpdRlFieldNumber\fP = 9, \fBkWheelDirectionRlFieldNumber\fP = 8, \fBkWheelDirectionFrFieldNumber\fP = 11, \fBkWheelSpdFrFieldNumber\fP = 12, \fBkWheelDirectionFlFieldNumber\fP = 14, \fBkIsWheelSpdFrValidFieldNumber\fP = 10, \fBkIsWheelSpdFlValidFieldNumber\fP = 13, \fBkIsYawRateValidFieldNumber\fP = 16, \fBkIsAxValidFieldNumber\fP = 19, \fBkWheelSpdFlFieldNumber\fP = 15, \fBkYawRateFieldNumber\fP = 17, \fBkYawRateOffsetFieldNumber\fP = 18, \fBkAxFieldNumber\fP = 20, \fBkAxOffsetFieldNumber\fP = 21, \fBkAyFieldNumber\fP = 23, \fBkAyOffsetFieldNumber\fP = 24, \fBkLatAccFieldNumber\fP = 25, \fBkLongAccFieldNumber\fP = 26, \fBkVertAccFieldNumber\fP = 27, \fBkRollRateFieldNumber\fP = 28, \fBkAccEstFieldNumber\fP = 29, \fBkTimestampSecFieldNumber\fP = 30, \fBkIsAyValidFieldNumber\fP = 22 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBVehicleSpd\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBVehicleSpd\fP (const \fBVehicleSpd\fP &from)"
+.br
+.ti -1c
+.RI "\fBVehicleSpd\fP (\fBVehicleSpd\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBVehicleSpd\fP & \fBoperator=\fP (const \fBVehicleSpd\fP &from)"
+.br
+.ti -1c
+.RI "\fBVehicleSpd\fP & \fBoperator=\fP (\fBVehicleSpd\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBVehicleSpd\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBVehicleSpd\fP *other)"
+.br
+.ti -1c
+.RI "\fBVehicleSpd\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBVehicleSpd\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBVehicleSpd\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_vehicle_spd\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_vehicle_spd\fP ()"
+.br
+.ti -1c
+.RI "double \fBvehicle_spd\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_vehicle_spd\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_vehicle_standstill\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_vehicle_standstill\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_vehicle_standstill\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_vehicle_standstill\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_vehicle_spd_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_vehicle_spd_valid\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_vehicle_spd_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_vehicle_spd_valid\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_wheel_spd_rr_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_wheel_spd_rr_valid\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_wheel_spd_rr_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_wheel_spd_rr_valid\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_wheel_spd_rl_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_wheel_spd_rl_valid\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_wheel_spd_rl_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_wheel_spd_rl_valid\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_wheel_direction_rr\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_wheel_direction_rr\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::WheelSpeed_WheelSpeedType \fBwheel_direction_rr\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_wheel_direction_rr\fP (::apollo::canbus::WheelSpeed_WheelSpeedType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_wheel_spd_rr\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_wheel_spd_rr\fP ()"
+.br
+.ti -1c
+.RI "double \fBwheel_spd_rr\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_wheel_spd_rr\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_wheel_spd_rl\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_wheel_spd_rl\fP ()"
+.br
+.ti -1c
+.RI "double \fBwheel_spd_rl\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_wheel_spd_rl\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_wheel_direction_rl\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_wheel_direction_rl\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::WheelSpeed_WheelSpeedType \fBwheel_direction_rl\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_wheel_direction_rl\fP (::apollo::canbus::WheelSpeed_WheelSpeedType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_wheel_direction_fr\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_wheel_direction_fr\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::WheelSpeed_WheelSpeedType \fBwheel_direction_fr\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_wheel_direction_fr\fP (::apollo::canbus::WheelSpeed_WheelSpeedType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_wheel_spd_fr\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_wheel_spd_fr\fP ()"
+.br
+.ti -1c
+.RI "double \fBwheel_spd_fr\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_wheel_spd_fr\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_wheel_direction_fl\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_wheel_direction_fl\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::WheelSpeed_WheelSpeedType \fBwheel_direction_fl\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_wheel_direction_fl\fP (::apollo::canbus::WheelSpeed_WheelSpeedType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_wheel_spd_fr_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_wheel_spd_fr_valid\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_wheel_spd_fr_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_wheel_spd_fr_valid\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_wheel_spd_fl_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_wheel_spd_fl_valid\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_wheel_spd_fl_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_wheel_spd_fl_valid\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_yaw_rate_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_yaw_rate_valid\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_yaw_rate_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_yaw_rate_valid\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_ax_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_ax_valid\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_ax_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_ax_valid\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_wheel_spd_fl\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_wheel_spd_fl\fP ()"
+.br
+.ti -1c
+.RI "double \fBwheel_spd_fl\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_wheel_spd_fl\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_yaw_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_yaw_rate\fP ()"
+.br
+.ti -1c
+.RI "double \fByaw_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_yaw_rate\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_yaw_rate_offset\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_yaw_rate_offset\fP ()"
+.br
+.ti -1c
+.RI "double \fByaw_rate_offset\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_yaw_rate_offset\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_ax\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_ax\fP ()"
+.br
+.ti -1c
+.RI "double \fBax\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_ax\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_ax_offset\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_ax_offset\fP ()"
+.br
+.ti -1c
+.RI "double \fBax_offset\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_ax_offset\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_ay\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_ay\fP ()"
+.br
+.ti -1c
+.RI "double \fBay\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_ay\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_ay_offset\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_ay_offset\fP ()"
+.br
+.ti -1c
+.RI "double \fBay_offset\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_ay_offset\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_lat_acc\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_lat_acc\fP ()"
+.br
+.ti -1c
+.RI "double \fBlat_acc\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_lat_acc\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_long_acc\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_long_acc\fP ()"
+.br
+.ti -1c
+.RI "double \fBlong_acc\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_long_acc\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_vert_acc\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_vert_acc\fP ()"
+.br
+.ti -1c
+.RI "double \fBvert_acc\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_vert_acc\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_roll_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_roll_rate\fP ()"
+.br
+.ti -1c
+.RI "double \fBroll_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_roll_rate\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acc_est\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acc_est\fP ()"
+.br
+.ti -1c
+.RI "double \fBacc_est\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acc_est\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_timestamp_sec\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_timestamp_sec\fP ()"
+.br
+.ti -1c
+.RI "double \fBtimestamp_sec\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_timestamp_sec\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_ay_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_ay_valid\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_ay_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_ay_valid\fP (bool value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBVehicleSpd\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBVehicleSpd\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVehicleSpd\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fchassis_5fmsgs_2fchassis_5fdetail_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBVehicleSpd\fP &a, \fBVehicleSpd\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::canbus::VehicleSpd::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    VehicleSpd::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::canbus::VehicleSpd::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    5
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

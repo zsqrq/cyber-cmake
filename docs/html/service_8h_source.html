@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -202,7 +204,7 @@ $(function() {
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keywordflow">if</span> (IsInit()) {</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  proto::RoleAttributes role;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> role;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  role.set_node_name(node_name_);</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  role.set_channel_name(response_channel_);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keyword">auto</span> channel_id = common::GlobalData::RegisterChannel(response_channel_);</div>
@@ -228,7 +230,7 @@ $(function() {
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      role,</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      [=](<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; request,</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;          <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1transport_1_1MessageInfo.html">transport::MessageInfo</a>&amp; message_info,</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;          <span class="keyword">const</span> proto::RoleAttributes&amp; reader_attr) {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;          <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&amp; reader_attr) {</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        (void)reader_attr;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keyword">auto</span> task = [<span class="keyword">this</span>, request, message_info]() {</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;          this-&gt;HandleRequest(request, message_info);</div>
@@ -288,8 +290,9 @@ $(function() {
 <div class="ttc" id="aclassapollo_1_1cyber_1_1Service_html_a616f1abb7686a6ba5af0dfd1e5d920f9"><div class="ttname"><a href="classapollo_1_1cyber_1_1Service.html#a616f1abb7686a6ba5af0dfd1e5d920f9">apollo::cyber::Service::Service</a></div><div class="ttdeci">Service(const std::string &amp;node_name, const std::string &amp;service_name, ServiceCallback &amp;&amp;service_callback)</div><div class="ttdoc">Construct a new Service object.</div><div class="ttdef"><b>Definition:</b> service.h:68</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1Service_html_aea802e52a8799ad566e779b48c0bd75b"><div class="ttname"><a href="classapollo_1_1cyber_1_1Service.html#aea802e52a8799ad566e779b48c0bd75b">apollo::cyber::Service::Service</a></div><div class="ttdeci">Service()=delete</div><div class="ttdoc">Forbid default constructing.</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1Service_html_aeaaef735425d56ab7879e1597587c081"><div class="ttname"><a href="classapollo_1_1cyber_1_1Service.html#aeaaef735425d56ab7879e1597587c081">apollo::cyber::Service::destroy</a></div><div class="ttdeci">void destroy()</div><div class="ttdoc">Destroy the Service.</div><div class="ttdef"><b>Definition:</b> service.h:124</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1RoleAttributes_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a></div><div class="ttdef"><b>Definition:</b> role_attributes.pb.h:258</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1transport_1_1MessageInfo_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1transport_1_1MessageInfo.html">apollo::cyber::transport::MessageInfo</a></div><div class="ttdef"><b>Definition:</b> message_info.h:30</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,0 +1,860 @@
+.TH "apollo::hdmap::Lane" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::hdmap::Lane
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkOverlapIdFieldNumber\fP = 7, \fBkPredecessorIdFieldNumber\fP = 8, \fBkSuccessorIdFieldNumber\fP = 9, \fBkLeftNeighborForwardLaneIdFieldNumber\fP = 10, \fBkRightNeighborForwardLaneIdFieldNumber\fP = 11, \fBkLeftNeighborReverseLaneIdFieldNumber\fP = 14, \fBkRightNeighborReverseLaneIdFieldNumber\fP = 15, \fBkLeftSampleFieldNumber\fP = 17, \fBkRightSampleFieldNumber\fP = 18, \fBkLeftRoadSampleFieldNumber\fP = 20, \fBkRightRoadSampleFieldNumber\fP = 21, \fBkSelfReverseLaneIdFieldNumber\fP = 22, \fBkIdFieldNumber\fP = 1, \fBkCentralCurveFieldNumber\fP = 2, \fBkLeftBoundaryFieldNumber\fP = 3, \fBkRightBoundaryFieldNumber\fP = 4, \fBkJunctionIdFieldNumber\fP = 16, \fBkLengthFieldNumber\fP = 5, \fBkSpeedLimitFieldNumber\fP = 6, \fBkDirectionFieldNumber\fP = 19, \fBkTypeFieldNumber\fP = 12, \fBkTurnFieldNumber\fP = 13 }"
+.br
+.ti -1c
+.RI "typedef Lane_LaneType \fBLaneType\fP"
+.br
+.ti -1c
+.RI "typedef Lane_LaneTurn \fBLaneTurn\fP"
+.br
+.ti -1c
+.RI "typedef Lane_LaneDirection \fBLaneDirection\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBLane\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBLane\fP (const \fBLane\fP &from)"
+.br
+.ti -1c
+.RI "\fBLane\fP (\fBLane\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBLane\fP & \fBoperator=\fP (const \fBLane\fP &from)"
+.br
+.ti -1c
+.RI "\fBLane\fP & \fBoperator=\fP (\fBLane\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBLane\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBLane\fP *other)"
+.br
+.ti -1c
+.RI "\fBLane\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBLane\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBLane\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBoverlap_id_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_overlap_id\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBmutable_overlap_id\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > * \fBmutable_overlap_id\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Id\fP & \fBoverlap_id\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBadd_overlap_id\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > & \fBoverlap_id\fP () const"
+.br
+.ti -1c
+.RI "int \fBpredecessor_id_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_predecessor_id\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBmutable_predecessor_id\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > * \fBmutable_predecessor_id\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Id\fP & \fBpredecessor_id\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBadd_predecessor_id\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > & \fBpredecessor_id\fP () const"
+.br
+.ti -1c
+.RI "int \fBsuccessor_id_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_successor_id\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBmutable_successor_id\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > * \fBmutable_successor_id\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Id\fP & \fBsuccessor_id\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBadd_successor_id\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > & \fBsuccessor_id\fP () const"
+.br
+.ti -1c
+.RI "int \fBleft_neighbor_forward_lane_id_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_left_neighbor_forward_lane_id\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBmutable_left_neighbor_forward_lane_id\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > * \fBmutable_left_neighbor_forward_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Id\fP & \fBleft_neighbor_forward_lane_id\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBadd_left_neighbor_forward_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > & \fBleft_neighbor_forward_lane_id\fP () const"
+.br
+.ti -1c
+.RI "int \fBright_neighbor_forward_lane_id_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_right_neighbor_forward_lane_id\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBmutable_right_neighbor_forward_lane_id\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > * \fBmutable_right_neighbor_forward_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Id\fP & \fBright_neighbor_forward_lane_id\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBadd_right_neighbor_forward_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > & \fBright_neighbor_forward_lane_id\fP () const"
+.br
+.ti -1c
+.RI "int \fBleft_neighbor_reverse_lane_id_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_left_neighbor_reverse_lane_id\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBmutable_left_neighbor_reverse_lane_id\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > * \fBmutable_left_neighbor_reverse_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Id\fP & \fBleft_neighbor_reverse_lane_id\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBadd_left_neighbor_reverse_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > & \fBleft_neighbor_reverse_lane_id\fP () const"
+.br
+.ti -1c
+.RI "int \fBright_neighbor_reverse_lane_id_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_right_neighbor_reverse_lane_id\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBmutable_right_neighbor_reverse_lane_id\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > * \fBmutable_right_neighbor_reverse_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Id\fP & \fBright_neighbor_reverse_lane_id\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBadd_right_neighbor_reverse_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > & \fBright_neighbor_reverse_lane_id\fP () const"
+.br
+.ti -1c
+.RI "int \fBleft_sample_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_left_sample\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::LaneSampleAssociation\fP * \fBmutable_left_sample\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::LaneSampleAssociation\fP > * \fBmutable_left_sample\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::LaneSampleAssociation\fP & \fBleft_sample\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::LaneSampleAssociation\fP * \fBadd_left_sample\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::LaneSampleAssociation\fP > & \fBleft_sample\fP () const"
+.br
+.ti -1c
+.RI "int \fBright_sample_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_right_sample\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::LaneSampleAssociation\fP * \fBmutable_right_sample\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::LaneSampleAssociation\fP > * \fBmutable_right_sample\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::LaneSampleAssociation\fP & \fBright_sample\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::LaneSampleAssociation\fP * \fBadd_right_sample\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::LaneSampleAssociation\fP > & \fBright_sample\fP () const"
+.br
+.ti -1c
+.RI "int \fBleft_road_sample_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_left_road_sample\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::LaneSampleAssociation\fP * \fBmutable_left_road_sample\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::LaneSampleAssociation\fP > * \fBmutable_left_road_sample\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::LaneSampleAssociation\fP & \fBleft_road_sample\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::LaneSampleAssociation\fP * \fBadd_left_road_sample\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::LaneSampleAssociation\fP > & \fBleft_road_sample\fP () const"
+.br
+.ti -1c
+.RI "int \fBright_road_sample_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_right_road_sample\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::LaneSampleAssociation\fP * \fBmutable_right_road_sample\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::LaneSampleAssociation\fP > * \fBmutable_right_road_sample\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::LaneSampleAssociation\fP & \fBright_road_sample\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::LaneSampleAssociation\fP * \fBadd_right_road_sample\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::LaneSampleAssociation\fP > & \fBright_road_sample\fP () const"
+.br
+.ti -1c
+.RI "int \fBself_reverse_lane_id_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_self_reverse_lane_id\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBmutable_self_reverse_lane_id\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > * \fBmutable_self_reverse_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Id\fP & \fBself_reverse_lane_id\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBadd_self_reverse_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > & \fBself_reverse_lane_id\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhas_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_id\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Id\fP & \fBid\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::hdmap::Id\fP * \fBrelease_id\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBmutable_id\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_id\fP (::\fBapollo::hdmap::Id\fP *id)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_id\fP (::\fBapollo::hdmap::Id\fP *id)"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBunsafe_arena_release_id\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_central_curve\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_central_curve\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Curve\fP & \fBcentral_curve\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::hdmap::Curve\fP * \fBrelease_central_curve\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Curve\fP * \fBmutable_central_curve\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_central_curve\fP (::\fBapollo::hdmap::Curve\fP *central_curve)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_central_curve\fP (::\fBapollo::hdmap::Curve\fP *central_curve)"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Curve\fP * \fBunsafe_arena_release_central_curve\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_left_boundary\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_left_boundary\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::LaneBoundary\fP & \fBleft_boundary\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::hdmap::LaneBoundary\fP * \fBrelease_left_boundary\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::LaneBoundary\fP * \fBmutable_left_boundary\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_left_boundary\fP (::\fBapollo::hdmap::LaneBoundary\fP *left_boundary)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_left_boundary\fP (::\fBapollo::hdmap::LaneBoundary\fP *left_boundary)"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::LaneBoundary\fP * \fBunsafe_arena_release_left_boundary\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_right_boundary\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_right_boundary\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::LaneBoundary\fP & \fBright_boundary\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::hdmap::LaneBoundary\fP * \fBrelease_right_boundary\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::LaneBoundary\fP * \fBmutable_right_boundary\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_right_boundary\fP (::\fBapollo::hdmap::LaneBoundary\fP *right_boundary)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_right_boundary\fP (::\fBapollo::hdmap::LaneBoundary\fP *right_boundary)"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::LaneBoundary\fP * \fBunsafe_arena_release_right_boundary\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_junction_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_junction_id\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Id\fP & \fBjunction_id\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::hdmap::Id\fP * \fBrelease_junction_id\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBmutable_junction_id\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_junction_id\fP (::\fBapollo::hdmap::Id\fP *junction_id)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_junction_id\fP (::\fBapollo::hdmap::Id\fP *junction_id)"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBunsafe_arena_release_junction_id\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_length\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_length\fP ()"
+.br
+.ti -1c
+.RI "double \fBlength\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_length\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed_limit\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_limit\fP ()"
+.br
+.ti -1c
+.RI "double \fBspeed_limit\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_speed_limit\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_direction\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_direction\fP ()"
+.br
+.ti -1c
+.RI "::apollo::hdmap::Lane_LaneDirection \fBdirection\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_direction\fP (::apollo::hdmap::Lane_LaneDirection value)"
+.br
+.ti -1c
+.RI "bool \fBhas_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::hdmap::Lane_LaneType \fBtype\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_type\fP (::apollo::hdmap::Lane_LaneType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_turn\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_turn\fP ()"
+.br
+.ti -1c
+.RI "::apollo::hdmap::Lane_LaneTurn \fBturn\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_turn\fP (::apollo::hdmap::Lane_LaneTurn value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBLane\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBLane\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBLaneType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBLaneType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBLaneType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBLaneType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, LaneType *value)"
+.br
+.ti -1c
+.RI "static bool \fBLaneTurn_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBLaneTurn_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBLaneTurn_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBLaneTurn_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, LaneTurn *value)"
+.br
+.ti -1c
+.RI "static bool \fBLaneDirection_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBLaneDirection_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBLaneDirection_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBLaneDirection_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, LaneDirection *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneType \fBNONE\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneType \fBCITY_DRIVING\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneType \fBBIKING\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneType \fBSIDEWALK\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneType \fBPARKING\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneType \fBSHOULDER\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneType \fBLaneType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneType \fBLaneType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBLaneType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneTurn \fBNO_TURN\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneTurn \fBLEFT_TURN\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneTurn \fBRIGHT_TURN\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneTurn \fBU_TURN\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneTurn \fBLaneTurn_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneTurn \fBLaneTurn_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBLaneTurn_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneDirection \fBFORWARD\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneDirection \fBBACKWARD\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneDirection \fBBIDIRECTION\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneDirection \fBLaneDirection_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr LaneDirection \fBLaneDirection_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBLaneDirection_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLane\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fmap_5fmsgs_2fmap_5flane_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBLane\fP &a, \fBLane\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::hdmap::Lane::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Lane::MergeImpl
+}
+.fi
+.SS "constexpr Lane_LaneDirection apollo::hdmap::Lane::BACKWARD\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneDirection_BACKWARD
+.fi
+.SS "constexpr Lane_LaneDirection apollo::hdmap::Lane::BIDIRECTION\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneDirection_BIDIRECTION
+.fi
+.SS "constexpr Lane_LaneType apollo::hdmap::Lane::BIKING\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneType_BIKING
+.fi
+.SS "constexpr Lane_LaneType apollo::hdmap::Lane::CITY_DRIVING\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneType_CITY_DRIVING
+.fi
+.SS "constexpr Lane_LaneDirection apollo::hdmap::Lane::FORWARD\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneDirection_FORWARD
+.fi
+.SS "constexpr int apollo::hdmap::Lane::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    3
+.fi
+.SS "constexpr int apollo::hdmap::Lane::LaneDirection_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneDirection_LaneDirection_ARRAYSIZE
+.fi
+.SS "constexpr Lane_LaneDirection apollo::hdmap::Lane::LaneDirection_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneDirection_LaneDirection_MAX
+.fi
+.SS "constexpr Lane_LaneDirection apollo::hdmap::Lane::LaneDirection_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneDirection_LaneDirection_MIN
+.fi
+.SS "constexpr int apollo::hdmap::Lane::LaneTurn_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneTurn_LaneTurn_ARRAYSIZE
+.fi
+.SS "constexpr Lane_LaneTurn apollo::hdmap::Lane::LaneTurn_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneTurn_LaneTurn_MAX
+.fi
+.SS "constexpr Lane_LaneTurn apollo::hdmap::Lane::LaneTurn_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneTurn_LaneTurn_MIN
+.fi
+.SS "constexpr int apollo::hdmap::Lane::LaneType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneType_LaneType_ARRAYSIZE
+.fi
+.SS "constexpr Lane_LaneType apollo::hdmap::Lane::LaneType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneType_LaneType_MAX
+.fi
+.SS "constexpr Lane_LaneType apollo::hdmap::Lane::LaneType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneType_LaneType_MIN
+.fi
+.SS "constexpr Lane_LaneTurn apollo::hdmap::Lane::LEFT_TURN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneTurn_LEFT_TURN
+.fi
+.SS "constexpr Lane_LaneTurn apollo::hdmap::Lane::NO_TURN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneTurn_NO_TURN
+.fi
+.SS "constexpr Lane_LaneType apollo::hdmap::Lane::NONE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneType_NONE
+.fi
+.SS "constexpr Lane_LaneType apollo::hdmap::Lane::PARKING\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneType_PARKING
+.fi
+.SS "constexpr Lane_LaneTurn apollo::hdmap::Lane::RIGHT_TURN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneTurn_RIGHT_TURN
+.fi
+.SS "constexpr Lane_LaneType apollo::hdmap::Lane::SHOULDER\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneType_SHOULDER
+.fi
+.SS "constexpr Lane_LaneType apollo::hdmap::Lane::SIDEWALK\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneType_SIDEWALK
+.fi
+.SS "constexpr Lane_LaneTurn apollo::hdmap::Lane::U_TURN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Lane_LaneTurn_U_TURN
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

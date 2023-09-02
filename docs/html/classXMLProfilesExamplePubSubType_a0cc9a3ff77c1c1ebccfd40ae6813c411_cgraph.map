@@ -1,0 +1,5 @@
+<map id="XMLProfilesExamplePubSubType::deserialize" name="XMLProfilesExamplePubSubType::deserialize">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,319,57"/>
+<area shape="rect" id="node2" href="$classeprosima_1_1fastcdr_1_1Cdr.html#af3780e0691ba1d364601435795c7e1be" title="This function returns the current endianness used by the CDR type." alt="" coords="393,5,641,32"/>
+<area shape="rect" id="node3" href="$classeprosima_1_1fastcdr_1_1Cdr.html#a04d1fe7b2dfad627c6a935f23ece9089" title="This function reads the encapsulation of the CDR stream. If the CDR stream contains an encapsulation,..." alt="" coords="367,56,668,83"/>
+</map>

@@ -1,0 +1,274 @@
+.TH "eprosima::fastrtps::rtps::security::Authentication" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::security::Authentication
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual ValidationResult_t \fBvalidate_local_identity\fP (\fBIdentityHandle\fP **local_identity_handle, \fBGUID_t\fP &adjusted_participant_key, const uint32_t domain_id, const \fBRTPSParticipantAttributes\fP &participant_attr, const \fBGUID_t\fP &candidate_participant_key, \fBSecurityException\fP &exception)=0"
+.br
+.RI "Validates the identity of the local \fBRTPSParticipant\fP\&. "
+.ti -1c
+.RI "virtual ValidationResult_t \fBvalidate_remote_identity\fP (\fBIdentityHandle\fP **remote_identity_handle, const \fBIdentityHandle\fP &local_identity_handle, \fBIdentityToken\fP &&remote_identity_token, const \fBGUID_t\fP &remote_participant_key, \fBSecurityException\fP &exception)=0"
+.br
+.RI "Initiates the process of validating the identity of the discovered remote \fBRTPSParticipant\fP, represented as an IdentityToken object\&. "
+.ti -1c
+.RI "virtual ValidationResult_t \fBbegin_handshake_request\fP (\fBHandshakeHandle\fP **handshake_handle, \fBHandshakeMessageToken\fP **handshake_message, const \fBIdentityHandle\fP &initiator_identity_handle, \fBIdentityHandle\fP &replier_identity_handle, const \fBCDRMessage_t\fP &cdr_participant_data, \fBSecurityException\fP &exception)=0"
+.br
+.RI "This operation is used to initiate a handshake\&. "
+.ti -1c
+.RI "virtual ValidationResult_t \fBbegin_handshake_reply\fP (\fBHandshakeHandle\fP **handshake_handle, \fBHandshakeMessageToken\fP **handshake_message_out, \fBHandshakeMessageToken\fP &&handshake_message_in, \fBIdentityHandle\fP &initiator_identity_handle, const \fBIdentityHandle\fP &replier_identity_handle, const \fBCDRMessage_t\fP &cdr_participant_data, \fBSecurityException\fP &exception)=0"
+.br
+.RI "This operation shall be invoked by the implementation in reaction to the reception of the initial handshake message that originated on a \fBRTPSParticipant\fP that called the begin_handshake_request operation\&. "
+.ti -1c
+.RI "virtual ValidationResult_t \fBprocess_handshake\fP (\fBHandshakeMessageToken\fP **handshake_message_out, \fBHandshakeMessageToken\fP &&handshake_message_in, \fBHandshakeHandle\fP &handshake_handle, \fBSecurityException\fP &exception)=0"
+.br
+.RI "This operation is used to continue a handshake\&. @handshake_message_out (out) A HandshakeMessageToken containing the message_data that should be place in a ParticipantStatelessMessage to be sent using the BuiltinParticipantMessageWriter\&. "
+.ti -1c
+.RI "virtual \fBSharedSecretHandle\fP * \fBget_shared_secret\fP (const \fBHandshakeHandle\fP &handshake_handle, \fBSecurityException\fP &exception)=0"
+.br
+.RI "Retrieve the SharedSecretHandle resulting with a successfully completed handshake\&. "
+.ti -1c
+.RI "virtual bool \fBset_listener\fP (\fBAuthenticationListener\fP *listener, \fBSecurityException\fP &exception)=0"
+.br
+.RI "Sets the \fBAuthenticationListener\fP that the \fBAuthentication\fP plugin will use to notify the infrastructure of events relevant to the \fBAuthentication\fP of RTPSParticipants\&. "
+.ti -1c
+.RI "virtual bool \fBget_identity_token\fP (\fBIdentityToken\fP **identity_token, const \fBIdentityHandle\fP &handle, \fBSecurityException\fP &exception)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBreturn_identity_token\fP (\fBIdentityToken\fP *token, \fBSecurityException\fP &exception)=0"
+.br
+.RI "Returns the IdentityToken object to the plugin so it can be disposed of\&. "
+.ti -1c
+.RI "virtual bool \fBreturn_handshake_handle\fP (\fBHandshakeHandle\fP *handshake_handle, \fBSecurityException\fP &exception)=0"
+.br
+.RI "Returns the Handshakehandle object to the plugin so it can be disposed of\&. "
+.ti -1c
+.RI "virtual bool \fBreturn_identity_handle\fP (\fBIdentityHandle\fP *identity_handle, \fBSecurityException\fP &exception)=0"
+.br
+.RI "Returns the IdentityHandle object to the plugin so it can be disposed of\&. "
+.ti -1c
+.RI "virtual bool \fBreturn_sharedsecret_handle\fP (\fBSharedSecretHandle\fP *sharedsecret_handle, \fBSecurityException\fP &exception)=0"
+.br
+.RI "Returns the SharedSecretHandle object to the plugin so it can be disposed of\&. "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual ValidationResult_t eprosima::fastrtps::rtps::security::Authentication::begin_handshake_reply (\fBHandshakeHandle\fP ** handshake_handle, \fBHandshakeMessageToken\fP ** handshake_message_out, \fBHandshakeMessageToken\fP && handshake_message_in, \fBIdentityHandle\fP & initiator_identity_handle, const \fBIdentityHandle\fP & replier_identity_handle, const \fBCDRMessage_t\fP & cdr_participant_data, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+
+.PP
+This operation shall be invoked by the implementation in reaction to the reception of the initial handshake message that originated on a \fBRTPSParticipant\fP that called the begin_handshake_request operation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandshake_handle\fP (out) A handle returned by the \fBAuthentication\fP Plugin used to keep the state of the handshake\&. 
+.br
+\fIhandshake_message_out\fP (out) A HandshakeMessageToken containing a message to be sent using the BuiltinParticipantMessageWriter\&. 
+.br
+\fIhandshake_message_in\fP A HandshakeMessageToken containing a message received from the BuiltinParticipantMessageReader\&. 
+.br
+\fIinitiator_identity_handle\fP \fBHandle\fP to the remote participant that originated the handshake\&. 
+.br
+\fIreplier_identity_handle\fP \fBHandle\fP to the local participant that is initiaing the handshake\&. 
+.br
+\fIexception\fP (out) A \fBSecurityException\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Validation status\&. 
+.RE
+.PP
+
+.SS "virtual ValidationResult_t eprosima::fastrtps::rtps::security::Authentication::begin_handshake_request (\fBHandshakeHandle\fP ** handshake_handle, \fBHandshakeMessageToken\fP ** handshake_message, const \fBIdentityHandle\fP & initiator_identity_handle, \fBIdentityHandle\fP & replier_identity_handle, const \fBCDRMessage_t\fP & cdr_participant_data, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+
+.PP
+This operation is used to initiate a handshake\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandshake_handle\fP (out) A handle returned by the \fBAuthentication\fP plugin used to keep the state of the handshake\&. 
+.br
+\fIhandshake_message_token\fP (out) A HandshakeMessageToken to be sent using the BuiltinParticipantMessageWriter\&. 
+.br
+\fIinitiator_identity_handle\fP \fBHandle\fP to the local participant that originated the handshake\&. 
+.br
+\fIreplier_identity_handle\fP \fBHandle\fP to the remote participant whose identity is being validated\&. 
+.br
+\fIexception\fP (out) A \fBSecurityException\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Validation status\&. 
+.RE
+.PP
+
+.SS "virtual \fBSharedSecretHandle\fP* eprosima::fastrtps::rtps::security::Authentication::get_shared_secret (const \fBHandshakeHandle\fP & handshake_handle, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+
+.PP
+Retrieve the SharedSecretHandle resulting with a successfully completed handshake\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandshake_handle\fP \fBHandle\fP returned bu a corresponding previous call to begin_handshake_request or begin_handshake_reply, which has successfully complete the handshake operations\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI(out)\fP A \fBSecurityException\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+SharedSecretHandle\&. 
+.RE
+.PP
+
+.SS "virtual ValidationResult_t eprosima::fastrtps::rtps::security::Authentication::process_handshake (\fBHandshakeMessageToken\fP ** handshake_message_out, \fBHandshakeMessageToken\fP && handshake_message_in, \fBHandshakeHandle\fP & handshake_handle, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+
+.PP
+This operation is used to continue a handshake\&. @handshake_message_out (out) A HandshakeMessageToken containing the message_data that should be place in a ParticipantStatelessMessage to be sent using the BuiltinParticipantMessageWriter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandshake_message_in\fP The HandshakeMessageToken contained in the message_data attribute of the ParticipantStatelessMessage received\&. 
+.br
+\fIhandshake_handle\fP \fBHandle\fP returned by a correspoing previous call to begin_handshake_request or begin_handshake_reply\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fI(out)\fP A \fBSecurityException\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Validation status\&. 
+.RE
+.PP
+
+.SS "virtual bool eprosima::fastrtps::rtps::security::Authentication::return_handshake_handle (\fBHandshakeHandle\fP * handshake_handle, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+
+.PP
+Returns the Handshakehandle object to the plugin so it can be disposed of\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandshake_handle\fP A HandshakeHandle issued by the plugin on a prior call to begin_handshake_request or begin_handshake_reply\&. 
+.br
+\fIexception\fP (out) A \fBSecurityException\fP object\&. 
+.RE
+.PP
+
+.SS "virtual bool eprosima::fastrtps::rtps::security::Authentication::return_identity_handle (\fBIdentityHandle\fP * identity_handle, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+
+.PP
+Returns the IdentityHandle object to the plugin so it can be disposed of\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIidentity_handle\fP An IdentityHandle issued by the plugin on a prior call to validate_local_identity or validate_remote_identity\&. 
+.br
+\fIexception\fP (out) A \fBSecurityException\fP object\&. 
+.RE
+.PP
+
+.SS "virtual bool eprosima::fastrtps::rtps::security::Authentication::return_identity_token (\fBIdentityToken\fP * token, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+
+.PP
+Returns the IdentityToken object to the plugin so it can be disposed of\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItoken\fP An IdentityToken issued by the plugin on a prior call to get_identity_token\&. 
+.br
+\fIexception\fP (out) A \fBSecurityException\fP object\&. 
+.RE
+.PP
+
+.SS "virtual bool eprosima::fastrtps::rtps::security::Authentication::return_sharedsecret_handle (\fBSharedSecretHandle\fP * sharedsecret_handle, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+
+.PP
+Returns the SharedSecretHandle object to the plugin so it can be disposed of\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsharedsecret_handle\fP An SharedSecretHandle issued by the plugin on a prior call to get_shared_secret\&. 
+.br
+\fIexception\fP (out) A \fBSecurityException\fP object\&. 
+.RE
+.PP
+
+.SS "virtual bool eprosima::fastrtps::rtps::security::Authentication::set_listener (\fBAuthenticationListener\fP * listener, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+
+.PP
+Sets the \fBAuthenticationListener\fP that the \fBAuthentication\fP plugin will use to notify the infrastructure of events relevant to the \fBAuthentication\fP of RTPSParticipants\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlistener\fP An \fBAuthenticationListener\fP object to be attached to the \fBAuthentication\fP object\&. 
+.br
+\fIexception\fP (out) A \fBSecurityException\fP object\&. 
+.RE
+.PP
+
+.SS "virtual ValidationResult_t eprosima::fastrtps::rtps::security::Authentication::validate_local_identity (\fBIdentityHandle\fP ** local_identity_handle, \fBGUID_t\fP & adjusted_participant_key, const uint32_t domain_id, const \fBRTPSParticipantAttributes\fP & participant_attr, const \fBGUID_t\fP & candidate_participant_key, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+
+.PP
+Validates the identity of the local \fBRTPSParticipant\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocal_identity_handle\fP (out) A handle that can be used to locally refer to the Authenticated \fBParticipant\fP in subsequent interactions with the \fBAuthentication\fP plugin\&. 
+.br
+\fIadjusted_participant_key\fP (out) The \fBGUID_t\fP that the implementation shall use to uniquely identify the \fBRTPSParticipant\fP on the network\&. 
+.br
+\fIdomain_id\fP The \fBDomain\fP Id of the \fBRTPSParticipant\fP\&. 
+.br
+\fIparticipant_attr\fP The \fBRTPSParticipantAttributes\fP of the \fBRTPSParticipant\fP\&. 
+.br
+\fIcandidate_participant_key\fP The \fBGUID_t\fP that the DDS implementation would have used to uniquely identify the \fBRTPSParticipant\fP if the Security plugins were not enabled\&. 
+.br
+\fIexception\fP (out) A \fBSecurityException\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Validation status\&. 
+.RE
+.PP
+
+.SS "virtual ValidationResult_t eprosima::fastrtps::rtps::security::Authentication::validate_remote_identity (\fBIdentityHandle\fP ** remote_identity_handle, const \fBIdentityHandle\fP & local_identity_handle, \fBIdentityToken\fP && remote_identity_token, const \fBGUID_t\fP & remote_participant_key, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+
+.PP
+Initiates the process of validating the identity of the discovered remote \fBRTPSParticipant\fP, represented as an IdentityToken object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIremote_identity_handle\fP (out) A handle that can be used to locally refer to the remote Authenticated \fBParticipant\fP in subsequent interactions with the AuthenticationPlugin\&. 
+.br
+\fIlocal_identity_handle\fP A handle to the local \fBRTPSParticipant\fP requesting the remote participant to be validate\&. 
+.br
+\fIremote_identity_token\fP A token received as part of \fBParticipantProxyData\fP, representing the identity of the remote DomainParticipant\&. 
+.br
+\fIremote_participant_key\fP 
+.br
+\fIexception\fP (out) A \fBSecurityException\fP object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Validation status\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

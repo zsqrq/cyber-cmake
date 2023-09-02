@@ -1,0 +1,3 @@
+<map id="eprosima::fastrtps::rtps::AsyncWriterThread" name="eprosima::fastrtps::rtps::AsyncWriterThread">
+<area shape="rect" id="node1" title="This static class owns a thread that manages asynchronous writes. Asynchronous writes happen directly..." alt="" coords="5,5,495,127"/>
+</map>

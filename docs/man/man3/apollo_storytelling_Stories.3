@@ -1,0 +1,331 @@
+.TH "apollo::storytelling::Stories" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::storytelling::Stories
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkHeaderFieldNumber\fP = 1, \fBkCloseToClearAreaFieldNumber\fP = 2, \fBkCloseToCrosswalkFieldNumber\fP = 3, \fBkCloseToJunctionFieldNumber\fP = 4, \fBkCloseToSignalFieldNumber\fP = 5, \fBkCloseToStopSignFieldNumber\fP = 6, \fBkCloseToYieldSignFieldNumber\fP = 7 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBStories\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBStories\fP (const \fBStories\fP &from)"
+.br
+.ti -1c
+.RI "\fBStories\fP (\fBStories\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBStories\fP & \fBoperator=\fP (const \fBStories\fP &from)"
+.br
+.ti -1c
+.RI "\fBStories\fP & \fBoperator=\fP (\fBStories\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBStories\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBStories\fP *other)"
+.br
+.ti -1c
+.RI "\fBStories\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBStories\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBStories\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_header\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_header\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Header\fP & \fBheader\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Header\fP * \fBrelease_header\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBmutable_header\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBunsafe_arena_release_header\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_close_to_clear_area\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_close_to_clear_area\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::storytelling::CloseToClearArea\fP & \fBclose_to_clear_area\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::storytelling::CloseToClearArea\fP * \fBrelease_close_to_clear_area\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::storytelling::CloseToClearArea\fP * \fBmutable_close_to_clear_area\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_close_to_clear_area\fP (::\fBapollo::storytelling::CloseToClearArea\fP *close_to_clear_area)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_close_to_clear_area\fP (::\fBapollo::storytelling::CloseToClearArea\fP *close_to_clear_area)"
+.br
+.ti -1c
+.RI "::\fBapollo::storytelling::CloseToClearArea\fP * \fBunsafe_arena_release_close_to_clear_area\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_close_to_crosswalk\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_close_to_crosswalk\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::storytelling::CloseToCrosswalk\fP & \fBclose_to_crosswalk\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::storytelling::CloseToCrosswalk\fP * \fBrelease_close_to_crosswalk\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::storytelling::CloseToCrosswalk\fP * \fBmutable_close_to_crosswalk\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_close_to_crosswalk\fP (::\fBapollo::storytelling::CloseToCrosswalk\fP *close_to_crosswalk)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_close_to_crosswalk\fP (::\fBapollo::storytelling::CloseToCrosswalk\fP *close_to_crosswalk)"
+.br
+.ti -1c
+.RI "::\fBapollo::storytelling::CloseToCrosswalk\fP * \fBunsafe_arena_release_close_to_crosswalk\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_close_to_junction\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_close_to_junction\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::storytelling::CloseToJunction\fP & \fBclose_to_junction\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::storytelling::CloseToJunction\fP * \fBrelease_close_to_junction\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::storytelling::CloseToJunction\fP * \fBmutable_close_to_junction\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_close_to_junction\fP (::\fBapollo::storytelling::CloseToJunction\fP *close_to_junction)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_close_to_junction\fP (::\fBapollo::storytelling::CloseToJunction\fP *close_to_junction)"
+.br
+.ti -1c
+.RI "::\fBapollo::storytelling::CloseToJunction\fP * \fBunsafe_arena_release_close_to_junction\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_close_to_signal\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_close_to_signal\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::storytelling::CloseToSignal\fP & \fBclose_to_signal\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::storytelling::CloseToSignal\fP * \fBrelease_close_to_signal\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::storytelling::CloseToSignal\fP * \fBmutable_close_to_signal\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_close_to_signal\fP (::\fBapollo::storytelling::CloseToSignal\fP *close_to_signal)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_close_to_signal\fP (::\fBapollo::storytelling::CloseToSignal\fP *close_to_signal)"
+.br
+.ti -1c
+.RI "::\fBapollo::storytelling::CloseToSignal\fP * \fBunsafe_arena_release_close_to_signal\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_close_to_stop_sign\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_close_to_stop_sign\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::storytelling::CloseToStopSign\fP & \fBclose_to_stop_sign\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::storytelling::CloseToStopSign\fP * \fBrelease_close_to_stop_sign\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::storytelling::CloseToStopSign\fP * \fBmutable_close_to_stop_sign\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_close_to_stop_sign\fP (::\fBapollo::storytelling::CloseToStopSign\fP *close_to_stop_sign)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_close_to_stop_sign\fP (::\fBapollo::storytelling::CloseToStopSign\fP *close_to_stop_sign)"
+.br
+.ti -1c
+.RI "::\fBapollo::storytelling::CloseToStopSign\fP * \fBunsafe_arena_release_close_to_stop_sign\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_close_to_yield_sign\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_close_to_yield_sign\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::storytelling::CloseToYieldSign\fP & \fBclose_to_yield_sign\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::storytelling::CloseToYieldSign\fP * \fBrelease_close_to_yield_sign\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::storytelling::CloseToYieldSign\fP * \fBmutable_close_to_yield_sign\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_close_to_yield_sign\fP (::\fBapollo::storytelling::CloseToYieldSign\fP *close_to_yield_sign)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_close_to_yield_sign\fP (::\fBapollo::storytelling::CloseToYieldSign\fP *close_to_yield_sign)"
+.br
+.ti -1c
+.RI "::\fBapollo::storytelling::CloseToYieldSign\fP * \fBunsafe_arena_release_close_to_yield_sign\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBStories\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBStories\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStories\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fstorytelling_5fmsgs_2fstory_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBStories\fP &a, \fBStories\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::storytelling::Stories::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Stories::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::storytelling::Stories::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    6
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

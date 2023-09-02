@@ -1,0 +1,5 @@
+<map id="eprosima::fastcdr::exception::BadParamException" name="eprosima::fastcdr::exception::BadParamException">
+<area shape="rect" id="node1" title="This class is thrown as an exception when a invalid parameter was being serialized." alt="" coords="5,359,540,524"/>
+<area shape="rect" id="node2" href="$classeprosima_1_1fastcdr_1_1exception_1_1Exception.html" title="This abstract class is used to create exceptions." alt="" coords="73,131,473,311"/>
+<area shape="rect" id="node3" title=" " alt="" coords="215,5,330,83"/>
+</map>

@@ -1,0 +1,57 @@
+.TH "eprosima::fastrtps::rtps::ReaderListener" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::ReaderListener
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ReaderListener\&.h>\fP
+.PP
+Inherited by \fBTestReaderRegistered::MyListener\fP, \fBTestReaderSocket::MyListener\fP, \fBeprosima::fastrtps::rtps::PDPSimpleListener\fP, \fBeprosima::fastrtps::rtps::WLPListener\fP, and \fBmy_ReaderListener\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBonReaderMatched\fP (\fBRTPSReader\fP *reader, \fBMatchingInfo\fP &info)"
+.br
+.ti -1c
+.RI "virtual void \fBonNewCacheChangeAdded\fP (\fBRTPSReader\fP *reader, const \fBCacheChange_t\fP *const change)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBReaderListener\fP, to be used by the user to override some of is virtual method to program actions to certain events\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void eprosima::fastrtps::rtps::ReaderListener::onNewCacheChangeAdded (\fBRTPSReader\fP * reader, const \fBCacheChange_t\fP *const change)\fC [inline]\fP, \fC [virtual]\fP"
+This method is called when a new \fBCacheChange_t\fP is added to the \fBReaderHistory\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreader\fP Pointer to the reader\&. 
+.br
+\fIchange\fP Pointer to the \fBCacheChange_t\fP\&. This is a const pointer to const data to indicate that the user should not dispose of this data himself\&. To remove the data call the remove_change method of the \fBReaderHistory\fP\&. reader->getHistory()->remove_change((CacheChange_t*)change)\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBeprosima::fastrtps::rtps::WLPListener\fP, \fBeprosima::fastrtps::rtps::PDPSimpleListener\fP, \fBTestReaderRegistered::MyListener\fP, and \fBTestReaderSocket::MyListener\fP\&.
+.SS "virtual void eprosima::fastrtps::rtps::ReaderListener::onReaderMatched (\fBRTPSReader\fP * reader, \fBMatchingInfo\fP & info)\fC [inline]\fP, \fC [virtual]\fP"
+This method is invoked when a new reader matches 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreader\fP Matching reader 
+.br
+\fIinfo\fP Matching information of the reader 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBmy_ReaderListener\fP, and \fBTestReaderRegistered::MyListener\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

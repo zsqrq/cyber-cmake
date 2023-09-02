@@ -1,0 +1,49 @@
+.TH "eprosima::fastrtps::rtps::PropertyPolicyHelper" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::PropertyPolicyHelper
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static RTPS_DllAPI \fBPropertyPolicy\fP \fBget_properties_with_prefix\fP (const \fBPropertyPolicy\fP &property_policy, const std::string &prefix)"
+.br
+.RI "Returns only the properties whose name starts with the prefix\&. Prefix is removed in returned properties\&. "
+.ti -1c
+.RI "static RTPS_DllAPI size_t \fBlength\fP (const \fBPropertyPolicy\fP &property_policy)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI std::string * \fBfind_property\fP (\fBPropertyPolicy\fP &property_policy, const std::string &name)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI const std::string * \fBfind_property\fP (const \fBPropertyPolicy\fP &property_policy, const std::string &name)"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "static RTPS_DllAPI \fBPropertyPolicy\fP eprosima::fastrtps::rtps::PropertyPolicyHelper::get_properties_with_prefix (const \fBPropertyPolicy\fP & property_policy, const std::string & prefix)\fC [static]\fP"
+
+.PP
+Returns only the properties whose name starts with the prefix\&. Prefix is removed in returned properties\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproperty_policy\fP \fBPropertyPolicy\fP where properties will be searched\&. 
+.br
+\fIprefix\fP Prefix used to search properties\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A copy of properties whose name starts with the prefix\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

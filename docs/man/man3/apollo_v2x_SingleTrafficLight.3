@@ -1,0 +1,458 @@
+.TH "apollo::v2x::SingleTrafficLight" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::v2x::SingleTrafficLight
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkTrafficLightTypeFieldNumber\fP = 2, \fBkIdFieldNumber\fP = 3, \fBkColorFieldNumber\fP = 1, \fBkColorRemainingTimeSFieldNumber\fP = 4, \fBkRightTurnLightFieldNumber\fP = 5, \fBkNextColorFieldNumber\fP = 6, \fBkNextRemainingTimeSFieldNumber\fP = 7 }"
+.br
+.ti -1c
+.RI "typedef SingleTrafficLight_Color \fBColor\fP"
+.br
+.ti -1c
+.RI "typedef SingleTrafficLight_Type \fBType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBSingleTrafficLight\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBSingleTrafficLight\fP (const \fBSingleTrafficLight\fP &from)"
+.br
+.ti -1c
+.RI "\fBSingleTrafficLight\fP (\fBSingleTrafficLight\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBSingleTrafficLight\fP & \fBoperator=\fP (const \fBSingleTrafficLight\fP &from)"
+.br
+.ti -1c
+.RI "\fBSingleTrafficLight\fP & \fBoperator=\fP (\fBSingleTrafficLight\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBSingleTrafficLight\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBSingleTrafficLight\fP *other)"
+.br
+.ti -1c
+.RI "\fBSingleTrafficLight\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBSingleTrafficLight\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBSingleTrafficLight\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBtraffic_light_type_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_traffic_light_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::v2x::SingleTrafficLight_Type \fBtraffic_light_type\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_traffic_light_type\fP (int index, ::apollo::v2x::SingleTrafficLight_Type value)"
+.br
+.ti -1c
+.RI "void \fBadd_traffic_light_type\fP (::apollo::v2x::SingleTrafficLight_Type value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int > & \fBtraffic_light_type\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< int > * \fBmutable_traffic_light_type\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_id\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBid\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_id\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_id\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_id\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_id\fP (std::string *id)"
+.br
+.ti -1c
+.RI "bool \fBhas_color\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_color\fP ()"
+.br
+.ti -1c
+.RI "::apollo::v2x::SingleTrafficLight_Color \fBcolor\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_color\fP (::apollo::v2x::SingleTrafficLight_Color value)"
+.br
+.ti -1c
+.RI "bool \fBhas_color_remaining_time_s\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_color_remaining_time_s\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBcolor_remaining_time_s\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_color_remaining_time_s\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_right_turn_light\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_right_turn_light\fP ()"
+.br
+.ti -1c
+.RI "bool \fBright_turn_light\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_right_turn_light\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_next_color\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_next_color\fP ()"
+.br
+.ti -1c
+.RI "::apollo::v2x::SingleTrafficLight_Color \fBnext_color\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_next_color\fP (::apollo::v2x::SingleTrafficLight_Color value)"
+.br
+.ti -1c
+.RI "bool \fBhas_next_remaining_time_s\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_next_remaining_time_s\fP ()"
+.br
+.ti -1c
+.RI "double \fBnext_remaining_time_s\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_next_remaining_time_s\fP (double value)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_id\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSingleTrafficLight\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSingleTrafficLight\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBColor_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBColor_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBColor_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBColor_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Color *value)"
+.br
+.ti -1c
+.RI "static bool \fBType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Type *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr Color \fBUNKNOWN\fP"
+.br
+.ti -1c
+.RI "static constexpr Color \fBRED\fP"
+.br
+.ti -1c
+.RI "static constexpr Color \fBYELLOW\fP"
+.br
+.ti -1c
+.RI "static constexpr Color \fBGREEN\fP"
+.br
+.ti -1c
+.RI "static constexpr Color \fBBLACK\fP"
+.br
+.ti -1c
+.RI "static constexpr Color \fBFLASH_GREEN\fP"
+.br
+.ti -1c
+.RI "static constexpr Color \fBColor_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Color \fBColor_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBColor_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBSTRAIGHT\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBLEFT\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBRIGHT\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBU_TURN\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSingleTrafficLight\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fv2x_5fmsgs_2fv2x_5ftraffic_5flight_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBSingleTrafficLight\fP &a, \fBSingleTrafficLight\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::v2x::SingleTrafficLight::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    SingleTrafficLight::MergeImpl
+}
+.fi
+.SS "constexpr SingleTrafficLight_Color apollo::v2x::SingleTrafficLight::BLACK\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Color_BLACK
+.fi
+.SS "constexpr int apollo::v2x::SingleTrafficLight::Color_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Color_Color_ARRAYSIZE
+.fi
+.SS "constexpr SingleTrafficLight_Color apollo::v2x::SingleTrafficLight::Color_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Color_Color_MAX
+.fi
+.SS "constexpr SingleTrafficLight_Color apollo::v2x::SingleTrafficLight::Color_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Color_Color_MIN
+.fi
+.SS "constexpr SingleTrafficLight_Color apollo::v2x::SingleTrafficLight::FLASH_GREEN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Color_FLASH_GREEN
+.fi
+.SS "constexpr SingleTrafficLight_Color apollo::v2x::SingleTrafficLight::GREEN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Color_GREEN
+.fi
+.SS "constexpr int apollo::v2x::SingleTrafficLight::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    0
+.fi
+.SS "constexpr SingleTrafficLight_Type apollo::v2x::SingleTrafficLight::LEFT\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Type_LEFT
+.fi
+.SS "constexpr SingleTrafficLight_Color apollo::v2x::SingleTrafficLight::RED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Color_RED
+.fi
+.SS "constexpr SingleTrafficLight_Type apollo::v2x::SingleTrafficLight::RIGHT\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Type_RIGHT
+.fi
+.SS "constexpr SingleTrafficLight_Type apollo::v2x::SingleTrafficLight::STRAIGHT\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Type_STRAIGHT
+.fi
+.SS "constexpr int apollo::v2x::SingleTrafficLight::Type_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Type_Type_ARRAYSIZE
+.fi
+.SS "constexpr SingleTrafficLight_Type apollo::v2x::SingleTrafficLight::Type_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Type_Type_MAX
+.fi
+.SS "constexpr SingleTrafficLight_Type apollo::v2x::SingleTrafficLight::Type_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Type_Type_MIN
+.fi
+.SS "constexpr SingleTrafficLight_Type apollo::v2x::SingleTrafficLight::U_TURN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Type_U_TURN
+.fi
+.SS "constexpr SingleTrafficLight_Color apollo::v2x::SingleTrafficLight::UNKNOWN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Color_UNKNOWN
+.fi
+.SS "constexpr SingleTrafficLight_Color apollo::v2x::SingleTrafficLight::YELLOW\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    SingleTrafficLight_Color_YELLOW
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

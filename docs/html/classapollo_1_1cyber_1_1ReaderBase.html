@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -93,15 +95,16 @@ Collaboration diagram for apollo::cyber::ReaderBase:</div>
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1ReaderBase__coll__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1ReaderBase_coll__map" alt="Collaboration graph"/></div>
 <map name="aapollo_1_1cyber_1_1ReaderBase_coll__map" id="aapollo_1_1cyber_1_1ReaderBase_coll__map">
-<area shape="rect" title="Base Class for Reader Reader is identified by one apollo::cyber::proto::RoleAttribute,..." alt="" coords="5,145,373,369"/>
-<area shape="rect" title=" " alt="" coords="132,5,247,83"/>
+<area shape="rect" title="Base Class for Reader Reader is identified by one apollo::cyber::proto::RoleAttribute,..." alt="" coords="138,521,506,745"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html" title=" " alt="" coords="5,132,639,459"/>
+<area shape="rect" title=" " alt="" coords="187,5,457,83"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9f7a08c0ec4ad3d007efd2b8673312fc"><td class="memItemLeft" align="right" valign="top"><a id="a9f7a08c0ec4ad3d007efd2b8673312fc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ReaderBase</b> (const proto::RoleAttributes &amp;role_attr)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ReaderBase</b> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &amp;role_attr)</td></tr>
 <tr class="separator:a9f7a08c0ec4ad3d007efd2b8673312fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58e95863a3ea4e744ddff5914456ad7d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#a58e95863a3ea4e744ddff5914456ad7d">Init</a> ()=0</td></tr>
 <tr class="memdesc:a58e95863a3ea4e744ddff5914456ad7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init the <a class="el" href="classapollo_1_1cyber_1_1Reader.html" title="Reader subscribes a channel, it has two main functions:">Reader</a> object.  <a href="classapollo_1_1cyber_1_1ReaderBase.html#a58e95863a3ea4e744ddff5914456ad7d">More...</a><br /></td></tr>
@@ -133,7 +136,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a0b5792a3fbab13927087c259bf848ab1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#a0b5792a3fbab13927087c259bf848ab1">HasWriter</a> ()</td></tr>
 <tr class="memdesc:a0b5792a3fbab13927087c259bf848ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query is there any writer that publish the subscribed channel.  <a href="classapollo_1_1cyber_1_1ReaderBase.html#a0b5792a3fbab13927087c259bf848ab1">More...</a><br /></td></tr>
 <tr class="separator:a0b5792a3fbab13927087c259bf848ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f3ff80c03b0353a607c703461f591f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#a5f3ff80c03b0353a607c703461f591f8">GetWriters</a> (std::vector&lt; proto::RoleAttributes &gt; *writers)</td></tr>
+<tr class="memitem:a5f3ff80c03b0353a607c703461f591f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#a5f3ff80c03b0353a607c703461f591f8">GetWriters</a> (std::vector&lt; <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &gt; *writers)</td></tr>
 <tr class="memdesc:a5f3ff80c03b0353a607c703461f591f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all writers pushlish the channel we subscribes.  <a href="classapollo_1_1cyber_1_1ReaderBase.html#a5f3ff80c03b0353a607c703461f591f8">More...</a><br /></td></tr>
 <tr class="separator:a5f3ff80c03b0353a607c703461f591f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16c2fbbfd0f90ea1dc8302d9334259ca"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#a16c2fbbfd0f90ea1dc8302d9334259ca">GetChannelName</a> () const</td></tr>
@@ -142,7 +145,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a9d4deb3337b6fa4be339401cf419576f"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#a9d4deb3337b6fa4be339401cf419576f">ChannelId</a> () const</td></tr>
 <tr class="memdesc:a9d4deb3337b6fa4be339401cf419576f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classapollo_1_1cyber_1_1Reader.html" title="Reader subscribes a channel, it has two main functions:">Reader</a>'s Channel id.  <a href="classapollo_1_1cyber_1_1ReaderBase.html#a9d4deb3337b6fa4be339401cf419576f">More...</a><br /></td></tr>
 <tr class="separator:a9d4deb3337b6fa4be339401cf419576f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad88f5f4832908944212781ccc3a075af"><td class="memItemLeft" align="right" valign="top">const proto::QosProfile &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#ad88f5f4832908944212781ccc3a075af">QosProfile</a> () const</td></tr>
+<tr class="memitem:ad88f5f4832908944212781ccc3a075af"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1QosProfile.html">proto::QosProfile</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#ad88f5f4832908944212781ccc3a075af">QosProfile</a> () const</td></tr>
 <tr class="memdesc:ad88f5f4832908944212781ccc3a075af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get qos profile. You can see qos description.  <a href="classapollo_1_1cyber_1_1ReaderBase.html#ad88f5f4832908944212781ccc3a075af">More...</a><br /></td></tr>
 <tr class="separator:ad88f5f4832908944212781ccc3a075af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16632fb6fb7592aafc89e1c8e815129f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1ReaderBase.html#a16632fb6fb7592aafc89e1c8e815129f">IsInit</a> () const</td></tr>
@@ -152,7 +155,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:abb179fb694df505798fc959ff51614ed"><td class="memItemLeft" align="right" valign="top"><a id="abb179fb694df505798fc959ff51614ed"></a>
-proto::RoleAttributes&#160;</td><td class="memItemRight" valign="bottom"><b>role_attr_</b></td></tr>
+<a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&#160;</td><td class="memItemRight" valign="bottom"><b>role_attr_</b></td></tr>
 <tr class="separator:abb179fb694df505798fc959ff51614ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1069158d442f829dcfe467b45c7dd39a"><td class="memItemLeft" align="right" valign="top"><a id="a1069158d442f829dcfe467b45c7dd39a"></a>
 std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>init_</b></td></tr>
@@ -291,7 +294,7 @@ false if data container has data </dd></dl>
         <tr>
           <td class="memname">virtual void apollo::cyber::ReaderBase::GetWriters </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; proto::RoleAttributes &gt; *&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a> &gt; *&#160;</td>
           <td class="paramname"><em>writers</em></td><td>)</td>
           <td></td>
         </tr>
@@ -481,7 +484,7 @@ false if the <a class="el" href="classapollo_1_1cyber_1_1Reader.html" title="Rea
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const proto::QosProfile&amp; apollo::cyber::ReaderBase::QosProfile </td>
+          <td class="memname">const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1QosProfile.html">proto::QosProfile</a>&amp; apollo::cyber::ReaderBase::QosProfile </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -495,7 +498,7 @@ false if the <a class="el" href="classapollo_1_1cyber_1_1Reader.html" title="Rea
 </div><div class="memdoc">
 
 <p>Get qos profile. You can see qos description. </p>
-<dl class="section return"><dt>Returns</dt><dd>const proto::QosProfile&amp; result qos </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1QosProfile.html">proto::QosProfile</a>&amp; result qos </dd></dl>
 
 </div>
 </div>

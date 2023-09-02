@@ -1,0 +1,769 @@
+.TH "apollo::control::SimpleMPCDebug" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::control::SimpleMPCDebug
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkMatrixQUpdatedFieldNumber\fP = 33, \fBkMatrixRUpdatedFieldNumber\fP = 34, \fBkLateralErrorFieldNumber\fP = 1, \fBkRefHeadingFieldNumber\fP = 2, \fBkHeadingFieldNumber\fP = 3, \fBkHeadingErrorFieldNumber\fP = 4, \fBkHeadingErrorRateFieldNumber\fP = 5, \fBkLateralErrorRateFieldNumber\fP = 6, \fBkCurvatureFieldNumber\fP = 7, \fBkSteerAngleFieldNumber\fP = 8, \fBkSteerAngleFeedforwardFieldNumber\fP = 9, \fBkSteerAngleLateralContributionFieldNumber\fP = 10, \fBkSteerAngleLateralRateContributionFieldNumber\fP = 11, \fBkSteerAngleHeadingContributionFieldNumber\fP = 12, \fBkSteerAngleHeadingRateContributionFieldNumber\fP = 13, \fBkSteerAngleFeedbackFieldNumber\fP = 14, \fBkSteeringPositionFieldNumber\fP = 15, \fBkRefSpeedFieldNumber\fP = 16, \fBkSteerAngleLimitedFieldNumber\fP = 17, \fBkStationReferenceFieldNumber\fP = 18, \fBkStationErrorFieldNumber\fP = 19, \fBkSpeedReferenceFieldNumber\fP = 20, \fBkSpeedErrorFieldNumber\fP = 21, \fBkAccelerationReferenceFieldNumber\fP = 22, \fBkStationFeedbackFieldNumber\fP = 24, \fBkSpeedFeedbackFieldNumber\fP = 25, \fBkAccelerationCmdCloseloopFieldNumber\fP = 26, \fBkAccelerationCmdFieldNumber\fP = 27, \fBkAccelerationLookupFieldNumber\fP = 28, \fBkSpeedLookupFieldNumber\fP = 29, \fBkCalibrationValueFieldNumber\fP = 30, \fBkSteerUnconstrainedControlDiffFieldNumber\fP = 31, \fBkSteerAngleFeedforwardCompensationFieldNumber\fP = 32, \fBkLateralAccelerationFieldNumber\fP = 35, \fBkLateralJerkFieldNumber\fP = 36, \fBkRefHeadingRateFieldNumber\fP = 37, \fBkHeadingRateFieldNumber\fP = 38, \fBkRefHeadingAccelerationFieldNumber\fP = 39, \fBkHeadingAccelerationFieldNumber\fP = 40, \fBkHeadingErrorAccelerationFieldNumber\fP = 41, \fBkRefHeadingJerkFieldNumber\fP = 42, \fBkHeadingJerkFieldNumber\fP = 43, \fBkHeadingErrorJerkFieldNumber\fP = 44, \fBkAccelerationFeedbackFieldNumber\fP = 45, \fBkAccelerationErrorFieldNumber\fP = 46, \fBkJerkReferenceFieldNumber\fP = 47, \fBkJerkFeedbackFieldNumber\fP = 48, \fBkJerkErrorFieldNumber\fP = 49, \fBkIsFullStopFieldNumber\fP = 23 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBSimpleMPCDebug\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBSimpleMPCDebug\fP (const \fBSimpleMPCDebug\fP &from)"
+.br
+.ti -1c
+.RI "\fBSimpleMPCDebug\fP (\fBSimpleMPCDebug\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBSimpleMPCDebug\fP & \fBoperator=\fP (const \fBSimpleMPCDebug\fP &from)"
+.br
+.ti -1c
+.RI "\fBSimpleMPCDebug\fP & \fBoperator=\fP (\fBSimpleMPCDebug\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBSimpleMPCDebug\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBSimpleMPCDebug\fP *other)"
+.br
+.ti -1c
+.RI "\fBSimpleMPCDebug\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBSimpleMPCDebug\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBSimpleMPCDebug\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBmatrix_q_updated_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_matrix_q_updated\fP ()"
+.br
+.ti -1c
+.RI "double \fBmatrix_q_updated\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_matrix_q_updated\fP (int index, double value)"
+.br
+.ti -1c
+.RI "void \fBadd_matrix_q_updated\fP (double value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > & \fBmatrix_q_updated\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< double > * \fBmutable_matrix_q_updated\fP ()"
+.br
+.ti -1c
+.RI "int \fBmatrix_r_updated_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_matrix_r_updated\fP ()"
+.br
+.ti -1c
+.RI "double \fBmatrix_r_updated\fP (int index) const"
+.br
+.ti -1c
+.RI "void \fBset_matrix_r_updated\fP (int index, double value)"
+.br
+.ti -1c
+.RI "void \fBadd_matrix_r_updated\fP (double value)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > & \fBmatrix_r_updated\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedField< double > * \fBmutable_matrix_r_updated\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_lateral_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_lateral_error\fP ()"
+.br
+.ti -1c
+.RI "double \fBlateral_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_lateral_error\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_ref_heading\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_ref_heading\fP ()"
+.br
+.ti -1c
+.RI "double \fBref_heading\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_ref_heading\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_heading\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_heading\fP ()"
+.br
+.ti -1c
+.RI "double \fBheading\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_heading\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_heading_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_heading_error\fP ()"
+.br
+.ti -1c
+.RI "double \fBheading_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_heading_error\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_heading_error_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_heading_error_rate\fP ()"
+.br
+.ti -1c
+.RI "double \fBheading_error_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_heading_error_rate\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_lateral_error_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_lateral_error_rate\fP ()"
+.br
+.ti -1c
+.RI "double \fBlateral_error_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_lateral_error_rate\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_curvature\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_curvature\fP ()"
+.br
+.ti -1c
+.RI "double \fBcurvature\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_curvature\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steer_angle\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steer_angle\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteer_angle\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steer_angle\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steer_angle_feedforward\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steer_angle_feedforward\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteer_angle_feedforward\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steer_angle_feedforward\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steer_angle_lateral_contribution\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steer_angle_lateral_contribution\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteer_angle_lateral_contribution\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steer_angle_lateral_contribution\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steer_angle_lateral_rate_contribution\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steer_angle_lateral_rate_contribution\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteer_angle_lateral_rate_contribution\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steer_angle_lateral_rate_contribution\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steer_angle_heading_contribution\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steer_angle_heading_contribution\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteer_angle_heading_contribution\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steer_angle_heading_contribution\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steer_angle_heading_rate_contribution\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steer_angle_heading_rate_contribution\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteer_angle_heading_rate_contribution\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steer_angle_heading_rate_contribution\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steer_angle_feedback\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steer_angle_feedback\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteer_angle_feedback\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steer_angle_feedback\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steering_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steering_position\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteering_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steering_position\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_ref_speed\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_ref_speed\fP ()"
+.br
+.ti -1c
+.RI "double \fBref_speed\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_ref_speed\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steer_angle_limited\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steer_angle_limited\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteer_angle_limited\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steer_angle_limited\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_station_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_station_reference\fP ()"
+.br
+.ti -1c
+.RI "double \fBstation_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_station_reference\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_station_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_station_error\fP ()"
+.br
+.ti -1c
+.RI "double \fBstation_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_station_error\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_reference\fP ()"
+.br
+.ti -1c
+.RI "double \fBspeed_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_speed_reference\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_error\fP ()"
+.br
+.ti -1c
+.RI "double \fBspeed_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_speed_error\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration_reference\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration_reference\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_station_feedback\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_station_feedback\fP ()"
+.br
+.ti -1c
+.RI "double \fBstation_feedback\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_station_feedback\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed_feedback\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_feedback\fP ()"
+.br
+.ti -1c
+.RI "double \fBspeed_feedback\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_speed_feedback\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration_cmd_closeloop\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration_cmd_closeloop\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration_cmd_closeloop\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration_cmd_closeloop\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration_cmd\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration_cmd\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration_lookup\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration_lookup\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration_lookup\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration_lookup\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed_lookup\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_lookup\fP ()"
+.br
+.ti -1c
+.RI "double \fBspeed_lookup\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_speed_lookup\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_calibration_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_calibration_value\fP ()"
+.br
+.ti -1c
+.RI "double \fBcalibration_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_calibration_value\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steer_unconstrained_control_diff\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steer_unconstrained_control_diff\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteer_unconstrained_control_diff\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steer_unconstrained_control_diff\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steer_angle_feedforward_compensation\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steer_angle_feedforward_compensation\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteer_angle_feedforward_compensation\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steer_angle_feedforward_compensation\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_lateral_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_lateral_acceleration\fP ()"
+.br
+.ti -1c
+.RI "double \fBlateral_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_lateral_acceleration\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_lateral_jerk\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_lateral_jerk\fP ()"
+.br
+.ti -1c
+.RI "double \fBlateral_jerk\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_lateral_jerk\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_ref_heading_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_ref_heading_rate\fP ()"
+.br
+.ti -1c
+.RI "double \fBref_heading_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_ref_heading_rate\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_heading_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_heading_rate\fP ()"
+.br
+.ti -1c
+.RI "double \fBheading_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_heading_rate\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_ref_heading_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_ref_heading_acceleration\fP ()"
+.br
+.ti -1c
+.RI "double \fBref_heading_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_ref_heading_acceleration\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_heading_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_heading_acceleration\fP ()"
+.br
+.ti -1c
+.RI "double \fBheading_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_heading_acceleration\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_heading_error_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_heading_error_acceleration\fP ()"
+.br
+.ti -1c
+.RI "double \fBheading_error_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_heading_error_acceleration\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_ref_heading_jerk\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_ref_heading_jerk\fP ()"
+.br
+.ti -1c
+.RI "double \fBref_heading_jerk\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_ref_heading_jerk\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_heading_jerk\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_heading_jerk\fP ()"
+.br
+.ti -1c
+.RI "double \fBheading_jerk\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_heading_jerk\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_heading_error_jerk\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_heading_error_jerk\fP ()"
+.br
+.ti -1c
+.RI "double \fBheading_error_jerk\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_heading_error_jerk\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration_feedback\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration_feedback\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration_feedback\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration_feedback\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration_error\fP ()"
+.br
+.ti -1c
+.RI "double \fBacceleration_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acceleration_error\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_jerk_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_jerk_reference\fP ()"
+.br
+.ti -1c
+.RI "double \fBjerk_reference\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_jerk_reference\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_jerk_feedback\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_jerk_feedback\fP ()"
+.br
+.ti -1c
+.RI "double \fBjerk_feedback\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_jerk_feedback\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_jerk_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_jerk_error\fP ()"
+.br
+.ti -1c
+.RI "double \fBjerk_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_jerk_error\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_full_stop\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_full_stop\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_full_stop\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_full_stop\fP (bool value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSimpleMPCDebug\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSimpleMPCDebug\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSimpleMPCDebug\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fcontrol_5fmsgs_2fcontrol_5fcmd_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBSimpleMPCDebug\fP &a, \fBSimpleMPCDebug\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::control::SimpleMPCDebug::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    SimpleMPCDebug::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::control::SimpleMPCDebug::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    4
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

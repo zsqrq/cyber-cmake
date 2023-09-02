@@ -1,0 +1,119 @@
+.TH "eprosima::fastrtps::IPFinder" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::IPFinder
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IPFinder\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBinfo_IP\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBIPTYPE\fP { \fBIP4\fP, \fBIP6\fP, \fBIP4_LOCAL\fP, \fBIP6_LOCAL\fP }"
+.br
+.ti -1c
+.RI "typedef struct \fBeprosima::fastrtps::IPFinder::info_IP\fP \fBinfo_IP\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBgetIPs\fP (std::vector< \fBinfo_IP\fP > *vec_name, bool return_loopback=true)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBgetIP4Address\fP (\fBLocatorList_t\fP *locators)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBgetIP6Address\fP (\fBLocatorList_t\fP *locators)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBgetAllIPAddress\fP (\fBLocatorList_t\fP *locators)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBparseIP4\fP (\fBinfo_IP\fP &info)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBparseIP6\fP (\fBinfo_IP\fP &info)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBIPFinder\fP, to determine the IP of the NICs\&. 
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef struct \fBeprosima::fastrtps::IPFinder::info_IP\fP \fBeprosima::fastrtps::IPFinder::info_IP\fP"
+Structure \fBinfo_IP\fP with information about a specific IP obtained from a NIC\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBeprosima::fastrtps::IPFinder::IPTYPE\fP"
+Enum IPTYPE, to define the type of IP obtained from the NICs\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIIP4 \fP\fP
+IP4\&. 
+.TP
+\fB\fIIP6 \fP\fP
+IP6\&. 
+.TP
+\fB\fIIP4_LOCAL \fP\fP
+IP4_LOCAL\&. 
+.TP
+\fB\fIIP6_LOCAL \fP\fP
+IP6_LOCAL\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::IPFinder::getAllIPAddress (\fBLocatorList_t\fP * locators)\fC [static]\fP"
+Get all IP Adresses in all interfaces\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocators\fP List of locators to be populated with the addresses\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::IPFinder::getIP4Address (\fBLocatorList_t\fP * locators)\fC [static]\fP"
+Get the IP4Adresses in all interfaces\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocators\fP List of locators to be populated with the IP4 addresses\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::IPFinder::getIP6Address (\fBLocatorList_t\fP * locators)\fC [static]\fP"
+Get the IP6Adresses in all interfaces\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocators\fP List of locators to be populated with the IP6 addresses\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::IPFinder::parseIP4 (\fBinfo_IP\fP & info)\fC [static]\fP"
+Parses an IP4 string, populating a locator with its value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP IP string to parse\&. 
+.br
+\fIloc\fP Locator to populate\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

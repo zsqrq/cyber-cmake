@@ -1,0 +1,196 @@
+.TH "eprosima::fastrtps::rtps::WLP" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::WLP
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WLP\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWLP\fP (\fBBuiltinProtocols\fP *prot)"
+.br
+.ti -1c
+.RI "bool \fBinitWL\fP (RTPSParticipantImpl *p)"
+.br
+.ti -1c
+.RI "bool \fBcreateEndpoints\fP ()"
+.br
+.ti -1c
+.RI "bool \fBassignRemoteEndpoints\fP (\fBParticipantProxyData\fP *pdata)"
+.br
+.ti -1c
+.RI "void \fBremoveRemoteEndpoints\fP (\fBParticipantProxyData\fP *pdata)"
+.br
+.ti -1c
+.RI "bool \fBaddLocalWriter\fP (\fBRTPSWriter\fP *W, \fBWriterQos\fP &wqos)"
+.br
+.ti -1c
+.RI "bool \fBremoveLocalWriter\fP (\fBRTPSWriter\fP *W)"
+.br
+.ti -1c
+.RI "\fBBuiltinProtocols\fP * \fBgetBuiltinProtocols\fP ()"
+.br
+.ti -1c
+.RI "bool \fBupdateLocalWriter\fP (\fBRTPSWriter\fP *W, \fBWriterQos\fP &wqos)"
+.br
+.ti -1c
+.RI "RTPSParticipantImpl * \fBgetRTPSParticipant\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBm_minAutomatic_MilliSec\fP"
+.br
+.RI "MInimum time of the automatic writers liveliness period\&. "
+.ti -1c
+.RI "double \fBm_minManRTPSParticipant_MilliSec\fP"
+.br
+.RI "Minimum time of the manual by participant writers liveliness period\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBWLPListener\fP"
+.br
+.ti -1c
+.RI "class \fBWLivelinessPeriodicAssertion\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBWLP\fP that implements the Writer Liveliness Protocol described in the RTPS specification\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::WLP::WLP (\fBBuiltinProtocols\fP * prot)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprot\fP Pointer to the \fBBuiltinProtocols\fP object\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool eprosima::fastrtps::rtps::WLP::addLocalWriter (\fBRTPSWriter\fP * W, \fBWriterQos\fP & wqos)"
+Add a local writer to the liveliness protocol\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIW\fP Pointer to the \fBRTPSWriter\fP\&. 
+.br
+\fIwqos\fP Quality of service policies for the writer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::WLP::assignRemoteEndpoints (\fBParticipantProxyData\fP * pdata)"
+Assign the remote endpoints for a newly discovered \fBRTPSParticipant\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdata\fP Pointer to the RTPSParticipantProxyData object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::WLP::createEndpoints ()"
+Create the endpoitns used in the \fBWLP\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if correct\&. 
+.RE
+.PP
+
+.SS "\fBBuiltinProtocols\fP* eprosima::fastrtps::rtps::WLP::getBuiltinProtocols ()\fC [inline]\fP"
+Get the builtin protocols 
+.PP
+\fBReturns\fP
+.RS 4
+Builtin protocols 
+.RE
+.PP
+
+.SS "RTPSParticipantImpl* eprosima::fastrtps::rtps::WLP::getRTPSParticipant ()\fC [inline]\fP"
+Get the RTPS participant 
+.PP
+\fBReturns\fP
+.RS 4
+RTPS participant 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::WLP::initWL (RTPSParticipantImpl * p)"
+Initialize the \fBWLP\fP protocol\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Pointer to the RTPS participant implementation\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the initialziacion was succesful\&. 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::WLP::removeLocalWriter (\fBRTPSWriter\fP * W)"
+Remove a local writer from the liveliness protocol\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIW\fP Pointer to the \fBRTPSWriter\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if removed\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::WLP::removeRemoteEndpoints (\fBParticipantProxyData\fP * pdata)"
+Remove remote endpoints from the liveliness protocol\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdata\fP Pointer to the \fBParticipantProxyData\fP to remove 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::WLP::updateLocalWriter (\fBRTPSWriter\fP * W, \fBWriterQos\fP & wqos)"
+Update local writer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIW\fP Writer to update 
+.br
+\fIwqos\fP New writer QoS 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True on success 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

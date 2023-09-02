@@ -1,0 +1,63 @@
+.TH "TRANSPORT_MODULE" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TRANSPORT_MODULE \- Transport Module\&.
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::TransportInterface\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::UDPv4Transport\fP"
+.br
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::UDPv4TransportDescriptor\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::UDPv6Transport\fP"
+.br
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::UDPv6TransportDescriptor\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBeprosima::fastrtps::rtps::UDPv4TransportDescriptor\fP \fBeprosima::fastrtps::rtps::UDPv4TransportDescriptor\fP"
+.br
+.ti -1c
+.RI "typedef \fBeprosima::fastrtps::rtps::UDPv6TransportDescriptor\fP \fBeprosima::fastrtps::rtps::UDPv6TransportDescriptor\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Built in and user defined transport layer implementations\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef  \fBeprosima::fastrtps::rtps::UDPv4TransportDescriptor\fP \fBeprosima::fastrtps::rtps::UDPv4TransportDescriptor\fP"
+Transport configuration
+.PP
+.IP "\(bu" 2
+bufferSize: length of the buffers used for transmission\&. Passing a buffer of different size will cause transmission to fail\&.
+.IP "\(bu" 2
+interfaceWhiteList: Lists the allowed interfaces\&. 
+.PP
+
+.SS "typedef  \fBeprosima::fastrtps::rtps::UDPv6TransportDescriptor\fP \fBeprosima::fastrtps::rtps::UDPv6TransportDescriptor\fP"
+Transport configuration
+.PP
+.IP "\(bu" 2
+bufferSize: length of the buffers used for transmission\&. Passing a buffer of different size will cause transmission to fail\&.
+.IP "\(bu" 2
+interfaceWhiteList: Lists the allowed interfaces\&. 
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

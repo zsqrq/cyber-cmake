@@ -1,0 +1,460 @@
+.TH "apollo::hdmap::Map" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::hdmap::Map
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkCrosswalkFieldNumber\fP = 2, \fBkJunctionFieldNumber\fP = 3, \fBkLaneFieldNumber\fP = 4, \fBkStopSignFieldNumber\fP = 5, \fBkSignalFieldNumber\fP = 6, \fBkYieldFieldNumber\fP = 7, \fBkOverlapFieldNumber\fP = 8, \fBkClearAreaFieldNumber\fP = 9, \fBkSpeedBumpFieldNumber\fP = 10, \fBkRoadFieldNumber\fP = 11, \fBkParkingSpaceFieldNumber\fP = 12, \fBkPncJunctionFieldNumber\fP = 13, \fBkRsuFieldNumber\fP = 14, \fBkHeaderFieldNumber\fP = 1 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBMap\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBMap\fP (const \fBMap\fP &from)"
+.br
+.ti -1c
+.RI "\fBMap\fP (\fBMap\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBMap\fP & \fBoperator=\fP (const \fBMap\fP &from)"
+.br
+.ti -1c
+.RI "\fBMap\fP & \fBoperator=\fP (\fBMap\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBMap\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBMap\fP *other)"
+.br
+.ti -1c
+.RI "\fBMap\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBMap\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBMap\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBcrosswalk_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_crosswalk\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Crosswalk\fP * \fBmutable_crosswalk\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Crosswalk\fP > * \fBmutable_crosswalk\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Crosswalk\fP & \fBcrosswalk\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Crosswalk\fP * \fBadd_crosswalk\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Crosswalk\fP > & \fBcrosswalk\fP () const"
+.br
+.ti -1c
+.RI "int \fBjunction_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_junction\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Junction\fP * \fBmutable_junction\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Junction\fP > * \fBmutable_junction\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Junction\fP & \fBjunction\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Junction\fP * \fBadd_junction\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Junction\fP > & \fBjunction\fP () const"
+.br
+.ti -1c
+.RI "int \fBlane_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_lane\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Lane\fP * \fBmutable_lane\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Lane\fP > * \fBmutable_lane\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Lane\fP & \fBlane\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Lane\fP * \fBadd_lane\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Lane\fP > & \fBlane\fP () const"
+.br
+.ti -1c
+.RI "int \fBstop_sign_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_stop_sign\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::StopSign\fP * \fBmutable_stop_sign\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::StopSign\fP > * \fBmutable_stop_sign\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::StopSign\fP & \fBstop_sign\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::StopSign\fP * \fBadd_stop_sign\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::StopSign\fP > & \fBstop_sign\fP () const"
+.br
+.ti -1c
+.RI "int \fBsignal_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_signal\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Signal\fP * \fBmutable_signal\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Signal\fP > * \fBmutable_signal\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Signal\fP & \fBsignal\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Signal\fP * \fBadd_signal\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Signal\fP > & \fBsignal\fP () const"
+.br
+.ti -1c
+.RI "int \fByield_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_yield\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::YieldSign\fP * \fBmutable_yield\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::YieldSign\fP > * \fBmutable_yield\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::YieldSign\fP & \fByield\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::YieldSign\fP * \fBadd_yield\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::YieldSign\fP > & \fByield\fP () const"
+.br
+.ti -1c
+.RI "int \fBoverlap_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_overlap\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Overlap\fP * \fBmutable_overlap\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Overlap\fP > * \fBmutable_overlap\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Overlap\fP & \fBoverlap\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Overlap\fP * \fBadd_overlap\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Overlap\fP > & \fBoverlap\fP () const"
+.br
+.ti -1c
+.RI "int \fBclear_area_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_clear_area\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::ClearArea\fP * \fBmutable_clear_area\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::ClearArea\fP > * \fBmutable_clear_area\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::ClearArea\fP & \fBclear_area\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::ClearArea\fP * \fBadd_clear_area\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::ClearArea\fP > & \fBclear_area\fP () const"
+.br
+.ti -1c
+.RI "int \fBspeed_bump_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_bump\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::SpeedBump\fP * \fBmutable_speed_bump\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::SpeedBump\fP > * \fBmutable_speed_bump\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::SpeedBump\fP & \fBspeed_bump\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::SpeedBump\fP * \fBadd_speed_bump\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::SpeedBump\fP > & \fBspeed_bump\fP () const"
+.br
+.ti -1c
+.RI "int \fBroad_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_road\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Road\fP * \fBmutable_road\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Road\fP > * \fBmutable_road\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Road\fP & \fBroad\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Road\fP * \fBadd_road\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Road\fP > & \fBroad\fP () const"
+.br
+.ti -1c
+.RI "int \fBparking_space_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_parking_space\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::ParkingSpace\fP * \fBmutable_parking_space\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::ParkingSpace\fP > * \fBmutable_parking_space\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::ParkingSpace\fP & \fBparking_space\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::ParkingSpace\fP * \fBadd_parking_space\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::ParkingSpace\fP > & \fBparking_space\fP () const"
+.br
+.ti -1c
+.RI "int \fBpnc_junction_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_pnc_junction\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::PNCJunction\fP * \fBmutable_pnc_junction\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::PNCJunction\fP > * \fBmutable_pnc_junction\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::PNCJunction\fP & \fBpnc_junction\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::PNCJunction\fP * \fBadd_pnc_junction\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::PNCJunction\fP > & \fBpnc_junction\fP () const"
+.br
+.ti -1c
+.RI "int \fBrsu_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_rsu\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::RSU\fP * \fBmutable_rsu\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::RSU\fP > * \fBmutable_rsu\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::RSU\fP & \fBrsu\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::RSU\fP * \fBadd_rsu\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::RSU\fP > & \fBrsu\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhas_header\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_header\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Header\fP & \fBheader\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::hdmap::Header\fP * \fBrelease_header\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Header\fP * \fBmutable_header\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_header\fP (::\fBapollo::hdmap::Header\fP *header)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_header\fP (::\fBapollo::hdmap::Header\fP *header)"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Header\fP * \fBunsafe_arena_release_header\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBMap\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBMap\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMap\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fmap_5fmsgs_2fmap_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBMap\fP &a, \fBMap\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::hdmap::Map::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Map::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::hdmap::Map::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    2
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

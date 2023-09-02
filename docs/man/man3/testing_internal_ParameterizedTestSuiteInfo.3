@@ -1,0 +1,49 @@
+.TH "testing::internal::ParameterizedTestSuiteInfo< TestSuite >" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::internal::ParameterizedTestSuiteInfo< TestSuite >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBtesting::internal::ParameterizedTestSuiteInfoBase\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBParamType\fP = typename TestSuite::ParamType"
+.br
+.ti -1c
+.RI "using \fBParamNameGeneratorFunc\fP = std::string(const \fBTestParamInfo\fP< ParamType > &)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBParamGenerator\fP (GeneratorCreationFunc)()"
+.br
+.ti -1c
+.RI "\fBParameterizedTestSuiteInfo\fP (const char *name, \fBCodeLocation\fP code_location)"
+.br
+.ti -1c
+.RI "const std::string & \fBGetTestSuiteName\fP () const override"
+.br
+.ti -1c
+.RI "TypeId \fBGetTestSuiteTypeId\fP () const override"
+.br
+.ti -1c
+.RI "void \fBAddTestPattern\fP (const char *test_suite_name, const char *test_base_name, \fBTestMetaFactoryBase\fP< ParamType > *meta_factory)"
+.br
+.ti -1c
+.RI "int \fBAddTestSuiteInstantiation\fP (const std::string &instantiation_name, GeneratorCreationFunc *func, ParamNameGeneratorFunc *name_func, const char *file, int line)"
+.br
+.ti -1c
+.RI "void \fBRegisterTests\fP () override"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

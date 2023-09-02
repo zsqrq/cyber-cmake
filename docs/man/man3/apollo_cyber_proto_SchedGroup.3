@@ -1,0 +1,304 @@
+.TH "apollo::cyber::proto::SchedGroup" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::cyber::proto::SchedGroup
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkTasksFieldNumber\fP = 7, \fBkNameFieldNumber\fP = 1, \fBkAffinityFieldNumber\fP = 3, \fBkCpusetFieldNumber\fP = 4, \fBkProcessorPolicyFieldNumber\fP = 5, \fBkProcessorNumFieldNumber\fP = 2, \fBkProcessorPrioFieldNumber\fP = 6 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBSchedGroup\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBSchedGroup\fP (const \fBSchedGroup\fP &from)"
+.br
+.ti -1c
+.RI "\fBSchedGroup\fP (\fBSchedGroup\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBSchedGroup\fP & \fBoperator=\fP (const \fBSchedGroup\fP &from)"
+.br
+.ti -1c
+.RI "\fBSchedGroup\fP & \fBoperator=\fP (\fBSchedGroup\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBSchedGroup\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBSchedGroup\fP *other)"
+.br
+.ti -1c
+.RI "\fBSchedGroup\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBSchedGroup\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBSchedGroup\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBtasks_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_tasks\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::cyber::proto::ClassicTask\fP * \fBmutable_tasks\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::cyber::proto::ClassicTask\fP > * \fBmutable_tasks\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::cyber::proto::ClassicTask\fP & \fBtasks\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::cyber::proto::ClassicTask\fP * \fBadd_tasks\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::cyber::proto::ClassicTask\fP > & \fBtasks\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhas_name\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_name\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBname\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_name\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_name\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_name\fP (std::string *name)"
+.br
+.ti -1c
+.RI "bool \fBhas_affinity\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_affinity\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBaffinity\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_affinity\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_affinity\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_affinity\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_affinity\fP (std::string *affinity)"
+.br
+.ti -1c
+.RI "bool \fBhas_cpuset\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_cpuset\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBcpuset\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_cpuset\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_cpuset\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_cpuset\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_cpuset\fP (std::string *cpuset)"
+.br
+.ti -1c
+.RI "bool \fBhas_processor_policy\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_processor_policy\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBprocessor_policy\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_processor_policy\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_processor_policy\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_processor_policy\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_processor_policy\fP (std::string *processor_policy)"
+.br
+.ti -1c
+.RI "bool \fBhas_processor_num\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_processor_num\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBprocessor_num\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_processor_num\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_processor_prio\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_processor_prio\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBprocessor_prio\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_processor_prio\fP (int32_t value)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_affinity\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_cpuset\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_processor_policy\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSchedGroup\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSchedGroup\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSchedGroup\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_cyber_2fproto_2fclassic_5fconf_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBSchedGroup\fP &a, \fBSchedGroup\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::cyber::proto::SchedGroup::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    SchedGroup::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::cyber::proto::SchedGroup::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    1
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

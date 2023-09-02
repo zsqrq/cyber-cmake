@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -78,8 +80,8 @@ Inheritance diagram for apollo::cyber::service_discovery::ParticipantListener:</
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1service__discovery_1_1ParticipantListener__inherit__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1service__discovery_1_1ParticipantListener_inherit__map" alt="Inheritance graph"/></div>
 <map name="aapollo_1_1cyber_1_1service__discovery_1_1ParticipantListener_inherit__map" id="aapollo_1_1cyber_1_1service__discovery_1_1ParticipantListener_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,131,819,237"/>
-<area shape="rect" title=" " alt="" coords="277,5,547,83"/>
+<area shape="rect" title=" " alt="" coords="5,160,821,267"/>
+<area shape="rect" href="classeprosima_1_1fastrtps_1_1ParticipantListener.html" title=" " alt="" coords="132,5,695,112"/>
 </map>
 </div>
 <div class="dynheader">
@@ -87,15 +89,15 @@ Collaboration diagram for apollo::cyber::service_discovery::ParticipantListener:
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1service__discovery_1_1ParticipantListener__coll__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1service__discovery_1_1ParticipantListener_coll__map" alt="Collaboration graph"/></div>
 <map name="aapollo_1_1cyber_1_1service__discovery_1_1ParticipantListener_coll__map" id="aapollo_1_1cyber_1_1service__discovery_1_1ParticipantListener_coll__map">
-<area shape="rect" title=" " alt="" coords="5,131,819,237"/>
-<area shape="rect" title=" " alt="" coords="277,5,547,83"/>
+<area shape="rect" title=" " alt="" coords="5,160,821,267"/>
+<area shape="rect" href="classeprosima_1_1fastrtps_1_1ParticipantListener.html" title=" " alt="" coords="132,5,695,112"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:aeb34c3abc88e4f17c1954756e9f2b8db"><td class="memItemLeft" align="right" valign="top"><a id="aeb34c3abc88e4f17c1954756e9f2b8db"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ChangeFunc</b> = std::function&lt; void(const eprosima::fastrtps::ParticipantDiscoveryInfo &amp;info)&gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ChangeFunc</b> = std::function&lt; void(const <a class="el" href="classeprosima_1_1fastrtps_1_1ParticipantDiscoveryInfo.html">eprosima::fastrtps::ParticipantDiscoveryInfo</a> &amp;info)&gt;</td></tr>
 <tr class="separator:aeb34c3abc88e4f17c1954756e9f2b8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -103,10 +105,55 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afafab55249cfd837187ff60f658bd513"><td class="memItemLeft" align="right" valign="top"><a id="afafab55249cfd837187ff60f658bd513"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ParticipantListener</b> (const ChangeFunc &amp;callback)</td></tr>
 <tr class="separator:afafab55249cfd837187ff60f658bd513"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1744abed90b240160c39bf4f7f4533bc"><td class="memItemLeft" align="right" valign="top"><a id="a1744abed90b240160c39bf4f7f4533bc"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onParticipantDiscovery</b> (eprosima::fastrtps::Participant *p, eprosima::fastrtps::ParticipantDiscoveryInfo info)</td></tr>
+<tr class="memitem:a1744abed90b240160c39bf4f7f4533bc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1service__discovery_1_1ParticipantListener.html#a1744abed90b240160c39bf4f7f4533bc">onParticipantDiscovery</a> (<a class="el" href="classeprosima_1_1fastrtps_1_1Participant.html">eprosima::fastrtps::Participant</a> *p, <a class="el" href="classeprosima_1_1fastrtps_1_1ParticipantDiscoveryInfo.html">eprosima::fastrtps::ParticipantDiscoveryInfo</a> info)</td></tr>
 <tr class="separator:a1744abed90b240160c39bf4f7f4533bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1744abed90b240160c39bf4f7f4533bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1744abed90b240160c39bf4f7f4533bc">&#9670;&nbsp;</a></span>onParticipantDiscovery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apollo::cyber::service_discovery::ParticipantListener::onParticipantDiscovery </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classeprosima_1_1fastrtps_1_1Participant.html">eprosima::fastrtps::Participant</a> *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classeprosima_1_1fastrtps_1_1ParticipantDiscoveryInfo.html">eprosima::fastrtps::ParticipantDiscoveryInfo</a>&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is called when a new Participant is discovered, or a previously discovered participant changes its QOS or is removed. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>Pointer to the Participant </td></tr>
+    <tr><td class="paramname">info</td><td>DiscoveryInfo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classeprosima_1_1fastrtps_1_1ParticipantListener.html#a7677907f27f0639c5faa392b6dda664d">eprosima::fastrtps::ParticipantListener</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>cyber/service_discovery/communication/<a class="el" href="participant__listener_8h_source.html">participant_listener.h</a></li>
 <li>cyber/service_discovery/communication/participant_listener.cc</li>

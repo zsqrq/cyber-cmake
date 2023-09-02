@@ -1,0 +1,43 @@
+.TH "my_WriterListener" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+my_WriterListener
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::WriterListener\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBonWriterMatched\fP (\fBRTPSWriter\fP *writer, \fBMatchingInfo\fP &info)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBn_matched\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void my_WriterListener::onWriterMatched (\fBRTPSWriter\fP * writer, \fBMatchingInfo\fP & info)\fC [virtual]\fP"
+This method is called when a new Reader is matched with this Writer by hte builtin protocols 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwriter\fP Pointer to the RTPSWriter\&. 
+.br
+\fIinfo\fP Matching Information\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBeprosima::fastrtps::rtps::WriterListener\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

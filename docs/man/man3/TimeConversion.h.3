@@ -1,0 +1,76 @@
+.TH "third_party/fast-rtps-1.5.0-1/include/fastrtps/utils/TimeConversion.h" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+third_party/fast-rtps-1.5.0-1/include/fastrtps/utils/TimeConversion.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstdint>\fP
+.br
+\fC#include '\&.\&./rtps/common/Time_t\&.h'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBeprosima\fP"
+.br
+.RI "Maximum payload is maximum of UDP packet size minus 536bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) With those 536 bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) bytes is posible to send RTPS Header plus RTPS Data submessage plus RTPS Heartbeat submessage\&. "
+.ti -1c
+.RI " \fBeprosima::fastrtps\fP"
+.br
+.ti -1c
+.RI " \fBeprosima::fastrtps::rtps\fP"
+.br
+.ti -1c
+.RI " \fBeprosima::fastrtps::rtps::TimeConv\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBeprosima::fastrtps::rtps::TimeConv::Time_t2SecondsDouble\fP (const Time_t &t)"
+.br
+.ti -1c
+.RI "int64_t \fBeprosima::fastrtps::rtps::TimeConv::Time_t2MicroSecondsInt64\fP (const Time_t &t)"
+.br
+.ti -1c
+.RI "double \fBeprosima::fastrtps::rtps::TimeConv::Time_t2MicroSecondsDouble\fP (const Time_t &t)"
+.br
+.ti -1c
+.RI "int64_t \fBeprosima::fastrtps::rtps::TimeConv::Time_t2MilliSecondsInt64\fP (const Time_t &t)"
+.br
+.ti -1c
+.RI "double \fBeprosima::fastrtps::rtps::TimeConv::Time_t2MilliSecondsDouble\fP (const Time_t &t)"
+.br
+.ti -1c
+.RI "Time_t \fBeprosima::fastrtps::rtps::TimeConv::MilliSeconds2Time_t\fP (double millisec)"
+.br
+.ti -1c
+.RI "Time_t \fBeprosima::fastrtps::rtps::TimeConv::MicroSeconds2Time_t\fP (double microsec)"
+.br
+.ti -1c
+.RI "Time_t \fBeprosima::fastrtps::rtps::TimeConv::Seconds2Time_t\fP (double seconds)"
+.br
+.ti -1c
+.RI "double \fBeprosima::fastrtps::rtps::TimeConv::Time_tAbsDiff2DoubleMillisec\fP (const Time_t &t1, const Time_t &t2)"
+.br
+.ti -1c
+.RI "Time_t \fBeprosima::fastrtps::rtps::TimeConv::MilliSecondsWithRandOffset2Time_t\fP (double millisec, double randoff)"
+.br
+.RI "Create a random \fBTime_t\fP that is millisec + [-randoff,randoff]\&. "
+.ti -1c
+.RI "Time_t \fBeprosima::fastrtps::rtps::TimeConv::MicroSecondsWithRandOffset2Time_t\fP (double microsec, double randoff)"
+.br
+.RI "Create a random \fBTime_t\fP that is microsec + [-randoff,randoff]\&. "
+.ti -1c
+.RI "Time_t \fBeprosima::fastrtps::rtps::TimeConv::SecondsWithRandOffset2Time_t\fP (double sec, double randoff)"
+.br
+.RI "Create a random \fBTime_t\fP that is sec + [-randoff,randoff]\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

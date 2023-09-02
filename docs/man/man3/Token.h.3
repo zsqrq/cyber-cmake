@@ -1,0 +1,55 @@
+.TH "third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/common/Token.h" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/common/Token.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./\&.\&./fastrtps_dll\&.h'\fP
+.br
+\fC#include 'Property\&.h'\fP
+.br
+\fC#include 'BinaryProperty\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::DataHolder\fP"
+.br
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::DataHolderHelper\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBeprosima\fP"
+.br
+.RI "Maximum payload is maximum of UDP packet size minus 536bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) With those 536 bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) bytes is posible to send RTPS Header plus RTPS Data submessage plus RTPS Heartbeat submessage\&. "
+.ti -1c
+.RI " \fBeprosima::fastrtps\fP"
+.br
+.ti -1c
+.RI " \fBeprosima::fastrtps::rtps\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::vector< DataHolder > \fBeprosima::fastrtps::rtps::DataHolderSeq\fP"
+.br
+.ti -1c
+.RI "typedef DataHolder \fBeprosima::fastrtps::rtps::Token\fP"
+.br
+.ti -1c
+.RI "typedef Token \fBeprosima::fastrtps::rtps::IdentityToken\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,4 +1,4 @@
-.TH "apollo::cyber::ReceiverManager< MessageT >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::ReceiverManager< MessageT >" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,7 +13,7 @@ apollo::cyber::ReceiverManager< MessageT > \- One Channel is related to one Rece
 
 .in +1c
 .ti -1c
-.RI "auto \fBGetReceiver\fP (const proto::RoleAttributes &role_attr) \-> typename std::shared_ptr< \fBtransport::Receiver\fP< MessageT >>"
+.RI "auto \fBGetReceiver\fP (const \fBproto::RoleAttributes\fP &role_attr) \-> typename std::shared_ptr< \fBtransport::Receiver\fP< MessageT >>"
 .br
 .RI "Get the Receiver object\&. "
 .in -1c
@@ -35,7 +35,7 @@ One Channel is related to one Receiver\&. \fBReceiverManager\fP is in charge of 
 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<typename MessageT > auto \fBapollo::cyber::ReceiverManager\fP< MessageT >::GetReceiver (const proto::RoleAttributes & role_attr) \-> typename std::shared_ptr<\fBtransport::Receiver\fP<MessageT>>"
+.SS "template<typename MessageT > auto \fBapollo::cyber::ReceiverManager\fP< MessageT >::GetReceiver (const \fBproto::RoleAttributes\fP & role_attr) \-> typename std::shared_ptr<\fBtransport::Receiver\fP<MessageT>>"
 
 .PP
 Get the Receiver object\&. 

@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -66,6 +68,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classapollo_1_1cyber_1_1Component-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -83,7 +86,7 @@ Inheritance diagram for apollo::cyber::Component&lt; M0, M1, M2, M3 &gt;:</div>
 <div class="center"><img src="classapollo_1_1cyber_1_1Component__inherit__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1Component_3_01M0_00_01M1_00_01M2_00_01M3_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aapollo_1_1cyber_1_1Component_3_01M0_00_01M1_00_01M2_00_01M3_01_4_inherit__map" id="aapollo_1_1cyber_1_1Component_3_01M0_00_01M1_00_01M2_00_01M3_01_4_inherit__map">
 <area shape="rect" title="The Component can process up to four channels of messages. The message type is specified when the com..." alt="" coords="5,432,753,568"/>
-<area shape="rect" href="classapollo_1_1cyber_1_1ComponentBase.html" title=" " alt="" coords="166,131,593,384"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1ComponentBase.html" title=" " alt="" coords="165,131,593,384"/>
 <area shape="rect" title=" " alt="" coords="204,5,555,83"/>
 </map>
 </div>
@@ -93,15 +96,20 @@ Collaboration diagram for apollo::cyber::Component&lt; M0, M1, M2, M3 &gt;:</div
 <div class="center"><img src="classapollo_1_1cyber_1_1Component__coll__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1Component_3_01M0_00_01M1_00_01M2_00_01M3_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="aapollo_1_1cyber_1_1Component_3_01M0_00_01M1_00_01M2_00_01M3_01_4_coll__map" id="aapollo_1_1cyber_1_1Component_3_01M0_00_01M1_00_01M2_00_01M3_01_4_coll__map">
 <area shape="rect" title="The Component can process up to four channels of messages. The message type is specified when the com..." alt="" coords="5,433,753,569"/>
-<area shape="rect" href="classapollo_1_1cyber_1_1ComponentBase.html" title=" " alt="" coords="166,145,593,384"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1ComponentBase.html" title=" " alt="" coords="165,145,593,384"/>
 <area shape="rect" title=" " alt="" coords="89,5,440,83"/>
 <area shape="rect" title=" " alt="" coords="465,5,523,83"/>
 </map>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1monitor_1_1Component_1_1__Internal.html">_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae68b7c7dce67c4d5c6c024c910bb9d92"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Initialize</a> (const ComponentConfig &amp;config) override</td></tr>
+<tr class="memitem:ae68b7c7dce67c4d5c6c024c910bb9d92"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">Initialize</a> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">ComponentConfig</a> &amp;config) override</td></tr>
 <tr class="memdesc:ae68b7c7dce67c4d5c6c024c910bb9d92"><td class="mdescLeft">&#160;</td><td class="mdescRight">init the component by protobuf object.  <a href="classapollo_1_1cyber_1_1Component.html#ae68b7c7dce67c4d5c6c024c910bb9d92">More...</a><br /></td></tr>
 <tr class="separator:ae68b7c7dce67c4d5c6c024c910bb9d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3083d711406cfad7c11d60a0fadad274"><td class="memItemLeft" align="right" valign="top"><a id="a3083d711406cfad7c11d60a0fadad274"></a>
@@ -109,7 +117,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>Process</b> (const st
 <tr class="separator:a3083d711406cfad7c11d60a0fadad274"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classapollo_1_1cyber_1_1ComponentBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classapollo_1_1cyber_1_1ComponentBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classapollo_1_1cyber_1_1ComponentBase.html">apollo::cyber::ComponentBase</a></td></tr>
 <tr class="memitem:a37d357e2eceb17811db7a7acaae59047 inherit pub_methods_classapollo_1_1cyber_1_1ComponentBase"><td class="memItemLeft" align="right" valign="top"><a id="a37d357e2eceb17811db7a7acaae59047"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (const TimerComponentConfig &amp;config)</td></tr>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1TimerComponentConfig.html">TimerComponentConfig</a> &amp;config)</td></tr>
 <tr class="separator:a37d357e2eceb17811db7a7acaae59047 inherit pub_methods_classapollo_1_1cyber_1_1ComponentBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d584e0ab4d990fdad46f845d2e43167 inherit pub_methods_classapollo_1_1cyber_1_1ComponentBase"><td class="memItemLeft" align="right" valign="top"><a id="a6d584e0ab4d990fdad46f845d2e43167"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Shutdown</b> ()</td></tr>
@@ -137,10 +145,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Clear</b> ()<
 const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>ConfigFilePath</b> () const</td></tr>
 <tr class="separator:a696031c885a4601454bf4f761b130557 inherit pro_methods_classapollo_1_1cyber_1_1ComponentBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc6983393f7b411e673b09edd90e1643 inherit pro_methods_classapollo_1_1cyber_1_1ComponentBase"><td class="memItemLeft" align="right" valign="top"><a id="afc6983393f7b411e673b09edd90e1643"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadConfigFiles</b> (const ComponentConfig &amp;config)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadConfigFiles</b> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">ComponentConfig</a> &amp;config)</td></tr>
 <tr class="separator:afc6983393f7b411e673b09edd90e1643 inherit pro_methods_classapollo_1_1cyber_1_1ComponentBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6e7e5f9294f87bb5ff8c859ed1def27 inherit pro_methods_classapollo_1_1cyber_1_1ComponentBase"><td class="memItemLeft" align="right" valign="top"><a id="aa6e7e5f9294f87bb5ff8c859ed1def27"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadConfigFiles</b> (const TimerComponentConfig &amp;config)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadConfigFiles</b> (const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1TimerComponentConfig.html">TimerComponentConfig</a> &amp;config)</td></tr>
 <tr class="separator:aa6e7e5f9294f87bb5ff8c859ed1def27 inherit pro_methods_classapollo_1_1cyber_1_1ComponentBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classapollo_1_1cyber_1_1ComponentBase"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classapollo_1_1cyber_1_1ComponentBase')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classapollo_1_1cyber_1_1ComponentBase.html">apollo::cyber::ComponentBase</a></td></tr>
 <tr class="memitem:a8e11428c0f4b5566ac3a602cef96516c inherit pro_attribs_classapollo_1_1cyber_1_1ComponentBase"><td class="memItemLeft" align="right" valign="top"><a id="a8e11428c0f4b5566ac3a602cef96516c"></a>
@@ -186,7 +194,7 @@ template&lt;typename M0 , typename M1 , typename M2 , typename M3 &gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classapollo_1_1cyber_1_1Component.html">apollo::cyber::Component</a>&lt; M0, M1, M2, M3 &gt;::Initialize </td>
           <td>(</td>
-          <td class="paramtype">const ComponentConfig &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html">ComponentConfig</a> &amp;&#160;</td>
           <td class="paramname"><em>config</em></td><td>)</td>
           <td></td>
         </tr>

@@ -1,0 +1,54 @@
+.TH "eprosima::fastrtps::rtps::test_UDPv4Transport" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::test_UDPv4Transport
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::UDPv4Transport\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "RTPS_DllAPI \fBtest_UDPv4Transport\fP (const \fBtest_UDPv4TransportDescriptor\fP &descriptor)"
+.br
+.ti -1c
+.RI "virtual bool \fBSend\fP (const octet *sendBuffer, uint32_t sendBufferSize, const \fBLocator_t\fP &localLocator, const \fBLocator_t\fP &remoteLocator)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static RTPS_DllAPI std::vector< std::vector< octet > > \fBDropLog\fP"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI uint32_t \fBDropLogLength\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool eprosima::fastrtps::rtps::test_UDPv4Transport::Send (const octet * sendBuffer, uint32_t sendBufferSize, const \fBLocator_t\fP & localLocator, const \fBLocator_t\fP & remoteLocator)\fC [virtual]\fP"
+Blocking Send through the specified channel\&. In both modes, using a localLocator of 0\&.0\&.0\&.0 will send through all whitelisted interfaces provided the channel is open\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsendBuffer\fP Slice into the raw data to send\&. 
+.br
+\fIsendBufferSize\fP Size of the raw data\&. It will be used as a bounds check for the previous argument\&. It must not exceed the sendBufferSize fed to this class during construction\&. 
+.br
+\fIlocalLocator\fP Locator mapping to the channel we're sending from\&. 
+.br
+\fIremoteLocator\fP Locator describing the remote destination we're sending to\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBeprosima::fastrtps::rtps::UDPv4Transport\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

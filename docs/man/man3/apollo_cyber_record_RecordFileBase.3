@@ -1,4 +1,4 @@
-.TH "apollo::cyber::record::RecordFileBase" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::record::RecordFileBase" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,10 +21,10 @@ Inherited by \fBapollo::cyber::record::RecordFileReader\fP, and \fBapollo::cyber
 .RI "const std::string & \fBGetPath\fP () const"
 .br
 .ti -1c
-.RI "const proto::Header & \fBGetHeader\fP () const"
+.RI "const \fBproto::Header\fP & \fBGetHeader\fP () const"
 .br
 .ti -1c
-.RI "const proto::Index & \fBGetIndex\fP () const"
+.RI "const \fBproto::Index\fP & \fBGetIndex\fP () const"
 .br
 .ti -1c
 .RI "int64_t \fBCurrentPosition\fP ()"
@@ -43,10 +43,10 @@ Inherited by \fBapollo::cyber::record::RecordFileReader\fP, and \fBapollo::cyber
 .RI "std::string \fBpath_\fP"
 .br
 .ti -1c
-.RI "proto::Header \fBheader_\fP"
+.RI "\fBproto::Header\fP \fBheader_\fP"
 .br
 .ti -1c
-.RI "proto::Index \fBindex_\fP"
+.RI "\fBproto::Index\fP \fBindex_\fP"
 .br
 .ti -1c
 .RI "int \fBfd_\fP = \-1"

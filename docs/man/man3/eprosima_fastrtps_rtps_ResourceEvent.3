@@ -1,0 +1,50 @@
+.TH "eprosima::fastrtps::rtps::ResourceEvent" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::ResourceEvent
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ResourceEvent\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit_thread\fP (RTPSParticipantImpl *p)"
+.br
+.ti -1c
+.RI "asio::io_service & \fBgetIOService\fP ()"
+.br
+.ti -1c
+.RI "std::thread & \fBgetThread\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBResourceEvent\fP used to manage the temporal events\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "asio::io_service& eprosima::fastrtps::rtps::ResourceEvent::getIOService ()\fC [inline]\fP"
+Get the associated IO service 
+.PP
+\fBReturns\fP
+.RS 4
+Associated IO service 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::ResourceEvent::init_thread (RTPSParticipantImpl * p)"
+Method to initialize the thread\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

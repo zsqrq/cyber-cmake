@@ -1,5 +1,5 @@
 <map id="apollo::cyber::Reader::GetDelaySec" name="apollo::cyber::Reader::GetDelaySec">
 <area shape="rect" id="node1" title="Get time interval of since last receive message." alt="" coords="5,31,257,57"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1Time.html#ab5172323c08151c59632aab53fac9f5e" title="get the current time." alt="" coords="321,5,505,32"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1Time.html#af2907405c33e3d38863a3c6f2b85648c" title="convert time to second." alt="" coords="305,56,521,83"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1Time.html#ab5172323c08151c59632aab53fac9f5e" title="get the current time." alt="" coords="321,5,504,32"/>
+<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1Time.html#af2907405c33e3d38863a3c6f2b85648c" title="convert time to second." alt="" coords="305,56,520,83"/>
 </map>

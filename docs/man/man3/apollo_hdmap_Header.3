@@ -1,0 +1,396 @@
+.TH "apollo::hdmap::Header" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::hdmap::Header
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkVersionFieldNumber\fP = 1, \fBkDateFieldNumber\fP = 2, \fBkDistrictFieldNumber\fP = 4, \fBkGenerationFieldNumber\fP = 5, \fBkRevMajorFieldNumber\fP = 6, \fBkRevMinorFieldNumber\fP = 7, \fBkVendorFieldNumber\fP = 12, \fBkProjectionFieldNumber\fP = 3, \fBkLeftFieldNumber\fP = 8, \fBkTopFieldNumber\fP = 9, \fBkRightFieldNumber\fP = 10, \fBkBottomFieldNumber\fP = 11 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBHeader\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBHeader\fP (const \fBHeader\fP &from)"
+.br
+.ti -1c
+.RI "\fBHeader\fP (\fBHeader\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBHeader\fP & \fBoperator=\fP (const \fBHeader\fP &from)"
+.br
+.ti -1c
+.RI "\fBHeader\fP & \fBoperator=\fP (\fBHeader\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBHeader\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBHeader\fP *other)"
+.br
+.ti -1c
+.RI "\fBHeader\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBHeader\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBHeader\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_version\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_version\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBversion\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_version\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_version\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_version\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_version\fP (std::string *version)"
+.br
+.ti -1c
+.RI "bool \fBhas_date\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_date\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBdate\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_date\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_date\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_date\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_date\fP (std::string *date)"
+.br
+.ti -1c
+.RI "bool \fBhas_district\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_district\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBdistrict\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_district\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_district\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_district\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_district\fP (std::string *district)"
+.br
+.ti -1c
+.RI "bool \fBhas_generation\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_generation\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBgeneration\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_generation\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_generation\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_generation\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_generation\fP (std::string *generation)"
+.br
+.ti -1c
+.RI "bool \fBhas_rev_major\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_rev_major\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBrev_major\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_rev_major\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_rev_major\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_rev_major\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_rev_major\fP (std::string *rev_major)"
+.br
+.ti -1c
+.RI "bool \fBhas_rev_minor\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_rev_minor\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBrev_minor\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_rev_minor\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_rev_minor\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_rev_minor\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_rev_minor\fP (std::string *rev_minor)"
+.br
+.ti -1c
+.RI "bool \fBhas_vendor\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_vendor\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBvendor\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_vendor\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_vendor\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_vendor\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_vendor\fP (std::string *vendor)"
+.br
+.ti -1c
+.RI "bool \fBhas_projection\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_projection\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Projection\fP & \fBprojection\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::hdmap::Projection\fP * \fBrelease_projection\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Projection\fP * \fBmutable_projection\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_projection\fP (::\fBapollo::hdmap::Projection\fP *projection)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_projection\fP (::\fBapollo::hdmap::Projection\fP *projection)"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Projection\fP * \fBunsafe_arena_release_projection\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_left\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_left\fP ()"
+.br
+.ti -1c
+.RI "double \fBleft\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_left\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_top\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_top\fP ()"
+.br
+.ti -1c
+.RI "double \fBtop\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_top\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_right\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_right\fP ()"
+.br
+.ti -1c
+.RI "double \fBright\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_right\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_bottom\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_bottom\fP ()"
+.br
+.ti -1c
+.RI "double \fBbottom\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_bottom\fP (double value)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_version\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_date\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_district\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_generation\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_rev_major\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_rev_minor\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_vendor\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBHeader\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBHeader\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHeader\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fmap_5fmsgs_2fmap_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBHeader\fP &a, \fBHeader\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::hdmap::Header::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Header::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::hdmap::Header::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    1
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

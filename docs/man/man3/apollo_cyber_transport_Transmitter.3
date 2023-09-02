@@ -1,4 +1,4 @@
-.TH "apollo::cyber::transport::Transmitter< M >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::transport::Transmitter< M >" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,7 +21,7 @@ Inherited by \fBapollo::cyber::transport::HybridTransmitter< M >\fP, \fBapollo::
 
 .in +1c
 .ti -1c
-.RI "\fBTransmitter\fP (const RoleAttributes &attr)"
+.RI "\fBTransmitter\fP (const \fBRoleAttributes\fP &attr)"
 .br
 .ti -1c
 .RI "virtual void \fBEnable\fP ()=0"
@@ -30,10 +30,10 @@ Inherited by \fBapollo::cyber::transport::HybridTransmitter< M >\fP, \fBapollo::
 .RI "virtual void \fBDisable\fP ()=0"
 .br
 .ti -1c
-.RI "virtual void \fBEnable\fP (const RoleAttributes &opposite_attr)"
+.RI "virtual void \fBEnable\fP (const \fBRoleAttributes\fP &opposite_attr)"
 .br
 .ti -1c
-.RI "virtual void \fBDisable\fP (const RoleAttributes &opposite_attr)"
+.RI "virtual void \fBDisable\fP (const \fBRoleAttributes\fP &opposite_attr)"
 .br
 .ti -1c
 .RI "virtual bool \fBTransmit\fP (const MessagePtr &msg)"

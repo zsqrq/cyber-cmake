@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -111,9 +113,9 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>cyber {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span>logger {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1logger_1_1AsyncLogger.html">   73</a></span>&#160;<span class="keyword">class </span><a class="code" href="classapollo_1_1cyber_1_1logger_1_1AsyncLogger.html">AsyncLogger</a> : <span class="keyword">public</span> google::base::Logger {</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1logger_1_1AsyncLogger.html">   73</a></span>&#160;<span class="keyword">class </span><a class="code" href="classapollo_1_1cyber_1_1logger_1_1AsyncLogger.html">AsyncLogger</a> : <span class="keyword">public</span> <a class="code" href="classgoogle_1_1base_1_1Logger.html">google::base::Logger</a> {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classapollo_1_1cyber_1_1logger_1_1AsyncLogger.html">AsyncLogger</a>(google::base::Logger* wrapped);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classapollo_1_1cyber_1_1logger_1_1AsyncLogger.html">AsyncLogger</a>(<a class="code" href="classgoogle_1_1base_1_1Logger.html">google::base::Logger</a>* wrapped);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  ~<a class="code" href="classapollo_1_1cyber_1_1logger_1_1AsyncLogger.html">AsyncLogger</a>();</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
@@ -171,7 +173,7 @@ $(function() {
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">void</span> RunThread();</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keywordtype">void</span> FlushBuffer(<span class="keyword">const</span> std::unique_ptr&lt;std::deque&lt;Msg&gt;&gt;&amp; msg);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  google::base::Logger* <span class="keyword">const</span> wrapped_;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <a class="code" href="classgoogle_1_1base_1_1Logger.html">google::base::Logger</a>* <span class="keyword">const</span> wrapped_;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  std::thread log_thread_;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="comment">// Count of how many times the writer thread has flushed the buffers.</span></div>
@@ -211,7 +213,8 @@ $(function() {
 <div class="ttc" id="aclassapollo_1_1cyber_1_1logger_1_1AsyncLogger_html_abe281a699f379c7274ef0fc9fe171eab"><div class="ttname"><a href="classapollo_1_1cyber_1_1logger_1_1AsyncLogger.html#abe281a699f379c7274ef0fc9fe171eab">apollo::cyber::logger::AsyncLogger::Write</a></div><div class="ttdeci">void Write(bool force_flush, time_t timestamp, const char *message, int message_len) override</div><div class="ttdoc">Write a message to the log. Start() must have been called.</div><div class="ttdef"><b>Definition:</b> async_logger.cc:60</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1logger_1_1AsyncLogger_html_ac2e076653b98ccc604771d372f2f9c1c"><div class="ttname"><a href="classapollo_1_1cyber_1_1logger_1_1AsyncLogger.html#ac2e076653b98ccc604771d372f2f9c1c">apollo::cyber::logger::AsyncLogger::LogThread</a></div><div class="ttdeci">std::thread * LogThread()</div><div class="ttdoc">get the log thead</div><div class="ttdef"><b>Definition:</b> async_logger.h:126</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1logger_1_1AsyncLogger_html_af14fc46b26821895b40def530a4a5aeb"><div class="ttname"><a href="classapollo_1_1cyber_1_1logger_1_1AsyncLogger.html#af14fc46b26821895b40def530a4a5aeb">apollo::cyber::logger::AsyncLogger::LogSize</a></div><div class="ttdeci">uint32_t LogSize() override</div><div class="ttdoc">Get the current LOG file size. The return value is an approximate value since some logged data may no...</div><div class="ttdef"><b>Definition:</b> async_logger.cc:87</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="aclassgoogle_1_1base_1_1Logger_html"><div class="ttname"><a href="classgoogle_1_1base_1_1Logger.html">google::base::Logger</a></div><div class="ttdef"><b>Definition:</b> logging.h:1542</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

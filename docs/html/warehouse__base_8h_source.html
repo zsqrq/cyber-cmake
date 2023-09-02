@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -109,25 +111,25 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Remove(uint64_t key) = 0;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Remove(uint64_t key, <span class="keyword">const</span> RolePtr&amp; role) = 0;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Remove(<span class="keyword">const</span> proto::RoleAttributes&amp; target_attr) = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Remove(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&amp; target_attr) = 0;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(uint64_t key) = 0;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(uint64_t key, RolePtr* first_matched_role) = 0;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(uint64_t key,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                      proto::RoleAttributes* first_matched_role_attr) = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                      <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>* first_matched_role_attr) = 0;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(uint64_t key, std::vector&lt;RolePtr&gt;* matched_roles) = 0;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      uint64_t key, std::vector&lt;proto::RoleAttributes&gt;* matched_roles_attr) = 0;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(<span class="keyword">const</span> proto::RoleAttributes&amp; target_attr) = 0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(<span class="keyword">const</span> proto::RoleAttributes&amp; target_attr,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&amp; target_attr) = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&amp; target_attr,</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                      RolePtr* first_matched) = 0;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(<span class="keyword">const</span> proto::RoleAttributes&amp; target_attr,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                      proto::RoleAttributes* first_matched_role_attr) = 0;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(<span class="keyword">const</span> proto::RoleAttributes&amp; target_attr,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&amp; target_attr,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                      <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>* first_matched_role_attr) = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&amp; target_attr,</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                      std::vector&lt;RolePtr&gt;* matched_roles) = 0;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Search(</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keyword">const</span> proto::RoleAttributes&amp; target_attr,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">proto::RoleAttributes</a>&amp; target_attr,</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      std::vector&lt;proto::RoleAttributes&gt;* matched_roles_attr) = 0;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> GetAllRoles(std::vector&lt;RolePtr&gt;* roles) = 0;</div>
@@ -139,8 +141,9 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}  <span class="comment">// namespace apollo</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CYBER_SERVICE_DISCOVERY_CONTAINER_WAREHOUSE_BASE_H_</span></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1RoleAttributes_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a></div><div class="ttdef"><b>Definition:</b> role_attributes.pb.h:258</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase.html">apollo::cyber::service_discovery::WarehouseBase</a></div><div class="ttdef"><b>Definition:</b> warehouse_base.h:29</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

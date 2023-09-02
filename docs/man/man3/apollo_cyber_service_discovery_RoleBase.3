@@ -1,4 +1,4 @@
-.TH "apollo::cyber::service_discovery::RoleBase" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::service_discovery::RoleBase" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,19 +12,19 @@ Inherited by \fBapollo::cyber::service_discovery::RoleServer\fP, and \fBapollo::
 
 .in +1c
 .ti -1c
-.RI "\fBRoleBase\fP (const proto::RoleAttributes &attr, uint64_t timestamp_ns=0)"
+.RI "\fBRoleBase\fP (const \fBproto::RoleAttributes\fP &attr, uint64_t timestamp_ns=0)"
 .br
 .ti -1c
-.RI "virtual bool \fBMatch\fP (const proto::RoleAttributes &target_attr) const"
+.RI "virtual bool \fBMatch\fP (const \fBproto::RoleAttributes\fP &target_attr) const"
 .br
 .ti -1c
 .RI "bool \fBIsEarlierThan\fP (const \fBRoleBase\fP &other) const"
 .br
 .ti -1c
-.RI "const proto::RoleAttributes & \fBattributes\fP () const"
+.RI "const \fBproto::RoleAttributes\fP & \fBattributes\fP () const"
 .br
 .ti -1c
-.RI "void \fBset_attributes\fP (const proto::RoleAttributes &attr)"
+.RI "void \fBset_attributes\fP (const \fBproto::RoleAttributes\fP &attr)"
 .br
 .ti -1c
 .RI "uint64_t \fBtimestamp_ns\fP () const"
@@ -37,7 +37,7 @@ Inherited by \fBapollo::cyber::service_discovery::RoleServer\fP, and \fBapollo::
 
 .in +1c
 .ti -1c
-.RI "proto::RoleAttributes \fBattributes_\fP"
+.RI "\fBproto::RoleAttributes\fP \fBattributes_\fP"
 .br
 .ti -1c
 .RI "uint64_t \fBtimestamp_ns_\fP"

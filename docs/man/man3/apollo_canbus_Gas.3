@@ -1,0 +1,403 @@
+.TH "apollo::canbus::Gas" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::canbus::Gas
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkGasPedalPositionFieldNumber\fP = 3, \fBkIsGasPedalErrorFieldNumber\fP = 1, \fBkIsGasPedalPressedMoreFieldNumber\fP = 2, \fBkIsGasValidFieldNumber\fP = 4, \fBkThrottleEnabledFieldNumber\fP = 9, \fBkWatchdogSourceFieldNumber\fP = 8, \fBkThrottleInputFieldNumber\fP = 5, \fBkThrottleCmdFieldNumber\fP = 6, \fBkThrottleOutputFieldNumber\fP = 7, \fBkDriverOverrideFieldNumber\fP = 10, \fBkDriverActivityFieldNumber\fP = 11, \fBkWatchdogFaultFieldNumber\fP = 12, \fBkChannel1FaultFieldNumber\fP = 13, \fBkChannel2FaultFieldNumber\fP = 14, \fBkConnectorFaultFieldNumber\fP = 15, \fBkAcceleratorPedalFieldNumber\fP = 16, \fBkAcceleratorPedalRateFieldNumber\fP = 17, \fBkMajorVersionFieldNumber\fP = 18, \fBkMinorVersionFieldNumber\fP = 19, \fBkBuildNumberFieldNumber\fP = 20 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBGas\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBGas\fP (const \fBGas\fP &from)"
+.br
+.ti -1c
+.RI "\fBGas\fP (\fBGas\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBGas\fP & \fBoperator=\fP (const \fBGas\fP &from)"
+.br
+.ti -1c
+.RI "\fBGas\fP & \fBoperator=\fP (\fBGas\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBGas\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBGas\fP *other)"
+.br
+.ti -1c
+.RI "\fBGas\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBGas\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBGas\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_gas_pedal_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_gas_pedal_position\fP ()"
+.br
+.ti -1c
+.RI "double \fBgas_pedal_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_gas_pedal_position\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_gas_pedal_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_gas_pedal_error\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_gas_pedal_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_gas_pedal_error\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_gas_pedal_pressed_more\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_gas_pedal_pressed_more\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_gas_pedal_pressed_more\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_gas_pedal_pressed_more\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_gas_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_gas_valid\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_gas_valid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_gas_valid\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_throttle_enabled\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_throttle_enabled\fP ()"
+.br
+.ti -1c
+.RI "bool \fBthrottle_enabled\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_throttle_enabled\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_watchdog_source\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_watchdog_source\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBwatchdog_source\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_watchdog_source\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_throttle_input\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_throttle_input\fP ()"
+.br
+.ti -1c
+.RI "double \fBthrottle_input\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_throttle_input\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_throttle_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_throttle_cmd\fP ()"
+.br
+.ti -1c
+.RI "double \fBthrottle_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_throttle_cmd\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_throttle_output\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_throttle_output\fP ()"
+.br
+.ti -1c
+.RI "double \fBthrottle_output\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_throttle_output\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_driver_override\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_driver_override\fP ()"
+.br
+.ti -1c
+.RI "bool \fBdriver_override\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_driver_override\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_driver_activity\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_driver_activity\fP ()"
+.br
+.ti -1c
+.RI "bool \fBdriver_activity\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_driver_activity\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_watchdog_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_watchdog_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBwatchdog_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_watchdog_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_channel_1_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_channel_1_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBchannel_1_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_channel_1_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_channel_2_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_channel_2_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBchannel_2_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_channel_2_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_connector_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_connector_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBconnector_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_connector_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_accelerator_pedal\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_accelerator_pedal\fP ()"
+.br
+.ti -1c
+.RI "double \fBaccelerator_pedal\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_accelerator_pedal\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_accelerator_pedal_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_accelerator_pedal_rate\fP ()"
+.br
+.ti -1c
+.RI "double \fBaccelerator_pedal_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_accelerator_pedal_rate\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_major_version\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_major_version\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBmajor_version\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_major_version\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_minor_version\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_minor_version\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBminor_version\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_minor_version\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_build_number\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_build_number\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBbuild_number\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_build_number\fP (int32_t value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBGas\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBGas\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGas\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fchassis_5fmsgs_2fchassis_5fdetail_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBGas\fP &a, \fBGas\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::canbus::Gas::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Gas::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::canbus::Gas::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    9
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

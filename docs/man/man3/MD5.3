@@ -1,0 +1,67 @@
+.TH "MD5" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MD5
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <md5\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef unsigned char \fBuint1\fP"
+.br
+.ti -1c
+.RI "typedef unsigned int \fBsize_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMD5\fP (const std::string &text)"
+.br
+.ti -1c
+.RI "void \fBupdate\fP (const unsigned char *buf, size_type length)"
+.br
+.ti -1c
+.RI "void \fBupdate\fP (const char *buf, size_type length)"
+.br
+.ti -1c
+.RI "\fBMD5\fP & \fBfinalize\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBhexdigest\fP () const"
+.br
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint1 \fBdigest\fP [16]"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &, \fBMD5\fP &md5)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBMD5\fP, for calculating \fBMD5\fP hashes of strings or byte arrays it is not meant to be fast or secure
+.PP
+usage: 1) feed it blocks of uchars with update() 2) finalize() 3) get hexdigest() string or \fBMD5(std::string)\fP\&.hexdigest()
+.PP
+assumes that char is 8 bit and int is 32 bit 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

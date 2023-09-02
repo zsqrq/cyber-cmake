@@ -1,8 +1,9 @@
 <map id="apollo::cyber::transport::RtpsTransmitter&lt; M &gt;" name="apollo::cyber::transport::RtpsTransmitter&lt; M &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="147,837,701,973"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1transport_1_1Transmitter.html" title=" " alt="" coords="143,579,705,788"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1transport_1_1Endpoint.html" title=" " alt="" coords="41,343,340,465"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,79,120,156"/>
-<area shape="rect" id="node5" href="$classapollo_1_1cyber_1_1transport_1_1Identity.html" title=" " alt="" coords="145,5,493,229"/>
-<area shape="rect" id="node6" href="$classapollo_1_1cyber_1_1transport_1_1MessageInfo.html" title=" " alt="" coords="364,292,951,516"/>
+<area shape="rect" id="node1" title=" " alt="" coords="651,1067,1206,1203"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1transport_1_1Transmitter.html" title=" " alt="" coords="647,808,1210,1017"/>
+<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1transport_1_1Endpoint.html" title=" " alt="" coords="430,573,729,694"/>
+<area shape="rect" id="node4" href="$classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html" title=" " alt="" coords="5,132,639,459"/>
+<area shape="rect" id="node5" title=" " alt="" coords="187,5,457,83"/>
+<area shape="rect" id="node6" href="$classapollo_1_1cyber_1_1transport_1_1Identity.html" title=" " alt="" coords="663,183,1011,407"/>
+<area shape="rect" id="node7" href="$classapollo_1_1cyber_1_1transport_1_1MessageInfo.html" title=" " alt="" coords="753,521,1339,745"/>
 </map>

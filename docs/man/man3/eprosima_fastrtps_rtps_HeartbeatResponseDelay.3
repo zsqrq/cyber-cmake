@@ -1,0 +1,70 @@
+.TH "eprosima::fastrtps::rtps::HeartbeatResponseDelay" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::HeartbeatResponseDelay
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <HeartbeatResponseDelay\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::TimedEvent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHeartbeatResponseDelay\fP (\fBWriterProxy\fP *p_WP, double interval)"
+.br
+.ti -1c
+.RI "void \fBevent\fP (\fBEventCode\fP code, const char *msg=nullptr)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBWriterProxy\fP * \fBmp_WP\fP"
+.br
+.RI "Pointer to the \fBWriterProxy\fP associated with this specific event\&. "
+.ti -1c
+.RI "\fBRTPSMessageGroup_t\fP \fBm_cdrmessages\fP"
+.br
+.RI "\fBCDRMessage_t\fP used in the response\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Class \fBHeartbeatResponseDelay\fP, \fBTimedEvent\fP used to delay the response to a specific HB\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::HeartbeatResponseDelay::HeartbeatResponseDelay (\fBWriterProxy\fP * p_WP, double interval)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIp_WP\fP 
+.br
+\fIinterval\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void eprosima::fastrtps::rtps::HeartbeatResponseDelay::event (\fBEventCode\fP code, const char * msg = \fCnullptr\fP)\fC [virtual]\fP"
+Method invoked when the event occurs
+.PP
+\fBParameters\fP
+.RS 4
+\fIcode\fP Code representing the status of the event 
+.br
+\fImsg\fP Message associated to the event 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::TimedEvent\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

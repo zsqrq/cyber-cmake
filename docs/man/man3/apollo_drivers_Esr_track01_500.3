@@ -1,0 +1,712 @@
+.TH "apollo::drivers::Esr_track01_500" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::drivers::Esr_track01_500
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkCanTxTrackGroupingChangedFieldNumber\fP = 1, \fBkCanTxTrackOncomingFieldNumber\fP = 2, \fBkCanTxTrackLatRateFieldNumber\fP = 3, \fBkCanTxTrackWidthFieldNumber\fP = 5, \fBkCanTxTrackBridgeObjectFieldNumber\fP = 4, \fBkCanTxTrackStatusFieldNumber\fP = 6, \fBkCanTxTrackRangeRateFieldNumber\fP = 8, \fBkCanTxTrackRangeAccelFieldNumber\fP = 9, \fBkCanTxTrackRollingCountFieldNumber\fP = 7, \fBkCanTxTrackMedRangeModeFieldNumber\fP = 11, \fBkCanTxTrackRangeFieldNumber\fP = 10, \fBkCanTxTrackAngleFieldNumber\fP = 12 }"
+.br
+.ti -1c
+.RI "typedef Esr_track01_500_Can_tx_track_grouping_changedType \fBCan_tx_track_grouping_changedType\fP"
+.br
+.ti -1c
+.RI "typedef Esr_track01_500_Can_tx_track_oncomingType \fBCan_tx_track_oncomingType\fP"
+.br
+.ti -1c
+.RI "typedef Esr_track01_500_Can_tx_track_bridge_objectType \fBCan_tx_track_bridge_objectType\fP"
+.br
+.ti -1c
+.RI "typedef Esr_track01_500_Can_tx_track_statusType \fBCan_tx_track_statusType\fP"
+.br
+.ti -1c
+.RI "typedef Esr_track01_500_Can_tx_track_med_range_modeType \fBCan_tx_track_med_range_modeType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBEsr_track01_500\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBEsr_track01_500\fP (const \fBEsr_track01_500\fP &from)"
+.br
+.ti -1c
+.RI "\fBEsr_track01_500\fP (\fBEsr_track01_500\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBEsr_track01_500\fP & \fBoperator=\fP (const \fBEsr_track01_500\fP &from)"
+.br
+.ti -1c
+.RI "\fBEsr_track01_500\fP & \fBoperator=\fP (\fBEsr_track01_500\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBEsr_track01_500\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBEsr_track01_500\fP *other)"
+.br
+.ti -1c
+.RI "\fBEsr_track01_500\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBEsr_track01_500\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBEsr_track01_500\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_track_grouping_changed\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_track_grouping_changed\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Esr_track01_500_Can_tx_track_grouping_changedType \fBcan_tx_track_grouping_changed\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_track_grouping_changed\fP (::apollo::drivers::Esr_track01_500_Can_tx_track_grouping_changedType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_track_oncoming\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_track_oncoming\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Esr_track01_500_Can_tx_track_oncomingType \fBcan_tx_track_oncoming\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_track_oncoming\fP (::apollo::drivers::Esr_track01_500_Can_tx_track_oncomingType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_track_lat_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_track_lat_rate\fP ()"
+.br
+.ti -1c
+.RI "double \fBcan_tx_track_lat_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_track_lat_rate\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_track_width\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_track_width\fP ()"
+.br
+.ti -1c
+.RI "double \fBcan_tx_track_width\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_track_width\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_track_bridge_object\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_track_bridge_object\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Esr_track01_500_Can_tx_track_bridge_objectType \fBcan_tx_track_bridge_object\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_track_bridge_object\fP (::apollo::drivers::Esr_track01_500_Can_tx_track_bridge_objectType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_track_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_track_status\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Esr_track01_500_Can_tx_track_statusType \fBcan_tx_track_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_track_status\fP (::apollo::drivers::Esr_track01_500_Can_tx_track_statusType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_track_range_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_track_range_rate\fP ()"
+.br
+.ti -1c
+.RI "double \fBcan_tx_track_range_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_track_range_rate\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_track_range_accel\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_track_range_accel\fP ()"
+.br
+.ti -1c
+.RI "double \fBcan_tx_track_range_accel\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_track_range_accel\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_track_rolling_count\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_track_rolling_count\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcan_tx_track_rolling_count\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_track_rolling_count\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_track_med_range_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_track_med_range_mode\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::Esr_track01_500_Can_tx_track_med_range_modeType \fBcan_tx_track_med_range_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_track_med_range_mode\fP (::apollo::drivers::Esr_track01_500_Can_tx_track_med_range_modeType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_track_range\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_track_range\fP ()"
+.br
+.ti -1c
+.RI "double \fBcan_tx_track_range\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_track_range\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_can_tx_track_angle\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_can_tx_track_angle\fP ()"
+.br
+.ti -1c
+.RI "double \fBcan_tx_track_angle\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_can_tx_track_angle\fP (double value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBEsr_track01_500\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBEsr_track01_500\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_track_grouping_changedType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_tx_track_grouping_changedType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_tx_track_grouping_changedType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_track_grouping_changedType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_tx_track_grouping_changedType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_track_oncomingType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_tx_track_oncomingType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_tx_track_oncomingType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_track_oncomingType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_tx_track_oncomingType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_track_bridge_objectType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_tx_track_bridge_objectType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_tx_track_bridge_objectType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_track_bridge_objectType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_tx_track_bridge_objectType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_track_statusType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_tx_track_statusType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_tx_track_statusType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_track_statusType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_tx_track_statusType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_track_med_range_modeType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCan_tx_track_med_range_modeType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCan_tx_track_med_range_modeType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCan_tx_track_med_range_modeType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Can_tx_track_med_range_modeType *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_grouping_changedType \fBCAN_TX_TRACK_GROUPING_CHANGED_GROUPINGUNCHANGED\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_grouping_changedType \fBCAN_TX_TRACK_GROUPING_CHANGED_GROUPINGCHANGED\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_grouping_changedType \fBCan_tx_track_grouping_changedType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_grouping_changedType \fBCan_tx_track_grouping_changedType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_tx_track_grouping_changedType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_oncomingType \fBCAN_TX_TRACK_ONCOMING_NOTONCOMING\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_oncomingType \fBCAN_TX_TRACK_ONCOMING_ONCOMING\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_oncomingType \fBCan_tx_track_oncomingType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_oncomingType \fBCan_tx_track_oncomingType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_tx_track_oncomingType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_bridge_objectType \fBCAN_TX_TRACK_BRIDGE_OBJECT_NOT_BRIDGE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_bridge_objectType \fBCAN_TX_TRACK_BRIDGE_OBJECT_BRIDGE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_bridge_objectType \fBCan_tx_track_bridge_objectType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_bridge_objectType \fBCan_tx_track_bridge_objectType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_tx_track_bridge_objectType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_statusType \fBCAN_TX_TRACK_STATUS_NO_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_statusType \fBCAN_TX_TRACK_STATUS_NEW_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_statusType \fBCAN_TX_TRACK_STATUS_NEW_UPDATED_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_statusType \fBCAN_TX_TRACK_STATUS_UPDATED_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_statusType \fBCAN_TX_TRACK_STATUS_COASTED_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_statusType \fBCAN_TX_TRACK_STATUS_MERGED_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_statusType \fBCAN_TX_TRACK_STATUS_INVALID_COASTED_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_statusType \fBCAN_TX_TRACK_STATUS_NEW_COASTED_TARGET\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_statusType \fBCan_tx_track_statusType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_statusType \fBCan_tx_track_statusType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_tx_track_statusType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_med_range_modeType \fBCAN_TX_TRACK_MED_RANGE_MODE_NO_MR_LR_UPDATE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_med_range_modeType \fBCAN_TX_TRACK_MED_RANGE_MODE_MR_UPDATE_ONLY\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_med_range_modeType \fBCAN_TX_TRACK_MED_RANGE_MODE_LR_UPDATE_ONLY\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_med_range_modeType \fBCAN_TX_TRACK_MED_RANGE_MODE_BOTH_MR_LR_UPDATE\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_med_range_modeType \fBCan_tx_track_med_range_modeType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Can_tx_track_med_range_modeType \fBCan_tx_track_med_range_modeType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCan_tx_track_med_range_modeType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEsr_track01_500\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fsensor_5fmsgs_2fdelphi_5fesr_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBEsr_track01_500\fP &a, \fBEsr_track01_500\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::drivers::Esr_track01_500::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Esr_track01_500::MergeImpl
+}
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_bridge_objectType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_BRIDGE_OBJECT_BRIDGE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_bridge_objectType_CAN_TX_TRACK_BRIDGE_OBJECT_BRIDGE
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_bridge_objectType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_BRIDGE_OBJECT_NOT_BRIDGE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_bridge_objectType_CAN_TX_TRACK_BRIDGE_OBJECT_NOT_BRIDGE
+.fi
+.SS "constexpr int apollo::drivers::Esr_track01_500::Can_tx_track_bridge_objectType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_bridge_objectType_Can_tx_track_bridge_objectType_ARRAYSIZE
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_bridge_objectType apollo::drivers::Esr_track01_500::Can_tx_track_bridge_objectType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_bridge_objectType_Can_tx_track_bridge_objectType_MAX
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_bridge_objectType apollo::drivers::Esr_track01_500::Can_tx_track_bridge_objectType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_bridge_objectType_Can_tx_track_bridge_objectType_MIN
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_grouping_changedType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_GROUPING_CHANGED_GROUPINGCHANGED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_grouping_changedType_CAN_TX_TRACK_GROUPING_CHANGED_GROUPINGCHANGED
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_grouping_changedType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_GROUPING_CHANGED_GROUPINGUNCHANGED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_grouping_changedType_CAN_TX_TRACK_GROUPING_CHANGED_GROUPINGUNCHANGED
+.fi
+.SS "constexpr int apollo::drivers::Esr_track01_500::Can_tx_track_grouping_changedType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_grouping_changedType_Can_tx_track_grouping_changedType_ARRAYSIZE
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_grouping_changedType apollo::drivers::Esr_track01_500::Can_tx_track_grouping_changedType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_grouping_changedType_Can_tx_track_grouping_changedType_MAX
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_grouping_changedType apollo::drivers::Esr_track01_500::Can_tx_track_grouping_changedType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_grouping_changedType_Can_tx_track_grouping_changedType_MIN
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_med_range_modeType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_MED_RANGE_MODE_BOTH_MR_LR_UPDATE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_med_range_modeType_CAN_TX_TRACK_MED_RANGE_MODE_BOTH_MR_LR_UPDATE
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_med_range_modeType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_MED_RANGE_MODE_LR_UPDATE_ONLY\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_med_range_modeType_CAN_TX_TRACK_MED_RANGE_MODE_LR_UPDATE_ONLY
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_med_range_modeType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_MED_RANGE_MODE_MR_UPDATE_ONLY\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_med_range_modeType_CAN_TX_TRACK_MED_RANGE_MODE_MR_UPDATE_ONLY
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_med_range_modeType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_MED_RANGE_MODE_NO_MR_LR_UPDATE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_med_range_modeType_CAN_TX_TRACK_MED_RANGE_MODE_NO_MR_LR_UPDATE
+.fi
+.SS "constexpr int apollo::drivers::Esr_track01_500::Can_tx_track_med_range_modeType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_med_range_modeType_Can_tx_track_med_range_modeType_ARRAYSIZE
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_med_range_modeType apollo::drivers::Esr_track01_500::Can_tx_track_med_range_modeType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_med_range_modeType_Can_tx_track_med_range_modeType_MAX
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_med_range_modeType apollo::drivers::Esr_track01_500::Can_tx_track_med_range_modeType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_med_range_modeType_Can_tx_track_med_range_modeType_MIN
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_oncomingType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_ONCOMING_NOTONCOMING\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_oncomingType_CAN_TX_TRACK_ONCOMING_NOTONCOMING
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_oncomingType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_ONCOMING_ONCOMING\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_oncomingType_CAN_TX_TRACK_ONCOMING_ONCOMING
+.fi
+.SS "constexpr int apollo::drivers::Esr_track01_500::Can_tx_track_oncomingType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_oncomingType_Can_tx_track_oncomingType_ARRAYSIZE
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_oncomingType apollo::drivers::Esr_track01_500::Can_tx_track_oncomingType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_oncomingType_Can_tx_track_oncomingType_MAX
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_oncomingType apollo::drivers::Esr_track01_500::Can_tx_track_oncomingType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_oncomingType_Can_tx_track_oncomingType_MIN
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_statusType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_STATUS_COASTED_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_statusType_CAN_TX_TRACK_STATUS_COASTED_TARGET
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_statusType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_STATUS_INVALID_COASTED_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_statusType_CAN_TX_TRACK_STATUS_INVALID_COASTED_TARGET
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_statusType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_STATUS_MERGED_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_statusType_CAN_TX_TRACK_STATUS_MERGED_TARGET
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_statusType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_STATUS_NEW_COASTED_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_statusType_CAN_TX_TRACK_STATUS_NEW_COASTED_TARGET
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_statusType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_STATUS_NEW_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_statusType_CAN_TX_TRACK_STATUS_NEW_TARGET
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_statusType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_STATUS_NEW_UPDATED_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_statusType_CAN_TX_TRACK_STATUS_NEW_UPDATED_TARGET
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_statusType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_STATUS_NO_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_statusType_CAN_TX_TRACK_STATUS_NO_TARGET
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_statusType apollo::drivers::Esr_track01_500::CAN_TX_TRACK_STATUS_UPDATED_TARGET\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_statusType_CAN_TX_TRACK_STATUS_UPDATED_TARGET
+.fi
+.SS "constexpr int apollo::drivers::Esr_track01_500::Can_tx_track_statusType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_statusType_Can_tx_track_statusType_ARRAYSIZE
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_statusType apollo::drivers::Esr_track01_500::Can_tx_track_statusType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_statusType_Can_tx_track_statusType_MAX
+.fi
+.SS "constexpr Esr_track01_500_Can_tx_track_statusType apollo::drivers::Esr_track01_500::Can_tx_track_statusType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Esr_track01_500_Can_tx_track_statusType_Can_tx_track_statusType_MIN
+.fi
+.SS "constexpr int apollo::drivers::Esr_track01_500::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    8
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

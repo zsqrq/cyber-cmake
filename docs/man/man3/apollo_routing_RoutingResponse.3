@@ -1,0 +1,304 @@
+.TH "apollo::routing::RoutingResponse" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::routing::RoutingResponse
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkRoadFieldNumber\fP = 2, \fBkMapVersionFieldNumber\fP = 5, \fBkHeaderFieldNumber\fP = 1, \fBkMeasurementFieldNumber\fP = 3, \fBkRoutingRequestFieldNumber\fP = 4, \fBkStatusFieldNumber\fP = 6 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBRoutingResponse\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBRoutingResponse\fP (const \fBRoutingResponse\fP &from)"
+.br
+.ti -1c
+.RI "\fBRoutingResponse\fP (\fBRoutingResponse\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBRoutingResponse\fP & \fBoperator=\fP (const \fBRoutingResponse\fP &from)"
+.br
+.ti -1c
+.RI "\fBRoutingResponse\fP & \fBoperator=\fP (\fBRoutingResponse\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBRoutingResponse\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBRoutingResponse\fP *other)"
+.br
+.ti -1c
+.RI "\fBRoutingResponse\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBRoutingResponse\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBRoutingResponse\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBroad_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_road\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::routing::RoadSegment\fP * \fBmutable_road\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::routing::RoadSegment\fP > * \fBmutable_road\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::routing::RoadSegment\fP & \fBroad\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::routing::RoadSegment\fP * \fBadd_road\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::routing::RoadSegment\fP > & \fBroad\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhas_map_version\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_map_version\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBmap_version\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_map_version\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_map_version\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_map_version\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_map_version\fP (std::string *map_version)"
+.br
+.ti -1c
+.RI "bool \fBhas_header\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_header\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Header\fP & \fBheader\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Header\fP * \fBrelease_header\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBmutable_header\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBunsafe_arena_release_header\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_measurement\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_measurement\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::routing::Measurement\fP & \fBmeasurement\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::routing::Measurement\fP * \fBrelease_measurement\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::routing::Measurement\fP * \fBmutable_measurement\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_measurement\fP (::\fBapollo::routing::Measurement\fP *measurement)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_measurement\fP (::\fBapollo::routing::Measurement\fP *measurement)"
+.br
+.ti -1c
+.RI "::\fBapollo::routing::Measurement\fP * \fBunsafe_arena_release_measurement\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_routing_request\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_routing_request\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::routing::RoutingRequest\fP & \fBrouting_request\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::routing::RoutingRequest\fP * \fBrelease_routing_request\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::routing::RoutingRequest\fP * \fBmutable_routing_request\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_routing_request\fP (::\fBapollo::routing::RoutingRequest\fP *routing_request)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_routing_request\fP (::\fBapollo::routing::RoutingRequest\fP *routing_request)"
+.br
+.ti -1c
+.RI "::\fBapollo::routing::RoutingRequest\fP * \fBunsafe_arena_release_routing_request\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_status\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::StatusPb\fP & \fBstatus\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::StatusPb\fP * \fBrelease_status\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::StatusPb\fP * \fBmutable_status\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_status\fP (::\fBapollo::common::StatusPb\fP *status)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_status\fP (::\fBapollo::common::StatusPb\fP *status)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::StatusPb\fP * \fBunsafe_arena_release_status\fP ()"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_map_version\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBRoutingResponse\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBRoutingResponse\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRoutingResponse\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2frouting_5fmsgs_2frouting_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBRoutingResponse\fP &a, \fBRoutingResponse\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::routing::RoutingResponse::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    RoutingResponse::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::routing::RoutingResponse::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    8
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

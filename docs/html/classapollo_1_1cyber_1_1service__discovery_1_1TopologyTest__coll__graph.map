@@ -1,5 +1,5 @@
 <map id="apollo::cyber::service_discovery::TopologyTest" name="apollo::cyber::service_discovery::TopologyTest">
-<area shape="rect" id="node1" title=" " alt="" coords="47,233,369,355"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,49,107,127"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager.html" title="elements in Cyber – Node, Channel, Service, Writer, Reader, Client and Server&#39;s relationship is prese..." alt="" coords="131,5,589,171"/>
+<area shape="rect" id="node1" title=" " alt="" coords="363,336,685,457"/>
+<area shape="rect" id="node2" href="$classtesting_1_1Test.html" title=" " alt="" coords="5,5,528,273"/>
+<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager.html" title="elements in Cyber – Node, Channel, Service, Writer, Reader, Client and Server&#39;s relationship is prese..." alt="" coords="552,57,1011,222"/>
 </map>

@@ -1,0 +1,259 @@
+.TH "apollo::perception::TrafficLightBox" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::perception::TrafficLightBox
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkCameraNameFieldNumber\fP = 7, \fBkXFieldNumber\fP = 1, \fBkYFieldNumber\fP = 2, \fBkWidthFieldNumber\fP = 3, \fBkHeightFieldNumber\fP = 4, \fBkColorFieldNumber\fP = 5, \fBkSelectedFieldNumber\fP = 6 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBTrafficLightBox\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBTrafficLightBox\fP (const \fBTrafficLightBox\fP &from)"
+.br
+.ti -1c
+.RI "\fBTrafficLightBox\fP (\fBTrafficLightBox\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBTrafficLightBox\fP & \fBoperator=\fP (const \fBTrafficLightBox\fP &from)"
+.br
+.ti -1c
+.RI "\fBTrafficLightBox\fP & \fBoperator=\fP (\fBTrafficLightBox\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBTrafficLightBox\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBTrafficLightBox\fP *other)"
+.br
+.ti -1c
+.RI "\fBTrafficLightBox\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBTrafficLightBox\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBTrafficLightBox\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_camera_name\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_camera_name\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBcamera_name\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_camera_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_camera_name\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_camera_name\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_camera_name\fP (std::string *camera_name)"
+.br
+.ti -1c
+.RI "bool \fBhas_x\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_x\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBx\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_x\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_y\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_y\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBy\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_y\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_width\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_width\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBwidth\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_width\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_height\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_height\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBheight\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_height\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_color\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_color\fP ()"
+.br
+.ti -1c
+.RI "::apollo::perception::TrafficLight_Color \fBcolor\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_color\fP (::apollo::perception::TrafficLight_Color value)"
+.br
+.ti -1c
+.RI "bool \fBhas_selected\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_selected\fP ()"
+.br
+.ti -1c
+.RI "bool \fBselected\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_selected\fP (bool value)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_camera_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBTrafficLightBox\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBTrafficLightBox\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTrafficLightBox\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fperception_5fmsgs_2ftraffic_5flight_5fdetection_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBTrafficLightBox\fP &a, \fBTrafficLightBox\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::perception::TrafficLightBox::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    TrafficLightBox::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::perception::TrafficLightBox::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    0
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

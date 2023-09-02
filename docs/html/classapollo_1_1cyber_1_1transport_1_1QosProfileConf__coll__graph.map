@@ -1,4 +1,5 @@
 <map id="apollo::cyber::transport::QosProfileConf" name="apollo::cyber::transport::QosProfileConf">
-<area shape="rect" id="node1" title=" " alt="" coords="5,248,713,384"/>
-<area shape="rect" id="node2" title=" " alt="" coords="315,5,403,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,624,716,760"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1proto_1_1QosProfile.html" title=" " alt="" coords="57,132,664,459"/>
+<area shape="rect" id="node3" title=" " alt="" coords="226,5,495,83"/>
 </map>

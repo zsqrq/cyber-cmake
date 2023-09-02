@@ -1,0 +1,36 @@
+.TH "eprosima::fastrtps::rtps::ThroughputControllerDescriptor" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::ThroughputControllerDescriptor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ThroughputControllerDescriptor\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "RTPS_DllAPI \fBThroughputControllerDescriptor\fP (uint32_t size, uint32_t time)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBbytesPerPeriod\fP"
+.br
+.RI "Packet size in bytes that this controller will allow in a given period\&. "
+.ti -1c
+.RI "uint32_t \fBperiodMillisecs\fP"
+.br
+.RI "Window of time in which no more than 'bytesPerPeriod' bytes are allowed\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Descriptor for a Throughput Controller, containing all constructor information for it\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

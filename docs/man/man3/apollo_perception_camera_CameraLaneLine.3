@@ -1,0 +1,334 @@
+.TH "apollo::perception::camera::CameraLaneLine" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::perception::camera::CameraLaneLine
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkCurveCameraPointSetFieldNumber\fP = 5, \fBkCurveImagePointSetFieldNumber\fP = 6, \fBkImageEndPointSetFieldNumber\fP = 7, \fBkCurveCameraCoordFieldNumber\fP = 3, \fBkCurveImageCoordFieldNumber\fP = 4, \fBkTypeFieldNumber\fP = 1, \fBkTrackIdFieldNumber\fP = 8, \fBkConfidenceFieldNumber\fP = 9, \fBkUseTypeFieldNumber\fP = 10, \fBkPosTypeFieldNumber\fP = 2 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBCameraLaneLine\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBCameraLaneLine\fP (const \fBCameraLaneLine\fP &from)"
+.br
+.ti -1c
+.RI "\fBCameraLaneLine\fP (\fBCameraLaneLine\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBCameraLaneLine\fP & \fBoperator=\fP (const \fBCameraLaneLine\fP &from)"
+.br
+.ti -1c
+.RI "\fBCameraLaneLine\fP & \fBoperator=\fP (\fBCameraLaneLine\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBCameraLaneLine\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBCameraLaneLine\fP *other)"
+.br
+.ti -1c
+.RI "\fBCameraLaneLine\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBCameraLaneLine\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBCameraLaneLine\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBcurve_camera_point_set_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_curve_camera_point_set\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_curve_camera_point_set\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::Point3D\fP > * \fBmutable_curve_camera_point_set\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBcurve_camera_point_set\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBadd_curve_camera_point_set\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::Point3D\fP > & \fBcurve_camera_point_set\fP () const"
+.br
+.ti -1c
+.RI "int \fBcurve_image_point_set_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_curve_image_point_set\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBmutable_curve_image_point_set\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::Point2D\fP > * \fBmutable_curve_image_point_set\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point2D\fP & \fBcurve_image_point_set\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point2D\fP * \fBadd_curve_image_point_set\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::Point2D\fP > & \fBcurve_image_point_set\fP () const"
+.br
+.ti -1c
+.RI "int \fBimage_end_point_set_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_image_end_point_set\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::camera::EndPoints\fP * \fBmutable_image_end_point_set\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::perception::camera::EndPoints\fP > * \fBmutable_image_end_point_set\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::camera::EndPoints\fP & \fBimage_end_point_set\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::camera::EndPoints\fP * \fBadd_image_end_point_set\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::perception::camera::EndPoints\fP > & \fBimage_end_point_set\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhas_curve_camera_coord\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_curve_camera_coord\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::camera::LaneLineCubicCurve\fP & \fBcurve_camera_coord\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::perception::camera::LaneLineCubicCurve\fP * \fBrelease_curve_camera_coord\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::camera::LaneLineCubicCurve\fP * \fBmutable_curve_camera_coord\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_curve_camera_coord\fP (::\fBapollo::perception::camera::LaneLineCubicCurve\fP *curve_camera_coord)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_curve_camera_coord\fP (::\fBapollo::perception::camera::LaneLineCubicCurve\fP *curve_camera_coord)"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::camera::LaneLineCubicCurve\fP * \fBunsafe_arena_release_curve_camera_coord\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_curve_image_coord\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_curve_image_coord\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::camera::LaneLineCubicCurve\fP & \fBcurve_image_coord\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::perception::camera::LaneLineCubicCurve\fP * \fBrelease_curve_image_coord\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::camera::LaneLineCubicCurve\fP * \fBmutable_curve_image_coord\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_curve_image_coord\fP (::\fBapollo::perception::camera::LaneLineCubicCurve\fP *curve_image_coord)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_curve_image_coord\fP (::\fBapollo::perception::camera::LaneLineCubicCurve\fP *curve_image_coord)"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::camera::LaneLineCubicCurve\fP * \fBunsafe_arena_release_curve_image_coord\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::perception::camera::LaneLineType \fBtype\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_type\fP (::apollo::perception::camera::LaneLineType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_track_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_track_id\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBtrack_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_track_id\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_confidence\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_confidence\fP ()"
+.br
+.ti -1c
+.RI "float \fBconfidence\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_confidence\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_use_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_use_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::perception::camera::LaneLineUseType \fBuse_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_use_type\fP (::apollo::perception::camera::LaneLineUseType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_pos_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_pos_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::perception::camera::LaneLinePositionType \fBpos_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_pos_type\fP (::apollo::perception::camera::LaneLinePositionType value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBCameraLaneLine\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBCameraLaneLine\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCameraLaneLine\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fperception_5fmsgs_2fperception_5fcamera_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBCameraLaneLine\fP &a, \fBCameraLaneLine\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::perception::camera::CameraLaneLine::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    CameraLaneLine::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::perception::camera::CameraLaneLine::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    2
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

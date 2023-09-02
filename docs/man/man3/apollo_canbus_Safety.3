@@ -1,0 +1,439 @@
+.TH "apollo::canbus::Safety" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::canbus::Safety
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkEmergencyButtonFieldNumber\fP = 3, \fBkIsDriverCarDoorCloseFieldNumber\fP = 1, \fBkIsDriverBuckledFieldNumber\fP = 2, \fBkHasErrorFieldNumber\fP = 4, \fBkIsMotorInvertorFaultFieldNumber\fP = 5, \fBkIsSystemFaultFieldNumber\fP = 6, \fBkIsPowerBatteryFaultFieldNumber\fP = 7, \fBkIsMotorInvertorOverTemperatureFieldNumber\fP = 8, \fBkIsSmallBatteryChargeDischargeFaultFieldNumber\fP = 9, \fBkDrivingModeFieldNumber\fP = 10, \fBkIsPassengerDoorOpenFieldNumber\fP = 11, \fBkIsRearleftDoorOpenFieldNumber\fP = 12, \fBkIsRearrightDoorOpenFieldNumber\fP = 13, \fBkIsHoodOpenFieldNumber\fP = 14, \fBkIsTrunkOpenFieldNumber\fP = 15, \fBkIsPassengerDetectedFieldNumber\fP = 16, \fBkIsPassengerAirbagEnabledFieldNumber\fP = 17, \fBkIsPassengerBuckledFieldNumber\fP = 18, \fBkFrontLeftTirePressFieldNumber\fP = 19, \fBkFrontRightTirePressFieldNumber\fP = 20, \fBkRearLeftTirePressFieldNumber\fP = 21, \fBkRearRightTirePressFieldNumber\fP = 22, \fBkCarDrivingModeFieldNumber\fP = 23 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBSafety\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBSafety\fP (const \fBSafety\fP &from)"
+.br
+.ti -1c
+.RI "\fBSafety\fP (\fBSafety\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBSafety\fP & \fBoperator=\fP (const \fBSafety\fP &from)"
+.br
+.ti -1c
+.RI "\fBSafety\fP & \fBoperator=\fP (\fBSafety\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBSafety\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBSafety\fP *other)"
+.br
+.ti -1c
+.RI "\fBSafety\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBSafety\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBSafety\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_emergency_button\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_emergency_button\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBemergency_button\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_emergency_button\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_driver_car_door_close\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_driver_car_door_close\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_driver_car_door_close\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_driver_car_door_close\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_driver_buckled\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_driver_buckled\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_driver_buckled\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_driver_buckled\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_has_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_has_error\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_error\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_has_error\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_motor_invertor_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_motor_invertor_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_motor_invertor_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_motor_invertor_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_system_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_system_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_system_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_system_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_power_battery_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_power_battery_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_power_battery_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_power_battery_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_motor_invertor_over_temperature\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_motor_invertor_over_temperature\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_motor_invertor_over_temperature\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_motor_invertor_over_temperature\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_small_battery_charge_discharge_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_small_battery_charge_discharge_fault\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_small_battery_charge_discharge_fault\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_small_battery_charge_discharge_fault\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_driving_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_driving_mode\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBdriving_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_driving_mode\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_passenger_door_open\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_passenger_door_open\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_passenger_door_open\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_passenger_door_open\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_rearleft_door_open\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_rearleft_door_open\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_rearleft_door_open\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_rearleft_door_open\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_rearright_door_open\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_rearright_door_open\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_rearright_door_open\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_rearright_door_open\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_hood_open\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_hood_open\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_hood_open\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_hood_open\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_trunk_open\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_trunk_open\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_trunk_open\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_trunk_open\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_passenger_detected\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_passenger_detected\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_passenger_detected\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_passenger_detected\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_passenger_airbag_enabled\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_passenger_airbag_enabled\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_passenger_airbag_enabled\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_passenger_airbag_enabled\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_passenger_buckled\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_passenger_buckled\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_passenger_buckled\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_passenger_buckled\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_front_left_tire_press\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_front_left_tire_press\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBfront_left_tire_press\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_front_left_tire_press\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_front_right_tire_press\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_front_right_tire_press\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBfront_right_tire_press\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_front_right_tire_press\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_rear_left_tire_press\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_rear_left_tire_press\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBrear_left_tire_press\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_rear_left_tire_press\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_rear_right_tire_press\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_rear_right_tire_press\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBrear_right_tire_press\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_rear_right_tire_press\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_car_driving_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_car_driving_mode\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Chassis_DrivingMode \fBcar_driving_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_car_driving_mode\fP (::apollo::canbus::Chassis_DrivingMode value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSafety\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSafety\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSafety\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fchassis_5fmsgs_2fchassis_5fdetail_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBSafety\fP &a, \fBSafety\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::canbus::Safety::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Safety::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::canbus::Safety::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    13
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

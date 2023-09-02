@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -112,7 +114,7 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">using</span> std::string;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// Encapsulates all file-system related state</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1logger_1_1LogFileObject.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="classapollo_1_1cyber_1_1logger_1_1LogFileObject.html">LogFileObject</a> : <span class="keyword">public</span> google::base::Logger {</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1logger_1_1LogFileObject.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="classapollo_1_1cyber_1_1logger_1_1LogFileObject.html">LogFileObject</a> : <span class="keyword">public</span> <a class="code" href="classgoogle_1_1base_1_1Logger.html">google::base::Logger</a> {</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1logger_1_1LogFileObject.html">LogFileObject</a>(LogSeverity severity, <span class="keyword">const</span> <span class="keywordtype">char</span>* base_filename);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  ~<a class="code" href="classapollo_1_1cyber_1_1logger_1_1LogFileObject.html">LogFileObject</a>();</div>
@@ -171,7 +173,8 @@ $(function() {
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CYBER_LOGGER_LOG_FILE_OBJECT_H_</span></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1logger_1_1LogFileObject_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1logger_1_1LogFileObject.html">apollo::cyber::logger::LogFileObject</a></div><div class="ttdef"><b>Definition:</b> log_file_object.h:44</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="aclassgoogle_1_1base_1_1Logger_html"><div class="ttname"><a href="classgoogle_1_1base_1_1Logger.html">google::base::Logger</a></div><div class="ttdef"><b>Definition:</b> logging.h:1542</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

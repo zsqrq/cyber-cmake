@@ -1,4 +1,4 @@
-.TH "apollo::cyber::service_discovery::ParticipantListener" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::service_discovery::ParticipantListener" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,12 +7,12 @@ apollo::cyber::service_discovery::ParticipantListener
 .br
 .PP
 .PP
-Inherits eprosima::fastrtps::ParticipantListener\&.
+Inherits \fBeprosima::fastrtps::ParticipantListener\fP\&.
 .SS "Public Types"
 
 .in +1c
 .ti -1c
-.RI "using \fBChangeFunc\fP = std::function< void(const eprosima::fastrtps::ParticipantDiscoveryInfo &info)>"
+.RI "using \fBChangeFunc\fP = std::function< void(const \fBeprosima::fastrtps::ParticipantDiscoveryInfo\fP &info)>"
 .br
 .in -1c
 .SS "Public Member Functions"
@@ -22,9 +22,24 @@ Inherits eprosima::fastrtps::ParticipantListener\&.
 .RI "\fBParticipantListener\fP (const ChangeFunc &callback)"
 .br
 .ti -1c
-.RI "virtual void \fBonParticipantDiscovery\fP (eprosima::fastrtps::Participant *p, eprosima::fastrtps::ParticipantDiscoveryInfo info)"
+.RI "virtual void \fBonParticipantDiscovery\fP (\fBeprosima::fastrtps::Participant\fP *p, \fBeprosima::fastrtps::ParticipantDiscoveryInfo\fP info)"
 .br
 .in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void apollo::cyber::service_discovery::ParticipantListener::onParticipantDiscovery (\fBeprosima::fastrtps::Participant\fP * p, \fBeprosima::fastrtps::ParticipantDiscoveryInfo\fP info)\fC [virtual]\fP"
+This method is called when a new Participant is discovered, or a previously discovered participant changes its QOS or is removed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Pointer to the Participant 
+.br
+\fIinfo\fP DiscoveryInfo\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBeprosima::fastrtps::ParticipantListener\fP\&.
 
 .SH "Author"
 .PP 

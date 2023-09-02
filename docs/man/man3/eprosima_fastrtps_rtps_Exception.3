@@ -1,0 +1,173 @@
+.TH "eprosima::fastrtps::rtps::Exception" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::Exception \- This abstract class is used to create exceptions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Exception\&.h>\fP
+.PP
+Inherits std::exception\&.
+.PP
+Inherited by \fBeprosima::fastrtps::rtps::security::SecurityException\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual RTPS_DllAPI \fB~Exception\fP ()  throw ()"
+.br
+.RI "Default destructor\&. "
+.ti -1c
+.RI "RTPS_DllAPI const int32_t & \fBminor\fP () const"
+.br
+.RI "This function returns the number associated with the system exception\&. "
+.ti -1c
+.RI "RTPS_DllAPI void \fBminor\fP (const int32_t &minor)"
+.br
+.RI "This function sets the number that will be associated with the system exception\&. "
+.ti -1c
+.RI "virtual RTPS_DllAPI void \fBraise\fP () const =0"
+.br
+.RI "This function throws the object as exception\&. "
+.ti -1c
+.RI "virtual RTPS_DllAPI const char * \fBwhat\fP () const  throw ()"
+.br
+.RI "This function returns the error message\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "RTPS_DllAPI \fBException\fP (const char *const &message)"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "RTPS_DllAPI \fBException\fP (const \fBException\fP &ex)"
+.br
+.RI "Default copy constructor\&. "
+.ti -1c
+.RI "RTPS_DllAPI \fBException\fP (\fBException\fP &&ex)"
+.br
+.RI "Default move constructor\&. "
+.ti -1c
+.RI "RTPS_DllAPI \fBException\fP (const char *const &message, const int32_t \fBminor\fP)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "RTPS_DllAPI \fBException\fP & \fBoperator=\fP (const \fBException\fP &ex)"
+.br
+.RI "Assigment operation\&. "
+.ti -1c
+.RI "RTPS_DllAPI \fBException\fP & \fBoperator=\fP (\fBException\fP &&ex)"
+.br
+.RI "Assigment operation\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This abstract class is used to create exceptions\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RTPS_DllAPI eprosima::fastrtps::rtps::Exception::Exception (const \fBException\fP & ex)\fC [protected]\fP"
+
+.PP
+Default copy constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIex\fP \fBException\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "RTPS_DllAPI eprosima::fastrtps::rtps::Exception::Exception (\fBException\fP && ex)\fC [protected]\fP"
+
+.PP
+Default move constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIex\fP \fBException\fP that will be moved\&. 
+.RE
+.PP
+
+.SS "RTPS_DllAPI eprosima::fastrtps::rtps::Exception::Exception (const char *const & message, const int32_t minor)\fC [explicit]\fP, \fC [protected]\fP"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP An error message\&. This message is copied\&. 
+.br
+\fIminor\fP The number that will be associated with the system exception\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "RTPS_DllAPI const int32_t& eprosima::fastrtps::rtps::Exception::minor () const"
+
+.PP
+This function returns the number associated with the system exception\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The number associated with the system exception\&. 
+.RE
+.PP
+
+.SS "RTPS_DllAPI void eprosima::fastrtps::rtps::Exception::minor (const int32_t & minor)"
+
+.PP
+This function sets the number that will be associated with the system exception\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIminor\fP The number that will be associated with the system exception\&. 
+.RE
+.PP
+
+.SS "RTPS_DllAPI \fBException\fP& eprosima::fastrtps::rtps::Exception::operator= (const \fBException\fP & ex)\fC [protected]\fP"
+
+.PP
+Assigment operation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIex\fP \fBException\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "RTPS_DllAPI \fBException\fP& eprosima::fastrtps::rtps::Exception::operator= (\fBException\fP && ex)\fC [protected]\fP"
+
+.PP
+Assigment operation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIex\fP \fBException\fP that will be moved\&. 
+.RE
+.PP
+
+.SS "virtual RTPS_DllAPI const char* eprosima::fastrtps::rtps::Exception::what () const\fC [virtual]\fP"
+
+.PP
+This function returns the error message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP An error message\&. This message is copied\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The error message\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

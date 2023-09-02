@@ -1,0 +1,216 @@
+.TH "eprosima::fastcdr::_FastBuffer_iterator" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastcdr::_FastBuffer_iterator \- This class implements the iterator used to go through a \fBFastBuffer\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <FastBuffer\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB_FastBuffer_iterator\fP ()"
+.br
+.RI "Default constructor\&. The iterator points any position\&. "
+.ti -1c
+.RI "\fB_FastBuffer_iterator\fP (char *buffer, size_t index)"
+.br
+.RI "Constructor\&. The iterator points to the indicated position\&. "
+.ti -1c
+.RI "void \fBoperator<<\fP (const \fB_FastBuffer_iterator\fP &iterator)"
+.br
+.RI "This operator changes the iterator's raw buffer\&. This operator makes the iterator point to the same position but in another raw buffer\&. The new raw buffer is the same than the source iterator's\&. "
+.ti -1c
+.RI "void \fBoperator>>\fP (const \fB_FastBuffer_iterator\fP &iterator)"
+.br
+.RI "This operator changes the position where the iterator points\&. This operator takes the index of the source iterator, but the iterator continues using its raw buffer\&. "
+.ti -1c
+.RI "template<typename _T > void \fBoperator<<\fP (const _T &data)"
+.br
+.RI "This operator copies a data in the raw buffer\&. The copy uses the size of the data type\&. "
+.ti -1c
+.RI "template<typename _T > void \fBoperator>>\fP (_T &data)"
+.br
+.RI "This operator copies data from the raw buffer to a variable\&. The copy uses the size of the data type\&. "
+.ti -1c
+.RI "void \fBmemcopy\fP (const void *src, const size_t size)"
+.br
+.RI "This function copies a buffer into the raw buffer\&. "
+.ti -1c
+.RI "void \fBrmemcopy\fP (void *dst, const size_t size)"
+.br
+.RI "This function copies from the raw buffer to a external buffer\&. "
+.ti -1c
+.RI "void \fBoperator+=\fP (size_t numBytes)"
+.br
+.RI "This function increments the position where the iterator points\&. "
+.ti -1c
+.RI "size_t \fBoperator\-\fP (const \fB_FastBuffer_iterator\fP &it) const"
+.br
+.RI "This operator returns the subtraction of the current interator's position and the source iterator's position\&. @iterator Source iterator whose position is subtracted to the current iterator's position\&. "
+.ti -1c
+.RI "\fB_FastBuffer_iterator\fP \fBoperator++\fP ()"
+.br
+.RI "This function increments the iterator in one the position\&. "
+.ti -1c
+.RI "\fB_FastBuffer_iterator\fP \fBoperator++\fP (int)"
+.br
+.RI "This function increments the iterator in one the position\&. "
+.ti -1c
+.RI "char * \fBoperator&\fP ()"
+.br
+.RI "This function returns the current position in the raw buffer\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements the iterator used to go through a \fBFastBuffer\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastcdr::_FastBuffer_iterator::_FastBuffer_iterator (char * buffer, size_t index)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Constructor\&. The iterator points to the indicated position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuffer\fP Pointer to the raw buffer\&. 
+.br
+\fIindex\fP Position of the raw buffer where the iterator will point\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void eprosima::fastcdr::_FastBuffer_iterator::memcopy (const void * src, const size_t size)\fC [inline]\fP"
+
+.PP
+This function copies a buffer into the raw buffer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsrc\fP The source buffer\&. 
+.br
+\fIsize\fP The number of bytes to be copied\&. 
+.RE
+.PP
+
+.SS "char* eprosima::fastcdr::_FastBuffer_iterator::operator& ()\fC [inline]\fP"
+
+.PP
+This function returns the current position in the raw buffer\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The current position in the raw buffer\&. 
+.RE
+.PP
+
+.SS "\fB_FastBuffer_iterator\fP eprosima::fastcdr::_FastBuffer_iterator::operator++ ()\fC [inline]\fP"
+
+.PP
+This function increments the iterator in one the position\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The current iterator\&. 
+.RE
+.PP
+
+.SS "\fB_FastBuffer_iterator\fP eprosima::fastcdr::_FastBuffer_iterator::operator++ (int)\fC [inline]\fP"
+
+.PP
+This function increments the iterator in one the position\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The current iterator\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastcdr::_FastBuffer_iterator::operator+= (size_t numBytes)\fC [inline]\fP"
+
+.PP
+This function increments the position where the iterator points\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInumBytes\fP Number of bytes the iterator moves the position\&. 
+.RE
+.PP
+
+.SS "size_t eprosima::fastcdr::_FastBuffer_iterator::operator\- (const \fB_FastBuffer_iterator\fP & it) const\fC [inline]\fP"
+
+.PP
+This operator returns the subtraction of the current interator's position and the source iterator's position\&. @iterator Source iterator whose position is subtracted to the current iterator's position\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The result of subtract the current iterator's position and the source iterator's position\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastcdr::_FastBuffer_iterator::operator<< (const \fB_FastBuffer_iterator\fP & iterator)\fC [inline]\fP"
+
+.PP
+This operator changes the iterator's raw buffer\&. This operator makes the iterator point to the same position but in another raw buffer\&. The new raw buffer is the same than the source iterator's\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIiterator\fP The source iterator\&. The iterator will use the source iterator's raw buffer after this operation\&. 
+.RE
+.PP
+
+.SS "template<typename _T > void eprosima::fastcdr::_FastBuffer_iterator::operator<< (const _T & data)\fC [inline]\fP"
+
+.PP
+This operator copies a data in the raw buffer\&. The copy uses the size of the data type\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Data to be copied\&. Cannot be NULL\&. 
+.RE
+.PP
+
+.SS "template<typename _T > void eprosima::fastcdr::_FastBuffer_iterator::operator>> (_T & data)\fC [inline]\fP"
+
+.PP
+This operator copies data from the raw buffer to a variable\&. The copy uses the size of the data type\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Data to be filled\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastcdr::_FastBuffer_iterator::operator>> (const \fB_FastBuffer_iterator\fP & iterator)\fC [inline]\fP"
+
+.PP
+This operator changes the position where the iterator points\&. This operator takes the index of the source iterator, but the iterator continues using its raw buffer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIThe\fP source iterator\&. The iterator will use the source's iterator index to point to its own raw buffer\&. 
+.RE
+.PP
+
+.SS "void eprosima::fastcdr::_FastBuffer_iterator::rmemcopy (void * dst, const size_t size)\fC [inline]\fP"
+
+.PP
+This function copies from the raw buffer to a external buffer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdst\fP The destination buffer\&. 
+.br
+\fIsize\fP The size of bytes to be copied\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

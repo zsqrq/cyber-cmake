@@ -1,0 +1,164 @@
+.TH "apollo::control::SimpleMPCDebug::_Internal" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::control::SimpleMPCDebug::_Internal
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBHasBits\fP = decltype(std::declval< \fBSimpleMPCDebug\fP >()\&._has_bits_)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBset_has_lateral_error\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_ref_heading\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_heading\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_heading_error\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_heading_error_rate\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_lateral_error_rate\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_curvature\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_steer_angle\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_steer_angle_feedforward\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_steer_angle_lateral_contribution\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_steer_angle_lateral_rate_contribution\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_steer_angle_heading_contribution\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_steer_angle_heading_rate_contribution\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_steer_angle_feedback\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_steering_position\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_ref_speed\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_steer_angle_limited\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_station_reference\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_station_error\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_speed_reference\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_speed_error\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_acceleration_reference\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_is_full_stop\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_station_feedback\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_speed_feedback\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_acceleration_cmd_closeloop\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_acceleration_cmd\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_acceleration_lookup\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_speed_lookup\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_calibration_value\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_steer_unconstrained_control_diff\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_steer_angle_feedforward_compensation\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_lateral_acceleration\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_lateral_jerk\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_ref_heading_rate\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_heading_rate\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_ref_heading_acceleration\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_heading_acceleration\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_heading_error_acceleration\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_ref_heading_jerk\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_heading_jerk\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_heading_error_jerk\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_acceleration_feedback\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_acceleration_error\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_jerk_reference\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_jerk_feedback\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_jerk_error\fP (HasBits *has_bits)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

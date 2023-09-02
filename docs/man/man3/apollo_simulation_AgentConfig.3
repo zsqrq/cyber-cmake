@@ -1,0 +1,710 @@
+.TH "apollo::simulation::AgentConfig" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::simulation::AgentConfig
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkTrackedPointFieldNumber\fP = 9, \fBkDescriptionFieldNumber\fP = 2, \fBkStartLaneFieldNumber\fP = 15, \fBkEndLaneFieldNumber\fP = 16, \fBkStartPositionFieldNumber\fP = 12, \fBkEndPositionFieldNumber\fP = 14, \fBkIdFieldNumber\fP = 1, \fBkTypeFieldNumber\fP = 6, \fBkAppearTimeFieldNumber\fP = 7, \fBkDisappearTimeFieldNumber\fP = 8, \fBkDistanceFieldNumber\fP = 11, \fBkStartDistanceFieldNumber\fP = 13, \fBkMotiontypeFieldNumber\fP = 10, \fBkTriggerTypeFieldNumber\fP = 20, \fBkStartTimeFieldNumber\fP = 21, \fBkAvoidRearEndCollisionFieldNumber\fP = 17, \fBkWidthFieldNumber\fP = 3, \fBkLengthFieldNumber\fP = 4, \fBkHeightFieldNumber\fP = 5, \fBkRearEndCollisionDistanceFieldNumber\fP = 18 }"
+.br
+.ti -1c
+.RI "typedef \fBAgentConfig_TrackedPoint\fP \fBTrackedPoint\fP"
+.br
+.ti -1c
+.RI "typedef AgentConfig_Type \fBType\fP"
+.br
+.ti -1c
+.RI "typedef AgentConfig_MotionType \fBMotionType\fP"
+.br
+.ti -1c
+.RI "typedef AgentConfig_TriggerType \fBTriggerType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBAgentConfig\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBAgentConfig\fP (const \fBAgentConfig\fP &from)"
+.br
+.ti -1c
+.RI "\fBAgentConfig\fP (\fBAgentConfig\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBAgentConfig\fP & \fBoperator=\fP (const \fBAgentConfig\fP &from)"
+.br
+.ti -1c
+.RI "\fBAgentConfig\fP & \fBoperator=\fP (\fBAgentConfig\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBAgentConfig\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBAgentConfig\fP *other)"
+.br
+.ti -1c
+.RI "\fBAgentConfig\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBAgentConfig\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBAgentConfig\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBtracked_point_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_tracked_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::simulation::AgentConfig_TrackedPoint\fP * \fBmutable_tracked_point\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::simulation::AgentConfig_TrackedPoint\fP > * \fBmutable_tracked_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::simulation::AgentConfig_TrackedPoint\fP & \fBtracked_point\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::simulation::AgentConfig_TrackedPoint\fP * \fBadd_tracked_point\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::simulation::AgentConfig_TrackedPoint\fP > & \fBtracked_point\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhas_description\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_description\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBdescription\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_description\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_description\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_description\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_description\fP (std::string *description)"
+.br
+.ti -1c
+.RI "bool \fBhas_start_lane\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_start_lane\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBstart_lane\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_start_lane\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_start_lane\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_start_lane\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_start_lane\fP (std::string *start_lane)"
+.br
+.ti -1c
+.RI "bool \fBhas_end_lane\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_end_lane\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBend_lane\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_end_lane\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_end_lane\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_end_lane\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_end_lane\fP (std::string *end_lane)"
+.br
+.ti -1c
+.RI "bool \fBhas_start_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_start_position\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::simulation::AgentConfig_TrackedPoint\fP & \fBstart_position\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::simulation::AgentConfig_TrackedPoint\fP * \fBrelease_start_position\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::simulation::AgentConfig_TrackedPoint\fP * \fBmutable_start_position\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_start_position\fP (::\fBapollo::simulation::AgentConfig_TrackedPoint\fP *start_position)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_start_position\fP (::\fBapollo::simulation::AgentConfig_TrackedPoint\fP *start_position)"
+.br
+.ti -1c
+.RI "::\fBapollo::simulation::AgentConfig_TrackedPoint\fP * \fBunsafe_arena_release_start_position\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_end_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_end_position\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::simulation::AgentConfig_TrackedPoint\fP & \fBend_position\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::simulation::AgentConfig_TrackedPoint\fP * \fBrelease_end_position\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::simulation::AgentConfig_TrackedPoint\fP * \fBmutable_end_position\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_end_position\fP (::\fBapollo::simulation::AgentConfig_TrackedPoint\fP *end_position)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_end_position\fP (::\fBapollo::simulation::AgentConfig_TrackedPoint\fP *end_position)"
+.br
+.ti -1c
+.RI "::\fBapollo::simulation::AgentConfig_TrackedPoint\fP * \fBunsafe_arena_release_end_position\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_id\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_id\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::simulation::AgentConfig_Type \fBtype\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_type\fP (::apollo::simulation::AgentConfig_Type value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_appear_time\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_appear_time\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED double \fBappear_time\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_appear_time\fP (double value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_disappear_time\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_disappear_time\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED double \fBdisappear_time\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_disappear_time\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_distance\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_distance\fP ()"
+.br
+.ti -1c
+.RI "double \fBdistance\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_distance\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_start_distance\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_start_distance\fP ()"
+.br
+.ti -1c
+.RI "double \fBstart_distance\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_start_distance\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_motiontype\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_motiontype\fP ()"
+.br
+.ti -1c
+.RI "::apollo::simulation::AgentConfig_MotionType \fBmotiontype\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_motiontype\fP (::apollo::simulation::AgentConfig_MotionType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_trigger_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_trigger_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::simulation::AgentConfig_TriggerType \fBtrigger_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_trigger_type\fP (::apollo::simulation::AgentConfig_TriggerType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_start_time\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_start_time\fP ()"
+.br
+.ti -1c
+.RI "double \fBstart_time\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_start_time\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_avoid_rear_end_collision\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_avoid_rear_end_collision\fP ()"
+.br
+.ti -1c
+.RI "bool \fBavoid_rear_end_collision\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_avoid_rear_end_collision\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_width\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_width\fP ()"
+.br
+.ti -1c
+.RI "double \fBwidth\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_width\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_length\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_length\fP ()"
+.br
+.ti -1c
+.RI "double \fBlength\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_length\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_height\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_height\fP ()"
+.br
+.ti -1c
+.RI "double \fBheight\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_height\fP (double value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_rear_end_collision_distance\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_rear_end_collision_distance\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED double \fBrear_end_collision_distance\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_rear_end_collision_distance\fP (double value)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_description\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_start_lane\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_end_lane\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBAgentConfig\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBAgentConfig\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Type *value)"
+.br
+.ti -1c
+.RI "static bool \fBMotionType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBMotionType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBMotionType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBMotionType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, MotionType *value)"
+.br
+.ti -1c
+.RI "static bool \fBTriggerType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBTriggerType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBTriggerType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBTriggerType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, TriggerType *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBVEHICLE\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBBICYCLE\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBPEDESTRIAN\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBUNKNOWN_UNMOVABLE\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBUNKNOWN_MOVABLE\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Type \fBType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr MotionType \fBSTATIC\fP"
+.br
+.ti -1c
+.RI "static constexpr MotionType \fBLANE_FOLLOW\fP"
+.br
+.ti -1c
+.RI "static constexpr MotionType \fBTRACKED\fP"
+.br
+.ti -1c
+.RI "static constexpr MotionType \fBMotionType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr MotionType \fBMotionType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBMotionType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr TriggerType \fBDISTANCE\fP"
+.br
+.ti -1c
+.RI "static constexpr TriggerType \fBTIME\fP"
+.br
+.ti -1c
+.RI "static constexpr TriggerType \fBTriggerType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr TriggerType \fBTriggerType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBTriggerType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAgentConfig\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fsimulation_5fmsgs_2fagent_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBAgentConfig\fP &a, \fBAgentConfig\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::simulation::AgentConfig::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    AgentConfig::MergeImpl
+}
+.fi
+.SS "constexpr AgentConfig_Type apollo::simulation::AgentConfig::BICYCLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_Type_BICYCLE
+.fi
+.SS "constexpr AgentConfig_TriggerType apollo::simulation::AgentConfig::DISTANCE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_TriggerType_DISTANCE
+.fi
+.SS "constexpr int apollo::simulation::AgentConfig::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    1
+.fi
+.SS "constexpr AgentConfig_MotionType apollo::simulation::AgentConfig::LANE_FOLLOW\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_MotionType_LANE_FOLLOW
+.fi
+.SS "constexpr int apollo::simulation::AgentConfig::MotionType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_MotionType_MotionType_ARRAYSIZE
+.fi
+.SS "constexpr AgentConfig_MotionType apollo::simulation::AgentConfig::MotionType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_MotionType_MotionType_MAX
+.fi
+.SS "constexpr AgentConfig_MotionType apollo::simulation::AgentConfig::MotionType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_MotionType_MotionType_MIN
+.fi
+.SS "constexpr AgentConfig_Type apollo::simulation::AgentConfig::PEDESTRIAN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_Type_PEDESTRIAN
+.fi
+.SS "constexpr AgentConfig_MotionType apollo::simulation::AgentConfig::STATIC\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_MotionType_STATIC
+.fi
+.SS "constexpr AgentConfig_TriggerType apollo::simulation::AgentConfig::TIME\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_TriggerType_TIME
+.fi
+.SS "constexpr AgentConfig_MotionType apollo::simulation::AgentConfig::TRACKED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_MotionType_TRACKED
+.fi
+.SS "constexpr int apollo::simulation::AgentConfig::TriggerType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_TriggerType_TriggerType_ARRAYSIZE
+.fi
+.SS "constexpr AgentConfig_TriggerType apollo::simulation::AgentConfig::TriggerType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_TriggerType_TriggerType_MAX
+.fi
+.SS "constexpr AgentConfig_TriggerType apollo::simulation::AgentConfig::TriggerType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_TriggerType_TriggerType_MIN
+.fi
+.SS "constexpr int apollo::simulation::AgentConfig::Type_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_Type_Type_ARRAYSIZE
+.fi
+.SS "constexpr AgentConfig_Type apollo::simulation::AgentConfig::Type_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_Type_Type_MAX
+.fi
+.SS "constexpr AgentConfig_Type apollo::simulation::AgentConfig::Type_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_Type_Type_MIN
+.fi
+.SS "constexpr AgentConfig_Type apollo::simulation::AgentConfig::UNKNOWN_MOVABLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_Type_UNKNOWN_MOVABLE
+.fi
+.SS "constexpr AgentConfig_Type apollo::simulation::AgentConfig::UNKNOWN_UNMOVABLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_Type_UNKNOWN_UNMOVABLE
+.fi
+.SS "constexpr AgentConfig_Type apollo::simulation::AgentConfig::VEHICLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    AgentConfig_Type_VEHICLE
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

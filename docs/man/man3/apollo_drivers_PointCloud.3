@@ -1,0 +1,280 @@
+.TH "apollo::drivers::PointCloud" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::drivers::PointCloud
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkPointFieldNumber\fP = 4, \fBkFrameIdFieldNumber\fP = 2, \fBkHeaderFieldNumber\fP = 1, \fBkIsDenseFieldNumber\fP = 3, \fBkWidthFieldNumber\fP = 6, \fBkMeasurementTimeFieldNumber\fP = 5, \fBkHeightFieldNumber\fP = 7 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBPointCloud\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBPointCloud\fP (const \fBPointCloud\fP &from)"
+.br
+.ti -1c
+.RI "\fBPointCloud\fP (\fBPointCloud\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBPointCloud\fP & \fBoperator=\fP (const \fBPointCloud\fP &from)"
+.br
+.ti -1c
+.RI "\fBPointCloud\fP & \fBoperator=\fP (\fBPointCloud\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBPointCloud\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBPointCloud\fP *other)"
+.br
+.ti -1c
+.RI "\fBPointCloud\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBPointCloud\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBPointCloud\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBpoint_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::drivers::PointXYZIT\fP * \fBmutable_point\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::drivers::PointXYZIT\fP > * \fBmutable_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::drivers::PointXYZIT\fP & \fBpoint\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::drivers::PointXYZIT\fP * \fBadd_point\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::drivers::PointXYZIT\fP > & \fBpoint\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhas_frame_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_frame_id\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBframe_id\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_frame_id\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_frame_id\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_frame_id\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_frame_id\fP (std::string *frame_id)"
+.br
+.ti -1c
+.RI "bool \fBhas_header\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_header\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Header\fP & \fBheader\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Header\fP * \fBrelease_header\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBmutable_header\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBunsafe_arena_release_header\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_is_dense\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_dense\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_dense\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_dense\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_width\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_width\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBwidth\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_width\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_measurement_time\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_measurement_time\fP ()"
+.br
+.ti -1c
+.RI "double \fBmeasurement_time\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_measurement_time\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_height\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_height\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBheight\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_height\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_frame_id\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBPointCloud\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBPointCloud\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPointCloud\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fsensor_5fmsgs_2fpointcloud_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBPointCloud\fP &a, \fBPointCloud\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::drivers::PointCloud::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    PointCloud::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::drivers::PointCloud::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    1
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

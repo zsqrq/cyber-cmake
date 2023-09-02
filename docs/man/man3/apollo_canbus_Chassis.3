@@ -1,0 +1,1145 @@
+.TH "apollo::canbus::Chassis" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::canbus::Chassis
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkHeaderFieldNumber\fP = 25, \fBkSignalFieldNumber\fP = 27, \fBkChassisGpsFieldNumber\fP = 28, \fBkEngageAdviceFieldNumber\fP = 29, \fBkWheelSpeedFieldNumber\fP = 30, \fBkSurroundFieldNumber\fP = 31, \fBkLicenseFieldNumber\fP = 32, \fBkVehicleIdFieldNumber\fP = 33, \fBkCheckResponseFieldNumber\fP = 40, \fBkFuelRangeMFieldNumber\fP = 7, \fBkEngineStartedFieldNumber\fP = 3, \fBkParkingBrakeFieldNumber\fP = 13, \fBkHighBeamSignalFieldNumber\fP = 14, \fBkLowBeamSignalFieldNumber\fP = 15, \fBkLeftTurnSignalFieldNumber\fP = 16, \fBkRightTurnSignalFieldNumber\fP = 17, \fBkHornFieldNumber\fP = 18, \fBkWiperFieldNumber\fP = 19, \fBkDisengageStatusFieldNumber\fP = 20, \fBkDrivingModeFieldNumber\fP = 21, \fBkErrorCodeFieldNumber\fP = 22, \fBkSteeringTimestampFieldNumber\fP = 24, \fBkGearLocationFieldNumber\fP = 23, \fBkChassisErrorMaskFieldNumber\fP = 26, \fBkFrontBumperEventFieldNumber\fP = 38, \fBkBackBumperEventFieldNumber\fP = 39, \fBkSteeringPercentageCmdFieldNumber\fP = 37, \fBkEngineRpmFieldNumber\fP = 4, \fBkSpeedMpsFieldNumber\fP = 5, \fBkOdometerMFieldNumber\fP = 6, \fBkThrottlePercentageFieldNumber\fP = 8, \fBkBrakePercentageFieldNumber\fP = 9, \fBkSteeringPercentageFieldNumber\fP = 11, \fBkSteeringTorqueNmFieldNumber\fP = 12, \fBkBatterySocPercentageFieldNumber\fP = 34, \fBkThrottlePercentageCmdFieldNumber\fP = 35, \fBkBrakePercentageCmdFieldNumber\fP = 36 }"
+.br
+.ti -1c
+.RI "typedef Chassis_DrivingMode \fBDrivingMode\fP"
+.br
+.ti -1c
+.RI "typedef Chassis_ErrorCode \fBErrorCode\fP"
+.br
+.ti -1c
+.RI "typedef Chassis_GearPosition \fBGearPosition\fP"
+.br
+.ti -1c
+.RI "typedef Chassis_BumperEvent \fBBumperEvent\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBChassis\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBChassis\fP (const \fBChassis\fP &from)"
+.br
+.ti -1c
+.RI "\fBChassis\fP (\fBChassis\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBChassis\fP & \fBoperator=\fP (const \fBChassis\fP &from)"
+.br
+.ti -1c
+.RI "\fBChassis\fP & \fBoperator=\fP (\fBChassis\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBChassis\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBChassis\fP *other)"
+.br
+.ti -1c
+.RI "\fBChassis\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBChassis\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBChassis\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_header\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_header\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Header\fP & \fBheader\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Header\fP * \fBrelease_header\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBmutable_header\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBunsafe_arena_release_header\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_signal\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_signal\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::VehicleSignal\fP & \fBsignal\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::VehicleSignal\fP * \fBrelease_signal\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::VehicleSignal\fP * \fBmutable_signal\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_signal\fP (::\fBapollo::common::VehicleSignal\fP *signal)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_signal\fP (::\fBapollo::common::VehicleSignal\fP *signal)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::VehicleSignal\fP * \fBunsafe_arena_release_signal\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_chassis_gps\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_chassis_gps\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::canbus::ChassisGPS\fP & \fBchassis_gps\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::canbus::ChassisGPS\fP * \fBrelease_chassis_gps\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::canbus::ChassisGPS\fP * \fBmutable_chassis_gps\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_chassis_gps\fP (::\fBapollo::canbus::ChassisGPS\fP *chassis_gps)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_chassis_gps\fP (::\fBapollo::canbus::ChassisGPS\fP *chassis_gps)"
+.br
+.ti -1c
+.RI "::\fBapollo::canbus::ChassisGPS\fP * \fBunsafe_arena_release_chassis_gps\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_engage_advice\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_engage_advice\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::EngageAdvice\fP & \fBengage_advice\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::EngageAdvice\fP * \fBrelease_engage_advice\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::EngageAdvice\fP * \fBmutable_engage_advice\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_engage_advice\fP (::\fBapollo::common::EngageAdvice\fP *engage_advice)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_engage_advice\fP (::\fBapollo::common::EngageAdvice\fP *engage_advice)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::EngageAdvice\fP * \fBunsafe_arena_release_engage_advice\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_wheel_speed\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_wheel_speed\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::canbus::WheelSpeed\fP & \fBwheel_speed\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::canbus::WheelSpeed\fP * \fBrelease_wheel_speed\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::canbus::WheelSpeed\fP * \fBmutable_wheel_speed\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_wheel_speed\fP (::\fBapollo::canbus::WheelSpeed\fP *wheel_speed)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_wheel_speed\fP (::\fBapollo::canbus::WheelSpeed\fP *wheel_speed)"
+.br
+.ti -1c
+.RI "::\fBapollo::canbus::WheelSpeed\fP * \fBunsafe_arena_release_wheel_speed\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_surround\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_surround\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::canbus::Surround\fP & \fBsurround\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::canbus::Surround\fP * \fBrelease_surround\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::canbus::Surround\fP * \fBmutable_surround\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_surround\fP (::\fBapollo::canbus::Surround\fP *surround)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_surround\fP (::\fBapollo::canbus::Surround\fP *surround)"
+.br
+.ti -1c
+.RI "::\fBapollo::canbus::Surround\fP * \fBunsafe_arena_release_surround\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_license\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_license\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATEDconst ::\fBapollo::canbus::License\fP & \fBlicense\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD PROTOBUF_DEPRECATED ::\fBapollo::canbus::License\fP * \fBrelease_license\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED ::\fBapollo::canbus::License\fP * \fBmutable_license\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_allocated_license\fP (::\fBapollo::canbus::License\fP *license)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBunsafe_arena_set_allocated_license\fP (::\fBapollo::canbus::License\fP *license)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED ::\fBapollo::canbus::License\fP * \fBunsafe_arena_release_license\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_vehicle_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_vehicle_id\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::VehicleID\fP & \fBvehicle_id\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::VehicleID\fP * \fBrelease_vehicle_id\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::VehicleID\fP * \fBmutable_vehicle_id\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_vehicle_id\fP (::\fBapollo::common::VehicleID\fP *vehicle_id)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_vehicle_id\fP (::\fBapollo::common::VehicleID\fP *vehicle_id)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::VehicleID\fP * \fBunsafe_arena_release_vehicle_id\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_check_response\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_check_response\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::canbus::CheckResponse\fP & \fBcheck_response\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::canbus::CheckResponse\fP * \fBrelease_check_response\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::canbus::CheckResponse\fP * \fBmutable_check_response\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_check_response\fP (::\fBapollo::canbus::CheckResponse\fP *check_response)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_check_response\fP (::\fBapollo::canbus::CheckResponse\fP *check_response)"
+.br
+.ti -1c
+.RI "::\fBapollo::canbus::CheckResponse\fP * \fBunsafe_arena_release_check_response\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_fuel_range_m\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_fuel_range_m\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBfuel_range_m\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_fuel_range_m\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_engine_started\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_engine_started\fP ()"
+.br
+.ti -1c
+.RI "bool \fBengine_started\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_engine_started\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_parking_brake\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_parking_brake\fP ()"
+.br
+.ti -1c
+.RI "bool \fBparking_brake\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_parking_brake\fP (bool value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_high_beam_signal\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_high_beam_signal\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhigh_beam_signal\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_high_beam_signal\fP (bool value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_low_beam_signal\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_low_beam_signal\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBlow_beam_signal\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_low_beam_signal\fP (bool value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_left_turn_signal\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_left_turn_signal\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBleft_turn_signal\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_left_turn_signal\fP (bool value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_right_turn_signal\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_right_turn_signal\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBright_turn_signal\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_right_turn_signal\fP (bool value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_horn\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_horn\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhorn\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_horn\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_wiper\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_wiper\fP ()"
+.br
+.ti -1c
+.RI "bool \fBwiper\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_wiper\fP (bool value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_disengage_status\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_disengage_status\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBdisengage_status\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_disengage_status\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_driving_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_driving_mode\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Chassis_DrivingMode \fBdriving_mode\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_driving_mode\fP (::apollo::canbus::Chassis_DrivingMode value)"
+.br
+.ti -1c
+.RI "bool \fBhas_error_code\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_error_code\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Chassis_ErrorCode \fBerror_code\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_error_code\fP (::apollo::canbus::Chassis_ErrorCode value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steering_timestamp\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steering_timestamp\fP ()"
+.br
+.ti -1c
+.RI "double \fBsteering_timestamp\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steering_timestamp\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_gear_location\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_gear_location\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Chassis_GearPosition \fBgear_location\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_gear_location\fP (::apollo::canbus::Chassis_GearPosition value)"
+.br
+.ti -1c
+.RI "bool \fBhas_chassis_error_mask\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_chassis_error_mask\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBchassis_error_mask\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_chassis_error_mask\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_front_bumper_event\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_front_bumper_event\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Chassis_BumperEvent \fBfront_bumper_event\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_front_bumper_event\fP (::apollo::canbus::Chassis_BumperEvent value)"
+.br
+.ti -1c
+.RI "bool \fBhas_back_bumper_event\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_back_bumper_event\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Chassis_BumperEvent \fBback_bumper_event\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_back_bumper_event\fP (::apollo::canbus::Chassis_BumperEvent value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steering_percentage_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steering_percentage_cmd\fP ()"
+.br
+.ti -1c
+.RI "float \fBsteering_percentage_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steering_percentage_cmd\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_engine_rpm\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_engine_rpm\fP ()"
+.br
+.ti -1c
+.RI "float \fBengine_rpm\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_engine_rpm\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed_mps\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_mps\fP ()"
+.br
+.ti -1c
+.RI "float \fBspeed_mps\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_speed_mps\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_odometer_m\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_odometer_m\fP ()"
+.br
+.ti -1c
+.RI "float \fBodometer_m\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_odometer_m\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_throttle_percentage\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_throttle_percentage\fP ()"
+.br
+.ti -1c
+.RI "float \fBthrottle_percentage\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_throttle_percentage\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_brake_percentage\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brake_percentage\fP ()"
+.br
+.ti -1c
+.RI "float \fBbrake_percentage\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brake_percentage\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steering_percentage\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steering_percentage\fP ()"
+.br
+.ti -1c
+.RI "float \fBsteering_percentage\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steering_percentage\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_steering_torque_nm\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_steering_torque_nm\fP ()"
+.br
+.ti -1c
+.RI "float \fBsteering_torque_nm\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_steering_torque_nm\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_battery_soc_percentage\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_battery_soc_percentage\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBbattery_soc_percentage\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_battery_soc_percentage\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_throttle_percentage_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_throttle_percentage_cmd\fP ()"
+.br
+.ti -1c
+.RI "float \fBthrottle_percentage_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_throttle_percentage_cmd\fP (float value)"
+.br
+.ti -1c
+.RI "bool \fBhas_brake_percentage_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brake_percentage_cmd\fP ()"
+.br
+.ti -1c
+.RI "float \fBbrake_percentage_cmd\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brake_percentage_cmd\fP (float value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBChassis\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBChassis\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBDrivingMode_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBDrivingMode_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBDrivingMode_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBDrivingMode_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, DrivingMode *value)"
+.br
+.ti -1c
+.RI "static bool \fBErrorCode_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBErrorCode_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBErrorCode_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBErrorCode_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, ErrorCode *value)"
+.br
+.ti -1c
+.RI "static bool \fBGearPosition_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBGearPosition_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBGearPosition_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBGearPosition_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, GearPosition *value)"
+.br
+.ti -1c
+.RI "static bool \fBBumperEvent_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBBumperEvent_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBBumperEvent_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBBumperEvent_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, BumperEvent *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr DrivingMode \fBCOMPLETE_MANUAL\fP"
+.br
+.ti -1c
+.RI "static constexpr DrivingMode \fBCOMPLETE_AUTO_DRIVE\fP"
+.br
+.ti -1c
+.RI "static constexpr DrivingMode \fBAUTO_STEER_ONLY\fP"
+.br
+.ti -1c
+.RI "static constexpr DrivingMode \fBAUTO_SPEED_ONLY\fP"
+.br
+.ti -1c
+.RI "static constexpr DrivingMode \fBEMERGENCY_MODE\fP"
+.br
+.ti -1c
+.RI "static constexpr DrivingMode \fBDrivingMode_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr DrivingMode \fBDrivingMode_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBDrivingMode_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr ErrorCode \fBNO_ERROR\fP"
+.br
+.ti -1c
+.RI "static constexpr ErrorCode \fBCMD_NOT_IN_PERIOD\fP"
+.br
+.ti -1c
+.RI "static constexpr ErrorCode \fBCHASSIS_ERROR\fP"
+.br
+.ti -1c
+.RI "static constexpr ErrorCode \fBCHASSIS_ERROR_ON_STEER\fP"
+.br
+.ti -1c
+.RI "static constexpr ErrorCode \fBCHASSIS_ERROR_ON_BRAKE\fP"
+.br
+.ti -1c
+.RI "static constexpr ErrorCode \fBCHASSIS_ERROR_ON_THROTTLE\fP"
+.br
+.ti -1c
+.RI "static constexpr ErrorCode \fBCHASSIS_ERROR_ON_GEAR\fP"
+.br
+.ti -1c
+.RI "static constexpr ErrorCode \fBMANUAL_INTERVENTION\fP"
+.br
+.ti -1c
+.RI "static constexpr ErrorCode \fBCHASSIS_CAN_NOT_IN_PERIOD\fP"
+.br
+.ti -1c
+.RI "static constexpr ErrorCode \fBUNKNOWN_ERROR\fP"
+.br
+.ti -1c
+.RI "static constexpr ErrorCode \fBErrorCode_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr ErrorCode \fBErrorCode_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBErrorCode_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr GearPosition \fBGEAR_NEUTRAL\fP"
+.br
+.ti -1c
+.RI "static constexpr GearPosition \fBGEAR_DRIVE\fP"
+.br
+.ti -1c
+.RI "static constexpr GearPosition \fBGEAR_REVERSE\fP"
+.br
+.ti -1c
+.RI "static constexpr GearPosition \fBGEAR_PARKING\fP"
+.br
+.ti -1c
+.RI "static constexpr GearPosition \fBGEAR_LOW\fP"
+.br
+.ti -1c
+.RI "static constexpr GearPosition \fBGEAR_INVALID\fP"
+.br
+.ti -1c
+.RI "static constexpr GearPosition \fBGEAR_NONE\fP"
+.br
+.ti -1c
+.RI "static constexpr GearPosition \fBGearPosition_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr GearPosition \fBGearPosition_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBGearPosition_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr BumperEvent \fBBUMPER_INVALID\fP"
+.br
+.ti -1c
+.RI "static constexpr BumperEvent \fBBUMPER_NORMAL\fP"
+.br
+.ti -1c
+.RI "static constexpr BumperEvent \fBBUMPER_PRESSED\fP"
+.br
+.ti -1c
+.RI "static constexpr BumperEvent \fBBumperEvent_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr BumperEvent \fBBumperEvent_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBBumperEvent_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChassis\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fchassis_5fmsgs_2fchassis_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBChassis\fP &a, \fBChassis\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::canbus::Chassis::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Chassis::MergeImpl
+}
+.fi
+.SS "constexpr Chassis_DrivingMode apollo::canbus::Chassis::AUTO_SPEED_ONLY\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_DrivingMode_AUTO_SPEED_ONLY
+.fi
+.SS "constexpr Chassis_DrivingMode apollo::canbus::Chassis::AUTO_STEER_ONLY\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_DrivingMode_AUTO_STEER_ONLY
+.fi
+.SS "constexpr Chassis_BumperEvent apollo::canbus::Chassis::BUMPER_INVALID\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_BumperEvent_BUMPER_INVALID
+.fi
+.SS "constexpr Chassis_BumperEvent apollo::canbus::Chassis::BUMPER_NORMAL\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_BumperEvent_BUMPER_NORMAL
+.fi
+.SS "constexpr Chassis_BumperEvent apollo::canbus::Chassis::BUMPER_PRESSED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_BumperEvent_BUMPER_PRESSED
+.fi
+.SS "constexpr int apollo::canbus::Chassis::BumperEvent_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_BumperEvent_BumperEvent_ARRAYSIZE
+.fi
+.SS "constexpr Chassis_BumperEvent apollo::canbus::Chassis::BumperEvent_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_BumperEvent_BumperEvent_MAX
+.fi
+.SS "constexpr Chassis_BumperEvent apollo::canbus::Chassis::BumperEvent_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_BumperEvent_BumperEvent_MIN
+.fi
+.SS "constexpr Chassis_ErrorCode apollo::canbus::Chassis::CHASSIS_CAN_NOT_IN_PERIOD\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_ErrorCode_CHASSIS_CAN_NOT_IN_PERIOD
+.fi
+.SS "constexpr Chassis_ErrorCode apollo::canbus::Chassis::CHASSIS_ERROR\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_ErrorCode_CHASSIS_ERROR
+.fi
+.SS "constexpr Chassis_ErrorCode apollo::canbus::Chassis::CHASSIS_ERROR_ON_BRAKE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_ErrorCode_CHASSIS_ERROR_ON_BRAKE
+.fi
+.SS "constexpr Chassis_ErrorCode apollo::canbus::Chassis::CHASSIS_ERROR_ON_GEAR\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_ErrorCode_CHASSIS_ERROR_ON_GEAR
+.fi
+.SS "constexpr Chassis_ErrorCode apollo::canbus::Chassis::CHASSIS_ERROR_ON_STEER\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_ErrorCode_CHASSIS_ERROR_ON_STEER
+.fi
+.SS "constexpr Chassis_ErrorCode apollo::canbus::Chassis::CHASSIS_ERROR_ON_THROTTLE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_ErrorCode_CHASSIS_ERROR_ON_THROTTLE
+.fi
+.SS "constexpr Chassis_ErrorCode apollo::canbus::Chassis::CMD_NOT_IN_PERIOD\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_ErrorCode_CMD_NOT_IN_PERIOD
+.fi
+.SS "constexpr Chassis_DrivingMode apollo::canbus::Chassis::COMPLETE_AUTO_DRIVE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_DrivingMode_COMPLETE_AUTO_DRIVE
+.fi
+.SS "constexpr Chassis_DrivingMode apollo::canbus::Chassis::COMPLETE_MANUAL\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_DrivingMode_COMPLETE_MANUAL
+.fi
+.SS "constexpr int apollo::canbus::Chassis::DrivingMode_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_DrivingMode_DrivingMode_ARRAYSIZE
+.fi
+.SS "constexpr Chassis_DrivingMode apollo::canbus::Chassis::DrivingMode_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_DrivingMode_DrivingMode_MAX
+.fi
+.SS "constexpr Chassis_DrivingMode apollo::canbus::Chassis::DrivingMode_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_DrivingMode_DrivingMode_MIN
+.fi
+.SS "constexpr Chassis_DrivingMode apollo::canbus::Chassis::EMERGENCY_MODE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_DrivingMode_EMERGENCY_MODE
+.fi
+.SS "constexpr int apollo::canbus::Chassis::ErrorCode_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_ErrorCode_ErrorCode_ARRAYSIZE
+.fi
+.SS "constexpr Chassis_ErrorCode apollo::canbus::Chassis::ErrorCode_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_ErrorCode_ErrorCode_MAX
+.fi
+.SS "constexpr Chassis_ErrorCode apollo::canbus::Chassis::ErrorCode_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_ErrorCode_ErrorCode_MIN
+.fi
+.SS "constexpr Chassis_GearPosition apollo::canbus::Chassis::GEAR_DRIVE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_GearPosition_GEAR_DRIVE
+.fi
+.SS "constexpr Chassis_GearPosition apollo::canbus::Chassis::GEAR_INVALID\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_GearPosition_GEAR_INVALID
+.fi
+.SS "constexpr Chassis_GearPosition apollo::canbus::Chassis::GEAR_LOW\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_GearPosition_GEAR_LOW
+.fi
+.SS "constexpr Chassis_GearPosition apollo::canbus::Chassis::GEAR_NEUTRAL\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_GearPosition_GEAR_NEUTRAL
+.fi
+.SS "constexpr Chassis_GearPosition apollo::canbus::Chassis::GEAR_NONE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_GearPosition_GEAR_NONE
+.fi
+.SS "constexpr Chassis_GearPosition apollo::canbus::Chassis::GEAR_PARKING\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_GearPosition_GEAR_PARKING
+.fi
+.SS "constexpr Chassis_GearPosition apollo::canbus::Chassis::GEAR_REVERSE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_GearPosition_GEAR_REVERSE
+.fi
+.SS "constexpr int apollo::canbus::Chassis::GearPosition_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_GearPosition_GearPosition_ARRAYSIZE
+.fi
+.SS "constexpr Chassis_GearPosition apollo::canbus::Chassis::GearPosition_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_GearPosition_GearPosition_MAX
+.fi
+.SS "constexpr Chassis_GearPosition apollo::canbus::Chassis::GearPosition_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_GearPosition_GearPosition_MIN
+.fi
+.SS "constexpr int apollo::canbus::Chassis::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    0
+.fi
+.SS "constexpr Chassis_ErrorCode apollo::canbus::Chassis::MANUAL_INTERVENTION\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_ErrorCode_MANUAL_INTERVENTION
+.fi
+.SS "constexpr Chassis_ErrorCode apollo::canbus::Chassis::NO_ERROR\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_ErrorCode_NO_ERROR
+.fi
+.SS "constexpr Chassis_ErrorCode apollo::canbus::Chassis::UNKNOWN_ERROR\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Chassis_ErrorCode_UNKNOWN_ERROR
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

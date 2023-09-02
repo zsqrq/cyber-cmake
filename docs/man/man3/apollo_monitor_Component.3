@@ -1,0 +1,300 @@
+.TH "apollo::monitor::Component" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::monitor::Component
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkSummaryFieldNumber\fP = 1, \fBkProcessStatusFieldNumber\fP = 2, \fBkChannelStatusFieldNumber\fP = 3, \fBkResourceStatusFieldNumber\fP = 4, \fBkOtherStatusFieldNumber\fP = 5, \fBkModuleStatusFieldNumber\fP = 6 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBComponent\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBComponent\fP (const \fBComponent\fP &from)"
+.br
+.ti -1c
+.RI "\fBComponent\fP (\fBComponent\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBComponent\fP & \fBoperator=\fP (const \fBComponent\fP &from)"
+.br
+.ti -1c
+.RI "\fBComponent\fP & \fBoperator=\fP (\fBComponent\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBComponent\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBComponent\fP *other)"
+.br
+.ti -1c
+.RI "\fBComponent\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBComponent\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBComponent\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_summary\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_summary\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::monitor::ComponentStatus\fP & \fBsummary\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::monitor::ComponentStatus\fP * \fBrelease_summary\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::monitor::ComponentStatus\fP * \fBmutable_summary\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_summary\fP (::\fBapollo::monitor::ComponentStatus\fP *summary)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_summary\fP (::\fBapollo::monitor::ComponentStatus\fP *summary)"
+.br
+.ti -1c
+.RI "::\fBapollo::monitor::ComponentStatus\fP * \fBunsafe_arena_release_summary\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_process_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_process_status\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::monitor::ComponentStatus\fP & \fBprocess_status\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::monitor::ComponentStatus\fP * \fBrelease_process_status\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::monitor::ComponentStatus\fP * \fBmutable_process_status\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_process_status\fP (::\fBapollo::monitor::ComponentStatus\fP *process_status)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_process_status\fP (::\fBapollo::monitor::ComponentStatus\fP *process_status)"
+.br
+.ti -1c
+.RI "::\fBapollo::monitor::ComponentStatus\fP * \fBunsafe_arena_release_process_status\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_channel_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_channel_status\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::monitor::ComponentStatus\fP & \fBchannel_status\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::monitor::ComponentStatus\fP * \fBrelease_channel_status\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::monitor::ComponentStatus\fP * \fBmutable_channel_status\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_channel_status\fP (::\fBapollo::monitor::ComponentStatus\fP *channel_status)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_channel_status\fP (::\fBapollo::monitor::ComponentStatus\fP *channel_status)"
+.br
+.ti -1c
+.RI "::\fBapollo::monitor::ComponentStatus\fP * \fBunsafe_arena_release_channel_status\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_resource_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_resource_status\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::monitor::ComponentStatus\fP & \fBresource_status\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::monitor::ComponentStatus\fP * \fBrelease_resource_status\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::monitor::ComponentStatus\fP * \fBmutable_resource_status\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_resource_status\fP (::\fBapollo::monitor::ComponentStatus\fP *resource_status)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_resource_status\fP (::\fBapollo::monitor::ComponentStatus\fP *resource_status)"
+.br
+.ti -1c
+.RI "::\fBapollo::monitor::ComponentStatus\fP * \fBunsafe_arena_release_resource_status\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_other_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_other_status\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::monitor::ComponentStatus\fP & \fBother_status\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::monitor::ComponentStatus\fP * \fBrelease_other_status\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::monitor::ComponentStatus\fP * \fBmutable_other_status\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_other_status\fP (::\fBapollo::monitor::ComponentStatus\fP *other_status)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_other_status\fP (::\fBapollo::monitor::ComponentStatus\fP *other_status)"
+.br
+.ti -1c
+.RI "::\fBapollo::monitor::ComponentStatus\fP * \fBunsafe_arena_release_other_status\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_module_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_module_status\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::monitor::ComponentStatus\fP & \fBmodule_status\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::monitor::ComponentStatus\fP * \fBrelease_module_status\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::monitor::ComponentStatus\fP * \fBmutable_module_status\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_module_status\fP (::\fBapollo::monitor::ComponentStatus\fP *module_status)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_module_status\fP (::\fBapollo::monitor::ComponentStatus\fP *module_status)"
+.br
+.ti -1c
+.RI "::\fBapollo::monitor::ComponentStatus\fP * \fBunsafe_arena_release_module_status\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBComponent\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBComponent\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBComponent\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fmonitor_5fmsgs_2fsystem_5fstatus_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBComponent\fP &a, \fBComponent\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::monitor::Component::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Component::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::monitor::Component::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    1
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

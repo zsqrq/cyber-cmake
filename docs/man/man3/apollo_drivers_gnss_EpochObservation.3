@@ -1,0 +1,292 @@
+.TH "apollo::drivers::gnss::EpochObservation" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::drivers::gnss::EpochObservation
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkSatObsFieldNumber\fP = 10, \fBkReceiverIdFieldNumber\fP = 1, \fBkGnssWeekFieldNumber\fP = 3, \fBkGnssSecondSFieldNumber\fP = 4, \fBkPositionXFieldNumber\fP = 5, \fBkPositionYFieldNumber\fP = 6, \fBkPositionZFieldNumber\fP = 7, \fBkHealthFlagFieldNumber\fP = 8, \fBkSatObsNumFieldNumber\fP = 9, \fBkGnssTimeTypeFieldNumber\fP = 2 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBEpochObservation\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBEpochObservation\fP (const \fBEpochObservation\fP &from)"
+.br
+.ti -1c
+.RI "\fBEpochObservation\fP (\fBEpochObservation\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBEpochObservation\fP & \fBoperator=\fP (const \fBEpochObservation\fP &from)"
+.br
+.ti -1c
+.RI "\fBEpochObservation\fP & \fBoperator=\fP (\fBEpochObservation\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBEpochObservation\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBEpochObservation\fP *other)"
+.br
+.ti -1c
+.RI "\fBEpochObservation\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBEpochObservation\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBEpochObservation\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBsat_obs_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_sat_obs\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::drivers::gnss::SatelliteObservation\fP * \fBmutable_sat_obs\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::drivers::gnss::SatelliteObservation\fP > * \fBmutable_sat_obs\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::drivers::gnss::SatelliteObservation\fP & \fBsat_obs\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::drivers::gnss::SatelliteObservation\fP * \fBadd_sat_obs\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::drivers::gnss::SatelliteObservation\fP > & \fBsat_obs\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhas_receiver_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_receiver_id\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBreceiver_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_receiver_id\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_gnss_week\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_gnss_week\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgnss_week\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_gnss_week\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_gnss_second_s\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_gnss_second_s\fP ()"
+.br
+.ti -1c
+.RI "double \fBgnss_second_s\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_gnss_second_s\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_position_x\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_position_x\fP ()"
+.br
+.ti -1c
+.RI "double \fBposition_x\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_position_x\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_position_y\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_position_y\fP ()"
+.br
+.ti -1c
+.RI "double \fBposition_y\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_position_y\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_position_z\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_position_z\fP ()"
+.br
+.ti -1c
+.RI "double \fBposition_z\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_position_z\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_health_flag\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_health_flag\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBhealth_flag\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_health_flag\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_sat_obs_num\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_sat_obs_num\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBsat_obs_num\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_sat_obs_num\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_gnss_time_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_gnss_time_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::gnss::GnssTimeType \fBgnss_time_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_gnss_time_type\fP (::apollo::drivers::gnss::GnssTimeType value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBEpochObservation\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBEpochObservation\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEpochObservation\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fsensor_5fmsgs_2fgnss_5fraw_5fobservation_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBEpochObservation\fP &a, \fBEpochObservation\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::drivers::gnss::EpochObservation::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    EpochObservation::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::drivers::gnss::EpochObservation::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    2
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

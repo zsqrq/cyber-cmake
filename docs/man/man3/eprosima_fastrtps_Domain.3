@@ -1,0 +1,277 @@
+.TH "eprosima::fastrtps::Domain" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::Domain
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Domain\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static RTPS_DllAPI \fBParticipant\fP * \fBcreateParticipant\fP (const std::string &participant_profile, \fBParticipantListener\fP *listen=nullptr)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI \fBParticipant\fP * \fBcreateParticipant\fP (\fBParticipantAttributes\fP &att, \fBParticipantListener\fP *listen=nullptr)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI \fBPublisher\fP * \fBcreatePublisher\fP (\fBParticipant\fP *part, const std::string &publisher_profile, \fBPublisherListener\fP *listen=nullptr)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI \fBPublisher\fP * \fBcreatePublisher\fP (\fBParticipant\fP *part, \fBPublisherAttributes\fP &att, \fBPublisherListener\fP *listen=nullptr)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI \fBSubscriber\fP * \fBcreateSubscriber\fP (\fBParticipant\fP *part, const std::string &subscriber_profile, \fBSubscriberListener\fP *listen=nullptr)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI \fBSubscriber\fP * \fBcreateSubscriber\fP (\fBParticipant\fP *part, \fBSubscriberAttributes\fP &att, \fBSubscriberListener\fP *listen=nullptr)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBremoveParticipant\fP (\fBParticipant\fP *part)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBremovePublisher\fP (\fBPublisher\fP *pub)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBremoveSubscriber\fP (\fBSubscriber\fP *sub)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBgetRegisteredType\fP (\fBParticipant\fP *part, const char *typeName, \fBTopicDataType\fP **type)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBregisterType\fP (\fBParticipant\fP *part, \fBTopicDataType\fP *type)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBunregisterType\fP (\fBParticipant\fP *part, const char *typeName)"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI void \fBstopAll\fP ()"
+.br
+.ti -1c
+.RI "static RTPS_DllAPI bool \fBloadXMLProfilesFile\fP (const std::string &xml_profile_file)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBDomain\fP, use to interact with the \fBPublisher\fP \fBSubscriber\fP API of the Fast RTPS implementation\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "static RTPS_DllAPI \fBParticipant\fP* eprosima::fastrtps::Domain::createParticipant (const std::string & participant_profile, \fBParticipantListener\fP * listen = \fCnullptr\fP)\fC [static]\fP"
+Create a \fBParticipant\fP from a profile name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparticipant_profile\fP \fBParticipant\fP profile name\&. 
+.br
+\fIlisten\fP \fBParticipantListener\fP Pointer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBParticipant\fP pointer\&. (nullptr if not created\&.) 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI \fBParticipant\fP* eprosima::fastrtps::Domain::createParticipant (\fBParticipantAttributes\fP & att, \fBParticipantListener\fP * listen = \fCnullptr\fP)\fC [static]\fP"
+Create a \fBParticipant\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIatt\fP \fBParticipant\fP Attributes\&. 
+.br
+\fIlisten\fP \fBParticipantListener\fP Pointer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBParticipant\fP pointer\&. (nullptr if not created\&.) 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI \fBPublisher\fP* eprosima::fastrtps::Domain::createPublisher (\fBParticipant\fP * part, const std::string & publisher_profile, \fBPublisherListener\fP * listen = \fCnullptr\fP)\fC [static]\fP"
+Create a \fBPublisher\fP in a \fBParticipant\fP from a profile name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart\fP Pointer to the participant where you want to create the \fBPublisher\fP\&. 
+.br
+\fIpublisher_profile\fP \fBPublisher\fP profile name\&. 
+.br
+\fIlisten\fP Pointer to the \fBPublisherListener\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the created \fBPublisher\fP (nullptr if not created)\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI \fBPublisher\fP* eprosima::fastrtps::Domain::createPublisher (\fBParticipant\fP * part, \fBPublisherAttributes\fP & att, \fBPublisherListener\fP * listen = \fCnullptr\fP)\fC [static]\fP"
+Create a \fBPublisher\fP in a \fBParticipant\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart\fP Pointer to the participant where you want to create the \fBPublisher\fP\&. 
+.br
+\fIatt\fP \fBPublisherAttributes\fP\&. 
+.br
+\fIlisten\fP Pointer to the \fBPublisherListener\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the created \fBPublisher\fP (nullptr if not created)\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI \fBSubscriber\fP* eprosima::fastrtps::Domain::createSubscriber (\fBParticipant\fP * part, const std::string & subscriber_profile, \fBSubscriberListener\fP * listen = \fCnullptr\fP)\fC [static]\fP"
+Create a \fBSubscriber\fP in a \fBParticipant\fP from a profile name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart\fP Pointer to the participant where you want to create the \fBPublisher\fP\&. 
+.br
+\fIsubscriber_profile\fP \fBSubscriber\fP profile name\&. 
+.br
+\fIlisten\fP Pointer to the \fBSubscriberListener\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the created \fBSubscriber\fP (nullptr if not created)\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI \fBSubscriber\fP* eprosima::fastrtps::Domain::createSubscriber (\fBParticipant\fP * part, \fBSubscriberAttributes\fP & att, \fBSubscriberListener\fP * listen = \fCnullptr\fP)\fC [static]\fP"
+Create a \fBSubscriber\fP in a \fBParticipant\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart\fP Pointer to the participant where you want to create the \fBPublisher\fP\&. 
+.br
+\fIatt\fP \fBSubscriberAttributes\fP\&. 
+.br
+\fIlisten\fP Pointer to the \fBSubscriberListener\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the created \fBSubscriber\fP (nullptr if not created)\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::Domain::getRegisteredType (\fBParticipant\fP * part, const char * typeName, \fBTopicDataType\fP ** type)\fC [static]\fP"
+Return a registered type\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart\fP Pointer to the \fBParticipant\fP\&. 
+.br
+\fItypeName\fP Name of the type\&. 
+.br
+\fItype\fP Returned type\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if type was found\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::Domain::loadXMLProfilesFile (const std::string & xml_profile_file)\fC [static]\fP"
+Load profiles from XML file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_profile_file\fP XML profile file\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly loaded\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::Domain::registerType (\fBParticipant\fP * part, \fBTopicDataType\fP * type)\fC [static]\fP"
+Register a type in a participant\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart\fP Pointer to the \fBParticipant\fP\&. 
+.br
+\fItype\fP Pointer to the Type\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly registered\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::Domain::removeParticipant (\fBParticipant\fP * part)\fC [static]\fP"
+Remove a \fBParticipant\fP and all associated publishers and subscribers\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart\fP Pointer to the participant\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly removed\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::Domain::removePublisher (\fBPublisher\fP * pub)\fC [static]\fP"
+Remove a \fBPublisher\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpub\fP Pointer to the \fBPublisher\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly removed\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::Domain::removeSubscriber (\fBSubscriber\fP * sub)\fC [static]\fP"
+Remove a \fBSubscriber\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsub\fP Pointer to the \fBSubscriber\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly removed\&. 
+.RE
+.PP
+
+.SS "static RTPS_DllAPI void eprosima::fastrtps::Domain::stopAll ()\fC [static]\fP"
+Stop and remove all participants, publishers and subscribers in this \fBDomain\fP\&. 
+.SS "static RTPS_DllAPI bool eprosima::fastrtps::Domain::unregisterType (\fBParticipant\fP * part, const char * typeName)\fC [static]\fP"
+Unregister a type in a participant\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart\fP Pointer to the \fBParticipant\fP\&. 
+.br
+\fItypeName\fP Name of the type\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly unregistered\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

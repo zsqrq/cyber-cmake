@@ -1,0 +1,22 @@
+.TH "testing::internal::IsRecursiveContainerImpl< C, true >" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::internal::IsRecursiveContainerImpl< C, true >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBvalue_type\fP = decltype(*std::declval< typename C::const_iterator >())"
+.br
+.ti -1c
+.RI "using \fBtype\fP = std::is_same< typename std::remove_const< typename std::remove_reference< value_type >::type >::type, C >"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

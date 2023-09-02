@@ -1,0 +1,95 @@
+.TH "eprosima::fastrtps::rtps::Endpoint" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::Endpoint
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Endpoint\&.h>\fP
+.PP
+Inherited by \fBeprosima::fastrtps::rtps::RTPSReader\fP, and \fBeprosima::fastrtps::rtps::RTPSWriter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "RTPS_DllAPI const \fBGUID_t\fP & \fBgetGuid\fP () const"
+.br
+.ti -1c
+.RI "RTPS_DllAPI std::recursive_mutex * \fBgetMutex\fP () const"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBEndpointAttributes\fP * \fBgetAttributes\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEndpoint\fP (RTPSParticipantImpl *pimpl, \fBGUID_t\fP &guid, \fBEndpointAttributes\fP &att)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "RTPSParticipantImpl * \fBmp_RTPSParticipant\fP"
+.br
+.RI "Pointer to the \fBRTPSParticipant\fP containing this endpoint\&. "
+.ti -1c
+.RI "const \fBGUID_t\fP \fBm_guid\fP"
+.br
+.RI "\fBEndpoint\fP GUID\&. "
+.ti -1c
+.RI "\fBEndpointAttributes\fP \fBm_att\fP"
+.br
+.RI "\fBEndpoint\fP Attributes\&. "
+.ti -1c
+.RI "std::recursive_mutex * \fBmp_mutex\fP"
+.br
+.RI "\fBEndpoint\fP Mutex\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBRTPSParticipantImpl\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBEndpoint\fP, all entities of the RTPS network derive from this class\&. Although the \fBRTPSParticipant\fP is also defined as an endpoint in the RTPS specification, in this implementation the \fBRTPSParticipant\fP class \fBdoes not\fP inherit from the endpoint class\&. Each \fBEndpoint\fP object owns a pointer to the \fBRTPSParticipant\fP it belongs to\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "RTPS_DllAPI \fBEndpointAttributes\fP* eprosima::fastrtps::rtps::Endpoint::getAttributes ()\fC [inline]\fP"
+Get associated attributes 
+.PP
+\fBReturns\fP
+.RS 4
+\fBEndpoint\fP attributes 
+.RE
+.PP
+
+.SS "RTPS_DllAPI const \fBGUID_t\fP& eprosima::fastrtps::rtps::Endpoint::getGuid () const\fC [inline]\fP"
+Get associated GUID 
+.PP
+\fBReturns\fP
+.RS 4
+Associated GUID 
+.RE
+.PP
+
+.SS "RTPS_DllAPI std::recursive_mutex* eprosima::fastrtps::rtps::Endpoint::getMutex () const\fC [inline]\fP"
+Get mutex 
+.PP
+\fBReturns\fP
+.RS 4
+Associated Mutex 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

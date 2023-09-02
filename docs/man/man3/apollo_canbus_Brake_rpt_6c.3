@@ -1,0 +1,276 @@
+.TH "apollo::canbus::Brake_rpt_6c" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::canbus::Brake_rpt_6c
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkManualInputFieldNumber\fP = 1, \fBkCommandedValueFieldNumber\fP = 2, \fBkOutputValueFieldNumber\fP = 3, \fBkBrakeOnOffFieldNumber\fP = 4 }"
+.br
+.ti -1c
+.RI "typedef Brake_rpt_6c_Brake_on_offType \fBBrake_on_offType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBBrake_rpt_6c\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBBrake_rpt_6c\fP (const \fBBrake_rpt_6c\fP &from)"
+.br
+.ti -1c
+.RI "\fBBrake_rpt_6c\fP (\fBBrake_rpt_6c\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBBrake_rpt_6c\fP & \fBoperator=\fP (const \fBBrake_rpt_6c\fP &from)"
+.br
+.ti -1c
+.RI "\fBBrake_rpt_6c\fP & \fBoperator=\fP (\fBBrake_rpt_6c\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBBrake_rpt_6c\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBBrake_rpt_6c\fP *other)"
+.br
+.ti -1c
+.RI "\fBBrake_rpt_6c\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBBrake_rpt_6c\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBBrake_rpt_6c\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_manual_input\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_manual_input\fP ()"
+.br
+.ti -1c
+.RI "double \fBmanual_input\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_manual_input\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_commanded_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_commanded_value\fP ()"
+.br
+.ti -1c
+.RI "double \fBcommanded_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_commanded_value\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_output_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_output_value\fP ()"
+.br
+.ti -1c
+.RI "double \fBoutput_value\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_output_value\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_brake_on_off\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brake_on_off\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Brake_rpt_6c_Brake_on_offType \fBbrake_on_off\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brake_on_off\fP (::apollo::canbus::Brake_rpt_6c_Brake_on_offType value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBBrake_rpt_6c\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBBrake_rpt_6c\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBBrake_on_offType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBBrake_on_offType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBBrake_on_offType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBBrake_on_offType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Brake_on_offType *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr Brake_on_offType \fBBRAKE_ON_OFF_OFF\fP"
+.br
+.ti -1c
+.RI "static constexpr Brake_on_offType \fBBRAKE_ON_OFF_ON\fP"
+.br
+.ti -1c
+.RI "static constexpr Brake_on_offType \fBBrake_on_offType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Brake_on_offType \fBBrake_on_offType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBBrake_on_offType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBrake_rpt_6c\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fchassis_5fmsgs_2fchassis_5fdetail_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBBrake_rpt_6c\fP &a, \fBBrake_rpt_6c\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::canbus::Brake_rpt_6c::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Brake_rpt_6c::MergeImpl
+}
+.fi
+.SS "constexpr Brake_rpt_6c_Brake_on_offType apollo::canbus::Brake_rpt_6c::BRAKE_ON_OFF_OFF\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_rpt_6c_Brake_on_offType_BRAKE_ON_OFF_OFF
+.fi
+.SS "constexpr Brake_rpt_6c_Brake_on_offType apollo::canbus::Brake_rpt_6c::BRAKE_ON_OFF_ON\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_rpt_6c_Brake_on_offType_BRAKE_ON_OFF_ON
+.fi
+.SS "constexpr int apollo::canbus::Brake_rpt_6c::Brake_on_offType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_rpt_6c_Brake_on_offType_Brake_on_offType_ARRAYSIZE
+.fi
+.SS "constexpr Brake_rpt_6c_Brake_on_offType apollo::canbus::Brake_rpt_6c::Brake_on_offType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_rpt_6c_Brake_on_offType_Brake_on_offType_MAX
+.fi
+.SS "constexpr Brake_rpt_6c_Brake_on_offType apollo::canbus::Brake_rpt_6c::Brake_on_offType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Brake_rpt_6c_Brake_on_offType_Brake_on_offType_MIN
+.fi
+.SS "constexpr int apollo::canbus::Brake_rpt_6c::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    17
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

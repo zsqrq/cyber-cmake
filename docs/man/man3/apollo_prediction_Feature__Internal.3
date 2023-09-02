@@ -1,0 +1,155 @@
+.TH "apollo::prediction::Feature::_Internal" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::prediction::Feature::_Internal
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBHasBits\fP = decltype(std::declval< \fBFeature\fP >()\&._has_bits_)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBset_has_id\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static const ::\fBapollo::common::Point3D\fP & \fBposition\fP (const \fBFeature\fP *msg)"
+.br
+.ti -1c
+.RI "static void \fBset_has_position\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static const ::\fBapollo::common::Point3D\fP & \fBfront_position\fP (const \fBFeature\fP *msg)"
+.br
+.ti -1c
+.RI "static void \fBset_has_front_position\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static const ::\fBapollo::common::Point3D\fP & \fBvelocity\fP (const \fBFeature\fP *msg)"
+.br
+.ti -1c
+.RI "static void \fBset_has_velocity\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static const ::\fBapollo::common::Point3D\fP & \fBraw_velocity\fP (const \fBFeature\fP *msg)"
+.br
+.ti -1c
+.RI "static void \fBset_has_raw_velocity\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static const ::\fBapollo::common::Point3D\fP & \fBacceleration\fP (const \fBFeature\fP *msg)"
+.br
+.ti -1c
+.RI "static void \fBset_has_acceleration\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_velocity_heading\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_speed\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_acc\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_theta\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_length\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_width\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_height\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_tracking_time\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_timestamp\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static const ::\fBapollo::prediction::Lane\fP & \fBlane\fP (const \fBFeature\fP *msg)"
+.br
+.ti -1c
+.RI "static void \fBset_has_lane\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static const ::\fBapollo::prediction::JunctionFeature\fP & \fBjunction_feature\fP (const \fBFeature\fP *msg)"
+.br
+.ti -1c
+.RI "static void \fBset_has_junction_feature\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static const ::\fBapollo::common::Point3D\fP & \fBt_position\fP (const \fBFeature\fP *msg)"
+.br
+.ti -1c
+.RI "static void \fBset_has_t_position\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static const ::\fBapollo::common::Point3D\fP & \fBt_velocity\fP (const \fBFeature\fP *msg)"
+.br
+.ti -1c
+.RI "static void \fBset_has_t_velocity\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_t_velocity_heading\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_t_speed\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static const ::\fBapollo::common::Point3D\fP & \fBt_acceleration\fP (const \fBFeature\fP *msg)"
+.br
+.ti -1c
+.RI "static void \fBset_has_t_acceleration\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_t_acc\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_is_still\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_type\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_label_update_time_delta\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static const ::\fBapollo::prediction::ObstaclePriority\fP & \fBpriority\fP (const \fBFeature\fP *msg)"
+.br
+.ti -1c
+.RI "static void \fBset_has_priority\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static const ::\fBapollo::prediction::ObstacleInteractiveTag\fP & \fBinteractive_tag\fP (const \fBFeature\fP *msg)"
+.br
+.ti -1c
+.RI "static void \fBset_has_interactive_tag\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_is_near_junction\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static void \fBset_has_adc_timestamp\fP (HasBits *has_bits)"
+.br
+.ti -1c
+.RI "static const ::\fBapollo::perception::PerceptionObstacle\fP & \fBadc_localization\fP (const \fBFeature\fP *msg)"
+.br
+.ti -1c
+.RI "static void \fBset_has_adc_localization\fP (HasBits *has_bits)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

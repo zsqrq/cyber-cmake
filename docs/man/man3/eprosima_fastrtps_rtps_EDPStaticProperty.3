@@ -1,0 +1,91 @@
+.TH "eprosima::fastrtps::rtps::EDPStaticProperty" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::EDPStaticProperty
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <EDPStatic\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBfromProperty\fP (std::pair< std::string, std::string > in_property)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::pair< std::string, std::string > \fBtoProperty\fP (std::string type, std::string status, uint16_t id, const \fBEntityId_t\fP &ent)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBm_endpointType\fP"
+.br
+.RI "\fBEndpoint\fP type\&. "
+.ti -1c
+.RI "std::string \fBm_status\fP"
+.br
+.RI "Status\&. "
+.ti -1c
+.RI "std::string \fBm_userIdStr\fP"
+.br
+.RI "User ID as string\&. "
+.ti -1c
+.RI "uint16_t \fBm_userId\fP"
+.br
+.RI "User ID\&. "
+.ti -1c
+.RI "\fBEntityId_t\fP \fBm_entityId\fP"
+.br
+.RI "Entity ID\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBEDPStaticProperty\fP, used to read and write the strings from the properties used to transmit the \fBEntityId_t\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool eprosima::fastrtps::rtps::EDPStaticProperty::fromProperty (std::pair< std::string, std::string > in_property)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIin_property\fP Input property- 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly read 
+.RE
+.PP
+
+.SS "static std::pair<std::string,std::string> eprosima::fastrtps::rtps::EDPStaticProperty::toProperty (std::string type, std::string status, uint16_t id, const \fBEntityId_t\fP & ent)\fC [static]\fP"
+Convert information to a property 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP Type of endpoint 
+.br
+\fIstatus\fP Status of the endpoint 
+.br
+\fIid\fP User Id 
+.br
+\fIent\fP EntityId 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pair of two strings\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

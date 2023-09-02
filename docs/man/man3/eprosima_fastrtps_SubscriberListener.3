@@ -1,0 +1,61 @@
+.TH "eprosima::fastrtps::SubscriberListener" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::SubscriberListener
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SubscriberListener\&.h>\fP
+.PP
+Inherited by \fBEprosimaServer::OperationListener\fP, \fBHelloWorldSubscriber::SubListener\fP, \fBHelloWorldSubscriber::SubListener\fP, \fBHelloWorldSubscriber::SubListener\fP, \fBapollo::cyber::service_discovery::SubscriberListener\fP, and \fBapollo::cyber::transport::SubListener\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBonNewDataMessage\fP (\fBSubscriber\fP *sub)"
+.br
+.ti -1c
+.RI "virtual void \fBonSubscriptionMatched\fP (\fBSubscriber\fP *sub, \fBMatchingInfo\fP &info)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBSubscriberListener\fP, it should be used by the end user to implement specific callbacks to certain actions\&.
+.PP
+.PP
+.nf
+.fi
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void eprosima::fastrtps::SubscriberListener::onNewDataMessage (\fBSubscriber\fP * sub)\fC [inline]\fP, \fC [virtual]\fP"
+Virtual function to be implemented by the user containing the actions to be performed when a new Data Message is received\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsub\fP \fBSubscriber\fP 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBHelloWorldSubscriber::SubListener\fP, \fBHelloWorldSubscriber::SubListener\fP, \fBHelloWorldSubscriber::SubListener\fP, \fBEprosimaServer::OperationListener\fP, \fBapollo::cyber::transport::SubListener\fP, and \fBapollo::cyber::service_discovery::SubscriberListener\fP\&.
+.SS "virtual void eprosima::fastrtps::SubscriberListener::onSubscriptionMatched (\fBSubscriber\fP * sub, \fBMatchingInfo\fP & info)\fC [inline]\fP, \fC [virtual]\fP"
+Virtual method to be called when the subscriber is matched with a new Writer (or unmatched); i\&.e\&., when a writer publishing in the same topic is discovered\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsub\fP \fBSubscriber\fP 
+.br
+\fIinfo\fP Matching information 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBHelloWorldSubscriber::SubListener\fP, \fBHelloWorldSubscriber::SubListener\fP, \fBHelloWorldSubscriber::SubListener\fP, \fBEprosimaServer::OperationListener\fP, \fBapollo::cyber::transport::SubListener\fP, and \fBapollo::cyber::service_discovery::SubscriberListener\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

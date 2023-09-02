@@ -1,4 +1,4 @@
-.TH "apollo::cyber::transport::QosProfileConf" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::transport::QosProfileConf" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,7 +10,7 @@ apollo::cyber::transport::QosProfileConf
 
 .in +1c
 .ti -1c
-.RI "static QosProfile \fBCreateQosProfile\fP (const QosHistoryPolicy &history, uint32_t depth, uint32_t mps, const QosReliabilityPolicy &reliability, const QosDurabilityPolicy &durability)"
+.RI "static \fBQosProfile\fP \fBCreateQosProfile\fP (const QosHistoryPolicy &history, uint32_t depth, uint32_t mps, const QosReliabilityPolicy &reliability, const QosDurabilityPolicy &durability)"
 .br
 .in -1c
 .SS "Static Public Attributes"
@@ -23,33 +23,33 @@ apollo::cyber::transport::QosProfileConf
 .RI "static const uint32_t \fBQOS_MPS_SYSTEM_DEFAULT\fP = 0"
 .br
 .ti -1c
-.RI "static const QosProfile \fBQOS_PROFILE_DEFAULT\fP"
+.RI "static const \fBQosProfile\fP \fBQOS_PROFILE_DEFAULT\fP"
 .br
 .ti -1c
-.RI "static const QosProfile \fBQOS_PROFILE_SENSOR_DATA\fP"
+.RI "static const \fBQosProfile\fP \fBQOS_PROFILE_SENSOR_DATA\fP"
 .br
 .ti -1c
-.RI "static const QosProfile \fBQOS_PROFILE_PARAMETERS\fP"
+.RI "static const \fBQosProfile\fP \fBQOS_PROFILE_PARAMETERS\fP"
 .br
 .ti -1c
-.RI "static const QosProfile \fBQOS_PROFILE_SERVICES_DEFAULT\fP"
+.RI "static const \fBQosProfile\fP \fBQOS_PROFILE_SERVICES_DEFAULT\fP"
 .br
 .ti -1c
-.RI "static const QosProfile \fBQOS_PROFILE_PARAM_EVENT\fP"
+.RI "static const \fBQosProfile\fP \fBQOS_PROFILE_PARAM_EVENT\fP"
 .br
 .ti -1c
-.RI "static const QosProfile \fBQOS_PROFILE_SYSTEM_DEFAULT\fP"
+.RI "static const \fBQosProfile\fP \fBQOS_PROFILE_SYSTEM_DEFAULT\fP"
 .br
 .ti -1c
-.RI "static const QosProfile \fBQOS_PROFILE_TF_STATIC\fP"
+.RI "static const \fBQosProfile\fP \fBQOS_PROFILE_TF_STATIC\fP"
 .br
 .ti -1c
-.RI "static const QosProfile \fBQOS_PROFILE_TOPO_CHANGE\fP"
+.RI "static const \fBQosProfile\fP \fBQOS_PROFILE_TOPO_CHANGE\fP"
 .br
 .in -1c
 .SH "Member Data Documentation"
 .PP 
-.SS "const QosProfile apollo::cyber::transport::QosProfileConf::QOS_PROFILE_DEFAULT\fC [static]\fP"
+.SS "const \fBQosProfile\fP apollo::cyber::transport::QosProfileConf::QOS_PROFILE_DEFAULT\fC [static]\fP"
 \fBInitial value:\fP
 .PP
 .nf
@@ -58,7 +58,7 @@ apollo::cyber::transport::QosProfileConf
     QosReliabilityPolicy::RELIABILITY_RELIABLE,
     QosDurabilityPolicy::DURABILITY_VOLATILE)
 .fi
-.SS "const QosProfile apollo::cyber::transport::QosProfileConf::QOS_PROFILE_PARAM_EVENT\fC [static]\fP"
+.SS "const \fBQosProfile\fP apollo::cyber::transport::QosProfileConf::QOS_PROFILE_PARAM_EVENT\fC [static]\fP"
 \fBInitial value:\fP
 .PP
 .nf
@@ -67,7 +67,7 @@ apollo::cyber::transport::QosProfileConf
     QosReliabilityPolicy::RELIABILITY_RELIABLE,
     QosDurabilityPolicy::DURABILITY_VOLATILE)
 .fi
-.SS "const QosProfile apollo::cyber::transport::QosProfileConf::QOS_PROFILE_PARAMETERS\fC [static]\fP"
+.SS "const \fBQosProfile\fP apollo::cyber::transport::QosProfileConf::QOS_PROFILE_PARAMETERS\fC [static]\fP"
 \fBInitial value:\fP
 .PP
 .nf
@@ -76,7 +76,7 @@ apollo::cyber::transport::QosProfileConf
     QosReliabilityPolicy::RELIABILITY_RELIABLE,
     QosDurabilityPolicy::DURABILITY_VOLATILE)
 .fi
-.SS "const QosProfile apollo::cyber::transport::QosProfileConf::QOS_PROFILE_SENSOR_DATA\fC [static]\fP"
+.SS "const \fBQosProfile\fP apollo::cyber::transport::QosProfileConf::QOS_PROFILE_SENSOR_DATA\fC [static]\fP"
 \fBInitial value:\fP
 .PP
 .nf
@@ -85,7 +85,7 @@ apollo::cyber::transport::QosProfileConf
     QosReliabilityPolicy::RELIABILITY_BEST_EFFORT,
     QosDurabilityPolicy::DURABILITY_VOLATILE)
 .fi
-.SS "const QosProfile apollo::cyber::transport::QosProfileConf::QOS_PROFILE_SERVICES_DEFAULT\fC [static]\fP"
+.SS "const \fBQosProfile\fP apollo::cyber::transport::QosProfileConf::QOS_PROFILE_SERVICES_DEFAULT\fC [static]\fP"
 \fBInitial value:\fP
 .PP
 .nf
@@ -95,7 +95,7 @@ apollo::cyber::transport::QosProfileConf
                      QosReliabilityPolicy::RELIABILITY_RELIABLE,
                      QosDurabilityPolicy::DURABILITY_TRANSIENT_LOCAL)
 .fi
-.SS "const QosProfile apollo::cyber::transport::QosProfileConf::QOS_PROFILE_SYSTEM_DEFAULT\fC [static]\fP"
+.SS "const \fBQosProfile\fP apollo::cyber::transport::QosProfileConf::QOS_PROFILE_SYSTEM_DEFAULT\fC [static]\fP"
 \fBInitial value:\fP
 .PP
 .nf
@@ -104,7 +104,7 @@ apollo::cyber::transport::QosProfileConf
     QOS_MPS_SYSTEM_DEFAULT, QosReliabilityPolicy::RELIABILITY_RELIABLE,
     QosDurabilityPolicy::DURABILITY_TRANSIENT_LOCAL)
 .fi
-.SS "const QosProfile apollo::cyber::transport::QosProfileConf::QOS_PROFILE_TF_STATIC\fC [static]\fP"
+.SS "const \fBQosProfile\fP apollo::cyber::transport::QosProfileConf::QOS_PROFILE_TF_STATIC\fC [static]\fP"
 \fBInitial value:\fP
 .PP
 .nf
@@ -113,7 +113,7 @@ apollo::cyber::transport::QosProfileConf
     QosReliabilityPolicy::RELIABILITY_RELIABLE,
     QosDurabilityPolicy::DURABILITY_TRANSIENT_LOCAL)
 .fi
-.SS "const QosProfile apollo::cyber::transport::QosProfileConf::QOS_PROFILE_TOPO_CHANGE\fC [static]\fP"
+.SS "const \fBQosProfile\fP apollo::cyber::transport::QosProfileConf::QOS_PROFILE_TOPO_CHANGE\fC [static]\fP"
 \fBInitial value:\fP
 .PP
 .nf

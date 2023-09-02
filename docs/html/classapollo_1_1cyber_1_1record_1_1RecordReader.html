@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -92,9 +94,11 @@ Collaboration diagram for apollo::cyber::record::RecordReader:</div>
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1record_1_1RecordReader__coll__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1record_1_1RecordReader_coll__map" alt="Collaboration graph"/></div>
 <map name="aapollo_1_1cyber_1_1record_1_1RecordReader_coll__map" id="aapollo_1_1cyber_1_1record_1_1RecordReader_coll__map">
-<area shape="rect" title="The record reader." alt="" coords="5,375,897,569"/>
-<area shape="rect" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html" title="Base class for record reader and writer." alt="" coords="151,145,752,325"/>
-<area shape="rect" title=" " alt="" coords="422,5,481,83"/>
+<area shape="rect" title="The record reader." alt="" coords="5,736,897,931"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html" title="Base class for record reader and writer." alt="" coords="151,521,752,687"/>
+<area shape="rect" title=" " alt="" coords="317,257,375,334"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1proto_1_1Header.html" title=" " alt="" coords="399,132,986,459"/>
+<area shape="rect" title=" " alt="" coords="558,5,827,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -104,7 +108,7 @@ Public Types</h2></td></tr>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>FileReaderPtr</b> = std::unique_ptr&lt; <a class="el" href="classapollo_1_1cyber_1_1record_1_1RecordFileReader.html">RecordFileReader</a> &gt;</td></tr>
 <tr class="separator:a99d60a127dc557823804ea7a38f2b337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eb18b9cfa2630f3e4680e89d4ac50be"><td class="memItemLeft" align="right" valign="top"><a id="a3eb18b9cfa2630f3e4680e89d4ac50be"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ChannelInfoMap</b> = std::unordered_map&lt; std::string, proto::ChannelCache &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ChannelInfoMap</b> = std::unordered_map&lt; std::string, <a class="el" href="classapollo_1_1cyber_1_1proto_1_1ChannelCache.html">proto::ChannelCache</a> &gt;</td></tr>
 <tr class="separator:a3eb18b9cfa2630f3e4680e89d4ac50be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -143,7 +147,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a95c06bb77a60dfc827592777030f84de">~RecordBase</a> ()=default</td></tr>
 <tr class="memdesc:a95c06bb77a60dfc827592777030f84de inherit pub_methods_classapollo_1_1cyber_1_1record_1_1RecordBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:a95c06bb77a60dfc827592777030f84de inherit pub_methods_classapollo_1_1cyber_1_1record_1_1RecordBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d4b41f6e72ccd5b49aa928f2cbdabb7 inherit pub_methods_classapollo_1_1cyber_1_1record_1_1RecordBase"><td class="memItemLeft" align="right" valign="top">const proto::Header &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2d4b41f6e72ccd5b49aa928f2cbdabb7">GetHeader</a> () const</td></tr>
+<tr class="memitem:a2d4b41f6e72ccd5b49aa928f2cbdabb7 inherit pub_methods_classapollo_1_1cyber_1_1record_1_1RecordBase"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2d4b41f6e72ccd5b49aa928f2cbdabb7">GetHeader</a> () const</td></tr>
 <tr class="memdesc:a2d4b41f6e72ccd5b49aa928f2cbdabb7 inherit pub_methods_classapollo_1_1cyber_1_1record_1_1RecordBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get record header.  <a href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2d4b41f6e72ccd5b49aa928f2cbdabb7">More...</a><br /></td></tr>
 <tr class="separator:a2d4b41f6e72ccd5b49aa928f2cbdabb7 inherit pub_methods_classapollo_1_1cyber_1_1record_1_1RecordBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f3cda4d56cb535da7a81ec7d5956078 inherit pub_methods_classapollo_1_1cyber_1_1record_1_1RecordBase"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1record_1_1RecordBase.html#a2f3cda4d56cb535da7a81ec7d5956078">GetFile</a> () const</td></tr>
@@ -157,7 +161,7 @@ Additional Inherited Members</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>file_</b></td></tr>
 <tr class="separator:a3ce26ca2d17eec9a3d4e47749ace66b2 inherit pro_attribs_classapollo_1_1cyber_1_1record_1_1RecordBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4b08d823c058d17eb38abe92d0ac7e7 inherit pro_attribs_classapollo_1_1cyber_1_1record_1_1RecordBase"><td class="memItemLeft" align="right" valign="top"><a id="af4b08d823c058d17eb38abe92d0ac7e7"></a>
-proto::Header&#160;</td><td class="memItemRight" valign="bottom"><b>header_</b></td></tr>
+<a class="el" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a>&#160;</td><td class="memItemRight" valign="bottom"><b>header_</b></td></tr>
 <tr class="separator:af4b08d823c058d17eb38abe92d0ac7e7 inherit pro_attribs_classapollo_1_1cyber_1_1record_1_1RecordBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a122b01307f078dbb0e1baa5d57226c5f inherit pro_attribs_classapollo_1_1cyber_1_1record_1_1RecordBase"><td class="memItemLeft" align="right" valign="top"><a id="a122b01307f078dbb0e1baa5d57226c5f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_opened_</b> = false</td></tr>

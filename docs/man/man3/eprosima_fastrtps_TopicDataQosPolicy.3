@@ -1,0 +1,93 @@
+.TH "eprosima::fastrtps::TopicDataQosPolicy" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::TopicDataQosPolicy
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <QosPolicies\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::Parameter_t\fP, and \fBeprosima::fastrtps::QosPolicy\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBaddToCDRMessage\fP (\fBCDRMessage_t\fP *msg) override"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBpush_back\fP (octet oc)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBsetValue\fP (std::vector< octet > ocv)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI std::vector< octet > \fBgetValue\fP () const"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBParameterList\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Class \fBTopicDataQosPolicy\fP, to indicate the Topic Data\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool eprosima::fastrtps::TopicDataQosPolicy::addToCDRMessage (\fBCDRMessage_t\fP * msg)\fC [override]\fP, \fC [virtual]\fP"
+Appends QoS to the specified CDR message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP Message to append the QoS Policy to\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the modified CDRMessage is valid\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::Parameter_t\fP\&.
+.SS "RTPS_DllAPI void eprosima::fastrtps::TopicDataQosPolicy::clear (void)\fC [inline]\fP"
+Clears all topic data\&. 
+.SS "RTPS_DllAPI std::vector<octet> eprosima::fastrtps::TopicDataQosPolicy::getValue () const\fC [inline]\fP"
+Returns topic data 
+.PP
+\fBReturns\fP
+.RS 4
+Vector of data octets\&. 
+.RE
+.PP
+
+.SS "RTPS_DllAPI void eprosima::fastrtps::TopicDataQosPolicy::push_back (octet oc)\fC [inline]\fP"
+Appends topic data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoc\fP Data octet\&. 
+.RE
+.PP
+
+.SS "RTPS_DllAPI void eprosima::fastrtps::TopicDataQosPolicy::setValue (std::vector< octet > ocv)\fC [inline]\fP"
+Overrides topic data vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIocv\fP Topic data octet vector\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

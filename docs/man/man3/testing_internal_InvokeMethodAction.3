@@ -1,0 +1,29 @@
+.TH "testing::internal::InvokeMethodAction< Class, MethodPtr >" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::internal::InvokeMethodAction< Class, MethodPtr >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename\&.\&.\&. Args> auto \fBoperator()\fP (Args &&\&.\&.\&. args) const \-> decltype((obj_ptr\-> *method_ptr)(std::forward< Args >(args)\&.\&.\&.))"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Class *const \fBobj_ptr\fP"
+.br
+.ti -1c
+.RI "const MethodPtr \fBmethod_ptr\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,58 @@
+.TH "third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/participant/RTPSParticipantDiscoveryInfo.h" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/participant/RTPSParticipantDiscoveryInfo.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./\&.\&./fastrtps_dll\&.h'\fP
+.br
+\fC#include '\&.\&./common/Types\&.h'\fP
+.br
+\fC#include '\&.\&./common/Guid\&.h'\fP
+.br
+\fC#include <vector>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBeprosima::fastrtps::rtps::RTPSParticipantDiscoveryInfo\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBeprosima\fP"
+.br
+.RI "Maximum payload is maximum of UDP packet size minus 536bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) With those 536 bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) bytes is posible to send RTPS Header plus RTPS Data submessage plus RTPS Heartbeat submessage\&. "
+.ti -1c
+.RI " \fBeprosima::fastrtps\fP"
+.br
+.ti -1c
+.RI " \fBeprosima::fastrtps::rtps\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::vector< std::pair< std::string, std::string > > \fBeprosima::fastrtps::rtps::PropertyList\fP"
+.br
+.ti -1c
+.RI "typedef std::vector< octet > \fBeprosima::fastrtps::rtps::UserData\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBeprosima::fastrtps::rtps::DISCOVERY_STATUS\fP { \fBDISCOVERED_RTPSPARTICIPANT\fP, \fBCHANGED_QOS_RTPSPARTICIPANT\fP, \fBREMOVED_RTPSPARTICIPANT\fP, \fBDROPPED_RTPSPARTICIPANT\fP }"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

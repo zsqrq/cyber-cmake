@@ -1,0 +1,72 @@
+.TH "eprosima::fastrtps::rtps::RemoteParticipantLeaseDuration" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::RemoteParticipantLeaseDuration
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RemoteParticipantLeaseDuration\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::TimedEvent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRemoteParticipantLeaseDuration\fP (\fBPDPSimple\fP *p_SPDP, \fBParticipantProxyData\fP *pdata, double interval)"
+.br
+.ti -1c
+.RI "void \fBevent\fP (\fBEventCode\fP code, const char *msg=nullptr)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPDPSimple\fP * \fBmp_PDP\fP"
+.br
+.RI "Pointer to the \fBPDPSimple\fP object\&. "
+.ti -1c
+.RI "\fBParticipantProxyData\fP * \fBmp_participantProxyData\fP"
+.br
+.RI "Pointer to the RTPSParticipantProxyData object that contains this temporal event\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Class RemoteRTPSParticipantLeaseDuration, \fBTimedEvent\fP designed to remove a remote \fBRTPSParticipant\fP and all its Readers and Writers from the local \fBRTPSParticipant\fP if it fails to announce its liveliness each leaseDuration period\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::RemoteParticipantLeaseDuration::RemoteParticipantLeaseDuration (\fBPDPSimple\fP * p_SPDP, \fBParticipantProxyData\fP * pdata, double interval)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp_SPDP\fP Pointer to the \fBPDPSimple\fP object\&. 
+.br
+\fIpdata\fP Pointer to the \fBParticipantProxyData\fP associated with this \fBTimedEvent\fP\&. 
+.br
+\fIinterval\fP Interval in ms\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void eprosima::fastrtps::rtps::RemoteParticipantLeaseDuration::event (\fBEventCode\fP code, const char * msg = \fCnullptr\fP)\fC [virtual]\fP"
+Temporal event that check if the \fBRTPSParticipant\fP is alive, and removes it if not\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcode\fP Code representing the status of the event 
+.br
+\fImsg\fP Message associated to the event 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::TimedEvent\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

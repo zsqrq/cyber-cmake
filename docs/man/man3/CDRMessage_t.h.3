@@ -1,0 +1,80 @@
+.TH "third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/common/CDRMessage_t.h" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+third_party/fast-rtps-1.5.0-1/include/fastrtps/rtps/common/CDRMessage_t.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Types\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <cstring>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBeprosima::fastrtps::rtps::CDRMessage_t\fP"
+.br
+.RI "Structure \fBCDRMessage_t\fP, contains a serialized message\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBeprosima\fP"
+.br
+.RI "Maximum payload is maximum of UDP packet size minus 536bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) With those 536 bytes (RTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE) bytes is posible to send RTPS Header plus RTPS Data submessage plus RTPS Heartbeat submessage\&. "
+.ti -1c
+.RI " \fBeprosima::fastrtps\fP"
+.br
+.ti -1c
+.RI " \fBeprosima::fastrtps::rtps\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRTPSMESSAGE_DEFAULT_SIZE\fP   10500"
+.br
+.RI "Max size of RTPS message in bytes\&. "
+.ti -1c
+.RI "#define \fBRTPSMESSAGE_COMMON_RTPS_PAYLOAD_SIZE\fP   536"
+.br
+.ti -1c
+.RI "#define \fBRTPSMESSAGE_COMMON_DATA_PAYLOAD_SIZE\fP   10000"
+.br
+.ti -1c
+.RI "#define \fBRTPSMESSAGE_HEADER_SIZE\fP   20"
+.br
+.ti -1c
+.RI "#define \fBRTPSMESSAGE_SUBMESSAGEHEADER_SIZE\fP   4"
+.br
+.ti -1c
+.RI "#define \fBRTPSMESSAGE_DATA_EXTRA_INLINEQOS_SIZE\fP   4"
+.br
+.ti -1c
+.RI "#define \fBRTPSMESSAGE_INFOTS_SIZE\fP   12"
+.br
+.ti -1c
+.RI "#define \fBRTPSMESSAGE_OCTETSTOINLINEQOS_DATASUBMSG\fP   16"
+.br
+.ti -1c
+.RI "#define \fBRTPSMESSAGE_OCTETSTOINLINEQOS_DATAFRAGSUBMSG\fP   28"
+.br
+.ti -1c
+.RI "#define \fBRTPSMESSAGE_DATA_MIN_LENGTH\fP   24"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

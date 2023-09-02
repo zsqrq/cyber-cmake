@@ -1,0 +1,49 @@
+.TH "testing::internal::String" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testing::internal::String
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const char * \fBCloneCString\fP (const char *c_str)"
+.br
+.ti -1c
+.RI "static bool \fBCStringEquals\fP (const char *lhs, const char *rhs)"
+.br
+.ti -1c
+.RI "static std::string \fBShowWideCString\fP (const wchar_t *wide_c_str)"
+.br
+.ti -1c
+.RI "static bool \fBWideCStringEquals\fP (const wchar_t *lhs, const wchar_t *rhs)"
+.br
+.ti -1c
+.RI "static bool \fBCaseInsensitiveCStringEquals\fP (const char *lhs, const char *rhs)"
+.br
+.ti -1c
+.RI "static bool \fBCaseInsensitiveWideCStringEquals\fP (const wchar_t *lhs, const wchar_t *rhs)"
+.br
+.ti -1c
+.RI "static bool \fBEndsWithCaseInsensitive\fP (const std::string &str, const std::string &suffix)"
+.br
+.ti -1c
+.RI "static std::string \fBFormatIntWidth2\fP (int value)"
+.br
+.ti -1c
+.RI "static std::string \fBFormatHexInt\fP (int value)"
+.br
+.ti -1c
+.RI "static std::string \fBFormatHexUInt32\fP (UInt32 value)"
+.br
+.ti -1c
+.RI "static std::string \fBFormatByte\fP (unsigned char value)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

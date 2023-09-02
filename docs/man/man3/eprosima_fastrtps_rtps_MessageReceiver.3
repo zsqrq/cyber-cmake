@@ -1,0 +1,96 @@
+.TH "eprosima::fastrtps::rtps::MessageReceiver" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::MessageReceiver
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MessageReceiver\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMessageReceiver\fP (RTPSParticipantImpl *participant, uint32_t rec_buffer_size)"
+.br
+.ti -1c
+.RI "\fBMessageReceiver\fP (RTPSParticipantImpl *participant)"
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.RI "Reset the \fBMessageReceiver\fP to process a new message\&. "
+.ti -1c
+.RI "void \fBinit\fP (uint32_t rec_buffer_size)"
+.br
+.ti -1c
+.RI "void \fBprocessCDRMsg\fP (const \fBGuidPrefix_t\fP &RTPSParticipantguidprefix, \fBLocator_t\fP *loc, \fBCDRMessage_t\fP *msg)"
+.br
+.ti -1c
+.RI "void \fBassociateEndpoint\fP (\fBEndpoint\fP *to_add)"
+.br
+.ti -1c
+.RI "void \fBremoveEndpoint\fP (\fBEndpoint\fP *to_remove)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCDRMessage_t\fP \fBm_rec_msg\fP"
+.br
+.RI "Pointer to the Listen Resource that contains this \fBMessageReceiver\fP\&. "
+.ti -1c
+.RI "\fBParameterList_t\fP \fBm_ParamList\fP"
+.br
+.RI "PArameter list\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBMessageReceiver\fP, process the received messages\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::MessageReceiver::MessageReceiver (RTPSParticipantImpl * participant, uint32_t rec_buffer_size)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIrec_buffer_size\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void eprosima::fastrtps::rtps::MessageReceiver::init (uint32_t rec_buffer_size)"
+Init \fBMessageReceiver\fP\&. Does what the constructor used to do\&. This is now on an independent function since \fBMessageReceiver\fP now stands inside a struct\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrec_buffer_size\fP 
+.RE
+.PP
+
+.SS "void eprosima::fastrtps::rtps::MessageReceiver::processCDRMsg (const \fBGuidPrefix_t\fP & RTPSParticipantguidprefix, \fBLocator_t\fP * loc, \fBCDRMessage_t\fP * msg)"
+Process a new CDR message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIRTPSParticipantguidprefix\fP \fBRTPSParticipant\fP Guid Prefix 
+.br
+\fIloc\fP Locator indicating the sending address\&. 
+.br
+\fImsg\fP Pointer to the message 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBCDRMessage_t\fP eprosima::fastrtps::rtps::MessageReceiver::m_rec_msg"
+
+.PP
+Pointer to the Listen Resource that contains this \fBMessageReceiver\fP\&. Received message 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

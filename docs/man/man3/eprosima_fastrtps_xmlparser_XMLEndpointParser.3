@@ -1,0 +1,123 @@
+.TH "eprosima::fastrtps::xmlparser::XMLEndpointParser" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::xmlparser::XMLEndpointParser
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <XMLEndpointParser\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "XMLP_ret \fBloadXMLFile\fP (std::string &filename)"
+.br
+.ti -1c
+.RI "void \fBloadXMLParticipantEndpoint\fP (tinyxml2::XMLElement *xml_endpoint, \fBStaticRTPSParticipantInfo\fP *pdata)"
+.br
+.ti -1c
+.RI "XMLP_ret \fBloadXMLReaderEndpoint\fP (tinyxml2::XMLElement *xml_endpoint, \fBStaticRTPSParticipantInfo\fP *pdata)"
+.br
+.ti -1c
+.RI "XMLP_ret \fBloadXMLWriterEndpoint\fP (tinyxml2::XMLElement *xml_endpoint, \fBStaticRTPSParticipantInfo\fP *pdata)"
+.br
+.ti -1c
+.RI "XMLP_ret \fBlookforReader\fP (std::string partname, uint16_t id, \fBrtps::ReaderProxyData\fP **rdataptr)"
+.br
+.ti -1c
+.RI "XMLP_ret \fBlookforWriter\fP (std::string partname, uint16_t id, \fBrtps::WriterProxyData\fP **wdataptr)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class \fBXMLEndpointParser\fP used to parse the XML file that contains information about remote endpoints\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "XMLP_ret eprosima::fastrtps::xmlparser::XMLEndpointParser::loadXMLFile (std::string & filename)"
+Load the XML file 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP Name of the file to load and parse\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct\&. 
+.RE
+.PP
+
+.SS "XMLP_ret eprosima::fastrtps::xmlparser::XMLEndpointParser::loadXMLReaderEndpoint (tinyxml2::XMLElement * xml_endpoint, \fBStaticRTPSParticipantInfo\fP * pdata)"
+Load a Reader endpoint\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_endpoint\fP Reference of a tree child for a reader\&. 
+.br
+\fIpdata\fP Pointer to the RTPSParticipantInfo where the reader must be added\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly added\&. 
+.RE
+.PP
+
+.SS "XMLP_ret eprosima::fastrtps::xmlparser::XMLEndpointParser::loadXMLWriterEndpoint (tinyxml2::XMLElement * xml_endpoint, \fBStaticRTPSParticipantInfo\fP * pdata)"
+Load a Writer endpoint\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_endpoint\fP Reference of a tree child for a writer\&. 
+.br
+\fIpdata\fP Pointer to the RTPSParticipantInfo where the reader must be added\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly added\&. 
+.RE
+.PP
+
+.SS "XMLP_ret eprosima::fastrtps::xmlparser::XMLEndpointParser::lookforReader (std::string partname, uint16_t id, \fBrtps::ReaderProxyData\fP ** rdataptr)"
+Look for a reader in the previously loaded endpoints\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpartname\fP RTPSParticipant name 
+.br
+\fIid\fP Id of the reader 
+.br
+\fIrdataptr\fP Pointer to pointer to return the information\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if found\&. 
+.RE
+.PP
+
+.SS "XMLP_ret eprosima::fastrtps::xmlparser::XMLEndpointParser::lookforWriter (std::string partname, uint16_t id, \fBrtps::WriterProxyData\fP ** wdataptr)"
+Look for a writer in the previously loaded endpoints\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpartname\fP RTPSParticipant name 
+.br
+\fIid\fP Id of the writer 
+.br
+\fIwdataptr\fP Pointer to pointer to return the information\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if found 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

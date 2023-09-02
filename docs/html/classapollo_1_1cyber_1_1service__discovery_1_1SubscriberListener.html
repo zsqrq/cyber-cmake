@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -78,8 +80,8 @@ Inheritance diagram for apollo::cyber::service_discovery::SubscriberListener:</d
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener__inherit__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener_inherit__map" alt="Inheritance graph"/></div>
 <map name="aapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener_inherit__map" id="aapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,131,724,252"/>
-<area shape="rect" title=" " alt="" coords="230,5,499,83"/>
+<area shape="rect" title=" " alt="" coords="5,175,724,296"/>
+<area shape="rect" href="classeprosima_1_1fastrtps_1_1SubscriberListener.html" title=" " alt="" coords="109,5,620,127"/>
 </map>
 </div>
 <div class="dynheader">
@@ -87,8 +89,8 @@ Collaboration diagram for apollo::cyber::service_discovery::SubscriberListener:<
 <div class="dyncontent">
 <div class="center"><img src="classapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener__coll__graph.png" border="0" usemap="#aapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener_coll__map" alt="Collaboration graph"/></div>
 <map name="aapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener_coll__map" id="aapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener_coll__map">
-<area shape="rect" title=" " alt="" coords="5,131,724,252"/>
-<area shape="rect" title=" " alt="" coords="230,5,499,83"/>
+<area shape="rect" title=" " alt="" coords="5,175,724,296"/>
+<area shape="rect" href="classeprosima_1_1fastrtps_1_1SubscriberListener.html" title=" " alt="" coords="109,5,620,127"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -103,13 +105,101 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abed2ec0a94528bab1d77c69e0274b7be"><td class="memItemLeft" align="right" valign="top"><a id="abed2ec0a94528bab1d77c69e0274b7be"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SubscriberListener</b> (const NewMsgCallback &amp;callback)</td></tr>
 <tr class="separator:abed2ec0a94528bab1d77c69e0274b7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab64f1c839c1843806d183ec0dda699a7"><td class="memItemLeft" align="right" valign="top"><a id="ab64f1c839c1843806d183ec0dda699a7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onNewDataMessage</b> (eprosima::fastrtps::Subscriber *sub)</td></tr>
+<tr class="memitem:ab64f1c839c1843806d183ec0dda699a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener.html#ab64f1c839c1843806d183ec0dda699a7">onNewDataMessage</a> (<a class="el" href="classeprosima_1_1fastrtps_1_1Subscriber.html">eprosima::fastrtps::Subscriber</a> *sub)</td></tr>
 <tr class="separator:ab64f1c839c1843806d183ec0dda699a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6bca107aad56c9b52e529d4427384f1"><td class="memItemLeft" align="right" valign="top"><a id="ad6bca107aad56c9b52e529d4427384f1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onSubscriptionMatched</b> (eprosima::fastrtps::Subscriber *sub, eprosima::fastrtps::MatchingInfo &amp;info)</td></tr>
+<tr class="memitem:ad6bca107aad56c9b52e529d4427384f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener.html#ad6bca107aad56c9b52e529d4427384f1">onSubscriptionMatched</a> (<a class="el" href="classeprosima_1_1fastrtps_1_1Subscriber.html">eprosima::fastrtps::Subscriber</a> *sub, <a class="el" href="classeprosima_1_1fastrtps_1_1rtps_1_1MatchingInfo.html">eprosima::fastrtps::MatchingInfo</a> &amp;info)</td></tr>
 <tr class="separator:ad6bca107aad56c9b52e529d4427384f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab64f1c839c1843806d183ec0dda699a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64f1c839c1843806d183ec0dda699a7">&#9670;&nbsp;</a></span>onNewDataMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apollo::cyber::service_discovery::SubscriberListener::onNewDataMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classeprosima_1_1fastrtps_1_1Subscriber.html">eprosima::fastrtps::Subscriber</a> *&#160;</td>
+          <td class="paramname"><em>sub</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Virtual function to be implemented by the user containing the actions to be performed when a new Data <a class="el" href="classapollo_1_1cyber_1_1Message.html">Message</a> is received. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sub</td><td>Subscriber </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classeprosima_1_1fastrtps_1_1SubscriberListener.html#a045876806fb8113210a15fb93affd080">eprosima::fastrtps::SubscriberListener</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener_ab64f1c839c1843806d183ec0dda699a7_cgraph.png" border="0" usemap="#aclassapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener_ab64f1c839c1843806d183ec0dda699a7_cgraph" alt=""/></div>
+<map name="aclassapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener_ab64f1c839c1843806d183ec0dda699a7_cgraph" id="aclassapollo_1_1cyber_1_1service__discovery_1_1SubscriberListener_ab64f1c839c1843806d183ec0dda699a7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,505,57"/>
+<area shape="rect" href="classapollo_1_1cyber_1_1transport_1_1UnderlayMessage.html#abbce4191928c7d434e323926ae3c465d" title="This function copies the value in member data." alt="" coords="553,5,888,32"/>
+<area shape="rect" href="classeprosima_1_1fastrtps_1_1Subscriber.html#a4c9dd624edb2c3db14bc718bd1323abf" title=" " alt="" coords="563,56,878,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad6bca107aad56c9b52e529d4427384f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6bca107aad56c9b52e529d4427384f1">&#9670;&nbsp;</a></span>onSubscriptionMatched()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apollo::cyber::service_discovery::SubscriberListener::onSubscriptionMatched </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classeprosima_1_1fastrtps_1_1Subscriber.html">eprosima::fastrtps::Subscriber</a> *&#160;</td>
+          <td class="paramname"><em>sub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classeprosima_1_1fastrtps_1_1rtps_1_1MatchingInfo.html">eprosima::fastrtps::MatchingInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Virtual method to be called when the subscriber is matched with a new <a class="el" href="classapollo_1_1cyber_1_1Writer.html">Writer</a> (or unmatched); i.e., when a writer publishing in the same topic is discovered. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sub</td><td>Subscriber </td></tr>
+    <tr><td class="paramname">info</td><td>Matching information </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classeprosima_1_1fastrtps_1_1SubscriberListener.html#aae87773aa8a4e99b8cd31a2906777598">eprosima::fastrtps::SubscriberListener</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>cyber/service_discovery/communication/<a class="el" href="subscriber__listener_8h_source.html">subscriber_listener.h</a></li>
 <li>cyber/service_discovery/communication/subscriber_listener.cc</li>

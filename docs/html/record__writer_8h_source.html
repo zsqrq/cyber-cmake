@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -118,7 +120,7 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1record_1_1RecordWriter.html#a88286f6474eee87f0790523ff870c65a">RecordWriter</a>();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classapollo_1_1cyber_1_1record_1_1RecordWriter.html#a88286f6474eee87f0790523ff870c65a">RecordWriter</a>(<span class="keyword">const</span> proto::Header&amp; header);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classapollo_1_1cyber_1_1record_1_1RecordWriter.html#a88286f6474eee87f0790523ff870c65a">RecordWriter</a>(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a>&amp; header);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classapollo_1_1cyber_1_1record_1_1RecordWriter.html#ab3eaa2b527f05d281741309a35f36fbd">~RecordWriter</a>();</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
@@ -152,7 +154,7 @@ $(function() {
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1record_1_1RecordWriter.html#ac4e925dc5f55f4681e26190dc128b0f1">IsNewChannel</a>(<span class="keyword">const</span> std::string&amp; channel_name) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1record_1_1RecordWriter.html#a9f8c8aa8c692d90fe5463930b440493e">WriteMessage</a>(<span class="keyword">const</span> proto::SingleMessage&amp; single_msg);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classapollo_1_1cyber_1_1record_1_1RecordWriter.html#a9f8c8aa8c692d90fe5463930b440493e">WriteMessage</a>(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1SingleMessage.html">proto::SingleMessage</a>&amp; single_msg);</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keywordtype">bool</span> SplitOutfile();</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordtype">void</span> OnNewChannel(<span class="keyword">const</span> std::string&amp; channel_name,</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                    <span class="keyword">const</span> std::string&amp; message_type,</div>
@@ -177,7 +179,7 @@ $(function() {
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                                       <span class="keyword">const</span> std::string&amp; message,</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                                       <span class="keyword">const</span> uint64_t time_nanosec,</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                                       <span class="keyword">const</span> std::string&amp; proto_desc) {</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  proto::SingleMessage single_msg;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1proto_1_1SingleMessage.html">proto::SingleMessage</a> single_msg;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  single_msg.set_channel_name(channel_name);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  single_msg.set_content(message);</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  single_msg.set_time(time_nanosec);</div>
@@ -229,6 +231,8 @@ $(function() {
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}  <span class="comment">// namespace apollo</span></div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CYBER_RECORD_RECORD_WRITER_H_</span></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1Header_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1Header.html">apollo::cyber::proto::Header</a></div><div class="ttdef"><b>Definition:</b> record.pb.h:1193</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1SingleMessage_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1SingleMessage.html">apollo::cyber::proto::SingleMessage</a></div><div class="ttdef"><b>Definition:</b> record.pb.h:995</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordBase_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordBase.html">apollo::cyber::record::RecordBase</a></div><div class="ttdoc">Base class for record reader and writer.</div><div class="ttdef"><b>Definition:</b> record_base.h:35</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordWriter_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordWriter.html">apollo::cyber::record::RecordWriter</a></div><div class="ttdoc">The record writer.</div><div class="ttdef"><b>Definition:</b> record_writer.h:44</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordWriter_html_a2f0637a10532fd3d721ec27dec9aab05"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordWriter.html#a2f0637a10532fd3d721ec27dec9aab05">apollo::cyber::record::RecordWriter::GetMessageNumber</a></div><div class="ttdeci">uint64_t GetMessageNumber(const std::string &amp;channel_name) const override</div><div class="ttdoc">Get message number by channel name.</div><div class="ttdef"><b>Definition:</b> record_writer.cc:192</div></div>
@@ -244,7 +248,7 @@ $(function() {
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordWriter_html_aeeb301a117dd331fc6fcd5d7c901edef"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordWriter.html#aeeb301a117dd331fc6fcd5d7c901edef">apollo::cyber::record::RecordWriter::Close</a></div><div class="ttdeci">void Close()</div><div class="ttdoc">Clean the record.</div><div class="ttdef"><b>Definition:</b> record_writer.cc:62</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordWriter_html_af76bce2ac6cdec3b253a123597f70d8e"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordWriter.html#af76bce2ac6cdec3b253a123597f70d8e">apollo::cyber::record::RecordWriter::GetChannelList</a></div><div class="ttdeci">std::set&lt; std::string &gt; GetChannelList() const override</div><div class="ttdoc">Get channel list.</div><div class="ttdef"><b>Definition:</b> record_writer.cc:218</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordWriter_html_aff50d522ad22bcfb6ecc8affe837f048"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordWriter.html#aff50d522ad22bcfb6ecc8affe837f048">apollo::cyber::record::RecordWriter::WriteChannel</a></div><div class="ttdeci">bool WriteChannel(const std::string &amp;channel_name, const std::string &amp;message_type, const std::string &amp;proto_desc)</div><div class="ttdoc">Write a channel to record.</div><div class="ttdef"><b>Definition:</b> record_writer.cc:103</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

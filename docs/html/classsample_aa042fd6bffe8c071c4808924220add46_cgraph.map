@@ -1,0 +1,4 @@
+<map id="sample::getMaxCdrSerializedSize" name="sample::getMaxCdrSerializedSize">
+<area shape="rect" id="node1" title="This function returns the maximum serialized size of an object depending on the buffer alignment." alt="" coords="5,5,245,32"/>
+<area shape="rect" id="node2" href="$classeprosima_1_1fastcdr_1_1Cdr.html#a13af0f46117d10e3bba943870ecb3efd" title=" " alt="" coords="293,5,533,32"/>
+</map>

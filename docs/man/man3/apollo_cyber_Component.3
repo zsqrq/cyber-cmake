@@ -1,4 +1,4 @@
-.TH "apollo::cyber::Component< M0, M1, M2, M3 >" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::Component< M0, M1, M2, M3 >" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,11 +11,18 @@ apollo::cyber::Component< M0, M1, M2, M3 > \- The \fBComponent\fP can process up
 \fC#include <component\&.h>\fP
 .PP
 Inherits \fBapollo::cyber::ComponentBase\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "bool \fBInitialize\fP (const ComponentConfig &config) override"
+.RI "bool \fBInitialize\fP (const \fBComponentConfig\fP &config) override"
 .br
 .RI "init the component by protobuf object\&. "
 .ti -1c
@@ -52,7 +59,7 @@ The Init & Proc functions need to be overloaded, but don't want to be called\&. 
 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<typename M0 , typename M1 , typename M2 , typename M3 > bool \fBapollo::cyber::Component\fP< M0, M1, M2, M3 >::Initialize (const ComponentConfig & config)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+.SS "template<typename M0 , typename M1 , typename M2 , typename M3 > bool \fBapollo::cyber::Component\fP< M0, M1, M2, M3 >::Initialize (const \fBComponentConfig\fP & config)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
 
 .PP
 init the component by protobuf object\&. 

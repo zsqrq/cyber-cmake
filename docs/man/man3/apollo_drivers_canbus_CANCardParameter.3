@@ -1,0 +1,680 @@
+.TH "apollo::drivers::canbus::CANCardParameter" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::drivers::canbus::CANCardParameter
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkBrandFieldNumber\fP = 1, \fBkTypeFieldNumber\fP = 2, \fBkChannelIdFieldNumber\fP = 3, \fBkInterfaceFieldNumber\fP = 4, \fBkNumPortsFieldNumber\fP = 5, \fBkHermesBaudrateFieldNumber\fP = 6 }"
+.br
+.ti -1c
+.RI "typedef CANCardParameter_CANCardBrand \fBCANCardBrand\fP"
+.br
+.ti -1c
+.RI "typedef CANCardParameter_CANCardType \fBCANCardType\fP"
+.br
+.ti -1c
+.RI "typedef CANCardParameter_CANChannelId \fBCANChannelId\fP"
+.br
+.ti -1c
+.RI "typedef CANCardParameter_CANInterface \fBCANInterface\fP"
+.br
+.ti -1c
+.RI "typedef CANCardParameter_HERMES_BAUDRATE \fBHERMES_BAUDRATE\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBCANCardParameter\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBCANCardParameter\fP (const \fBCANCardParameter\fP &from)"
+.br
+.ti -1c
+.RI "\fBCANCardParameter\fP (\fBCANCardParameter\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBCANCardParameter\fP & \fBoperator=\fP (const \fBCANCardParameter\fP &from)"
+.br
+.ti -1c
+.RI "\fBCANCardParameter\fP & \fBoperator=\fP (\fBCANCardParameter\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBCANCardParameter\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBCANCardParameter\fP *other)"
+.br
+.ti -1c
+.RI "\fBCANCardParameter\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBCANCardParameter\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBCANCardParameter\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_brand\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brand\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::canbus::CANCardParameter_CANCardBrand \fBbrand\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brand\fP (::apollo::drivers::canbus::CANCardParameter_CANCardBrand value)"
+.br
+.ti -1c
+.RI "bool \fBhas_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::canbus::CANCardParameter_CANCardType \fBtype\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_type\fP (::apollo::drivers::canbus::CANCardParameter_CANCardType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_channel_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_channel_id\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::canbus::CANCardParameter_CANChannelId \fBchannel_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_channel_id\fP (::apollo::drivers::canbus::CANCardParameter_CANChannelId value)"
+.br
+.ti -1c
+.RI "bool \fBhas_interface\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_interface\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::canbus::CANCardParameter_CANInterface \fBinterface\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_interface\fP (::apollo::drivers::canbus::CANCardParameter_CANInterface value)"
+.br
+.ti -1c
+.RI "bool \fBhas_num_ports\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_num_ports\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBnum_ports\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_num_ports\fP (uint32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_hermes_baudrate\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_hermes_baudrate\fP ()"
+.br
+.ti -1c
+.RI "::apollo::drivers::canbus::CANCardParameter_HERMES_BAUDRATE \fBhermes_baudrate\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_hermes_baudrate\fP (::apollo::drivers::canbus::CANCardParameter_HERMES_BAUDRATE value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBCANCardParameter\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBCANCardParameter\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBCANCardBrand_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCANCardBrand_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCANCardBrand_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCANCardBrand_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, CANCardBrand *value)"
+.br
+.ti -1c
+.RI "static bool \fBCANCardType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCANCardType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCANCardType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCANCardType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, CANCardType *value)"
+.br
+.ti -1c
+.RI "static bool \fBCANChannelId_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCANChannelId_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCANChannelId_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCANChannelId_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, CANChannelId *value)"
+.br
+.ti -1c
+.RI "static bool \fBCANInterface_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBCANInterface_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBCANInterface_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBCANInterface_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, CANInterface *value)"
+.br
+.ti -1c
+.RI "static bool \fBHERMES_BAUDRATE_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBHERMES_BAUDRATE_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBHERMES_BAUDRATE_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBHERMES_BAUDRATE_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, HERMES_BAUDRATE *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr CANCardBrand \fBFAKE_CAN\fP"
+.br
+.ti -1c
+.RI "static constexpr CANCardBrand \fBESD_CAN\fP"
+.br
+.ti -1c
+.RI "static constexpr CANCardBrand \fBSOCKET_CAN_RAW\fP"
+.br
+.ti -1c
+.RI "static constexpr CANCardBrand \fBHERMES_CAN\fP"
+.br
+.ti -1c
+.RI "static constexpr CANCardBrand \fBCANCardBrand_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr CANCardBrand \fBCANCardBrand_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCANCardBrand_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr CANCardType \fBPCI_CARD\fP"
+.br
+.ti -1c
+.RI "static constexpr CANCardType \fBUSB_CARD\fP"
+.br
+.ti -1c
+.RI "static constexpr CANCardType \fBCANCardType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr CANCardType \fBCANCardType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCANCardType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr CANChannelId \fBCHANNEL_ID_ZERO\fP"
+.br
+.ti -1c
+.RI "static constexpr CANChannelId \fBCHANNEL_ID_ONE\fP"
+.br
+.ti -1c
+.RI "static constexpr CANChannelId \fBCHANNEL_ID_TWO\fP"
+.br
+.ti -1c
+.RI "static constexpr CANChannelId \fBCHANNEL_ID_THREE\fP"
+.br
+.ti -1c
+.RI "static constexpr CANChannelId \fBCHANNEL_ID_FOUR\fP"
+.br
+.ti -1c
+.RI "static constexpr CANChannelId \fBCHANNEL_ID_FIVE\fP"
+.br
+.ti -1c
+.RI "static constexpr CANChannelId \fBCHANNEL_ID_SIX\fP"
+.br
+.ti -1c
+.RI "static constexpr CANChannelId \fBCHANNEL_ID_SEVEN\fP"
+.br
+.ti -1c
+.RI "static constexpr CANChannelId \fBCANChannelId_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr CANChannelId \fBCANChannelId_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCANChannelId_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr CANInterface \fBNATIVE\fP"
+.br
+.ti -1c
+.RI "static constexpr CANInterface \fBVIRTUAL\fP"
+.br
+.ti -1c
+.RI "static constexpr CANInterface \fBSLCAN\fP"
+.br
+.ti -1c
+.RI "static constexpr CANInterface \fBCANInterface_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr CANInterface \fBCANInterface_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBCANInterface_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr HERMES_BAUDRATE \fBBCAN_BAUDRATE_1M\fP"
+.br
+.ti -1c
+.RI "static constexpr HERMES_BAUDRATE \fBBCAN_BAUDRATE_500K\fP"
+.br
+.ti -1c
+.RI "static constexpr HERMES_BAUDRATE \fBBCAN_BAUDRATE_250K\fP"
+.br
+.ti -1c
+.RI "static constexpr HERMES_BAUDRATE \fBBCAN_BAUDRATE_150K\fP"
+.br
+.ti -1c
+.RI "static constexpr HERMES_BAUDRATE \fBBCAN_BAUDRATE_NUM\fP"
+.br
+.ti -1c
+.RI "static constexpr HERMES_BAUDRATE \fBHERMES_BAUDRATE_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr HERMES_BAUDRATE \fBHERMES_BAUDRATE_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBHERMES_BAUDRATE_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCANCardParameter\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fdrivers_5fmsgs_2fcan_5fcard_5fparameter_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBCANCardParameter\fP &a, \fBCANCardParameter\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::drivers::canbus::CANCardParameter::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    CANCardParameter::MergeImpl
+}
+.fi
+.SS "constexpr CANCardParameter_HERMES_BAUDRATE apollo::drivers::canbus::CANCardParameter::BCAN_BAUDRATE_150K\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_HERMES_BAUDRATE_BCAN_BAUDRATE_150K
+.fi
+.SS "constexpr CANCardParameter_HERMES_BAUDRATE apollo::drivers::canbus::CANCardParameter::BCAN_BAUDRATE_1M\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_HERMES_BAUDRATE_BCAN_BAUDRATE_1M
+.fi
+.SS "constexpr CANCardParameter_HERMES_BAUDRATE apollo::drivers::canbus::CANCardParameter::BCAN_BAUDRATE_250K\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_HERMES_BAUDRATE_BCAN_BAUDRATE_250K
+.fi
+.SS "constexpr CANCardParameter_HERMES_BAUDRATE apollo::drivers::canbus::CANCardParameter::BCAN_BAUDRATE_500K\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_HERMES_BAUDRATE_BCAN_BAUDRATE_500K
+.fi
+.SS "constexpr CANCardParameter_HERMES_BAUDRATE apollo::drivers::canbus::CANCardParameter::BCAN_BAUDRATE_NUM\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_HERMES_BAUDRATE_BCAN_BAUDRATE_NUM
+.fi
+.SS "constexpr int apollo::drivers::canbus::CANCardParameter::CANCardBrand_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANCardBrand_CANCardBrand_ARRAYSIZE
+.fi
+.SS "constexpr CANCardParameter_CANCardBrand apollo::drivers::canbus::CANCardParameter::CANCardBrand_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANCardBrand_CANCardBrand_MAX
+.fi
+.SS "constexpr CANCardParameter_CANCardBrand apollo::drivers::canbus::CANCardParameter::CANCardBrand_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANCardBrand_CANCardBrand_MIN
+.fi
+.SS "constexpr int apollo::drivers::canbus::CANCardParameter::CANCardType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANCardType_CANCardType_ARRAYSIZE
+.fi
+.SS "constexpr CANCardParameter_CANCardType apollo::drivers::canbus::CANCardParameter::CANCardType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANCardType_CANCardType_MAX
+.fi
+.SS "constexpr CANCardParameter_CANCardType apollo::drivers::canbus::CANCardParameter::CANCardType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANCardType_CANCardType_MIN
+.fi
+.SS "constexpr int apollo::drivers::canbus::CANCardParameter::CANChannelId_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANChannelId_CANChannelId_ARRAYSIZE
+.fi
+.SS "constexpr CANCardParameter_CANChannelId apollo::drivers::canbus::CANCardParameter::CANChannelId_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANChannelId_CANChannelId_MAX
+.fi
+.SS "constexpr CANCardParameter_CANChannelId apollo::drivers::canbus::CANCardParameter::CANChannelId_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANChannelId_CANChannelId_MIN
+.fi
+.SS "constexpr int apollo::drivers::canbus::CANCardParameter::CANInterface_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANInterface_CANInterface_ARRAYSIZE
+.fi
+.SS "constexpr CANCardParameter_CANInterface apollo::drivers::canbus::CANCardParameter::CANInterface_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANInterface_CANInterface_MAX
+.fi
+.SS "constexpr CANCardParameter_CANInterface apollo::drivers::canbus::CANCardParameter::CANInterface_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANInterface_CANInterface_MIN
+.fi
+.SS "constexpr CANCardParameter_CANChannelId apollo::drivers::canbus::CANCardParameter::CHANNEL_ID_FIVE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANChannelId_CHANNEL_ID_FIVE
+.fi
+.SS "constexpr CANCardParameter_CANChannelId apollo::drivers::canbus::CANCardParameter::CHANNEL_ID_FOUR\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANChannelId_CHANNEL_ID_FOUR
+.fi
+.SS "constexpr CANCardParameter_CANChannelId apollo::drivers::canbus::CANCardParameter::CHANNEL_ID_ONE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANChannelId_CHANNEL_ID_ONE
+.fi
+.SS "constexpr CANCardParameter_CANChannelId apollo::drivers::canbus::CANCardParameter::CHANNEL_ID_SEVEN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANChannelId_CHANNEL_ID_SEVEN
+.fi
+.SS "constexpr CANCardParameter_CANChannelId apollo::drivers::canbus::CANCardParameter::CHANNEL_ID_SIX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANChannelId_CHANNEL_ID_SIX
+.fi
+.SS "constexpr CANCardParameter_CANChannelId apollo::drivers::canbus::CANCardParameter::CHANNEL_ID_THREE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANChannelId_CHANNEL_ID_THREE
+.fi
+.SS "constexpr CANCardParameter_CANChannelId apollo::drivers::canbus::CANCardParameter::CHANNEL_ID_TWO\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANChannelId_CHANNEL_ID_TWO
+.fi
+.SS "constexpr CANCardParameter_CANChannelId apollo::drivers::canbus::CANCardParameter::CHANNEL_ID_ZERO\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANChannelId_CHANNEL_ID_ZERO
+.fi
+.SS "constexpr CANCardParameter_CANCardBrand apollo::drivers::canbus::CANCardParameter::ESD_CAN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANCardBrand_ESD_CAN
+.fi
+.SS "constexpr CANCardParameter_CANCardBrand apollo::drivers::canbus::CANCardParameter::FAKE_CAN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANCardBrand_FAKE_CAN
+.fi
+.SS "constexpr int apollo::drivers::canbus::CANCardParameter::HERMES_BAUDRATE_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_HERMES_BAUDRATE_HERMES_BAUDRATE_ARRAYSIZE
+.fi
+.SS "constexpr CANCardParameter_HERMES_BAUDRATE apollo::drivers::canbus::CANCardParameter::HERMES_BAUDRATE_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_HERMES_BAUDRATE_HERMES_BAUDRATE_MAX
+.fi
+.SS "constexpr CANCardParameter_HERMES_BAUDRATE apollo::drivers::canbus::CANCardParameter::HERMES_BAUDRATE_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_HERMES_BAUDRATE_HERMES_BAUDRATE_MIN
+.fi
+.SS "constexpr CANCardParameter_CANCardBrand apollo::drivers::canbus::CANCardParameter::HERMES_CAN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANCardBrand_HERMES_CAN
+.fi
+.SS "constexpr int apollo::drivers::canbus::CANCardParameter::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    0
+.fi
+.SS "constexpr CANCardParameter_CANInterface apollo::drivers::canbus::CANCardParameter::NATIVE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANInterface_NATIVE
+.fi
+.SS "constexpr CANCardParameter_CANCardType apollo::drivers::canbus::CANCardParameter::PCI_CARD\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANCardType_PCI_CARD
+.fi
+.SS "constexpr CANCardParameter_CANInterface apollo::drivers::canbus::CANCardParameter::SLCAN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANInterface_SLCAN
+.fi
+.SS "constexpr CANCardParameter_CANCardBrand apollo::drivers::canbus::CANCardParameter::SOCKET_CAN_RAW\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANCardBrand_SOCKET_CAN_RAW
+.fi
+.SS "constexpr CANCardParameter_CANCardType apollo::drivers::canbus::CANCardParameter::USB_CARD\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANCardType_USB_CARD
+.fi
+.SS "constexpr CANCardParameter_CANInterface apollo::drivers::canbus::CANCardParameter::VIRTUAL\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    CANCardParameter_CANInterface_VIRTUAL
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

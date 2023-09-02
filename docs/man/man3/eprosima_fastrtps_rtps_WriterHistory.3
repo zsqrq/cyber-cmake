@@ -1,0 +1,121 @@
+.TH "eprosima::fastrtps::rtps::WriterHistory" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::WriterHistory
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WriterHistory\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::History\fP\&.
+.PP
+Inherited by \fBeprosima::fastrtps::PublisherHistory\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "RTPS_DllAPI \fBWriterHistory\fP (const \fBHistoryAttributes\fP &att)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI void \fBupdateMaxMinSeqNum\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI bool \fBadd_change\fP (\fBCacheChange_t\fP *a_change)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI bool \fBremove_change\fP (\fBCacheChange_t\fP *a_change)"
+.br
+.ti -1c
+.RI "virtual bool \fBremove_change_g\fP (\fBCacheChange_t\fP *a_change)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI bool \fBremove_change\fP (const \fBSequenceNumber_t\fP &sequence_number)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBCacheChange_t\fP * \fBremove_change_and_reuse\fP (const \fBSequenceNumber_t\fP &sequence_number)"
+.br
+.ti -1c
+.RI "RTPS_DllAPI bool \fBremove_min_change\fP ()"
+.br
+.ti -1c
+.RI "RTPS_DllAPI \fBSequenceNumber_t\fP \fBnext_sequence_number\fP () const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSequenceNumber_t\fP \fBm_lastCacheChangeSeqNum\fP"
+.br
+.RI "Last CacheChange Sequence Number added to the \fBHistory\fP\&. "
+.ti -1c
+.RI "\fBRTPSWriter\fP * \fBmp_writer\fP"
+.br
+.RI "Pointer to the associated \fBRTPSWriter\fP;\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBRTPSWriter\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Class \fBWriterHistory\fP, container of the different CacheChanges of a writer 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RTPS_DllAPI eprosima::fastrtps::rtps::WriterHistory::WriterHistory (const \fBHistoryAttributes\fP & att)"
+Constructor of the \fBWriterHistory\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "RTPS_DllAPI bool eprosima::fastrtps::rtps::WriterHistory::add_change (\fBCacheChange_t\fP * a_change)"
+Add a \fBCacheChange_t\fP to the \fBReaderHistory\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_change\fP Pointer to the CacheChange to add\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if added\&. 
+.RE
+.PP
+
+.SS "RTPS_DllAPI bool eprosima::fastrtps::rtps::WriterHistory::remove_change (\fBCacheChange_t\fP * a_change)\fC [virtual]\fP"
+Remove a specific change from the history\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa_change\fP Pointer to the \fBCacheChange_t\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if removed\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::History\fP\&.
+.SS "RTPS_DllAPI bool eprosima::fastrtps::rtps::WriterHistory::remove_min_change ()"
+Remove the \fBCacheChange_t\fP with the minimum sequenceNumber\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if correctly removed\&. 
+.RE
+.PP
+
+.SS "RTPS_DllAPI void eprosima::fastrtps::rtps::WriterHistory::updateMaxMinSeqNum ()\fC [virtual]\fP"
+Update the maximum and minimum sequenceNumber cacheChanges\&. 
+.PP
+Implements \fBeprosima::fastrtps::rtps::History\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,109 @@
+.TH "eprosima::fastrtps::rtps::SerializedPayload_t" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::SerializedPayload_t \- Structure \fBSerializedPayload_t\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SerializedPayload\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSerializedPayload_t\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "\fBSerializedPayload_t\fP (uint32_t len)"
+.br
+.ti -1c
+.RI "bool \fBcopy\fP (const \fBSerializedPayload_t\fP *serData, bool with_limit=true)"
+.br
+.ti -1c
+.RI "bool \fBreserve_fragmented\fP (\fBSerializedPayload_t\fP *serData)"
+.br
+.ti -1c
+.RI "void \fBempty\fP ()"
+.br
+.RI "Empty the payload\&. "
+.ti -1c
+.RI "void \fBreserve\fP (uint32_t new_size)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint16_t \fBencapsulation\fP"
+.br
+.RI "Encapsulation of the data as suggested in the RTPS 2\&.1 specification chapter 10\&. "
+.ti -1c
+.RI "uint32_t \fBlength\fP"
+.br
+.RI "Actual length of the data\&. "
+.ti -1c
+.RI "octet * \fBdata\fP"
+.br
+.RI "Pointer to the data\&. "
+.ti -1c
+.RI "uint32_t \fBmax_size\fP"
+.br
+.RI "Maximum size of the payload\&. "
+.ti -1c
+.RI "uint32_t \fBpos\fP"
+.br
+.RI "Position when reading\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure \fBSerializedPayload_t\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::SerializedPayload_t::SerializedPayload_t (uint32_t len)\fC [inline]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIlen\fP Maximum size of the payload 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool eprosima::fastrtps::rtps::SerializedPayload_t::copy (const \fBSerializedPayload_t\fP * serData, bool with_limit = \fCtrue\fP)\fC [inline]\fP"
+Copy another structure (including allocating new space for the data\&.) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIserData\fP Pointer to the structure to copy 
+.br
+\fIwith_limit\fP if true, the function will fail when providing a payload too big 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct 
+.RE
+.PP
+
+.SS "bool eprosima::fastrtps::rtps::SerializedPayload_t::reserve_fragmented (\fBSerializedPayload_t\fP * serData)\fC [inline]\fP"
+Allocate new space for fragmented data 
+.PP
+\fBParameters\fP
+.RS 4
+\fIserData\fP Pointer to the structure to copy 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if correct 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

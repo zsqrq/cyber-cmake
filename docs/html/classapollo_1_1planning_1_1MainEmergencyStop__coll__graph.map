@@ -1,0 +1,4 @@
+<map id="apollo::planning::MainEmergencyStop" name="apollo::planning::MainEmergencyStop">
+<area shape="rect" id="node1" title=" " alt="" coords="5,131,740,633"/>
+<area shape="rect" id="node2" title=" " alt="" coords="238,5,507,83"/>
+</map>

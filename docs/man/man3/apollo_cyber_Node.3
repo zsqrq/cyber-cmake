@@ -1,4 +1,4 @@
-.TH "apollo::cyber::Node" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::Node" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,7 +17,7 @@ apollo::cyber::Node \- \fBNode\fP is the fundamental building block of Cyber RT\
 .br
 .RI "Get node's name\&. "
 .ti -1c
-.RI "template<typename MessageT > auto \fBCreateWriter\fP (const proto::RoleAttributes &role_attr) \-> std::shared_ptr< \fBWriter\fP< MessageT >>"
+.RI "template<typename MessageT > auto \fBCreateWriter\fP (const \fBproto::RoleAttributes\fP &role_attr) \-> std::shared_ptr< \fBWriter\fP< MessageT >>"
 .br
 .RI "Create a \fBWriter\fP with specific message type\&. "
 .ti -1c
@@ -33,7 +33,7 @@ apollo::cyber::Node \- \fBNode\fP is the fundamental building block of Cyber RT\
 .br
 .RI "Create a \fBReader\fP with specific message type with reader config\&. "
 .ti -1c
-.RI "template<typename MessageT > auto \fBCreateReader\fP (const proto::RoleAttributes &role_attr, const CallbackFunc< MessageT > &reader_func=nullptr) \-> std::shared_ptr< \fBcyber::Reader\fP< MessageT >>"
+.RI "template<typename MessageT > auto \fBCreateReader\fP (const \fBproto::RoleAttributes\fP &role_attr, const CallbackFunc< MessageT > &reader_func=nullptr) \-> std::shared_ptr< \fBcyber::Reader\fP< MessageT >>"
 .br
 .RI "Create a \fBReader\fP object with \fCRoleAttributes\fP "
 .ti -1c
@@ -51,7 +51,7 @@ apollo::cyber::Node \- \fBNode\fP is the fundamental building block of Cyber RT\
 .RI "bool \fBDeleteReader\fP (const \fBReaderConfig\fP &config)"
 .br
 .ti -1c
-.RI "bool \fBDeleteReader\fP (const proto::RoleAttributes &role_attr)"
+.RI "bool \fBDeleteReader\fP (const \fBproto::RoleAttributes\fP &role_attr)"
 .br
 .ti -1c
 .RI "void \fBObserve\fP ()"
@@ -119,7 +119,7 @@ std::shared_ptr<Client<Request, Response>> result \fC\fBClient\fP\fP
 .RE
 .PP
 
-.SS "template<typename MessageT > auto apollo::cyber::Node::CreateReader (const proto::RoleAttributes & role_attr, const CallbackFunc< MessageT > & reader_func = \fCnullptr\fP) \-> std::shared_ptr<\fBcyber::Reader\fP<MessageT>>"
+.SS "template<typename MessageT > auto apollo::cyber::Node::CreateReader (const \fBproto::RoleAttributes\fP & role_attr, const CallbackFunc< MessageT > & reader_func = \fCnullptr\fP) \-> std::shared_ptr<\fBcyber::Reader\fP<MessageT>>"
 
 .PP
 Create a \fBReader\fP object with \fCRoleAttributes\fP 
@@ -213,7 +213,7 @@ std::shared_ptr<Service<Request, Response>> result \fC\fBService\fP\fP
 .RE
 .PP
 
-.SS "template<typename MessageT > auto apollo::cyber::Node::CreateWriter (const proto::RoleAttributes & role_attr) \-> std::shared_ptr<\fBWriter\fP<MessageT>>"
+.SS "template<typename MessageT > auto apollo::cyber::Node::CreateWriter (const \fBproto::RoleAttributes\fP & role_attr) \-> std::shared_ptr<\fBWriter\fP<MessageT>>"
 
 .PP
 Create a \fBWriter\fP with specific message type\&. 

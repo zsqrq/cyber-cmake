@@ -1,0 +1,215 @@
+.TH "eprosima::fastrtps::rtps::security::CryptoKeyFactory" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::security::CryptoKeyFactory
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBParticipantCryptoHandle\fP * \fBregister_local_participant\fP (const \fBIdentityHandle\fP &participant_identity, const \fBPermissionsHandle\fP &participant_permissions, const PropertySeq &participant_properties, \fBSecurityException\fP &exception)=0"
+.br
+.ti -1c
+.RI "virtual \fBParticipantCryptoHandle\fP * \fBregister_matched_remote_participant\fP (const \fBParticipantCryptoHandle\fP &local_participant_crypto_handle, const \fBIdentityHandle\fP &remote_participant_identity, const \fBPermissionsHandle\fP &remote_participant_permissions, const \fBSharedSecretHandle\fP &shared_secret, \fBSecurityException\fP &exception)=0"
+.br
+.ti -1c
+.RI "virtual \fBDatawriterCryptoHandle\fP * \fBregister_local_datawriter\fP (\fBParticipantCryptoHandle\fP &participant_crypto, const PropertySeq &datawriter_prop, \fBSecurityException\fP &exception)=0"
+.br
+.ti -1c
+.RI "virtual \fBDatareaderCryptoHandle\fP * \fBregister_matched_remote_datareader\fP (\fBDatawriterCryptoHandle\fP &local_datawriter_crypto_handle, \fBParticipantCryptoHandle\fP &remote_participant_crypto, const \fBSharedSecretHandle\fP &shared_secret, const bool relay_only, \fBSecurityException\fP &exception)=0"
+.br
+.ti -1c
+.RI "virtual \fBDatareaderCryptoHandle\fP * \fBregister_local_datareader\fP (\fBParticipantCryptoHandle\fP &participant_crypto, const PropertySeq &datareader_properties, \fBSecurityException\fP &exception)=0"
+.br
+.ti -1c
+.RI "virtual \fBDatawriterCryptoHandle\fP * \fBregister_matched_remote_datawriter\fP (\fBDatareaderCryptoHandle\fP &local_datareader_crypto_handle, \fBParticipantCryptoHandle\fP &remote_participant_crypt, const \fBSharedSecretHandle\fP &shared_secret, \fBSecurityException\fP &exception)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBunregister_participant\fP (\fBParticipantCryptoHandle\fP *participant_crypto_handle, \fBSecurityException\fP &exception)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBunregister_datawriter\fP (\fBDatawriterCryptoHandle\fP *datawriter_crypto_handle, \fBSecurityException\fP &exception)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBunregister_datareader\fP (\fBDatareaderCryptoHandle\fP *datareader_crypto_handle, \fBSecurityException\fP &exception)=0"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBDatareaderCryptoHandle\fP* eprosima::fastrtps::rtps::security::CryptoKeyFactory::register_local_datareader (\fBParticipantCryptoHandle\fP & participant_crypto, const PropertySeq & datareader_properties, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+Register a local DataReader (belonging to an authenticated and authorized \fBParticipant\fP) with the Cryptographic Plugin\&. Creates crypto material to encode messages when the encryption is independent of the targeted DataWriter 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparticipant_crypto\fP Returned by a prior call to register_local_participant 
+.br
+\fIdatareader_properties\fP Combination of PropertyQosPolicy and the contents of AccessControl 
+.br
+\fIexception\fP (out) Security exception 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Crypto \fBHandle\fP to the generated key material 
+.RE
+.PP
+
+.SS "virtual \fBDatawriterCryptoHandle\fP* eprosima::fastrtps::rtps::security::CryptoKeyFactory::register_local_datawriter (\fBParticipantCryptoHandle\fP & participant_crypto, const PropertySeq & datawriter_prop, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+Register a local DataWriter belonging to an authenticated Pariticipant\&. Creates cryptomaterial for use with incoming/outgoing messages 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparticipant_crypto\fP returned by a prior call to register_local_participant 
+.br
+\fIdatawriter_prop\fP Combination of PropertyWosPolicy and contents of AccessControl 
+.br
+\fIexception\fP (out) Security exception 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CryptoHandle to be used with operations related to the DataWriter 
+.RE
+.PP
+
+.SS "virtual \fBParticipantCryptoHandle\fP* eprosima::fastrtps::rtps::security::CryptoKeyFactory::register_local_participant (const \fBIdentityHandle\fP & participant_identity, const \fBPermissionsHandle\fP & participant_permissions, const PropertySeq & participant_properties, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+Register a local, already authenticated \fBParticipant\fP with the Cryptographic Plugin\&. Creates Crypto material needed to encrypt messages directed to other Participants 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparticipant_identity\fP Made by a prior call to validate_local_identity 
+.br
+\fIparticipant_permissions\fP Made by a prior call to validate_local_permissions 
+.br
+\fIparticipant_properties\fP Combination of PropertyQoSPolicy and contents of AccessControl 
+.br
+\fIexception\fP (out) Security exception 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ParticipantCryptoHandle with generated key material 
+.br
+ 
+.RE
+.PP
+
+.SS "virtual \fBDatareaderCryptoHandle\fP* eprosima::fastrtps::rtps::security::CryptoKeyFactory::register_matched_remote_datareader (\fBDatawriterCryptoHandle\fP & local_datawriter_crypto_handle, \fBParticipantCryptoHandle\fP & remote_participant_crypto, const \fBSharedSecretHandle\fP & shared_secret, const bool relay_only, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+Register a remote DataReader that has been granted permission to match with the local DataWriter\&. Creates cryptographic material to encript/decrypt messages from and towards that DataReader\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocal_datawriter_crypto_handle\fP Returned by a prior call to register_local_datawriter 
+.br
+\fIremote_participant_crypto\fP Returned by a prior call to register_matched_remote_participant\&. 
+.br
+\fIshared_secret\fP Obtained as a result of the \fBAuthentication\fP Handshake\&. 
+.br
+\fIrelay_only\fP If FALSE it generates material for both a submessage and serialized payload\&. Submessages only if TRUE\&. 
+.br
+\fIexception\fP (out) Security exception\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Crypto \fBHandle\fP to the generated key material\&. 
+.RE
+.PP
+
+.SS "virtual \fBDatawriterCryptoHandle\fP* eprosima::fastrtps::rtps::security::CryptoKeyFactory::register_matched_remote_datawriter (\fBDatareaderCryptoHandle\fP & local_datareader_crypto_handle, \fBParticipantCryptoHandle\fP & remote_participant_crypt, const \fBSharedSecretHandle\fP & shared_secret, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+Register a remote DataWriter that has been granted permission to match with a local DataReader\&. Creates crypto material to decrypt messages coming from and encode messages going towards that datareader 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocal_datareader_crypto_handle\fP 
+.br
+\fIremote_participant_crypt\fP 
+.br
+\fIshared_secret\fP 
+.br
+\fIexception\fP (out) Security exception 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Crypto handle to the generated key material 
+.RE
+.PP
+
+.SS "virtual \fBParticipantCryptoHandle\fP* eprosima::fastrtps::rtps::security::CryptoKeyFactory::register_matched_remote_participant (const \fBParticipantCryptoHandle\fP & local_participant_crypto_handle, const \fBIdentityHandle\fP & remote_participant_identity, const \fBPermissionsHandle\fP & remote_participant_permissions, const \fBSharedSecretHandle\fP & shared_secret, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+Register a remote, already authenticated \fBParticipant\fP with the Cryptographic Plugin\&. Creates key material to decrypt messages coming from and aimed at it\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocal_participant_crypto_handle\fP Returned by a prior call to register_local_participant 
+.br
+\fIremote_participant_identity\fP Returned by a prior call to validate_remote_identity 
+.br
+\fIremote_participant_permissions\fP Returned by a prior call to validate_remote_permissions 
+.br
+\fIshared_secret\fP Returned by a prior call to get_shared_secret (Auth Handshake) 
+.br
+\fIexception\fP (out) Security exception 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ParticipantCryptoHandle with generated key material 
+.RE
+.PP
+
+.SS "virtual bool eprosima::fastrtps::rtps::security::CryptoKeyFactory::unregister_datareader (\fBDatareaderCryptoHandle\fP * datareader_crypto_handle, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+Releases resources associated with a DataReader\&. The Crypto \fBHandle\fP becomes unusable after this 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdatareader_crypto_handle\fP Belonging to the DataReader that awaits termination 
+.br
+\fIexception\fP (out) Security exception 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+TRUE is succesful 
+.RE
+.PP
+
+.SS "virtual bool eprosima::fastrtps::rtps::security::CryptoKeyFactory::unregister_datawriter (\fBDatawriterCryptoHandle\fP * datawriter_crypto_handle, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+Releases resources associated with a DataWriter\&. The Crypto \fBHandle\fP becomes unusable after this 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdatawriter_crypto_handle\fP Belonging to the DataWriter that awaits termination 
+.br
+\fIexception\fP (out) Security exception 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+TRUE is succesful 
+.RE
+.PP
+
+.SS "virtual bool eprosima::fastrtps::rtps::security::CryptoKeyFactory::unregister_participant (\fBParticipantCryptoHandle\fP * participant_crypto_handle, \fBSecurityException\fP & exception)\fC [pure virtual]\fP"
+Releases resources associated with a \fBParticipant\fP\&. The Crypto \fBHandle\fP becomes unusable after this 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparticipant_crypto_handle\fP Belonging to the \fBParticipant\fP that awaits termination 
+.br
+\fIexception\fP (out) Security exception 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+TRUE is succesful 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

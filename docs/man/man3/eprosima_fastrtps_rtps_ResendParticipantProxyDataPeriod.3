@@ -1,0 +1,70 @@
+.TH "eprosima::fastrtps::rtps::ResendParticipantProxyDataPeriod" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::ResendParticipantProxyDataPeriod
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ResendParticipantProxyDataPeriod\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::TimedEvent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBResendParticipantProxyDataPeriod\fP (\fBPDPSimple\fP *p_SPDP, double interval)"
+.br
+.ti -1c
+.RI "void \fBevent\fP (\fBEventCode\fP code, const char *msg=nullptr)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCDRMessage_t\fP \fBm_data_msg\fP"
+.br
+.RI "Auxiliar data message\&. "
+.ti -1c
+.RI "\fBPDPSimple\fP * \fBmp_PDP\fP"
+.br
+.RI "Pointer to the \fBPDPSimple\fP object\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Class \fBResendParticipantProxyDataPeriod\fP, \fBTimedEvent\fP used to periodically send the RTPSParticipantDiscovery Data\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eprosima::fastrtps::rtps::ResendParticipantProxyDataPeriod::ResendParticipantProxyDataPeriod (\fBPDPSimple\fP * p_SPDP, double interval)"
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp_SPDP\fP Pointer to the \fBPDPSimple\fP\&. 
+.br
+\fIinterval\fP Interval in ms\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void eprosima::fastrtps::rtps::ResendParticipantProxyDataPeriod::event (\fBEventCode\fP code, const char * msg = \fCnullptr\fP)\fC [virtual]\fP"
+Method invoked when the event occurs\&. This temporal event resends the RTPSParticipantProxyData to all remote RTPSParticipants\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcode\fP Code representing the status of the event 
+.br
+\fImsg\fP Message associated to the event 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::TimedEvent\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

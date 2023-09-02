@@ -1,0 +1,886 @@
+.TH "apollo::prediction::Feature" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::prediction::Feature
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkPolygonPointFieldNumber\fP = 30, \fBkFutureTrajectoryPointsFieldNumber\fP = 31, \fBkShortTermPredictedTrajectoryPointsFieldNumber\fP = 32, \fBkPredictedTrajectoryFieldNumber\fP = 33, \fBkAdcTrajectoryPointFieldNumber\fP = 34, \fBkSurroundingLaneIdFieldNumber\fP = 35, \fBkWithinLaneIdFieldNumber\fP = 36, \fBkPositionFieldNumber\fP = 2, \fBkVelocityFieldNumber\fP = 3, \fBkAccelerationFieldNumber\fP = 4, \fBkLaneFieldNumber\fP = 14, \fBkTPositionFieldNumber\fP = 16, \fBkTVelocityFieldNumber\fP = 17, \fBkTAccelerationFieldNumber\fP = 20, \fBkPriorityFieldNumber\fP = 25, \fBkJunctionFeatureFieldNumber\fP = 26, \fBkFrontPositionFieldNumber\fP = 27, \fBkRawVelocityFieldNumber\fP = 28, \fBkInteractiveTagFieldNumber\fP = 37, \fBkAdcLocalizationFieldNumber\fP = 39, \fBkVelocityHeadingFieldNumber\fP = 5, \fBkSpeedFieldNumber\fP = 6, \fBkAccFieldNumber\fP = 7, \fBkThetaFieldNumber\fP = 8, \fBkLengthFieldNumber\fP = 9, \fBkWidthFieldNumber\fP = 10, \fBkHeightFieldNumber\fP = 11, \fBkTrackingTimeFieldNumber\fP = 12, \fBkIdFieldNumber\fP = 1, \fBkTypeFieldNumber\fP = 23, \fBkTimestampFieldNumber\fP = 13, \fBkTVelocityHeadingFieldNumber\fP = 18, \fBkTSpeedFieldNumber\fP = 19, \fBkTAccFieldNumber\fP = 21, \fBkLabelUpdateTimeDeltaFieldNumber\fP = 24, \fBkAdcTimestampFieldNumber\fP = 38, \fBkIsStillFieldNumber\fP = 22, \fBkIsNearJunctionFieldNumber\fP = 29 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBFeature\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBFeature\fP (const \fBFeature\fP &from)"
+.br
+.ti -1c
+.RI "\fBFeature\fP (\fBFeature\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBFeature\fP & \fBoperator=\fP (const \fBFeature\fP &from)"
+.br
+.ti -1c
+.RI "\fBFeature\fP & \fBoperator=\fP (\fBFeature\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBFeature\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBFeature\fP *other)"
+.br
+.ti -1c
+.RI "\fBFeature\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBFeature\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBFeature\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBpolygon_point_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_polygon_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_polygon_point\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::Point3D\fP > * \fBmutable_polygon_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBpolygon_point\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBadd_polygon_point\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::Point3D\fP > & \fBpolygon_point\fP () const"
+.br
+.ti -1c
+.RI "int \fBfuture_trajectory_points_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_future_trajectory_points\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::prediction::PredictionTrajectoryPoint\fP * \fBmutable_future_trajectory_points\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::prediction::PredictionTrajectoryPoint\fP > * \fBmutable_future_trajectory_points\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::prediction::PredictionTrajectoryPoint\fP & \fBfuture_trajectory_points\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::prediction::PredictionTrajectoryPoint\fP * \fBadd_future_trajectory_points\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::prediction::PredictionTrajectoryPoint\fP > & \fBfuture_trajectory_points\fP () const"
+.br
+.ti -1c
+.RI "int \fBshort_term_predicted_trajectory_points_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_short_term_predicted_trajectory_points\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBmutable_short_term_predicted_trajectory_points\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::TrajectoryPoint\fP > * \fBmutable_short_term_predicted_trajectory_points\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::TrajectoryPoint\fP & \fBshort_term_predicted_trajectory_points\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBadd_short_term_predicted_trajectory_points\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::TrajectoryPoint\fP > & \fBshort_term_predicted_trajectory_points\fP () const"
+.br
+.ti -1c
+.RI "int \fBpredicted_trajectory_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_predicted_trajectory\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::prediction::Trajectory\fP * \fBmutable_predicted_trajectory\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::prediction::Trajectory\fP > * \fBmutable_predicted_trajectory\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::prediction::Trajectory\fP & \fBpredicted_trajectory\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::prediction::Trajectory\fP * \fBadd_predicted_trajectory\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::prediction::Trajectory\fP > & \fBpredicted_trajectory\fP () const"
+.br
+.ti -1c
+.RI "int \fBadc_trajectory_point_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_adc_trajectory_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBmutable_adc_trajectory_point\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::TrajectoryPoint\fP > * \fBmutable_adc_trajectory_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::TrajectoryPoint\fP & \fBadc_trajectory_point\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBadd_adc_trajectory_point\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::TrajectoryPoint\fP > & \fBadc_trajectory_point\fP () const"
+.br
+.ti -1c
+.RI "int \fBsurrounding_lane_id_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_surrounding_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBsurrounding_lane_id\fP (int index) const"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_surrounding_lane_id\fP (int index)"
+.br
+.ti -1c
+.RI "void \fBset_surrounding_lane_id\fP (int index, const std::string &value)"
+.br
+.ti -1c
+.RI "void \fBset_surrounding_lane_id\fP (int index, std::string &&value)"
+.br
+.ti -1c
+.RI "void \fBset_surrounding_lane_id\fP (int index, const char *value)"
+.br
+.ti -1c
+.RI "void \fBset_surrounding_lane_id\fP (int index, const char *value, size_t size)"
+.br
+.ti -1c
+.RI "std::string * \fBadd_surrounding_lane_id\fP ()"
+.br
+.ti -1c
+.RI "void \fBadd_surrounding_lane_id\fP (const std::string &value)"
+.br
+.ti -1c
+.RI "void \fBadd_surrounding_lane_id\fP (std::string &&value)"
+.br
+.ti -1c
+.RI "void \fBadd_surrounding_lane_id\fP (const char *value)"
+.br
+.ti -1c
+.RI "void \fBadd_surrounding_lane_id\fP (const char *value, size_t size)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< std::string > & \fBsurrounding_lane_id\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< std::string > * \fBmutable_surrounding_lane_id\fP ()"
+.br
+.ti -1c
+.RI "int \fBwithin_lane_id_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_within_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBwithin_lane_id\fP (int index) const"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_within_lane_id\fP (int index)"
+.br
+.ti -1c
+.RI "void \fBset_within_lane_id\fP (int index, const std::string &value)"
+.br
+.ti -1c
+.RI "void \fBset_within_lane_id\fP (int index, std::string &&value)"
+.br
+.ti -1c
+.RI "void \fBset_within_lane_id\fP (int index, const char *value)"
+.br
+.ti -1c
+.RI "void \fBset_within_lane_id\fP (int index, const char *value, size_t size)"
+.br
+.ti -1c
+.RI "std::string * \fBadd_within_lane_id\fP ()"
+.br
+.ti -1c
+.RI "void \fBadd_within_lane_id\fP (const std::string &value)"
+.br
+.ti -1c
+.RI "void \fBadd_within_lane_id\fP (std::string &&value)"
+.br
+.ti -1c
+.RI "void \fBadd_within_lane_id\fP (const char *value)"
+.br
+.ti -1c
+.RI "void \fBadd_within_lane_id\fP (const char *value, size_t size)"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< std::string > & \fBwithin_lane_id\fP () const"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< std::string > * \fBmutable_within_lane_id\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_position\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBposition\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_position\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_position\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_position\fP (::\fBapollo::common::Point3D\fP *position)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_position\fP (::\fBapollo::common::Point3D\fP *position)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_position\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_velocity\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_velocity\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBvelocity\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_velocity\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_velocity\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_velocity\fP (::\fBapollo::common::Point3D\fP *velocity)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_velocity\fP (::\fBapollo::common::Point3D\fP *velocity)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_velocity\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_acceleration\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acceleration\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBacceleration\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_acceleration\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_acceleration\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_acceleration\fP (::\fBapollo::common::Point3D\fP *acceleration)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_acceleration\fP (::\fBapollo::common::Point3D\fP *acceleration)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_acceleration\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_lane\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_lane\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::prediction::Lane\fP & \fBlane\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::prediction::Lane\fP * \fBrelease_lane\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::prediction::Lane\fP * \fBmutable_lane\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_lane\fP (::\fBapollo::prediction::Lane\fP *lane)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_lane\fP (::\fBapollo::prediction::Lane\fP *lane)"
+.br
+.ti -1c
+.RI "::\fBapollo::prediction::Lane\fP * \fBunsafe_arena_release_lane\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_t_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_t_position\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBt_position\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_t_position\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_t_position\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_t_position\fP (::\fBapollo::common::Point3D\fP *t_position)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_t_position\fP (::\fBapollo::common::Point3D\fP *t_position)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_t_position\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_t_velocity\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_t_velocity\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATEDconst ::\fBapollo::common::Point3D\fP & \fBt_velocity\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD PROTOBUF_DEPRECATED ::\fBapollo::common::Point3D\fP * \fBrelease_t_velocity\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED ::\fBapollo::common::Point3D\fP * \fBmutable_t_velocity\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_allocated_t_velocity\fP (::\fBapollo::common::Point3D\fP *t_velocity)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBunsafe_arena_set_allocated_t_velocity\fP (::\fBapollo::common::Point3D\fP *t_velocity)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED ::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_t_velocity\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_t_acceleration\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_t_acceleration\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATEDconst ::\fBapollo::common::Point3D\fP & \fBt_acceleration\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD PROTOBUF_DEPRECATED ::\fBapollo::common::Point3D\fP * \fBrelease_t_acceleration\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED ::\fBapollo::common::Point3D\fP * \fBmutable_t_acceleration\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_allocated_t_acceleration\fP (::\fBapollo::common::Point3D\fP *t_acceleration)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBunsafe_arena_set_allocated_t_acceleration\fP (::\fBapollo::common::Point3D\fP *t_acceleration)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED ::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_t_acceleration\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_priority\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_priority\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::prediction::ObstaclePriority\fP & \fBpriority\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::prediction::ObstaclePriority\fP * \fBrelease_priority\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::prediction::ObstaclePriority\fP * \fBmutable_priority\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_priority\fP (::\fBapollo::prediction::ObstaclePriority\fP *priority)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_priority\fP (::\fBapollo::prediction::ObstaclePriority\fP *priority)"
+.br
+.ti -1c
+.RI "::\fBapollo::prediction::ObstaclePriority\fP * \fBunsafe_arena_release_priority\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_junction_feature\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_junction_feature\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::prediction::JunctionFeature\fP & \fBjunction_feature\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::prediction::JunctionFeature\fP * \fBrelease_junction_feature\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::prediction::JunctionFeature\fP * \fBmutable_junction_feature\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_junction_feature\fP (::\fBapollo::prediction::JunctionFeature\fP *junction_feature)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_junction_feature\fP (::\fBapollo::prediction::JunctionFeature\fP *junction_feature)"
+.br
+.ti -1c
+.RI "::\fBapollo::prediction::JunctionFeature\fP * \fBunsafe_arena_release_junction_feature\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_front_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_front_position\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBfront_position\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_front_position\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_front_position\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_front_position\fP (::\fBapollo::common::Point3D\fP *front_position)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_front_position\fP (::\fBapollo::common::Point3D\fP *front_position)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_front_position\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_raw_velocity\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_raw_velocity\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBraw_velocity\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_raw_velocity\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_raw_velocity\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_raw_velocity\fP (::\fBapollo::common::Point3D\fP *raw_velocity)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_raw_velocity\fP (::\fBapollo::common::Point3D\fP *raw_velocity)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_raw_velocity\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_interactive_tag\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_interactive_tag\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::prediction::ObstacleInteractiveTag\fP & \fBinteractive_tag\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::prediction::ObstacleInteractiveTag\fP * \fBrelease_interactive_tag\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::prediction::ObstacleInteractiveTag\fP * \fBmutable_interactive_tag\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_interactive_tag\fP (::\fBapollo::prediction::ObstacleInteractiveTag\fP *interactive_tag)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_interactive_tag\fP (::\fBapollo::prediction::ObstacleInteractiveTag\fP *interactive_tag)"
+.br
+.ti -1c
+.RI "::\fBapollo::prediction::ObstacleInteractiveTag\fP * \fBunsafe_arena_release_interactive_tag\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_adc_localization\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_adc_localization\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::PerceptionObstacle\fP & \fBadc_localization\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::perception::PerceptionObstacle\fP * \fBrelease_adc_localization\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::PerceptionObstacle\fP * \fBmutable_adc_localization\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_adc_localization\fP (::\fBapollo::perception::PerceptionObstacle\fP *adc_localization)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_adc_localization\fP (::\fBapollo::perception::PerceptionObstacle\fP *adc_localization)"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::PerceptionObstacle\fP * \fBunsafe_arena_release_adc_localization\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_velocity_heading\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_velocity_heading\fP ()"
+.br
+.ti -1c
+.RI "double \fBvelocity_heading\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_velocity_heading\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed\fP ()"
+.br
+.ti -1c
+.RI "double \fBspeed\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_speed\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_acc\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_acc\fP ()"
+.br
+.ti -1c
+.RI "double \fBacc\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_acc\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_theta\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_theta\fP ()"
+.br
+.ti -1c
+.RI "double \fBtheta\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_theta\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_length\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_length\fP ()"
+.br
+.ti -1c
+.RI "double \fBlength\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_length\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_width\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_width\fP ()"
+.br
+.ti -1c
+.RI "double \fBwidth\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_width\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_height\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_height\fP ()"
+.br
+.ti -1c
+.RI "double \fBheight\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_height\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_tracking_time\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_tracking_time\fP ()"
+.br
+.ti -1c
+.RI "double \fBtracking_time\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_tracking_time\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_id\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_id\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::perception::PerceptionObstacle_Type \fBtype\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_type\fP (::apollo::perception::PerceptionObstacle_Type value)"
+.br
+.ti -1c
+.RI "bool \fBhas_timestamp\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_timestamp\fP ()"
+.br
+.ti -1c
+.RI "double \fBtimestamp\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_timestamp\fP (double value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_t_velocity_heading\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_t_velocity_heading\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED double \fBt_velocity_heading\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_t_velocity_heading\fP (double value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_t_speed\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_t_speed\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED double \fBt_speed\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_t_speed\fP (double value)"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED bool \fBhas_t_acc\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBclear_t_acc\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED double \fBt_acc\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_DEPRECATED void \fBset_t_acc\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_label_update_time_delta\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_label_update_time_delta\fP ()"
+.br
+.ti -1c
+.RI "double \fBlabel_update_time_delta\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_label_update_time_delta\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_adc_timestamp\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_adc_timestamp\fP ()"
+.br
+.ti -1c
+.RI "double \fBadc_timestamp\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_adc_timestamp\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_still\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_still\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_still\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_still\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_near_junction\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_near_junction\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_near_junction\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_near_junction\fP (bool value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBFeature\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBFeature\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFeature\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fprediction_5fmsgs_2ffeature_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBFeature\fP &a, \fBFeature\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::prediction::Feature::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Feature::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::prediction::Feature::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    7
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

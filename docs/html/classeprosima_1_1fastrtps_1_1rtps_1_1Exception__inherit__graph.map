@@ -1,0 +1,5 @@
+<map id="eprosima::fastrtps::rtps::Exception" name="eprosima::fastrtps::rtps::Exception">
+<area shape="rect" id="node1" title="This abstract class is used to create exceptions." alt="" coords="7,131,521,369"/>
+<area shape="rect" id="node3" href="$classeprosima_1_1fastrtps_1_1rtps_1_1security_1_1SecurityException.html" title="This class is thrown as an exception when there is an error in security module." alt="" coords="5,417,523,597"/>
+<area shape="rect" id="node2" title=" " alt="" coords="207,5,321,83"/>
+</map>

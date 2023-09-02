@@ -1,8 +1,41 @@
 <map id="cyber_launch.ProcessWrapper.start" name="cyber_launch.ProcessWrapper.start">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,256,133"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1message_1_1PyMessageWrap_1_1Descriptor.html#a4c42bf8e089f1d509e487147ea3aa0d7" title=" " alt="" coords="304,5,713,32"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1message_1_1RawMessage_1_1Descriptor.html#a831765cc3a9f3145e97c1ad8e217f6e3" title=" " alt="" coords="315,56,702,83"/>
-<area shape="rect" id="node4" href="$classapollo_1_1cyber_1_1PyParameter.html#a39a7759be16cacffad65e8c1bc9cbbf0" title=" " alt="" coords="387,107,630,133"/>
-<area shape="rect" id="node5" href="$classapollo_1_1cyber_1_1croutine_1_1CRoutine.html#ae6b51006783e4448dc74eccd3025d5f1" title=" " alt="" coords="369,157,648,184"/>
-<area shape="rect" id="node6" href="$classcyber__py3_1_1parameter_1_1Parameter.html#a357e22b6aa7d7a7b78c213afe0bb55a8" title=" " alt="" coords="373,208,644,235"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,918,256,944"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1PyParameter.html#a39a7759be16cacffad65e8c1bc9cbbf0" title=" " alt="" coords="409,6,652,32"/>
+<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1proto_1_1ChoreographyTask.html#a150fcf0a428840ffe65d1b135a5f86b6" title=" " alt="" coords="370,56,691,83"/>
+<area shape="rect" id="node4" href="$classapollo_1_1cyber_1_1proto_1_1ClassicTask.html#a875d3470d37d6239a04c89b530e9987f" title=" " alt="" coords="393,107,669,134"/>
+<area shape="rect" id="node5" href="$classapollo_1_1cyber_1_1proto_1_1SchedGroup.html#a6cc059e80d063019ffd329d3e6cde546" title=" " alt="" coords="391,158,670,184"/>
+<area shape="rect" id="node6" href="$classapollo_1_1cyber_1_1proto_1_1ComponentConfig.html#a1b6e4f345917dd44a8cd51fccbe5d7bb" title=" " alt="" coords="371,208,690,235"/>
+<area shape="rect" id="node7" href="$classapollo_1_1cyber_1_1proto_1_1TimerComponentConfig.html#aa2e2f41bc2d7c59c17f266c026aa99b6" title=" " alt="" coords="353,259,708,286"/>
+<area shape="rect" id="node8" href="$classapollo_1_1cyber_1_1proto_1_1Param.html#a8ef4abaf346718211c8bf3657fa52542" title=" " alt="" coords="409,310,652,336"/>
+<area shape="rect" id="node9" href="$classapollo_1_1cyber_1_1proto_1_1ChannelCache.html#a1a591998531d650188fe7718774b5d23" title=" " alt="" coords="383,360,678,387"/>
+<area shape="rect" id="node10" href="$classapollo_1_1cyber_1_1proto_1_1Channel.html#a58a8c3088efac30133ab9d7b6246cf5b" title=" " alt="" coords="403,411,658,438"/>
+<area shape="rect" id="node11" href="$classapollo_1_1cyber_1_1proto_1_1InnerThread.html#a32ca61b015c4371b7987c09037b1e6e1" title=" " alt="" coords="391,462,670,488"/>
+<area shape="rect" id="node12" href="$classapollo_1_1common_1_1Path.html#a5a920090670609c84accbc21b40ae817" title=" " alt="" coords="426,512,635,539"/>
+<area shape="rect" id="node13" href="$classapollo_1_1common_1_1Trajectory.html#aa10817ff908c2a4f881e188bf7096d2a" title=" " alt="" coords="409,563,653,590"/>
+<area shape="rect" id="node14" href="$classapollo_1_1common_1_1VehicleMotion.html#a946ded2d630cbd31eb8966dda36d096d" title=" " alt="" coords="394,614,667,640"/>
+<area shape="rect" id="node15" href="$classapollo_1_1hdmap_1_1SpeedControl.html#a08ede20e3ed01ddcf494adee140358a9" title=" " alt="" coords="403,664,658,691"/>
+<area shape="rect" id="node16" href="$classapollo_1_1planning_1_1TaskStats.html#ad66741b18067733bfdfc505f84fb13cb" title=" " alt="" coords="410,715,651,742"/>
+<area shape="rect" id="node17" href="$classapollo_1_1planning__internal_1_1SpeedPlan.html#ac0eb0d0acb70b6fb5e7971b1d785d5ed" title=" " alt="" coords="379,766,683,792"/>
+<area shape="rect" id="node18" href="$classapollo_1_1planning__internal_1_1StGraphBoundaryDebug.html#a058799fd4cd0521ccc4dcfad8d919d73" title=" " alt="" coords="335,816,727,843"/>
+<area shape="rect" id="node19" href="$classapollo_1_1planning__internal_1_1SLFrameDebug.html#a6b1eae31c6b0798f8b52213ec04f06d4" title=" " alt="" coords="363,867,698,894"/>
+<area shape="rect" id="node20" href="$classapollo_1_1planning__internal_1_1STGraphDebug.html#a1ee9a4671d3984552d41c408f44f5578" title=" " alt="" coords="364,918,697,944"/>
+<area shape="rect" id="node21" href="$classapollo_1_1routing_1_1Landmark.html#a8eb8c7e4270e31ed4557fa15e91e1538" title=" " alt="" coords="413,968,648,995"/>
+<area shape="rect" id="node22" href="$classapollo_1_1simulation_1_1SpeedCondition.html#a93427dddd7189160fa2a0ee81ca822d3" title=" " alt="" coords="383,1019,678,1046"/>
+<area shape="rect" id="node23" href="$classapollo_1_1simulation_1_1CentripetalAccelerationCondition.html#a43cb0a5c198aa3f75455710f02ea63c7" title=" " alt="" coords="327,1070,734,1096"/>
+<area shape="rect" id="node24" href="$classapollo_1_1simulation_1_1AccelerationCondition.html#a0feef9c66503342a3f48d838b30d1793" title=" " alt="" coords="363,1120,698,1147"/>
+<area shape="rect" id="node25" href="$classapollo_1_1simulation_1_1JerkCondition.html#a0f4f11df0739848a3c4ada8174ee75e2" title=" " alt="" coords="391,1171,670,1198"/>
+<area shape="rect" id="node26" href="$classapollo_1_1simulation_1_1SpinCondition.html#a9a9e3156dd3eb6efc1a6a78476b0edcb" title=" " alt="" coords="389,1222,672,1248"/>
+<area shape="rect" id="node27" href="$classapollo_1_1simulation_1_1Metric.html#a0a02502d4b0c7075188f34bdbdc9b36c" title=" " alt="" coords="414,1272,647,1299"/>
+<area shape="rect" id="node28" href="$classapollo_1_1simulation_1_1Scenario.html#aa757822768213657ff64d6d363523f7a" title=" " alt="" coords="407,1323,655,1350"/>
+<area shape="rect" id="node29" href="$classapollo_1_1cyber_1_1croutine_1_1CRoutine.html#ae6b51006783e4448dc74eccd3025d5f1" title=" " alt="" coords="391,1374,670,1400"/>
+<area shape="rect" id="node30" href="$classapollo_1_1cyber_1_1message_1_1PyMessageWrap_1_1Descriptor.html#a4c42bf8e089f1d509e487147ea3aa0d7" title=" " alt="" coords="326,1424,735,1451"/>
+<area shape="rect" id="node31" href="$classapollo_1_1cyber_1_1message_1_1RawMessage_1_1Descriptor.html#a831765cc3a9f3145e97c1ad8e217f6e3" title=" " alt="" coords="337,1475,724,1502"/>
+<area shape="rect" id="node32" href="$classeprosima_1_1fastrtps_1_1rtps_1_1BinaryProperty.html#a1268e6511710905ea3d7ffb2626b311a" title=" " alt="" coords="369,1526,692,1552"/>
+<area shape="rect" id="node33" href="$classeprosima_1_1fastrtps_1_1rtps_1_1Property.html#ae47dba2c483db23cddc0be8a5b935aa9" title=" " alt="" coords="390,1576,671,1603"/>
+<area shape="rect" id="node34" href="$classeprosima_1_1fastrtps_1_1rtps_1_1security_1_1SharedSecret_1_1BinaryData.html#aae3629a8f824c530237d70dc6e92dbf5" title=" " alt="" coords="304,1627,757,1654"/>
+<area shape="rect" id="node35" href="$classcyber__py3_1_1parameter_1_1Parameter.html#a357e22b6aa7d7a7b78c213afe0bb55a8" title=" " alt="" coords="393,1678,668,1704"/>
+<area shape="rect" id="node37" href="$classtesting_1_1TestInfo.html#ac2581b45eccc9a3b94cb41c4807d0e34" title=" " alt="" coords="445,1728,616,1755"/>
+<area shape="rect" id="node38" href="$classtesting_1_1TestSuite.html#ab3369db678ca3d9648d6fd63ad038986" title=" " alt="" coords="441,1779,620,1806"/>
+<area shape="rect" id="node39" href="$classapollo_1_1drivers_1_1Acm__inst__resp__7e4.html#a504ae6de4317295f0040619d359bc99b" title=" " alt="" coords="392,1830,669,1856"/>
+<area shape="rect" id="node36" href="$classapollo_1_1cyber_1_1proto_1_1Params.html#a08730b0947be74db9aa9a6dc59ae1246" title=" " alt="" coords="805,1678,1060,1704"/>
 </map>

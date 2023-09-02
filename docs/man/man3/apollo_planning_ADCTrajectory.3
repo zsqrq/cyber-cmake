@@ -1,0 +1,734 @@
+.TH "apollo::planning::ADCTrajectory" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::planning::ADCTrajectory
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkTrajectoryPointFieldNumber\fP = 12, \fBkPathPointFieldNumber\fP = 13, \fBkLaneIdFieldNumber\fP = 18, \fBkTargetLaneIdFieldNumber\fP = 23, \fBkReplanReasonFieldNumber\fP = 22, \fBkHeaderFieldNumber\fP = 1, \fBkEstopFieldNumber\fP = 6, \fBkDebugFieldNumber\fP = 8, \fBkDecisionFieldNumber\fP = 14, \fBkLatencyStatsFieldNumber\fP = 15, \fBkRoutingHeaderFieldNumber\fP = 16, \fBkEngageAdviceFieldNumber\fP = 19, \fBkCriticalRegionFieldNumber\fP = 20, \fBkRssInfoFieldNumber\fP = 100, \fBkTotalPathLengthFieldNumber\fP = 2, \fBkTotalPathTimeFieldNumber\fP = 3, \fBkGearFieldNumber\fP = 10, \fBkIsReplanFieldNumber\fP = 9, \fBkCarInDeadEndFieldNumber\fP = 24, \fBkRightOfWayStatusFieldNumber\fP = 17, \fBkTrajectoryTypeFieldNumber\fP = 21 }"
+.br
+.ti -1c
+.RI "typedef \fBADCTrajectory_CriticalRegion\fP \fBCriticalRegion\fP"
+.br
+.ti -1c
+.RI "typedef ADCTrajectory_RightOfWayStatus \fBRightOfWayStatus\fP"
+.br
+.ti -1c
+.RI "typedef ADCTrajectory_TrajectoryType \fBTrajectoryType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBADCTrajectory\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBADCTrajectory\fP (const \fBADCTrajectory\fP &from)"
+.br
+.ti -1c
+.RI "\fBADCTrajectory\fP (\fBADCTrajectory\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBADCTrajectory\fP & \fBoperator=\fP (const \fBADCTrajectory\fP &from)"
+.br
+.ti -1c
+.RI "\fBADCTrajectory\fP & \fBoperator=\fP (\fBADCTrajectory\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBADCTrajectory\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBADCTrajectory\fP *other)"
+.br
+.ti -1c
+.RI "\fBADCTrajectory\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBADCTrajectory\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBADCTrajectory\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBtrajectory_point_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_trajectory_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBmutable_trajectory_point\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::TrajectoryPoint\fP > * \fBmutable_trajectory_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::TrajectoryPoint\fP & \fBtrajectory_point\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::common::TrajectoryPoint\fP * \fBadd_trajectory_point\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::TrajectoryPoint\fP > & \fBtrajectory_point\fP () const"
+.br
+.ti -1c
+.RI "int \fBpath_point_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_path_point\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::PathPoint\fP * \fBmutable_path_point\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::PathPoint\fP > * \fBmutable_path_point\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::PathPoint\fP & \fBpath_point\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::common::PathPoint\fP * \fBadd_path_point\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::PathPoint\fP > & \fBpath_point\fP () const"
+.br
+.ti -1c
+.RI "int \fBlane_id_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_lane_id\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBmutable_lane_id\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > * \fBmutable_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Id\fP & \fBlane_id\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBadd_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > & \fBlane_id\fP () const"
+.br
+.ti -1c
+.RI "int \fBtarget_lane_id_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_target_lane_id\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBmutable_target_lane_id\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > * \fBmutable_target_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::hdmap::Id\fP & \fBtarget_lane_id\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::hdmap::Id\fP * \fBadd_target_lane_id\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::hdmap::Id\fP > & \fBtarget_lane_id\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhas_replan_reason\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_replan_reason\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBreplan_reason\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_replan_reason\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_replan_reason\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_replan_reason\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_replan_reason\fP (std::string *replan_reason)"
+.br
+.ti -1c
+.RI "bool \fBhas_header\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_header\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Header\fP & \fBheader\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Header\fP * \fBrelease_header\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBmutable_header\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_header\fP (::\fBapollo::common::Header\fP *header)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBunsafe_arena_release_header\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_estop\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_estop\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning::EStop\fP & \fBestop\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::planning::EStop\fP * \fBrelease_estop\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning::EStop\fP * \fBmutable_estop\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_estop\fP (::\fBapollo::planning::EStop\fP *estop)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_estop\fP (::\fBapollo::planning::EStop\fP *estop)"
+.br
+.ti -1c
+.RI "::\fBapollo::planning::EStop\fP * \fBunsafe_arena_release_estop\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_debug\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_debug\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning_internal::Debug\fP & \fBdebug\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::planning_internal::Debug\fP * \fBrelease_debug\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::Debug\fP * \fBmutable_debug\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_debug\fP (::\fBapollo::planning_internal::Debug\fP *debug)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_debug\fP (::\fBapollo::planning_internal::Debug\fP *debug)"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::Debug\fP * \fBunsafe_arena_release_debug\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_decision\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_decision\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning::DecisionResult\fP & \fBdecision\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::planning::DecisionResult\fP * \fBrelease_decision\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning::DecisionResult\fP * \fBmutable_decision\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_decision\fP (::\fBapollo::planning::DecisionResult\fP *decision)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_decision\fP (::\fBapollo::planning::DecisionResult\fP *decision)"
+.br
+.ti -1c
+.RI "::\fBapollo::planning::DecisionResult\fP * \fBunsafe_arena_release_decision\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_latency_stats\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_latency_stats\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning::LatencyStats\fP & \fBlatency_stats\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::planning::LatencyStats\fP * \fBrelease_latency_stats\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning::LatencyStats\fP * \fBmutable_latency_stats\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_latency_stats\fP (::\fBapollo::planning::LatencyStats\fP *latency_stats)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_latency_stats\fP (::\fBapollo::planning::LatencyStats\fP *latency_stats)"
+.br
+.ti -1c
+.RI "::\fBapollo::planning::LatencyStats\fP * \fBunsafe_arena_release_latency_stats\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_routing_header\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_routing_header\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Header\fP & \fBrouting_header\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Header\fP * \fBrelease_routing_header\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBmutable_routing_header\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_routing_header\fP (::\fBapollo::common::Header\fP *routing_header)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_routing_header\fP (::\fBapollo::common::Header\fP *routing_header)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Header\fP * \fBunsafe_arena_release_routing_header\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_engage_advice\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_engage_advice\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::EngageAdvice\fP & \fBengage_advice\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::EngageAdvice\fP * \fBrelease_engage_advice\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::EngageAdvice\fP * \fBmutable_engage_advice\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_engage_advice\fP (::\fBapollo::common::EngageAdvice\fP *engage_advice)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_engage_advice\fP (::\fBapollo::common::EngageAdvice\fP *engage_advice)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::EngageAdvice\fP * \fBunsafe_arena_release_engage_advice\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_critical_region\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_critical_region\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning::ADCTrajectory_CriticalRegion\fP & \fBcritical_region\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::planning::ADCTrajectory_CriticalRegion\fP * \fBrelease_critical_region\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning::ADCTrajectory_CriticalRegion\fP * \fBmutable_critical_region\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_critical_region\fP (::\fBapollo::planning::ADCTrajectory_CriticalRegion\fP *critical_region)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_critical_region\fP (::\fBapollo::planning::ADCTrajectory_CriticalRegion\fP *critical_region)"
+.br
+.ti -1c
+.RI "::\fBapollo::planning::ADCTrajectory_CriticalRegion\fP * \fBunsafe_arena_release_critical_region\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_rss_info\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_rss_info\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning::RSSInfo\fP & \fBrss_info\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::planning::RSSInfo\fP * \fBrelease_rss_info\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning::RSSInfo\fP * \fBmutable_rss_info\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_rss_info\fP (::\fBapollo::planning::RSSInfo\fP *rss_info)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_rss_info\fP (::\fBapollo::planning::RSSInfo\fP *rss_info)"
+.br
+.ti -1c
+.RI "::\fBapollo::planning::RSSInfo\fP * \fBunsafe_arena_release_rss_info\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_total_path_length\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_total_path_length\fP ()"
+.br
+.ti -1c
+.RI "double \fBtotal_path_length\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_total_path_length\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_total_path_time\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_total_path_time\fP ()"
+.br
+.ti -1c
+.RI "double \fBtotal_path_time\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_total_path_time\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_gear\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_gear\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Chassis_GearPosition \fBgear\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_gear\fP (::apollo::canbus::Chassis_GearPosition value)"
+.br
+.ti -1c
+.RI "bool \fBhas_is_replan\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_is_replan\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_replan\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_is_replan\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_car_in_dead_end\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_car_in_dead_end\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcar_in_dead_end\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_car_in_dead_end\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_right_of_way_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_right_of_way_status\fP ()"
+.br
+.ti -1c
+.RI "::apollo::planning::ADCTrajectory_RightOfWayStatus \fBright_of_way_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_right_of_way_status\fP (::apollo::planning::ADCTrajectory_RightOfWayStatus value)"
+.br
+.ti -1c
+.RI "bool \fBhas_trajectory_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_trajectory_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::planning::ADCTrajectory_TrajectoryType \fBtrajectory_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_trajectory_type\fP (::apollo::planning::ADCTrajectory_TrajectoryType value)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_replan_reason\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBADCTrajectory\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBADCTrajectory\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBRightOfWayStatus_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBRightOfWayStatus_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBRightOfWayStatus_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBRightOfWayStatus_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, RightOfWayStatus *value)"
+.br
+.ti -1c
+.RI "static bool \fBTrajectoryType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBTrajectoryType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBTrajectoryType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBTrajectoryType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, TrajectoryType *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr RightOfWayStatus \fBUNPROTECTED\fP"
+.br
+.ti -1c
+.RI "static constexpr RightOfWayStatus \fBPROTECTED\fP"
+.br
+.ti -1c
+.RI "static constexpr RightOfWayStatus \fBRightOfWayStatus_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr RightOfWayStatus \fBRightOfWayStatus_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBRightOfWayStatus_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr TrajectoryType \fBUNKNOWN\fP"
+.br
+.ti -1c
+.RI "static constexpr TrajectoryType \fBNORMAL\fP"
+.br
+.ti -1c
+.RI "static constexpr TrajectoryType \fBPATH_FALLBACK\fP"
+.br
+.ti -1c
+.RI "static constexpr TrajectoryType \fBSPEED_FALLBACK\fP"
+.br
+.ti -1c
+.RI "static constexpr TrajectoryType \fBPATH_REUSED\fP"
+.br
+.ti -1c
+.RI "static constexpr TrajectoryType \fBTrajectoryType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr TrajectoryType \fBTrajectoryType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBTrajectoryType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBADCTrajectory\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fplanning_5fmsgs_2fplanning_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBADCTrajectory\fP &a, \fBADCTrajectory\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::planning::ADCTrajectory::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ADCTrajectory::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::planning::ADCTrajectory::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    5
+.fi
+.SS "constexpr ADCTrajectory_TrajectoryType apollo::planning::ADCTrajectory::NORMAL\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    ADCTrajectory_TrajectoryType_NORMAL
+.fi
+.SS "constexpr ADCTrajectory_TrajectoryType apollo::planning::ADCTrajectory::PATH_FALLBACK\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    ADCTrajectory_TrajectoryType_PATH_FALLBACK
+.fi
+.SS "constexpr ADCTrajectory_TrajectoryType apollo::planning::ADCTrajectory::PATH_REUSED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    ADCTrajectory_TrajectoryType_PATH_REUSED
+.fi
+.SS "constexpr ADCTrajectory_RightOfWayStatus apollo::planning::ADCTrajectory::PROTECTED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    ADCTrajectory_RightOfWayStatus_PROTECTED
+.fi
+.SS "constexpr int apollo::planning::ADCTrajectory::RightOfWayStatus_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    ADCTrajectory_RightOfWayStatus_RightOfWayStatus_ARRAYSIZE
+.fi
+.SS "constexpr ADCTrajectory_RightOfWayStatus apollo::planning::ADCTrajectory::RightOfWayStatus_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    ADCTrajectory_RightOfWayStatus_RightOfWayStatus_MAX
+.fi
+.SS "constexpr ADCTrajectory_RightOfWayStatus apollo::planning::ADCTrajectory::RightOfWayStatus_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    ADCTrajectory_RightOfWayStatus_RightOfWayStatus_MIN
+.fi
+.SS "constexpr ADCTrajectory_TrajectoryType apollo::planning::ADCTrajectory::SPEED_FALLBACK\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    ADCTrajectory_TrajectoryType_SPEED_FALLBACK
+.fi
+.SS "constexpr int apollo::planning::ADCTrajectory::TrajectoryType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    ADCTrajectory_TrajectoryType_TrajectoryType_ARRAYSIZE
+.fi
+.SS "constexpr ADCTrajectory_TrajectoryType apollo::planning::ADCTrajectory::TrajectoryType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    ADCTrajectory_TrajectoryType_TrajectoryType_MAX
+.fi
+.SS "constexpr ADCTrajectory_TrajectoryType apollo::planning::ADCTrajectory::TrajectoryType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    ADCTrajectory_TrajectoryType_TrajectoryType_MIN
+.fi
+.SS "constexpr ADCTrajectory_TrajectoryType apollo::planning::ADCTrajectory::UNKNOWN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    ADCTrajectory_TrajectoryType_UNKNOWN
+.fi
+.SS "constexpr ADCTrajectory_RightOfWayStatus apollo::planning::ADCTrajectory::UNPROTECTED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    ADCTrajectory_RightOfWayStatus_UNPROTECTED
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

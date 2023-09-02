@@ -1,0 +1,892 @@
+.TH "HelloWorld" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HelloWorld \- This class represents the structure \fBHelloWorld\fP defined by the user in the IDL file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <HelloWorld\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fB~HelloWorld\fP ()"
+.br
+.RI "Default destructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP (const \fBHelloWorld\fP &x)"
+.br
+.RI "Copy constructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP (\fBHelloWorld\fP &&x)"
+.br
+.RI "Move constructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP & \fBoperator=\fP (const \fBHelloWorld\fP &x)"
+.br
+.RI "Copy assignment\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP & \fBoperator=\fP (\fBHelloWorld\fP &&x)"
+.br
+.RI "Move assignment\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBindex\fP (uint32_t _index)"
+.br
+.RI "This function sets a value in member index\&. "
+.ti -1c
+.RI "eProsima_user_DllExport uint32_t \fBindex\fP () const"
+.br
+.RI "This function returns the value of member index\&. "
+.ti -1c
+.RI "eProsima_user_DllExport uint32_t & \fBindex\fP ()"
+.br
+.RI "This function returns a reference to member index\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBmessage\fP (const std::string &_message)"
+.br
+.RI "This function copies the value in member message\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBmessage\fP (std::string &&_message)"
+.br
+.RI "This function moves the value in member message\&. "
+.ti -1c
+.RI "eProsima_user_DllExport const std::string & \fBmessage\fP () const"
+.br
+.RI "This function returns a constant reference to member message\&. "
+.ti -1c
+.RI "eProsima_user_DllExport std::string & \fBmessage\fP ()"
+.br
+.RI "This function returns a reference to member message\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBserialize\fP (\fBeprosima::fastcdr::Cdr\fP &cdr) const"
+.br
+.RI "This function serializes an object using CDR serialization\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBdeserialize\fP (\fBeprosima::fastcdr::Cdr\fP &cdr)"
+.br
+.RI "This function deserializes an object using CDR serialization\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBserializeKey\fP (\fBeprosima::fastcdr::Cdr\fP &cdr) const"
+.br
+.RI "This function serializes the key members of an object using CDR serialization\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fB~HelloWorld\fP ()"
+.br
+.RI "Default destructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP (const \fBHelloWorld\fP &x)"
+.br
+.RI "Copy constructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP (\fBHelloWorld\fP &&x)"
+.br
+.RI "Move constructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP & \fBoperator=\fP (const \fBHelloWorld\fP &x)"
+.br
+.RI "Copy assignment\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP & \fBoperator=\fP (\fBHelloWorld\fP &&x)"
+.br
+.RI "Move assignment\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBindex\fP (uint32_t _index)"
+.br
+.RI "This function sets a value in member index\&. "
+.ti -1c
+.RI "eProsima_user_DllExport uint32_t \fBindex\fP () const"
+.br
+.RI "This function returns the value of member index\&. "
+.ti -1c
+.RI "eProsima_user_DllExport uint32_t & \fBindex\fP ()"
+.br
+.RI "This function returns a reference to member index\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBmessage\fP (const std::string &_message)"
+.br
+.RI "This function copies the value in member message\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBmessage\fP (std::string &&_message)"
+.br
+.RI "This function moves the value in member message\&. "
+.ti -1c
+.RI "eProsima_user_DllExport const std::string & \fBmessage\fP () const"
+.br
+.RI "This function returns a constant reference to member message\&. "
+.ti -1c
+.RI "eProsima_user_DllExport std::string & \fBmessage\fP ()"
+.br
+.RI "This function returns a reference to member message\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBserialize\fP (\fBeprosima::fastcdr::Cdr\fP &cdr) const"
+.br
+.RI "This function serializes an object using CDR serialization\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBdeserialize\fP (\fBeprosima::fastcdr::Cdr\fP &cdr)"
+.br
+.RI "This function deserializes an object using CDR serialization\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBserializeKey\fP (\fBeprosima::fastcdr::Cdr\fP &cdr) const"
+.br
+.RI "This function serializes the key members of an object using CDR serialization\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fB~HelloWorld\fP ()"
+.br
+.RI "Default destructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP (const \fBHelloWorld\fP &x)"
+.br
+.RI "Copy constructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP (\fBHelloWorld\fP &&x)"
+.br
+.RI "Move constructor\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP & \fBoperator=\fP (const \fBHelloWorld\fP &x)"
+.br
+.RI "Copy assignment\&. "
+.ti -1c
+.RI "eProsima_user_DllExport \fBHelloWorld\fP & \fBoperator=\fP (\fBHelloWorld\fP &&x)"
+.br
+.RI "Move assignment\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBindex\fP (uint32_t _index)"
+.br
+.RI "This function sets a value in member index\&. "
+.ti -1c
+.RI "eProsima_user_DllExport uint32_t \fBindex\fP () const"
+.br
+.RI "This function returns the value of member index\&. "
+.ti -1c
+.RI "eProsima_user_DllExport uint32_t & \fBindex\fP ()"
+.br
+.RI "This function returns a reference to member index\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBmessage\fP (const std::string &_message)"
+.br
+.RI "This function copies the value in member message\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBmessage\fP (std::string &&_message)"
+.br
+.RI "This function moves the value in member message\&. "
+.ti -1c
+.RI "eProsima_user_DllExport const std::string & \fBmessage\fP () const"
+.br
+.RI "This function returns a constant reference to member message\&. "
+.ti -1c
+.RI "eProsima_user_DllExport std::string & \fBmessage\fP ()"
+.br
+.RI "This function returns a reference to member message\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBserialize\fP (\fBeprosima::fastcdr::Cdr\fP &cdr) const"
+.br
+.RI "This function serializes an object using CDR serialization\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBdeserialize\fP (\fBeprosima::fastcdr::Cdr\fP &cdr)"
+.br
+.RI "This function deserializes an object using CDR serialization\&. "
+.ti -1c
+.RI "eProsima_user_DllExport void \fBserializeKey\fP (\fBeprosima::fastcdr::Cdr\fP &cdr) const"
+.br
+.RI "This function serializes the key members of an object using CDR serialization\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static eProsima_user_DllExport size_t \fBgetMaxCdrSerializedSize\fP (size_t current_alignment=0)"
+.br
+.RI "This function returns the maximum serialized size of an object depending on the buffer alignment\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport size_t \fBgetCdrSerializedSize\fP (const \fBHelloWorld\fP &data, size_t current_alignment=0)"
+.br
+.RI "This function returns the serialized size of a data depending on the buffer alignment\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport size_t \fBgetKeyMaxCdrSerializedSize\fP (size_t current_alignment=0)"
+.br
+.RI "This function returns the maximum serialized size of the Key of an object depending on the buffer alignment\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport bool \fBisKeyDefined\fP ()"
+.br
+.RI "This function tells you if the Key has been defined for this type\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport size_t \fBgetMaxCdrSerializedSize\fP (size_t current_alignment=0)"
+.br
+.RI "This function returns the maximum serialized size of an object depending on the buffer alignment\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport size_t \fBgetCdrSerializedSize\fP (const \fBHelloWorld\fP &data, size_t current_alignment=0)"
+.br
+.RI "This function returns the serialized size of a data depending on the buffer alignment\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport size_t \fBgetKeyMaxCdrSerializedSize\fP (size_t current_alignment=0)"
+.br
+.RI "This function returns the maximum serialized size of the Key of an object depending on the buffer alignment\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport bool \fBisKeyDefined\fP ()"
+.br
+.RI "This function tells you if the Key has been defined for this type\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport size_t \fBgetMaxCdrSerializedSize\fP (size_t current_alignment=0)"
+.br
+.RI "This function returns the maximum serialized size of an object depending on the buffer alignment\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport size_t \fBgetCdrSerializedSize\fP (const \fBHelloWorld\fP &data, size_t current_alignment=0)"
+.br
+.RI "This function returns the serialized size of a data depending on the buffer alignment\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport size_t \fBgetKeyMaxCdrSerializedSize\fP (size_t current_alignment=0)"
+.br
+.RI "This function returns the maximum serialized size of the Key of an object depending on the buffer alignment\&. "
+.ti -1c
+.RI "static eProsima_user_DllExport bool \fBisKeyDefined\fP ()"
+.br
+.RI "This function tells you if the Key has been defined for this type\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned long \fBindex\fP"
+.br
+.ti -1c
+.RI "string \fBmessage\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents the structure \fBHelloWorld\fP defined by the user in the IDL file\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "HelloWorld::HelloWorld (const \fBHelloWorld\fP & x)"
+
+.PP
+Copy constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBHelloWorld\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "HelloWorld::HelloWorld (\fBHelloWorld\fP && x)"
+
+.PP
+Move constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBHelloWorld\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport HelloWorld::HelloWorld (const \fBHelloWorld\fP & x)"
+
+.PP
+Copy constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBHelloWorld\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport HelloWorld::HelloWorld (\fBHelloWorld\fP && x)"
+
+.PP
+Move constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBHelloWorld\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport HelloWorld::HelloWorld (const \fBHelloWorld\fP & x)"
+
+.PP
+Copy constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBHelloWorld\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport HelloWorld::HelloWorld (\fBHelloWorld\fP && x)"
+
+.PP
+Move constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBHelloWorld\fP that will be copied\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void HelloWorld::deserialize (\fBeprosima::fastcdr::Cdr\fP & cdr)"
+
+.PP
+This function deserializes an object using CDR serialization\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcdr\fP CDR serialization object\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::deserialize (\fBeprosima::fastcdr::Cdr\fP & cdr)"
+
+.PP
+This function deserializes an object using CDR serialization\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcdr\fP CDR serialization object\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::deserialize (\fBeprosima::fastcdr::Cdr\fP & cdr)"
+
+.PP
+This function deserializes an object using CDR serialization\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcdr\fP CDR serialization object\&. 
+.RE
+.PP
+
+.SS "size_t HelloWorld::getCdrSerializedSize (const \fBHelloWorld\fP & data, size_t current_alignment = \fC0\fP)\fC [static]\fP"
+
+.PP
+This function returns the serialized size of a data depending on the buffer alignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Data which is calculated its serialized size\&. 
+.br
+\fIcurrent_alignment\fP Buffer alignment\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Serialized size\&. 
+.RE
+.PP
+
+.SS "static eProsima_user_DllExport size_t HelloWorld::getCdrSerializedSize (const \fBHelloWorld\fP & data, size_t current_alignment = \fC0\fP)\fC [static]\fP"
+
+.PP
+This function returns the serialized size of a data depending on the buffer alignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Data which is calculated its serialized size\&. 
+.br
+\fIcurrent_alignment\fP Buffer alignment\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Serialized size\&. 
+.RE
+.PP
+
+.SS "static eProsima_user_DllExport size_t HelloWorld::getCdrSerializedSize (const \fBHelloWorld\fP & data, size_t current_alignment = \fC0\fP)\fC [static]\fP"
+
+.PP
+This function returns the serialized size of a data depending on the buffer alignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Data which is calculated its serialized size\&. 
+.br
+\fIcurrent_alignment\fP Buffer alignment\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Serialized size\&. 
+.RE
+.PP
+
+.SS "size_t HelloWorld::getKeyMaxCdrSerializedSize (size_t current_alignment = \fC0\fP)\fC [static]\fP"
+
+.PP
+This function returns the maximum serialized size of the Key of an object depending on the buffer alignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrent_alignment\fP Buffer alignment\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Maximum serialized size\&. 
+.RE
+.PP
+
+.SS "static eProsima_user_DllExport size_t HelloWorld::getKeyMaxCdrSerializedSize (size_t current_alignment = \fC0\fP)\fC [static]\fP"
+
+.PP
+This function returns the maximum serialized size of the Key of an object depending on the buffer alignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrent_alignment\fP Buffer alignment\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Maximum serialized size\&. 
+.RE
+.PP
+
+.SS "static eProsima_user_DllExport size_t HelloWorld::getKeyMaxCdrSerializedSize (size_t current_alignment = \fC0\fP)\fC [static]\fP"
+
+.PP
+This function returns the maximum serialized size of the Key of an object depending on the buffer alignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrent_alignment\fP Buffer alignment\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Maximum serialized size\&. 
+.RE
+.PP
+
+.SS "size_t HelloWorld::getMaxCdrSerializedSize (size_t current_alignment = \fC0\fP)\fC [static]\fP"
+
+.PP
+This function returns the maximum serialized size of an object depending on the buffer alignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrent_alignment\fP Buffer alignment\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Maximum serialized size\&. 
+.RE
+.PP
+
+.SS "static eProsima_user_DllExport size_t HelloWorld::getMaxCdrSerializedSize (size_t current_alignment = \fC0\fP)\fC [static]\fP"
+
+.PP
+This function returns the maximum serialized size of an object depending on the buffer alignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrent_alignment\fP Buffer alignment\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Maximum serialized size\&. 
+.RE
+.PP
+
+.SS "static eProsima_user_DllExport size_t HelloWorld::getMaxCdrSerializedSize (size_t current_alignment = \fC0\fP)\fC [static]\fP"
+
+.PP
+This function returns the maximum serialized size of an object depending on the buffer alignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrent_alignment\fP Buffer alignment\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Maximum serialized size\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport uint32_t& HelloWorld::index ()\fC [inline]\fP"
+
+.PP
+This function returns a reference to member index\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Reference to member index 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport uint32_t& HelloWorld::index ()\fC [inline]\fP"
+
+.PP
+This function returns a reference to member index\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Reference to member index 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport uint32_t& HelloWorld::index ()\fC [inline]\fP"
+
+.PP
+This function returns a reference to member index\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Reference to member index 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport uint32_t HelloWorld::index () const\fC [inline]\fP"
+
+.PP
+This function returns the value of member index\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Value of member index 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport uint32_t HelloWorld::index () const\fC [inline]\fP"
+
+.PP
+This function returns the value of member index\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Value of member index 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport uint32_t HelloWorld::index () const\fC [inline]\fP"
+
+.PP
+This function returns the value of member index\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Value of member index 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::index (uint32_t _index)\fC [inline]\fP"
+
+.PP
+This function sets a value in member index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_index\fP New value for member index 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::index (uint32_t _index)\fC [inline]\fP"
+
+.PP
+This function sets a value in member index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_index\fP New value for member index 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::index (uint32_t _index)\fC [inline]\fP"
+
+.PP
+This function sets a value in member index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_index\fP New value for member index 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport std::string& HelloWorld::message ()\fC [inline]\fP"
+
+.PP
+This function returns a reference to member message\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Reference to member message 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport std::string& HelloWorld::message ()\fC [inline]\fP"
+
+.PP
+This function returns a reference to member message\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Reference to member message 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport std::string& HelloWorld::message ()\fC [inline]\fP"
+
+.PP
+This function returns a reference to member message\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Reference to member message 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport const std::string& HelloWorld::message () const\fC [inline]\fP"
+
+.PP
+This function returns a constant reference to member message\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Constant reference to member message 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport const std::string& HelloWorld::message () const\fC [inline]\fP"
+
+.PP
+This function returns a constant reference to member message\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Constant reference to member message 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport const std::string& HelloWorld::message () const\fC [inline]\fP"
+
+.PP
+This function returns a constant reference to member message\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Constant reference to member message 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::message (const std::string & _message)\fC [inline]\fP"
+
+.PP
+This function copies the value in member message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_message\fP New value to be copied in member message 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::message (const std::string & _message)\fC [inline]\fP"
+
+.PP
+This function copies the value in member message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_message\fP New value to be copied in member message 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::message (const std::string & _message)\fC [inline]\fP"
+
+.PP
+This function copies the value in member message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_message\fP New value to be copied in member message 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::message (std::string && _message)\fC [inline]\fP"
+
+.PP
+This function moves the value in member message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_message\fP New value to be moved in member message 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::message (std::string && _message)\fC [inline]\fP"
+
+.PP
+This function moves the value in member message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_message\fP New value to be moved in member message 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::message (std::string && _message)\fC [inline]\fP"
+
+.PP
+This function moves the value in member message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_message\fP New value to be moved in member message 
+.RE
+.PP
+
+.SS "\fBHelloWorld\fP & HelloWorld::operator= (const \fBHelloWorld\fP & x)"
+
+.PP
+Copy assignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBHelloWorld\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport \fBHelloWorld\fP& HelloWorld::operator= (const \fBHelloWorld\fP & x)"
+
+.PP
+Copy assignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBHelloWorld\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport \fBHelloWorld\fP& HelloWorld::operator= (const \fBHelloWorld\fP & x)"
+
+.PP
+Copy assignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBHelloWorld\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "\fBHelloWorld\fP & HelloWorld::operator= (\fBHelloWorld\fP && x)"
+
+.PP
+Move assignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBHelloWorld\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport \fBHelloWorld\fP& HelloWorld::operator= (\fBHelloWorld\fP && x)"
+
+.PP
+Move assignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBHelloWorld\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport \fBHelloWorld\fP& HelloWorld::operator= (\fBHelloWorld\fP && x)"
+
+.PP
+Move assignment\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Reference to the object \fBHelloWorld\fP that will be copied\&. 
+.RE
+.PP
+
+.SS "void HelloWorld::serialize (\fBeprosima::fastcdr::Cdr\fP & cdr) const"
+
+.PP
+This function serializes an object using CDR serialization\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcdr\fP CDR serialization object\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::serialize (\fBeprosima::fastcdr::Cdr\fP & cdr) const"
+
+.PP
+This function serializes an object using CDR serialization\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcdr\fP CDR serialization object\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::serialize (\fBeprosima::fastcdr::Cdr\fP & cdr) const"
+
+.PP
+This function serializes an object using CDR serialization\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcdr\fP CDR serialization object\&. 
+.RE
+.PP
+
+.SS "void HelloWorld::serializeKey (\fBeprosima::fastcdr::Cdr\fP & cdr) const"
+
+.PP
+This function serializes the key members of an object using CDR serialization\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcdr\fP CDR serialization object\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::serializeKey (\fBeprosima::fastcdr::Cdr\fP & cdr) const"
+
+.PP
+This function serializes the key members of an object using CDR serialization\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcdr\fP CDR serialization object\&. 
+.RE
+.PP
+
+.SS "eProsima_user_DllExport void HelloWorld::serializeKey (\fBeprosima::fastcdr::Cdr\fP & cdr) const"
+
+.PP
+This function serializes the key members of an object using CDR serialization\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcdr\fP CDR serialization object\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

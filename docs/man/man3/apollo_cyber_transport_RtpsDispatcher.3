@@ -1,4 +1,4 @@
-.TH "apollo::cyber::transport::RtpsDispatcher" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::transport::RtpsDispatcher" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,10 +15,10 @@ Inherits \fBapollo::cyber::transport::Dispatcher\fP\&.
 .RI "void \fBShutdown\fP () override"
 .br
 .ti -1c
-.RI "template<typename MessageT > void \fBAddListener\fP (const RoleAttributes &self_attr, const MessageListener< MessageT > &listener)"
+.RI "template<typename MessageT > void \fBAddListener\fP (const \fBRoleAttributes\fP &self_attr, const MessageListener< MessageT > &listener)"
 .br
 .ti -1c
-.RI "template<typename MessageT > void \fBAddListener\fP (const RoleAttributes &self_attr, const RoleAttributes &opposite_attr, const MessageListener< MessageT > &listener)"
+.RI "template<typename MessageT > void \fBAddListener\fP (const \fBRoleAttributes\fP &self_attr, const \fBRoleAttributes\fP &opposite_attr, const MessageListener< MessageT > &listener)"
 .br
 .ti -1c
 .RI "void \fBset_participant\fP (const ParticipantPtr &participant)"

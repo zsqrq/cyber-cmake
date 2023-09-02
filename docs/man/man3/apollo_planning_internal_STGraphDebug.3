@@ -1,0 +1,331 @@
+.TH "apollo::planning_internal::STGraphDebug" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::planning_internal::STGraphDebug
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkBoundaryFieldNumber\fP = 2, \fBkSpeedLimitFieldNumber\fP = 3, \fBkSpeedProfileFieldNumber\fP = 4, \fBkNameFieldNumber\fP = 1, \fBkSpeedConstraintFieldNumber\fP = 5, \fBkKernelCruiseRefFieldNumber\fP = 6, \fBkKernelFollowRefFieldNumber\fP = 7 }"
+.br
+.ti -1c
+.RI "typedef \fBSTGraphDebug_STGraphSpeedConstraint\fP \fBSTGraphSpeedConstraint\fP"
+.br
+.ti -1c
+.RI "typedef \fBSTGraphDebug_STGraphKernelCuiseRef\fP \fBSTGraphKernelCuiseRef\fP"
+.br
+.ti -1c
+.RI "typedef \fBSTGraphDebug_STGraphKernelFollowRef\fP \fBSTGraphKernelFollowRef\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBSTGraphDebug\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBSTGraphDebug\fP (const \fBSTGraphDebug\fP &from)"
+.br
+.ti -1c
+.RI "\fBSTGraphDebug\fP (\fBSTGraphDebug\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBSTGraphDebug\fP & \fBoperator=\fP (const \fBSTGraphDebug\fP &from)"
+.br
+.ti -1c
+.RI "\fBSTGraphDebug\fP & \fBoperator=\fP (\fBSTGraphDebug\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBSTGraphDebug\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBSTGraphDebug\fP *other)"
+.br
+.ti -1c
+.RI "\fBSTGraphDebug\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBSTGraphDebug\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBSTGraphDebug\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "int \fBboundary_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_boundary\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::StGraphBoundaryDebug\fP * \fBmutable_boundary\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::planning_internal::StGraphBoundaryDebug\fP > * \fBmutable_boundary\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning_internal::StGraphBoundaryDebug\fP & \fBboundary\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::StGraphBoundaryDebug\fP * \fBadd_boundary\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::planning_internal::StGraphBoundaryDebug\fP > & \fBboundary\fP () const"
+.br
+.ti -1c
+.RI "int \fBspeed_limit_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_limit\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::SpeedPoint\fP * \fBmutable_speed_limit\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::SpeedPoint\fP > * \fBmutable_speed_limit\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::SpeedPoint\fP & \fBspeed_limit\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::common::SpeedPoint\fP * \fBadd_speed_limit\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::SpeedPoint\fP > & \fBspeed_limit\fP () const"
+.br
+.ti -1c
+.RI "int \fBspeed_profile_size\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_profile\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::SpeedPoint\fP * \fBmutable_speed_profile\fP (int index)"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::SpeedPoint\fP > * \fBmutable_speed_profile\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::SpeedPoint\fP & \fBspeed_profile\fP (int index) const"
+.br
+.ti -1c
+.RI "::\fBapollo::common::SpeedPoint\fP * \fBadd_speed_profile\fP ()"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::\fBapollo::common::SpeedPoint\fP > & \fBspeed_profile\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhas_name\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_name\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBname\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_name\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_name\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_name\fP (std::string *name)"
+.br
+.ti -1c
+.RI "bool \fBhas_speed_constraint\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_speed_constraint\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning_internal::STGraphDebug_STGraphSpeedConstraint\fP & \fBspeed_constraint\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::planning_internal::STGraphDebug_STGraphSpeedConstraint\fP * \fBrelease_speed_constraint\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::STGraphDebug_STGraphSpeedConstraint\fP * \fBmutable_speed_constraint\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_speed_constraint\fP (::\fBapollo::planning_internal::STGraphDebug_STGraphSpeedConstraint\fP *speed_constraint)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_speed_constraint\fP (::\fBapollo::planning_internal::STGraphDebug_STGraphSpeedConstraint\fP *speed_constraint)"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::STGraphDebug_STGraphSpeedConstraint\fP * \fBunsafe_arena_release_speed_constraint\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_kernel_cruise_ref\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_kernel_cruise_ref\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning_internal::STGraphDebug_STGraphKernelCuiseRef\fP & \fBkernel_cruise_ref\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::planning_internal::STGraphDebug_STGraphKernelCuiseRef\fP * \fBrelease_kernel_cruise_ref\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::STGraphDebug_STGraphKernelCuiseRef\fP * \fBmutable_kernel_cruise_ref\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_kernel_cruise_ref\fP (::\fBapollo::planning_internal::STGraphDebug_STGraphKernelCuiseRef\fP *kernel_cruise_ref)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_kernel_cruise_ref\fP (::\fBapollo::planning_internal::STGraphDebug_STGraphKernelCuiseRef\fP *kernel_cruise_ref)"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::STGraphDebug_STGraphKernelCuiseRef\fP * \fBunsafe_arena_release_kernel_cruise_ref\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_kernel_follow_ref\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_kernel_follow_ref\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::planning_internal::STGraphDebug_STGraphKernelFollowRef\fP & \fBkernel_follow_ref\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::planning_internal::STGraphDebug_STGraphKernelFollowRef\fP * \fBrelease_kernel_follow_ref\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::STGraphDebug_STGraphKernelFollowRef\fP * \fBmutable_kernel_follow_ref\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_kernel_follow_ref\fP (::\fBapollo::planning_internal::STGraphDebug_STGraphKernelFollowRef\fP *kernel_follow_ref)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_kernel_follow_ref\fP (::\fBapollo::planning_internal::STGraphDebug_STGraphKernelFollowRef\fP *kernel_follow_ref)"
+.br
+.ti -1c
+.RI "::\fBapollo::planning_internal::STGraphDebug_STGraphKernelFollowRef\fP * \fBunsafe_arena_release_kernel_follow_ref\fP ()"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_name\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSTGraphDebug\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSTGraphDebug\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSTGraphDebug\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fplanning_5fmsgs_2fplanning_5finternal_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBSTGraphDebug\fP &a, \fBSTGraphDebug\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::planning_internal::STGraphDebug::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    STGraphDebug::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::planning_internal::STGraphDebug::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    7
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

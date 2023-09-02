@@ -1,5 +1,5 @@
 <map id="apollo::cyber::ParameterServer::SetParameter" name="apollo::cyber::ParameterServer::SetParameter">
-<area shape="rect" id="node1" title="Set the Parameter object." alt="" coords="5,31,324,57"/>
-<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1Parameter.html#ae6efee7f331c9f07914a854aaa23aa7c" title="Get the Parameter name." alt="" coords="397,5,625,32"/>
-<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1Parameter.html#ad645d2620b54874a5b16445995ef6ac2" title="Parse a cyber::parameter::Parameter object to cyber::proto::Param object." alt="" coords="372,56,651,83"/>
+<area shape="rect" id="node1" title="Set the Parameter object." alt="" coords="5,31,327,57"/>
+<area shape="rect" id="node2" href="$classapollo_1_1cyber_1_1Parameter.html#ae6efee7f331c9f07914a854aaa23aa7c" title="Get the Parameter name." alt="" coords="400,5,629,32"/>
+<area shape="rect" id="node3" href="$classapollo_1_1cyber_1_1Parameter.html#ad645d2620b54874a5b16445995ef6ac2" title="Parse a cyber::parameter::Parameter object to cyber::proto::Param object." alt="" coords="375,56,655,83"/>
 </map>

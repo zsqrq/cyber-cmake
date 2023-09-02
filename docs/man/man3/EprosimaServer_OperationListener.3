@@ -1,0 +1,69 @@
+.TH "EprosimaServer::OperationListener" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EprosimaServer::OperationListener
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBeprosima::fastrtps::SubscriberListener\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOperationListener\fP (\fBEprosimaServer\fP *up)"
+.br
+.ti -1c
+.RI "void \fBonSubscriptionMatched\fP (\fBSubscriber\fP *sub, \fBMatchingInfo\fP &info)"
+.br
+.ti -1c
+.RI "void \fBonNewDataMessage\fP (\fBSubscriber\fP *sub)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBEprosimaServer\fP * \fBmp_up\fP"
+.br
+.ti -1c
+.RI "\fBOperation\fP \fBm_operation\fP"
+.br
+.ti -1c
+.RI "\fBSampleInfo_t\fP \fBm_sampleInfo\fP"
+.br
+.ti -1c
+.RI "\fBResult\fP \fBm_result\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void EprosimaServer::OperationListener::onNewDataMessage (\fBSubscriber\fP * sub)\fC [virtual]\fP"
+Virtual function to be implemented by the user containing the actions to be performed when a new Data Message is received\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsub\fP Subscriber 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBeprosima::fastrtps::SubscriberListener\fP\&.
+.SS "void EprosimaServer::OperationListener::onSubscriptionMatched (\fBSubscriber\fP * sub, \fBMatchingInfo\fP & info)\fC [virtual]\fP"
+Virtual method to be called when the subscriber is matched with a new Writer (or unmatched); i\&.e\&., when a writer publishing in the same topic is discovered\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsub\fP Subscriber 
+.br
+\fIinfo\fP Matching information 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBeprosima::fastrtps::SubscriberListener\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

@@ -1,0 +1,43 @@
+.TH "TestReaderSocket::MyListener" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TestReaderSocket::MyListener
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::ReaderListener\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBonNewCacheChangeAdded\fP (\fBRTPSReader\fP *reader, const \fBCacheChange_t\fP *const change)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBm_received\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void TestReaderSocket::MyListener::onNewCacheChangeAdded (\fBRTPSReader\fP * reader, const \fBCacheChange_t\fP *const change)\fC [virtual]\fP"
+This method is called when a new CacheChange_t is added to the ReaderHistory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreader\fP Pointer to the reader\&. 
+.br
+\fIchange\fP Pointer to the CacheChange_t\&. This is a const pointer to const data to indicate that the user should not dispose of this data himself\&. To remove the data call the remove_change method of the ReaderHistory\&. reader->getHistory()->remove_change((CacheChange_t*)change)\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBeprosima::fastrtps::rtps::ReaderListener\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

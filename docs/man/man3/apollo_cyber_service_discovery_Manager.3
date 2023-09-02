@@ -1,4 +1,4 @@
-.TH "apollo::cyber::service_discovery::Manager" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::service_discovery::Manager" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,22 +15,22 @@ Inherited by \fBapollo::cyber::service_discovery::ChannelManager\fP, \fBapollo::
 
 .in +1c
 .ti -1c
-.RI "using \fBChangeSignal\fP = \fBbase::Signal\fP< const ChangeMsg & >"
+.RI "using \fBChangeSignal\fP = \fBbase::Signal\fP< const \fBChangeMsg\fP & >"
 .br
 .ti -1c
-.RI "using \fBChangeFunc\fP = std::function< void(const ChangeMsg &)>"
+.RI "using \fBChangeFunc\fP = std::function< void(const \fBChangeMsg\fP &)>"
 .br
 .ti -1c
-.RI "using \fBChangeConnection\fP = \fBbase::Connection\fP< const ChangeMsg & >"
+.RI "using \fBChangeConnection\fP = \fBbase::Connection\fP< const \fBChangeMsg\fP & >"
 .br
 .ti -1c
-.RI "using \fBRtpsParticipant\fP = eprosima::fastrtps::Participant"
+.RI "using \fBRtpsParticipant\fP = \fBeprosima::fastrtps::Participant\fP"
 .br
 .ti -1c
-.RI "using \fBRtpsPublisherAttr\fP = eprosima::fastrtps::PublisherAttributes"
+.RI "using \fBRtpsPublisherAttr\fP = \fBeprosima::fastrtps::PublisherAttributes\fP"
 .br
 .ti -1c
-.RI "using \fBRtpsSubscriberAttr\fP = eprosima::fastrtps::SubscriberAttributes"
+.RI "using \fBRtpsSubscriberAttr\fP = \fBeprosima::fastrtps::SubscriberAttributes\fP"
 .br
 .in -1c
 .SS "Public Member Functions"
@@ -45,7 +45,7 @@ Inherited by \fBapollo::cyber::service_discovery::ChannelManager\fP, \fBapollo::
 .br
 .RI "Destroy the \fBManager\fP object\&. "
 .ti -1c
-.RI "bool \fBStartDiscovery\fP (RtpsParticipant *participant)"
+.RI "bool \fBStartDiscovery\fP (\fBRtpsParticipant\fP *participant)"
 .br
 .RI "Startup topology discovery\&. "
 .ti -1c
@@ -57,11 +57,11 @@ Inherited by \fBapollo::cyber::service_discovery::ChannelManager\fP, \fBapollo::
 .br
 .RI "Shutdown module\&. "
 .ti -1c
-.RI "bool \fBJoin\fP (const RoleAttributes &attr, RoleType role, bool need_publish=true)"
+.RI "bool \fBJoin\fP (const \fBRoleAttributes\fP &attr, RoleType role, bool need_publish=true)"
 .br
 .RI "Join the topology\&. "
 .ti -1c
-.RI "bool \fBLeave\fP (const RoleAttributes &attr, RoleType role)"
+.RI "bool \fBLeave\fP (const \fBRoleAttributes\fP &attr, RoleType role)"
 .br
 .RI "Leave the topology\&. "
 .ti -1c
@@ -81,34 +81,34 @@ Inherited by \fBapollo::cyber::service_discovery::ChannelManager\fP, \fBapollo::
 
 .in +1c
 .ti -1c
-.RI "bool \fBCreatePublisher\fP (RtpsParticipant *participant)"
+.RI "bool \fBCreatePublisher\fP (\fBRtpsParticipant\fP *participant)"
 .br
 .ti -1c
-.RI "bool \fBCreateSubscriber\fP (RtpsParticipant *participant)"
+.RI "bool \fBCreateSubscriber\fP (\fBRtpsParticipant\fP *participant)"
 .br
 .ti -1c
-.RI "virtual bool \fBCheck\fP (const RoleAttributes &attr)=0"
+.RI "virtual bool \fBCheck\fP (const \fBRoleAttributes\fP &attr)=0"
 .br
 .ti -1c
-.RI "virtual void \fBDispose\fP (const ChangeMsg &msg)=0"
+.RI "virtual void \fBDispose\fP (const \fBChangeMsg\fP &msg)=0"
 .br
 .ti -1c
-.RI "virtual bool \fBNeedPublish\fP (const ChangeMsg &msg) const"
+.RI "virtual bool \fBNeedPublish\fP (const \fBChangeMsg\fP &msg) const"
 .br
 .ti -1c
-.RI "void \fBConvert\fP (const RoleAttributes &attr, RoleType role, OperateType opt, ChangeMsg *msg)"
+.RI "void \fBConvert\fP (const \fBRoleAttributes\fP &attr, RoleType role, OperateType opt, \fBChangeMsg\fP *msg)"
 .br
 .ti -1c
-.RI "void \fBNotify\fP (const ChangeMsg &msg)"
+.RI "void \fBNotify\fP (const \fBChangeMsg\fP &msg)"
 .br
 .ti -1c
-.RI "bool \fBPublish\fP (const ChangeMsg &msg)"
+.RI "bool \fBPublish\fP (const \fBChangeMsg\fP &msg)"
 .br
 .ti -1c
 .RI "void \fBOnRemoteChange\fP (const std::string &msg_str)"
 .br
 .ti -1c
-.RI "bool \fBIsFromSameProcess\fP (const ChangeMsg &msg)"
+.RI "bool \fBIsFromSameProcess\fP (const \fBChangeMsg\fP &msg)"
 .br
 .in -1c
 .SS "Protected Attributes"
@@ -136,13 +136,13 @@ Inherited by \fBapollo::cyber::service_discovery::ChannelManager\fP, \fBapollo::
 .RI "std::string \fBchannel_name_\fP"
 .br
 .ti -1c
-.RI "eprosima::fastrtps::Publisher * \fBpublisher_\fP"
+.RI "\fBeprosima::fastrtps::Publisher\fP * \fBpublisher_\fP"
 .br
 .ti -1c
 .RI "std::mutex \fBlock_\fP"
 .br
 .ti -1c
-.RI "eprosima::fastrtps::Subscriber * \fBsubscriber_\fP"
+.RI "\fBeprosima::fastrtps::Subscriber\fP * \fBsubscriber_\fP"
 .br
 .ti -1c
 .RI "\fBSubscriberListener\fP * \fBlistener_\fP"
@@ -172,7 +172,7 @@ ChangeConnection Store it to use when you want to stop listening\&.
 .RE
 .PP
 
-.SS "bool apollo::cyber::service_discovery::Manager::Join (const RoleAttributes & attr, RoleType role, bool need_publish = \fCtrue\fP)"
+.SS "bool apollo::cyber::service_discovery::Manager::Join (const \fBRoleAttributes\fP & attr, RoleType role, bool need_publish = \fCtrue\fP)"
 
 .PP
 Join the topology\&. 
@@ -192,7 +192,7 @@ false if Join topology failed
 .RE
 .PP
 
-.SS "bool apollo::cyber::service_discovery::Manager::Leave (const RoleAttributes & attr, RoleType role)"
+.SS "bool apollo::cyber::service_discovery::Manager::Leave (const \fBRoleAttributes\fP & attr, RoleType role)"
 
 .PP
 Leave the topology\&. 
@@ -236,7 +236,7 @@ Remove our listener for topology change\&.
 .RE
 .PP
 
-.SS "bool apollo::cyber::service_discovery::Manager::StartDiscovery (RtpsParticipant * participant)"
+.SS "bool apollo::cyber::service_discovery::Manager::StartDiscovery (\fBRtpsParticipant\fP * participant)"
 
 .PP
 Startup topology discovery\&. 

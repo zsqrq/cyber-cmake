@@ -1,0 +1,6 @@
+<map id="eprosima::fastrtps::SampleInfo_t" name="eprosima::fastrtps::SampleInfo_t">
+<area shape="rect" id="node1" title=" " alt="" coords="525,380,759,487"/>
+<area shape="rect" id="node2" href="$classeprosima_1_1fastrtps_1_1rtps_1_1SampleIdentity.html" title="This class is used to specify a sample." alt="" coords="5,5,492,303"/>
+<area shape="rect" id="node3" href="$structeprosima_1_1fastrtps_1_1rtps_1_1Time__t.html" title=" " alt="" coords="516,101,768,207"/>
+<area shape="rect" id="node4" href="$structeprosima_1_1fastrtps_1_1rtps_1_1InstanceHandle__t.html" title=" " alt="" coords="793,86,1251,222"/>
+</map>

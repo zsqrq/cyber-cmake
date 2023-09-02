@@ -1,0 +1,355 @@
+.TH "apollo::perception::SensorMeasurement" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::perception::SensorMeasurement
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkSensorIdFieldNumber\fP = 1, \fBkPositionFieldNumber\fP = 3, \fBkVelocityFieldNumber\fP = 8, \fBkBoxFieldNumber\fP = 12, \fBkThetaFieldNumber\fP = 4, \fBkLengthFieldNumber\fP = 5, \fBkIdFieldNumber\fP = 2, \fBkTypeFieldNumber\fP = 9, \fBkWidthFieldNumber\fP = 6, \fBkHeightFieldNumber\fP = 7, \fBkTimestampFieldNumber\fP = 11, \fBkSubTypeFieldNumber\fP = 10 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBSensorMeasurement\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBSensorMeasurement\fP (const \fBSensorMeasurement\fP &from)"
+.br
+.ti -1c
+.RI "\fBSensorMeasurement\fP (\fBSensorMeasurement\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBSensorMeasurement\fP & \fBoperator=\fP (const \fBSensorMeasurement\fP &from)"
+.br
+.ti -1c
+.RI "\fBSensorMeasurement\fP & \fBoperator=\fP (\fBSensorMeasurement\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBSensorMeasurement\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBSensorMeasurement\fP *other)"
+.br
+.ti -1c
+.RI "\fBSensorMeasurement\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBSensorMeasurement\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBSensorMeasurement\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_sensor_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_sensor_id\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBsensor_id\fP () const"
+.br
+.ti -1c
+.RI "template<typename ArgT0  = const std::string&, typename\&.\&.\&. ArgT> void \fBset_sensor_id\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "std::string * \fBmutable_sensor_id\fP ()"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD std::string * \fBrelease_sensor_id\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_sensor_id\fP (std::string *sensor_id)"
+.br
+.ti -1c
+.RI "bool \fBhas_position\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_position\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBposition\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_position\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_position\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_position\fP (::\fBapollo::common::Point3D\fP *position)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_position\fP (::\fBapollo::common::Point3D\fP *position)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_position\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_velocity\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_velocity\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::common::Point3D\fP & \fBvelocity\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::common::Point3D\fP * \fBrelease_velocity\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBmutable_velocity\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_velocity\fP (::\fBapollo::common::Point3D\fP *velocity)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_velocity\fP (::\fBapollo::common::Point3D\fP *velocity)"
+.br
+.ti -1c
+.RI "::\fBapollo::common::Point3D\fP * \fBunsafe_arena_release_velocity\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_box\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_box\fP ()"
+.br
+.ti -1c
+.RI "const ::\fBapollo::perception::BBox2D\fP & \fBbox\fP () const"
+.br
+.ti -1c
+.RI "PROTOBUF_NODISCARD ::\fBapollo::perception::BBox2D\fP * \fBrelease_box\fP ()"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::BBox2D\fP * \fBmutable_box\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_allocated_box\fP (::\fBapollo::perception::BBox2D\fP *box)"
+.br
+.ti -1c
+.RI "void \fBunsafe_arena_set_allocated_box\fP (::\fBapollo::perception::BBox2D\fP *box)"
+.br
+.ti -1c
+.RI "::\fBapollo::perception::BBox2D\fP * \fBunsafe_arena_release_box\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_theta\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_theta\fP ()"
+.br
+.ti -1c
+.RI "double \fBtheta\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_theta\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_length\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_length\fP ()"
+.br
+.ti -1c
+.RI "double \fBlength\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_length\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_id\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_id\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBid\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_id\fP (int32_t value)"
+.br
+.ti -1c
+.RI "bool \fBhas_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::perception::PerceptionObstacle_Type \fBtype\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_type\fP (::apollo::perception::PerceptionObstacle_Type value)"
+.br
+.ti -1c
+.RI "bool \fBhas_width\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_width\fP ()"
+.br
+.ti -1c
+.RI "double \fBwidth\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_width\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_height\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_height\fP ()"
+.br
+.ti -1c
+.RI "double \fBheight\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_height\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_timestamp\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_timestamp\fP ()"
+.br
+.ti -1c
+.RI "double \fBtimestamp\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_timestamp\fP (double value)"
+.br
+.ti -1c
+.RI "bool \fBhas_sub_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_sub_type\fP ()"
+.br
+.ti -1c
+.RI "::apollo::perception::PerceptionObstacle_SubType \fBsub_type\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_sub_type\fP (::apollo::perception::PerceptionObstacle_SubType value)"
+.br
+.ti -1c
+.RI "template<typename ArgT0 , typename\&.\&.\&. ArgT> PROTOBUF_ALWAYS_INLINE void \fBset_sensor_id\fP (ArgT0 &&arg0, ArgT\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSensorMeasurement\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBSensorMeasurement\fP * \fBinternal_default_instance\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSensorMeasurement\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fperception_5fmsgs_2fperception_5fobstacle_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBSensorMeasurement\fP &a, \fBSensorMeasurement\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::perception::SensorMeasurement::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    SensorMeasurement::MergeImpl
+}
+.fi
+.SS "constexpr int apollo::perception::SensorMeasurement::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    3
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

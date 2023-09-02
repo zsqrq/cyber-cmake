@@ -1,4 +1,4 @@
-.TH "apollo::cyber::ComponentBase" 3 "Thu Aug 31 2023" "Cyber-Cmake" \" -*- nroff -*-
+.TH "apollo::cyber::ComponentBase" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,10 +21,10 @@ Inherited by \fBapollo::cyber::Component< M0 >\fP, \fBapollo::cyber::Component< 
 
 .in +1c
 .ti -1c
-.RI "virtual bool \fBInitialize\fP (const ComponentConfig &config)"
+.RI "virtual bool \fBInitialize\fP (const \fBComponentConfig\fP &config)"
 .br
 .ti -1c
-.RI "virtual bool \fBInitialize\fP (const TimerComponentConfig &config)"
+.RI "virtual bool \fBInitialize\fP (const \fBTimerComponentConfig\fP &config)"
 .br
 .ti -1c
 .RI "virtual void \fBShutdown\fP ()"
@@ -46,10 +46,10 @@ Inherited by \fBapollo::cyber::Component< M0 >\fP, \fBapollo::cyber::Component< 
 .RI "const std::string & \fBConfigFilePath\fP () const"
 .br
 .ti -1c
-.RI "void \fBLoadConfigFiles\fP (const ComponentConfig &config)"
+.RI "void \fBLoadConfigFiles\fP (const \fBComponentConfig\fP &config)"
 .br
 .ti -1c
-.RI "void \fBLoadConfigFiles\fP (const TimerComponentConfig &config)"
+.RI "void \fBLoadConfigFiles\fP (const \fBTimerComponentConfig\fP &config)"
 .br
 .in -1c
 .SS "Protected Attributes"

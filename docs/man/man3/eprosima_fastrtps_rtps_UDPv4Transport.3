@@ -1,0 +1,213 @@
+.TH "eprosima::fastrtps::rtps::UDPv4Transport" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eprosima::fastrtps::rtps::UDPv4Transport
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <UDPv4Transport\&.h>\fP
+.PP
+Inherits \fBeprosima::fastrtps::rtps::TransportInterface\fP\&.
+.PP
+Inherited by \fBeprosima::fastrtps::rtps::test_UDPv4Transport\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBLocatorCompare\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "RTPS_DllAPI \fBUDPv4Transport\fP (const \fBUDPv4TransportDescriptor\fP &)"
+.br
+.ti -1c
+.RI "bool \fBinit\fP () override"
+.br
+.ti -1c
+.RI "virtual bool \fBIsInputChannelOpen\fP (const \fBLocator_t\fP &) const override"
+.br
+.RI "Checks whether there are open and bound sockets for the given port\&. "
+.ti -1c
+.RI "virtual bool \fBIsOutputChannelOpen\fP (const \fBLocator_t\fP &) const override"
+.br
+.ti -1c
+.RI "virtual bool \fBIsLocatorSupported\fP (const \fBLocator_t\fP &) const override"
+.br
+.RI "Checks for UDPv4 kind\&. "
+.ti -1c
+.RI "virtual bool \fBDoLocatorsMatch\fP (const \fBLocator_t\fP &, const \fBLocator_t\fP &) const override"
+.br
+.RI "Reports whether Locators correspond to the same port\&. "
+.ti -1c
+.RI "virtual \fBLocator_t\fP \fBRemoteToMainLocal\fP (const \fBLocator_t\fP &) const override"
+.br
+.ti -1c
+.RI "virtual bool \fBOpenInputChannel\fP (const \fBLocator_t\fP &) override"
+.br
+.ti -1c
+.RI "virtual bool \fBOpenOutputChannel\fP (\fBLocator_t\fP &) override"
+.br
+.ti -1c
+.RI "virtual bool \fBCloseInputChannel\fP (const \fBLocator_t\fP &) override"
+.br
+.RI "Removes the listening socket for the specified port\&. "
+.ti -1c
+.RI "virtual bool \fBCloseOutputChannel\fP (const \fBLocator_t\fP &) override"
+.br
+.RI "Removes all outbound sockets on the given port\&. "
+.ti -1c
+.RI "virtual bool \fBSend\fP (const octet *sendBuffer, uint32_t sendBufferSize, const \fBLocator_t\fP &localLocator, const \fBLocator_t\fP &remoteLocator) override"
+.br
+.ti -1c
+.RI "virtual bool \fBReceive\fP (octet *receiveBuffer, uint32_t receiveBufferCapacity, uint32_t &receiveBufferSize, const \fBLocator_t\fP &localLocator, \fBLocator_t\fP &remoteLocator) override"
+.br
+.ti -1c
+.RI "virtual \fBLocatorList_t\fP \fBNormalizeLocator\fP (const \fBLocator_t\fP &locator) override"
+.br
+.ti -1c
+.RI "virtual \fBLocatorList_t\fP \fBShrinkLocatorLists\fP (const std::vector< \fBLocatorList_t\fP > &locatorLists) override"
+.br
+.ti -1c
+.RI "virtual bool \fBis_local_locator\fP (const \fBLocator_t\fP &locator) const override"
+.br
+.ti -1c
+.RI "\fBUDPv4TransportDescriptor\fP \fBget_configuration\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUDPv4Transport\fP ()"
+.br
+.RI "Constructor with no descriptor is necessary for implementations derived from this class\&. "
+.ti -1c
+.RI "bool \fBIsInterfaceAllowed\fP (const asio::ip::address_v4 &ip)"
+.br
+.ti -1c
+.RI "bool \fBOpenAndBindOutputSockets\fP (\fBLocator_t\fP &locator)"
+.br
+.ti -1c
+.RI "bool \fBOpenAndBindInputSockets\fP (uint32_t port, bool is_multicast)"
+.br
+.ti -1c
+.RI "std::shared_ptr< asio::ip::udp::socket > \fBOpenAndBindUnicastOutputSocket\fP (const asio::ip::address_v4 &, uint32_t &port)"
+.br
+.ti -1c
+.RI "std::shared_ptr< asio::ip::udp::socket > \fBOpenAndBindInputSocket\fP (uint32_t port, bool is_multicast)"
+.br
+.ti -1c
+.RI "bool \fBSendThroughSocket\fP (const octet *sendBuffer, uint32_t sendBufferSize, const \fBLocator_t\fP &remoteLocator, std::shared_ptr< asio::ip::udp::socket > socket)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUDPv4TransportDescriptor\fP \fBmConfiguration_\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBmSendBufferSize\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBmReceiveBufferSize\fP"
+.br
+.ti -1c
+.RI "asio::io_service \fBmService\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< std::thread > \fBioServiceThread\fP"
+.br
+.ti -1c
+.RI "std::recursive_mutex \fBmOutputMapMutex\fP"
+.br
+.ti -1c
+.RI "std::recursive_mutex \fBmInputMapMutex\fP"
+.br
+.ti -1c
+.RI "std::map< uint32_t, std::vector< SocketInfo > > \fBmOutputSockets\fP"
+.br
+.RI "The notion of output channel corresponds to a port\&. "
+.ti -1c
+.RI "std::vector< \fBIPFinder::info_IP\fP > \fBcurrentInterfaces\fP"
+.br
+.ti -1c
+.RI "std::map< uint32_t, std::shared_ptr< asio::ip::udp::socket > > \fBmInputSockets\fP"
+.br
+.RI "For both modes, an input channel corresponds to a port\&. "
+.ti -1c
+.RI "std::vector< asio::ip::address_v4 > \fBmInterfaceWhiteList\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is a default UDPv4 implementation\&.
+.IP "\(bu" 2
+Opening an output channel by passing a locator will open a socket per interface on the given port\&. This collection of sockets constitute the 'outbound channel'\&. In other words, a channel corresponds to a port + a direction\&.
+.IP "\(bu" 2
+It is possible to provide a white list at construction, which limits the interfaces the transport will ever be able to interact with\&. If left empty, all interfaces are allowed\&.
+.IP "\(bu" 2
+Opening an input channel by passing a locator will open a socket listening on the given port on every whitelisted interface, and join the multicast channel specified by the locator address\&. Hence, any locator that does not correspond to the multicast range will simply open the port without a subsequent join\&. Joining multicast groups late is supported by attempting to open the channel again with the same port + a multicast address (the OpenInputChannel function will fail, however, because no new channel has been opened in a strict sense)\&. 
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool eprosima::fastrtps::rtps::UDPv4Transport::IsOutputChannelOpen (const \fBLocator_t\fP &) const\fC [override]\fP, \fC [virtual]\fP"
+Checks whether there are open and bound sockets for the given port\&. 
+.PP
+Implements \fBeprosima::fastrtps::rtps::TransportInterface\fP\&.
+.SS "virtual bool eprosima::fastrtps::rtps::UDPv4Transport::OpenInputChannel (const \fBLocator_t\fP &)\fC [override]\fP, \fC [virtual]\fP"
+Starts listening on the specified port, and if the specified address is in the multicast range, it joins the specified multicast group, 
+.PP
+Implements \fBeprosima::fastrtps::rtps::TransportInterface\fP\&.
+.SS "virtual bool eprosima::fastrtps::rtps::UDPv4Transport::OpenOutputChannel (\fBLocator_t\fP &)\fC [override]\fP, \fC [virtual]\fP"
+Opens a socket on the given address and port (as long as they are white listed)\&. 
+.PP
+Implements \fBeprosima::fastrtps::rtps::TransportInterface\fP\&.
+.SS "virtual bool eprosima::fastrtps::rtps::UDPv4Transport::Receive (octet * receiveBuffer, uint32_t receiveBufferCapacity, uint32_t & receiveBufferSize, const \fBLocator_t\fP & localLocator, \fBLocator_t\fP & remoteLocator)\fC [override]\fP, \fC [virtual]\fP"
+Blocking Receive from the specified channel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreceiveBuffer\fP vector with enough capacity (not size) to accomodate a full receive buffer\&. That capacity must not be less than the receiveBufferSize supplied to this class during construction\&. 
+.br
+\fIlocalLocator\fP Locator mapping to the local channel we're listening to\&. 
+.br
+\fIremoteLocator\fP Locator describing the remote restination we received a packet from\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::TransportInterface\fP\&.
+.SS "virtual \fBLocator_t\fP eprosima::fastrtps::rtps::UDPv4Transport::RemoteToMainLocal (const \fBLocator_t\fP &) const\fC [override]\fP, \fC [virtual]\fP"
+Converts a given remote locator (that is, a locator referring to a remote destination) to the main local locator whose channel can write to that destination\&. In this case it will return a 0\&.0\&.0\&.0 address on that port\&. 
+.PP
+Implements \fBeprosima::fastrtps::rtps::TransportInterface\fP\&.
+.SS "virtual bool eprosima::fastrtps::rtps::UDPv4Transport::Send (const octet * sendBuffer, uint32_t sendBufferSize, const \fBLocator_t\fP & localLocator, const \fBLocator_t\fP & remoteLocator)\fC [override]\fP, \fC [virtual]\fP"
+Blocking Send through the specified channel\&. In both modes, using a localLocator of 0\&.0\&.0\&.0 will send through all whitelisted interfaces provided the channel is open\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsendBuffer\fP Slice into the raw data to send\&. 
+.br
+\fIsendBufferSize\fP Size of the raw data\&. It will be used as a bounds check for the previous argument\&. It must not exceed the sendBufferSize fed to this class during construction\&. 
+.br
+\fIlocalLocator\fP Locator mapping to the channel we're sending from\&. 
+.br
+\fIremoteLocator\fP Locator describing the remote destination we're sending to\&. 
+.RE
+.PP
+
+.PP
+Implements \fBeprosima::fastrtps::rtps::TransportInterface\fP\&.
+.PP
+Reimplemented in \fBeprosima::fastrtps::rtps::test_UDPv4Transport\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

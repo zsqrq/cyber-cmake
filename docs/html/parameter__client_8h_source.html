@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -104,11 +106,11 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classapollo_1_1cyber_1_1ParameterClient.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="classapollo_1_1cyber_1_1ParameterClient.html">ParameterClient</a> {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">using</span> Param = apollo::cyber::proto::Param;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">using</span> NodeName = apollo::cyber::proto::NodeName;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">using</span> ParamName = apollo::cyber::proto::ParamName;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">using</span> BoolResult = apollo::cyber::proto::BoolResult;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">using</span> Params = apollo::cyber::proto::Params;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Param.html">Param</a> = <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Param.html">apollo::cyber::proto::Param</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1NodeName.html">NodeName</a> = <a class="code" href="classapollo_1_1cyber_1_1proto_1_1NodeName.html">apollo::cyber::proto::NodeName</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ParamName.html">ParamName</a> = <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ParamName.html">apollo::cyber::proto::ParamName</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1BoolResult.html">BoolResult</a> = <a class="code" href="classapollo_1_1cyber_1_1proto_1_1BoolResult.html">apollo::cyber::proto::BoolResult</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Params.html">Params</a> = <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Params.html">apollo::cyber::proto::Params</a>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1Client.html">GetParameterClient</a> = <a class="code" href="classapollo_1_1cyber_1_1Client.html">Client&lt;ParamName, Param&gt;</a>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1Client.html">SetParameterClient</a> = <a class="code" href="classapollo_1_1cyber_1_1Client.html">Client&lt;Param, BoolResult&gt;</a>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1Client.html">ListParametersClient</a> = <a class="code" href="classapollo_1_1cyber_1_1Client.html">Client&lt;NodeName, Params&gt;</a>;</div>
@@ -139,7 +141,12 @@ $(function() {
 <div class="ttc" id="aclassapollo_1_1cyber_1_1ParameterClient_html_a7862da312d013c50c82e4f6ae291ceb5"><div class="ttname"><a href="classapollo_1_1cyber_1_1ParameterClient.html#a7862da312d013c50c82e4f6ae291ceb5">apollo::cyber::ParameterClient::SetParameter</a></div><div class="ttdeci">bool SetParameter(const Parameter &amp;parameter)</div><div class="ttdoc">Set the Parameter object.</div><div class="ttdef"><b>Definition:</b> parameter_client.cc:55</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1ParameterClient_html_a8da3339334f14b14d89ae3c812f1a314"><div class="ttname"><a href="classapollo_1_1cyber_1_1ParameterClient.html#a8da3339334f14b14d89ae3c812f1a314">apollo::cyber::ParameterClient::GetParameter</a></div><div class="ttdeci">bool GetParameter(const std::string &amp;param_name, Parameter *parameter)</div><div class="ttdoc">Get the Parameter object.</div><div class="ttdef"><b>Definition:</b> parameter_client.cc:38</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1Parameter_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1Parameter.html">apollo::cyber::Parameter</a></div><div class="ttdoc">A Parameter holds an apollo::cyber::proto::Param, It's more human-readable, you can use basic-value t...</div><div class="ttdef"><b>Definition:</b> parameter.h:42</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1BoolResult_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1BoolResult.html">apollo::cyber::proto::BoolResult</a></div><div class="ttdef"><b>Definition:</b> parameter.pb.h:751</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1NodeName_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1NodeName.html">apollo::cyber::proto::NodeName</a></div><div class="ttdef"><b>Definition:</b> parameter.pb.h:425</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1ParamName_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1ParamName.html">apollo::cyber::proto::ParamName</a></div><div class="ttdef"><b>Definition:</b> parameter.pb.h:588</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1Param_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1Param.html">apollo::cyber::proto::Param</a></div><div class="ttdef"><b>Definition:</b> parameter.pb.h:119</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1Params_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1Params.html">apollo::cyber::proto::Params</a></div><div class="ttdef"><b>Definition:</b> parameter.pb.h:909</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

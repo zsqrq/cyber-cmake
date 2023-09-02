@@ -1,0 +1,442 @@
+.TH "apollo::canbus::Global_rpt_6a" 3 "Sun Sep 3 2023" "Version 8.0" "Cyber-Cmake" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+apollo::canbus::Global_rpt_6a
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits PROTOBUF_NAMESPACE_ID::Message\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB_Internal\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum : int { \fBkPacmodStatusFieldNumber\fP = 1, \fBkOverrideStatusFieldNumber\fP = 2, \fBkVehCanTimeoutFieldNumber\fP = 3, \fBkStrCanTimeoutFieldNumber\fP = 4, \fBkUsrCanTimeoutFieldNumber\fP = 6, \fBkBrkCanTimeoutFieldNumber\fP = 5, \fBkUsrCanReadErrorsFieldNumber\fP = 7 }"
+.br
+.ti -1c
+.RI "typedef Global_rpt_6a_Pacmod_statusType \fBPacmod_statusType\fP"
+.br
+.ti -1c
+.RI "typedef Global_rpt_6a_Override_statusType \fBOverride_statusType\fP"
+.br
+.ti -1c
+.RI "typedef Global_rpt_6a_Brk_can_timeoutType \fBBrk_can_timeoutType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBGlobal_rpt_6a\fP (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)"
+.br
+.ti -1c
+.RI "\fBGlobal_rpt_6a\fP (const \fBGlobal_rpt_6a\fP &from)"
+.br
+.ti -1c
+.RI "\fBGlobal_rpt_6a\fP (\fBGlobal_rpt_6a\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "\fBGlobal_rpt_6a\fP & \fBoperator=\fP (const \fBGlobal_rpt_6a\fP &from)"
+.br
+.ti -1c
+.RI "\fBGlobal_rpt_6a\fP & \fBoperator=\fP (\fBGlobal_rpt_6a\fP &&from) noexcept"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet & \fBunknown_fields\fP () const"
+.br
+.ti -1c
+.RI "inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet * \fBmutable_unknown_fields\fP ()"
+.br
+.ti -1c
+.RI "void \fBSwap\fP (\fBGlobal_rpt_6a\fP *other)"
+.br
+.ti -1c
+.RI "void \fBUnsafeArenaSwap\fP (\fBGlobal_rpt_6a\fP *other)"
+.br
+.ti -1c
+.RI "\fBGlobal_rpt_6a\fP * \fBNew\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final"
+.br
+.ti -1c
+.RI "void \fBCopyFrom\fP (const \fBGlobal_rpt_6a\fP &from)"
+.br
+.ti -1c
+.RI "void \fBMergeFrom\fP (const \fBGlobal_rpt_6a\fP &from)"
+.br
+.ti -1c
+.RI "PROTOBUF_ATTRIBUTE_REINITIALIZES void \fBClear\fP () final"
+.br
+.ti -1c
+.RI "bool \fBIsInitialized\fP () const final"
+.br
+.ti -1c
+.RI "size_t \fBByteSizeLong\fP () const final"
+.br
+.ti -1c
+.RI "const char * \fB_InternalParse\fP (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final"
+.br
+.ti -1c
+.RI "uint8_t * \fB_InternalSerialize\fP (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final"
+.br
+.ti -1c
+.RI "int \fBGetCachedSize\fP () const final"
+.br
+.ti -1c
+.RI "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * \fBGetClassData\fP () const final"
+.br
+.ti -1c
+.RI "::PROTOBUF_NAMESPACE_ID::Metadata \fBGetMetadata\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBhas_pacmod_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_pacmod_status\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Global_rpt_6a_Pacmod_statusType \fBpacmod_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_pacmod_status\fP (::apollo::canbus::Global_rpt_6a_Pacmod_statusType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_override_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_override_status\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Global_rpt_6a_Override_statusType \fBoverride_status\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_override_status\fP (::apollo::canbus::Global_rpt_6a_Override_statusType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_veh_can_timeout\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_veh_can_timeout\fP ()"
+.br
+.ti -1c
+.RI "bool \fBveh_can_timeout\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_veh_can_timeout\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_str_can_timeout\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_str_can_timeout\fP ()"
+.br
+.ti -1c
+.RI "bool \fBstr_can_timeout\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_str_can_timeout\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_usr_can_timeout\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_usr_can_timeout\fP ()"
+.br
+.ti -1c
+.RI "bool \fBusr_can_timeout\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_usr_can_timeout\fP (bool value)"
+.br
+.ti -1c
+.RI "bool \fBhas_brk_can_timeout\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_brk_can_timeout\fP ()"
+.br
+.ti -1c
+.RI "::apollo::canbus::Global_rpt_6a_Brk_can_timeoutType \fBbrk_can_timeout\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_brk_can_timeout\fP (::apollo::canbus::Global_rpt_6a_Brk_can_timeoutType value)"
+.br
+.ti -1c
+.RI "bool \fBhas_usr_can_read_errors\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear_usr_can_read_errors\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBusr_can_read_errors\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_usr_can_read_errors\fP (int32_t value)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBdescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Descriptor * \fBGetDescriptor\fP ()"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::Reflection * \fBGetReflection\fP ()"
+.br
+.ti -1c
+.RI "static const \fBGlobal_rpt_6a\fP & \fBdefault_instance\fP ()"
+.br
+.ti -1c
+.RI "static const \fBGlobal_rpt_6a\fP * \fBinternal_default_instance\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBPacmod_statusType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBPacmod_statusType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBPacmod_statusType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBPacmod_statusType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Pacmod_statusType *value)"
+.br
+.ti -1c
+.RI "static bool \fBOverride_statusType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBOverride_statusType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBOverride_statusType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBOverride_statusType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Override_statusType *value)"
+.br
+.ti -1c
+.RI "static bool \fBBrk_can_timeoutType_IsValid\fP (int value)"
+.br
+.ti -1c
+.RI "static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor * \fBBrk_can_timeoutType_descriptor\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > static const std::string & \fBBrk_can_timeoutType_Name\fP (T enum_t_value)"
+.br
+.ti -1c
+.RI "static bool \fBBrk_can_timeoutType_Parse\fP (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Brk_can_timeoutType *value)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr int \fBkIndexInFileMessages\fP"
+.br
+.ti -1c
+.RI "static const ClassData \fB_class_data_\fP"
+.br
+.ti -1c
+.RI "static constexpr Pacmod_statusType \fBPACMOD_STATUS_CONTROL_DISABLED\fP"
+.br
+.ti -1c
+.RI "static constexpr Pacmod_statusType \fBPACMOD_STATUS_CONTROL_ENABLED\fP"
+.br
+.ti -1c
+.RI "static constexpr Pacmod_statusType \fBPacmod_statusType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Pacmod_statusType \fBPacmod_statusType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBPacmod_statusType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Override_statusType \fBOVERRIDE_STATUS_NOT_OVERRIDDEN\fP"
+.br
+.ti -1c
+.RI "static constexpr Override_statusType \fBOVERRIDE_STATUS_OVERRIDDEN\fP"
+.br
+.ti -1c
+.RI "static constexpr Override_statusType \fBOverride_statusType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Override_statusType \fBOverride_statusType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBOverride_statusType_ARRAYSIZE\fP"
+.br
+.ti -1c
+.RI "static constexpr Brk_can_timeoutType \fBBRK_CAN_TIMEOUT_NO_ACTIVE_CAN_TIMEOUT\fP"
+.br
+.ti -1c
+.RI "static constexpr Brk_can_timeoutType \fBBRK_CAN_TIMEOUT_ACTIVE_CAN_TIMEOUT\fP"
+.br
+.ti -1c
+.RI "static constexpr Brk_can_timeoutType \fBBrk_can_timeoutType_MIN\fP"
+.br
+.ti -1c
+.RI "static constexpr Brk_can_timeoutType \fBBrk_can_timeoutType_MAX\fP"
+.br
+.ti -1c
+.RI "static constexpr int \fBBrk_can_timeoutType_ARRAYSIZE\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGlobal_rpt_6a\fP (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fB::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata\fP"
+.br
+.ti -1c
+.RI "template<typename T > class \fB::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper\fP"
+.br
+.ti -1c
+.RI "struct \fB::TableStruct_modules_2fcommon_5fmsgs_2fchassis_5fmsgs_2fchassis_5fdetail_2eproto\fP"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBGlobal_rpt_6a\fP &a, \fBGlobal_rpt_6a\fP &b)"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const ::PROTOBUF_NAMESPACE_ID::Message::ClassData apollo::canbus::Global_rpt_6a::_class_data_\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Global_rpt_6a::MergeImpl
+}
+.fi
+.SS "constexpr Global_rpt_6a_Brk_can_timeoutType apollo::canbus::Global_rpt_6a::BRK_CAN_TIMEOUT_ACTIVE_CAN_TIMEOUT\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Brk_can_timeoutType_BRK_CAN_TIMEOUT_ACTIVE_CAN_TIMEOUT
+.fi
+.SS "constexpr Global_rpt_6a_Brk_can_timeoutType apollo::canbus::Global_rpt_6a::BRK_CAN_TIMEOUT_NO_ACTIVE_CAN_TIMEOUT\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Brk_can_timeoutType_BRK_CAN_TIMEOUT_NO_ACTIVE_CAN_TIMEOUT
+.fi
+.SS "constexpr int apollo::canbus::Global_rpt_6a::Brk_can_timeoutType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Brk_can_timeoutType_Brk_can_timeoutType_ARRAYSIZE
+.fi
+.SS "constexpr Global_rpt_6a_Brk_can_timeoutType apollo::canbus::Global_rpt_6a::Brk_can_timeoutType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Brk_can_timeoutType_Brk_can_timeoutType_MAX
+.fi
+.SS "constexpr Global_rpt_6a_Brk_can_timeoutType apollo::canbus::Global_rpt_6a::Brk_can_timeoutType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Brk_can_timeoutType_Brk_can_timeoutType_MIN
+.fi
+.SS "constexpr int apollo::canbus::Global_rpt_6a::kIndexInFileMessages\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    15
+.fi
+.SS "constexpr Global_rpt_6a_Override_statusType apollo::canbus::Global_rpt_6a::OVERRIDE_STATUS_NOT_OVERRIDDEN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Override_statusType_OVERRIDE_STATUS_NOT_OVERRIDDEN
+.fi
+.SS "constexpr Global_rpt_6a_Override_statusType apollo::canbus::Global_rpt_6a::OVERRIDE_STATUS_OVERRIDDEN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Override_statusType_OVERRIDE_STATUS_OVERRIDDEN
+.fi
+.SS "constexpr int apollo::canbus::Global_rpt_6a::Override_statusType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Override_statusType_Override_statusType_ARRAYSIZE
+.fi
+.SS "constexpr Global_rpt_6a_Override_statusType apollo::canbus::Global_rpt_6a::Override_statusType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Override_statusType_Override_statusType_MAX
+.fi
+.SS "constexpr Global_rpt_6a_Override_statusType apollo::canbus::Global_rpt_6a::Override_statusType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Override_statusType_Override_statusType_MIN
+.fi
+.SS "constexpr Global_rpt_6a_Pacmod_statusType apollo::canbus::Global_rpt_6a::PACMOD_STATUS_CONTROL_DISABLED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Pacmod_statusType_PACMOD_STATUS_CONTROL_DISABLED
+.fi
+.SS "constexpr Global_rpt_6a_Pacmod_statusType apollo::canbus::Global_rpt_6a::PACMOD_STATUS_CONTROL_ENABLED\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Pacmod_statusType_PACMOD_STATUS_CONTROL_ENABLED
+.fi
+.SS "constexpr int apollo::canbus::Global_rpt_6a::Pacmod_statusType_ARRAYSIZE\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Pacmod_statusType_Pacmod_statusType_ARRAYSIZE
+.fi
+.SS "constexpr Global_rpt_6a_Pacmod_statusType apollo::canbus::Global_rpt_6a::Pacmod_statusType_MAX\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Pacmod_statusType_Pacmod_statusType_MAX
+.fi
+.SS "constexpr Global_rpt_6a_Pacmod_statusType apollo::canbus::Global_rpt_6a::Pacmod_statusType_MIN\fC [static]\fP, \fC [constexpr]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+    Global_rpt_6a_Pacmod_statusType_Pacmod_statusType_MIN
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Cyber-Cmake from the source code\&.

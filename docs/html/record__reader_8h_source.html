@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -136,7 +138,7 @@ $(function() {
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">bool</span> is_valid_ = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordtype">bool</span> reach_end_ = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  std::unique_ptr&lt;proto::ChunkBody&gt; chunk_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  proto::Index index_;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Index.html">proto::Index</a> index_;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordtype">int</span> message_index_ = 0;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  ChannelInfoMap channel_info_;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  FileReaderPtr file_reader_;</div>
@@ -147,6 +149,7 @@ $(function() {
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}  <span class="comment">// namespace apollo</span></div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CYBER_RECORD_RECORD_READER_H_</span></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1Index_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1Index.html">apollo::cyber::proto::Index</a></div><div class="ttdef"><b>Definition:</b> record.pb.h:2129</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordBase_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordBase.html">apollo::cyber::record::RecordBase</a></div><div class="ttdoc">Base class for record reader and writer.</div><div class="ttdef"><b>Definition:</b> record_base.h:35</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordReader_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordReader.html">apollo::cyber::record::RecordReader</a></div><div class="ttdoc">The record reader.</div><div class="ttdef"><b>Definition:</b> record_reader.h:39</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordReader_html_a1b397349667341f7d100f1a61eee6c3b"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordReader.html#a1b397349667341f7d100f1a61eee6c3b">apollo::cyber::record::RecordReader::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">Reset the message index of record reader.</div><div class="ttdef"><b>Definition:</b> record_reader.cc:60</div></div>
@@ -158,7 +161,7 @@ $(function() {
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordReader_html_abccbc18f9f5b96356a9add0b4c596d97"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordReader.html#abccbc18f9f5b96356a9add0b4c596d97">apollo::cyber::record::RecordReader::GetMessageType</a></div><div class="ttdeci">const std::string &amp; GetMessageType(const std::string &amp;channel_name) const override</div><div class="ttdoc">Get message type by channel name.</div><div class="ttdef"><b>Definition:</b> record_reader.cc:182</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordReader_html_adf7179b36dfe2c416360f88e568c8d1d"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordReader.html#adf7179b36dfe2c416360f88e568c8d1d">apollo::cyber::record::RecordReader::GetChannelList</a></div><div class="ttdeci">std::set&lt; std::string &gt; GetChannelList() const override</div><div class="ttdoc">Get channel list.</div><div class="ttdef"><b>Definition:</b> record_reader.cc:67</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1RecordReader_html_ae8d8d301e82358474a2bdc4bf0afe21e"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1RecordReader.html#ae8d8d301e82358474a2bdc4bf0afe21e">apollo::cyber::record::RecordReader::~RecordReader</a></div><div class="ttdeci">virtual ~RecordReader()</div><div class="ttdoc">The destructor.</div><div class="ttdef"><b>Definition:</b> record_reader.cc:30</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 <div class="ttc" id="astructapollo_1_1cyber_1_1record_1_1RecordMessage_html"><div class="ttname"><a href="structapollo_1_1cyber_1_1record_1_1RecordMessage.html">apollo::cyber::record::RecordMessage</a></div><div class="ttdoc">Basic data struct of record message.</div><div class="ttdef"><b>Definition:</b> record_message.h:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

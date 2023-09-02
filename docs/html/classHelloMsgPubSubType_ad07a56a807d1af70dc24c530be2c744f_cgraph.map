@@ -1,0 +1,7 @@
+<map id="HelloMsgPubSubType::getKey" name="HelloMsgPubSubType::getKey">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,220,83"/>
+<area shape="rect" id="node2" href="$classHelloMsg.html#a4fbf7388050f03c6ff759653a917168f" title="This function returns the maximum serialized size of the Key of an object depending on the buffer ali..." alt="" coords="297,5,574,32"/>
+<area shape="rect" id="node4" href="$classeprosima_1_1fastcdr_1_1Cdr.html#a5eb8dce4596e00ee0c4566fc4cc092d6" title="This function returns the length of the serialized data inside the stream." alt="" coords="268,56,603,83"/>
+<area shape="rect" id="node5" href="$classHelloMsg.html#a55a29266f6edea6abe5f39cda90f7b05" title="This function serializes the key members of an object using CDR serialization." alt="" coords="350,107,521,133"/>
+<area shape="rect" id="node3" href="$classeprosima_1_1fastcdr_1_1Cdr.html#a13af0f46117d10e3bba943870ecb3efd" title=" " alt="" coords="651,5,891,32"/>
+</map>

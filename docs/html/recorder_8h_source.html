@@ -22,7 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Cyber-Cmake
+   &#160;<span id="projectnumber">8.0</span>
    </div>
+   <div id="projectbrief">Pure Cmake Project For Apollo Cyber Rt</div>
   </td>
  </tr>
  </tbody>
@@ -105,8 +107,8 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1ReaderBase.html">apollo::cyber::ReaderBase</a>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1base_1_1Connection.html">apollo::cyber::base::Connection</a>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">using</span> <a class="code" href="structapollo_1_1cyber_1_1message_1_1RawMessage.html">apollo::cyber::message::RawMessage</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">using</span> apollo::cyber::proto::ChangeMsg;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">using</span> apollo::cyber::proto::RoleAttributes;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ChangeMsg.html">apollo::cyber::proto::ChangeMsg</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">using</span> apollo::cyber::proto::RoleType;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager.html">apollo::cyber::service_discovery::ChannelManager</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">using</span> <a class="code" href="classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager.html">apollo::cyber::service_discovery::TopologyManager</a>;</div>
@@ -123,7 +125,7 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1record_1_1Recorder.html">Recorder</a>(<span class="keyword">const</span> std::string&amp; output, <span class="keywordtype">bool</span> all_channels,</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;           <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; white_channels,</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;           <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; black_channels,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;           <span class="keyword">const</span> proto::Header&amp; header);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;           <span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a>&amp; header);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  ~<a class="code" href="classapollo_1_1cyber_1_1record_1_1Recorder.html">Recorder</a>();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">bool</span> Start();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">bool</span> Stop();</div>
@@ -139,7 +141,7 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">bool</span> all_channels_ = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  std::vector&lt;std::string&gt; white_channels_;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  std::vector&lt;std::string&gt; black_channels_;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  proto::Header header_;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classapollo_1_1cyber_1_1proto_1_1Header.html">proto::Header</a> header_;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  std::unordered_map&lt;std::string, std::shared_ptr&lt;ReaderBase&gt;&gt;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      channel_reader_map_;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  uint64_t message_count_;</div>
@@ -152,12 +154,12 @@ $(function() {
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">bool</span> InitReaderImpl(<span class="keyword">const</span> std::string&amp; channel_name,</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                      <span class="keyword">const</span> std::string&amp; message_type);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">void</span> TopologyCallback(<span class="keyword">const</span> ChangeMsg&amp; msg);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">void</span> TopologyCallback(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1ChangeMsg.html">ChangeMsg</a>&amp; msg);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">void</span> ReaderCallback(<span class="keyword">const</span> std::shared_ptr&lt;RawMessage&gt;&amp; message,</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                      <span class="keyword">const</span> std::string&amp; channel_name);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">void</span> FindNewChannel(<span class="keyword">const</span> RoleAttributes&amp; role_attr);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">void</span> FindNewChannel(<span class="keyword">const</span> <a class="code" href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">RoleAttributes</a>&amp; role_attr);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">void</span> ShowProgress();</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
@@ -170,10 +172,13 @@ $(function() {
 <div class="ttc" id="aclassapollo_1_1cyber_1_1Node_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1Node.html">apollo::cyber::Node</a></div><div class="ttdoc">Node is the fundamental building block of Cyber RT. every module contains and communicates through th...</div><div class="ttdef"><b>Definition:</b> node.h:44</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1ReaderBase_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1ReaderBase.html">apollo::cyber::ReaderBase</a></div><div class="ttdoc">Base Class for Reader Reader is identified by one apollo::cyber::proto::RoleAttribute,...</div><div class="ttdef"><b>Definition:</b> reader_base.h:46</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1base_1_1Connection_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1base_1_1Connection.html">apollo::cyber::base::Connection</a></div><div class="ttdef"><b>Definition:</b> signal.h:118</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1ChangeMsg_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1ChangeMsg.html">apollo::cyber::proto::ChangeMsg</a></div><div class="ttdef"><b>Definition:</b> topology_change.pb.h:152</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1Header_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1Header.html">apollo::cyber::proto::Header</a></div><div class="ttdef"><b>Definition:</b> record.pb.h:1193</div></div>
+<div class="ttc" id="aclassapollo_1_1cyber_1_1proto_1_1RoleAttributes_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1proto_1_1RoleAttributes.html">apollo::cyber::proto::RoleAttributes</a></div><div class="ttdef"><b>Definition:</b> role_attributes.pb.h:258</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1record_1_1Recorder_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1record_1_1Recorder.html">apollo::cyber::record::Recorder</a></div><div class="ttdef"><b>Definition:</b> recorder.h:47</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager.html">apollo::cyber::service_discovery::ChannelManager</a></div><div class="ttdoc">Topology Manager of Service related.</div><div class="ttdef"><b>Definition:</b> channel_manager.h:42</div></div>
 <div class="ttc" id="aclassapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_html"><div class="ttname"><a href="classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager.html">apollo::cyber::service_discovery::TopologyManager</a></div><div class="ttdoc">elements in Cyber – Node, Channel, Service, Writer, Reader, Client and Server's relationship is prese...</div><div class="ttdef"><b>Definition:</b> topology_manager.h:64</div></div>
-<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> atomic_hash_map.h:25</div></div>
+<div class="ttc" id="anamespaceapollo_html"><div class="ttname"><a href="namespaceapollo.html">apollo</a></div><div class="ttdef"><b>Definition:</b> examples.pb.cc:19</div></div>
 <div class="ttc" id="astructapollo_1_1cyber_1_1message_1_1RawMessage_html"><div class="ttname"><a href="structapollo_1_1cyber_1_1message_1_1RawMessage.html">apollo::cyber::message::RawMessage</a></div><div class="ttdef"><b>Definition:</b> raw_message.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
