@@ -10,7 +10,6 @@ cyber_add_library(
     TARGET ${PROJECT_NAME}
     SOURCES ${CYBER_COMMON_SRCS}
     COMPONENT_NAME cyber_cmake_common
-    PRIVATE_LIBS cyber-base
-    PUBLIC_LIBS cyber-cmake-proto ${DEPENCENCY_LIBS} glog gflags
+    PUBLIC_LIBS cyber-base cyber-cmake-proto ${DEPENCENCY_LIBS} glog gflags
 )
 

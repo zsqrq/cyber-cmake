@@ -10,6 +10,5 @@ cyber_add_library(
     TARGET ${PROJECT_NAME}
     SOURCES ${CYBER_PARAMETER_SRCS}
     COMPONENT_NAME cyber_cmake_parameter
-    PRIVATE_LIBS ${DEPENCENCY_LIBS} fastrtps fastcdr cyber-base cyber-cmake-proto
-      cyber-cmake-common cyber-cmake-message cyber-cmake-node cyber-cmake-service
+    PUBLIC_LIBS cyber-cmake-message cyber-cmake-node cyber-cmake-service
 )

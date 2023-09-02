@@ -13,23 +13,23 @@ list(APPEND CMAKE_FIND_ROOT_PATH ${CMAKE_SOURCE_DIR}/cmake)
 find_package(CyberConfig REQUIRED)
 get_sub_dirs(${CMAKE_SOURCE_DIR}/third_party/lib/cmake GOOGLE_FAMILY_SUB_DIR)
 foreach(sub_dir ${GOOGLE_FAMILY_SUB_DIR})
-    list(APPEND CMAKE_MODULE_PATH ${sub_dir})
+    list(APPEND CMAKE_MODULE_PATH "GOOGLE_FAMILY_LIB_DIR/${sub_dir}")
 endforeach()
 get_sub_dirs(${CMAKE_SOURCE_DIR}/third_party/fast-rtps-1.5.0-1/lib RTPS_DIR)
 foreach(sub_dir ${RTPS_DIR})
-    list(APPEND CMAKE_MODULE_PATH ${sub_dir}/cmake)
+    list(APPEND CMAKE_MODULE_PATH "${FAST_RTPS_LIB_DIR}/${sub_dir}/cmake")
 endforeach()
+
 find_package(Threads REQUIRED)
 find_package(PkgConfig REQUIRED)
 find_package(Poco REQUIRED COMPONENTS Foundation)
 find_package(glog REQUIRED)
 find_package(Protobuf REQUIRED)
-
 find_package(fastrtps REQUIRED)
 find_package(fastcdr REQUIRED)
-#message(FATAL_ERROR "fastrtps libs : ${FAST_RTPS_INC_DIR},${FAST_RTPS_LIB_DIR}")
+
 pkg_check_modules(Uuid REQUIRED uuid)
-#pkg_check_modules(Gflags REQUIRED gflags)
+pkg_check_modules(Gflags REQUIRED gflags)
 pkg_check_modules(NlohmannJson REQUIRED nlohmann_json)
 
 if(NOT DEFINED glog_LIBRARIES)
@@ -89,8 +89,10 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/cyber
     ${CMAKE_SOURCE_DIR}/third_party/include
     ${FAST_RTPS_INC_DIR})
+    
 link_directories(
     ${DEPENCENCY_LIB_DIRS}
+    ${FAST_RTPS_LIB_DIR}
     ${CMAKE_INSTALL_PREFIX}/lib
     ${CMAKE_SOURCE_DIR}/third_party/lib
 )
@@ -132,23 +134,22 @@ file(GLOB CYBER_OUTER_SRCS "${CMAKE_SOURCE_DIR}/cyber/*.cc")
 cyber_add_library(
     TARGET cyber-cmake-binary
     SOURCES ${CMAKE_SOURCE_DIR}/cyber/binary.cc
+    PUBLIC_LIBS cyber-cmake-proto cyber-cmake-common pthread
 )
 cyber_add_library(
     TARGET cyber-cmake-state
     SOURCES ${CMAKE_SOURCE_DIR}/cyber/state.cc
-    PUBLIC_LIBS cyber-cmake-common
+    PUBLIC_LIBS cyber-cmake-binary cyber-cmake-time cyber-cmake-timer cyber-cmake-logger
 )
 cyber_add_library(
     TARGET cyber-cmake-init
     SOURCES ${CMAKE_SOURCE_DIR}/cyber/init.cc
-    PUBLIC_LIBS cyber-cmake-binary cyber-cmake-state cyber-cmake-proto cyber-cmake-common
-        cyber-cmake-sysmo cyber-cmake-task cyber-cmake-time cyber-cmake-timer cyber-cmake-transport
-        cyber-cmake-service-discovery ${DEPENCENCY_LIBS}
+    PUBLIC_LIBS cyber-cmake-state cyber-cmake-service-discovery cyber-cmake-sysmo cyber-cmake-task
 )
 cyber_add_library(
     TARGET cyber-cmake-core
     SOURCES ${CMAKE_SOURCE_DIR}/cyber/cyber.cc
-    PUBLIC_LIBS cyber-cmake-proto cyber-cmake-common cyber-cmake-init cyber-cmake-component
-        cyber-cmake-node cyber-cmake-task cyber-cmake-time cyber-cmake-timer ${DEPENCENCY_LIBS}
+    PUBLIC_LIBS cyber-cmake-init cyber-cmake-component cyber-cmake-node cyber-cmake-transport
+        cyber-cmake-classloader cyber-cmake-message cyber-cmake-logger
 )
 add_subdirectory(cyber/mainboard)

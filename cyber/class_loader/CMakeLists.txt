@@ -9,6 +9,5 @@ cyber_add_library(
     TARGET ${PROJECT_NAME}
     SOURCES ${CYBER_CLASS_LOADER_SRCS}
     COMPONENT_NAME cyber_cmake_classloader
-    PRIVATE_LIBS cyber-base
-    PUBLIC_LIBS cyber-cmake-proto cyber-cmake-common
+    PUBLIC_LIBS cyber-cmake-common
 )
