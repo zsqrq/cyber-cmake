@@ -65,7 +65,7 @@ set(DEPENCENCY_LIBS
     ${Gflags_LIBRARIES}
     ${Protobuf_LIBRARIES}
     )
-message(WARNING "glog library is : ${glog_LIBRARIES}")
+
 set(CYBER_SUB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cyber CACHE INTERNAL "")
 if(NOT CMAKE_BUILD_TYPE)
     set(DEF Debug)
@@ -129,7 +129,6 @@ write_basic_package_version_file(${CMAKE_INSTALL_PREFIX}/lib/cmake/${TARGET_NAME
     COMPATIBILITY AnyNewerVersion
 )
 
-file(GLOB CYBER_OUTER_SRCS "${CMAKE_SOURCE_DIR}/cyber/*.cc")
 cyber_add_library(
     TARGET cyber-cmake-binary
     SOURCES ${CMAKE_SOURCE_DIR}/cyber/binary.cc
