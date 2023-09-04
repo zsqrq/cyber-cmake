@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(tools)
 
 cyber_add_excutable(
-    TARGET cyber_cmake_monitor
+    TARGET cyber_monitor
     SOURCES cyber_monitor/cyber_topology_message.cc cyber_monitor/general_channel_message.cc
     cyber_monitor/general_message.cc cyber_monitor/general_message_base.cc
     cyber_monitor/renderable_message.cc cyber_monitor/screen.cc cyber_monitor/main.cc
@@ -11,7 +11,7 @@ cyber_add_excutable(
 )
 
 cyber_add_excutable(
-    TARGET cyber_cmake_recorder
+    TARGET cyber_recorder
     SOURCES cyber_recorder/main.cc
     cyber_recorder/info.cc
     cyber_recorder/recorder.cc
