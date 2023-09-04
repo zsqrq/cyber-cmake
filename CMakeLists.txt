@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(Cyber-Cmake VERSION 8.0
     DESCRIPTION "Pure Cmake Project For Apollo Cyber Rt")
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 enable_language(ASM)
 
 include(CMakePackageConfigHelpers)
@@ -68,10 +68,9 @@ set(DEPENCENCY_LIBS
 
 set(CYBER_SUB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cyber CACHE INTERNAL "")
 if(NOT CMAKE_BUILD_TYPE)
-    set(DEF Debug)
-    set(DEFAULT_COMPILE -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -fPIE -pie -fstack-protector-all -Wtrampolines)
+    set(DEFAULT_COMPILE -std=c++14 -latomic -fPIC)
 else()
-    set(DEFAULT_COMPILE -std=c++17 -O3 -Wall -c -fmessage-length=0 -fPIC -fPIE -pie -fstack-protector-all -Wtrampolines)
+    # set(DEFAULT_COMPILE -std=c++17 -O3 -Wall -c -fmessage-length=0 -fPIC -fPIE -pie -fstack-protector-all -Wtrampolines)
 endif()
 add_link_options(-Wl,--disable-new-dtags)
 set(CMAKE_INSTALL_RPATH "$ORIGIN/../lib")
@@ -134,7 +133,7 @@ write_basic_package_version_file(${CMAKE_INSTALL_PREFIX}/lib/cmake/${TARGET_NAME
 cyber_add_library(
     TARGET cyber-cmake-binary
     SOURCES ${CMAKE_SOURCE_DIR}/cyber/binary.cc
-    PUBLIC_LIBS cyber-cmake-proto cyber-cmake-common pthread
+    PUBLIC_LIBS cyber-cmake-proto cyber-cmake-common pthread atomic
 )
 cyber_add_library(
     TARGET cyber-cmake-state

@@ -4,6 +4,7 @@ build*
 cmake-build-debug
 production
 docs/*
+./*.INFO*
 .vscode
 .idea
 # Compiled Object files

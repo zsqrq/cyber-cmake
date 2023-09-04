@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(example)
 
 cyber_add_excutable(
-    TARGET eyber_example_talker
+    TARGET cyber_example_talker
     SOURCES talker.cc
     PUBLIC_LIBS cyber-cmake-core
     INSTALL_PATH bin/cyber/examples

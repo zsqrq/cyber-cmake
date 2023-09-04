@@ -1,0 +1,104 @@
+Log file created at: 2023/09/04 17:14:54
+Running on machine: wz-ROG-Strix-G834JY-G834JY
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0904 17:14:54.085352 339273 global_data.cc:153] host ip: 192.168.20.72
+W0904 17:14:54.085960 339273 scheduler_factory.cc:63] Scheduler conf named /home/wz/Desktop/playground/cyber-cmake/production/share/conf/cyber_example_talker_339273.conf not found, use default.
+I0904 17:14:54.086385 339275 processor.cc:42] processor_tid: 339275
+I0904 17:14:54.086534 339276 processor.cc:42] processor_tid: 339276
+I0904 17:14:54.086694 339280 processor.cc:42] processor_tid: 339280
+I0904 17:14:54.086787 339281 processor.cc:42] processor_tid: 339281
+I0904 17:14:54.086905 339282 processor.cc:42] processor_tid: 339282
+I0904 17:14:54.087011 339283 processor.cc:42] processor_tid: 339283
+I0904 17:14:54.087103 339284 processor.cc:42] processor_tid: 339284
+I0904 17:14:54.087138 339285 processor.cc:42] processor_tid: 339285
+I0904 17:14:54.087256 339286 processor.cc:42] processor_tid: 339286
+I0904 17:14:54.087360 339287 processor.cc:42] processor_tid: 339287
+I0904 17:14:54.087460 339288 processor.cc:42] processor_tid: 339288
+I0904 17:14:54.087555 339289 processor.cc:42] processor_tid: 339289
+I0904 17:14:54.087657 339290 processor.cc:42] processor_tid: 339290
+I0904 17:14:54.087697 339291 processor.cc:42] processor_tid: 339291
+I0904 17:14:54.087802 339292 processor.cc:42] processor_tid: 339292
+I0904 17:14:54.087898 339293 processor.cc:42] processor_tid: 339293
+I0904 17:14:54.087947 339273 init.cc:113] Register exit handle succ.
+I0904 17:14:54.091922 339273 talker.cc:43] talker sent a message! No. 0
+I0904 17:14:55.092105 339273 talker.cc:43] talker sent a message! No. 1
+I0904 17:14:56.092068 339273 talker.cc:43] talker sent a message! No. 2
+I0904 17:14:57.092119 339273 talker.cc:43] talker sent a message! No. 3
+I0904 17:14:58.092061 339273 talker.cc:43] talker sent a message! No. 4
+I0904 17:14:59.092068 339273 talker.cc:43] talker sent a message! No. 5
+I0904 17:15:00.092001 339273 talker.cc:43] talker sent a message! No. 6
+I0904 17:15:01.091974 339273 talker.cc:43] talker sent a message! No. 7
+I0904 17:15:02.092072 339273 talker.cc:43] talker sent a message! No. 8
+I0904 17:15:03.091976 339273 talker.cc:43] talker sent a message! No. 9
+I0904 17:15:04.092000 339273 talker.cc:43] talker sent a message! No. 10
+I0904 17:15:05.092064 339273 talker.cc:43] talker sent a message! No. 11
+I0904 17:15:06.092017 339273 talker.cc:43] talker sent a message! No. 12
+I0904 17:15:07.092026 339273 talker.cc:43] talker sent a message! No. 13
+I0904 17:15:08.092068 339273 talker.cc:43] talker sent a message! No. 14
+I0904 17:15:09.091989 339273 talker.cc:43] talker sent a message! No. 15
+I0904 17:15:10.092005 339273 talker.cc:43] talker sent a message! No. 16
+I0904 17:15:11.091979 339273 talker.cc:43] talker sent a message! No. 17
+I0904 17:15:12.092020 339273 talker.cc:43] talker sent a message! No. 18
+I0904 17:15:13.092080 339273 talker.cc:43] talker sent a message! No. 19
+I0904 17:15:14.091991 339273 talker.cc:43] talker sent a message! No. 20
+I0904 17:15:15.091976 339273 talker.cc:43] talker sent a message! No. 21
+I0904 17:15:16.091977 339273 talker.cc:43] talker sent a message! No. 22
+I0904 17:15:17.091975 339273 talker.cc:43] talker sent a message! No. 23
+I0904 17:15:18.091989 339273 talker.cc:43] talker sent a message! No. 24
+I0904 17:15:19.092060 339273 talker.cc:43] talker sent a message! No. 25
+I0904 17:15:20.092103 339273 talker.cc:43] talker sent a message! No. 26
+I0904 17:15:21.092020 339273 talker.cc:43] talker sent a message! No. 27
+I0904 17:15:22.092119 339273 talker.cc:43] talker sent a message! No. 28
+I0904 17:15:23.092021 339273 talker.cc:43] talker sent a message! No. 29
+I0904 17:15:24.092020 339273 talker.cc:43] talker sent a message! No. 30
+I0904 17:15:25.092028 339273 talker.cc:43] talker sent a message! No. 31
+I0904 17:15:26.092099 339273 talker.cc:43] talker sent a message! No. 32
+I0904 17:15:27.092115 339273 talker.cc:43] talker sent a message! No. 33
+I0904 17:15:28.092186 339273 talker.cc:43] talker sent a message! No. 34
+I0904 17:15:29.092041 339273 talker.cc:43] talker sent a message! No. 35
+I0904 17:15:30.092088 339273 talker.cc:43] talker sent a message! No. 36
+I0904 17:15:31.092010 339273 talker.cc:43] talker sent a message! No. 37
+I0904 17:15:32.092020 339273 talker.cc:43] talker sent a message! No. 38
+I0904 17:15:33.092171 339273 talker.cc:43] talker sent a message! No. 39
+I0904 17:15:34.092082 339273 talker.cc:43] talker sent a message! No. 40
+I0904 17:15:35.092152 339273 talker.cc:43] talker sent a message! No. 41
+I0904 17:15:36.092154 339273 talker.cc:43] talker sent a message! No. 42
+I0904 17:15:37.092137 339273 talker.cc:43] talker sent a message! No. 43
+I0904 17:15:38.092075 339273 talker.cc:43] talker sent a message! No. 44
+I0904 17:15:39.092119 339273 talker.cc:43] talker sent a message! No. 45
+I0904 17:15:40.092080 339273 talker.cc:43] talker sent a message! No. 46
+I0904 17:15:41.092025 339273 talker.cc:43] talker sent a message! No. 47
+I0904 17:15:42.092130 339273 talker.cc:43] talker sent a message! No. 48
+I0904 17:15:43.092119 339273 talker.cc:43] talker sent a message! No. 49
+I0904 17:15:44.092152 339273 talker.cc:43] talker sent a message! No. 50
+I0904 17:15:45.092144 339273 talker.cc:43] talker sent a message! No. 51
+I0904 17:15:46.092123 339273 talker.cc:43] talker sent a message! No. 52
+I0904 17:15:47.092159 339273 talker.cc:43] talker sent a message! No. 53
+I0904 17:15:48.092104 339273 talker.cc:43] talker sent a message! No. 54
+I0904 17:15:49.092123 339273 talker.cc:43] talker sent a message! No. 55
+I0904 17:15:50.092125 339273 talker.cc:43] talker sent a message! No. 56
+I0904 17:15:51.092105 339273 talker.cc:43] talker sent a message! No. 57
+I0904 17:15:52.092135 339273 talker.cc:43] talker sent a message! No. 58
+I0904 17:15:53.092125 339273 talker.cc:43] talker sent a message! No. 59
+I0904 17:15:54.092093 339273 talker.cc:43] talker sent a message! No. 60
+I0904 17:15:55.092123 339273 talker.cc:43] talker sent a message! No. 61
+I0904 17:15:56.092151 339273 talker.cc:43] talker sent a message! No. 62
+I0904 17:15:57.092085 339273 talker.cc:43] talker sent a message! No. 63
+I0904 17:15:58.092038 339273 talker.cc:43] talker sent a message! No. 64
+I0904 17:15:59.092017 339273 talker.cc:43] talker sent a message! No. 65
+I0904 17:16:00.092124 339273 talker.cc:43] talker sent a message! No. 66
+I0904 17:16:01.092109 339273 talker.cc:43] talker sent a message! No. 67
+I0904 17:16:02.092128 339273 talker.cc:43] talker sent a message! No. 68
+I0904 17:16:03.092131 339273 talker.cc:43] talker sent a message! No. 69
+I0904 17:16:04.092038 339273 talker.cc:43] talker sent a message! No. 70
+I0904 17:16:05.092021 339273 talker.cc:43] talker sent a message! No. 71
+I0904 17:16:06.092011 339273 talker.cc:43] talker sent a message! No. 72
+I0904 17:16:07.092093 339273 talker.cc:43] talker sent a message! No. 73
+I0904 17:16:08.092021 339273 talker.cc:43] talker sent a message! No. 74
+I0904 17:16:09.092106 339273 talker.cc:43] talker sent a message! No. 75
+I0904 17:16:10.092031 339273 talker.cc:43] talker sent a message! No. 76
+I0904 17:16:11.092114 339273 talker.cc:43] talker sent a message! No. 77
+I0904 17:16:12.092139 339273 talker.cc:43] talker sent a message! No. 78
+I0904 17:16:13.092105 339273 talker.cc:43] talker sent a message! No. 79
+I0904 17:16:14.092036 339273 talker.cc:43] talker sent a message! No. 80
+I0904 17:16:15.092128 339273 talker.cc:43] talker sent a message! No. 81
