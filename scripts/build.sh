@@ -128,7 +128,7 @@ function build() {
         -DCMAKE_INSTALL_PREFIX=$install_path \
         -DCOMPILE_PLATFOM=$BUILD_PLATFORM
 
-    cmake --build $build_path -- -j8 VERBOSE=1
+    cmake --build $build_path -- -j32 VERBOSE=1
     cmake --build $build_path --target install
 }
 

@@ -5,7 +5,7 @@ production_root_path=$(dirname "$script_path")
 
 CYBER_PATH=${production_root_path}/share/
 PATH=${production_root_path}/bin:${production_root_path}/bin/cyber/tools:$PATH
-PYTHONPATH=$production_root_path/lib/python@Python_VERSION@/site-packages:$PYTHONPATH
+PYTHONPATH=$production_root_path/lib/python3.10/site-packages:$PYTHONPATH
 LIBRARY_PATH=$production_root_path/lib:$LIBRARY_PATH
 LD_LIBRARY_PATH=$production_root_path/lib:$LD_LIBRARY_PATH
 CMAKE_PREFIX_PATH=$production_root_path:$CMAKE_PREFIX_PATH

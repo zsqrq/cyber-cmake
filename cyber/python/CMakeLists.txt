@@ -1,1 +1,8 @@
 add_subdirectory(internal)
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
+    DESTINATION ${CYBER_PYTHON_PATH}
+    FILES_MATCHING PATTERN "*.py"
+)
+
+

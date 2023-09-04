@@ -65,12 +65,15 @@ set(DEPENCENCY_LIBS
     ${Gflags_LIBRARIES}
     ${Protobuf_LIBRARIES}
     )
-
+set(CYBER_MSGS_CACHE ON CACHE BOOL "generate cyber proto msgs flag.")
+set(CYBER_PYTHON_PROTOBUF_PATH 
+    "lib/python${Python_VERSION}/site-packages/cyber/proto"
+    CACHE INTERNAL "")
 set(CYBER_SUB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cyber CACHE INTERNAL "")
 if(NOT CMAKE_BUILD_TYPE)
-    set(DEFAULT_COMPILE -std=c++14 -latomic -fPIC)
+    set(DEFAULT_COMPILE -std=c++17 -latomic -O0 -g3 -Wall -c -fPIC -fPIE -pie -fstack-protector-all -Wtrampolines)
 else()
-    # set(DEFAULT_COMPILE -std=c++17 -O3 -Wall -c -fmessage-length=0 -fPIC -fPIE -pie -fstack-protector-all -Wtrampolines)
+    set(DEFAULT_COMPILE -std=c++17 -O3 -Wall -c -fmessage-length=0 -fPIC -fPIE -pie -fstack-protector-all -Wtrampolines)
 endif()
 add_link_options(-Wl,--disable-new-dtags)
 set(CMAKE_INSTALL_RPATH "$ORIGIN/../lib")
