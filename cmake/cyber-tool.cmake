@@ -55,9 +55,9 @@ endmacro()
 macro(cyber_add_excutable)
     set(switches USE_C_LANGUAGE NO_EXPORT NO_PACKAGE_SETUP NO_FIND_PACKAGE_SUPPORT STATIC)
     set(arguments TARGET NAMESPACE PROJECT_PREFIX)
-    set(multiarguments SOURCES COMPONENT_NAME PUBLIC_LIBS PRIVATE_LIBS BUILD_INTERFACE
+    set(multiarguments SOURCES COMPONENT_NAME PUBLIC_LIBS PRIVATE_LIBS BUILD_INTERFACE 
         INSTALL_INTERFACE ADDTIONAL_EXPORT_TARGETS TARGET_PUBLIC_INCLUDE_DIRS TARGET_PRIVATE_INCLUDE_DIRS
-        PUBLIC_LIBS_LINUX PRIVATE_LIBS_LINUX TARGET_LINK_DIRS)
+        PUBLIC_LIBS_LINUX PRIVATE_LIBS_LINUX TARGET_LINK_DIRS INSTALL_PATH)
     cmake_parse_arguments(
         CYBER
         "${switches}"
@@ -97,10 +97,23 @@ macro(cyber_add_excutable)
     target_precompile_headers(${CYBER_TARGET}
         PUBLIC ${CYBER_PRECORE_HEADERS}
         )
-    install(TARGETS ${CYBER_TARGET}
-        RUNTIME
-        DESTINATION bin
-        COMPONENT ${CYBER_COMPONENT_NAME})
+    # install(TARGETS ${CYBER_TARGET}
+    #     RUNTIME
+    #     DESTINATION bin
+    #     COMPONENT ${CYBER_COMPONENT_NAME})
+    if(CYBER_INSTALL_PATH)
+        install(TARGETS ${CYBER_TARGET}
+            RUNTIME 
+            DESTINATION ${CYBER_INSTALL_PATH}
+            COMPONENT ${CYBER_COMPONENT_NAME})
+    else()
+        install(TARGETS ${CYBER_TARGET}
+            RUNTIME
+            DESTINATION bin
+            COMPONENT ${CYBER_COMPONENT_NAME})
+    endif()
+    
+    
 endmacro()
 
 

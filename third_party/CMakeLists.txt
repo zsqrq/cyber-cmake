@@ -2,3 +2,9 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib/
     DESTINATION lib)
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/
     DESTINATION include)
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/fast-rtps-1.5.0-1/lib/
+    DESTINATION lib)
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/fast-rtps-1.5.0-1/share/
+    DESTINATION share/fastrtps)
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/fast-rtps-1.5.0-1/include/
+    DESTINATION include/fastrtps)

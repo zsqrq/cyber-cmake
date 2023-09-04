@@ -148,6 +148,6 @@ function main() {
 #    install_fast_rtps
 #    install_gfamily
     build
-    sudo rm -rf $PROJECT_FOLDER/build
+    rm -rf $PROJECT_FOLDER/build
 }
 main "$@"

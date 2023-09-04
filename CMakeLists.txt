@@ -74,7 +74,7 @@ else()
     set(DEFAULT_COMPILE -std=c++17 -O3 -Wall -c -fmessage-length=0 -fPIC -fPIE -pie -fstack-protector-all -Wtrampolines)
 endif()
 add_link_options(-Wl,--disable-new-dtags)
-set(CMAKE_INSTALL_RPATH "$ORIGIN/..lib")
+set(CMAKE_INSTALL_RPATH "$ORIGIN/../lib")
 
 if(DEFINED ENABLE_DOCMENTATION)
     generate_doc_file()
@@ -101,6 +101,8 @@ link_directories(
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cyber
     DESTINATION include
     FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/scripts/
+    DESTINATION scripts)
 
 get_sub_dirs(${CYBER_SUB_DIR} SUB_DIRS)
 foreach(sub_dir ${SUB_DIRS})

@@ -4,11 +4,13 @@ cyber_add_excutable(
     TARGET channel_test_writer
     SOURCES channel_test_writer.cc
     PUBLIC_LIBS cyber-cmake-core  
+    INSTALL_PATH bin/cyber/examples
 )
 cyber_add_excutable(
     TARGET channel_prediction_writer
     SOURCES channel_prediction_writer.cc
     PUBLIC_LIBS cyber-cmake-core  
+    INSTALL_PATH bin/cyber/examples
 )
 
 cyber_add_library(

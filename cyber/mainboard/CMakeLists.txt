@@ -7,4 +7,5 @@ cyber_add_excutable(
     TARGET ${PROJECT_NAME}
     SOURCES ${CYBER_MAINBOARD_SRCS}
     PUBLIC_LIBS cyber-cmake-core  
+    INSTALL_PATH bin/mainboard
 )
